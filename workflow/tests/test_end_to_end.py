@@ -1,7 +1,10 @@
 """Two editions of one country, end to end, then stacked into the country and the globe.
 
 WHAT THIS ASSERTS
-    run_plan writes every plan file; stacking loses no row from plan to country to global;
+    run_plan writes every plan file; step E's guards hold (a risk or a proactive or
+    transformative score whose quote is not in the paragraph is dropped, an unofficial SDG
+    target is dropped, an out-of-list value is clamped) and its fields reach strategies.csv
+    with maturity derived; stacking loses no row from plan to country to global;
     every row keeps its plan's period; the edition table finds the node carried from the
     second plan to the third, the one dropped and the one new; a dry run writes nothing.
 
@@ -29,7 +32,17 @@ def _extract(names):
                                    "quote": n, "quote_en": ""}],
                         "strategies": [{"statement_type": "commitment", "name": n,
                                         "objective": n, "target_group": "", "instrument": "",
-                                        "quote": n, "quote_en": ""}]}
+                                        "quote": n, "quote_en": "",
+                                        "related_risks": ["Climate Change", "Pandemics"],
+                                        "risk_evidence": [n, "words from another page"],
+                                        "HDICategory": "domestic integration",
+                                        "response_orientation": "transformative",
+                                        "response_evidence": n if n != "Digitise services"
+                                        else "words from another page",
+                                        "sdg_targets": ["2.3", "99.9"], "stated_urgency": "HIGH",
+                                        "sector": "Agriculture", "implementation_status": "planned",
+                                        "has_timeline": "Y", "has_quantified_target": "yes",
+                                        "legal_or_plan_basis": "decree"}]}
         return {"section_type": "other", "risks": [], "strategies": []}
     return answer
 
@@ -71,6 +84,21 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
         for f in ("context.json", "context.md", "risks.csv", "strategy_rows.csv",
                   "strategies.csv", "proposals.csv", "run.json", "cost_report.md"):
             assert os.path.exists(os.path.join(d, f)), f
+    s = {r["name"]: r for r in io.read_csv(os.path.join(
+        P.plan_dir("testland_ndp_2017-2021"), "strategies.csv"))}
+    farm, digi = s["Mechanise farming"], s["Digitise services"]
+    assert io.as_list(farm["related_risks"]) == ["Climate Change"]
+    assert io.as_list(farm["risk_evidence"]) == ["Mechanise farming"]
+    assert (farm["response_orientation"], digi["response_orientation"]) == ("transformative", "BAU")
+    assert digi["response_evidence"] == ""
+    assert (farm["HDICategory"], farm["hdi_family"]) == ("Domestic Integration", "Smarter Growth")
+    assert io.as_list(farm["sdg_targets"]) == ["2.3"] and farm["sdg_primary_dimension"]
+    assert (farm["stated_urgency"], farm["legal_or_plan_basis"]) == ("high", "none")
+    assert farm["maturity_subtype"] == "planned_specific" and farm["tree_rhdr"]
+    guards = io.read_json(os.path.join(P.plan_dir("testland_ndp_2017-2021"), "run.json"))[
+        "extract"]["guards"]
+    assert guards == {"risk dropped: no quote found": 2, "SDG target not official": 2,
+                      "response set to BAU: no quote found": 1}
     c = stack.stack_country("testland")
     assert len(c["strategies"]) == 2 + 2 and len(c["risks"]) == 4
     assert {s["period_start"] for s in c["strategies"]} == {"2017", "2022"}

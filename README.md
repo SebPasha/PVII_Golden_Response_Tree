@@ -19,8 +19,8 @@ This repo replaces the PV2 prompt pipeline. Where possible, code, prompts and te
 |---|---|---|---|
 | 0 Register | none | The config gives each document a type, period and language. `plan_id` = `<country>_<doc_type>_<start>-<end>` | (every row carries it) |
 | C Context | `C_context.txt`, `C_context_reduce.txt` | Reads the whole plan once, in 90k-token parts, then merges them: period, the plan's own structure, headline targets, risk framing and vocabulary. **The file is never overwritten**, so edit it freely | `context.json`, `context.md` |
-| E Extract | `E_extract.txt` | Runs once per paragraph, with the context attached. Pulls out risks the plan frames as risks, and strategies as objective × target group × instrument, plus target year and place. Applies the commitment test. Every quote is checked against its own paragraph | `risks.csv`, `strategy_rows.csv`, `strategy_rows_dropped.csv` |
-| F Fold | `F_fold.txt` | Merges repeat statements of one strategy **within this plan only** | (feeds M) |
+| E Extract | `E_extract.txt` | Runs once per paragraph, with the context attached. Pulls out risks the plan frames as risks, and strategies as objective × target group × instrument, plus target year and place. Applies the commitment test. Also reads PV2 prompt 4's strategy fields: RHDR category (rhdr_2026_10), SDG targets, sector, response orientation, stated urgency, implementation status, timeline, quantified target, monitoring and legal basis. Every quote is checked against its own paragraph, and a risk or a proactive or transformative score whose quote is not found there is dropped | `risks.csv`, `strategy_rows.csv`, `strategy_rows_dropped.csv` |
+| F Fold | `F_fold.txt` | Merges repeat statements of one strategy **within this plan only**, and merges their fields the PV2 way (SDG targets unioned, highest urgency, strongest status and basis, most common category and sector). Maturity is derived here in Python | (feeds M) |
 | M Map | `M_map.txt` | Places each strategy on the mother tree as same, differs or new, under the tree's own depth rule. Normalises the target group and instrument to the tree's lists | `strategies.csv`, `proposals.csv` |
 | Stack | none | Plans are stacked into the country, and countries into the global tables. `editions.csv` shows which tree nodes each plan carried, added or dropped from the previous edition | `data/country/<slug>/`, `data/global/` |
 
@@ -58,7 +58,8 @@ Responses are cached by prompt. A re-run after a failure, or after you edit `con
 | `pvii/config.py` | `workflow/pv2/extract/config.py` | Cut to the four steps |
 | `pvii/quotes.py` | `validate/truth.py`, `validate/evidence.py` | Only the quote matcher |
 | `prompts/C_*` | prompt 4a | One document, all of it, plus framing and vocabulary |
-| `prompts/E_extract.txt` | prompts 1 and 3 | One pass; quotes stay in the source language |
+| `prompts/E_extract.txt` | prompts 1, 3 and 4 (rhdr_2026_10) | One pass; quotes stay in the source language; prompt 4's strategy fields read per paragraph |
+| `pvii/vocab.py`, `vocab/` | `pv2/vocab.py`, `extract/schemas.py`, `calcs/panel.py`, `vocab/`, `frameworks/rhdr_2026_10/vocab.json` | The category framework, sector and SDG lookups, the clamps, the risk pairing and maturity |
 | `prompts/F_fold.txt` | prompt 4b | Within one plan only |
 | `prompts/M_map.txt` | new | Uses the tree's depth rule from `tree/v1/README.md` |
 

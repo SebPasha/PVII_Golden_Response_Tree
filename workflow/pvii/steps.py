@@ -9,7 +9,7 @@ import json
 import os
 import re
 
-from pvii import config, io, quotes
+from pvii import config, io, quotes, vocab
 from pvii.parse import clean_markdown, markdown_page_chunks
 
 SEP = "\n\n" + "=" * 70 + "\n"
@@ -19,6 +19,12 @@ MAP_BATCH = 25
 KEEP_STATEMENTS = ("commitment", "ongoing")
 STATEMENT_TYPES = ("commitment", "ongoing", "completed", "background")
 RISK_FRAMINGS = ("threat", "vulnerability", "constraint", "opportunity_with_risk")
+MIN_EVIDENCE_CHARS = 8        # PV2 quote_found: a shorter "quote" is not evidence
+# Step E's strategy-level fields, from PV2 prompts 3 and 4 (rhdr_2026_10), under PV2's names.
+CLASS_COLUMNS = ["HDICategory", "hdi_family", "risk_evidence", "stated_urgency", "sdg_targets",
+                 "sdg_primary_dimension", "response_orientation", "response_evidence", "sector",
+                 "sector_canonical", "institutional_lead", "implementation_status",
+                 "has_timeline", "has_quantified_target", "has_monitoring", "legal_or_plan_basis"]
 
 RISK_COLUMNS = ["risk_id", "plan_id", "country", "slug", "doc_type", "edition", "plan_title",
                 "period_start", "period_end", "ref", "page", "heading", "section_type", "risk",
@@ -27,18 +33,20 @@ ROW_COLUMNS = ["row_id", "plan_id", "country", "slug", "doc_type", "edition", "p
                "period_start", "period_end", "ref", "page", "heading", "section_type",
                "statement_type", "name", "objective", "target_group", "instrument", "pillar",
                "related_risks", "target_year", "target_year_quote", "horizon", "place",
-               "quantified_targets", "named_agencies", "quote", "quote_en", "quote_check"]
+               "quantified_targets", "named_agencies", "quote", "quote_en", "quote_check"
+               ] + CLASS_COLUMNS
 STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "edition",
                     "plan_title", "period_start", "period_end", "name", "objective",
                     "target_group", "instrument", "pillar", "statement_type", "related_risks",
                     "target_year", "horizon", "place", "n_mentions", "members", "refs", "quote",
-                    "quote_en", "quote_check",
+                    "quote_en", "quote_check", "quantified_targets", "named_agencies"
+                    ] + CLASS_COLUMNS + ["maturity_subtype",
                     # step M
                     "tree_version", "relation", "objective_id", "tree_objective",
                     "new_objective", "node_id", "level", "depth_basis", "depth_words",
                     "family_id", "family", "mechanism_id", "mechanism", "subpillar", "pillar_rhdr",
-                    "target_id", "target_label", "instrument_id", "instrument_label",
-                    "proposal", "confidence", "map_note"]
+                    "tree_rhdr", "target_id", "target_label", "instrument_id",
+                    "instrument_label", "proposal", "confidence", "map_note"]
 PROPOSAL_COLUMNS = ["plan_id", "strategy_id", "name", "objective", "relation", "new_objective",
                     "node_id", "proposal", "quote_en", "quote"]
 
@@ -204,7 +212,7 @@ def context_text(ctx, plan, max_chars=9000):
 # ================================================================ E: extract
 def extract(client, plan, doc, ctx, out_dir):
     """One call per paragraph: risks and strategies, quoted and checked against the paragraph."""
-    prompt = config.load_prompt("E")
+    prompt = e_prompt()
     ctx_block = context_text(ctx, plan)
     chunks = list(doc.paragraphs)
     _log("E: %d chunks" % len(chunks))
@@ -215,6 +223,7 @@ def extract(client, plan, doc, ctx, out_dir):
 
     results, errors = client.map("E", chunks, build, label="chunk", expect="object")
     risks, rows, dropped, invalid = [], [], [], []
+    guards = collections.Counter()
     base = plan.row()
     for p, res in zip(chunks, results):
         if res is None:
@@ -243,13 +252,12 @@ def extract(client, plan, doc, ctx, out_dir):
             if not isinstance(s, dict) or not _str(s.get("name")):
                 continue
             ty = _year(s.get("target_year"))
-            row = dict(base, **loc)
+            row = dict(base, **loc, **classify(s, p["content"], guards))
             row.update(row_id="%s#r%d.%d" % (plan.plan_id, p["index"], k + 1),
                        statement_type=_str(s.get("statement_type")).lower(),
                        name=_str(s.get("name")), objective=_str(s.get("objective")),
                        target_group=_str(s.get("target_group")),
                        instrument=_str(s.get("instrument")), pillar=_str(s.get("pillar")),
-                       related_risks=[x for x in _list(s.get("related_risks")) if x in config.RISKS][:3],
                        target_year=ty,
                        target_year_quote=_str(s.get("target_year_quote")) if ty else "",
                        horizon=horizon(ty, plan), place=_str(s.get("place")),
@@ -265,15 +273,82 @@ def extract(client, plan, doc, ctx, out_dir):
     if getattr(client, "dry_run", False):
         # A dry run's answers are all None; files of empty tables would read as a plan that
         # was run and found nothing.
-        return {"risks": [], "rows": [], "dropped": [], "errors": [], "invalid": []}
+        return {"risks": [], "rows": [], "dropped": [], "errors": [], "invalid": [], "guards": {}}
     io.write_csv(os.path.join(out_dir, "risks.csv"), risks, RISK_COLUMNS)
     io.write_csv(os.path.join(out_dir, "strategy_rows.csv"), rows, ROW_COLUMNS)
     io.write_csv(os.path.join(out_dir, "strategy_rows_dropped.csv"), dropped, ROW_COLUMNS)
     _log("E -> %d risk records, %d strategy rows kept, %d dropped by the commitment test, "
-         "%d call errors, %d invalid items" % (len(risks), len(rows), len(dropped), len(errors),
-                                               len(invalid)))
+         "%d call errors, %d invalid items; guards %s" % (
+             len(risks), len(rows), len(dropped), len(errors), len(invalid),
+             json.dumps(dict(guards))))
     return {"risks": risks, "rows": rows, "dropped": dropped,
-            "errors": [(chunks[i]["ref"], e) for i, e in errors], "invalid": invalid}
+            "errors": [(chunks[i]["ref"], e) for i, e in errors], "invalid": invalid,
+            "guards": dict(guards)}
+
+
+def e_prompt():
+    return config.load_prompt("E").replace("<<INSERT_HDI_FRAMEWORK_HERE>>",
+                                           vocab.hdi_framework_text())
+
+
+def _found(quote, text):
+    """Is an evidence phrase in the text the model was shown? PV2's quote_found, through this
+    repo's quote matcher so Thai marks and pypdf spacing do not refuse a faithful phrase."""
+    q = _str(quote)
+    return len(quotes.normalise(q)) >= MIN_EVIDENCE_CHARS and \
+        quotes.check(q, text) in (quotes.VERBATIM, quotes.EDITED)
+
+
+def classify(s, paragraph, guards):
+    """Step 4's fields for one strategy record, clamped as PV2's validate_stage4 clamps them.
+
+    The guards, each counted: an out-of-list HDICategory is blanked, not guessed; a risk with
+    no phrase found in the paragraph is dropped (no quote, no risk); a proactive or
+    transformative score with no phrase found falls to BAU; a target code that is not one of
+    the 169 official targets is dropped.
+    """
+    risks, ev, lost = vocab.pair_risks(_list_positional(s.get("related_risks")),
+                                       _list_positional(s.get("risk_evidence")),
+                                       lambda q: _found(q, paragraph))
+    guards["risk dropped: no quote found"] += len(lost)
+    hdi = vocab.canonical(s.get("HDICategory"), vocab.HDI) or ""
+    if _str(s.get("HDICategory")) and not hdi:
+        guards["HDICategory not in the list"] += 1
+    ori = vocab.ORIENTATIONS.get(_str(s.get("response_orientation")).lower(), "BAU")
+    rev = _str(s.get("response_evidence"))
+    if ori != "BAU" and not _found(rev, paragraph):
+        guards["response set to BAU: no quote found"] += 1
+        ori = "BAU"
+    if ori == "BAU":
+        rev = ""
+    targets = []
+    for t in _list(s.get("sdg_targets")):
+        if t not in vocab.SDG_TARGET_DIMENSIONS:
+            guards["SDG target not official"] += 1
+        elif t not in targets:
+            targets.append(t)
+    st, lb, ur = (_str(s.get(k)).lower() for k in
+                  ("implementation_status", "legal_or_plan_basis", "stated_urgency"))
+    sector = _str(s.get("sector"))
+    return dict(
+        related_risks=risks, risk_evidence=ev, HDICategory=hdi,
+        hdi_family=vocab.HDI_PILLAR.get(hdi, ""),
+        stated_urgency=ur if ur in vocab.URGENCIES else "medium",
+        sdg_targets=targets, sdg_primary_dimension=vocab.primary_dimension(targets),
+        response_orientation=ori, response_evidence=rev,
+        sector=sector, sector_canonical=vocab.sector_canonical(sector),
+        institutional_lead=_str(s.get("institutional_lead")),
+        implementation_status=st if st in vocab.STATUSES else "aspiration",
+        legal_or_plan_basis=lb if lb in vocab.BASES else "none",
+        **{yn: "Y" if _str(s.get(yn)).upper().startswith("Y") else "N"
+           for yn in ("has_timeline", "has_quantified_target", "has_monitoring")})
+
+
+def _list_positional(v):
+    """_list, but blanks keep their place so evidence[i] still pairs with risks[i] (PV2)."""
+    if v is None or v == "":
+        return []
+    return [_str(x) for x in v] if isinstance(v, list) else [_str(v)]
 
 
 # ================================================================ F: fold
@@ -380,8 +455,71 @@ def _merge(plan, members, grp, n):
              place="; ".join(sorted({m["place"] for m in members if m.get("place")})),
              n_mentions=len(members), members=[m["row_id"] for m in members],
              refs=[m["ref"] for m in members], quote=best["quote"], quote_en=best["quote_en"],
-             quote_check=best["quote_check"])
+             quote_check=best["quote_check"],
+             quantified_targets=_union(m.get("quantified_targets") for m in members),
+             named_agencies=_union(m.get("named_agencies") for m in members))
+    s.update(_merge_class(members, s["related_risks"]))
     return s
+
+
+def _union(lists):
+    out = []
+    for xs in lists:
+        for x in xs or []:
+            if x not in out:
+                out.append(x)
+    return out
+
+
+def _strongest(values, order):
+    """The first of `order` that any member holds: highest urgency, strongest status, basis."""
+    return next((o for o in order if o in values), order[-1])
+
+
+def _common(values):
+    """The most common non-blank value, ties to the one named first."""
+    vals = [v for v in values if v]
+    if not vals:
+        return ""
+    counts = collections.Counter(vals)
+    return next(v for v in vals if counts[v] == max(counts.values()))
+
+
+def _merge_class(members, risks):
+    """Step 4's fields for a folded strategy, merged the PV2 way (4_strategy_clean rule 9):
+    union of SDG targets; the highest urgency; the strongest status and basis; the most common
+    category and sector; the response of a member whose quote was found. Each kept risk keeps
+    the quote of the first member that evidenced it."""
+    targets = _union(m.get("sdg_targets") for m in members)
+    scored = [m for m in members if m.get("response_orientation") in ("proactive", "transformative")]
+    ori = _common([m["response_orientation"] for m in scored]) if scored else "BAU"
+    ev_of = {}
+    for m in members:
+        for r, q in zip(m.get("related_risks") or [], m.get("risk_evidence") or []):
+            ev_of.setdefault(r, q)
+    hdi = _common([m.get("HDICategory") for m in members])
+    sector = _common([m.get("sector") for m in members])
+    out = dict(
+        HDICategory=hdi, hdi_family=vocab.HDI_PILLAR.get(hdi, ""),
+        risk_evidence=[ev_of.get(r, "") for r in risks],
+        stated_urgency=_strongest({m.get("stated_urgency") for m in members}, vocab.URGENCIES),
+        sdg_targets=targets, sdg_primary_dimension=vocab.primary_dimension(targets),
+        response_orientation=ori,
+        response_evidence=next((m["response_evidence"] for m in scored
+                                if m["response_orientation"] == ori), ""),
+        sector=sector, sector_canonical=vocab.sector_canonical(sector),
+        institutional_lead=next((m["institutional_lead"] for m in members
+                                 if m.get("institutional_lead")), ""),
+        implementation_status=_strongest({m.get("implementation_status") for m in members},
+                                         vocab.STATUSES),
+        legal_or_plan_basis=_strongest({m.get("legal_or_plan_basis") for m in members}, vocab.BASES),
+        **{yn: "Y" if any(m.get(yn) == "Y" for m in members) else "N"
+           for yn in ("has_timeline", "has_quantified_target", "has_monitoring")})
+    # PV2 calcs/panel.maturity, unfunded until the budget lane returns.
+    out["maturity_subtype"] = vocab.maturity(out["implementation_status"],
+                                             out["has_timeline"] == "Y",
+                                             out["has_quantified_target"] == "Y")
+    return out
 
 
 # ================================================================ M: map onto the mother tree
@@ -430,7 +568,7 @@ def resolve(s, a, tree):
     s.update(tree_version=tree.version, relation="unmapped", objective_id="", tree_objective="",
              new_objective="", node_id="", level="", depth_basis="", depth_words="",
              family_id="", family="", mechanism_id="", mechanism="", subpillar="",
-             pillar_rhdr="", target_id="", target_label="", instrument_id="",
+             pillar_rhdr="", tree_rhdr="", target_id="", target_label="", instrument_id="",
              instrument_label="", proposal="", confidence="", map_note="")
     if not a:
         s["map_note"] = "no answer for this strategy"
@@ -479,7 +617,9 @@ def resolve(s, a, tree):
     d = tree.describe(final) if final else {}
     s.update(family_id=d.get("family_id", ""), family=d.get("family", ""),
              mechanism_id=d.get("mechanism_id", ""), mechanism=d.get("mechanism", ""),
-             subpillar=d.get("subpillar", ""), pillar_rhdr=d.get("pillar", ""))
+             subpillar=d.get("subpillar", ""), pillar_rhdr=d.get("pillar", ""),
+             # The tree family's own RHDR category, beside E's HDICategory as a check on it.
+             tree_rhdr=(tree.families.get(d.get("family_id")) or {}).get("primary_rhdr", ""))
     tid, iid = _str(a.get("target_id")), _str(a.get("instrument_id"))
     if tid in tree.targets:
         s["target_id"], s["target_label"] = tid, tree.targets[tid]["label"]

@@ -4,7 +4,8 @@ Senior development economist and policy analyst reading a national planning docu
 paragraph at a time, to record the risks it names and the strategies it commits to.
 
 Built from PV2 prompts 1 (risk extraction) and 3 (strategy extraction), read in one pass so one
-paragraph is read once, with the document's context file attached.
+paragraph is read once, with the document's context file attached. Step 4 carries PV2 prompt
+4's strategy-level fields down to the paragraph, so they are read where the words are.
 
 Input
 
@@ -187,6 +188,188 @@ Other fields:
 Multiple strategies in one chunk are multiple records. Do not merge two actions into one record,
 and do not split one action into several.
 
+STEP 4: CLASSIFY EACH STRATEGY
+
+Each strategy record also carries the fields below. They are lifted from PV2 prompts 3 and 4
+(the rhdr_2026_10 framework), word for word except that a strategy's "own text" or "input
+rows" is here the CHUNK. Every value is in English except the two evidence fields, which are
+copied word for word from the chunk in its own language, like `quote`.
+
+HDICategory - assign exactly one of the categories below, by its definition and
+never by its name alone. They sit in three pillars, and each pillar ends in a
+Standard category for what the pillar covers when nothing new is being done.
+The examples are strategy names from other countries' plans.
+
+<<INSERT_HDI_FRAMEWORK_HERE>>
+
+risk_evidence - QUOTE THE PLAN. For every risk named in related_risks, one short verbatim
+phrase from the chunk showing this strategy addressing that risk: an array, the SAME LENGTH
+as related_risks and in the SAME ORDER. No quote, no risk: a risk whose phrase is missing or
+is not found in the chunk is dropped. [] when related_risks is [].
+
+stated_urgency - a SENTIMENT / language judgment: from the intervention's own
+wording, how URGENTLY is the plan trying to address the risk it is associated
+with? This reads the TEXT's framing/intensity - it is NOT a funding measure.
+Assign exactly one: high / medium / low.
+  - high: urgent/immediate/critical framing - e.g. "urgently", "immediately",
+    "accelerate", "crisis", "must", "rapidly scale up", near-term deadlines.
+  - medium: active but measured - e.g. "strengthen", "improve", "expand",
+    "develop", standard programme language, no strong time pressure.
+  - low: tentative / exploratory / long-horizon - e.g. "explore", "consider",
+    "study", "where feasible", "over the long term", aspirational only.
+If the intervention addresses no clear risk, base it on the general intensity
+of the action language.
+
+SDG mapping - work to TARGET level, in this sequence:
+  1) identify the SDG Goal(s) the intervention relates to (from the 17 below);
+  2) assign the most relevant specific SDG TARGET(s) - the numbered targets under
+     those goals (e.g. "7.2", "13.1", "1.3"). Use the official target codes.
+Do NOT assign the 5-Ps dimensions here - a downstream lookup translates each target
+to its People/Planet/Prosperity/Peace dimension deterministically.
+- sdg_alignment - the SDG Goal name(s), drawn only from these 17:
+  No Poverty; Zero Hunger; Good Health and Well-Being; Quality Education;
+  Gender Equality; Clean Water and Sanitation; Affordable and Clean Energy;
+  Decent Work and Economic Growth; Industry, Innovation and Infrastructure;
+  Reduced Inequalities; Sustainable Cities and Communities; Responsible
+  Consumption and Production; Climate Action; Life Below Water; Life on
+  Land; Peace, Justice and Strong Institutions; Partnerships for the Goals
+- sdg_targets - the specific target codes (e.g. ["7.2","13.1"]); [] if none clear.
+
+response_orientation
+
+Classify each strategy at the strategy level: how it responds to its PRIMARY risk, and
+whether it changes who or what the service reaches.
+Assign EXACTLY ONE of three values: BAU / proactive / transformative.
+Output one value only, never a list, never a score or number.
+("BAU" = business-as-usual.)
+
+THE THREE CATEGORIES
+
+BAU - business-as-usual (this is the DEFAULT category)
+- Ordinary government activity in relation to the risk: routine, continuing,
+  business-as-usual delivery; standard capacity-building; keeping existing services
+  running, or doing more of them for those they already reach; responding after a crisis
+  with temporary/emergency measures; OR
+  hesitation, deferral, and minimal or no response. All of these are BAU here: none of
+  them anticipate a specific future risk ahead of time, and none of them change the
+  system that generates the risk.
+- Typical examples: training or hiring workers; running the existing examination system;
+  keeping hospitals lit and staffed; routine road maintenance; strengthening
+  governance/administration; continuing a subsidy or programme; improving delivery to
+  those already served; standard sectoral spending (health, education, infrastructure
+  upkeep); emergency or recovery relief after an event; or deferring or avoiding action.
+- Assign "BAU" whenever NEITHER proactive NOR transformative has positive evidence (see
+  the gates below). This is where the large middle of ordinary strategies belongs.
+
+proactive - ASSIGN ONLY IF this positive evidence is present:
+- The strategy is explicitly framed as acting AHEAD of a specific future risk that has
+  NOT yet materialised: anticipating, preventing, or preparing for it.
+- Signals: "anticipate", "preventive/prevention of a future [X]", "prepare for", "early
+  warning", "future-proof", "pre-emptive", "build resilience against [a named future
+  risk]", "to avoid a future [X]".
+- CRITICAL GATE: being forward-looking is not enough. There must be an EXPLICIT link to a
+  specific anticipated future risk or opportunity the strategy is getting ahead of. A
+  strategy that simply delivers an ongoing service ("train healthcare workers", "reduce
+  emissions", "improve waste management") with no explicit anticipatory framing is BAU,
+  not proactive.
+
+transformative - ASSIGN ONLY IF one of these two kinds of positive evidence is present:
+- The strategy aims to change the SYSTEM that generates the risk: structural reform,
+  systemic change, fundamental reshaping, or major innovation intended to alter
+  underlying conditions over the long term. OR
+- The strategy changes COVERAGE OR THE SERVICE ITSELF: its own text says it reaches
+  places or groups the service did not reach, or offers what was not offered before.
+  Secondary schools built in rural districts that had few; a road or rail line that
+  connects places that were hard to reach; primary care brought to people without it.
+- Signals: "systemic change", "structural reform", "reform of [the system/sector]",
+  "overhaul", "reshape", "transition to a new [model/system]", "fundamentally change",
+  "innovate [the system]".
+- CRITICAL GATE: improving the current service in place, or doing more of it for those it
+  already reaches, is NOT transformative, that is BAU. Scale or ambition alone does not
+  make a strategy transformative: the text must name the change in the system, or the
+  place, group or service that is new. "Expand access" with no gap named is BAU.
+
+PROACTIVE OR TRANSFORMATIVE: THE DIFFERENCE
+Each needs its own evidence, and neither is a stronger form of the other.
+- proactive keeps the system as it is and prepares it for a named future risk: it acts
+  ahead of the risk, inside the arrangements that already exist.
+- transformative changes the system that produces or carries the risk, or who and what
+  the service reaches: once it is delivered, the arrangements, or the people and places
+  they cover, are different.
+Ask: once this strategy is delivered, is it the same system, better prepared (proactive),
+or a different system (transformative)?
+A word is not evidence. "Reform", "transform", "modernise", "resilient" and "future" appear
+in ordinary strategies; the test is what the text says will change, and for whom.
+
+Three subjects, each at all three values. These are illustrations, not plan text:
+  Floods
+    BAU             Repair and maintain the existing embankments and drainage canals.
+    proactive       Build an early warning system and pre-position relief stocks for the
+                    heavier floods projected under climate change.
+    transformative  Replace embankment-led flood control with river-basin land-use
+                    planning that stops new settlement on the floodplain.
+  Schools
+    BAU             Run the national examinations and pay the teachers already in post.
+    proactive       Plan school places for the smaller cohorts projected as fertility falls,
+                    merging schools before their rolls shrink.
+    transformative  Build secondary schools in rural districts that have none.
+  Ageing
+    BAU             Add beds to public care homes for older people.
+    proactive       Raise pension contributions now to meet the payments due as the
+                    population over 65 doubles by 2040.
+    transformative  Move from a pay-as-you-go pension to a contributory scheme that covers
+                    informal workers.
+
+DECISION PROCEDURE (apply in this order; do NOT default upward)
+1. Is there explicit evidence of structural or systemic change to what generates the
+   risk, or of a place, group or service the strategy newly reaches? -> transformative.
+2. Is there explicit evidence of anticipating a SPECIFIC future risk, or exploiting a
+   future opportunity, beyond mere forward-looking-ness? -> proactive.
+3. Otherwise -> BAU.
+There is NO preference ordering and NO tie-break toward the "stronger" category. A
+category is assigned only when its specific evidence is present. When in doubt between
+BAU and proactive or transformative, the absence of that category's specific evidence
+means the answer is BAU. Judge each strategy on its own text; do not try to produce any
+particular distribution across categories. Classify each one accurately and let the mix
+fall where it falls.
+
+A strategy whose HDICategory is a Standard category keeps a service running, so it is BAU
+unless its own text names a change to the system itself.
+
+response_evidence - THE PLAN'S WORDS FOR THE SCORE. For proactive or transformative, copy
+one short phrase, word for word, from the chunk that names what makes it so: the named
+future risk it acts ahead of, the change to the system, or the place, group or service it
+newly reaches. "" for BAU. The phrase is checked against the chunk: a score with no phrase,
+a paraphrase, or a phrase that names only ambition ("strengthen", "promote", "develop",
+"modernise", "through existing mechanisms") becomes BAU. If you cannot find such a phrase,
+the answer is BAU.
+
+sector - Energy / Agriculture / Health / Education / Water / Environment /
+Digital / Transport / Governance / Industry / Social Protection / etc.
+
+institutional_lead - lead ministry/agency if explicitly named; else null.
+
+Maturity evidence (extract FACTS from the plan; do NOT score - a downstream Python
+step derives the maturity weight deterministically from these plus whether the strategy
+is actually funded in the budget). For each strategy:
+
+implementation_status - exactly one of: operational / planned / aspiration.
+  operational - already being delivered: a running programme, deployed service, enacted
+    law in force, active budget line, or explicit "ongoing / implemented / in operation"
+    wording.
+  planned - a concrete, specified plan not yet operating (a named measure with defined
+    scope, but described as forthcoming / to be established).
+  aspiration - a broad intention, principle, or goal with no concrete delivery machinery.
+has_timeline - "Y" if a target year, phase, deadline, or delivery schedule is stated for
+  this strategy; else "N".
+has_quantified_target - "Y" if a numeric or measurable target (%, count, value, coverage
+  level) is stated for this strategy; else "N".
+has_monitoring - "Y" if a monitoring, evaluation, KPI, indicator, or review mechanism is
+  stated; else "N".
+legal_or_plan_basis - exactly one of: law / plan / strategy / none. The STRONGEST basis
+  stated: an enacted act/regulation = law; a costed or official government plan = plan; a
+  strategy/policy document = strategy; nothing explicit = none.
+
 OUTPUT
 
 A valid JSON object only. No markdown, no commentary, no text outside the JSON.
@@ -196,4 +379,10 @@ A valid JSON object only. No markdown, no commentary, no text outside the JSON.
  "strategies": [{"statement_type": "", "name": "", "objective": "", "target_group": "",
                  "instrument": "", "pillar": "", "related_risks": [], "target_year": null,
                  "target_year_quote": "", "place": "", "quantified_targets": [],
-                 "named_agencies": [], "quote": "", "quote_en": ""}]}
+                 "named_agencies": [], "quote": "", "quote_en": "",
+                 "HDICategory": "", "risk_evidence": [], "stated_urgency": "",
+                 "sdg_alignment": [], "sdg_targets": [], "response_orientation": "",
+                 "response_evidence": "", "sector": "", "institutional_lead": null,
+                 "implementation_status": "", "has_timeline": "",
+                 "has_quantified_target": "", "has_monitoring": "",
+                 "legal_or_plan_basis": ""}]}

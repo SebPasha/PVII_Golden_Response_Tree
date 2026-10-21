@@ -1,0 +1,328 @@
+{
+ "_from": "PV2 workflow/frameworks/rhdr_2026_10/vocab.json (hdi_families, hdi_framework) and workflow/vocab/vocab.json (sector_canonical, sdg_goals), copied unchanged on 21 October 2026.",
+ "hdi_families": [
+  {
+   "name": "People-first Approach",
+   "categories": [
+    "Tackling Structural Exclusion",
+    "Enhancing Capabilities",
+    "Future Generations",
+    "Standard People"
+   ]
+  },
+  {
+   "name": "Smarter Growth",
+   "categories": [
+    "Export-led",
+    "Domestic Integration",
+    "Growth through Inclusion",
+    "Standard Economy"
+   ]
+  },
+  {
+   "name": "Making Change Happen",
+   "categories": [
+    "Anticipation and Strategic Foresight",
+    "Adaptability and Course Correction",
+    "Agility and Delivery Capability",
+    "Reform Leadership, Coalitions and Civic Engagement",
+    "Standard Governance"
+   ]
+  }
+ ],
+ "hdi_framework": {
+  "_about": "What prompts 3 and 4 tell the model about each category, rendered at <<INSERT_HDI_FRAMEWORK_HERE>> by vocab.hdi_framework_text. The definitions of the ten named categories are the amendments document's, with 'coordinate across government' taken out of Agility; on 5 October 2026 Sebastian put coordination under Adaptability, kept to a mechanism created or reformed, and made an expansion that changes coverage or the service a named category, not Standard. The three Standard definitions and the rules are drafted from the document's comments and the decisions of 5 October.",
+  "_from": "The published categories each one takes content from, wholly or in part. Fostering the Spirit of Change splits: innovation and research to Export-led, culture to Standard People. Joined-up Thinking goes to Adaptability and Course Correction only where a coordination mechanism is created or reformed; the rest of what it held is classified by what it does.",
+  "_examples": "Strategy names as published on 29 September 2026, from countries outside the five being rerun, so the rerun is not shown its own answers.",
+  "categories": {
+   "Tackling Structural Exclusion": {
+    "definition": "Covers strategies that address the exclusion of specific groups, including women, youth, informal workers, persons with disabilities and marginalised communities, and the structural barriers that limit their opportunities, such as discrimination, unequal access to services and resources, limited voice and participation, and lack of protection of rights and dignity.",
+    "from": [
+     "Tackling Structural Exclusion"
+    ],
+    "examples": [
+     "Indigenous peoples rights protection and inclusion mechanisms (Philippines)",
+     "Land access and rehabilitation support for landless and marginalized groups (Nepal)"
+    ]
+   },
+   "Enhancing Capabilities": {
+    "definition": "Covers strategies that expand people's capabilities to lead healthy, productive and resilient lives, including through education, skills, digital access, health, social protection, food security, livelihoods and basic services. It is broad enough to include what might otherwise be called human security, so that capability-building and protection from vulnerability are not split.",
+    "from": [
+     "Enhancing Capabilities in Education, Skills, Digital, Health",
+     "Human Security"
+    ],
+    "examples": [
+     "National qualifications, accreditation, and skills recognition system (Nepal)",
+     "Unified primary health care system reform (Bangladesh)"
+    ]
+   },
+   "Future Generations": {
+    "definition": "Covers strategies that protect long-term well-being and avoid shifting risks or costs onto future generations, including through climate resilience, just transition, nature and biodiversity, sustainable resource use, intergenerational equity and responsible public finance.",
+    "from": [
+     "Future Generations"
+    ],
+    "examples": [
+     "Power sector transition planning and decarbonisation (Fiji)",
+     "Forest carbon inventory and terrestrial parks for conservation and resilience (Solomon Islands)"
+    ]
+   },
+   "Standard People": {
+    "definition": "Covers strategies in the People-first area that keep an existing service or programme for people running, maintain it, or do more of it for those it already reaches (schools, clinics, social transfers, housing, culture, sport), with nothing that changes who or where it reaches or what it offers.",
+    "from": [
+     "Fostering the Spirit of Change"
+    ],
+    "examples": [
+     "Hospital, pharmaceutical, and health communications service strengthening (Afghanistan)",
+     "Protect, restore, and promote cultural heritage and living culture (Afghanistan)"
+    ]
+   },
+   "Export-led": {
+    "definition": "Covers strategies that grow the economy through external markets, including export promotion and diversification, trade agreements and market access, foreign direct investment, international tourism, trade logistics, and the innovation and technology upgrading that make traded sectors competitive.",
+    "from": [
+     "Export-led",
+     "Fostering the Spirit of Change"
+    ],
+    "examples": [
+     "Expand trade agreements, market diversification, and export promotion (Philippines)",
+     "University research, innovation, and industry knowledge transfer (Bangladesh)"
+    ]
+   },
+   "Domestic Integration": {
+    "definition": "Covers strategies that strengthen links within the domestic economy, including local value chains and value addition, agro-processing, industrial clusters, and connections between regions and between rural and urban markets.",
+    "from": [
+     "Domestic Integration"
+    ],
+    "examples": [
+     "Industrial clusters, parks, and value chain coordination for manufacturing growth (Nigeria)",
+     "Develop fisheries value chains, cold storage and fish processing infrastructure (Kenya)"
+    ]
+   },
+   "Growth through Inclusion": {
+    "definition": "Covers strategies that create jobs and incomes for groups left out of growth, including women, youth, informal workers and rural households, through enterprise development, support for micro, small and medium enterprises, productivity, finance and market access.",
+    "from": [
+     "Growth through Inclusion"
+    ],
+    "examples": [
+     "Youth entrepreneurship, microfinance and financial inclusion (Kiribati)",
+     "Business environment reform and enterprise formalisation (Ghana)"
+    ]
+   },
+   "Standard Economy": {
+    "definition": "Covers strategies in the Smarter Growth area that keep existing economic infrastructure and support running or maintain it (roads, power, water, irrigation, ports, routine sector programmes), with no new connection, market or group reached.",
+    "from": [],
+    "examples": [
+     "Road network maintenance and asset management (Bangladesh)",
+     "Transport infrastructure standards, maintenance and asset protection (Papua New Guinea)"
+    ]
+   },
+   "Anticipation and Strategic Foresight": {
+    "definition": "Covers the ability of governments to identify and prepare for future risks, opportunities and disruptions, including through horizon scanning, scenario planning, early warning, contingency planning, risk-informed analysis and future-oriented strategy.",
+    "from": [
+     "Strategic Planning (Anticipation)"
+    ],
+    "examples": [
+     "Technology Foresight and Priority Technology Deployment (Kazakhstan)",
+     "Hydrometeorological early warning and forecasting systems (Fiji)"
+    ]
+   },
+   "Adaptability and Course Correction": {
+    "definition": "Covers the capacity to adjust priorities, policies, plans and investments in response to new evidence, changing conditions or shifting development needs, including institutional flexibility, learning by doing, revising strategies and making timely course corrections, and the coordination that lets several parts of government act on them together, where a mechanism for it is created or reformed.",
+    "from": [
+     "Changing Plans (Adaptability)",
+     "Joined-up Thinking"
+    ],
+    "examples": [
+     "National development monitoring, evaluation, and plan review (Cambodia)",
+     "Evidence-based planning, strategic framework management, and adaptive review (Bangladesh)"
+    ]
+   },
+   "Agility and Delivery Capability": {
+    "definition": "Covers the ability of institutions to act quickly and effectively, mobilise resources, implement reforms and respond to shocks or emerging priorities without major disruption.",
+    "from": [
+     "Efficient Action (Agility)"
+    ],
+    "examples": [
+     "Public investment management and procurement reform (Kenya)",
+     "Digital government and public service modernisation (Fiji)"
+    ]
+   },
+   "Reform Leadership, Coalitions and Civic Engagement": {
+    "definition": "Covers strategies that build the political, institutional and social support needed to advance reform, including political will, reform incentives, collaborative leadership, coalitions, public-private collaboration, civic participation and co-creation.",
+    "from": [
+     "Political Will",
+     "Collaborative Leadership",
+     "Civic Engagement"
+    ],
+    "examples": [
+     "Strengthen citizen participation, transparency, and open government (Peru)",
+     "Reform NGO regulation and strengthen state-civil society engagement (Cambodia)"
+    ]
+   },
+   "Standard Governance": {
+    "definition": "Covers the routine functions of the state and of government's own machinery (public order, defence, the administration of justice, revenue collection, statistics, general administration) where nothing changes in how government anticipates, adapts, delivers or builds support for reform.",
+    "from": [],
+    "examples": [
+     "Police, public security, and peace enforcement (Afghanistan)",
+     "Fire service, civil defence and fire safety enforcement (Bangladesh)"
+    ]
+   }
+  },
+  "rules": [
+   "Pillar first. What the strategy acts on decides the pillar: people's lives and opportunities (People-first Approach), firms, markets and the economy's infrastructure (Smarter Growth), or how government itself decides and delivers (Making Change Happen).",
+   "Named or Standard. A named category needs the strategy's own text to show something new in that category's direction: a new instrument, a change in how the thing is done, or an expansion that changes coverage or the service, reaching places or groups it did not reach or offering what was not offered (secondary schools in rural districts that had few; a road or rail line connecting places that were hard to reach; primary care brought to people without it). Keeping an existing service or function running, maintaining it, or doing more of it for those it already reaches is the pillar's Standard category, however large (running the existing examination system, keeping hospitals lit and staffed, routine road maintenance). Where the text does not settle it, Standard.",
+   "Informality. Formalising informal businesses (registration, licensing, access to finance and markets) is Growth through Inclusion. Formalising informal workers (registration, labour contracts, labour rights, social insurance or pension coverage) is Tackling Structural Exclusion, and so are informal settlements.",
+   "Reform. Delivering a reform (the machinery, the resources and the speed of putting it into effect) is Agility and Delivery Capability. Building the support for a reform (political commitment, coalitions, public-private dialogue, citizen participation) is Reform Leadership, Coalitions and Civic Engagement.",
+   "Innovation. Research and development, innovation and technology upgrading that make traded sectors competitive are Export-led. Digital skills and digital access for people are Enhancing Capabilities. Digitising how government itself works or delivers is Agility and Delivery Capability.",
+   "Coordination. Cross-government coordination is Adaptability and Course Correction only where the strategy creates or reforms a mechanism that makes several parts of government plan, budget or act together: a body with a mandate, a joint plan, a shared budget or data system. A strategy that names several ministries, or calls for collaboration, is classified by what the coordinated work does.",
+   "Skills and jobs. Training people is Enhancing Capabilities. Creating jobs and incomes for groups left out of growth, through enterprise, is Growth through Inclusion. Removing a barrier that a particular group faces is Tackling Structural Exclusion.",
+   "Climate and environment. Protecting long-term well-being (resilience, transition, nature, resources) is Future Generations. A warning or foresight system inside government is Anticipation and Strategic Foresight. A green industry built for export is Export-led.",
+   "Culture and tourism. Culture, heritage and sport outside tourism are Standard People unless they reach an excluded group or build a capability. International tourism is Export-led.",
+   "One category. Where two named categories fit, the strategy's stated objective decides, not the means it uses."
+  ]
+ },
+ "sector_canonical": {
+  "_about": "The free-text `sector` stage 4 emits, folded to one name per sector so a chart can group on it. 92 distinct spellings arrived over 3,608 strategies (Urban beside Urban Development beside Urbanization and Rural Settlements), and grouping on the raw text put the same sector in three columns. Keys are matched case-insensitively; a value not in the map is shown as unmapped with its own count, never folded into an Other.",
+  "canon": [
+   "Agriculture",
+   "Culture",
+   "Digital",
+   "Disaster risk",
+   "Education",
+   "Energy",
+   "Environment",
+   "Finance",
+   "Gender",
+   "Governance",
+   "Health",
+   "Housing",
+   "Industry",
+   "Infrastructure",
+   "Justice",
+   "Labour & employment",
+   "Land",
+   "Rural & regional",
+   "Science & technology",
+   "Security & defence",
+   "Social protection",
+   "Sport",
+   "Tourism",
+   "Trade",
+   "Transport",
+   "Urban development",
+   "Water",
+   "Youth"
+  ],
+  "map": {
+   "governance": "Governance",
+   "local government": "Governance",
+   "public administration": "Governance",
+   "public services": "Governance",
+   "planning": "Governance",
+   "decentralisation": "Governance",
+   "pfm": "Governance",
+   "public enterprise": "Governance",
+   "foreign affairs": "Governance",
+   "justice": "Justice",
+   "jrlos": "Justice",
+   "security": "Security & defence",
+   "defense": "Security & defence",
+   "defence": "Security & defence",
+   "national defense": "Security & defence",
+   "public security": "Security & defence",
+   "public safety": "Security & defence",
+   "industry": "Industry",
+   "economy": "Industry",
+   "economic development": "Industry",
+   "psd": "Industry",
+   "msme": "Industry",
+   "sme development": "Industry",
+   "mining": "Industry",
+   "services": "Industry",
+   "construction": "Industry",
+   "trade": "Trade",
+   "commerce": "Trade",
+   "consumer protection": "Trade",
+   "finance": "Finance",
+   "financial": "Finance",
+   "macroeconomy": "Finance",
+   "social protection": "Social protection",
+   "social services": "Social protection",
+   "social inclusion": "Social protection",
+   "social cohesion": "Social protection",
+   "child protection": "Social protection",
+   "disability": "Social protection",
+   "disability inclusion": "Social protection",
+   "indigenous development": "Social protection",
+   "environment": "Environment",
+   "climate": "Environment",
+   "climate and meteorology": "Environment",
+   "waste": "Environment",
+   "forestry": "Environment",
+   "marine": "Environment",
+   "disaster risk management": "Disaster risk",
+   "disaster management": "Disaster risk",
+   "education": "Education",
+   "health": "Health",
+   "digital": "Digital",
+   "ict": "Digital",
+   "science and technology": "Science & technology",
+   "innovation": "Science & technology",
+   "transport": "Transport",
+   "energy": "Energy",
+   "utilities": "Energy",
+   "water": "Water",
+   "sanitation": "Water",
+   "agriculture": "Agriculture",
+   "fisheries": "Agriculture",
+   "food": "Agriculture",
+   "food security": "Agriculture",
+   "tourism": "Tourism",
+   "housing": "Housing",
+   "housing & community": "Housing",
+   "urban development": "Urban development",
+   "urban": "Urban development",
+   "urbanization and rural settlements": "Urban development",
+   "rural development": "Rural & regional",
+   "regional development": "Rural & regional",
+   "local development": "Rural & regional",
+   "local economic development": "Rural & regional",
+   "community development": "Rural & regional",
+   "labour": "Labour & employment",
+   "employment": "Labour & employment",
+   "youth employment": "Labour & employment",
+   "labour mobility": "Labour & employment",
+   "migration": "Labour & employment",
+   "youth": "Youth",
+   "sports": "Sport",
+   "sport": "Sport",
+   "culture": "Culture",
+   "creative economy": "Culture",
+   "creative industries": "Culture",
+   "media": "Culture",
+   "sports and culture": "Culture",
+   "gender": "Gender",
+   "land": "Land",
+   "infrastructure": "Infrastructure",
+   "social infrastructure": "Infrastructure"
+  }
+ },
+ "sdg_goals": [
+  "No Poverty",
+  "Zero Hunger",
+  "Good Health and Well-Being",
+  "Quality Education",
+  "Gender Equality",
+  "Clean Water and Sanitation",
+  "Affordable and Clean Energy",
+  "Decent Work and Economic Growth",
+  "Industry, Innovation and Infrastructure",
+  "Reduced Inequalities",
+  "Sustainable Cities and Communities",
+  "Responsible Consumption and Production",
+  "Climate Action",
+  "Life Below Water",
+  "Life on Land",
+  "Peace, Justice and Strong Institutions",
+  "Partnerships for the Goals"
+ ]
+}

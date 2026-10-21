@@ -1,0 +1,1052 @@
+{
+"1.1": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"1.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"1.3": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"1.4": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity",
+"Peace"
+]
+},
+"1.5": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet",
+"Prosperity"
+]
+},
+"1.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"1.b": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"2.1": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"2.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"2.3": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"2.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"2.5": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"2.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"2.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"2.c": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"3.1": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"None"
+]
+},
+"3.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"None"
+]
+},
+"3.3": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"3.4": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"3.5": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"3.6": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"3.7": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"3.8": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"3.9": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"3.a": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"3.b": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"3.c": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"3.d": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace",
+"Prosperity"
+]
+},
+"4.1": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"4.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"4.3": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"4.4": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"4.5": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"4.6": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"4.7": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet",
+"Peace"
+]
+},
+"4.a": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"4.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"4.c": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"5.1": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"5.2": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"5.3": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"5.4": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"5.5": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"5.6": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"5.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People",
+"Peace"
+]
+},
+"5.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"5.c": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"6.1": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"6.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"6.3": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"6.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"6.5": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"6.6": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"6.a": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"6.b": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People",
+"Planet"
+]
+},
+"7.1": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"7.2": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"7.3": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"7.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"7.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People",
+"Planet"
+]
+},
+"8.1": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"8.2": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"None"
+]
+},
+"8.3": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"8.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"8.5": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"8.6": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"8.7": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"8.8": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace",
+"Prosperity"
+]
+},
+"8.9": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"8.10": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"8.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"None"
+]
+},
+"8.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"9.1": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"9.2": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People",
+"Planet"
+]
+},
+"9.3": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"9.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"9.5": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"None"
+]
+},
+"9.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"9.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"None"
+]
+},
+"9.c": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"10.1": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"10.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace",
+"Prosperity"
+]
+},
+"10.3": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"10.4": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"10.5": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"10.6": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"10.7": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"10.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"10.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"10.c": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"11.1": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"11.2": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Prosperity",
+"Planet"
+]
+},
+"11.3": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity",
+"Planet"
+]
+},
+"11.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"11.5": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet",
+"Prosperity"
+]
+},
+"11.6": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"11.7": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"11.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet",
+"Peace"
+]
+},
+"11.b": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People",
+"Peace"
+]
+},
+"11.c": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet",
+"People"
+]
+},
+"12.1": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"12.2": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"12.3": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"12.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"12.5": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"12.6": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet",
+"Peace"
+]
+},
+"12.7": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet",
+"Peace"
+]
+},
+"12.8": {
+"primary_dimension": "People",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"12.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"12.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"12.c": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity",
+"People"
+]
+},
+"13.1": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"13.2": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity",
+"Peace"
+]
+},
+"13.3": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"13.a": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"13.b": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People",
+"Peace"
+]
+},
+"14.1": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"14.2": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"14.3": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"14.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"14.5": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"None"
+]
+},
+"14.6": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity",
+"Peace"
+]
+},
+"14.7": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet",
+"People"
+]
+},
+"14.a": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"14.b": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People",
+"Peace"
+]
+},
+"14.c": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"15.1": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People"
+]
+},
+"15.2": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"15.3": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"15.4": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"None"
+]
+},
+"15.5": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"None"
+]
+},
+"15.6": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Planet",
+"Prosperity"
+]
+},
+"15.7": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"15.8": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"15.9": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"15.a": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"15.b": {
+"primary_dimension": "Planet",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"15.c": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Planet",
+"People"
+]
+},
+"16.1": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"16.2": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"16.3": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People",
+"Prosperity"
+]
+},
+"16.4": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"16.5": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"16.6": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"16.7": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"16.8": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"16.9": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"16.10": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"16.a": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"16.b": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"People"
+]
+},
+"17.1": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"17.2": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"17.3": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"17.4": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"17.5": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"None"
+]
+},
+"17.6": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"17.7": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Planet"
+]
+},
+"17.8": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"People"
+]
+},
+"17.9": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"17.10": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"17.11": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"None"
+]
+},
+"17.12": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"17.13": {
+"primary_dimension": "Prosperity",
+"secondary_dimensions": [
+"Peace"
+]
+},
+"17.14": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity",
+"Planet"
+]
+},
+"17.15": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"17.16": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"17.17": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+},
+"17.18": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity",
+"People"
+]
+},
+"17.19": {
+"primary_dimension": "Peace",
+"secondary_dimensions": [
+"Prosperity"
+]
+}
+}

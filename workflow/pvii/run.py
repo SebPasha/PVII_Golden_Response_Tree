@@ -34,7 +34,8 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
     print("parsed: %d pages, %d paragraphs" % (doc.page_count, len(doc.paragraphs)), flush=True)
     record = {"plan_id": plan.plan_id, "started": started, "file": plan.file,
               "pages": doc.page_count, "paragraphs": len(doc.paragraphs),
-              "prompts": {s: steps.sha(config.load_prompt(s)) for s in config.PROMPT_FILES},
+              "prompts": {s: steps.sha(steps.e_prompt() if s == "E" else config.load_prompt(s))
+                          for s in config.PROMPT_FILES},
               "models": {s: config.STAGE_MODELS[s] for s in config.STAGE_MODELS},
               "dry_run": bool(client.dry_run)}
     ctx = steps.context(client, plan, doc, out, force=force_context) if "C" in steps_wanted \
@@ -44,7 +45,7 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
         result = steps.extract(client, plan, doc, ctx, out)
         record["extract"] = {"risks": len(result["risks"]), "rows": len(result["rows"]),
                              "dropped": len(result["dropped"]), "errors": result["errors"][:20],
-                             "invalid": result["invalid"][:20],
+                             "invalid": result["invalid"][:20], "guards": result["guards"],
                              "quote_checks": _count(result["rows"] + result["risks"], "quote_check")}
     if client.dry_run:
         _dry_run_rest(client, plan, doc, steps_wanted)
@@ -58,7 +59,10 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
             record["map"] = {"tree_version": t.version, "strategies": len(strategies),
                              "proposals": len(proposals), "errors": m_errors[:20],
                              "relations": _count(strategies, "relation"),
-                             "levels": _count(strategies, "level")}
+                             "levels": _count(strategies, "level"),
+                             "response_orientation": _count(strategies, "response_orientation"),
+                             "HDICategory": _count(strategies, "HDICategory"),
+                             "maturity_subtype": _count(strategies, "maturity_subtype")}
     record["ledger"] = client.ledger.as_dict()
     record["finished"] = datetime.datetime.now().isoformat(timespec="seconds")
     if not client.dry_run:
@@ -71,7 +75,9 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
 def _rows_from_disk(out):
     rows = io.read_csv(os.path.join(out, "strategy_rows.csv"))
     for r in rows:
-        r["related_risks"] = io.as_list(r.get("related_risks"))
+        for k in ("related_risks", "risk_evidence", "sdg_targets", "quantified_targets",
+                  "named_agencies"):
+            r[k] = io.as_list(r.get(k))
         r["target_year"] = steps._year(r.get("target_year"))
     return rows
 
