@@ -1,0 +1,181 @@
+{
+ "slug": "india",
+ "country": "India",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/india/ndp/IND Strategy for New India 2018-22.pdf",
+   "doc_type": "ndp",
+   "start": 2018,
+   "end": 2022,
+   "language": "en",
+   "title": "Strategy for New India @75",
+   "edition": "SNI75",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/india/ndp/IND NDP 2012-17.pdf",
+   "doc_type": "ndp",
+   "start": 2012,
+   "end": 2017,
+   "language": "en",
+   "title": "12th Five Year Plan",
+   "edition": "12th",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/india/yYo8lCuXK7n13xxElnay.pdf",
+   "doc_type": "other",
+   "start": null,
+   "end": null,
+   "language": "en",
+   "title": "yYo8lCuXK7n13xxElnay.pdf",
+   "skip": "unidentified file; confirm what it is"
+  },
+  {
+   "file": "data/sources/india/sector/IND AI for Viksit Bharat 2047 .pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2047,
+   "language": "en",
+   "title": "AI for Viksit Bharat 2047",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Blue Economy 2025.pdf",
+   "doc_type": "sector",
+   "start": 2025,
+   "end": null,
+   "language": "en",
+   "title": "Blue Economy 2025",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Digital Public Infrastructure for Viksit Bharat 2047.pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2047,
+   "language": "en",
+   "title": "Digital Public Infrastructure for Viksit Bharat 2047",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND National Education Policy 2020.pdf",
+   "doc_type": "sector",
+   "start": 2020,
+   "end": null,
+   "language": "en",
+   "title": "National Education Policy 2020",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND National Health Policy 2017.pdf",
+   "doc_type": "sector",
+   "start": 2017,
+   "end": null,
+   "language": "en",
+   "title": "National Health Policy 2017",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND National Skill Development Mission 2015.pdf",
+   "doc_type": "sector",
+   "start": 2015,
+   "end": null,
+   "language": "en",
+   "title": "National Skill Development Mission 2015",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Reimagining Care for Viksit Bharat 2047.pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2047,
+   "language": "en",
+   "title": "Reimagining Care for Viksit Bharat 2047",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Reimagining Skilling for Viksit Bharat 2047.pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2047,
+   "language": "en",
+   "title": "Reimagining Skilling for Viksit Bharat 2047",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Reimagining the Senior Care Paradigm 2024.pdf",
+   "doc_type": "sector",
+   "start": 2024,
+   "end": null,
+   "language": "en",
+   "title": "Reimagining the Senior Care Paradigm 2024",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Roadmap for Inclusive Societal Development 2025.pdf",
+   "doc_type": "sector",
+   "start": 2025,
+   "end": null,
+   "language": "en",
+   "title": "Roadmap for Inclusive Societal Development 2025",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Roadmap for Job Creation in the AI Economy 2025.pdf",
+   "doc_type": "sector",
+   "start": 2025,
+   "end": null,
+   "language": "en",
+   "title": "Roadmap for Job Creation in the AI Economy 2025",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND School Education System Analysis and Policy Roadmap 2026.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": null,
+   "language": "en",
+   "title": "School Education System Analysis and Policy Roadmap 2026",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/india/sector/IND Transformation in School Education 2023.pdf",
+   "doc_type": "sector",
+   "start": 2023,
+   "end": null,
+   "language": "en",
+   "title": "Transformation in School Education 2023",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  }
+ ],
+ "parked": {
+  "budget": {
+   "2020": "data/sources/india/budget/India Budget Speech 2020.pdf",
+   "2021": "data/sources/india/budget/India Budget Speech 2021.pdf",
+   "2022": "data/sources/india/budget/India Budget Speech 2022.pdf",
+   "2023": "data/sources/india/budget/India Budget Speech 2023.pdf",
+   "2024": "data/sources/india/budget/India Budget 2024.pdf"
+  },
+  "unga": {
+   "2022": "data/sources/india/unga/India - 2022 Transcript.pdf",
+   "2023": "data/sources/india/unga/India - 2023 Transcript.pdf",
+   "2024": "data/sources/india/unga/India - 2024 Transcript.pdf",
+   "2025": "data/sources/india/unga/India - 2025 Transcript.pdf"
+  }
+ }
+}

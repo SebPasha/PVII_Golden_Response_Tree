@@ -1,0 +1,1927 @@
+country,family_id,family,n_l2,n_l3,share_l3
+afghanistan,L2-01,Group-based barriers and discrimination,3,3,0.5
+afghanistan,L2-02,"Violence, coercion and exploitation",0,1,1.0
+afghanistan,L2-03,Horizontal inequality and social cohesion,2,2,0.5
+afghanistan,L2-05,Household risk protection and consumption stability,5,5,0.5
+afghanistan,L2-06,Escape from poverty traps,1,0,0.0
+afghanistan,L2-07,Skills formation for work,2,2,0.5
+afghanistan,L2-08,Human capital formation through schooling,1,2,0.667
+afghanistan,L2-09,Health service coverage and quality,2,6,0.75
+afghanistan,L2-10,Disease and injury prevention,0,3,1.0
+afghanistan,L2-11,Food and nutrition security,1,3,0.75
+afghanistan,L2-12,Access to basic services,3,4,0.571
+afghanistan,L2-13,"Crime, violence and personal security",8,10,0.556
+afghanistan,L2-14,Emissions mitigation,2,1,0.333
+afghanistan,L2-15,Natural capital stewardship,0,4,1.0
+afghanistan,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+afghanistan,L2-17,Climate hazard exposure and adaptation,3,1,0.25
+afghanistan,L2-18,Resource rents and intergenerational wealth,2,1,0.333
+afghanistan,L2-19,Fiscal sustainability across generations,1,0,0.0
+afghanistan,L2-20,Population age structure and lifecycle resources,1,0,0.0
+afghanistan,L2-21,Water scarcity and allocation,1,0,0.0
+afghanistan,L2-22,Productive capability accumulation,3,0,0.0
+afghanistan,L2-23,Trade costs and market connectivity,2,3,0.6
+afghanistan,L2-24,Market access and integration,0,2,1.0
+afghanistan,L2-25,International capital and knowledge transmission,2,0,0.0
+afghanistan,L2-27,Innovation and technology diffusion,3,0,0.0
+afghanistan,L2-28,Internal market connectivity,3,2,0.4
+afghanistan,L2-29,Urban agglomeration and land use,4,2,0.333
+afghanistan,L2-30,Network utility performance,0,3,1.0
+afghanistan,L2-31,Domestic linkages and agglomeration of production,0,3,1.0
+afghanistan,L2-33,Primary-sector productivity growth,1,0,0.0
+afghanistan,L2-34,Firm capability and growth,2,0,0.0
+afghanistan,L2-35,Market institutions and competition,0,1,1.0
+afghanistan,L2-36,"Credit, savings and financial access",0,2,1.0
+afghanistan,L2-37,Labour market matching and regulation,4,0,0.0
+afghanistan,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+afghanistan,L2-39,Labour mobility and remittances,2,2,0.5
+afghanistan,L2-40,Property rights and land markets,1,1,0.5
+afghanistan,L2-41,External balance and shock absorption,0,1,1.0
+afghanistan,L2-43,Hazard anticipation,1,2,0.667
+afghanistan,L2-44,"Foresight, planning and evidence",1,1,0.5
+afghanistan,L2-45,Institutional checks on executive power,8,2,0.2
+afghanistan,L2-46,"Feedback, learning and policy adaptation",0,4,1.0
+afghanistan,L2-47,Regulatory updating for technological change,3,0,0.0
+afghanistan,L2-48,Bureaucratic capability and service delivery,4,1,0.2
+afghanistan,L2-49,Decentralised provision,1,0,0.0
+afghanistan,L2-50,Revenue capacity,0,1,1.0
+afghanistan,L2-51,Public expenditure quality,3,7,0.7
+afghanistan,L2-52,Regulatory enforcement capacity,2,7,0.778
+afghanistan,L2-53,Crisis response capacity,0,2,1.0
+afghanistan,L2-54,Participation and community voice,0,5,1.0
+afghanistan,L2-55,Information and accountability,1,2,0.667
+afghanistan,L2-56,Political accountability and contestation,1,3,0.75
+bangladesh,L2-01,Group-based barriers and discrimination,17,7,0.292
+bangladesh,L2-02,"Violence, coercion and exploitation",7,4,0.364
+bangladesh,L2-03,Horizontal inequality and social cohesion,3,2,0.4
+bangladesh,L2-05,Household risk protection and consumption stability,22,16,0.421
+bangladesh,L2-06,Escape from poverty traps,7,0,0.0
+bangladesh,L2-07,Skills formation for work,15,23,0.605
+bangladesh,L2-08,Human capital formation through schooling,9,32,0.78
+bangladesh,L2-09,Health service coverage and quality,10,31,0.756
+bangladesh,L2-10,Disease and injury prevention,1,24,0.96
+bangladesh,L2-11,Food and nutrition security,6,18,0.75
+bangladesh,L2-12,Access to basic services,15,13,0.464
+bangladesh,L2-13,"Crime, violence and personal security",4,18,0.818
+bangladesh,L2-14,Emissions mitigation,18,12,0.4
+bangladesh,L2-15,Natural capital stewardship,5,30,0.857
+bangladesh,L2-16,"Pollution, waste and environmental behaviour",8,23,0.742
+bangladesh,L2-17,Climate hazard exposure and adaptation,29,25,0.463
+bangladesh,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+bangladesh,L2-19,Fiscal sustainability across generations,2,0,0.0
+bangladesh,L2-20,Population age structure and lifecycle resources,1,6,0.857
+bangladesh,L2-21,Water scarcity and allocation,12,6,0.333
+bangladesh,L2-22,Productive capability accumulation,56,10,0.152
+bangladesh,L2-23,Trade costs and market connectivity,6,10,0.625
+bangladesh,L2-24,Market access and integration,2,6,0.75
+bangladesh,L2-25,International capital and knowledge transmission,9,5,0.357
+bangladesh,L2-26,International tourism demand,3,3,0.5
+bangladesh,L2-27,Innovation and technology diffusion,28,10,0.263
+bangladesh,L2-28,Internal market connectivity,7,28,0.8
+bangladesh,L2-29,Urban agglomeration and land use,9,19,0.679
+bangladesh,L2-30,Network utility performance,5,11,0.688
+bangladesh,L2-31,Domestic linkages and agglomeration of production,2,8,0.8
+bangladesh,L2-32,Market participation of small producers,3,5,0.625
+bangladesh,L2-33,Primary-sector productivity growth,23,20,0.465
+bangladesh,L2-34,Firm capability and growth,10,5,0.333
+bangladesh,L2-35,Market institutions and competition,2,7,0.778
+bangladesh,L2-36,"Credit, savings and financial access",9,25,0.735
+bangladesh,L2-37,Labour market matching and regulation,20,12,0.375
+bangladesh,L2-38,Adjustment of displaced workers and lagging places,11,14,0.56
+bangladesh,L2-39,Labour mobility and remittances,3,4,0.571
+bangladesh,L2-40,Property rights and land markets,2,10,0.833
+bangladesh,L2-41,External balance and shock absorption,3,11,0.786
+bangladesh,L2-42,Supply-chain and economic security,0,4,1.0
+bangladesh,L2-43,Hazard anticipation,11,9,0.45
+bangladesh,L2-44,"Foresight, planning and evidence",4,16,0.8
+bangladesh,L2-45,Institutional checks on executive power,12,5,0.294
+bangladesh,L2-46,"Feedback, learning and policy adaptation",0,4,1.0
+bangladesh,L2-47,Regulatory updating for technological change,7,7,0.5
+bangladesh,L2-48,Bureaucratic capability and service delivery,8,26,0.765
+bangladesh,L2-49,Decentralised provision,5,2,0.286
+bangladesh,L2-50,Revenue capacity,1,4,0.8
+bangladesh,L2-51,Public expenditure quality,5,16,0.762
+bangladesh,L2-52,Regulatory enforcement capacity,8,19,0.704
+bangladesh,L2-53,Crisis response capacity,0,3,1.0
+bangladesh,L2-54,Participation and community voice,4,5,0.556
+bangladesh,L2-55,Information and accountability,1,4,0.8
+bangladesh,L2-56,Political accountability and contestation,1,2,0.667
+bangladesh,L2-57,Reform coalitions and economic dialogue,0,1,1.0
+bhutan,L2-01,Group-based barriers and discrimination,2,2,0.5
+bhutan,L2-02,"Violence, coercion and exploitation",1,0,0.0
+bhutan,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+bhutan,L2-04,Forced displacement and resettlement,0,1,1.0
+bhutan,L2-05,Household risk protection and consumption stability,0,1,1.0
+bhutan,L2-07,Skills formation for work,1,3,0.75
+bhutan,L2-08,Human capital formation through schooling,2,9,0.818
+bhutan,L2-09,Health service coverage and quality,3,7,0.7
+bhutan,L2-10,Disease and injury prevention,0,5,1.0
+bhutan,L2-11,Food and nutrition security,0,3,1.0
+bhutan,L2-12,Access to basic services,5,2,0.286
+bhutan,L2-13,"Crime, violence and personal security",1,3,0.75
+bhutan,L2-14,Emissions mitigation,4,2,0.333
+bhutan,L2-15,Natural capital stewardship,6,2,0.25
+bhutan,L2-16,"Pollution, waste and environmental behaviour",0,3,1.0
+bhutan,L2-17,Climate hazard exposure and adaptation,1,3,0.75
+bhutan,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+bhutan,L2-19,Fiscal sustainability across generations,1,0,0.0
+bhutan,L2-20,Population age structure and lifecycle resources,1,0,0.0
+bhutan,L2-21,Water scarcity and allocation,2,0,0.0
+bhutan,L2-22,Productive capability accumulation,2,0,0.0
+bhutan,L2-23,Trade costs and market connectivity,1,3,0.75
+bhutan,L2-24,Market access and integration,1,0,0.0
+bhutan,L2-25,International capital and knowledge transmission,0,1,1.0
+bhutan,L2-26,International tourism demand,0,1,1.0
+bhutan,L2-27,Innovation and technology diffusion,1,1,0.5
+bhutan,L2-28,Internal market connectivity,0,4,1.0
+bhutan,L2-29,Urban agglomeration and land use,2,5,0.714
+bhutan,L2-31,Domestic linkages and agglomeration of production,2,1,0.333
+bhutan,L2-32,Market participation of small producers,0,1,1.0
+bhutan,L2-33,Primary-sector productivity growth,0,1,1.0
+bhutan,L2-34,Firm capability and growth,1,0,0.0
+bhutan,L2-35,Market institutions and competition,1,1,0.5
+bhutan,L2-36,"Credit, savings and financial access",0,2,1.0
+bhutan,L2-37,Labour market matching and regulation,4,0,0.0
+bhutan,L2-40,Property rights and land markets,1,0,0.0
+bhutan,L2-41,External balance and shock absorption,1,1,0.5
+bhutan,L2-42,Supply-chain and economic security,1,0,0.0
+bhutan,L2-43,Hazard anticipation,0,2,1.0
+bhutan,L2-44,"Foresight, planning and evidence",1,2,0.667
+bhutan,L2-45,Institutional checks on executive power,1,1,0.5
+bhutan,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+bhutan,L2-48,Bureaucratic capability and service delivery,5,2,0.286
+bhutan,L2-49,Decentralised provision,1,0,0.0
+bhutan,L2-51,Public expenditure quality,2,1,0.333
+bhutan,L2-52,Regulatory enforcement capacity,3,1,0.25
+bhutan,L2-54,Participation and community voice,1,0,0.0
+bhutan,L2-56,Political accountability and contestation,0,1,1.0
+brazil,L2-01,Group-based barriers and discrimination,7,4,0.364
+brazil,L2-02,"Violence, coercion and exploitation",1,1,0.5
+brazil,L2-05,Household risk protection and consumption stability,1,4,0.8
+brazil,L2-06,Escape from poverty traps,3,1,0.25
+brazil,L2-07,Skills formation for work,0,2,1.0
+brazil,L2-08,Human capital formation through schooling,0,4,1.0
+brazil,L2-09,Health service coverage and quality,1,4,0.8
+brazil,L2-10,Disease and injury prevention,0,2,1.0
+brazil,L2-11,Food and nutrition security,2,1,0.333
+brazil,L2-12,Access to basic services,2,2,0.5
+brazil,L2-13,"Crime, violence and personal security",2,5,0.714
+brazil,L2-14,Emissions mitigation,3,1,0.25
+brazil,L2-15,Natural capital stewardship,4,2,0.333
+brazil,L2-17,Climate hazard exposure and adaptation,1,0,0.0
+brazil,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+brazil,L2-20,Population age structure and lifecycle resources,0,1,1.0
+brazil,L2-21,Water scarcity and allocation,1,0,0.0
+brazil,L2-22,Productive capability accumulation,1,3,0.75
+brazil,L2-23,Trade costs and market connectivity,0,4,1.0
+brazil,L2-26,International tourism demand,1,0,0.0
+brazil,L2-27,Innovation and technology diffusion,1,2,0.667
+brazil,L2-28,Internal market connectivity,1,2,0.667
+brazil,L2-29,Urban agglomeration and land use,4,0,0.0
+brazil,L2-30,Network utility performance,1,0,0.0
+brazil,L2-33,Primary-sector productivity growth,1,1,0.5
+brazil,L2-35,Market institutions and competition,1,0,0.0
+brazil,L2-36,"Credit, savings and financial access",0,1,1.0
+brazil,L2-37,Labour market matching and regulation,1,1,0.5
+brazil,L2-38,Adjustment of displaced workers and lagging places,0,1,1.0
+brazil,L2-40,Property rights and land markets,0,2,1.0
+brazil,L2-41,External balance and shock absorption,0,1,1.0
+brazil,L2-43,Hazard anticipation,0,1,1.0
+brazil,L2-44,"Foresight, planning and evidence",1,0,0.0
+brazil,L2-45,Institutional checks on executive power,5,1,0.167
+brazil,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+brazil,L2-47,Regulatory updating for technological change,0,1,1.0
+brazil,L2-48,Bureaucratic capability and service delivery,1,3,0.75
+brazil,L2-50,Revenue capacity,0,1,1.0
+brazil,L2-51,Public expenditure quality,1,0,0.0
+brazil,L2-52,Regulatory enforcement capacity,0,2,1.0
+brazil,L2-54,Participation and community voice,1,1,0.5
+brazil,L2-56,Political accountability and contestation,0,1,1.0
+brunei,L2-05,Household risk protection and consumption stability,1,0,0.0
+brunei,L2-07,Skills formation for work,0,4,1.0
+brunei,L2-08,Human capital formation through schooling,2,1,0.333
+brunei,L2-09,Health service coverage and quality,2,0,0.0
+brunei,L2-10,Disease and injury prevention,0,2,1.0
+brunei,L2-12,Access to basic services,0,2,1.0
+brunei,L2-14,Emissions mitigation,1,1,0.5
+brunei,L2-15,Natural capital stewardship,1,0,0.0
+brunei,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+brunei,L2-17,Climate hazard exposure and adaptation,2,2,0.5
+brunei,L2-22,Productive capability accumulation,1,0,0.0
+brunei,L2-23,Trade costs and market connectivity,0,3,1.0
+brunei,L2-27,Innovation and technology diffusion,2,0,0.0
+brunei,L2-28,Internal market connectivity,1,2,0.667
+brunei,L2-29,Urban agglomeration and land use,1,1,0.5
+brunei,L2-30,Network utility performance,0,2,1.0
+brunei,L2-31,Domestic linkages and agglomeration of production,2,0,0.0
+brunei,L2-33,Primary-sector productivity growth,2,1,0.333
+brunei,L2-34,Firm capability and growth,1,1,0.5
+brunei,L2-36,"Credit, savings and financial access",0,1,1.0
+brunei,L2-43,Hazard anticipation,2,0,0.0
+brunei,L2-44,"Foresight, planning and evidence",1,2,0.667
+brunei,L2-47,Regulatory updating for technological change,1,0,0.0
+brunei,L2-48,Bureaucratic capability and service delivery,2,4,0.667
+brunei,L2-51,Public expenditure quality,0,1,1.0
+brunei,L2-52,Regulatory enforcement capacity,1,2,0.667
+brunei,L2-55,Information and accountability,1,0,0.0
+cambodia,L2-01,Group-based barriers and discrimination,5,5,0.5
+cambodia,L2-02,"Violence, coercion and exploitation",2,3,0.6
+cambodia,L2-03,Horizontal inequality and social cohesion,2,3,0.6
+cambodia,L2-05,Household risk protection and consumption stability,7,6,0.462
+cambodia,L2-06,Escape from poverty traps,1,0,0.0
+cambodia,L2-07,Skills formation for work,5,3,0.375
+cambodia,L2-08,Human capital formation through schooling,0,4,1.0
+cambodia,L2-09,Health service coverage and quality,2,7,0.778
+cambodia,L2-10,Disease and injury prevention,1,8,0.889
+cambodia,L2-11,Food and nutrition security,3,3,0.5
+cambodia,L2-12,Access to basic services,3,6,0.667
+cambodia,L2-13,"Crime, violence and personal security",5,9,0.643
+cambodia,L2-14,Emissions mitigation,4,2,0.333
+cambodia,L2-15,Natural capital stewardship,2,10,0.833
+cambodia,L2-16,"Pollution, waste and environmental behaviour",1,5,0.833
+cambodia,L2-17,Climate hazard exposure and adaptation,5,2,0.286
+cambodia,L2-18,Resource rents and intergenerational wealth,4,1,0.2
+cambodia,L2-20,Population age structure and lifecycle resources,1,1,0.5
+cambodia,L2-21,Water scarcity and allocation,4,0,0.0
+cambodia,L2-22,Productive capability accumulation,16,2,0.111
+cambodia,L2-23,Trade costs and market connectivity,3,8,0.727
+cambodia,L2-24,Market access and integration,0,1,1.0
+cambodia,L2-25,International capital and knowledge transmission,2,2,0.5
+cambodia,L2-26,International tourism demand,4,1,0.2
+cambodia,L2-27,Innovation and technology diffusion,2,2,0.5
+cambodia,L2-28,Internal market connectivity,3,8,0.727
+cambodia,L2-29,Urban agglomeration and land use,4,3,0.429
+cambodia,L2-30,Network utility performance,1,1,0.5
+cambodia,L2-31,Domestic linkages and agglomeration of production,0,2,1.0
+cambodia,L2-32,Market participation of small producers,0,2,1.0
+cambodia,L2-33,Primary-sector productivity growth,10,6,0.375
+cambodia,L2-34,Firm capability and growth,3,2,0.4
+cambodia,L2-35,Market institutions and competition,5,4,0.444
+cambodia,L2-36,"Credit, savings and financial access",2,13,0.867
+cambodia,L2-37,Labour market matching and regulation,3,4,0.571
+cambodia,L2-38,Adjustment of displaced workers and lagging places,2,3,0.6
+cambodia,L2-39,Labour mobility and remittances,1,0,0.0
+cambodia,L2-40,Property rights and land markets,6,3,0.333
+cambodia,L2-41,External balance and shock absorption,0,9,1.0
+cambodia,L2-42,Supply-chain and economic security,0,1,1.0
+cambodia,L2-43,Hazard anticipation,5,3,0.375
+cambodia,L2-44,"Foresight, planning and evidence",0,4,1.0
+cambodia,L2-45,Institutional checks on executive power,4,2,0.333
+cambodia,L2-46,"Feedback, learning and policy adaptation",0,3,1.0
+cambodia,L2-47,Regulatory updating for technological change,2,4,0.667
+cambodia,L2-48,Bureaucratic capability and service delivery,8,13,0.619
+cambodia,L2-49,Decentralised provision,2,0,0.0
+cambodia,L2-50,Revenue capacity,0,2,1.0
+cambodia,L2-51,Public expenditure quality,5,14,0.737
+cambodia,L2-52,Regulatory enforcement capacity,0,8,1.0
+cambodia,L2-54,Participation and community voice,1,3,0.75
+cambodia,L2-55,Information and accountability,1,1,0.5
+cambodia,L2-56,Political accountability and contestation,1,0,0.0
+cambodia,L2-57,Reform coalitions and economic dialogue,0,1,1.0
+china,L2-01,Group-based barriers and discrimination,2,5,0.714
+china,L2-02,"Violence, coercion and exploitation",5,0,0.0
+china,L2-03,Horizontal inequality and social cohesion,2,3,0.6
+china,L2-04,Forced displacement and resettlement,0,2,1.0
+china,L2-05,Household risk protection and consumption stability,6,7,0.538
+china,L2-07,Skills formation for work,1,2,0.667
+china,L2-08,Human capital formation through schooling,5,7,0.583
+china,L2-09,Health service coverage and quality,2,11,0.846
+china,L2-10,Disease and injury prevention,0,2,1.0
+china,L2-11,Food and nutrition security,3,1,0.25
+china,L2-12,Access to basic services,2,4,0.667
+china,L2-13,"Crime, violence and personal security",3,4,0.571
+china,L2-14,Emissions mitigation,13,7,0.35
+china,L2-15,Natural capital stewardship,5,13,0.722
+china,L2-16,"Pollution, waste and environmental behaviour",7,13,0.65
+china,L2-17,Climate hazard exposure and adaptation,4,4,0.5
+china,L2-20,Population age structure and lifecycle resources,1,4,0.8
+china,L2-21,Water scarcity and allocation,1,1,0.5
+china,L2-22,Productive capability accumulation,24,8,0.25
+china,L2-23,Trade costs and market connectivity,8,4,0.333
+china,L2-24,Market access and integration,6,8,0.571
+china,L2-25,International capital and knowledge transmission,3,0,0.0
+china,L2-26,International tourism demand,3,0,0.0
+china,L2-27,Innovation and technology diffusion,12,16,0.571
+china,L2-28,Internal market connectivity,5,11,0.688
+china,L2-29,Urban agglomeration and land use,15,8,0.348
+china,L2-30,Network utility performance,1,4,0.8
+china,L2-31,Domestic linkages and agglomeration of production,0,3,1.0
+china,L2-33,Primary-sector productivity growth,2,7,0.778
+china,L2-34,Firm capability and growth,0,1,1.0
+china,L2-35,Market institutions and competition,6,8,0.571
+china,L2-36,"Credit, savings and financial access",1,5,0.833
+china,L2-37,Labour market matching and regulation,8,3,0.273
+china,L2-38,Adjustment of displaced workers and lagging places,7,6,0.462
+china,L2-39,Labour mobility and remittances,1,0,0.0
+china,L2-40,Property rights and land markets,5,1,0.167
+china,L2-41,External balance and shock absorption,2,6,0.75
+china,L2-42,Supply-chain and economic security,0,2,1.0
+china,L2-43,Hazard anticipation,5,1,0.167
+china,L2-44,"Foresight, planning and evidence",2,0,0.0
+china,L2-45,Institutional checks on executive power,6,0,0.0
+china,L2-46,"Feedback, learning and policy adaptation",0,3,1.0
+china,L2-47,Regulatory updating for technological change,2,1,0.333
+china,L2-48,Bureaucratic capability and service delivery,4,10,0.714
+china,L2-49,Decentralised provision,13,5,0.278
+china,L2-50,Revenue capacity,0,1,1.0
+china,L2-51,Public expenditure quality,4,10,0.714
+china,L2-52,Regulatory enforcement capacity,6,9,0.6
+china,L2-54,Participation and community voice,4,5,0.556
+china,L2-55,Information and accountability,2,0,0.0
+china,L2-57,Reform coalitions and economic dialogue,0,1,1.0
+colombia,L2-01,Group-based barriers and discrimination,6,3,0.333
+colombia,L2-02,"Violence, coercion and exploitation",1,1,0.5
+colombia,L2-03,Horizontal inequality and social cohesion,5,1,0.167
+colombia,L2-05,Household risk protection and consumption stability,3,4,0.571
+colombia,L2-07,Skills formation for work,0,1,1.0
+colombia,L2-08,Human capital formation through schooling,0,3,1.0
+colombia,L2-09,Health service coverage and quality,3,0,0.0
+colombia,L2-10,Disease and injury prevention,0,2,1.0
+colombia,L2-11,Food and nutrition security,0,1,1.0
+colombia,L2-12,Access to basic services,3,6,0.667
+colombia,L2-13,"Crime, violence and personal security",4,7,0.636
+colombia,L2-14,Emissions mitigation,2,3,0.6
+colombia,L2-15,Natural capital stewardship,1,1,0.5
+colombia,L2-16,"Pollution, waste and environmental behaviour",0,3,1.0
+colombia,L2-17,Climate hazard exposure and adaptation,3,0,0.0
+colombia,L2-19,Fiscal sustainability across generations,1,1,0.5
+colombia,L2-20,Population age structure and lifecycle resources,0,1,1.0
+colombia,L2-21,Water scarcity and allocation,1,0,0.0
+colombia,L2-22,Productive capability accumulation,3,0,0.0
+colombia,L2-23,Trade costs and market connectivity,1,1,0.5
+colombia,L2-26,International tourism demand,1,0,0.0
+colombia,L2-27,Innovation and technology diffusion,1,4,0.8
+colombia,L2-28,Internal market connectivity,2,2,0.5
+colombia,L2-29,Urban agglomeration and land use,2,1,0.333
+colombia,L2-30,Network utility performance,0,4,1.0
+colombia,L2-33,Primary-sector productivity growth,0,2,1.0
+colombia,L2-34,Firm capability and growth,2,0,0.0
+colombia,L2-35,Market institutions and competition,0,2,1.0
+colombia,L2-36,"Credit, savings and financial access",0,2,1.0
+colombia,L2-37,Labour market matching and regulation,0,1,1.0
+colombia,L2-38,Adjustment of displaced workers and lagging places,1,1,0.5
+colombia,L2-40,Property rights and land markets,4,5,0.556
+colombia,L2-41,External balance and shock absorption,0,2,1.0
+colombia,L2-42,Supply-chain and economic security,0,1,1.0
+colombia,L2-43,Hazard anticipation,1,0,0.0
+colombia,L2-44,"Foresight, planning and evidence",2,0,0.0
+colombia,L2-45,Institutional checks on executive power,2,0,0.0
+colombia,L2-48,Bureaucratic capability and service delivery,1,2,0.667
+colombia,L2-49,Decentralised provision,3,0,0.0
+colombia,L2-50,Revenue capacity,1,1,0.5
+colombia,L2-51,Public expenditure quality,4,5,0.556
+colombia,L2-52,Regulatory enforcement capacity,1,6,0.857
+colombia,L2-54,Participation and community voice,1,0,0.0
+colombia,L2-55,Information and accountability,1,0,0.0
+egypt,L2-01,Group-based barriers and discrimination,0,2,1.0
+egypt,L2-02,"Violence, coercion and exploitation",1,0,0.0
+egypt,L2-03,Horizontal inequality and social cohesion,0,2,1.0
+egypt,L2-05,Household risk protection and consumption stability,1,2,0.667
+egypt,L2-07,Skills formation for work,1,1,0.5
+egypt,L2-08,Human capital formation through schooling,2,2,0.5
+egypt,L2-09,Health service coverage and quality,0,1,1.0
+egypt,L2-10,Disease and injury prevention,0,1,1.0
+egypt,L2-11,Food and nutrition security,1,1,0.5
+egypt,L2-12,Access to basic services,1,4,0.8
+egypt,L2-13,"Crime, violence and personal security",1,0,0.0
+egypt,L2-14,Emissions mitigation,5,2,0.286
+egypt,L2-15,Natural capital stewardship,0,2,1.0
+egypt,L2-16,"Pollution, waste and environmental behaviour",1,2,0.667
+egypt,L2-17,Climate hazard exposure and adaptation,1,0,0.0
+egypt,L2-20,Population age structure and lifecycle resources,0,2,1.0
+egypt,L2-21,Water scarcity and allocation,1,0,0.0
+egypt,L2-22,Productive capability accumulation,7,0,0.0
+egypt,L2-23,Trade costs and market connectivity,1,1,0.5
+egypt,L2-24,Market access and integration,1,0,0.0
+egypt,L2-25,International capital and knowledge transmission,1,0,0.0
+egypt,L2-26,International tourism demand,0,1,1.0
+egypt,L2-27,Innovation and technology diffusion,3,0,0.0
+egypt,L2-28,Internal market connectivity,0,3,1.0
+egypt,L2-29,Urban agglomeration and land use,0,1,1.0
+egypt,L2-30,Network utility performance,2,2,0.5
+egypt,L2-33,Primary-sector productivity growth,1,1,0.5
+egypt,L2-35,Market institutions and competition,2,0,0.0
+egypt,L2-36,"Credit, savings and financial access",2,2,0.5
+egypt,L2-37,Labour market matching and regulation,2,0,0.0
+egypt,L2-38,Adjustment of displaced workers and lagging places,1,1,0.5
+egypt,L2-42,Supply-chain and economic security,1,0,0.0
+egypt,L2-43,Hazard anticipation,1,0,0.0
+egypt,L2-44,"Foresight, planning and evidence",0,1,1.0
+egypt,L2-45,Institutional checks on executive power,1,1,0.5
+egypt,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+egypt,L2-47,Regulatory updating for technological change,1,0,0.0
+egypt,L2-48,Bureaucratic capability and service delivery,1,1,0.5
+egypt,L2-51,Public expenditure quality,2,2,0.5
+egypt,L2-52,Regulatory enforcement capacity,1,1,0.5
+egypt,L2-54,Participation and community voice,1,0,0.0
+ethiopia,L2-01,Group-based barriers and discrimination,0,1,1.0
+ethiopia,L2-07,Skills formation for work,0,1,1.0
+ethiopia,L2-08,Human capital formation through schooling,0,1,1.0
+ethiopia,L2-09,Health service coverage and quality,0,1,1.0
+ethiopia,L2-10,Disease and injury prevention,0,1,1.0
+ethiopia,L2-12,Access to basic services,1,0,0.0
+ethiopia,L2-14,Emissions mitigation,1,0,0.0
+ethiopia,L2-15,Natural capital stewardship,1,0,0.0
+ethiopia,L2-17,Climate hazard exposure and adaptation,0,1,1.0
+ethiopia,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+ethiopia,L2-22,Productive capability accumulation,1,1,0.5
+ethiopia,L2-27,Innovation and technology diffusion,1,0,0.0
+ethiopia,L2-29,Urban agglomeration and land use,1,0,0.0
+ethiopia,L2-31,Domestic linkages and agglomeration of production,0,1,1.0
+ethiopia,L2-33,Primary-sector productivity growth,1,2,0.667
+ethiopia,L2-35,Market institutions and competition,1,0,0.0
+ethiopia,L2-36,"Credit, savings and financial access",1,1,0.5
+ethiopia,L2-37,Labour market matching and regulation,1,0,0.0
+ethiopia,L2-40,Property rights and land markets,1,0,0.0
+ethiopia,L2-41,External balance and shock absorption,1,0,0.0
+ethiopia,L2-44,"Foresight, planning and evidence",0,1,1.0
+ethiopia,L2-47,Regulatory updating for technological change,1,0,0.0
+ethiopia,L2-48,Bureaucratic capability and service delivery,1,0,0.0
+ethiopia,L2-50,Revenue capacity,1,0,0.0
+ethiopia,L2-51,Public expenditure quality,1,0,0.0
+fiji,L2-01,Group-based barriers and discrimination,6,5,0.455
+fiji,L2-02,"Violence, coercion and exploitation",4,2,0.333
+fiji,L2-03,Horizontal inequality and social cohesion,3,3,0.5
+fiji,L2-04,Forced displacement and resettlement,0,1,1.0
+fiji,L2-05,Household risk protection and consumption stability,2,1,0.333
+fiji,L2-06,Escape from poverty traps,2,0,0.0
+fiji,L2-07,Skills formation for work,7,7,0.5
+fiji,L2-08,Human capital formation through schooling,3,9,0.75
+fiji,L2-09,Health service coverage and quality,4,5,0.556
+fiji,L2-10,Disease and injury prevention,0,10,1.0
+fiji,L2-11,Food and nutrition security,3,0,0.0
+fiji,L2-12,Access to basic services,5,10,0.667
+fiji,L2-13,"Crime, violence and personal security",4,5,0.556
+fiji,L2-14,Emissions mitigation,11,3,0.214
+fiji,L2-15,Natural capital stewardship,5,6,0.545
+fiji,L2-16,"Pollution, waste and environmental behaviour",1,6,0.857
+fiji,L2-17,Climate hazard exposure and adaptation,14,4,0.222
+fiji,L2-18,Resource rents and intergenerational wealth,4,1,0.2
+fiji,L2-21,Water scarcity and allocation,1,2,0.667
+fiji,L2-22,Productive capability accumulation,8,1,0.111
+fiji,L2-23,Trade costs and market connectivity,3,7,0.7
+fiji,L2-24,Market access and integration,1,0,0.0
+fiji,L2-25,International capital and knowledge transmission,2,0,0.0
+fiji,L2-26,International tourism demand,6,4,0.4
+fiji,L2-27,Innovation and technology diffusion,4,1,0.2
+fiji,L2-28,Internal market connectivity,3,8,0.727
+fiji,L2-29,Urban agglomeration and land use,2,6,0.75
+fiji,L2-30,Network utility performance,2,4,0.667
+fiji,L2-31,Domestic linkages and agglomeration of production,1,5,0.833
+fiji,L2-32,Market participation of small producers,3,1,0.25
+fiji,L2-33,Primary-sector productivity growth,5,2,0.286
+fiji,L2-34,Firm capability and growth,0,1,1.0
+fiji,L2-35,Market institutions and competition,1,4,0.8
+fiji,L2-36,"Credit, savings and financial access",3,4,0.571
+fiji,L2-37,Labour market matching and regulation,4,7,0.636
+fiji,L2-38,Adjustment of displaced workers and lagging places,1,3,0.75
+fiji,L2-39,Labour mobility and remittances,1,0,0.0
+fiji,L2-40,Property rights and land markets,4,3,0.429
+fiji,L2-41,External balance and shock absorption,2,0,0.0
+fiji,L2-42,Supply-chain and economic security,1,0,0.0
+fiji,L2-43,Hazard anticipation,3,6,0.667
+fiji,L2-44,"Foresight, planning and evidence",1,0,0.0
+fiji,L2-45,Institutional checks on executive power,3,4,0.571
+fiji,L2-47,Regulatory updating for technological change,2,2,0.5
+fiji,L2-48,Bureaucratic capability and service delivery,5,9,0.643
+fiji,L2-49,Decentralised provision,3,0,0.0
+fiji,L2-50,Revenue capacity,0,2,1.0
+fiji,L2-51,Public expenditure quality,4,2,0.333
+fiji,L2-52,Regulatory enforcement capacity,2,9,0.818
+fiji,L2-54,Participation and community voice,5,1,0.167
+fiji,L2-55,Information and accountability,0,1,1.0
+fiji,L2-56,Political accountability and contestation,0,1,1.0
+ghana,L2-01,Group-based barriers and discrimination,1,7,0.875
+ghana,L2-02,"Violence, coercion and exploitation",0,3,1.0
+ghana,L2-03,Horizontal inequality and social cohesion,5,2,0.286
+ghana,L2-04,Forced displacement and resettlement,0,1,1.0
+ghana,L2-05,Household risk protection and consumption stability,1,5,0.833
+ghana,L2-07,Skills formation for work,0,5,1.0
+ghana,L2-08,Human capital formation through schooling,1,10,0.909
+ghana,L2-09,Health service coverage and quality,3,7,0.7
+ghana,L2-10,Disease and injury prevention,1,8,0.889
+ghana,L2-11,Food and nutrition security,3,7,0.7
+ghana,L2-12,Access to basic services,3,9,0.75
+ghana,L2-13,"Crime, violence and personal security",3,4,0.571
+ghana,L2-14,Emissions mitigation,5,1,0.167
+ghana,L2-15,Natural capital stewardship,4,3,0.429
+ghana,L2-16,"Pollution, waste and environmental behaviour",3,1,0.25
+ghana,L2-17,Climate hazard exposure and adaptation,5,5,0.5
+ghana,L2-18,Resource rents and intergenerational wealth,6,0,0.0
+ghana,L2-19,Fiscal sustainability across generations,1,0,0.0
+ghana,L2-20,Population age structure and lifecycle resources,0,2,1.0
+ghana,L2-22,Productive capability accumulation,6,0,0.0
+ghana,L2-23,Trade costs and market connectivity,2,1,0.333
+ghana,L2-24,Market access and integration,0,2,1.0
+ghana,L2-25,International capital and knowledge transmission,3,0,0.0
+ghana,L2-26,International tourism demand,3,1,0.25
+ghana,L2-27,Innovation and technology diffusion,3,1,0.25
+ghana,L2-28,Internal market connectivity,1,7,0.875
+ghana,L2-29,Urban agglomeration and land use,3,3,0.5
+ghana,L2-30,Network utility performance,0,1,1.0
+ghana,L2-31,Domestic linkages and agglomeration of production,1,5,0.833
+ghana,L2-33,Primary-sector productivity growth,6,6,0.5
+ghana,L2-35,Market institutions and competition,1,2,0.667
+ghana,L2-36,"Credit, savings and financial access",2,1,0.333
+ghana,L2-37,Labour market matching and regulation,1,1,0.5
+ghana,L2-38,Adjustment of displaced workers and lagging places,3,2,0.4
+ghana,L2-39,Labour mobility and remittances,4,2,0.333
+ghana,L2-40,Property rights and land markets,1,0,0.0
+ghana,L2-41,External balance and shock absorption,0,2,1.0
+ghana,L2-43,Hazard anticipation,2,3,0.6
+ghana,L2-44,"Foresight, planning and evidence",2,1,0.333
+ghana,L2-45,Institutional checks on executive power,5,3,0.375
+ghana,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+ghana,L2-47,Regulatory updating for technological change,0,5,1.0
+ghana,L2-48,Bureaucratic capability and service delivery,2,3,0.6
+ghana,L2-49,Decentralised provision,3,2,0.4
+ghana,L2-50,Revenue capacity,0,2,1.0
+ghana,L2-51,Public expenditure quality,1,3,0.75
+ghana,L2-52,Regulatory enforcement capacity,0,7,1.0
+ghana,L2-53,Crisis response capacity,0,1,1.0
+ghana,L2-54,Participation and community voice,3,3,0.5
+ghana,L2-55,Information and accountability,1,0,0.0
+india,L2-01,Group-based barriers and discrimination,2,3,0.6
+india,L2-02,"Violence, coercion and exploitation",0,1,1.0
+india,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+india,L2-05,Household risk protection and consumption stability,1,4,0.8
+india,L2-06,Escape from poverty traps,1,0,0.0
+india,L2-07,Skills formation for work,5,7,0.583
+india,L2-08,Human capital formation through schooling,1,12,0.923
+india,L2-09,Health service coverage and quality,1,4,0.8
+india,L2-10,Disease and injury prevention,0,7,1.0
+india,L2-11,Food and nutrition security,1,5,0.833
+india,L2-12,Access to basic services,4,7,0.636
+india,L2-13,"Crime, violence and personal security",0,2,1.0
+india,L2-14,Emissions mitigation,7,9,0.562
+india,L2-15,Natural capital stewardship,6,6,0.5
+india,L2-16,"Pollution, waste and environmental behaviour",2,9,0.818
+india,L2-17,Climate hazard exposure and adaptation,1,4,0.8
+india,L2-18,Resource rents and intergenerational wealth,2,0,0.0
+india,L2-20,Population age structure and lifecycle resources,0,1,1.0
+india,L2-21,Water scarcity and allocation,3,2,0.4
+india,L2-22,Productive capability accumulation,15,0,0.0
+india,L2-23,Trade costs and market connectivity,4,6,0.6
+india,L2-25,International capital and knowledge transmission,2,0,0.0
+india,L2-26,International tourism demand,5,2,0.286
+india,L2-27,Innovation and technology diffusion,14,10,0.417
+india,L2-28,Internal market connectivity,3,7,0.7
+india,L2-29,Urban agglomeration and land use,2,3,0.6
+india,L2-30,Network utility performance,1,5,0.833
+india,L2-31,Domestic linkages and agglomeration of production,0,2,1.0
+india,L2-32,Market participation of small producers,1,1,0.5
+india,L2-33,Primary-sector productivity growth,4,6,0.6
+india,L2-35,Market institutions and competition,1,1,0.5
+india,L2-36,"Credit, savings and financial access",2,3,0.6
+india,L2-37,Labour market matching and regulation,2,2,0.5
+india,L2-38,Adjustment of displaced workers and lagging places,3,3,0.5
+india,L2-40,Property rights and land markets,1,3,0.75
+india,L2-41,External balance and shock absorption,1,1,0.5
+india,L2-42,Supply-chain and economic security,0,1,1.0
+india,L2-43,Hazard anticipation,0,5,1.0
+india,L2-44,"Foresight, planning and evidence",2,3,0.6
+india,L2-45,Institutional checks on executive power,1,0,0.0
+india,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+india,L2-47,Regulatory updating for technological change,0,2,1.0
+india,L2-48,Bureaucratic capability and service delivery,2,6,0.75
+india,L2-49,Decentralised provision,2,0,0.0
+india,L2-50,Revenue capacity,0,1,1.0
+india,L2-51,Public expenditure quality,4,3,0.429
+india,L2-52,Regulatory enforcement capacity,2,8,0.8
+india,L2-54,Participation and community voice,3,0,0.0
+india,L2-56,Political accountability and contestation,1,0,0.0
+indonesia,L2-01,Group-based barriers and discrimination,2,1,0.333
+indonesia,L2-02,"Violence, coercion and exploitation",2,0,0.0
+indonesia,L2-03,Horizontal inequality and social cohesion,1,5,0.833
+indonesia,L2-05,Household risk protection and consumption stability,6,4,0.4
+indonesia,L2-06,Escape from poverty traps,2,0,0.0
+indonesia,L2-07,Skills formation for work,2,6,0.75
+indonesia,L2-08,Human capital formation through schooling,2,11,0.846
+indonesia,L2-09,Health service coverage and quality,2,6,0.75
+indonesia,L2-10,Disease and injury prevention,0,4,1.0
+indonesia,L2-11,Food and nutrition security,1,6,0.857
+indonesia,L2-12,Access to basic services,5,6,0.545
+indonesia,L2-13,"Crime, violence and personal security",2,5,0.714
+indonesia,L2-14,Emissions mitigation,12,2,0.143
+indonesia,L2-15,Natural capital stewardship,2,13,0.867
+indonesia,L2-16,"Pollution, waste and environmental behaviour",2,3,0.6
+indonesia,L2-17,Climate hazard exposure and adaptation,7,3,0.3
+indonesia,L2-18,Resource rents and intergenerational wealth,1,1,0.5
+indonesia,L2-20,Population age structure and lifecycle resources,2,2,0.5
+indonesia,L2-21,Water scarcity and allocation,3,1,0.25
+indonesia,L2-22,Productive capability accumulation,14,4,0.222
+indonesia,L2-23,Trade costs and market connectivity,6,10,0.625
+indonesia,L2-24,Market access and integration,1,3,0.75
+indonesia,L2-25,International capital and knowledge transmission,5,1,0.167
+indonesia,L2-26,International tourism demand,4,0,0.0
+indonesia,L2-27,Innovation and technology diffusion,8,2,0.2
+indonesia,L2-28,Internal market connectivity,0,10,1.0
+indonesia,L2-29,Urban agglomeration and land use,3,5,0.625
+indonesia,L2-30,Network utility performance,2,6,0.75
+indonesia,L2-31,Domestic linkages and agglomeration of production,2,11,0.846
+indonesia,L2-32,Market participation of small producers,0,1,1.0
+indonesia,L2-33,Primary-sector productivity growth,5,5,0.5
+indonesia,L2-34,Firm capability and growth,1,1,0.5
+indonesia,L2-35,Market institutions and competition,1,7,0.875
+indonesia,L2-36,"Credit, savings and financial access",3,5,0.625
+indonesia,L2-37,Labour market matching and regulation,4,1,0.2
+indonesia,L2-38,Adjustment of displaced workers and lagging places,8,10,0.556
+indonesia,L2-40,Property rights and land markets,2,4,0.667
+indonesia,L2-41,External balance and shock absorption,0,5,1.0
+indonesia,L2-43,Hazard anticipation,2,1,0.333
+indonesia,L2-44,"Foresight, planning and evidence",5,4,0.444
+indonesia,L2-45,Institutional checks on executive power,4,0,0.0
+indonesia,L2-46,"Feedback, learning and policy adaptation",0,3,1.0
+indonesia,L2-47,Regulatory updating for technological change,0,3,1.0
+indonesia,L2-48,Bureaucratic capability and service delivery,4,2,0.333
+indonesia,L2-49,Decentralised provision,3,3,0.5
+indonesia,L2-50,Revenue capacity,1,0,0.0
+indonesia,L2-51,Public expenditure quality,4,8,0.667
+indonesia,L2-52,Regulatory enforcement capacity,2,12,0.857
+indonesia,L2-53,Crisis response capacity,0,1,1.0
+indonesia,L2-54,Participation and community voice,0,1,1.0
+indonesia,L2-55,Information and accountability,1,0,0.0
+indonesia,L2-56,Political accountability and contestation,0,2,1.0
+iran,L2-01,Group-based barriers and discrimination,3,1,0.25
+iran,L2-03,Horizontal inequality and social cohesion,2,5,0.714
+iran,L2-05,Household risk protection and consumption stability,9,11,0.55
+iran,L2-06,Escape from poverty traps,2,0,0.0
+iran,L2-07,Skills formation for work,1,3,0.75
+iran,L2-08,Human capital formation through schooling,5,16,0.762
+iran,L2-09,Health service coverage and quality,3,5,0.625
+iran,L2-10,Disease and injury prevention,0,10,1.0
+iran,L2-11,Food and nutrition security,2,3,0.6
+iran,L2-12,Access to basic services,2,10,0.833
+iran,L2-13,"Crime, violence and personal security",7,10,0.588
+iran,L2-14,Emissions mitigation,7,2,0.222
+iran,L2-15,Natural capital stewardship,4,6,0.6
+iran,L2-16,"Pollution, waste and environmental behaviour",1,3,0.75
+iran,L2-17,Climate hazard exposure and adaptation,5,2,0.286
+iran,L2-18,Resource rents and intergenerational wealth,2,0,0.0
+iran,L2-19,Fiscal sustainability across generations,2,0,0.0
+iran,L2-20,Population age structure and lifecycle resources,1,1,0.5
+iran,L2-21,Water scarcity and allocation,2,2,0.5
+iran,L2-22,Productive capability accumulation,16,3,0.158
+iran,L2-23,Trade costs and market connectivity,3,7,0.7
+iran,L2-24,Market access and integration,0,1,1.0
+iran,L2-25,International capital and knowledge transmission,11,0,0.0
+iran,L2-26,International tourism demand,3,0,0.0
+iran,L2-27,Innovation and technology diffusion,7,5,0.417
+iran,L2-28,Internal market connectivity,3,5,0.625
+iran,L2-29,Urban agglomeration and land use,2,3,0.6
+iran,L2-30,Network utility performance,4,8,0.667
+iran,L2-31,Domestic linkages and agglomeration of production,2,6,0.75
+iran,L2-32,Market participation of small producers,0,3,1.0
+iran,L2-33,Primary-sector productivity growth,2,7,0.778
+iran,L2-34,Firm capability and growth,2,1,0.333
+iran,L2-35,Market institutions and competition,0,12,1.0
+iran,L2-36,"Credit, savings and financial access",3,6,0.667
+iran,L2-37,Labour market matching and regulation,6,4,0.4
+iran,L2-38,Adjustment of displaced workers and lagging places,2,8,0.8
+iran,L2-39,Labour mobility and remittances,1,0,0.0
+iran,L2-40,Property rights and land markets,6,3,0.333
+iran,L2-41,External balance and shock absorption,0,17,1.0
+iran,L2-42,Supply-chain and economic security,1,1,0.5
+iran,L2-43,Hazard anticipation,3,1,0.25
+iran,L2-44,"Foresight, planning and evidence",2,2,0.5
+iran,L2-45,Institutional checks on executive power,3,6,0.667
+iran,L2-46,"Feedback, learning and policy adaptation",0,3,1.0
+iran,L2-47,Regulatory updating for technological change,1,3,0.75
+iran,L2-48,Bureaucratic capability and service delivery,9,8,0.471
+iran,L2-49,Decentralised provision,2,2,0.5
+iran,L2-50,Revenue capacity,1,3,0.75
+iran,L2-51,Public expenditure quality,7,15,0.682
+iran,L2-52,Regulatory enforcement capacity,3,8,0.727
+iran,L2-53,Crisis response capacity,0,1,1.0
+iran,L2-54,Participation and community voice,4,1,0.2
+iran,L2-55,Information and accountability,2,1,0.333
+iran,L2-56,Political accountability and contestation,0,1,1.0
+jamaica,L2-01,Group-based barriers and discrimination,2,3,0.6
+jamaica,L2-02,"Violence, coercion and exploitation",1,0,0.0
+jamaica,L2-03,Horizontal inequality and social cohesion,2,1,0.333
+jamaica,L2-05,Household risk protection and consumption stability,2,2,0.5
+jamaica,L2-07,Skills formation for work,0,2,1.0
+jamaica,L2-08,Human capital formation through schooling,1,2,0.667
+jamaica,L2-09,Health service coverage and quality,1,1,0.5
+jamaica,L2-10,Disease and injury prevention,0,3,1.0
+jamaica,L2-12,Access to basic services,2,3,0.6
+jamaica,L2-13,"Crime, violence and personal security",2,5,0.714
+jamaica,L2-14,Emissions mitigation,2,0,0.0
+jamaica,L2-15,Natural capital stewardship,0,1,1.0
+jamaica,L2-16,"Pollution, waste and environmental behaviour",0,3,1.0
+jamaica,L2-17,Climate hazard exposure and adaptation,3,0,0.0
+jamaica,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+jamaica,L2-19,Fiscal sustainability across generations,1,1,0.5
+jamaica,L2-20,Population age structure and lifecycle resources,0,1,1.0
+jamaica,L2-21,Water scarcity and allocation,1,0,0.0
+jamaica,L2-22,Productive capability accumulation,6,2,0.25
+jamaica,L2-23,Trade costs and market connectivity,0,5,1.0
+jamaica,L2-24,Market access and integration,0,2,1.0
+jamaica,L2-25,International capital and knowledge transmission,2,0,0.0
+jamaica,L2-26,International tourism demand,1,0,0.0
+jamaica,L2-27,Innovation and technology diffusion,2,1,0.333
+jamaica,L2-28,Internal market connectivity,2,3,0.6
+jamaica,L2-29,Urban agglomeration and land use,0,2,1.0
+jamaica,L2-30,Network utility performance,1,1,0.5
+jamaica,L2-33,Primary-sector productivity growth,0,1,1.0
+jamaica,L2-34,Firm capability and growth,2,0,0.0
+jamaica,L2-35,Market institutions and competition,0,1,1.0
+jamaica,L2-36,"Credit, savings and financial access",0,2,1.0
+jamaica,L2-37,Labour market matching and regulation,3,1,0.25
+jamaica,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+jamaica,L2-39,Labour mobility and remittances,0,1,1.0
+jamaica,L2-41,External balance and shock absorption,1,2,0.667
+jamaica,L2-43,Hazard anticipation,2,1,0.333
+jamaica,L2-44,"Foresight, planning and evidence",1,2,0.667
+jamaica,L2-45,Institutional checks on executive power,1,0,0.0
+jamaica,L2-47,Regulatory updating for technological change,2,0,0.0
+jamaica,L2-48,Bureaucratic capability and service delivery,1,3,0.75
+jamaica,L2-49,Decentralised provision,1,0,0.0
+jamaica,L2-51,Public expenditure quality,0,2,1.0
+jamaica,L2-52,Regulatory enforcement capacity,0,3,1.0
+jamaica,L2-54,Participation and community voice,1,0,0.0
+kazakhstan,L2-01,Group-based barriers and discrimination,0,1,1.0
+kazakhstan,L2-02,"Violence, coercion and exploitation",1,0,0.0
+kazakhstan,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+kazakhstan,L2-05,Household risk protection and consumption stability,0,3,1.0
+kazakhstan,L2-06,Escape from poverty traps,1,0,0.0
+kazakhstan,L2-07,Skills formation for work,2,2,0.5
+kazakhstan,L2-08,Human capital formation through schooling,0,5,1.0
+kazakhstan,L2-09,Health service coverage and quality,2,4,0.667
+kazakhstan,L2-10,Disease and injury prevention,1,1,0.5
+kazakhstan,L2-11,Food and nutrition security,1,1,0.5
+kazakhstan,L2-12,Access to basic services,3,1,0.25
+kazakhstan,L2-13,"Crime, violence and personal security",1,3,0.75
+kazakhstan,L2-14,Emissions mitigation,2,4,0.667
+kazakhstan,L2-15,Natural capital stewardship,1,3,0.75
+kazakhstan,L2-16,"Pollution, waste and environmental behaviour",0,5,1.0
+kazakhstan,L2-18,Resource rents and intergenerational wealth,4,1,0.2
+kazakhstan,L2-19,Fiscal sustainability across generations,0,1,1.0
+kazakhstan,L2-21,Water scarcity and allocation,1,1,0.5
+kazakhstan,L2-22,Productive capability accumulation,7,1,0.125
+kazakhstan,L2-23,Trade costs and market connectivity,1,4,0.8
+kazakhstan,L2-25,International capital and knowledge transmission,4,0,0.0
+kazakhstan,L2-26,International tourism demand,3,1,0.25
+kazakhstan,L2-27,Innovation and technology diffusion,3,6,0.667
+kazakhstan,L2-28,Internal market connectivity,1,3,0.75
+kazakhstan,L2-29,Urban agglomeration and land use,1,1,0.5
+kazakhstan,L2-30,Network utility performance,3,5,0.625
+kazakhstan,L2-31,Domestic linkages and agglomeration of production,0,2,1.0
+kazakhstan,L2-33,Primary-sector productivity growth,2,4,0.667
+kazakhstan,L2-34,Firm capability and growth,2,0,0.0
+kazakhstan,L2-35,Market institutions and competition,2,3,0.6
+kazakhstan,L2-36,"Credit, savings and financial access",0,2,1.0
+kazakhstan,L2-37,Labour market matching and regulation,1,1,0.5
+kazakhstan,L2-38,Adjustment of displaced workers and lagging places,2,1,0.333
+kazakhstan,L2-41,External balance and shock absorption,0,2,1.0
+kazakhstan,L2-42,Supply-chain and economic security,0,1,1.0
+kazakhstan,L2-43,Hazard anticipation,2,0,0.0
+kazakhstan,L2-44,"Foresight, planning and evidence",1,2,0.667
+kazakhstan,L2-45,Institutional checks on executive power,3,0,0.0
+kazakhstan,L2-47,Regulatory updating for technological change,0,2,1.0
+kazakhstan,L2-48,Bureaucratic capability and service delivery,2,6,0.75
+kazakhstan,L2-50,Revenue capacity,0,3,1.0
+kazakhstan,L2-51,Public expenditure quality,0,2,1.0
+kazakhstan,L2-52,Regulatory enforcement capacity,1,1,0.5
+kenya,L2-01,Group-based barriers and discrimination,1,5,0.833
+kenya,L2-02,"Violence, coercion and exploitation",2,0,0.0
+kenya,L2-03,Horizontal inequality and social cohesion,3,2,0.4
+kenya,L2-04,Forced displacement and resettlement,0,2,1.0
+kenya,L2-05,Household risk protection and consumption stability,2,3,0.6
+kenya,L2-06,Escape from poverty traps,1,0,0.0
+kenya,L2-07,Skills formation for work,3,7,0.7
+kenya,L2-08,Human capital formation through schooling,1,10,0.909
+kenya,L2-09,Health service coverage and quality,4,6,0.6
+kenya,L2-10,Disease and injury prevention,0,5,1.0
+kenya,L2-11,Food and nutrition security,0,3,1.0
+kenya,L2-12,Access to basic services,1,5,0.833
+kenya,L2-13,"Crime, violence and personal security",6,9,0.6
+kenya,L2-14,Emissions mitigation,3,2,0.4
+kenya,L2-15,Natural capital stewardship,4,7,0.636
+kenya,L2-16,"Pollution, waste and environmental behaviour",1,7,0.875
+kenya,L2-17,Climate hazard exposure and adaptation,5,2,0.286
+kenya,L2-18,Resource rents and intergenerational wealth,1,1,0.5
+kenya,L2-19,Fiscal sustainability across generations,1,0,0.0
+kenya,L2-20,Population age structure and lifecycle resources,1,1,0.5
+kenya,L2-21,Water scarcity and allocation,2,2,0.5
+kenya,L2-22,Productive capability accumulation,14,6,0.3
+kenya,L2-23,Trade costs and market connectivity,7,8,0.533
+kenya,L2-24,Market access and integration,1,3,0.75
+kenya,L2-25,International capital and knowledge transmission,0,1,1.0
+kenya,L2-26,International tourism demand,5,0,0.0
+kenya,L2-27,Innovation and technology diffusion,5,6,0.545
+kenya,L2-28,Internal market connectivity,6,9,0.6
+kenya,L2-29,Urban agglomeration and land use,1,5,0.833
+kenya,L2-30,Network utility performance,1,1,0.5
+kenya,L2-31,Domestic linkages and agglomeration of production,0,9,1.0
+kenya,L2-32,Market participation of small producers,0,3,1.0
+kenya,L2-33,Primary-sector productivity growth,8,11,0.579
+kenya,L2-34,Firm capability and growth,0,3,1.0
+kenya,L2-35,Market institutions and competition,2,3,0.6
+kenya,L2-36,"Credit, savings and financial access",4,4,0.5
+kenya,L2-37,Labour market matching and regulation,1,6,0.857
+kenya,L2-39,Labour mobility and remittances,3,2,0.4
+kenya,L2-40,Property rights and land markets,5,2,0.286
+kenya,L2-41,External balance and shock absorption,1,0,0.0
+kenya,L2-42,Supply-chain and economic security,1,0,0.0
+kenya,L2-44,"Foresight, planning and evidence",3,2,0.4
+kenya,L2-45,Institutional checks on executive power,3,4,0.571
+kenya,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+kenya,L2-47,Regulatory updating for technological change,0,2,1.0
+kenya,L2-48,Bureaucratic capability and service delivery,5,7,0.583
+kenya,L2-49,Decentralised provision,4,0,0.0
+kenya,L2-50,Revenue capacity,1,3,0.75
+kenya,L2-51,Public expenditure quality,1,4,0.8
+kenya,L2-52,Regulatory enforcement capacity,1,7,0.875
+kenya,L2-53,Crisis response capacity,0,1,1.0
+kenya,L2-54,Participation and community voice,1,2,0.667
+kenya,L2-55,Information and accountability,0,1,1.0
+kenya,L2-56,Political accountability and contestation,0,1,1.0
+kiribati,L2-01,Group-based barriers and discrimination,1,0,0.0
+kiribati,L2-02,"Violence, coercion and exploitation",0,1,1.0
+kiribati,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+kiribati,L2-05,Household risk protection and consumption stability,2,0,0.0
+kiribati,L2-06,Escape from poverty traps,0,1,1.0
+kiribati,L2-07,Skills formation for work,0,1,1.0
+kiribati,L2-08,Human capital formation through schooling,0,4,1.0
+kiribati,L2-09,Health service coverage and quality,1,2,0.667
+kiribati,L2-10,Disease and injury prevention,1,5,0.833
+kiribati,L2-12,Access to basic services,0,2,1.0
+kiribati,L2-13,"Crime, violence and personal security",2,4,0.667
+kiribati,L2-15,Natural capital stewardship,1,2,0.667
+kiribati,L2-16,"Pollution, waste and environmental behaviour",1,1,0.5
+kiribati,L2-17,Climate hazard exposure and adaptation,2,1,0.333
+kiribati,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+kiribati,L2-20,Population age structure and lifecycle resources,0,1,1.0
+kiribati,L2-23,Trade costs and market connectivity,0,2,1.0
+kiribati,L2-26,International tourism demand,1,1,0.5
+kiribati,L2-28,Internal market connectivity,2,1,0.333
+kiribati,L2-30,Network utility performance,0,1,1.0
+kiribati,L2-31,Domestic linkages and agglomeration of production,0,1,1.0
+kiribati,L2-33,Primary-sector productivity growth,3,0,0.0
+kiribati,L2-34,Firm capability and growth,1,0,0.0
+kiribati,L2-35,Market institutions and competition,0,1,1.0
+kiribati,L2-36,"Credit, savings and financial access",0,1,1.0
+kiribati,L2-37,Labour market matching and regulation,1,0,0.0
+kiribati,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+kiribati,L2-39,Labour mobility and remittances,0,1,1.0
+kiribati,L2-40,Property rights and land markets,1,0,0.0
+kiribati,L2-41,External balance and shock absorption,1,0,0.0
+kiribati,L2-42,Supply-chain and economic security,0,1,1.0
+kiribati,L2-43,Hazard anticipation,1,0,0.0
+kiribati,L2-44,"Foresight, planning and evidence",1,2,0.667
+kiribati,L2-45,Institutional checks on executive power,1,0,0.0
+kiribati,L2-48,Bureaucratic capability and service delivery,1,5,0.833
+kiribati,L2-49,Decentralised provision,2,0,0.0
+kiribati,L2-51,Public expenditure quality,1,0,0.0
+kiribati,L2-52,Regulatory enforcement capacity,1,2,0.667
+kiribati,L2-54,Participation and community voice,1,1,0.5
+malaysia,L2-01,Group-based barriers and discrimination,8,13,0.619
+malaysia,L2-02,"Violence, coercion and exploitation",3,1,0.25
+malaysia,L2-03,Horizontal inequality and social cohesion,0,5,1.0
+malaysia,L2-05,Household risk protection and consumption stability,7,7,0.5
+malaysia,L2-06,Escape from poverty traps,4,1,0.2
+malaysia,L2-07,Skills formation for work,14,22,0.611
+malaysia,L2-08,Human capital formation through schooling,13,32,0.711
+malaysia,L2-09,Health service coverage and quality,4,12,0.75
+malaysia,L2-10,Disease and injury prevention,1,10,0.909
+malaysia,L2-11,Food and nutrition security,1,0,0.0
+malaysia,L2-12,Access to basic services,15,8,0.348
+malaysia,L2-13,"Crime, violence and personal security",5,8,0.615
+malaysia,L2-14,Emissions mitigation,26,8,0.235
+malaysia,L2-15,Natural capital stewardship,9,7,0.438
+malaysia,L2-16,"Pollution, waste and environmental behaviour",5,22,0.815
+malaysia,L2-17,Climate hazard exposure and adaptation,3,3,0.5
+malaysia,L2-18,Resource rents and intergenerational wealth,4,0,0.0
+malaysia,L2-19,Fiscal sustainability across generations,1,0,0.0
+malaysia,L2-20,Population age structure and lifecycle resources,0,3,1.0
+malaysia,L2-21,Water scarcity and allocation,5,1,0.167
+malaysia,L2-22,Productive capability accumulation,26,10,0.278
+malaysia,L2-23,Trade costs and market connectivity,7,16,0.696
+malaysia,L2-24,Market access and integration,1,1,0.5
+malaysia,L2-25,International capital and knowledge transmission,5,2,0.286
+malaysia,L2-26,International tourism demand,4,7,0.636
+malaysia,L2-27,Innovation and technology diffusion,11,18,0.621
+malaysia,L2-28,Internal market connectivity,9,22,0.71
+malaysia,L2-29,Urban agglomeration and land use,17,14,0.452
+malaysia,L2-30,Network utility performance,5,15,0.75
+malaysia,L2-31,Domestic linkages and agglomeration of production,2,6,0.75
+malaysia,L2-32,Market participation of small producers,2,4,0.667
+malaysia,L2-33,Primary-sector productivity growth,11,1,0.083
+malaysia,L2-34,Firm capability and growth,8,8,0.5
+malaysia,L2-35,Market institutions and competition,4,9,0.692
+malaysia,L2-36,"Credit, savings and financial access",3,12,0.8
+malaysia,L2-37,Labour market matching and regulation,10,7,0.412
+malaysia,L2-38,Adjustment of displaced workers and lagging places,8,9,0.529
+malaysia,L2-39,Labour mobility and remittances,4,1,0.2
+malaysia,L2-40,Property rights and land markets,5,2,0.286
+malaysia,L2-41,External balance and shock absorption,1,3,0.75
+malaysia,L2-42,Supply-chain and economic security,0,2,1.0
+malaysia,L2-43,Hazard anticipation,5,2,0.286
+malaysia,L2-44,"Foresight, planning and evidence",10,5,0.333
+malaysia,L2-45,Institutional checks on executive power,3,1,0.25
+malaysia,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+malaysia,L2-47,Regulatory updating for technological change,7,7,0.5
+malaysia,L2-48,Bureaucratic capability and service delivery,7,23,0.767
+malaysia,L2-49,Decentralised provision,4,0,0.0
+malaysia,L2-50,Revenue capacity,0,2,1.0
+malaysia,L2-51,Public expenditure quality,3,10,0.769
+malaysia,L2-52,Regulatory enforcement capacity,2,16,0.889
+malaysia,L2-53,Crisis response capacity,0,2,1.0
+malaysia,L2-54,Participation and community voice,5,2,0.286
+malaysia,L2-55,Information and accountability,1,0,0.0
+malaysia,L2-56,Political accountability and contestation,1,0,0.0
+maldives,L2-01,Group-based barriers and discrimination,2,5,0.714
+maldives,L2-02,"Violence, coercion and exploitation",1,2,0.667
+maldives,L2-03,Horizontal inequality and social cohesion,1,2,0.667
+maldives,L2-05,Household risk protection and consumption stability,5,2,0.286
+maldives,L2-06,Escape from poverty traps,1,0,0.0
+maldives,L2-07,Skills formation for work,3,2,0.4
+maldives,L2-08,Human capital formation through schooling,6,9,0.6
+maldives,L2-09,Health service coverage and quality,1,8,0.889
+maldives,L2-10,Disease and injury prevention,0,7,1.0
+maldives,L2-11,Food and nutrition security,1,1,0.5
+maldives,L2-12,Access to basic services,2,1,0.333
+maldives,L2-13,"Crime, violence and personal security",3,10,0.769
+maldives,L2-14,Emissions mitigation,3,0,0.0
+maldives,L2-15,Natural capital stewardship,1,2,0.667
+maldives,L2-16,"Pollution, waste and environmental behaviour",0,2,1.0
+maldives,L2-17,Climate hazard exposure and adaptation,2,1,0.333
+maldives,L2-20,Population age structure and lifecycle resources,0,2,1.0
+maldives,L2-21,Water scarcity and allocation,2,0,0.0
+maldives,L2-22,Productive capability accumulation,3,0,0.0
+maldives,L2-23,Trade costs and market connectivity,1,3,0.75
+maldives,L2-26,International tourism demand,3,1,0.25
+maldives,L2-27,Innovation and technology diffusion,2,2,0.5
+maldives,L2-28,Internal market connectivity,1,1,0.5
+maldives,L2-29,Urban agglomeration and land use,0,1,1.0
+maldives,L2-30,Network utility performance,1,0,0.0
+maldives,L2-32,Market participation of small producers,1,0,0.0
+maldives,L2-33,Primary-sector productivity growth,3,1,0.25
+maldives,L2-34,Firm capability and growth,1,0,0.0
+maldives,L2-35,Market institutions and competition,1,3,0.75
+maldives,L2-36,"Credit, savings and financial access",2,1,0.333
+maldives,L2-37,Labour market matching and regulation,2,0,0.0
+maldives,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+maldives,L2-39,Labour mobility and remittances,1,0,0.0
+maldives,L2-41,External balance and shock absorption,0,1,1.0
+maldives,L2-43,Hazard anticipation,4,2,0.333
+maldives,L2-44,"Foresight, planning and evidence",0,3,1.0
+maldives,L2-45,Institutional checks on executive power,5,2,0.286
+maldives,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+maldives,L2-47,Regulatory updating for technological change,1,1,0.5
+maldives,L2-48,Bureaucratic capability and service delivery,1,7,0.875
+maldives,L2-49,Decentralised provision,1,0,0.0
+maldives,L2-50,Revenue capacity,0,1,1.0
+maldives,L2-51,Public expenditure quality,1,1,0.5
+maldives,L2-52,Regulatory enforcement capacity,1,7,0.875
+maldives,L2-54,Participation and community voice,1,1,0.5
+maldives,L2-55,Information and accountability,0,3,1.0
+maldives,L2-56,Political accountability and contestation,0,1,1.0
+marshall_islands,L2-01,Group-based barriers and discrimination,0,1,1.0
+marshall_islands,L2-02,"Violence, coercion and exploitation",1,1,0.5
+marshall_islands,L2-04,Forced displacement and resettlement,0,1,1.0
+marshall_islands,L2-08,Human capital formation through schooling,2,3,0.6
+marshall_islands,L2-09,Health service coverage and quality,1,0,0.0
+marshall_islands,L2-10,Disease and injury prevention,0,2,1.0
+marshall_islands,L2-11,Food and nutrition security,1,0,0.0
+marshall_islands,L2-13,"Crime, violence and personal security",0,2,1.0
+marshall_islands,L2-14,Emissions mitigation,2,1,0.333
+marshall_islands,L2-15,Natural capital stewardship,1,2,0.667
+marshall_islands,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+marshall_islands,L2-17,Climate hazard exposure and adaptation,1,1,0.5
+marshall_islands,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+marshall_islands,L2-22,Productive capability accumulation,1,0,0.0
+marshall_islands,L2-25,International capital and knowledge transmission,1,0,0.0
+marshall_islands,L2-26,International tourism demand,1,1,0.5
+marshall_islands,L2-27,Innovation and technology diffusion,1,0,0.0
+marshall_islands,L2-28,Internal market connectivity,0,1,1.0
+marshall_islands,L2-30,Network utility performance,1,1,0.5
+marshall_islands,L2-31,Domestic linkages and agglomeration of production,0,1,1.0
+marshall_islands,L2-34,Firm capability and growth,1,0,0.0
+marshall_islands,L2-35,Market institutions and competition,0,2,1.0
+marshall_islands,L2-36,"Credit, savings and financial access",0,1,1.0
+marshall_islands,L2-40,Property rights and land markets,1,0,0.0
+marshall_islands,L2-41,External balance and shock absorption,0,1,1.0
+marshall_islands,L2-43,Hazard anticipation,0,1,1.0
+marshall_islands,L2-44,"Foresight, planning and evidence",1,1,0.5
+marshall_islands,L2-45,Institutional checks on executive power,1,0,0.0
+marshall_islands,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+marshall_islands,L2-47,Regulatory updating for technological change,2,0,0.0
+marshall_islands,L2-48,Bureaucratic capability and service delivery,2,2,0.5
+marshall_islands,L2-50,Revenue capacity,0,1,1.0
+marshall_islands,L2-51,Public expenditure quality,1,1,0.5
+marshall_islands,L2-52,Regulatory enforcement capacity,1,2,0.667
+marshall_islands,L2-54,Participation and community voice,1,1,0.5
+marshall_islands,L2-56,Political accountability and contestation,0,1,1.0
+mongolia,L2-01,Group-based barriers and discrimination,1,2,0.667
+mongolia,L2-02,"Violence, coercion and exploitation",1,0,0.0
+mongolia,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+mongolia,L2-05,Household risk protection and consumption stability,2,3,0.6
+mongolia,L2-07,Skills formation for work,2,3,0.6
+mongolia,L2-08,Human capital formation through schooling,3,6,0.667
+mongolia,L2-09,Health service coverage and quality,3,5,0.625
+mongolia,L2-10,Disease and injury prevention,0,5,1.0
+mongolia,L2-11,Food and nutrition security,1,3,0.75
+mongolia,L2-12,Access to basic services,4,3,0.429
+mongolia,L2-13,"Crime, violence and personal security",2,6,0.75
+mongolia,L2-14,Emissions mitigation,9,4,0.308
+mongolia,L2-15,Natural capital stewardship,0,3,1.0
+mongolia,L2-16,"Pollution, waste and environmental behaviour",1,3,0.75
+mongolia,L2-17,Climate hazard exposure and adaptation,4,0,0.0
+mongolia,L2-18,Resource rents and intergenerational wealth,2,0,0.0
+mongolia,L2-20,Population age structure and lifecycle resources,0,1,1.0
+mongolia,L2-21,Water scarcity and allocation,1,1,0.5
+mongolia,L2-22,Productive capability accumulation,4,2,0.333
+mongolia,L2-23,Trade costs and market connectivity,4,3,0.429
+mongolia,L2-24,Market access and integration,1,1,0.5
+mongolia,L2-25,International capital and knowledge transmission,2,1,0.333
+mongolia,L2-26,International tourism demand,4,0,0.0
+mongolia,L2-27,Innovation and technology diffusion,5,2,0.286
+mongolia,L2-28,Internal market connectivity,2,4,0.667
+mongolia,L2-29,Urban agglomeration and land use,6,3,0.333
+mongolia,L2-30,Network utility performance,0,7,1.0
+mongolia,L2-31,Domestic linkages and agglomeration of production,3,3,0.5
+mongolia,L2-32,Market participation of small producers,1,2,0.667
+mongolia,L2-33,Primary-sector productivity growth,0,4,1.0
+mongolia,L2-34,Firm capability and growth,1,1,0.5
+mongolia,L2-35,Market institutions and competition,1,3,0.75
+mongolia,L2-36,"Credit, savings and financial access",2,3,0.6
+mongolia,L2-37,Labour market matching and regulation,0,2,1.0
+mongolia,L2-38,Adjustment of displaced workers and lagging places,1,1,0.5
+mongolia,L2-39,Labour mobility and remittances,2,0,0.0
+mongolia,L2-40,Property rights and land markets,3,0,0.0
+mongolia,L2-41,External balance and shock absorption,0,1,1.0
+mongolia,L2-42,Supply-chain and economic security,0,2,1.0
+mongolia,L2-43,Hazard anticipation,2,1,0.333
+mongolia,L2-44,"Foresight, planning and evidence",1,3,0.75
+mongolia,L2-45,Institutional checks on executive power,6,2,0.25
+mongolia,L2-47,Regulatory updating for technological change,1,2,0.667
+mongolia,L2-48,Bureaucratic capability and service delivery,0,6,1.0
+mongolia,L2-49,Decentralised provision,1,0,0.0
+mongolia,L2-50,Revenue capacity,0,3,1.0
+mongolia,L2-51,Public expenditure quality,1,4,0.8
+mongolia,L2-52,Regulatory enforcement capacity,3,3,0.5
+mongolia,L2-53,Crisis response capacity,0,1,1.0
+mongolia,L2-54,Participation and community voice,1,1,0.5
+mongolia,L2-55,Information and accountability,0,1,1.0
+morocco,L2-02,"Violence, coercion and exploitation",0,1,1.0
+morocco,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+morocco,L2-05,Household risk protection and consumption stability,1,0,0.0
+morocco,L2-07,Skills formation for work,0,1,1.0
+morocco,L2-08,Human capital formation through schooling,0,1,1.0
+morocco,L2-09,Health service coverage and quality,0,1,1.0
+morocco,L2-15,Natural capital stewardship,0,1,1.0
+morocco,L2-17,Climate hazard exposure and adaptation,0,1,1.0
+morocco,L2-22,Productive capability accumulation,1,0,0.0
+morocco,L2-24,Market access and integration,1,0,0.0
+morocco,L2-25,International capital and knowledge transmission,1,0,0.0
+morocco,L2-26,International tourism demand,0,1,1.0
+morocco,L2-28,Internal market connectivity,0,1,1.0
+morocco,L2-29,Urban agglomeration and land use,1,0,0.0
+morocco,L2-32,Market participation of small producers,0,1,1.0
+morocco,L2-33,Primary-sector productivity growth,0,1,1.0
+morocco,L2-39,Labour mobility and remittances,0,1,1.0
+morocco,L2-42,Supply-chain and economic security,1,0,0.0
+morocco,L2-43,Hazard anticipation,1,0,0.0
+morocco,L2-44,"Foresight, planning and evidence",1,0,0.0
+morocco,L2-45,Institutional checks on executive power,1,0,0.0
+morocco,L2-48,Bureaucratic capability and service delivery,0,1,1.0
+morocco,L2-49,Decentralised provision,1,0,0.0
+morocco,L2-54,Participation and community voice,1,0,0.0
+myanmar,L2-03,Horizontal inequality and social cohesion,0,1,1.0
+myanmar,L2-05,Household risk protection and consumption stability,1,0,0.0
+myanmar,L2-07,Skills formation for work,0,1,1.0
+myanmar,L2-08,Human capital formation through schooling,0,1,1.0
+myanmar,L2-09,Health service coverage and quality,0,1,1.0
+myanmar,L2-10,Disease and injury prevention,0,1,1.0
+myanmar,L2-11,Food and nutrition security,1,0,0.0
+myanmar,L2-12,Access to basic services,0,1,1.0
+myanmar,L2-13,"Crime, violence and personal security",0,1,1.0
+myanmar,L2-14,Emissions mitigation,1,0,0.0
+myanmar,L2-15,Natural capital stewardship,0,2,1.0
+myanmar,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+myanmar,L2-17,Climate hazard exposure and adaptation,2,1,0.333
+myanmar,L2-23,Trade costs and market connectivity,0,1,1.0
+myanmar,L2-25,International capital and knowledge transmission,2,0,0.0
+myanmar,L2-26,International tourism demand,1,0,0.0
+myanmar,L2-27,Innovation and technology diffusion,1,0,0.0
+myanmar,L2-28,Internal market connectivity,0,1,1.0
+myanmar,L2-29,Urban agglomeration and land use,0,1,1.0
+myanmar,L2-33,Primary-sector productivity growth,1,0,0.0
+myanmar,L2-35,Market institutions and competition,0,1,1.0
+myanmar,L2-36,"Credit, savings and financial access",0,1,1.0
+myanmar,L2-37,Labour market matching and regulation,1,1,0.5
+myanmar,L2-39,Labour mobility and remittances,0,1,1.0
+myanmar,L2-40,Property rights and land markets,0,1,1.0
+myanmar,L2-41,External balance and shock absorption,0,1,1.0
+myanmar,L2-45,Institutional checks on executive power,2,0,0.0
+myanmar,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+myanmar,L2-48,Bureaucratic capability and service delivery,1,2,0.667
+myanmar,L2-49,Decentralised provision,1,0,0.0
+myanmar,L2-50,Revenue capacity,0,1,1.0
+myanmar,L2-51,Public expenditure quality,0,4,1.0
+myanmar,L2-52,Regulatory enforcement capacity,1,1,0.5
+nauru,L2-01,Group-based barriers and discrimination,1,0,0.0
+nauru,L2-05,Household risk protection and consumption stability,0,1,1.0
+nauru,L2-06,Escape from poverty traps,1,0,0.0
+nauru,L2-07,Skills formation for work,0,1,1.0
+nauru,L2-08,Human capital formation through schooling,1,2,0.667
+nauru,L2-09,Health service coverage and quality,0,2,1.0
+nauru,L2-10,Disease and injury prevention,1,1,0.5
+nauru,L2-12,Access to basic services,0,2,1.0
+nauru,L2-13,"Crime, violence and personal security",1,0,0.0
+nauru,L2-15,Natural capital stewardship,1,1,0.5
+nauru,L2-17,Climate hazard exposure and adaptation,0,1,1.0
+nauru,L2-22,Productive capability accumulation,1,0,0.0
+nauru,L2-23,Trade costs and market connectivity,0,2,1.0
+nauru,L2-26,International tourism demand,0,1,1.0
+nauru,L2-28,Internal market connectivity,1,2,0.667
+nauru,L2-31,Domestic linkages and agglomeration of production,0,1,1.0
+nauru,L2-33,Primary-sector productivity growth,3,1,0.25
+nauru,L2-34,Firm capability and growth,1,0,0.0
+nauru,L2-35,Market institutions and competition,1,1,0.5
+nauru,L2-36,"Credit, savings and financial access",0,1,1.0
+nauru,L2-37,Labour market matching and regulation,1,0,0.0
+nauru,L2-41,External balance and shock absorption,0,1,1.0
+nauru,L2-42,Supply-chain and economic security,0,1,1.0
+nauru,L2-43,Hazard anticipation,1,0,0.0
+nauru,L2-44,"Foresight, planning and evidence",1,1,0.5
+nauru,L2-48,Bureaucratic capability and service delivery,1,0,0.0
+nauru,L2-51,Public expenditure quality,1,2,0.667
+nauru,L2-52,Regulatory enforcement capacity,0,1,1.0
+nauru,L2-54,Participation and community voice,1,0,0.0
+nepal,L2-01,Group-based barriers and discrimination,2,5,0.714
+nepal,L2-02,"Violence, coercion and exploitation",8,3,0.273
+nepal,L2-03,Horizontal inequality and social cohesion,5,1,0.167
+nepal,L2-05,Household risk protection and consumption stability,6,2,0.25
+nepal,L2-07,Skills formation for work,4,3,0.429
+nepal,L2-08,Human capital formation through schooling,3,8,0.727
+nepal,L2-09,Health service coverage and quality,4,6,0.6
+nepal,L2-10,Disease and injury prevention,0,7,1.0
+nepal,L2-11,Food and nutrition security,3,4,0.571
+nepal,L2-12,Access to basic services,4,6,0.6
+nepal,L2-13,"Crime, violence and personal security",2,7,0.778
+nepal,L2-14,Emissions mitigation,4,0,0.0
+nepal,L2-15,Natural capital stewardship,3,3,0.5
+nepal,L2-16,"Pollution, waste and environmental behaviour",2,5,0.714
+nepal,L2-17,Climate hazard exposure and adaptation,10,6,0.375
+nepal,L2-18,Resource rents and intergenerational wealth,2,0,0.0
+nepal,L2-20,Population age structure and lifecycle resources,2,3,0.6
+nepal,L2-21,Water scarcity and allocation,2,1,0.333
+nepal,L2-22,Productive capability accumulation,11,3,0.214
+nepal,L2-23,Trade costs and market connectivity,1,4,0.8
+nepal,L2-24,Market access and integration,1,0,0.0
+nepal,L2-25,International capital and knowledge transmission,5,1,0.167
+nepal,L2-26,International tourism demand,3,1,0.25
+nepal,L2-27,Innovation and technology diffusion,7,1,0.125
+nepal,L2-28,Internal market connectivity,1,7,0.875
+nepal,L2-29,Urban agglomeration and land use,5,6,0.545
+nepal,L2-30,Network utility performance,1,1,0.5
+nepal,L2-31,Domestic linkages and agglomeration of production,1,5,0.833
+nepal,L2-32,Market participation of small producers,1,5,0.833
+nepal,L2-33,Primary-sector productivity growth,4,6,0.6
+nepal,L2-34,Firm capability and growth,2,2,0.5
+nepal,L2-35,Market institutions and competition,1,1,0.5
+nepal,L2-36,"Credit, savings and financial access",1,1,0.5
+nepal,L2-37,Labour market matching and regulation,2,4,0.667
+nepal,L2-38,Adjustment of displaced workers and lagging places,2,3,0.6
+nepal,L2-39,Labour mobility and remittances,1,1,0.5
+nepal,L2-40,Property rights and land markets,3,1,0.25
+nepal,L2-41,External balance and shock absorption,2,4,0.667
+nepal,L2-42,Supply-chain and economic security,0,1,1.0
+nepal,L2-43,Hazard anticipation,0,2,1.0
+nepal,L2-44,"Foresight, planning and evidence",3,2,0.4
+nepal,L2-45,Institutional checks on executive power,5,0,0.0
+nepal,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+nepal,L2-47,Regulatory updating for technological change,0,1,1.0
+nepal,L2-48,Bureaucratic capability and service delivery,4,5,0.556
+nepal,L2-49,Decentralised provision,2,4,0.667
+nepal,L2-50,Revenue capacity,1,1,0.5
+nepal,L2-51,Public expenditure quality,2,9,0.818
+nepal,L2-52,Regulatory enforcement capacity,1,8,0.889
+nepal,L2-53,Crisis response capacity,0,1,1.0
+nepal,L2-54,Participation and community voice,2,6,0.75
+nepal,L2-55,Information and accountability,0,1,1.0
+nepal,L2-56,Political accountability and contestation,0,3,1.0
+nigeria,L2-01,Group-based barriers and discrimination,2,4,0.667
+nigeria,L2-02,"Violence, coercion and exploitation",0,1,1.0
+nigeria,L2-03,Horizontal inequality and social cohesion,0,1,1.0
+nigeria,L2-05,Household risk protection and consumption stability,2,2,0.5
+nigeria,L2-07,Skills formation for work,0,3,1.0
+nigeria,L2-08,Human capital formation through schooling,1,4,0.8
+nigeria,L2-09,Health service coverage and quality,2,2,0.5
+nigeria,L2-10,Disease and injury prevention,0,5,1.0
+nigeria,L2-11,Food and nutrition security,1,6,0.857
+nigeria,L2-12,Access to basic services,4,2,0.333
+nigeria,L2-13,"Crime, violence and personal security",1,2,0.667
+nigeria,L2-14,Emissions mitigation,6,1,0.143
+nigeria,L2-15,Natural capital stewardship,0,2,1.0
+nigeria,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+nigeria,L2-17,Climate hazard exposure and adaptation,1,1,0.5
+nigeria,L2-18,Resource rents and intergenerational wealth,6,1,0.143
+nigeria,L2-20,Population age structure and lifecycle resources,1,2,0.667
+nigeria,L2-21,Water scarcity and allocation,2,0,0.0
+nigeria,L2-22,Productive capability accumulation,4,0,0.0
+nigeria,L2-23,Trade costs and market connectivity,2,2,0.5
+nigeria,L2-25,International capital and knowledge transmission,1,0,0.0
+nigeria,L2-26,International tourism demand,1,0,0.0
+nigeria,L2-27,Innovation and technology diffusion,2,2,0.5
+nigeria,L2-28,Internal market connectivity,0,4,1.0
+nigeria,L2-30,Network utility performance,3,3,0.5
+nigeria,L2-31,Domestic linkages and agglomeration of production,1,1,0.5
+nigeria,L2-33,Primary-sector productivity growth,1,2,0.667
+nigeria,L2-34,Firm capability and growth,0,1,1.0
+nigeria,L2-35,Market institutions and competition,1,1,0.5
+nigeria,L2-36,"Credit, savings and financial access",5,3,0.375
+nigeria,L2-37,Labour market matching and regulation,3,1,0.25
+nigeria,L2-38,Adjustment of displaced workers and lagging places,1,3,0.75
+nigeria,L2-39,Labour mobility and remittances,0,1,1.0
+nigeria,L2-40,Property rights and land markets,1,0,0.0
+nigeria,L2-41,External balance and shock absorption,1,2,0.667
+nigeria,L2-43,Hazard anticipation,2,0,0.0
+nigeria,L2-44,"Foresight, planning and evidence",2,3,0.6
+nigeria,L2-45,Institutional checks on executive power,1,0,0.0
+nigeria,L2-46,"Feedback, learning and policy adaptation",0,3,1.0
+nigeria,L2-47,Regulatory updating for technological change,2,1,0.333
+nigeria,L2-48,Bureaucratic capability and service delivery,1,4,0.8
+nigeria,L2-49,Decentralised provision,1,0,0.0
+nigeria,L2-50,Revenue capacity,1,1,0.5
+nigeria,L2-51,Public expenditure quality,2,2,0.5
+nigeria,L2-52,Regulatory enforcement capacity,1,3,0.75
+nigeria,L2-53,Crisis response capacity,0,1,1.0
+nigeria,L2-54,Participation and community voice,3,1,0.25
+pakistan,L2-01,Group-based barriers and discrimination,1,1,0.5
+pakistan,L2-02,"Violence, coercion and exploitation",1,0,0.0
+pakistan,L2-03,Horizontal inequality and social cohesion,2,0,0.0
+pakistan,L2-05,Household risk protection and consumption stability,5,1,0.167
+pakistan,L2-06,Escape from poverty traps,1,0,0.0
+pakistan,L2-07,Skills formation for work,2,4,0.667
+pakistan,L2-08,Human capital formation through schooling,2,7,0.778
+pakistan,L2-09,Health service coverage and quality,1,5,0.833
+pakistan,L2-10,Disease and injury prevention,1,6,0.857
+pakistan,L2-11,Food and nutrition security,1,6,0.857
+pakistan,L2-12,Access to basic services,1,1,0.5
+pakistan,L2-13,"Crime, violence and personal security",1,4,0.8
+pakistan,L2-14,Emissions mitigation,6,2,0.25
+pakistan,L2-15,Natural capital stewardship,0,2,1.0
+pakistan,L2-16,"Pollution, waste and environmental behaviour",1,4,0.8
+pakistan,L2-17,Climate hazard exposure and adaptation,4,6,0.6
+pakistan,L2-18,Resource rents and intergenerational wealth,2,0,0.0
+pakistan,L2-20,Population age structure and lifecycle resources,3,1,0.25
+pakistan,L2-22,Productive capability accumulation,6,2,0.25
+pakistan,L2-23,Trade costs and market connectivity,4,3,0.429
+pakistan,L2-24,Market access and integration,0,2,1.0
+pakistan,L2-25,International capital and knowledge transmission,3,1,0.25
+pakistan,L2-26,International tourism demand,5,2,0.286
+pakistan,L2-27,Innovation and technology diffusion,3,6,0.667
+pakistan,L2-28,Internal market connectivity,2,6,0.75
+pakistan,L2-29,Urban agglomeration and land use,2,1,0.333
+pakistan,L2-30,Network utility performance,3,1,0.25
+pakistan,L2-31,Domestic linkages and agglomeration of production,0,2,1.0
+pakistan,L2-32,Market participation of small producers,1,0,0.0
+pakistan,L2-33,Primary-sector productivity growth,1,5,0.833
+pakistan,L2-34,Firm capability and growth,0,1,1.0
+pakistan,L2-35,Market institutions and competition,0,3,1.0
+pakistan,L2-36,"Credit, savings and financial access",2,4,0.667
+pakistan,L2-37,Labour market matching and regulation,1,1,0.5
+pakistan,L2-38,Adjustment of displaced workers and lagging places,1,3,0.75
+pakistan,L2-39,Labour mobility and remittances,0,2,1.0
+pakistan,L2-40,Property rights and land markets,1,0,0.0
+pakistan,L2-41,External balance and shock absorption,1,1,0.5
+pakistan,L2-42,Supply-chain and economic security,0,1,1.0
+pakistan,L2-43,Hazard anticipation,1,1,0.5
+pakistan,L2-44,"Foresight, planning and evidence",1,3,0.75
+pakistan,L2-45,Institutional checks on executive power,2,1,0.333
+pakistan,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+pakistan,L2-47,Regulatory updating for technological change,1,1,0.5
+pakistan,L2-48,Bureaucratic capability and service delivery,0,4,1.0
+pakistan,L2-49,Decentralised provision,2,0,0.0
+pakistan,L2-50,Revenue capacity,0,1,1.0
+pakistan,L2-51,Public expenditure quality,3,3,0.5
+pakistan,L2-52,Regulatory enforcement capacity,0,10,1.0
+pakistan,L2-53,Crisis response capacity,0,2,1.0
+pakistan,L2-54,Participation and community voice,1,0,0.0
+pakistan,L2-55,Information and accountability,4,2,0.333
+pakistan,L2-57,Reform coalitions and economic dialogue,0,1,1.0
+palau,L2-01,Group-based barriers and discrimination,1,0,0.0
+palau,L2-02,"Violence, coercion and exploitation",1,0,0.0
+palau,L2-03,Horizontal inequality and social cohesion,0,1,1.0
+palau,L2-05,Household risk protection and consumption stability,0,1,1.0
+palau,L2-07,Skills formation for work,1,1,0.5
+palau,L2-08,Human capital formation through schooling,2,5,0.714
+palau,L2-09,Health service coverage and quality,9,3,0.25
+palau,L2-10,Disease and injury prevention,1,5,0.833
+palau,L2-11,Food and nutrition security,0,1,1.0
+palau,L2-12,Access to basic services,4,1,0.2
+palau,L2-13,"Crime, violence and personal security",2,3,0.6
+palau,L2-14,Emissions mitigation,4,2,0.333
+palau,L2-15,Natural capital stewardship,2,10,0.833
+palau,L2-16,"Pollution, waste and environmental behaviour",1,7,0.875
+palau,L2-17,Climate hazard exposure and adaptation,1,4,0.8
+palau,L2-19,Fiscal sustainability across generations,0,1,1.0
+palau,L2-20,Population age structure and lifecycle resources,0,1,1.0
+palau,L2-21,Water scarcity and allocation,1,1,0.5
+palau,L2-22,Productive capability accumulation,4,0,0.0
+palau,L2-23,Trade costs and market connectivity,1,4,0.8
+palau,L2-25,International capital and knowledge transmission,3,0,0.0
+palau,L2-26,International tourism demand,5,4,0.444
+palau,L2-28,Internal market connectivity,2,1,0.333
+palau,L2-29,Urban agglomeration and land use,2,3,0.6
+palau,L2-30,Network utility performance,1,5,0.833
+palau,L2-31,Domestic linkages and agglomeration of production,1,0,0.0
+palau,L2-32,Market participation of small producers,2,0,0.0
+palau,L2-33,Primary-sector productivity growth,9,2,0.182
+palau,L2-34,Firm capability and growth,1,0,0.0
+palau,L2-35,Market institutions and competition,2,3,0.6
+palau,L2-36,"Credit, savings and financial access",1,1,0.5
+palau,L2-40,Property rights and land markets,1,0,0.0
+palau,L2-41,External balance and shock absorption,1,2,0.667
+palau,L2-43,Hazard anticipation,2,0,0.0
+palau,L2-44,"Foresight, planning and evidence",1,0,0.0
+palau,L2-45,Institutional checks on executive power,1,1,0.5
+palau,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+palau,L2-47,Regulatory updating for technological change,2,1,0.333
+palau,L2-48,Bureaucratic capability and service delivery,2,1,0.333
+palau,L2-49,Decentralised provision,1,1,0.5
+palau,L2-50,Revenue capacity,0,1,1.0
+palau,L2-51,Public expenditure quality,3,5,0.625
+palau,L2-52,Regulatory enforcement capacity,3,7,0.7
+palau,L2-53,Crisis response capacity,0,1,1.0
+palau,L2-54,Participation and community voice,2,0,0.0
+papua_new_guinea,L2-01,Group-based barriers and discrimination,2,5,0.714
+papua_new_guinea,L2-02,"Violence, coercion and exploitation",0,1,1.0
+papua_new_guinea,L2-03,Horizontal inequality and social cohesion,0,1,1.0
+papua_new_guinea,L2-04,Forced displacement and resettlement,0,1,1.0
+papua_new_guinea,L2-05,Household risk protection and consumption stability,1,1,0.5
+papua_new_guinea,L2-06,Escape from poverty traps,1,0,0.0
+papua_new_guinea,L2-07,Skills formation for work,4,1,0.2
+papua_new_guinea,L2-08,Human capital formation through schooling,2,5,0.714
+papua_new_guinea,L2-09,Health service coverage and quality,4,5,0.556
+papua_new_guinea,L2-10,Disease and injury prevention,0,6,1.0
+papua_new_guinea,L2-11,Food and nutrition security,1,0,0.0
+papua_new_guinea,L2-12,Access to basic services,3,3,0.5
+papua_new_guinea,L2-13,"Crime, violence and personal security",5,5,0.5
+papua_new_guinea,L2-14,Emissions mitigation,4,2,0.333
+papua_new_guinea,L2-15,Natural capital stewardship,1,3,0.75
+papua_new_guinea,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+papua_new_guinea,L2-17,Climate hazard exposure and adaptation,2,3,0.6
+papua_new_guinea,L2-18,Resource rents and intergenerational wealth,4,0,0.0
+papua_new_guinea,L2-19,Fiscal sustainability across generations,0,1,1.0
+papua_new_guinea,L2-20,Population age structure and lifecycle resources,2,0,0.0
+papua_new_guinea,L2-21,Water scarcity and allocation,1,0,0.0
+papua_new_guinea,L2-22,Productive capability accumulation,7,1,0.125
+papua_new_guinea,L2-23,Trade costs and market connectivity,4,5,0.556
+papua_new_guinea,L2-25,International capital and knowledge transmission,3,1,0.25
+papua_new_guinea,L2-26,International tourism demand,2,0,0.0
+papua_new_guinea,L2-27,Innovation and technology diffusion,1,1,0.5
+papua_new_guinea,L2-28,Internal market connectivity,0,6,1.0
+papua_new_guinea,L2-29,Urban agglomeration and land use,3,0,0.0
+papua_new_guinea,L2-30,Network utility performance,1,3,0.75
+papua_new_guinea,L2-31,Domestic linkages and agglomeration of production,1,8,0.889
+papua_new_guinea,L2-32,Market participation of small producers,1,0,0.0
+papua_new_guinea,L2-33,Primary-sector productivity growth,3,2,0.4
+papua_new_guinea,L2-34,Firm capability and growth,2,1,0.333
+papua_new_guinea,L2-35,Market institutions and competition,0,8,1.0
+papua_new_guinea,L2-36,"Credit, savings and financial access",0,2,1.0
+papua_new_guinea,L2-37,Labour market matching and regulation,0,1,1.0
+papua_new_guinea,L2-38,Adjustment of displaced workers and lagging places,2,2,0.5
+papua_new_guinea,L2-39,Labour mobility and remittances,1,1,0.5
+papua_new_guinea,L2-40,Property rights and land markets,0,1,1.0
+papua_new_guinea,L2-41,External balance and shock absorption,1,1,0.5
+papua_new_guinea,L2-42,Supply-chain and economic security,1,1,0.5
+papua_new_guinea,L2-43,Hazard anticipation,1,1,0.5
+papua_new_guinea,L2-44,"Foresight, planning and evidence",2,6,0.75
+papua_new_guinea,L2-45,Institutional checks on executive power,2,0,0.0
+papua_new_guinea,L2-46,"Feedback, learning and policy adaptation",0,5,1.0
+papua_new_guinea,L2-47,Regulatory updating for technological change,1,1,0.5
+papua_new_guinea,L2-48,Bureaucratic capability and service delivery,4,3,0.429
+papua_new_guinea,L2-49,Decentralised provision,0,1,1.0
+papua_new_guinea,L2-50,Revenue capacity,2,2,0.5
+papua_new_guinea,L2-51,Public expenditure quality,4,11,0.733
+papua_new_guinea,L2-52,Regulatory enforcement capacity,1,6,0.857
+papua_new_guinea,L2-54,Participation and community voice,2,1,0.333
+papua_new_guinea,L2-56,Political accountability and contestation,0,2,1.0
+peru,L2-01,Group-based barriers and discrimination,3,1,0.25
+peru,L2-02,"Violence, coercion and exploitation",0,1,1.0
+peru,L2-03,Horizontal inequality and social cohesion,1,1,0.5
+peru,L2-05,Household risk protection and consumption stability,1,2,0.667
+peru,L2-06,Escape from poverty traps,1,0,0.0
+peru,L2-07,Skills formation for work,2,1,0.333
+peru,L2-08,Human capital formation through schooling,0,3,1.0
+peru,L2-09,Health service coverage and quality,1,2,0.667
+peru,L2-10,Disease and injury prevention,0,3,1.0
+peru,L2-11,Food and nutrition security,1,1,0.5
+peru,L2-12,Access to basic services,5,6,0.545
+peru,L2-13,"Crime, violence and personal security",2,3,0.6
+peru,L2-14,Emissions mitigation,5,2,0.286
+peru,L2-15,Natural capital stewardship,1,4,0.8
+peru,L2-16,"Pollution, waste and environmental behaviour",0,3,1.0
+peru,L2-17,Climate hazard exposure and adaptation,5,1,0.167
+peru,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+peru,L2-19,Fiscal sustainability across generations,1,0,0.0
+peru,L2-21,Water scarcity and allocation,1,1,0.5
+peru,L2-22,Productive capability accumulation,6,0,0.0
+peru,L2-25,International capital and knowledge transmission,1,0,0.0
+peru,L2-26,International tourism demand,0,1,1.0
+peru,L2-27,Innovation and technology diffusion,0,4,1.0
+peru,L2-28,Internal market connectivity,0,3,1.0
+peru,L2-29,Urban agglomeration and land use,3,2,0.4
+peru,L2-33,Primary-sector productivity growth,1,3,0.75
+peru,L2-34,Firm capability and growth,0,1,1.0
+peru,L2-35,Market institutions and competition,0,3,1.0
+peru,L2-36,"Credit, savings and financial access",0,1,1.0
+peru,L2-37,Labour market matching and regulation,1,1,0.5
+peru,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+peru,L2-40,Property rights and land markets,0,1,1.0
+peru,L2-41,External balance and shock absorption,1,1,0.5
+peru,L2-42,Supply-chain and economic security,0,1,1.0
+peru,L2-43,Hazard anticipation,2,1,0.333
+peru,L2-44,"Foresight, planning and evidence",0,2,1.0
+peru,L2-45,Institutional checks on executive power,4,0,0.0
+peru,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+peru,L2-47,Regulatory updating for technological change,2,2,0.5
+peru,L2-48,Bureaucratic capability and service delivery,2,6,0.75
+peru,L2-49,Decentralised provision,1,0,0.0
+peru,L2-50,Revenue capacity,0,1,1.0
+peru,L2-51,Public expenditure quality,0,1,1.0
+peru,L2-52,Regulatory enforcement capacity,1,6,0.857
+peru,L2-53,Crisis response capacity,0,1,1.0
+peru,L2-54,Participation and community voice,1,0,0.0
+peru,L2-56,Political accountability and contestation,2,0,0.0
+philippines,L2-01,Group-based barriers and discrimination,2,2,0.5
+philippines,L2-02,"Violence, coercion and exploitation",1,2,0.667
+philippines,L2-03,Horizontal inequality and social cohesion,6,5,0.455
+philippines,L2-04,Forced displacement and resettlement,0,1,1.0
+philippines,L2-05,Household risk protection and consumption stability,6,11,0.647
+philippines,L2-06,Escape from poverty traps,1,0,0.0
+philippines,L2-07,Skills formation for work,1,6,0.857
+philippines,L2-08,Human capital formation through schooling,3,7,0.7
+philippines,L2-09,Health service coverage and quality,3,5,0.625
+philippines,L2-10,Disease and injury prevention,1,9,0.9
+philippines,L2-11,Food and nutrition security,0,8,1.0
+philippines,L2-12,Access to basic services,5,3,0.375
+philippines,L2-13,"Crime, violence and personal security",5,12,0.706
+philippines,L2-14,Emissions mitigation,12,4,0.25
+philippines,L2-15,Natural capital stewardship,3,3,0.5
+philippines,L2-16,"Pollution, waste and environmental behaviour",2,8,0.8
+philippines,L2-17,Climate hazard exposure and adaptation,5,4,0.444
+philippines,L2-18,Resource rents and intergenerational wealth,2,1,0.333
+philippines,L2-19,Fiscal sustainability across generations,1,0,0.0
+philippines,L2-20,Population age structure and lifecycle resources,1,3,0.75
+philippines,L2-22,Productive capability accumulation,13,3,0.188
+philippines,L2-23,Trade costs and market connectivity,2,5,0.714
+philippines,L2-24,Market access and integration,1,0,0.0
+philippines,L2-25,International capital and knowledge transmission,3,1,0.25
+philippines,L2-26,International tourism demand,2,1,0.333
+philippines,L2-27,Innovation and technology diffusion,8,8,0.5
+philippines,L2-28,Internal market connectivity,3,7,0.7
+philippines,L2-29,Urban agglomeration and land use,5,2,0.286
+philippines,L2-30,Network utility performance,3,5,0.625
+philippines,L2-31,Domestic linkages and agglomeration of production,0,7,1.0
+philippines,L2-32,Market participation of small producers,0,1,1.0
+philippines,L2-33,Primary-sector productivity growth,2,5,0.714
+philippines,L2-34,Firm capability and growth,1,3,0.75
+philippines,L2-35,Market institutions and competition,1,7,0.875
+philippines,L2-36,"Credit, savings and financial access",2,6,0.75
+philippines,L2-37,Labour market matching and regulation,3,6,0.667
+philippines,L2-38,Adjustment of displaced workers and lagging places,2,2,0.5
+philippines,L2-39,Labour mobility and remittances,4,1,0.2
+philippines,L2-40,Property rights and land markets,3,3,0.5
+philippines,L2-41,External balance and shock absorption,2,4,0.667
+philippines,L2-42,Supply-chain and economic security,0,3,1.0
+philippines,L2-43,Hazard anticipation,5,0,0.0
+philippines,L2-44,"Foresight, planning and evidence",1,1,0.5
+philippines,L2-45,Institutional checks on executive power,9,0,0.0
+philippines,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+philippines,L2-47,Regulatory updating for technological change,3,1,0.25
+philippines,L2-48,Bureaucratic capability and service delivery,2,7,0.778
+philippines,L2-49,Decentralised provision,1,1,0.5
+philippines,L2-50,Revenue capacity,0,3,1.0
+philippines,L2-51,Public expenditure quality,2,4,0.667
+philippines,L2-52,Regulatory enforcement capacity,0,12,1.0
+philippines,L2-53,Crisis response capacity,0,2,1.0
+philippines,L2-54,Participation and community voice,1,1,0.5
+philippines,L2-56,Political accountability and contestation,0,2,1.0
+rwanda,L2-01,Group-based barriers and discrimination,2,0,0.0
+rwanda,L2-02,"Violence, coercion and exploitation",1,1,0.5
+rwanda,L2-03,Horizontal inequality and social cohesion,0,1,1.0
+rwanda,L2-05,Household risk protection and consumption stability,3,2,0.4
+rwanda,L2-06,Escape from poverty traps,0,1,1.0
+rwanda,L2-07,Skills formation for work,2,1,0.333
+rwanda,L2-08,Human capital formation through schooling,0,1,1.0
+rwanda,L2-09,Health service coverage and quality,1,1,0.5
+rwanda,L2-10,Disease and injury prevention,0,4,1.0
+rwanda,L2-11,Food and nutrition security,0,1,1.0
+rwanda,L2-12,Access to basic services,0,4,1.0
+rwanda,L2-13,"Crime, violence and personal security",1,1,0.5
+rwanda,L2-14,Emissions mitigation,3,0,0.0
+rwanda,L2-15,Natural capital stewardship,0,2,1.0
+rwanda,L2-16,"Pollution, waste and environmental behaviour",1,0,0.0
+rwanda,L2-17,Climate hazard exposure and adaptation,2,1,0.333
+rwanda,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+rwanda,L2-21,Water scarcity and allocation,1,0,0.0
+rwanda,L2-22,Productive capability accumulation,5,0,0.0
+rwanda,L2-23,Trade costs and market connectivity,2,2,0.5
+rwanda,L2-24,Market access and integration,1,0,0.0
+rwanda,L2-26,International tourism demand,2,0,0.0
+rwanda,L2-27,Innovation and technology diffusion,1,0,0.0
+rwanda,L2-28,Internal market connectivity,0,1,1.0
+rwanda,L2-29,Urban agglomeration and land use,2,2,0.5
+rwanda,L2-30,Network utility performance,0,1,1.0
+rwanda,L2-31,Domestic linkages and agglomeration of production,0,1,1.0
+rwanda,L2-32,Market participation of small producers,1,0,0.0
+rwanda,L2-33,Primary-sector productivity growth,1,0,0.0
+rwanda,L2-35,Market institutions and competition,1,0,0.0
+rwanda,L2-36,"Credit, savings and financial access",0,3,1.0
+rwanda,L2-37,Labour market matching and regulation,1,0,0.0
+rwanda,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+rwanda,L2-41,External balance and shock absorption,0,1,1.0
+rwanda,L2-43,Hazard anticipation,1,0,0.0
+rwanda,L2-44,"Foresight, planning and evidence",0,4,1.0
+rwanda,L2-45,Institutional checks on executive power,1,0,0.0
+rwanda,L2-48,Bureaucratic capability and service delivery,1,4,0.8
+rwanda,L2-49,Decentralised provision,1,0,0.0
+rwanda,L2-51,Public expenditure quality,2,1,0.333
+rwanda,L2-52,Regulatory enforcement capacity,2,0,0.0
+rwanda,L2-54,Participation and community voice,1,0,0.0
+samoa,L2-02,"Violence, coercion and exploitation",0,1,1.0
+samoa,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+samoa,L2-05,Household risk protection and consumption stability,1,0,0.0
+samoa,L2-07,Skills formation for work,1,3,0.75
+samoa,L2-08,Human capital formation through schooling,0,1,1.0
+samoa,L2-09,Health service coverage and quality,1,0,0.0
+samoa,L2-10,Disease and injury prevention,0,1,1.0
+samoa,L2-12,Access to basic services,0,1,1.0
+samoa,L2-13,"Crime, violence and personal security",1,1,0.5
+samoa,L2-15,Natural capital stewardship,0,2,1.0
+samoa,L2-17,Climate hazard exposure and adaptation,0,1,1.0
+samoa,L2-26,International tourism demand,2,1,0.333
+samoa,L2-28,Internal market connectivity,2,1,0.333
+samoa,L2-30,Network utility performance,0,1,1.0
+samoa,L2-32,Market participation of small producers,1,0,0.0
+samoa,L2-33,Primary-sector productivity growth,1,2,0.667
+samoa,L2-35,Market institutions and competition,1,0,0.0
+samoa,L2-39,Labour mobility and remittances,1,0,0.0
+samoa,L2-43,Hazard anticipation,0,1,1.0
+samoa,L2-44,"Foresight, planning and evidence",1,0,0.0
+samoa,L2-45,Institutional checks on executive power,1,0,0.0
+samoa,L2-47,Regulatory updating for technological change,1,1,0.5
+samoa,L2-48,Bureaucratic capability and service delivery,0,2,1.0
+samoa,L2-49,Decentralised provision,1,0,0.0
+samoa,L2-51,Public expenditure quality,1,1,0.5
+samoa,L2-52,Regulatory enforcement capacity,0,1,1.0
+serbia,L2-01,Group-based barriers and discrimination,2,1,0.333
+serbia,L2-02,"Violence, coercion and exploitation",1,1,0.5
+serbia,L2-03,Horizontal inequality and social cohesion,1,0,0.0
+serbia,L2-05,Household risk protection and consumption stability,4,4,0.5
+serbia,L2-07,Skills formation for work,1,4,0.8
+serbia,L2-08,Human capital formation through schooling,1,3,0.75
+serbia,L2-09,Health service coverage and quality,4,5,0.556
+serbia,L2-10,Disease and injury prevention,1,5,0.833
+serbia,L2-11,Food and nutrition security,0,2,1.0
+serbia,L2-12,Access to basic services,3,0,0.0
+serbia,L2-13,"Crime, violence and personal security",2,7,0.778
+serbia,L2-14,Emissions mitigation,4,3,0.429
+serbia,L2-15,Natural capital stewardship,3,3,0.5
+serbia,L2-16,"Pollution, waste and environmental behaviour",0,10,1.0
+serbia,L2-17,Climate hazard exposure and adaptation,2,0,0.0
+serbia,L2-19,Fiscal sustainability across generations,1,1,0.5
+serbia,L2-21,Water scarcity and allocation,1,0,0.0
+serbia,L2-22,Productive capability accumulation,2,1,0.333
+serbia,L2-23,Trade costs and market connectivity,1,3,0.75
+serbia,L2-24,Market access and integration,0,2,1.0
+serbia,L2-25,International capital and knowledge transmission,1,0,0.0
+serbia,L2-26,International tourism demand,0,2,1.0
+serbia,L2-27,Innovation and technology diffusion,6,3,0.333
+serbia,L2-28,Internal market connectivity,1,6,0.857
+serbia,L2-29,Urban agglomeration and land use,2,3,0.6
+serbia,L2-30,Network utility performance,5,7,0.583
+serbia,L2-32,Market participation of small producers,1,1,0.5
+serbia,L2-33,Primary-sector productivity growth,3,3,0.5
+serbia,L2-34,Firm capability and growth,1,1,0.5
+serbia,L2-35,Market institutions and competition,0,5,1.0
+serbia,L2-36,"Credit, savings and financial access",2,4,0.667
+serbia,L2-37,Labour market matching and regulation,4,4,0.5
+serbia,L2-38,Adjustment of displaced workers and lagging places,2,0,0.0
+serbia,L2-39,Labour mobility and remittances,4,0,0.0
+serbia,L2-40,Property rights and land markets,1,1,0.5
+serbia,L2-41,External balance and shock absorption,1,8,0.889
+serbia,L2-43,Hazard anticipation,1,1,0.5
+serbia,L2-44,"Foresight, planning and evidence",1,4,0.8
+serbia,L2-45,Institutional checks on executive power,3,1,0.25
+serbia,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+serbia,L2-47,Regulatory updating for technological change,1,0,0.0
+serbia,L2-48,Bureaucratic capability and service delivery,1,8,0.889
+serbia,L2-50,Revenue capacity,0,2,1.0
+serbia,L2-51,Public expenditure quality,2,7,0.778
+serbia,L2-52,Regulatory enforcement capacity,1,6,0.857
+serbia,L2-54,Participation and community voice,2,0,0.0
+serbia,L2-55,Information and accountability,0,1,1.0
+solomon_islands,L2-01,Group-based barriers and discrimination,1,0,0.0
+solomon_islands,L2-03,Horizontal inequality and social cohesion,3,0,0.0
+solomon_islands,L2-06,Escape from poverty traps,3,0,0.0
+solomon_islands,L2-07,Skills formation for work,0,1,1.0
+solomon_islands,L2-08,Human capital formation through schooling,3,3,0.5
+solomon_islands,L2-09,Health service coverage and quality,3,2,0.4
+solomon_islands,L2-10,Disease and injury prevention,0,3,1.0
+solomon_islands,L2-11,Food and nutrition security,1,1,0.5
+solomon_islands,L2-12,Access to basic services,2,5,0.714
+solomon_islands,L2-13,"Crime, violence and personal security",1,4,0.8
+solomon_islands,L2-14,Emissions mitigation,5,0,0.0
+solomon_islands,L2-15,Natural capital stewardship,1,5,0.833
+solomon_islands,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+solomon_islands,L2-17,Climate hazard exposure and adaptation,5,1,0.167
+solomon_islands,L2-18,Resource rents and intergenerational wealth,5,0,0.0
+solomon_islands,L2-19,Fiscal sustainability across generations,2,0,0.0
+solomon_islands,L2-20,Population age structure and lifecycle resources,1,0,0.0
+solomon_islands,L2-22,Productive capability accumulation,4,0,0.0
+solomon_islands,L2-23,Trade costs and market connectivity,0,4,1.0
+solomon_islands,L2-25,International capital and knowledge transmission,2,0,0.0
+solomon_islands,L2-26,International tourism demand,1,0,0.0
+solomon_islands,L2-27,Innovation and technology diffusion,3,0,0.0
+solomon_islands,L2-28,Internal market connectivity,3,5,0.625
+solomon_islands,L2-29,Urban agglomeration and land use,1,1,0.5
+solomon_islands,L2-30,Network utility performance,1,0,0.0
+solomon_islands,L2-31,Domestic linkages and agglomeration of production,0,2,1.0
+solomon_islands,L2-33,Primary-sector productivity growth,5,2,0.286
+solomon_islands,L2-34,Firm capability and growth,1,0,0.0
+solomon_islands,L2-35,Market institutions and competition,3,3,0.5
+solomon_islands,L2-36,"Credit, savings and financial access",0,1,1.0
+solomon_islands,L2-37,Labour market matching and regulation,1,1,0.5
+solomon_islands,L2-38,Adjustment of displaced workers and lagging places,2,1,0.333
+solomon_islands,L2-39,Labour mobility and remittances,0,1,1.0
+solomon_islands,L2-40,Property rights and land markets,1,2,0.667
+solomon_islands,L2-41,External balance and shock absorption,1,0,0.0
+solomon_islands,L2-43,Hazard anticipation,0,2,1.0
+solomon_islands,L2-44,"Foresight, planning and evidence",1,0,0.0
+solomon_islands,L2-45,Institutional checks on executive power,1,1,0.5
+solomon_islands,L2-47,Regulatory updating for technological change,0,1,1.0
+solomon_islands,L2-48,Bureaucratic capability and service delivery,1,2,0.667
+solomon_islands,L2-49,Decentralised provision,2,0,0.0
+solomon_islands,L2-50,Revenue capacity,0,1,1.0
+solomon_islands,L2-51,Public expenditure quality,1,1,0.5
+solomon_islands,L2-52,Regulatory enforcement capacity,0,5,1.0
+solomon_islands,L2-55,Information and accountability,1,0,0.0
+solomon_islands,L2-56,Political accountability and contestation,1,0,0.0
+sri_lanka,L2-01,Group-based barriers and discrimination,2,5,0.714
+sri_lanka,L2-02,"Violence, coercion and exploitation",2,1,0.333
+sri_lanka,L2-03,Horizontal inequality and social cohesion,0,3,1.0
+sri_lanka,L2-04,Forced displacement and resettlement,0,1,1.0
+sri_lanka,L2-05,Household risk protection and consumption stability,4,2,0.333
+sri_lanka,L2-07,Skills formation for work,5,7,0.583
+sri_lanka,L2-08,Human capital formation through schooling,3,13,0.812
+sri_lanka,L2-09,Health service coverage and quality,1,5,0.833
+sri_lanka,L2-10,Disease and injury prevention,0,8,1.0
+sri_lanka,L2-11,Food and nutrition security,1,2,0.667
+sri_lanka,L2-12,Access to basic services,6,7,0.538
+sri_lanka,L2-13,"Crime, violence and personal security",0,7,1.0
+sri_lanka,L2-14,Emissions mitigation,8,2,0.2
+sri_lanka,L2-15,Natural capital stewardship,8,8,0.5
+sri_lanka,L2-16,"Pollution, waste and environmental behaviour",6,11,0.647
+sri_lanka,L2-17,Climate hazard exposure and adaptation,8,5,0.385
+sri_lanka,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+sri_lanka,L2-20,Population age structure and lifecycle resources,0,2,1.0
+sri_lanka,L2-21,Water scarcity and allocation,2,1,0.333
+sri_lanka,L2-22,Productive capability accumulation,8,3,0.273
+sri_lanka,L2-23,Trade costs and market connectivity,5,6,0.545
+sri_lanka,L2-24,Market access and integration,1,0,0.0
+sri_lanka,L2-25,International capital and knowledge transmission,2,0,0.0
+sri_lanka,L2-26,International tourism demand,8,1,0.111
+sri_lanka,L2-27,Innovation and technology diffusion,7,2,0.222
+sri_lanka,L2-28,Internal market connectivity,2,7,0.778
+sri_lanka,L2-29,Urban agglomeration and land use,6,11,0.647
+sri_lanka,L2-30,Network utility performance,3,4,0.571
+sri_lanka,L2-31,Domestic linkages and agglomeration of production,3,8,0.727
+sri_lanka,L2-32,Market participation of small producers,1,0,0.0
+sri_lanka,L2-33,Primary-sector productivity growth,4,7,0.636
+sri_lanka,L2-34,Firm capability and growth,0,1,1.0
+sri_lanka,L2-35,Market institutions and competition,1,1,0.5
+sri_lanka,L2-36,"Credit, savings and financial access",1,1,0.5
+sri_lanka,L2-37,Labour market matching and regulation,8,5,0.385
+sri_lanka,L2-38,Adjustment of displaced workers and lagging places,4,1,0.2
+sri_lanka,L2-40,Property rights and land markets,1,5,0.833
+sri_lanka,L2-41,External balance and shock absorption,1,4,0.8
+sri_lanka,L2-42,Supply-chain and economic security,0,1,1.0
+sri_lanka,L2-43,Hazard anticipation,2,3,0.6
+sri_lanka,L2-44,"Foresight, planning and evidence",2,0,0.0
+sri_lanka,L2-45,Institutional checks on executive power,2,1,0.333
+sri_lanka,L2-47,Regulatory updating for technological change,1,2,0.667
+sri_lanka,L2-48,Bureaucratic capability and service delivery,4,9,0.692
+sri_lanka,L2-49,Decentralised provision,1,1,0.5
+sri_lanka,L2-50,Revenue capacity,0,2,1.0
+sri_lanka,L2-51,Public expenditure quality,3,4,0.571
+sri_lanka,L2-52,Regulatory enforcement capacity,2,6,0.75
+sri_lanka,L2-54,Participation and community voice,1,1,0.5
+sri_lanka,L2-55,Information and accountability,0,2,1.0
+thailand,L2-01,Group-based barriers and discrimination,1,1,0.5
+thailand,L2-03,Horizontal inequality and social cohesion,2,5,0.714
+thailand,L2-05,Household risk protection and consumption stability,3,2,0.4
+thailand,L2-06,Escape from poverty traps,1,0,0.0
+thailand,L2-07,Skills formation for work,3,3,0.5
+thailand,L2-08,Human capital formation through schooling,0,3,1.0
+thailand,L2-09,Health service coverage and quality,1,2,0.667
+thailand,L2-10,Disease and injury prevention,0,5,1.0
+thailand,L2-11,Food and nutrition security,2,3,0.6
+thailand,L2-12,Access to basic services,2,1,0.333
+thailand,L2-13,"Crime, violence and personal security",2,1,0.333
+thailand,L2-14,Emissions mitigation,6,2,0.25
+thailand,L2-15,Natural capital stewardship,4,6,0.6
+thailand,L2-16,"Pollution, waste and environmental behaviour",4,8,0.667
+thailand,L2-17,Climate hazard exposure and adaptation,7,1,0.125
+thailand,L2-20,Population age structure and lifecycle resources,2,1,0.333
+thailand,L2-21,Water scarcity and allocation,1,1,0.5
+thailand,L2-22,Productive capability accumulation,14,2,0.125
+thailand,L2-23,Trade costs and market connectivity,2,8,0.8
+thailand,L2-24,Market access and integration,1,3,0.75
+thailand,L2-25,International capital and knowledge transmission,2,0,0.0
+thailand,L2-26,International tourism demand,5,4,0.444
+thailand,L2-27,Innovation and technology diffusion,9,4,0.308
+thailand,L2-28,Internal market connectivity,2,2,0.5
+thailand,L2-29,Urban agglomeration and land use,7,0,0.0
+thailand,L2-30,Network utility performance,0,1,1.0
+thailand,L2-31,Domestic linkages and agglomeration of production,1,2,0.667
+thailand,L2-32,Market participation of small producers,0,1,1.0
+thailand,L2-33,Primary-sector productivity growth,1,2,0.667
+thailand,L2-34,Firm capability and growth,2,0,0.0
+thailand,L2-35,Market institutions and competition,1,3,0.75
+thailand,L2-36,"Credit, savings and financial access",2,1,0.333
+thailand,L2-37,Labour market matching and regulation,4,1,0.2
+thailand,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+thailand,L2-39,Labour mobility and remittances,1,1,0.5
+thailand,L2-40,Property rights and land markets,0,2,1.0
+thailand,L2-41,External balance and shock absorption,1,1,0.5
+thailand,L2-42,Supply-chain and economic security,1,1,0.5
+thailand,L2-43,Hazard anticipation,0,1,1.0
+thailand,L2-44,"Foresight, planning and evidence",1,2,0.667
+thailand,L2-45,Institutional checks on executive power,5,0,0.0
+thailand,L2-46,"Feedback, learning and policy adaptation",0,2,1.0
+thailand,L2-47,Regulatory updating for technological change,0,2,1.0
+thailand,L2-48,Bureaucratic capability and service delivery,6,3,0.333
+thailand,L2-49,Decentralised provision,3,1,0.25
+thailand,L2-50,Revenue capacity,0,2,1.0
+thailand,L2-51,Public expenditure quality,1,2,0.667
+thailand,L2-52,Regulatory enforcement capacity,4,3,0.429
+thailand,L2-53,Crisis response capacity,0,1,1.0
+thailand,L2-54,Participation and community voice,1,0,0.0
+thailand,L2-57,Reform coalitions and economic dialogue,0,1,1.0
+timor_leste,L2-01,Group-based barriers and discrimination,0,2,1.0
+timor_leste,L2-02,"Violence, coercion and exploitation",1,1,0.5
+timor_leste,L2-05,Household risk protection and consumption stability,3,2,0.4
+timor_leste,L2-07,Skills formation for work,2,1,0.333
+timor_leste,L2-08,Human capital formation through schooling,2,6,0.75
+timor_leste,L2-09,Health service coverage and quality,3,6,0.667
+timor_leste,L2-10,Disease and injury prevention,0,3,1.0
+timor_leste,L2-11,Food and nutrition security,0,1,1.0
+timor_leste,L2-12,Access to basic services,3,5,0.625
+timor_leste,L2-13,"Crime, violence and personal security",4,2,0.333
+timor_leste,L2-14,Emissions mitigation,2,0,0.0
+timor_leste,L2-15,Natural capital stewardship,2,0,0.0
+timor_leste,L2-16,"Pollution, waste and environmental behaviour",1,2,0.667
+timor_leste,L2-18,Resource rents and intergenerational wealth,1,0,0.0
+timor_leste,L2-22,Productive capability accumulation,3,2,0.4
+timor_leste,L2-23,Trade costs and market connectivity,2,4,0.667
+timor_leste,L2-26,International tourism demand,3,0,0.0
+timor_leste,L2-28,Internal market connectivity,2,3,0.6
+timor_leste,L2-29,Urban agglomeration and land use,0,1,1.0
+timor_leste,L2-31,Domestic linkages and agglomeration of production,0,2,1.0
+timor_leste,L2-32,Market participation of small producers,0,3,1.0
+timor_leste,L2-33,Primary-sector productivity growth,2,2,0.5
+timor_leste,L2-34,Firm capability and growth,1,0,0.0
+timor_leste,L2-35,Market institutions and competition,1,0,0.0
+timor_leste,L2-38,Adjustment of displaced workers and lagging places,2,0,0.0
+timor_leste,L2-40,Property rights and land markets,2,0,0.0
+timor_leste,L2-44,"Foresight, planning and evidence",1,1,0.5
+timor_leste,L2-45,Institutional checks on executive power,3,0,0.0
+timor_leste,L2-47,Regulatory updating for technological change,1,0,0.0
+timor_leste,L2-48,Bureaucratic capability and service delivery,2,4,0.667
+timor_leste,L2-49,Decentralised provision,1,0,0.0
+timor_leste,L2-51,Public expenditure quality,2,3,0.6
+timor_leste,L2-52,Regulatory enforcement capacity,0,1,1.0
+timor_leste,L2-53,Crisis response capacity,0,1,1.0
+timor_leste,L2-54,Participation and community voice,3,0,0.0
+tonga,L2-01,Group-based barriers and discrimination,2,0,0.0
+tonga,L2-05,Household risk protection and consumption stability,1,0,0.0
+tonga,L2-07,Skills formation for work,0,1,1.0
+tonga,L2-08,Human capital formation through schooling,0,1,1.0
+tonga,L2-09,Health service coverage and quality,0,1,1.0
+tonga,L2-10,Disease and injury prevention,0,1,1.0
+tonga,L2-12,Access to basic services,0,3,1.0
+tonga,L2-15,Natural capital stewardship,0,2,1.0
+tonga,L2-19,Fiscal sustainability across generations,1,0,0.0
+tonga,L2-22,Productive capability accumulation,1,0,0.0
+tonga,L2-23,Trade costs and market connectivity,0,1,1.0
+tonga,L2-26,International tourism demand,1,0,0.0
+tonga,L2-28,Internal market connectivity,1,4,0.8
+tonga,L2-31,Domestic linkages and agglomeration of production,0,1,1.0
+tonga,L2-35,Market institutions and competition,2,1,0.333
+tonga,L2-39,Labour mobility and remittances,1,0,0.0
+tonga,L2-40,Property rights and land markets,1,0,0.0
+tonga,L2-43,Hazard anticipation,0,1,1.0
+tonga,L2-44,"Foresight, planning and evidence",1,0,0.0
+tonga,L2-45,Institutional checks on executive power,1,0,0.0
+tonga,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+tonga,L2-48,Bureaucratic capability and service delivery,1,0,0.0
+tonga,L2-51,Public expenditure quality,1,1,0.5
+tonga,L2-54,Participation and community voice,0,1,1.0
+tuvalu,L2-08,Human capital formation through schooling,0,1,1.0
+tuvalu,L2-09,Health service coverage and quality,0,1,1.0
+tuvalu,L2-10,Disease and injury prevention,1,0,0.0
+tuvalu,L2-13,"Crime, violence and personal security",1,0,0.0
+tuvalu,L2-14,Emissions mitigation,1,0,0.0
+tuvalu,L2-15,Natural capital stewardship,0,1,1.0
+tuvalu,L2-16,"Pollution, waste and environmental behaviour",0,1,1.0
+tuvalu,L2-17,Climate hazard exposure and adaptation,1,0,0.0
+tuvalu,L2-21,Water scarcity and allocation,0,1,1.0
+tuvalu,L2-23,Trade costs and market connectivity,0,1,1.0
+tuvalu,L2-26,International tourism demand,0,1,1.0
+tuvalu,L2-27,Innovation and technology diffusion,1,0,0.0
+tuvalu,L2-28,Internal market connectivity,0,2,1.0
+tuvalu,L2-33,Primary-sector productivity growth,1,0,0.0
+tuvalu,L2-35,Market institutions and competition,1,0,0.0
+tuvalu,L2-38,Adjustment of displaced workers and lagging places,1,0,0.0
+tuvalu,L2-41,External balance and shock absorption,1,0,0.0
+tuvalu,L2-42,Supply-chain and economic security,0,1,1.0
+tuvalu,L2-44,"Foresight, planning and evidence",1,0,0.0
+tuvalu,L2-47,Regulatory updating for technological change,0,1,1.0
+tuvalu,L2-48,Bureaucratic capability and service delivery,0,2,1.0
+tuvalu,L2-49,Decentralised provision,2,0,0.0
+tuvalu,L2-54,Participation and community voice,0,1,1.0
+uzbekistan,L2-08,Human capital formation through schooling,0,1,1.0
+uzbekistan,L2-12,Access to basic services,1,0,0.0
+uzbekistan,L2-13,"Crime, violence and personal security",1,0,0.0
+uzbekistan,L2-35,Market institutions and competition,0,1,1.0
+uzbekistan,L2-48,Bureaucratic capability and service delivery,2,1,0.333
+vanuatu,L2-01,Group-based barriers and discrimination,1,0,0.0
+vanuatu,L2-02,"Violence, coercion and exploitation",2,0,0.0
+vanuatu,L2-08,Human capital formation through schooling,0,2,1.0
+vanuatu,L2-09,Health service coverage and quality,0,1,1.0
+vanuatu,L2-14,Emissions mitigation,1,1,0.5
+vanuatu,L2-15,Natural capital stewardship,0,2,1.0
+vanuatu,L2-17,Climate hazard exposure and adaptation,1,0,0.0
+vanuatu,L2-22,Productive capability accumulation,1,0,0.0
+vanuatu,L2-23,Trade costs and market connectivity,0,1,1.0
+vanuatu,L2-27,Innovation and technology diffusion,1,0,0.0
+vanuatu,L2-29,Urban agglomeration and land use,0,1,1.0
+vanuatu,L2-33,Primary-sector productivity growth,1,0,0.0
+vanuatu,L2-35,Market institutions and competition,1,1,0.5
+vanuatu,L2-36,"Credit, savings and financial access",1,0,0.0
+vanuatu,L2-37,Labour market matching and regulation,0,1,1.0
+vanuatu,L2-38,Adjustment of displaced workers and lagging places,0,1,1.0
+vanuatu,L2-41,External balance and shock absorption,1,0,0.0
+vanuatu,L2-44,"Foresight, planning and evidence",1,0,0.0
+vanuatu,L2-45,Institutional checks on executive power,2,0,0.0
+vanuatu,L2-48,Bureaucratic capability and service delivery,2,0,0.0
+vanuatu,L2-51,Public expenditure quality,0,1,1.0
+vanuatu,L2-57,Reform coalitions and economic dialogue,0,1,1.0
+vietnam,L2-01,Group-based barriers and discrimination,1,3,0.75
+vietnam,L2-02,"Violence, coercion and exploitation",2,0,0.0
+vietnam,L2-03,Horizontal inequality and social cohesion,2,2,0.5
+vietnam,L2-05,Household risk protection and consumption stability,1,4,0.8
+vietnam,L2-07,Skills formation for work,1,0,0.0
+vietnam,L2-08,Human capital formation through schooling,1,7,0.875
+vietnam,L2-09,Health service coverage and quality,2,2,0.5
+vietnam,L2-10,Disease and injury prevention,0,4,1.0
+vietnam,L2-11,Food and nutrition security,0,4,1.0
+vietnam,L2-12,Access to basic services,2,2,0.5
+vietnam,L2-13,"Crime, violence and personal security",0,3,1.0
+vietnam,L2-14,Emissions mitigation,0,1,1.0
+vietnam,L2-15,Natural capital stewardship,1,2,0.667
+vietnam,L2-16,"Pollution, waste and environmental behaviour",4,1,0.2
+vietnam,L2-17,Climate hazard exposure and adaptation,2,2,0.5
+vietnam,L2-18,Resource rents and intergenerational wealth,3,0,0.0
+vietnam,L2-20,Population age structure and lifecycle resources,1,2,0.667
+vietnam,L2-21,Water scarcity and allocation,3,0,0.0
+vietnam,L2-22,Productive capability accumulation,17,4,0.19
+vietnam,L2-23,Trade costs and market connectivity,6,2,0.25
+vietnam,L2-24,Market access and integration,0,1,1.0
+vietnam,L2-25,International capital and knowledge transmission,2,0,0.0
+vietnam,L2-26,International tourism demand,2,1,0.333
+vietnam,L2-27,Innovation and technology diffusion,2,1,0.333
+vietnam,L2-28,Internal market connectivity,4,4,0.5
+vietnam,L2-29,Urban agglomeration and land use,1,2,0.667
+vietnam,L2-30,Network utility performance,0,3,1.0
+vietnam,L2-31,Domestic linkages and agglomeration of production,2,5,0.714
+vietnam,L2-32,Market participation of small producers,0,1,1.0
+vietnam,L2-33,Primary-sector productivity growth,6,3,0.333
+vietnam,L2-34,Firm capability and growth,2,1,0.333
+vietnam,L2-35,Market institutions and competition,3,6,0.667
+vietnam,L2-36,"Credit, savings and financial access",2,3,0.6
+vietnam,L2-37,Labour market matching and regulation,1,2,0.667
+vietnam,L2-38,Adjustment of displaced workers and lagging places,1,5,0.833
+vietnam,L2-39,Labour mobility and remittances,0,2,1.0
+vietnam,L2-40,Property rights and land markets,1,2,0.667
+vietnam,L2-41,External balance and shock absorption,1,3,0.75
+vietnam,L2-42,Supply-chain and economic security,0,1,1.0
+vietnam,L2-43,Hazard anticipation,2,1,0.333
+vietnam,L2-44,"Foresight, planning and evidence",2,2,0.5
+vietnam,L2-45,Institutional checks on executive power,1,1,0.5
+vietnam,L2-46,"Feedback, learning and policy adaptation",0,1,1.0
+vietnam,L2-47,Regulatory updating for technological change,1,0,0.0
+vietnam,L2-48,Bureaucratic capability and service delivery,4,4,0.5
+vietnam,L2-49,Decentralised provision,1,0,0.0
+vietnam,L2-50,Revenue capacity,0,1,1.0
+vietnam,L2-51,Public expenditure quality,2,6,0.75
+vietnam,L2-52,Regulatory enforcement capacity,0,2,1.0
+vietnam,L2-54,Participation and community voice,3,2,0.4
+vietnam,L2-55,Information and accountability,1,0,0.0

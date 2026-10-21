@@ -1,0 +1,20 @@
+instrument_id,family,label,definition,aliases,n_strategies,n_countries
+I0001,"Credit, guarantees and insurance",Loan or guarantee,"Public lending or loan guarantees to firms, farmers or households, including microcredit. Excludes grants and insurance.","Guarantee | Loan | Loan or guarantee | Loan, insurance",52,23
+I0002,"Credit, guarantees and insurance",Health insurance,"A scheme that pools health costs, contributory or tax-funded, including national health insurance. Excludes direct provision of care.",Health insurance,20,14
+I0003,"Credit, guarantees and insurance",Insurance,"A risk-pooling scheme other than health, such as crop, livestock or disaster insurance. Excludes health insurance and loans.","Insurance | Insurance, loan",18,13
+I0004,Financing vehicles,Fund,A dedicated public fund set up or capitalised for a purpose. Excludes general budget allocations.,Fund,33,17
+I0005,Financing vehicles,Public-private partnership,A contract in which a private party finances or runs a public asset or service. Excludes procurement and outsourcing.,Public-private partnership,4,4
+I0006,Financing vehicles,Bond,"A bond issued to finance a purpose, such as a green bond. Excludes general borrowing.",Green bond,1,1
+I0007,"Information, data and planning",Information system or platform,"A digital platform, database or information system built or upgraded. Excludes registers of people or assets.",Information system | Information system or platform | Platform,342,39
+I0008,"Information, data and planning",Register,"A register of people, firms, land or assets, such as a cadastre or social registry. Excludes general information systems.",Register,60,22
+I0009,Public investment and infrastructure,Facility or network built,"Building or expanding physical assets: roads, power lines, hospitals, centres, parks, zones. Excludes maintenance of what exists and buying services.",Facility | Facility or network | Facility or network to be built | Network | Network or facility,855,43
+I0010,Regulation and standards,Law or regulation,"Enacting, amending or repealing a law or regulation, including licensing. Excludes standards and voluntary guidelines.",Law or regulation | Regulation,398,36
+I0011,Regulation and standards,Standards,"Technical, quality or performance standards and their certification. Excludes laws and regulations in general.","Standards | Standards, information system",127,34
+I0012,Subsidies and price support,Subsidy,"A payment or price support that lowers the cost of a good or input, including tariffs set below cost. Excludes cash transfers to households.","Subsidy | Subsidy, loan | Tariff",32,14
+I0013,Subsidies and price support,Payment for ecosystem services,Payments to land users for conserving or restoring ecosystems. Excludes general environmental subsidies.,Payment for ecosystem services,1,1
+I0014,Taxation,Tax or levy,Raising or restructuring a tax or levy. Excludes tax incentives.,Tax,25,20
+I0015,Taxation,Tax incentive,"A tax exemption, credit or holiday to encourage an activity. Excludes tax increases.",Tax incentive,12,9
+I0016,Taxation,Carbon pricing or market,"A carbon tax, emissions trading or carbon credit market. Excludes other environmental taxes.",Carbon market,3,2
+I0017,Trade and market access,Trade agreement,"A bilateral, regional or multilateral trade or investment agreement. Excludes unilateral trade measures.",Trade agreement,13,10
+I0018,Transfers,Cash transfer,"Cash paid to households or individuals, conditional or not, including minimum income schemes. Excludes subsidies on goods.",Cash transfer,26,18
+I0019,Transfers,Scholarship,A grant to students to cover study costs. Excludes general education spending.,Scholarship,1,1

@@ -1,0 +1,256 @@
+{
+ "slug": "china",
+ "country": "China",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/china/ndp/CN NDP 2026-2030.pdf",
+   "doc_type": "ndp",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "15th Five-Year Plan",
+   "edition": "15th",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/ndp/CN NDP 2021-2025.pdf",
+   "doc_type": "ndp",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "14th Five-Year Plan",
+   "edition": "14th",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/ndp/CN NDP 2016-20.pdf",
+   "doc_type": "ndp",
+   "start": 2016,
+   "end": 2020,
+   "language": "en",
+   "title": "13th Five-Year Plan",
+   "edition": "13th",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/ndp/CN NDP 2011-15.pdf",
+   "doc_type": "ndp",
+   "start": 2011,
+   "end": 2015,
+   "language": "en",
+   "title": "12th Five-Year Plan",
+   "edition": "12th",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/ndp/CN NDP 2026-2030 (Chinese).pdf",
+   "doc_type": "ndp",
+   "start": 2026,
+   "end": 2030,
+   "language": "zh",
+   "title": "15th Five-Year Plan (Chinese original)",
+   "edition": "15th",
+   "skip": "duplicate: the English edition is read"
+  },
+  {
+   "file": "data/sources/china/ndp/CN NDP 2021-2025 (Chinese).pdf",
+   "doc_type": "ndp",
+   "start": 2021,
+   "end": 2025,
+   "language": "zh",
+   "title": "14th Five-Year Plan (Chinese original)",
+   "edition": "14th",
+   "skip": "duplicate: the English edition is read"
+  },
+  {
+   "file": "data/sources/china/china2030.pdf",
+   "doc_type": "other",
+   "start": null,
+   "end": null,
+   "language": "en",
+   "title": "china2030.pdf",
+   "skip": "unidentified: likely the World Bank's China 2030 report, not a government plan; confirm"
+  },
+  {
+   "file": "data/sources/china/sector/CN CO2 Action Plan 2030.pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2030,
+   "language": "en",
+   "title": "CO2 Action Plan 2030",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/china/sector/CN China Education Modernization 2035.pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2035,
+   "language": "en",
+   "title": "China Education Modernization 2035",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/china/sector/CN Commerce Development Plan 2021-25.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "Commerce Development Plan 2021-25",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Digital Economy Development Plan 2021-25.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "Digital Economy Development Plan 2021-25",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Education Development Plan 2026-30.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "Education Development Plan 2026-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Employment Promotion Plan 2021-25.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "Employment Promotion Plan 2021-25",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Energy Production and Consumption Revolution Strategy 2016-30.pdf",
+   "doc_type": "sector",
+   "start": 2016,
+   "end": 2030,
+   "language": "en",
+   "title": "Energy Production and Consumption Revolution Strategy 2016-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN HR and Social Security Development Plan 2026-30.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "HR and Social Security Development Plan 2026-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN High-Quality Foreign Trade Development Plan 2021-25.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "High-Quality Foreign Trade Development Plan 2021-25",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Industrial Green and Low-Carbon Development Plan 2026-30.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "Industrial Green and Low-Carbon Development Plan 2026-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Made in China 2025.pdf",
+   "doc_type": "sector",
+   "start": 2015,
+   "end": 2025,
+   "language": "en",
+   "title": "Made in China 2025",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN National Health Plan 2026-30.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "National Health Plan 2026-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN National Informatization Plan 2021-25.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "National Informatization Plan 2021-25",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN New Generation AI Development Plan 2017.pdf",
+   "doc_type": "sector",
+   "start": 2017,
+   "end": 2030,
+   "language": "en",
+   "title": "New Generation AI Development Plan 2017",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Plan for Building a Digital China 2023.pdf",
+   "doc_type": "sector",
+   "start": 2023,
+   "end": null,
+   "language": "en",
+   "title": "Plan for Building a Digital China 2023",
+   "period_source": "filename",
+   "needs": "period: the filename gives one year only"
+  },
+  {
+   "file": "data/sources/china/sector/CN Plan for Building a New Energy System 2026-30.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "Plan for Building a New Energy System 2026-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Plan for Implementing the Employment-Priority Strategy 2026-30.pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "Plan for Implementing the Employment-Priority Strategy 2026-30",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/china/sector/CN Smart Manufacturing Development Plan 2021-25.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": 2025,
+   "language": "en",
+   "title": "Smart Manufacturing Development Plan 2021-25",
+   "period_source": "filename"
+  }
+ ],
+ "parked": {
+  "budget": {
+   "2022": "data/sources/china/budget/CN Budget Speech 2022.pdf",
+   "2023": "data/sources/china/budget/CN Budget Speech 2023.pdf",
+   "2024": "data/sources/china/budget/CN Budget Speech 2024.pdf",
+   "2025": "data/sources/china/budget/CN Budget Speech 2025.pdf",
+   "2026": "data/sources/china/budget/CN Budget Speech 2026.pdf"
+  },
+  "unga": {
+   "2022": "data/sources/china/unga/China - 2022 Transcript (Chinese).pdf",
+   "2023": "data/sources/china/unga/China - 2023 Transcript.pdf",
+   "2024": "data/sources/china/unga/China - 2024 Transcript.pdf",
+   "2025": "data/sources/china/unga/China - 2025 Transcript.pdf"
+  }
+ }
+}

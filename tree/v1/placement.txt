@@ -1,0 +1,478 @@
+# objective_id  node  [; note]
+# node = F.. (L2 family) | F...mech (L3 mechanism) | H-SPE/H-SEC/H-SGO (Standard holding) | H-GOAL>F.. (goal-shaped; nearest family) | M01/M02 (merged)
+# flags after node: BAU = maintenance, same node as the expansion objective, BAU on the response scale
+# ---- Agriculture, food and fisheries
+0001 F10.linkages ; a value chain is the linkage channel
+0002 F12 ; fisheries growth: plan does not name the channel
+0003 F30 ; reserves, distribution and price preparation span several channels
+0004 F33.harvest_rights
+0005 F12.irrigation
+0006 F12 ; mechanised, precision and smart methods span inputs, mechanisation and learning
+0007 F01 ; export expansion without the channel
+0008 M01
+0009 F12.pest_disease
+0010 F01 ; blue economy is a growth framing over several channels
+0011 F12 ; volume of output
+0012 F11
+0013 F12.ag_research
+0014 F12 ; the plan's hard case: L2 by convention
+0015 F17 ; rural livelihoods and rural development broadly
+0016 F24 ; emergencies, debt and agricultural risk span smoothing and ex ante risk-taking
+0017 F12.social_learn
+0018 F33 ; organic, agroforestry and soil practices
+0019 F38.tot_exposure ; per the plan's globalisation example
+0020 F11.collective
+0021 F12 ; livestock services, feed and genetics
+0022 F26 ; incomes and social support for farmers and fishers
+0023 F12.input_adopt
+0024 F10 ; plantations and downstream processing
+0025 F30.food_loss
+0026 F12 ; kept apart: agricultural investment is a smallholder-credit problem
+0027 F12
+0028 F15.access_credit
+0029 F19 ; safeguarding farmland from conversion
+0030 F12
+0031 F12.farm_size
+0032 F30.food_loss
+0033 F12 ; subsidy redesign is an instrument; channel not named
+0034 F27S.illicit
+# ---- Digital, science and innovation
+0035 F06
+0036 M02
+0037 F07.broadband
+0038 F47.cyber_ext
+0039 F06 ; facilities, talent and university research
+0040 F06 ; ICT sector, digital industries and transformation of firms
+0041 F47 ; ICT and telecom regulation, standards and digital law
+0042 F06 ; adjudicated: definition names technology transfer and technology extension: two sibling channels (coder 2 agreed)
+0043 F06 ; hubs, start-ups and university-industry links
+0044 F48.digital_deliv
+0045 F06.diffusion
+0046 F06.appropriability
+0047 F06.mission
+0048 F07 ; online commerce and cross-border digital trade
+0049 M02
+0050 F31 ; digital access for groups left behind
+0051 F47 ; adjudicated: data protection and AI rules are sibling channels
+0052 F06 ; AI research, infrastructure, adoption and governance
+0053 F06 ; core, frontier, green and indigenous technology
+0054 H-SEC
+0055 F06
+0056 F06.public_rd
+0057 F06
+0058 F41.stats_cap
+# ---- Education and skills
+0059 F25
+0060 F28.learning_quality
+0061 F25.voc_returns
+0062 H-GOAL>F28
+0063 F25.digital_skill
+0064 F28 ; governance and management of the system
+0065 M02
+0066 F25.signals
+0067 F28.access_school ; secondary TSE: girls, disabled and minority learners
+0068 F28 ; building, rehabilitating and equipping
+0069 F28.teacher
+0070 F28.access_school
+0071 F28.learning_quality
+0072 F28.access_school
+0073 F25
+0074 F28.ecd
+0075 F28.univ
+0076 F28
+0077 F28
+0078 F28.univ
+0079 F22.nation_build
+0080 F34.norms_env
+0081 F25.signals
+0082 H-SPE
+0083 F25.work_based
+0084 F28.cost_barrier
+0085 F28
+0086 F28.school_health
+0087 F28 ; distance learning: access and continuity both
+0088 F28
+0089 F28
+0090 F13.mgmt_cap
+0091 H-SPE ; adjudicated: arts in schools: no mechanism (coder 2)
+0092 F28
+0093 F28.learning_quality
+# ---- Energy
+0094 F32 ; mitigation vs capability kept apart; channel within mitigation not named
+0095 F09.reliability
+0096 M01
+0097 F31.electrif
+0098 F32.eff_gap
+0099 F32
+0100 F36
+0101 F39.input_conc ; per the plan
+0102 F09.subsidy_dist
+0103 F09
+0104 F32
+0105 F09.reliability
+0106 F09 ; kept apart from Attract investment
+0107 F32
+0108 F09
+0109 F09.interconnect
+0110 F09.market_struct
+0111 F51R
+0112 F31.cooking
+0113 F32
+0114 F32.directed_tc
+0115 F09 ; adjudicated: losses and costs to users span cost recovery and market structure (coder 2)
+0116 F09.cost_recovery
+0117 F09
+0118 F32
+# ---- Environment and climate
+0119 F35
+0120 F51R
+0121 F35
+0122 F34.waste
+0123 F40 ; preparedness and response
+0124 F33
+0125 F34
+0126 F34.ekc
+0127 F32 ; climate and environmental finance: convention
+0128 F33.commons
+0129 F32 ; climate policy institutions: convention
+0130 F33
+0131 F33
+0132 F35.asset_protect
+0133 F33
+0134 F33.restoration
+0135 F34.waste
+0136 F32 ; adjudicated: green transition commitments, not a pure outcome (coder 2)
+0137 M01
+0138 F32
+0139 F33.restoration
+0140 F41.stats_cap
+0141 F32
+0142 F40.ew_lead
+0143 F32.carbon_price
+0144 F33.protected
+0145 F06
+0146 F33
+0147 F34.norms_env
+0148 F40.ew_lead
+0149 F32
+0150 F34.local_reg
+0151 F34.exposure_hc
+0152 F34 ; adjudicated: hazardous waste, chemicals and ozone-depleting substances span channels; the toxic-exposure mechanism was narrowed to lead-type exposures after source verification
+0153 F34
+0154 F52.bbb
+0155 F33.pes
+0156 F35
+0157 F51R
+0158 F40.risk_finance
+# ---- Governance and public administration
+0159 F41.stats_cap
+0160 F48
+0161 F41
+0162 F49
+0163 F48.civil_service
+0164 F48
+0165 H-SGO
+0166 F44 ; transparency, oversight and trust span several checks
+0167 H-SGO
+0168 F53
+0169 F55 ; adjudicated: electoral administration and political parties are sibling channels
+0170 F46.me_feedback
+0171 F39P
+0172 F51.aid_frag
+0173 F53.civil_society
+0174 F48
+0175 F44
+0176 F18
+0177 F20.documents
+0178 F46.coordination
+0179 H-SPE
+0180 H-SGO
+0181 F48
+0182 F47
+0183 H-SGO
+0184 F46.coordination
+0185 F44.leg_oversight
+0186 H-SGO
+0187 F41
+0188 F18 ; adjudicated: engagement, investment and return span diaspora networks and return migration (deviates from the plan's table)
+0189 F54.media_detect
+0190 H-GOAL>F48
+0191 F54.disclosure
+0192 F39
+# ---- Health
+0193 F29.coverage
+0194 F30.early_nutrition
+0195 F29.workforce
+0196 F40
+0197 F27.behav_risk
+0198 F29
+0199 F29
+0200 F30.food_safety
+0201 F29.coverage
+0202 F27.infect_ext
+0203 F29
+0204 F24.health_cost
+0205 F27.addiction
+0206 F39P.fertility_ctrl ; secondary CAP
+0207 F29.provider_quality
+0208 F29.mnch
+0209 F01 ; pharmaceutical and vaccine industries; causal link to surge capacity
+0210 F29.medicines
+0211 M02
+0212 F27
+0213 F06
+0214 F27.mental
+0215 F29
+0216 F40.surveillance
+0217 H-SPE
+# ---- Industry and manufacturing
+0218 F01
+0219 F01
+0220 F36
+0221 F01 ; SPLIT: security framing goes to F39.input_conc by strategy wording
+0222 F10.linkages
+0223 F02.entry_cost ; per the plan
+0224 F36
+0225 F10.resource_link
+0226 F10 ; adjudicated: names both zones and clusters
+0227 F01
+0228 F10
+0229 F01
+0230 F36
+0231 F01.cap_divers
+0232 F01
+# ---- Labour and employment
+0233 F16
+0234 F16 ; adjudicated: spans standards, wage rules, labour law and forced labour
+0235 F18 ; protection-framed strategies recorded in the causal network to F21
+0236 F16 ; adjudicated: groups into work: the programme channel is not named (coder 2; secondary TSE)
+0237 F16 ; adjudicated: labour law and formalisation are sibling channels
+0238 F16
+0239 F16.informality
+0240 F16.search_match
+0241 F16.wage_floor
+0242 F16.ohs
+0243 F21.child_labour
+0244 F25
+0245 F17.local_adjust
+0246 F17.task_displace
+0247 F16.search_match
+0248 H-GOAL>F16
+# ---- Macroeconomy and enterprise
+0249 F14
+0250 F15
+0251 F14.soft_budget
+0252 F13
+0253 F15.deepening
+0254 H-GOAL>F13
+0255 F38.bank_fragility
+0256 F14.competition
+0257 F38
+0258 F15 ; adjudicated: MSME, export and industrial finance span access and deepening (coder 2)
+0259 F38.buffer ; per the plan
+0260 F13.hgf
+0261 F01 ; per the plan
+0262 F15.deepening
+0263 F15.digital_pay
+0264 H-GOAL>F01
+0265 F11.collective
+0266 F01.services_led
+0267 H-GOAL>F14
+0268 H-GOAL>F17
+0269 F47
+0270 F14
+0271 F15 ; adjudicated: the definition is intermediation into formal finance, not remittance income (coder 2; deviates from the plan's table)
+0272 F17 ; per the plan
+0273 F38 ; per the plan
+0274 F56.ppd
+0275 F07
+0276 F03.pref_margin
+# ---- Public finance
+0277 F51
+0278 F51.pim
+0279 F50.tax_design
+0280 F51.budget_inst
+0281 F49.transfers
+0282 F51.procure_waste
+0283 F51
+0284 F51
+0285 F37
+0286 F50.third_party
+0287 F38.debt_amp ; per the plan
+0288 F50
+0289 F37
+0290 F51
+# ---- Regional and rural development
+0291 F17
+0292 F17 ; per the plan
+0293 F17.rnf
+0294 F17
+0295 F07 ; adjudicated: rural infrastructure and settlements is broader than road access
+0296 F07
+# ---- Security, justice and rule of law
+0297 F27S
+0298 F27S.deterrence
+0299 H-SGO
+0300 F44
+0301 F27S.legal_emp
+0302 H-SGO
+0303 F44
+0304 F27S
+0305 H-SGO
+0306 F22
+0307 F27S.illicit
+0308 F22
+0309 F27S.recidivism
+0310 F27S.recidivism ; definition is offenders, not returning migrants
+0311 F44
+0312 F44.judicial_review
+0313 H-SGO
+0314 F27S
+0315 H-SGO
+0316 H-SGO
+0317 F14.contract_enf
+0318 F39.strategic_sector ; per the plan
+0319 F27S
+0320 F39 ; per the plan
+0321 H-SGO
+0322 F44
+# ---- Social protection and inclusion
+0323 F20
+0324 F20
+0325 F24 ; the reconstruction: three candidate mechanisms
+0326 H-GOAL>F26
+0327 F24
+0328 F21
+0329 F53
+0330 F31
+0331 H-GOAL>F26
+0332 F22
+0333 F24.targeting
+0334 F24
+0335 F26
+0336 F21.ipv
+0337 F20.disability
+0338 F21
+0339 F39P.ltc
+0340 F24.smoothing
+0341 F24
+0342 F20.care_burden
+0343 F52.relief
+0344 F24.old_age
+0345 F53.cdd
+0346 F20.care_burden
+0347 H-GOAL>F31
+0348 F23.impoverish
+0349 F24.smoothing
+0350 F51
+0351 F30.school_feed
+0352 F23.refugee_integ
+0353 F24.shock_resp
+0354 F53
+0355 F30.entitlement
+0356 F24
+# ---- Tourism, culture and sport
+0357 H-SPE
+0358 F01
+0359 F27.behav_risk ; physical activity
+0360 F05
+0361 F05
+0362 F05.tour_capacity
+0363 F54
+0364 F05
+0365 M01
+0366 H-SPE
+0367 M01
+0368 H-SPE
+0369 H-SPE
+0370 F22.nation_build
+0371 H-SPE
+0372 F05
+0373 F05 ; kept apart: tourism FDI is a market-access problem
+0374 F22
+0375 H-SPE
+0376 F05
+0377 F05.tour_shock
+0378 H-SPE
+0379 H-SGO
+# ---- Trade and investment
+0380 F04 ; per the plan: the plan rarely says which channel
+0381 F01 ; per the plan
+0382 F02 ; customs, regulation and systems: entry, variable or time by wording
+0383 F03.trade_creation
+0384 F07 ; definition is rural and local markets: internal, not foreign access
+0385 F03
+0386 F04
+0387 F03
+0388 F01
+0389 F07.info_frict
+# ---- Transport and infrastructure
+0390 F27.injury
+0391 F02 ; adjudicated: port efficiency lowers both freight cost and time
+0392 F02 ; adjudicated: logistics and freight: time and cost both named (deviates from the plan's table, for consistency with ports)
+0393 F02.air_links
+0394 M01
+0395 F07.transport_ma
+0396 F02 ; per the plan
+0397 F32
+0398 F08.congestion
+0399 F07.transport_ma
+0400 F07 ; adjudicated: national and rural roads are sibling channels
+0401 F07
+0402 F35.asset_protect
+0403 F07.public_cap
+0404 F07.rural_access
+0405 F09 ; adjudicated: liberalisation and tariff reform are sibling channels
+0406 F08
+0407 F51.pim
+0408 F31
+0409 F07 BAU ; adjudicated: follows Expand road network to L2; BAU on the response scale
+0410 F51
+0411 F07.public_cap BAU
+0412 M02
+0413 F51.pim
+0414 F07.transport_ma
+0415 F09
+0416 F07
+# ---- Urban, housing and land
+0417 F31
+0418 F08
+0419 F19 ; adjudicated: tenure security and registration are sibling channels
+0420 F19 ; adjudicated: cadastre, registration and acquisition span titling and transaction costs (coder 2)
+0421 F08
+0422 F08.planned_ext
+0423 F31.housing_q
+0424 F34
+0425 F49
+0426 F08.land_reg
+0427 F35
+0428 F08
+0429 F19.land_reform
+0430 F08
+0431 F08
+0432 F08.land_reg
+0433 F32.eff_gap
+0434 F31.housing_q
+0435 F08
+0436 F08.density_prod ; adjudicated: city productivity is the density channel (coder 2)
+0437 F08 ; adjudicated: a change sought within urban development, not a pure outcome (coder 2)
+0438 F19.land_mkt
+0439 F08
+0440 F19
+0441 F15
+0442 F08
+# ---- Water and sanitation
+0443 F59
+0444 F31.wash
+0445 F31.wash
+0446 M01
+0447 F31.wash
+0448 F59.storage_var
+0449 F34
+0450 F35.asset_protect
+0451 F09.cost_recovery
+0452 F59
+0453 F34
+0454 F59
+0455 F59
+0456 F09 ; adjudicated: financing and pricing span cost recovery and subsidy distortions

@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: one module, no network, no source documents",
+    "contract: the steps end to end on a stand-in client",
+]

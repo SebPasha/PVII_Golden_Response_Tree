@@ -1,0 +1,127 @@
+{
+ "slug": "thailand",
+ "country": "Thailand",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/thailand/ndp/Thailand 13th Plan 2023-27 THAI.pdf",
+   "doc_type": "ndp",
+   "start": 2023,
+   "end": 2027,
+   "language": "en",
+   "title": "13th National Economic and Social Development Plan",
+   "edition": "13th",
+   "period_source": "document"
+  },
+  {
+   "file": "data/sources/thailand/ndp/TH 12th Plan 2017-21 THAI.pdf",
+   "doc_type": "ndp",
+   "start": 2017,
+   "end": 2021,
+   "language": "en",
+   "title": "12th National Economic and Social Development Plan",
+   "edition": "12th",
+   "period_source": "document"
+  },
+  {
+   "file": "data/sources/thailand/ndp/TH 11th Plan 2011-16 THAI.pdf",
+   "doc_type": "ndp",
+   "start": 2012,
+   "end": 2016,
+   "language": "en",
+   "title": "11th National Economic and Social Development Plan",
+   "edition": "11th",
+   "period_source": "document",
+   "note": "filename says 2011-16; the plan runs 2012-2016"
+  },
+  {
+   "file": "data/sources/thailand/download-20201012111719.pdf",
+   "doc_type": "vision",
+   "start": 2018,
+   "end": 2037,
+   "language": "en",
+   "title": "National Strategy 2018-2037 (identified from its period; confirm)",
+   "edition": "NS",
+   "period_source": "document",
+   "note": "unnamed file; the screener read 2018-2037, which is the 20-Year National Strategy"
+  },
+  {
+   "file": "data/sources/thailand/sector/Digital Government Development Plan (2023-2027).pdf",
+   "doc_type": "sector",
+   "start": 2023,
+   "end": 2027,
+   "language": "th",
+   "title": "Digital Government Development Plan",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/thailand/sector/National Action Plan for Health Security 2023-2027.pdf",
+   "doc_type": "sector",
+   "start": 2023,
+   "end": 2027,
+   "language": "en",
+   "title": "National Action Plan for Health Security",
+   "period_source": "document"
+  },
+  {
+   "file": "data/sources/thailand/sector/Climate Change Master Plan (2015-2050).pdf",
+   "doc_type": "sector",
+   "start": 2015,
+   "end": 2050,
+   "language": "en",
+   "title": "Climate Change Master Plan",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/thailand/sector/National Strategic Plan for Public Health (2017-2036).pdf",
+   "doc_type": "sector",
+   "start": 2017,
+   "end": 2036,
+   "language": "en",
+   "title": "National Strategic Plan for Public Health",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/thailand/sector/Thailand National Education Plan 2017-2036 (Thai) (1).pdf",
+   "doc_type": "sector",
+   "start": 2017,
+   "end": 2036,
+   "language": "th",
+   "title": "National Education Plan",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/thailand/sector/20-Year Thailand Digital Economy and Society Development Plan (2016).pdf",
+   "doc_type": "sector",
+   "start": 2016,
+   "end": null,
+   "language": "en",
+   "title": "Digital Economy and Society Development Plan (20-year)",
+   "needs": "end year: the plan is 20 years from 2016 per its title; confirm"
+  },
+  {
+   "file": "data/sources/thailand/sector/National Adaptation Plan 2024.pdf",
+   "doc_type": "sector",
+   "start": 2024,
+   "end": null,
+   "language": "en",
+   "title": "National Adaptation Plan",
+   "needs": "period"
+  }
+ ],
+ "parked": {
+  "budget": {
+   "2022": "data/sources/thailand/budget/TH Budget Statement 2022.pdf",
+   "2023": "data/sources/thailand/budget/20220726_gov_tha_budget_in_brief_fy_2023.pdf",
+   "2024": "data/sources/thailand/budget/Book-2.pdf",
+   "2025": "data/sources/thailand/budget/Book.pdf",
+   "2026": "data/sources/thailand/budget/Thailand Budget 2026.pdf"
+  },
+  "unga": {
+   "2022": "data/sources/thailand/unga/Thailand - 2022 Transcript.pdf",
+   "2023": "data/sources/thailand/unga/Thailand - 2023 Transcript.pdf",
+   "2024": "data/sources/thailand/unga/Thailand - 2024 Transcript.pdf",
+   "2025": "data/sources/thailand/unga/Thailand - 2025 Transcript.pdf"
+  }
+ }
+}

@@ -1,0 +1,54 @@
+Role
+
+Senior development economist reading the strategy list of ONE planning document, to fold
+together the rows that are the same strategy stated more than once.
+
+Built from PV2 prompt 4b (strategy group), narrowed to one document. PV2 also merged a strategy
+across successive plans; this step never does, because a strategy carried from one plan to the
+next is a finding about time, and it is found later by comparing the plans on the mother tree.
+
+Input
+
+Strategy rows from ONE document, one per line:
+
+  id | name | objective | target group | instrument | pillar | ref
+
+The rows are a shard: rows that share a pillar or share words. Most of the document's rows are
+not in front of you, and that is intended.
+
+Task
+
+Return the groups of rows that describe the SAME strategy.
+
+MERGE when
+1. Two rows describe one strategy under different names or emphasis: "Senior citizen social
+   protection, care, and geriatric services" and "Senior citizen protection, care and welfare
+   services" are one strategy.
+2. The document states the same strategy in several chapters, or in a summary and again in the
+   body.
+3. One row is a narrower statement of another with the SAME objective, target group and
+   instrument: merge into the broader one.
+
+KEEP APART when
+4. Two rows share a sector or vocabulary but differ in objective, target group or instrument:
+   "Expand broadband to rural villages" and "Regulate cybersecurity of critical infrastructure"
+   are two strategies.
+5. Two rows share a target group but not an action: child protection and senior citizen care
+   are two strategies even where one sentence names both.
+6. You are not sure. Leaving two rows apart costs one duplicate; merging two different
+   strategies loses one of them.
+
+For each group give:
+- name: the clearest of the existing names, or one at the same level that covers the group. In
+  English. Never a bare sector word.
+- objective, target_group, instrument: the group's three parts, taken from its rows. Where the
+  rows name different target groups or instruments that all apply, join them with "; ".
+
+Output
+
+A valid JSON array only, listing ONLY the groups that merge. A row not named is kept as it is.
+Every id appears at most once across all groups.
+
+[{"merge_ids": [3, 17], "name": "", "objective": "", "target_group": "", "instrument": ""}]
+
+An empty array [] is a valid answer.

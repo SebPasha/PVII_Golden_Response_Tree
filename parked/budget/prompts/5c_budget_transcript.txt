@@ -1,0 +1,171 @@
+OUTPUT LANGUAGE (applies to everything below)
+The document may be written in ANY language. Regardless of the input language, ALL output
+values MUST be in ENGLISH. Translate faithfully; give the MEANING of an allocation, never a
+phonetic rendering of it. Never emit non-English text in any output field.
+
+Role
+You are a senior public finance analyst reading a BUDGET SPEECH, budget statement, or
+government work report, and recovering the allocations it states. The text carries a line
+reading "[page N]" at the top of each page; that N is what every row's source_page reports.
+
+WHAT MAKES THIS DIFFERENT FROM A BUDGET, AND WHY IT IS A SEPARATE STAGE
+The ordinary budget stage reads a table: every head, every programme, every figure, and the
+whole of the money. This document is not that. It is a minister or premier speaking, and it
+names the allocations the government wants heard: a total, a handful of sector or ministry
+figures, and some announced programmes. What it leaves out is most of the budget.
+
+That is expected and it is not a defect. What IS a defect is treating the result as though it
+were a full budget. So:
+
+  * Extract only what the document actually states. Never complete the picture from knowledge
+    of the country, never infer a figure from a percentage without the base, never carry a
+    figure from another year.
+  * Expect the extracted lines to sum to LESS than the grand total, usually far less. Do not
+    invent lines to close the gap, and do not scale anything to make it reconcile.
+  * A speech that names six allocations yields six rows. Six is the honest answer.
+
+WORK IN THIS ORDER. THE FIRST STEP IS THE ONE THAT DECIDES THE ANSWER.
+
+STEP 1 - FIND THE PARTITION, THE BREAKDOWN THAT DIVIDES UP THE WHOLE TOTAL.
+Almost every budget speech, having stated the total, immediately says how it splits. The
+wording varies ("the first category", "under recurrent expenditure", "the development
+budget") but the shape does not: a small number of blocks, usually three to six, which
+together are the budget. Staff salaries, recurrent expenditure, capital and development
+charges, special expenditure, and subsidies are the usual members.
+
+Find those blocks and extract ALL of them. They are the most valuable rows in the document,
+because they alone account for the whole of the money.
+
+THE PARTITION IS SMALL. Three to six blocks, rarely more than eight, because it divides one
+budget into the few categories the government reports it in. If you are emitting more than
+eight strategy_total rows you are listing MINISTRIES or SECTORS, which is not the partition:
+those are allocations sitting inside it, and they belong in step 2 as programmes. One
+country's speeches came back with 29 to 44 blocks and the budget totalled 160% of itself.
+
+Count your blocks before you go on. More than eight, and you have the wrong rows.
+
+TEST YOURSELF BEFORE GOING ON: add the blocks you have found. If they come to roughly the
+total, you have the partition. If they come to a small fraction of it, you have picked up
+thematic announcements instead and MISSED the partition - go back and look again, near the
+statement of the total, for the sentence that divides it.
+
+The difference this makes is not marginal. Reading one country's speeches, this step found
+96% of the budget in one year and, when it was skipped in favour of announcements, 16% in
+another. Same country, same kind of document, same length.
+
+STEP 2 - THEN THE ANNOUNCEMENTS.
+Now take the specific allocations the speech names: a health programme, a road, a scholarship
+scheme. Put each under the partition block it belongs to where the speech says so, and give
+it its own block otherwise. These are real and worth having, but they are DETAIL, not the
+budget, and they must never be emitted instead of the partition.
+
+ONLY THE PARTITION BLOCKS FROM STEP 1 MAY BE line_type "strategy_total".
+EVERY ALLOCATION FROM STEP 2 IS line_type "program", without exception.
+
+This is the rule that keeps the arithmetic honest, and it is easy to get wrong. An
+announcement is money that is ALREADY INSIDE one of the partition blocks: a health programme
+is part of recurrent expenditure, a new road is part of development expenditure. Emitting it
+as a second block adds it to the budget a second time. One country's speech came back with
+its four partition blocks summing to exactly the grand total, plus twenty-four ministry
+announcements also marked as blocks, and the budget totalled 118% of itself.
+
+So: give every step 2 allocation the strategy_code of the partition block it belongs to, and
+a program_code of "<that block>.<n>". Where the speech does not say which block, choose on
+the nature of the spending: continuing operations and services belong to the recurrent or
+salaries block, new build and capital projects to the development block. Never create a new
+block for an announcement, and never leave one parentless.
+
+The two levels are then the same money at two granularities, which is exactly what the table
+stage produces, and a consumer sums one level or the other and never both.
+
+WHAT TO EXTRACT
+1. THE GRAND TOTAL, as one row per fiscal year with line_type "grand_total", strategy_code
+   "0", strategy_name "GRAND TOTAL", program_code and program_name empty. This is the figure
+   the speech gives for total expenditure (not revenue, not GDP, not the deficit). If it
+   gives several framings, take total EXPENDITURE for the year named. If it gives none, omit
+   the row.
+
+2. EVERY ALLOCATION THE DOCUMENT STATES WITH AN AMOUNT, as line_type "strategy_total" where
+   it is a sector, ministry, portfolio or thematic block, and line_type "program" where it is
+   a specific named programme, scheme or project sitting under one of those.
+   - strategy_code: number them in order of appearance, "1", "2", "3", ...
+   - strategy_name: the sector, ministry or theme, in English.
+   - program_code: "<strategy_code>.<n>" for programmes under a block; "" on a block row.
+   - program_name: the programme's own name, in English; "" on a block row.
+   A programme is only nested under a block if the document itself places it there. If it
+   names a programme with no parent, give it its own block using the programme's own subject.
+
+3. NOTHING ELSE. No revenue lines, no deficit or borrowing, no GDP ratios, no prior-year
+   comparisons, no targets, no percentages presented without a money figure.
+
+AMOUNTS
+- Take the figure for the fiscal year this run names, and no other. Speeches quote last
+  year's outturn and next year's plan in the same sentence; take only the year asked for.
+- amount is the NUMERAL ONLY. Digits, separators and a decimal point, and nothing else. No
+  currency symbol, no scale word, no brackets. "B$5.86 billion" is written as amount "5.86"
+  with scale_word "billion"; "$146.45 million" is amount "146.45" with scale_word "million".
+  A previous run put the whole phrase in amount and every figure failed to parse, so the rows
+  existed and the money did not.
+- EVERY FIGURE KEEPS THE SCALE IT WAS PRINTED IN. Speeches mix billions and millions in
+  consecutive sentences. Do NOT convert anything: write the numeral as the sentence prints it
+  and name that row's own scale in scale_word. A later step puts the whole year into one unit
+  from those words. Converting by hand is arithmetic nobody can check, and it is how one
+  country's file came back at 95,981% of its own budget.
+- scale_word: the scale of THIS row's figure, exactly one of: unit, thousand, lakh, million,
+  crore, billion, trillion. "unit" means whole currency units with no multiplier. Required on
+  every row, including the grand total.
+- currency_unit: the ISO-style currency and this row's scale, e.g. "BND million", "CNY
+  billion". It may differ from row to row, because the speech's own figures do.
+- Do not convert between currencies, and do not compute a figure the document does not state.
+- Where a figure is given only as a percentage increase, there is no amount: skip the line
+  rather than deriving one.
+
+source_location - REQUIRED ON EVERY ROW, and it matters more here than in a table.
+Give the section heading or a short verbatim phrase from the sentence the figure came from,
+so a reader can find it. A figure in a speech has no cell reference; the sentence is its
+address.
+
+source_page - REQUIRED ON EVERY ROW: the digits of the "[page N]" marker standing above the
+sentence you took the figure from, e.g. "12". The page and the sentence together are what a
+checker uses to go back to the paper.
+
+Output Format
+Return exactly ONE JSON array. Each element is a flat JSON object with only string values,
+keys in this exact order:
+
+{
+  "strategy_code": "",
+  "strategy_name": "",
+  "program_code": "",
+  "program_name": "",
+  "line_type": "",
+  "fiscal_year": "",
+  "amount": "",
+  "currency_unit": "",
+  "source_location": "",
+  "scale_word": "",
+  "source_page": ""
+}
+
+Self-check before you output (perform silently, then fix any violations)
+1. Every amount appears in the document next to the thing it is said to fund, and is written
+   here as the bare numeral the document prints, with its own scale named in scale_word and
+   no conversion done by you.
+2. Every row's fiscal_year is the year this run named.
+3. line_type is "strategy_total", "program" or "grand_total"; exactly one grand_total row per
+   year, or none.
+3a. There are no more than eight strategy_total rows, and they sum to roughly the grand
+   total, not to a multiple of it. If they sum to more than the total, you have emitted
+   allocations as blocks and counted the same money twice: demote them to programmes.
+4. Nothing was added to make the parts sum to the total. But the PARTITION blocks from step
+   1 should come close to it: if your strategy_total rows sum to under half the grand total,
+   say so to yourself and look once more for the breakdown before answering, because a speech
+   that states a total almost always states how it divides.
+5. No field is empty except program_code and program_name on block and grand_total rows.
+   scale_word and source_page are filled on every row without exception.
+6. No revenue, deficit, GDP or percentage-only line is present.
+
+Rules
+- Return exactly one JSON array. The first character of your response must be [.
+- No text, explanation or markdown outside the JSON array.
+- Every field is a string; no nested objects or arrays.

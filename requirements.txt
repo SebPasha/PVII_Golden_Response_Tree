@@ -1,0 +1,7 @@
+# Python 3.9 or later. Install with: pip install -r requirements.txt
+openai>=1.0                          # the model client (workflow/pvii/llm.py)
+azure-ai-documentintelligence>=1.0   # the PDF parser (workflow/pvii/parse.py)
+pypdf>=4.0                           # page counts, splitting long PDFs for the parser
+pymupdf>=1.24                        # the PDF text layer, used by --dry-run
+tiktoken>=0.7                        # token counts for chunking and estimates (optional)
+pytest>=8                            # the test suite
