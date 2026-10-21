@@ -3,6 +3,7 @@
 Every row a step writes carries the plan's columns (plan_id, period, doc_type), so the country
 and global tables are these files stacked and nothing has to be joined back later.
 """
+import collections
 import hashlib
 import json
 import os
@@ -16,6 +17,7 @@ CONTEXT_PART_TOKENS = 90000
 FOLD_SHARD_MAX = 60
 MAP_BATCH = 25
 KEEP_STATEMENTS = ("commitment", "ongoing")
+STATEMENT_TYPES = ("commitment", "ongoing", "completed", "background")
 RISK_FRAMINGS = ("threat", "vulnerability", "constraint", "opportunity_with_risk")
 
 RISK_COLUMNS = ["risk_id", "plan_id", "country", "slug", "doc_type", "edition", "plan_title",
@@ -255,7 +257,11 @@ def extract(client, plan, doc, ctx, out_dir):
                        named_agencies=_list(s.get("named_agencies")),
                        quote=_str(s.get("quote")), quote_en=_str(s.get("quote_en")),
                        quote_check=quotes.check(s.get("quote"), p["content"]))
-            (rows if row["statement_type"] in KEEP_STATEMENTS else dropped).append(row)
+            # An unknown or missing statement_type is kept and blanked, as in PV2: only a clear
+            # completed or background label drops a row.
+            if row["statement_type"] not in STATEMENT_TYPES:
+                row["statement_type"] = ""
+            (rows if row["statement_type"] in KEEP_STATEMENTS + ("",) else dropped).append(row)
     if getattr(client, "dry_run", False):
         # A dry run's answers are all None; files of empty tables would read as a plan that
         # was run and found nothing.
@@ -356,11 +362,10 @@ def _merge(plan, members, grp, n):
     first = members[0]
     years = [m["target_year"] for m in members if m.get("target_year")]
     ty = min(years) if years else None
-    risks = []
-    for m in members:
-        for x in m.get("related_risks") or []:
-            if x not in risks:
-                risks.append(x)
+    # Not a union: PV2 learned that a union gives one strategy ten risks. Keep the risks most
+    # of the merged statements name, most often named first, at most three.
+    counts = collections.Counter(x for m in members for x in (m.get("related_risks") or []))
+    risks = [x for x, c in counts.most_common() if c * 2 >= len(members)]
     best = next((m for m in members if m.get("quote_check") == quotes.VERBATIM), first)
     s = dict(plan.row())
     s.update(strategy_id="%s#s%d" % (plan.plan_id, n),
@@ -370,7 +375,7 @@ def _merge(plan, members, grp, n):
              instrument=(grp or {}).get("instrument") or first["instrument"],
              pillar=first.get("pillar", ""),
              statement_type="commitment" if any(m["statement_type"] == "commitment" for m in members)
-             else "ongoing",
+             else "ongoing" if any(m["statement_type"] == "ongoing" for m in members) else "",
              related_risks=risks[:3], target_year=ty, horizon=horizon(ty, plan),
              place="; ".join(sorted({m["place"] for m in members if m.get("place")})),
              n_mentions=len(members), members=[m["row_id"] for m in members],

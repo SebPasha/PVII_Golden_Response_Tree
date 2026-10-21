@@ -34,6 +34,11 @@ mainly any of:
 - a list of implementing agencies on its own;
 - operational metadata (a timeframe, a section number, a budget total with no action).
 
+A diagnosis chunk (current situation, background, history, earlier plans) is still read for
+RISKS, because that is where a plan frames most of them. It yields strategies only where it
+states a forward-looking action, and an action-shaped sentence in it that only describes the
+past or present is recorded as completed or background (STEP 3).
+
 section_type is exactly one of: front_matter, foreword, contents_or_heading, diagnosis,
 strategy, targets_or_indicators, implementation, other.
 
@@ -43,7 +48,33 @@ A risk record is a place where the chunk FRAMES one of the eleven PV II risks as
 vulnerability, shock, constraint, deterioration, disruption or source of harm to the country.
 A topic discussed positively or neutrally is NOT a risk record: "expand renewable energy" names
 energy, it does not frame a risk. "Rising energy import dependence exposes the economy to price
-shocks" does.
+shocks" does. The text must explicitly convey harm, exposure, a constraint, a disruption, a
+deteriorating trend or a negative consequence; the presence of the topic alone is never enough.
+When unsure, there is no risk record.
+
+Judge by meaning, not keywords: the risk's name need not appear. What each risk covers:
+- Climate Change: warming, emissions, extreme weather, drought, floods, storms, heat, sea-level
+  rise, and their effect on livelihoods, farming, water and infrastructure.
+- Pandemics: epidemics, infectious and emerging diseases, outbreaks, public-health emergencies,
+  animal and plant disease outbreaks, biosecurity.
+- Biodiversity Loss: ecosystems, habitats, species, forests, marine and coastal ecosystems,
+  deforestation, land-use change, loss of ecosystem services.
+- Environmental Degradation and Pollution: air, water and soil pollution, waste, wastewater,
+  plastics, toxic substances, environmental deterioration.
+- Resource and Energy Pressures: energy security, supply and demand, fuel import dependence,
+  water scarcity and security, natural resource constraints, food-energy-water stress.
+- Shifts in Globalisation: trade, exports, global markets, FDI, supply chains, value chains,
+  geopolitical and external economic shocks, trade rules, dependence on outside demand.
+- Technological Change: digital transformation, automation, AI, cyber threats, technology gaps,
+  disruption of jobs or industries by technology.
+- Demographic Shifts: ageing, fertility, migration, urbanisation, dependency ratios, youth bulges,
+  shrinking or changing workforce.
+- Democratic Backsliding: weakening accountability, transparency, rule of law, checks and
+  balances, institutional integrity, public trust, corruption.
+- Growing Populism: anti-elite or people-versus-establishment politics, exclusionary mass
+  politics, populist mobilisation.
+- Increased Polarisation: social fragmentation, group, ethnic, regional or political division,
+  conflict between groups, loss of social trust or cohesion.
 
 risk is exactly one of:
 Climate Change; Pandemics; Biodiversity Loss; Environmental Degradation and Pollution; Resource
@@ -57,7 +88,9 @@ framing is exactly one of: threat (harm is coming or under way), vulnerability (
 exposed or weak), constraint (it limits what the country can do), opportunity_with_risk (the
 plan names the risk and the chance in one breath).
 
-At most three risk records per chunk, one per risk, the clearest quote for each.
+At most three risk records per chunk, one per risk, the clearest quote for each. The quote is a
+complete sentence or, if necessary, an independent clause that shows the harm: never a heading,
+a bullet title or an isolated noun phrase.
 
 STEP 3: STRATEGIES
 
@@ -65,8 +98,16 @@ A strategy is any identifiable programme, project, policy, reform, investment, r
 mechanism, or capacity, infrastructure, service or governance initiative that the document says
 it will carry out. It does not need to be a named programme, only a meaningful action that could
 receive funding or a responsible agency. Themes, aspirations, challenges and broad goals on their
-own ("inclusive growth", "resilience", "competitiveness") are NOT strategies unless the chunk
-attaches an action to them.
+own ("inclusive growth", "resilience", "competitiveness", "poverty reduction") are NOT strategies
+unless the chunk attaches an action to them.
+
+Never record as a strategy, even inside a chunk that has other strategies:
+- an indicator, KPI or measurement target, even with specific numbers;
+- a statement of implementing agencies, even when specific ministries are named (put them in
+  named_agencies of the action they belong to);
+- historical, diagnostic or situation text, even when it describes a problem a later strategy
+  addresses;
+- a timeframe, a budget total or programme metadata, unless it proposes a distinct new action.
 
 THE COMMITMENT TEST. For every strategy, decide first what kind of statement it comes from, and
 put the answer in statement_type. Exactly one of:
@@ -75,11 +116,14 @@ commitment - the document says it will do this, aims to, shall, intends to, or l
   measure, project, programme or reform for the plan period. A future-perfect target ("will have
   been established by 2030") is a commitment.
 ongoing - the action is already in delivery and the chunk says the plan continues, expands,
-  maintains or builds on it.
-completed - a result already delivered, reported as an achievement, with nothing said about
-  continuing it ("were installed", "was launched in 2019").
-background - diagnosis, a research finding, a recommendation attributed to a study or another
-  body, or a description of how things are.
+  maintains or builds on it. Past or present perfect wording ("has been publishing", "steps have
+  been taken to develop") qualifies provided the programme is live and carried forward.
+completed - a result already delivered, reported as an achievement or as progress, with nothing
+  said about continuing it. Counts, dates and past tense with nothing to follow ("were
+  installed", "was launched in 2019", "welcoming 2.9 million deported migrants") are its marks.
+background - diagnosis, a research or literature finding, a recommendation attributed to a
+  study, a donor or another body, or a description of how things are. A sentence about what
+  "research suggests" or what a study team "recommended" is background, whatever action it names.
 
 Only commitment and ongoing records are kept. Still return a completed or background record
 where the sentence is action-shaped enough that you would otherwise have extracted it: those are
@@ -92,6 +136,8 @@ Examples, from plans in the PV II corpus:
     ... were the key factors in bringing down poverty" - background.
   "Under this, steps have been taken in the Haor areas to develop infrastructure ... stronger
     efforts will be needed in the 8FYP." - ongoing.
+  "Over the last four years, the Finance Division has been publishing annual climate budget
+    report using its robust IT platform called iBAS++." - ongoing.
   "An affordable and accessible storage and distribution system for basic and essential goods
     will have been developed" - commitment.
 Where a chunk mixes a completed result with a forward statement about the same programme, it is
@@ -109,15 +155,23 @@ THE THREE PARTS OF A STRATEGY. Each strategy is read as objective x target group
 
 Other fields:
 
-- name: a concise policy-style title for the action ("Vocational Skills Development Programme",
-  "SME Financing Support Mechanism"). Never a sentence fragment, a trend or an observation.
+- name: a concise policy-style title for the action, in English ("Vocational Skills Development
+  Programme", "SME Financing Support Mechanism", "Public Procurement Reform"). It must say what is
+  being DONE. Never a sentence fragment, a sentence opening, a trend or an observation ("The
+  rapid pace of technological change" is invalid), never a bare sector word ("Education",
+  "Health"), never cut off mid-word. If no programme name fits, write a 5-10 word one.
 - pillar: the number of the context file's structure item this strategy sits under, where the
   chunk's heading or wording makes that clear; "" where it does not.
 - related_risks: the eleven-risk names this strategy RESPONDS to, at most three, most central
   first. A risk belongs only if it is part of why the strategy exists, not because the strategy
-  uses that subject as a means. A road-safety programme delivered "through technological
-  innovations" responds to road deaths, not to Technological Change. AN EMPTY LIST IS COMMON
-  AND CORRECT: most strategies in a plan respond to none of the eleven.
+  uses that subject as a means, mentions it in passing, or sits in an adjacent sector. A
+  road-safety programme delivered "through technological innovations" responds to road deaths,
+  not to Technological Change. A teacher training programme on digital platforms responds to
+  skills, not to Technological Change. A standing function of the state (defence, routine
+  administration, debt service) responds to none. Where the strategy responds to a real risk
+  that is not one of the eleven (road safety, crime), the answer is an empty list, not the
+  nearest-sounding entry. AN EMPTY LIST IS COMMON AND CORRECT: most strategies in a plan respond
+  to none of the eleven, and an empty list is better than a plausible-sounding wrong one.
 - target_year: a year the chunk states this strategy is due by, as a number; null where none is
   stated. Never infer it from the plan period.
 - target_year_quote: the words stating it, verbatim; "" where target_year is null.
@@ -127,6 +181,8 @@ Other fields:
 - quantified_targets: numbers the chunk attaches to this strategy (amounts, coverage, counts),
   verbatim; [] where none.
 - named_agencies: ministries or agencies the chunk names as responsible, verbatim; [] where none.
+
+- quote: the shortest complete sentence or clause in the chunk that states the action.
 
 Multiple strategies in one chunk are multiple records. Do not merge two actions into one record,
 and do not split one action into several.
