@@ -40,7 +40,7 @@ STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "ed
                     "target_group", "instrument", "pillar", "statement_type", "related_risks",
                     "target_year", "horizon", "place", "n_mentions", "members", "refs", "quote",
                     "quote_en", "quote_check", "quantified_targets", "named_agencies"
-                    ] + CLASS_COLUMNS + ["maturity_subtype",
+                    ] + CLASS_COLUMNS + [
                     # step M
                     "tree_version", "relation", "objective_id", "tree_objective",
                     "new_objective", "node_id", "level", "depth_basis", "depth_words",
@@ -499,7 +499,7 @@ def _merge_class(members, risks):
             ev_of.setdefault(r, q)
     hdi = _common([m.get("HDICategory") for m in members])
     sector = _common([m.get("sector") for m in members])
-    out = dict(
+    return dict(
         HDICategory=hdi, hdi_family=vocab.HDI_PILLAR.get(hdi, ""),
         risk_evidence=[ev_of.get(r, "") for r in risks],
         stated_urgency=_strongest({m.get("stated_urgency") for m in members}, vocab.URGENCIES),
@@ -515,11 +515,6 @@ def _merge_class(members, risks):
         legal_or_plan_basis=_strongest({m.get("legal_or_plan_basis") for m in members}, vocab.BASES),
         **{yn: "Y" if any(m.get(yn) == "Y" for m in members) else "N"
            for yn in ("has_timeline", "has_quantified_target", "has_monitoring")})
-    # PV2 calcs/panel.maturity, unfunded until the budget lane returns.
-    out["maturity_subtype"] = vocab.maturity(out["implementation_status"],
-                                             out["has_timeline"] == "Y",
-                                             out["has_quantified_target"] == "Y")
-    return out
 
 
 # ================================================================ M: map onto the mother tree

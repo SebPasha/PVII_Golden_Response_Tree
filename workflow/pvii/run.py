@@ -61,8 +61,7 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
                              "relations": _count(strategies, "relation"),
                              "levels": _count(strategies, "level"),
                              "response_orientation": _count(strategies, "response_orientation"),
-                             "HDICategory": _count(strategies, "HDICategory"),
-                             "maturity_subtype": _count(strategies, "maturity_subtype")}
+                             "HDICategory": _count(strategies, "HDICategory")}
     record["ledger"] = client.ledger.as_dict()
     record["finished"] = datetime.datetime.now().isoformat(timespec="seconds")
     if not client.dry_run:

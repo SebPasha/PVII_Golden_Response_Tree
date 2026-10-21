@@ -3,8 +3,8 @@
 WHAT THIS ASSERTS
     run_plan writes every plan file; step E's guards hold (a risk or a proactive or
     transformative score whose quote is not in the paragraph is dropped, an unofficial SDG
-    target is dropped, an out-of-list value is clamped) and its fields reach strategies.csv
-    with maturity derived; stacking loses no row from plan to country to global;
+    target is dropped, an out-of-list value is clamped) and its fields reach strategies.csv;
+    stacking loses no row from plan to country to global;
     every row keeps its plan's period; the edition table finds the node carried from the
     second plan to the third, the one dropped and the one new; a dry run writes nothing.
 
@@ -94,7 +94,7 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert (farm["HDICategory"], farm["hdi_family"]) == ("Domestic Integration", "Smarter Growth")
     assert io.as_list(farm["sdg_targets"]) == ["2.3"] and farm["sdg_primary_dimension"]
     assert (farm["stated_urgency"], farm["legal_or_plan_basis"]) == ("high", "none")
-    assert farm["maturity_subtype"] == "planned_specific" and farm["tree_rhdr"]
+    assert farm["tree_rhdr"]
     guards = io.read_json(os.path.join(P.plan_dir("testland_ndp_2017-2021"), "run.json"))[
         "extract"]["guards"]
     assert guards == {"risk dropped: no quote found": 2, "SDG target not official": 2,

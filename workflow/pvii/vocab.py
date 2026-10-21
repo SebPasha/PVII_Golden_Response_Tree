@@ -2,8 +2,7 @@
 
 Lifted from PV2: hdi_framework_text, sector_canonical, sdg_dimension_of and canonical from
 workflow/pv2/vocab.py; the clamps and the risk pairing from extract/schemas.py
-(validate_stage4, _pair_risks); maturity from calcs/panel.py; the primary-dimension vote from
-calcs/panel.py. The lists are vocab/rhdr_2026_10.json (the amended RHDR framework the Work in
+(validate_stage4, _pair_risks); the primary-dimension vote from calcs/panel.py. The lists are vocab/rhdr_2026_10.json (the amended RHDR framework the Work in
 progress tab is built on) and vocab/sdg_target_dimensions.json, both copied unchanged.
 """
 import collections
@@ -105,17 +104,4 @@ def pair_risks(risks, evidence, found):
         if len(out) == MAX_RISKS:
             break
     return [r for r, _ in out], [q for _, q in out], dropped
-
-
-def maturity(status, has_timeline, has_target, funded=False, has_monitor=False, legal="",
-             persistence=0.0):
-    """PV2's maturity subtype. Until the budget lane returns nothing is funded, so only the
-    three unfunded subtypes (planned_specific, planned, aspirational) can come out."""
-    if funded:
-        if status == "operational" and (legal == "law" or has_monitor):
-            return "operational_funded"
-        return "partial_operation" if persistence < 0.5 else "operational_programme"
-    if status == "planned" and has_target and has_timeline:
-        return "planned_specific"
-    return "planned" if status == "planned" else "aspirational"
 
