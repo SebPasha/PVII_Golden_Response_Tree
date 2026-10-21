@@ -42,7 +42,7 @@ python3 -m pvii.run --plan thailand_ndp_2023-2027 --dry-run  # price it, spend n
 python3 -m pvii.run --plan thailand_ndp_2023-2027            # C, E, F, M, then stack
 python3 -m pvii.run --country thailand --doc-types ndp,vision,sector
 python3 -m pvii.run --global                                 # restack everything, no model calls
-python3 -m pytest -q                                         # the suite: no network, no documents
+python3 -m pytest -q                                         # 6 smoke tests: no network, no documents
 ```
 
 On Sebastian's Mac, set `PVII_SOURCES_ROOT=~/Developer/Environment_UNDP/PV2/data` and `PVII_PARSE_CACHE_FALLBACK=~/Developer/Environment_UNDP/PV2/data/cache`. The source library is then read in place, and no Document Intelligence parse that PV2 already paid for is bought again. PV2's folders are only read, never written.
@@ -61,6 +61,5 @@ Responses are cached by prompt. A re-run after a failure, or after you edit `con
 | `prompts/E_extract.txt` | prompts 1 and 3 | One pass; quotes stay in the source language |
 | `prompts/F_fold.txt` | prompt 4b | Within one plan only |
 | `prompts/M_map.txt` | new | Uses the tree's depth rule from `tree/v1/README.md` |
-| `tests/test_chunk_order.py`, `tests/test_parse_retries.py` | the tests of the same names | Imports only |
 
 PV2 code and tests not carried over: stages 1, 2, 3, 4, 4_adopt, 4_consolidate, 4r, 7 and 8; union, calcs, publish, dashboard, screen and the validators other than the quote check. They also include the size ratchet, the prompt-currency and pipeline-map gates, and the frozen-baseline test. These are listed on the [Workflow Redesign page](https://claude.ai/artifact/68Td9yeaHGUY7ybStUVWhX).
