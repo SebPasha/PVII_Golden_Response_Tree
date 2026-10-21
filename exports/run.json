@@ -1,0 +1,130 @@
+{
+ "plan_id": "thailand_ndp_2023-2027",
+ "started": "2026-10-21T18:28:53",
+ "file": "data/sources/thailand/ndp/Thailand 13th Plan 2023-27 THAI.pdf",
+ "pages": 133,
+ "paragraphs": 1388,
+ "prompts": {
+  "C": "f7049a543a010be8",
+  "C_reduce": "8d0d758e5c7aece4",
+  "E": "c868bbcb0add6e25",
+  "F": "f1c169f8f7729f5a",
+  "M": "2c98320f260b9c2d"
+ },
+ "models": {
+  "C": "gpt-5.4",
+  "C_reduce": "gpt-5.4",
+  "E": "gpt-5.4-mini",
+  "F": "gpt-5.4",
+  "M": "gpt-5.4"
+ },
+ "dry_run": false,
+ "extract": {
+  "risks": 307,
+  "rows": 562,
+  "dropped": 202,
+  "errors": [],
+  "invalid": [],
+  "guards": {
+   "risk dropped: no quote found": 27,
+   "HDICategory not in the list": 1,
+   "response set to BAU: no quote found": 9
+  },
+  "quote_checks": {
+   "verbatim": 851,
+   "not found": 14,
+   "edited": 4
+  }
+ },
+ "fold": {
+  "rows": 562,
+  "strategies": 514,
+  "errors": []
+ },
+ "map": {
+  "tree_version": "mother tree v1 (draft for sign-off)",
+  "strategies": 514,
+  "proposals": 120,
+  "errors": [],
+  "relations": {
+   "same": 394,
+   "differs": 119,
+   "new": 1
+  },
+  "levels": {
+   "L2": 313,
+   "GOAL": 3,
+   "L3": 190,
+   "STD": 7,
+   "": 1
+  },
+  "response_orientation": {
+   "BAU": 262,
+   "transformative": 205,
+   "proactive": 47
+  },
+  "HDICategory": {
+   "Standard Governance": 17,
+   "Enhancing Capabilities": 71,
+   "Future Generations": 68,
+   "Adaptability and Course Correction": 8,
+   "Anticipation and Strategic Foresight": 16,
+   "Agility and Delivery Capability": 56,
+   "Domestic Integration": 26,
+   "Export-led": 108,
+   "Tackling Structural Exclusion": 12,
+   "Standard Economy": 42,
+   "Growth through Inclusion": 56,
+   "Reform Leadership, Coalitions and Civic Engagement": 13,
+   "Standard People": 21
+  }
+ },
+ "ledger": {
+  "stages": {
+   "E": {
+    "calls": 0,
+    "cache_hits": 1388,
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "errors": 0,
+    "est_in": 0,
+    "est_out": 0,
+    "est_cost": 0.0,
+    "seconds": 0.2,
+    "p95_seconds": 0.0
+   },
+   "F": {
+    "calls": 0,
+    "cache_hits": 17,
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "errors": 0,
+    "est_in": 0,
+    "est_out": 0,
+    "est_cost": 0.0,
+    "seconds": 0.0,
+    "p95_seconds": 0.0
+   },
+   "M": {
+    "calls": 0,
+    "cache_hits": 21,
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "errors": 0,
+    "est_in": 0,
+    "est_out": 0,
+    "est_cost": 0.0,
+    "seconds": 0.0,
+    "p95_seconds": 0.0
+   }
+  },
+  "calls": 0,
+  "cost": 0.0,
+  "cache_hits": 1426,
+  "dry_run": false
+ },
+ "finished": "2026-10-21T18:28:54"
+}
