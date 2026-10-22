@@ -20,7 +20,7 @@ KEEP_STATEMENTS = ("commitment", "ongoing")
 STATEMENT_TYPES = ("commitment", "ongoing", "completed", "background")
 RISK_FRAMINGS = ("threat", "vulnerability", "constraint", "opportunity_with_risk")
 MIN_EVIDENCE_CHARS = 8        # PV2 quote_found: a shorter "quote" is not evidence
-# Step E's strategy-level fields, from PV2 prompts 3 and 4 (rhdr_2026_10), under PV2's names.
+# Step E's strategy-level fields, from PV2 prompts 3 and 4 under the rhdr_2026_10 framework, renamed for RHDR.
 CLASS_COLUMNS = ["RHDRCategory", "rhdr_pillar", "risk_evidence", "stated_urgency", "sdg_targets",
                  "sdg_primary_dimension", "response_orientation", "response_evidence", "sector",
                  "sector_canonical", "institutional_lead", "implementation_status",
