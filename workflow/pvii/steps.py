@@ -20,8 +20,9 @@ KEEP_STATEMENTS = ("commitment", "ongoing")
 STATEMENT_TYPES = ("commitment", "ongoing", "completed", "background")
 RISK_FRAMINGS = ("threat", "vulnerability", "constraint", "opportunity_with_risk")
 MIN_EVIDENCE_CHARS = 8        # PV2 quote_found: a shorter "quote" is not evidence
-# Step E's strategy-level fields, from PV2 prompts 3 and 4 under the rhdr_2026_10 framework, renamed for RHDR.
-CLASS_COLUMNS = ["RHDRCategory", "rhdr_pillar", "risk_evidence", "stated_urgency", "sdg_targets",
+# Step E's strategy-level fields, from PV2 prompts 3 and 4. The RHDR category is not among them:
+# it is the tree's subpillar, set by step M.
+CLASS_COLUMNS = ["risk_evidence", "stated_urgency", "sdg_targets",
                  "sdg_primary_dimension", "response_orientation", "response_evidence", "sector",
                  "sector_canonical", "institutional_lead", "implementation_status",
                  "has_timeline", "has_quantified_target", "has_monitoring", "legal_or_plan_basis"]
@@ -45,7 +46,7 @@ STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "ed
                     "tree_version", "relation", "objective_id", "tree_objective",
                     "new_objective", "node_id", "level", "depth_basis", "depth_words",
                     "family_id", "family", "mechanism_id", "mechanism", "subpillar", "pillar_rhdr",
-                    "tree_rhdr", "target_id", "target_label", "instrument_id",
+                    "target_id", "target_label", "instrument_id",
                     "instrument_label", "proposal", "confidence", "map_note"]
 PROPOSAL_COLUMNS = ["plan_id", "strategy_id", "name", "objective", "relation", "new_objective",
                     "node_id", "proposal", "quote_en", "quote"]
@@ -287,8 +288,7 @@ def extract(client, plan, doc, ctx, out_dir):
 
 
 def e_prompt():
-    return config.load_prompt("E").replace("<<INSERT_RHDR_FRAMEWORK_HERE>>",
-                                           vocab.rhdr_framework_text())
+    return config.load_prompt("E")
 
 
 def _found(quote, text):
@@ -302,7 +302,7 @@ def _found(quote, text):
 def classify(s, paragraph, guards):
     """Step 4's fields for one strategy record, clamped as PV2's validate_stage4 clamps them.
 
-    The guards, each counted: an out-of-list RHDRCategory is blanked, not guessed; a risk with
+    The guards, each counted: a risk with
     no phrase found in the paragraph is dropped (no quote, no risk); a proactive or
     transformative score with no phrase found falls to BAU; a target code that is not one of
     the 169 official targets is dropped.
@@ -311,9 +311,6 @@ def classify(s, paragraph, guards):
                                        _list_positional(s.get("risk_evidence")),
                                        lambda q: _found(q, paragraph))
     guards["risk dropped: no quote found"] += len(lost)
-    rhdr = vocab.canonical(s.get("RHDRCategory"), vocab.RHDR) or ""
-    if _str(s.get("RHDRCategory")) and not rhdr:
-        guards["RHDRCategory not in the list"] += 1
     ori = vocab.ORIENTATIONS.get(_str(s.get("response_orientation")).lower(), "BAU")
     rev = _str(s.get("response_evidence"))
     if ori != "BAU" and not _found(rev, paragraph):
@@ -331,8 +328,7 @@ def classify(s, paragraph, guards):
                   ("implementation_status", "legal_or_plan_basis", "stated_urgency"))
     sector = _str(s.get("sector"))
     return dict(
-        related_risks=risks, risk_evidence=ev, RHDRCategory=rhdr,
-        rhdr_pillar=vocab.RHDR_PILLAR.get(rhdr, ""),
+        related_risks=risks, risk_evidence=ev,
         stated_urgency=ur if ur in vocab.URGENCIES else "medium",
         sdg_targets=targets, sdg_primary_dimension=vocab.primary_dimension(targets),
         response_orientation=ori, response_evidence=rev,
@@ -497,10 +493,8 @@ def _merge_class(members, risks):
     for m in members:
         for r, q in zip(m.get("related_risks") or [], m.get("risk_evidence") or []):
             ev_of.setdefault(r, q)
-    rhdr = _common([m.get("RHDRCategory") for m in members])
     sector = _common([m.get("sector") for m in members])
     return dict(
-        RHDRCategory=rhdr, rhdr_pillar=vocab.RHDR_PILLAR.get(rhdr, ""),
         risk_evidence=[ev_of.get(r, "") for r in risks],
         stated_urgency=_strongest({m.get("stated_urgency") for m in members}, vocab.URGENCIES),
         sdg_targets=targets, sdg_primary_dimension=vocab.primary_dimension(targets),
@@ -563,7 +557,7 @@ def resolve(s, a, tree):
     s.update(tree_version=tree.version, relation="unmapped", objective_id="", tree_objective="",
              new_objective="", node_id="", level="", depth_basis="", depth_words="",
              family_id="", family="", mechanism_id="", mechanism="", subpillar="",
-             pillar_rhdr="", tree_rhdr="", target_id="", target_label="", instrument_id="",
+             pillar_rhdr="", target_id="", target_label="", instrument_id="",
              instrument_label="", proposal="", confidence="", map_note="")
     if not a:
         s["map_note"] = "no answer for this strategy"
@@ -612,9 +606,8 @@ def resolve(s, a, tree):
     d = tree.describe(final) if final else {}
     s.update(family_id=d.get("family_id", ""), family=d.get("family", ""),
              mechanism_id=d.get("mechanism_id", ""), mechanism=d.get("mechanism", ""),
-             subpillar=d.get("subpillar", ""), pillar_rhdr=d.get("pillar", ""),
-             # The tree family's own RHDR category, beside E's RHDRCategory as a check on it.
-             tree_rhdr=(tree.families.get(d.get("family_id")) or {}).get("primary_rhdr", ""))
+             # The official RHDR category and pillar: the tree's own, never a separate guess.
+             subpillar=d.get("subpillar", ""), pillar_rhdr=d.get("pillar", ""))
     tid, iid = _str(a.get("target_id")), _str(a.get("instrument_id"))
     if tid in tree.targets:
         s["target_id"], s["target_label"] = tid, tree.targets[tid]["label"]

@@ -35,7 +35,6 @@ def _extract(names):
                                         "quote": n, "quote_en": "",
                                         "related_risks": ["Climate Change", "Pandemics"],
                                         "risk_evidence": [n, "words from another page"],
-                                        "RHDRCategory": "domestic integration",
                                         "response_orientation": "transformative",
                                         "response_evidence": n if n != "Digitise services"
                                         else "words from another page",
@@ -91,10 +90,9 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert io.as_list(farm["risk_evidence"]) == ["Mechanise farming"]
     assert (farm["response_orientation"], digi["response_orientation"]) == ("transformative", "BAU")
     assert digi["response_evidence"] == ""
-    assert (farm["RHDRCategory"], farm["rhdr_pillar"]) == ("Domestic Integration", "Smarter Growth")
     assert io.as_list(farm["sdg_targets"]) == ["2.3"] and farm["sdg_primary_dimension"]
     assert (farm["stated_urgency"], farm["legal_or_plan_basis"]) == ("high", "none")
-    assert farm["tree_rhdr"]
+    assert farm["subpillar"] and farm["pillar_rhdr"]
     guards = io.read_json(os.path.join(P.plan_dir("testland_ndp_2017-2021"), "run.json"))[
         "extract"]["guards"]
     assert guards == {"risk dropped: no quote found": 2, "SDG target not official": 2,

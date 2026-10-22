@@ -193,13 +193,6 @@ Each strategy record also carries the fields below. Wherever they refer to a str
 text" or "input rows", read the CHUNK. Every value is in English except the two evidence fields, which are
 copied word for word from the chunk in its own language, like `quote`.
 
-RHDRCategory - assign exactly one of the categories below, by its definition and
-never by its name alone. They sit in three pillars, and each pillar ends in a
-Standard category for what the pillar covers when nothing new is being done.
-The examples are strategy names from other countries' plans.
-
-<<INSERT_RHDR_FRAMEWORK_HERE>>
-
 risk_evidence - QUOTE THE PLAN. For every risk named in related_risks, one short verbatim
 phrase from the chunk showing this strategy addressing that risk: an array, the SAME LENGTH
 as related_risks and in the SAME ORDER. No quote, no risk: a risk whose phrase is missing or
@@ -331,8 +324,8 @@ means the answer is BAU. Judge each strategy on its own text; do not try to prod
 particular distribution across categories. Classify each one accurately and let the mix
 fall where it falls.
 
-A strategy whose RHDRCategory is a Standard category keeps a service running, so it is BAU
-unless its own text names a change to the system itself.
+A strategy that keeps a standing service of the state running is BAU unless its own text
+names a change to the system itself.
 
 response_evidence - THE PLAN'S WORDS FOR THE SCORE. For proactive or transformative, copy
 one short phrase, word for word, from the chunk that names what makes it so: the named
@@ -376,7 +369,7 @@ A valid JSON object only. No markdown, no commentary, no text outside the JSON.
                  "instrument": "", "pillar": "", "related_risks": [], "target_year": null,
                  "target_year_quote": "", "place": "", "quantified_targets": [],
                  "named_agencies": [], "quote": "", "quote_en": "",
-                 "RHDRCategory": "", "risk_evidence": [], "stated_urgency": "",
+                 "risk_evidence": [], "stated_urgency": "",
                  "sdg_alignment": [], "sdg_targets": [], "response_orientation": "",
                  "response_evidence": "", "sector": "", "institutional_lead": null,
                  "implementation_status": "", "has_timeline": "",

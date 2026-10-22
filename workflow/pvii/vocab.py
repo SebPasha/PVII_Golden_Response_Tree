@@ -1,9 +1,8 @@
 """The closed lists step E answers from, and the lookups and rules applied to its answers.
 
-Lifted from PV2: rhdr_framework_text, sector_canonical, sdg_dimension_of and canonical from
+Lifted from PV2: sector_canonical, sdg_dimension_of and canonical from
 workflow/pv2/vocab.py; the clamps and the risk pairing from extract/schemas.py
-(validate_stage4, _pair_risks); the primary-dimension vote from calcs/panel.py. The lists are vocab/rhdr_2026_10.json (the amended RHDR framework the Work in
-progress tab is built on) and vocab/sdg_target_dimensions.json, both copied unchanged.
+(validate_stage4, _pair_risks); the primary-dimension vote from calcs/panel.py. The lists are vocab/lists.json (sectors and SDG goals) and vocab/sdg_target_dimensions.json, both copied unchanged.
 """
 import collections
 import json
@@ -12,14 +11,11 @@ import os
 from pvii.config import RISKS
 
 _DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "vocab")
-with open(os.path.join(_DIR, "rhdr_2026_10.json"), encoding="utf-8") as _f:
+with open(os.path.join(_DIR, "lists.json"), encoding="utf-8") as _f:
     _V = json.load(_f)
 with open(os.path.join(_DIR, "sdg_target_dimensions.json"), encoding="utf-8") as _f:
     SDG_TARGET_DIMENSIONS = json.load(_f)
 
-RHDR_PILLARS = [(f["name"], f["categories"]) for f in _V["rhdr_pillars"]]
-RHDR = [c for _, cats in RHDR_PILLARS for c in cats]
-RHDR_PILLAR = {c: fam for fam, cats in RHDR_PILLARS for c in cats}
 SDG_GOALS = list(_V["sdg_goals"])
 _SECTOR_MAP = dict(_V["sector_canonical"]["map"])
 
@@ -39,28 +35,6 @@ def canonical(value, choices):
         if c.lower() == key:
             return c
     return None
-
-
-def rhdr_framework_text():
-    """The categories as the prompt gives them, put in at <<INSERT_RHDR_FRAMEWORK_HERE>>.
-
-    A category with no definition raises, because a prompt with a hole in it still runs.
-    """
-    fw = _V["rhdr_framework"]
-    defs = fw.get("categories") or {}
-    lines = []
-    for family, names in RHDR_PILLARS:
-        lines.append(family)
-        for name in names:
-            if not (defs.get(name) or {}).get("definition"):
-                raise KeyError("rhdr_framework has no definition for %r" % name)
-            lines.append("  %s: %s" % (name, defs[name]["definition"]))
-            lines += ['    For example: "%s"' % e for e in defs[name].get("examples") or []]
-    rules = fw.get("rules") or []
-    if rules:
-        lines += ["", "Overlaps and tie-breaks, applied in this order:"]
-        lines += ["%d. %s" % (i, r) for i, r in enumerate(rules, 1)]
-    return "\n".join(lines)
 
 
 def sector_canonical(value):

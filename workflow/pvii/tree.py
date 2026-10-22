@@ -29,6 +29,7 @@ class Tree:
             d = json.load(f)
         self.version = (d.get("meta") or {}).get("version", "v1")
         self.built = (d.get("meta") or {}).get("built", "")
+        self.pillars = {p["code"]: p for p in d["pillars"]}
         self.subpillars = {s["code"]: s for s in d["subpillars"]}
         self.sub_by_name = {s["name"]: s["code"] for s in d["subpillars"]}
         self.families = {f["family_id"]: f for f in d["families"]}
@@ -92,7 +93,8 @@ class Tree:
         elif node_id in self.holding:
             h = self.holding[node_id]
             sub = self.subpillars.get(h.get("sub") or "")
-            out.update(subpillar=sub["name"] if sub else "", pillar="")
+            pil = self.pillars.get(sub["pillar"]) if sub else None
+            out.update(subpillar=sub["name"] if sub else "", pillar=pil["name"] if pil else "")
         return out
 
     # ------------------------------------------------------------ the menu step M reads
