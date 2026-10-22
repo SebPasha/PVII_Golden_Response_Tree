@@ -1,6 +1,6 @@
 {
- "_from": "PV2 workflow/frameworks/rhdr_2026_10/vocab.json (hdi_families, hdi_framework) and workflow/vocab/vocab.json (sector_canonical, sdg_goals), copied unchanged on 21 October 2026.",
- "hdi_families": [
+ "_from": "PV2 workflow/frameworks/rhdr_2026_10/vocab.json (rhdr_pillars, rhdr_framework) and workflow/vocab/vocab.json (sector_canonical, sdg_goals), copied unchanged on 21 October 2026.",
+ "rhdr_pillars": [
   {
    "name": "People-first Approach",
    "categories": [
@@ -30,8 +30,8 @@
    ]
   }
  ],
- "hdi_framework": {
-  "_about": "What prompts 3 and 4 tell the model about each category, rendered at <<INSERT_HDI_FRAMEWORK_HERE>> by vocab.hdi_framework_text. The definitions of the ten named categories are the amendments document's, with 'coordinate across government' taken out of Agility; on 5 October 2026 Sebastian put coordination under Adaptability, kept to a mechanism created or reformed, and made an expansion that changes coverage or the service a named category, not Standard. The three Standard definitions and the rules are drafted from the document's comments and the decisions of 5 October.",
+ "rhdr_framework": {
+  "_about": "What step E tells the model about each category, rendered at <<INSERT_RHDR_FRAMEWORK_HERE>> by vocab.rhdr_framework_text. The definitions of the ten named categories are the amendments document's, with 'coordinate across government' taken out of Agility; on 5 October 2026 Sebastian put coordination under Adaptability, kept to a mechanism created or reformed, and made an expansion that changes coverage or the service a named category, not Standard. The three Standard definitions and the rules are drafted from the document's comments and the decisions of 5 October.",
   "_from": "The published categories each one takes content from, wholly or in part. Fostering the Spirit of Change splits: innovation and research to Export-led, culture to Standard People. Joined-up Thinking goes to Adaptability and Course Correction only where a coordination mechanism is created or reformed; the rest of what it held is classified by what it does.",
   "_examples": "Strategy names as published on 29 September 2026, from countries outside the five being rerun, so the rerun is not shown its own answers.",
   "categories": {
@@ -181,7 +181,7 @@
   ]
  },
  "sector_canonical": {
-  "_about": "The free-text `sector` stage 4 emits, folded to one name per sector so a chart can group on it. 92 distinct spellings arrived over 3,608 strategies (Urban beside Urban Development beside Urbanization and Rural Settlements), and grouping on the raw text put the same sector in three columns. Keys are matched case-insensitively; a value not in the map is shown as unmapped with its own count, never folded into an Other.",
+  "_about": "The free-text `sector` step E emits, folded to one name per sector so a chart can group on it. 92 distinct spellings arrived over 3,608 strategies (Urban beside Urban Development beside Urbanization and Rural Settlements), and grouping on the raw text put the same sector in three columns. Keys are matched case-insensitively; a value not in the map is shown as unmapped with its own count, never folded into an Other.",
   "canon": [
    "Agriculture",
    "Culture",
