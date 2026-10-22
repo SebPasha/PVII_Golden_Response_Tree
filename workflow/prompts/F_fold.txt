@@ -3,9 +3,8 @@ Role
 Senior development economist reading the strategy list of ONE planning document, to fold
 together the rows that are the same strategy stated more than once.
 
-Built from PV2 prompt 4b (strategy group), narrowed to one document. PV2 also merged a strategy
-across successive plans; this step never does, because a strategy carried from one plan to the
-next is a finding about time, and it is found later by comparing the plans on the mother tree.
+Never merge a strategy across successive plans: a strategy carried from one plan to the next is
+a finding about time, and it is found later by comparing the plans on the mother tree.
 
 Input
 

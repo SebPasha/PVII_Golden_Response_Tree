@@ -3,9 +3,6 @@ Role
 Senior development economist reading one national planning document as a whole, to write the
 context that the per-paragraph reading of the same document will carry.
 
-Built from PV2 prompt 4a (the plan's objective tree), widened: one document, the whole document,
-and the framing the extraction step needs, not only the milestones.
-
 Input
 
 One part of ONE planning document, with its title and stated period. A long document is sent in

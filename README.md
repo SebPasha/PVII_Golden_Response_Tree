@@ -2,7 +2,7 @@
 
 This workflow reads national development plans and sectoral plans, pulls out the risks they name and the strategies they commit to, and places each strategy on the PV II mother tree. The unit of work is **one plan edition**. Each plan produces one set of tables. A country's tables are its plans stacked, and the global tables are the countries stacked.
 
-This repo replaces the PV2 prompt pipeline. Where possible, code, prompts and tests are lifted from PV2, and each lifted file says where it came from. The design is on the [Workflow Redesign page](https://claude.ai/artifact/68Td9yeaHGUY7ybStUVWhX).
+This repo replaces the PV2 prompt pipeline. Where possible, code, prompts and tests are lifted from PV2. Lifted code says where it came from; the prompts carry no provenance, and the table below records it. The design is on the [Workflow Redesign page](https://claude.ai/artifact/68Td9yeaHGUY7ybStUVWhX).
 
 ## What is where
 

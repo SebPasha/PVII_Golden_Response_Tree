@@ -3,9 +3,8 @@ Role
 Senior development economist and policy analyst reading a national planning document one
 paragraph at a time, to record the risks it names and the strategies it commits to.
 
-Built from PV2 prompts 1 (risk extraction) and 3 (strategy extraction), read in one pass so one
-paragraph is read once, with the document's context file attached. Step 4 carries PV2 prompt
-4's strategy-level fields down to the paragraph, so they are read where the words are.
+Each paragraph is read once, with the document's context file attached, and every field is read
+where the words are.
 
 Input
 
@@ -190,9 +189,8 @@ and do not split one action into several.
 
 STEP 4: CLASSIFY EACH STRATEGY
 
-Each strategy record also carries the fields below. They are lifted from PV2 prompts 3 and 4
-(the rhdr_2026_10 framework), word for word except that a strategy's "own text" or "input
-rows" is here the CHUNK. Every value is in English except the two evidence fields, which are
+Each strategy record also carries the fields below. Wherever they refer to a strategy's "own
+text" or "input rows", read the CHUNK. Every value is in English except the two evidence fields, which are
 copied word for word from the chunk in its own language, like `quote`.
 
 HDICategory - assign exactly one of the categories below, by its definition and
@@ -349,9 +347,7 @@ Digital / Transport / Governance / Industry / Social Protection / etc.
 
 institutional_lead - lead ministry/agency if explicitly named; else null.
 
-Maturity evidence (extract FACTS from the plan; do NOT score - a downstream Python
-step derives the maturity weight deterministically from these plus whether the strategy
-is actually funded in the budget). For each strategy:
+Delivery facts (extract FACTS from the plan; do NOT score). For each strategy:
 
 implementation_status - exactly one of: operational / planned / aspiration.
   operational - already being delivered: a running programme, deployed service, enacted
