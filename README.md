@@ -1,17 +1,62 @@
-# PV II golden tree workflow
+# PV II golden response tree
 
-This workflow reads national development plans and sectoral plans, pulls out the risks they name and the strategies they commit to, and places each strategy on the PV II mother tree. The unit of work is **one plan edition**. Each plan produces one set of tables. A country's tables are its plans stacked, and the global tables are the countries stacked.
+This repo turns national development plans into a comparable map of how governments respond to risk.
 
-This repo replaces the PV2 prompt pipeline. Where possible, code, prompts and tests are lifted from PV2. Lifted code says where it came from; the prompts carry no provenance, and the table below records it. The design is on the [Workflow Redesign page](https://claude.ai/artifact/68Td9yeaHGUY7ybStUVWhX).
+It reads a country's national development plans and sector plans. From each one it pulls out:
+- the **risks** the plan names, from a fixed list of eleven global risks (Climate Change, Pandemics, Technological Change and so on);
+- the **strategies** the plan commits to, each read as objective × target group × instrument.
 
-## What is where
+It then places every strategy on the **PV II mother tree**, a shared classification of policy mechanisms. That makes plans comparable across countries and across successive editions of the same plan.
+
+The work is for UNDP's PV II project. This repo replaces the earlier PV2 prompt pipeline. It keeps PV2's data guards and drops its sprawl. Thailand was run end to end on 21 October 2026. China and India are configured but not yet run.
+
+## Quick start
+
+```bash
+git clone https://github.com/SebPasha/PVII_Golden_Response_Tree.git
+cd PVII_Golden_Response_Tree
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cd workflow && python3 -m pytest -q      # 6 smoke tests, no keys or documents needed
+```
+
+To run a real plan you need Azure OpenAI and Document Intelligence keys in `workflow/.env`, and the source PDFs. [workflow/RUNBOOK.md](workflow/RUNBOOK.md) walks through it step by step, with the Thai costs. `workflow/run_thailand.sh` runs every Thai plan one at a time, with a dry run before each.
+
+## Repository layout
+
+```
+tree/              the mother tree (read-only to the workflow)
+  v1/                the v1 release: tree_v1.json, the build scripts, the viewer, validation notes
+  inputs/            the objective, target-group and instrument lists the tree is built from
+workflow/          the live pipeline
+  pvii/              the Python package (entry point: python3 -m pvii.run)
+  prompts/           the five prompts: C_context, C_context_reduce, E_extract, F_fold, M_map
+  configs/           one JSON per country: its documents, types, periods and languages
+  vocab/             closed lists: sectors, SDG goals, SDG target dimensions
+  tests/             6 smoke tests with a fake model
+  RUNBOOK.md         how to run a country
+  run_thailand.sh    runs every Thai plan, one at a time
+budget/            budget lane (prompts and code lifted from PV2, not running yet)
+unga/              UNGA speeches lane (prompts and code lifted from PV2, not running yet)
+data/              created by runs; gitignored (sources, parse cache, outputs)
+```
 
 | Folder | What it holds | Status |
 |---|---|---|
-| `workflow/` | The live pipeline: the `pvii` package, its four prompts, one config per country, and the tests | **running** |
-| `tree/` | The mother tree: the v1 release that the workflow reads, plus everything needed to rebuild it | built, read-only to the workflow |
-| `budget/` | Budget prompts 5, 5b, 5c, 6 and 6b and their code, lifted unchanged | **not running**; comes back on tree nodes |
-| `unga/` | UNGA prompt 8 and its code, lifted unchanged | **not running**; speeches will go through step E |
+| `workflow/` | The live pipeline: the `pvii` package, its prompts, one config per country, and the tests | **running** |
+| `tree/` | The mother tree: the v1 release that the workflow reads, plus everything needed to rebuild it. See [tree/README.md](tree/README.md) | built, read-only to the workflow |
+| `budget/` | Budget prompts 5, 5b, 5c, 6 and 6b and their code, lifted unchanged. See [budget/README.md](budget/README.md) | **not running**; will map onto tree nodes |
+| `unga/` | UNGA prompt 8 and its code, lifted unchanged. See [unga/README.md](unga/README.md) | **not running**; speeches will go through step E |
+
+## Key ideas
+
+- **One plan edition is the unit of work.** Each plan gets its own folder of tables, `data/plans/<plan_id>/`. A `plan_id` is `<country>_<doc_type>_<start>-<end>`, for example `thailand_ndp_2023-2027`. A sector plan adds a slug of its title. Countries are the plans stacked, and the global tables are the countries stacked.
+- **Nothing is merged across plans.** A strategy carried from one plan to the next is a finding about time. It is read later by comparing plans on the tree (`editions.csv`), never by merging rows.
+- **The mother tree has six levels:** RHDR pillar → subpillar → mechanism family (L2) → mechanism (L3) → objective (L4) → strategy (L5). The 10 subpillars, plus 3 Standard holding branches, are the official **RHDR categories**. A strategy's category is the subpillar of the node it is placed on. Nothing guesses the category separately.
+- **Quotes are checked.** Every risk, every related-risk link and every proactive or transformative score must carry a phrase that is found in the paragraph it came from. If none is found, the risk is dropped or the score falls back to BAU. Quotes stay in the plan's own language.
+- **The commitment test.** A strategy is kept only when the plan commits to it or continues it. Completed results and background statements go to `strategy_rows_dropped.csv` for review.
+- **Responses are cached by prompt.** A re-run after a failure only pays for the calls that didn't finish. Editing a prompt means paying again for that step.
+- **Money is capped.** Every run takes `--max-cost`, and `--dry-run` prices a plan without spending anything.
 
 ## The steps, per plan
 
@@ -30,24 +75,28 @@ Each plan also gets `run.json` (counts, quote checks, prompt hashes, tree versio
 
 Every row carries `period_start` and `period_end` from its plan. A strategy's `target_year` is recorded only where the plan states one, and its `horizon` says whether that year falls in the plan period (`plan`) or after it (`long`). A strategy is never merged across editions. Continuity between plans is read from `editions.csv`, by tree node. When the budget lane returns, a fiscal year joins only to the plan in force that year.
 
-## Run it
+## What is not in this repo
 
-```bash
-pip install -r requirements.txt
-cp workflow/.env.example workflow/.env      # fill in; PV2's workflow/.env keys work as they are
-cd workflow
+- **Source PDFs, parse cache and run outputs.** All of these live under `data/`, which is gitignored. The Thai outputs from October 2026 exist only on Sebastian's machine. Ask for them rather than re-running, which costs about $30 to $45 for the nine Thai plans.
+- **API keys.** They go in `workflow/.env`, which is gitignored. `workflow/.env.example` lists every variable.
+- **The Mirror Forests page.** This is the visual that draws each country's tree. Its builder still lives in the older PV2 repo (Environment_UNDP) and reads this repo's `data/plans/`.
 
-python3 -m pvii.run --list thailand                          # every document, its plan_id, and whether it runs
-python3 -m pvii.run --plan thailand_ndp_2023-2027 --dry-run  # price it, spend nothing
-python3 -m pvii.run --plan thailand_ndp_2023-2027            # C, E, F, M, then stack
-python3 -m pvii.run --country thailand --doc-types ndp,vision,sector
-python3 -m pvii.run --global                                 # restack everything, no model calls
-python3 -m pytest -q                                         # 6 smoke tests: no network, no documents
-```
+## Working on it
 
-On Sebastian's Mac, set `PVII_SOURCES_ROOT=~/Developer/Environment_UNDP/PV2/data` and `PVII_PARSE_CACHE_FALLBACK=~/Developer/Environment_UNDP/PV2/data/cache`. The source library is then read in place, and no Document Intelligence parse that PV2 already paid for is bought again. PV2's folders are only read, never written.
+- Keep it basic. There are 6 smoke tests and no CI. Extend an existing test rather than adding new files.
+- Keep the data guards: the commitment test, the quote checks, "no quote, no risk", and the closed lists. They are what makes the output trustworthy.
+- `tree/v1` is a signed-off release. The workflow only reads it. Step M's `proposals.csv` files feed the next release.
+- Never commit `.env` or `data/`.
 
-Responses are cached by prompt. A re-run after a failure, or after you edit `context.json`, only pays for the calls whose prompt changed. Each run is capped by `--max-cost` (default $25).
+## Known open issues (October 2026)
+
+- The Thai outputs on disk predate the 22 October prompt changes, and they still carry the old category columns. They will match the code again after a re-run.
+- Proactive and transformative scores look generous, at 49% on the 13th Plan. The quote check proves the phrase exists, not that it names a change.
+- Recall is unchecked. Adding the classification fields cut kept rows from 749 to 562 on the 13th Plan.
+- A sector strategy that repeats a national one is counted in both.
+- Fold compares rows only within shards of up to 60, so some duplicates survive.
+- The dry run overestimates cost. Real runs have cost about 40% of the estimate.
+- Two Thai documents can't run until their periods are confirmed: the 20-Year Digital Economy plan and the 2024 National Adaptation Plan.
 
 ## Lifted from PV2
 
