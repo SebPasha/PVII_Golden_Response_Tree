@@ -10,8 +10,8 @@ This repo replaces the PV2 prompt pipeline. Where possible, code, prompts and te
 |---|---|---|
 | `workflow/` | The live pipeline: the `pvii` package, its four prompts, one config per country, and the tests | **running** |
 | `tree/` | The mother tree: the v1 release that the workflow reads, plus everything needed to rebuild it | built, read-only to the workflow |
-| `parked/budget/` | Budget prompts 5, 5b, 5c, 6 and 6b and their code, lifted unchanged | **not running**; comes back on tree nodes |
-| `parked/unga/` | UNGA prompt 8 and its code, lifted unchanged | **not running**; speeches will go through step E |
+| `budget/` | Budget prompts 5, 5b, 5c, 6 and 6b and their code, lifted unchanged | **not running**; comes back on tree nodes |
+| `unga/` | UNGA prompt 8 and its code, lifted unchanged | **not running**; speeches will go through step E |
 
 ## The steps, per plan
 
