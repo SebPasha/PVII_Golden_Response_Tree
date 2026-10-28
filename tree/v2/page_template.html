@@ -1,0 +1,564 @@
+<title>Thailand on the Golden Tree</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: a fixed top bar with plan chips and section tabs; one scrolling section at a time; tables and matrices scroll inside their own frames. */
+:root {
+  --bg: #f6f3ec; --panel: #fffdf8; --panel2: #efe9dc; --line: #d9d0bd; --fg: #1e2a24; --muted: #5f6b64;
+  --accent: #8a6a12; --accent2: #c9a227; --gold-ramp: 138, 106, 18; --sector: #8c4a24;
+  --good: #2f7d4f; --warn: #b8780a; --bad: #b03a2e; --none: #c9c2b3;
+  --serif: "Source Serif 4", Cambria, Georgia, serif; --sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif; --mono: "IBM Plex Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0b1a12; --panel: #10241a; --panel2: #163123; --line: #24473a; --fg: #eef3ee; --muted: #a7bcb0;
+  --accent: #d4a72c; --accent2: #f1d58a; --gold-ramp: 212, 167, 44; --sector: #e0905a;
+  --good: #4ade80; --warn: #f0b429; --bad: #f87171; --none: #3c5a4b; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0b1a12; --panel: #10241a; --panel2: #163123; --line: #24473a; --fg: #eef3ee; --muted: #a7bcb0;
+  --accent: #d4a72c; --accent2: #f1d58a; --gold-ramp: 212, 167, 44; --sector: #e0905a;
+  --good: #4ade80; --warn: #f0b429; --bad: #f87171; --none: #3c5a4b; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.45 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 22px; color: var(--accent); }
+h2 { font-size: 18px; margin: 18px 0 8px; }
+h3 { font-size: 15px; margin: 14px 0 6px; }
+p { max-width: 72ch; margin: 6px 0; }
+a { color: var(--accent); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line);
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top .row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.sub { color: var(--muted); font-size: 12.5px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.tabs a { padding: 5px 10px; border-radius: 4px; text-decoration: none; color: var(--fg); border: 1px solid transparent; font-size: 13px; }
+.tabs a[aria-current="page"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.tabs a:hover { background: var(--panel2); }
+main { padding-block: 14px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section[hidden] { display: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chip { font: inherit; font-size: 12.5px; padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--fg); cursor: pointer; }
+.chip[aria-pressed="true"] { border-color: var(--accent); background: var(--panel2); color: var(--accent); font-weight: 600; }
+.chip.sec { border-style: dashed; }
+.chip.sec[aria-pressed="true"] { color: var(--sector); border-color: var(--sector); }
+.chip:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, .tabs a:focus-visible, .rowbtn:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+.lbl { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 12px 0; }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+.tile b { display: block; font: 600 24px/1.1 var(--serif); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.tile .d { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; align-items: start; }
+.grid2 > * { min-width: 0; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; min-width: 0; }
+.bars { display: grid; grid-template-columns: minmax(120px, 2fr) 5fr auto; gap: 3px 10px; align-items: center; font-size: 13px; }
+.bars .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12px; min-width: 56px; }
+.bar { height: 12px; background: var(--panel2); border-radius: 2px; position: relative; overflow: hidden; }
+.bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); border-radius: 2px; }
+.bar i.s { background: var(--sector); opacity: .7; }
+.bar i.cmp { background: transparent; border-right: 2px solid var(--fg); opacity: .7; }
+.bars .k { cursor: pointer; }
+.bars .k:hover { color: var(--accent); }
+.frame { overflow: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { position: sticky; top: 0; background: var(--panel2); font-weight: 600; cursor: pointer; white-space: nowrap; user-select: none; }
+th .dir { color: var(--accent); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.sec td { color: var(--muted); }
+tr.sec td:first-child { border-left: 3px solid var(--sector); }
+.tag { display: inline-block; font-size: 11.5px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); margin: 1px 2px 1px 0; color: var(--muted); max-width: 100%; overflow-wrap: anywhere; }
+td .tag { white-space: nowrap; overflow-wrap: normal; }
+.tag.l3 { border-color: var(--accent); color: var(--accent); }
+.tag.l2 { border-color: var(--accent2); color: var(--accent); }
+.tag.ok { border-color: var(--good); color: var(--good); }
+.tag.warn { border-color: var(--warn); color: var(--warn); }
+.tag.bad { border-color: var(--bad); color: var(--bad); }
+.tag.sec { border-color: var(--sector); color: var(--sector); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; margin: 10px 0; }
+.filters label { display: flex; flex-direction: column; gap: 3px; font-size: 11.5px; color: var(--muted); }
+select, input[type=search] { font: inherit; font-size: 13px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); color: var(--fg); max-width: 220px; }
+button.plain { font: inherit; font-size: 13px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); color: var(--fg); cursor: pointer; }
+.tree { display: grid; grid-template-columns: minmax(230px, 1fr) minmax(260px, 1.2fr) minmax(300px, 2fr); gap: 12px; }
+@media (max-width: 900px) { .tree { grid-template-columns: 1fr; } }
+.list { display: flex; flex-direction: column; gap: 2px; }
+.rowbtn { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; width: 100%; text-align: left; font: inherit; font-size: 13px; padding: 6px 8px; border: 1px solid transparent; border-radius: 4px; background: transparent; color: var(--fg); cursor: pointer; }
+.rowbtn:hover { background: var(--panel2); }
+.rowbtn[aria-pressed="true"] { border-color: var(--accent); background: var(--panel2); }
+.rowbtn .n { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12px; }
+.rowbtn .n em { color: var(--sector); font-style: normal; }
+.rowbtn small { display: block; color: var(--muted); font-size: 11.5px; }
+.grp { margin: 10px 0 4px; }
+.heat { display: grid; gap: 2px; font-size: 11.5px; overflow-x: auto; }
+.heat .h { writing-mode: vertical-rl; transform: rotate(180deg); padding: 4px 0; color: var(--muted); white-space: nowrap; max-height: 150px; overflow: hidden; text-overflow: ellipsis; }
+.heat .r { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 6px; color: var(--fg); }
+.cell { height: 26px; border-radius: 3px; background: var(--none); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 10.5px; color: var(--fg); border: 1px solid transparent; }
+.cell:hover, .cell[aria-pressed="true"] { border-color: var(--fg); }
+.cell.green { background: color-mix(in oklab, var(--good) var(--a), var(--panel)); }
+.cell.amber { background: color-mix(in oklab, var(--warn) var(--a), var(--panel)); }
+.cell.red { background: color-mix(in oklab, var(--bad) var(--a), var(--panel)); }
+.cell.none { background: var(--panel2); }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--muted); margin: 8px 0; align-items: center; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -2px; margin-right: 4px; }
+.strat { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.strat .t { font-weight: 500; }
+.strat .meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.note { font-size: 12.5px; color: var(--muted); border-left: 3px solid var(--accent2); padding: 4px 10px; margin: 10px 0; max-width: 80ch; }
+.mono { font-family: var(--mono); font-size: 12px; }
+.small { font-size: 12px; color: var(--muted); }
+.cols { columns: 2 320px; column-gap: 24px; }
+.wrap { white-space: normal; }
+details summary { cursor: pointer; color: var(--accent); }
+.multi { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.sm { font-size: 12px; }
+.sm .bars { font-size: 12px; }
+@media (prefers-reduced-motion: no-preference) { .bar i { transition: width .3s ease; } }
+</style>
+
+<header class="top">
+  <div class="row">
+    <h1>Thailand on the Golden Tree</h1>
+    <span class="sub" id="built"></span>
+  </div>
+  <div class="row" style="margin-top:8px">
+    <span class="lbl">Plan</span>
+    <div class="chips" id="planchips"></div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Sections">
+    <a href="#overview">Overview</a><a href="#tree">Tree</a><a href="#strategies">Strategies</a><a href="#risks">Risks</a>
+    <a href="#time">Over time</a><a href="#sector">Sector plans</a><a href="#crosswalks">Crosswalks</a><a href="#test">Bottom-up test</a><a href="#method">Method</a>
+  </nav>
+</header>
+
+<main>
+<section id="overview"></section>
+<section id="tree" hidden></section>
+<section id="strategies" hidden></section>
+<section id="risks" hidden></section>
+<section id="time" hidden></section>
+<section id="sector" hidden></section>
+<section id="crosswalks" hidden></section>
+<section id="test" hidden></section>
+<section id="method" hidden></section>
+</main>
+
+<script>
+const D = /*DATA*/;
+const TEST = /*TEST*/;
+const T = D.tree, FAM = Object.fromEntries(T.families.map(f => [f.family_id, f])), MEC = Object.fromEntries(T.mechanisms.map(m => [m.mechanism_id, m])),
+      PATH = Object.fromEntries(T.pathways.map(p => [p.pathway_id, p])), SUB = Object.fromEntries(T.subpillars.map(s => [s.code, s]));
+const PLANS = D.plans, M = D.measures, S = D.strategies, RISKS = T.risks;
+const NAT = PLANS.map((p, i) => i).filter(i => PLANS[i].doc_type !== "sector"), SEC = PLANS.map((p, i) => i).filter(i => PLANS[i].doc_type === "sector");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const pct = x => (100 * (x || 0)).toFixed(x >= .1 ? 0 : 1) + "%";
+const n0 = x => Number(x || 0).toLocaleString("en-GB");
+const by = (arr, f) => { const o = {}; arr.forEach(x => { const k = f(x); o[k] = (o[k] || 0) + 1; }); return o; };
+const sortDesc = o => Object.entries(o).sort((a, b) => b[1] - a[1]);
+const planShort = i => PLANS[i].short || PLANS[i].title;
+const planLabel = i => `${planShort(i)} ${PLANS[i].period_start}–${PLANS[i].period_end}`;
+const isSec = i => PLANS[i].doc_type === "sector";
+const SUBORDER = T.subpillars.map(s => s.code);
+const famOrder = T.families.map(f => f.family_id);
+
+// ---------------------------------------------------------------- state: the national plan in view (null = all national plans), sector plans switched on
+let plan = NAT.find(i => PLANS[i].doc_type === "ndp" && PLANS[i].period_start >= 2023) ?? NAT[0];
+let secOn = new Set();
+let prefs = {}; try { prefs = JSON.parse(localStorage.getItem("gt-prefs") || "{}"); } catch (e) {}
+if (Number.isInteger(prefs.plan) && PLANS[prefs.plan] && !isSec(prefs.plan)) plan = prefs.plan;
+if (prefs.plan === null) plan = null;
+if (Array.isArray(prefs.sec)) secOn = new Set(prefs.sec.filter(i => isSec(i)));
+const save = () => { try { localStorage.setItem("gt-prefs", JSON.stringify({ plan, sec: [...secOn] })); } catch (e) {} };
+
+const natIn = () => plan === null ? NAT.filter(i => PLANS[i].doc_type === "ndp") : [plan];
+const inView = s => natIn().includes(s.p);
+const secRows = () => S.filter(s => secOn.has(s.p));
+const natRows = () => S.filter(inView);
+const nView = () => natRows().length;
+
+function planChips() {
+  const box = document.getElementById("planchips"); box.innerHTML = "";
+  const mk = (label, pressed, cls, fn, title) => { const b = document.createElement("button"); b.type = "button"; b.className = "chip" + (cls ? " " + cls : ""); b.textContent = label; b.title = title || ""; b.setAttribute("aria-pressed", pressed); b.onclick = fn; box.appendChild(b); };
+  NAT.forEach(i => mk(planLabel(i), plan === i, "", () => { plan = i; save(); render(); }, PLANS[i].title));
+  mk("All national plans", plan === null, "", () => { plan = null; save(); render(); }, "The three five-year plans pooled; the National Strategy stays separate");
+  const sep = document.createElement("span"); sep.className = "lbl"; sep.style.marginLeft = "8px"; sep.textContent = "Sector layer"; box.appendChild(sep);
+  SEC.forEach(i => mk(planLabel(i), secOn.has(i), "sec", () => { secOn.has(i) ? secOn.delete(i) : secOn.add(i); save(); render(); }, PLANS[i].title + " (shown as a lighter layer, never in the national counts)"));
+}
+
+// ---------------------------------------------------------------- shared pieces
+function barsHtml(entries, total, opts = {}) {
+  const max = Math.max(1e-9, ...entries.map(e => e[1] / total), ...(opts.cmp ? entries.map(e => (opts.cmp[e[0]] || 0)) : []));
+  return `<div class="bars">${entries.map(([k, v]) => {
+    const share = v / total, sv = opts.secN && opts.sec ? (opts.sec[k] || 0) / opts.secN : 0;
+    return `<span class="k" data-k="${esc(k)}" title="${esc(opts.title ? opts.title(k) : k)}">${esc(opts.label ? opts.label(k) : k)}</span>
+    <span class="bar"><i style="width:${100 * share / max}%"></i>${sv ? `<i class="s" style="width:${100 * sv / max}%;top:7px"></i>` : ""}${opts.cmp && opts.cmp[k] != null ? `<i class="cmp" style="width:${100 * opts.cmp[k] / max}%"></i>` : ""}</span>
+    <span class="n">${n0(v)} · ${pct(share)}</span>`; }).join("")}</div>`;
+}
+function stratCard(s, showPlan) {
+  const p = PLANS[s.p];
+  return `<div class="strat"><div class="t">${esc(s.name)}</div>
+    <div class="meta">${showPlan ? `<span class="tag ${isSec(s.p) ? "sec" : ""}">${esc(planShort(s.p))}</span>` : ""}
+    <span class="tag ${s.level === "L3" ? "l3" : s.level === "L2" ? "l2" : ""}">${s.level === "L3" ? "pathway: " + esc(PATH[s.pathway_id].pathway) : s.level === "L2" ? "mechanism: " + esc(s.mechanism) : "family level"}</span>
+    <span class="tag">${esc(s.basis)}</span><span class="tag">${esc(s.response_orientation || "orientation not stated")}</span>
+    ${s.target_label ? `<span class="tag">target: ${esc(s.target_label)} → ${esc(s.target_class)}</span>` : ""}${s.instrument_label ? `<span class="tag">instrument: ${esc(s.instrument_label)} → ${esc(s.instrument_class)}</span>` : ""}
+    ${s.candidates.length ? `<span class="tag">candidates: ${s.candidates.map(c => esc(MEC[c].mechanism)).join(", ")}</span>` : ""}</div>
+    ${s.objective ? `<div class="meta">objective: ${esc(s.objective)}</div>` : ""}
+    ${s.links.length ? `<div class="meta">${s.links.map(l => `<span class="tag ${l.kind.startsWith("mechanism") ? "ok" : l.kind === "mention-only" ? "bad" : "warn"}">${esc(l.risk)}: ${esc(l.kind)}, ${l.confidence}</span>`).join("")}</div>` : ""}
+    ${s.sdg_targets.length ? `<div class="meta">SDG targets named: ${s.sdg_targets.join(", ")}${s.sdg_coherence ? ` · ${s.sdg_coherence}` : ""}</div>` : ""}</div>`;
+}
+function stratList(rows, el, showPlan, limit = 200) {
+  const nat = rows.filter(s => !isSec(s.p)), sec = rows.filter(s => isSec(s.p));
+  el.innerHTML = `<p class="small">${n0(nat.length)} national-plan strategies${sec.length ? ` and <span style="color:var(--sector)">${n0(sec.length)} from the sector plans shown</span>` : ""}${rows.length > limit ? `; the first ${limit} are listed` : ""}.</p>` +
+    [...nat, ...sec].slice(0, limit).map(s => stratCard(s, showPlan)).join("");
+}
+function sortable(table, rows, cols, render, opts = {}) {
+  let key = opts.key || cols[0].k, dir = opts.dir || 1;
+  const draw = () => {
+    const sorted = [...rows].sort((a, b) => { const x = a[key], y = b[key]; const c = typeof x === "number" && typeof y === "number" ? x - y : String(x ?? "").localeCompare(String(y ?? "")); return c * dir; });
+    table.innerHTML = `<thead><tr>${cols.map(c => `<th class="${c.num ? "num" : ""}" data-k="${c.k}">${esc(c.h)}${key === c.k ? `<span class="dir"> ${dir > 0 ? "▲" : "▼"}</span>` : ""}</th>`).join("")}</tr></thead><tbody>${sorted.slice(0, opts.limit || 5000).map(render).join("")}</tbody>`;
+    table.querySelectorAll("th").forEach(th => th.onclick = () => { const k = th.dataset.k; dir = key === k ? -dir : 1; key = k; draw(); });
+  };
+  draw();
+}
+
+// ---------------------------------------------------------------- overview
+function overview() {
+  const el = document.getElementById("overview"), rows = natRows(), n = rows.length, sec = secRows();
+  const links = rows.flatMap(s => s.links), consistent = links.filter(l => l.kind.startsWith("mechanism")).length;
+  const depth = by(rows, s => s.level), ori = by(rows, s => s.response_orientation || "not stated");
+  const fam = by(rows, s => s.family_id), famS = by(sec, s => s.family_id);
+  const who = plan === null ? "the three five-year plans" : PLANS[plan].title;
+  const fo = ((ori.proactive || 0) + (ori.transformative || 0)) / Math.max(1, n);
+  el.innerHTML = `
+    <p class="note">${esc(D.meta.note || "Built from the workflow outputs in data/plans.")} Tree ${esc(T.meta.version)}, built ${esc(T.meta.built)}. Counts are ${esc(who)}; sector plans switched on appear as a lighter layer and never enter these numbers.</p>
+    <div class="tiles">
+      <div class="tile"><span class="lbl">Strategies placed</span><b>${n0(n)}</b><div class="d">${plan === null ? "across the 11th, 12th and 13th Plans" : `${PLANS[plan].period_start}–${PLANS[plan].period_end}, ${n0(PLANS[plan].n_all)} extracted`}</div></div>
+      <div class="tile"><span class="lbl">Name a lever or channel</span><b>${pct(((depth.L2 || 0) + (depth.L3 || 0)) / Math.max(1, n))}</b><div class="d">${n0(depth.L3 || 0)} at a pathway, ${n0(depth.L2 || 0)} at a mechanism, ${n0(depth.L1 || 0)} held at a family</div></div>
+      <div class="tile"><span class="lbl">Risk links mechanism-consistent</span><b>${pct(consistent / Math.max(1, links.length))}</b><div class="d">${n0(consistent)} of ${n0(links.length)} strategy × risk links; the rest are affected-group support, family-depth or mention-only</div></div>
+      <div class="tile"><span class="lbl">Future orientation</span><b>${pct(fo)}</b><div class="d">proactive or transformative, as stated in the plan's own words</div></div>
+      <div class="tile"><span class="lbl">Families reached</span><b>${Object.keys(fam).length} <span class="small">of 28</span></b><div class="d">${Object.keys(by(rows.filter(s => s.mechanism_id), s => s.mechanism_id)).length} of 99 mechanisms</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Where the strategies sit: 28 families</h3><p class="small">Share of ${esc(who)}'s strategies. ${sec.length ? "The thin bar is the sector plans switched on, as a share of their own strategies." : ""} Click a family to open it in the Tree.</p>
+        <div id="ov-fam"></div></div>
+      <div class="card"><h3>By RHDR pillar and category</h3><div id="ov-sub"></div>
+        <h3>Response orientation</h3>${barsHtml(sortDesc(ori), n)}
+        <h3>Depth reached</h3>${barsHtml([["L3", depth.L3 || 0], ["L2", depth.L2 || 0], ["L1", depth.L1 || 0]].filter(x => x[1]), n, { label: k => ({ L3: "Pathway (causal channel named)", L2: "Mechanism (lever named)", L1: "Family (domain only)" })[k] })}
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><h3>Who the strategies are for</h3>${barsHtml(sortDesc(by(rows, s => s.target_class)), n)}</div>
+      <div class="card"><h3>What the state uses (Hood's four resources)</h3>${barsHtml(sortDesc(by(rows, s => s.instrument_class)), n, { label: k => k + (T.instrument_classes.find(i => i.instrument_class === k) ? "" : "") })}
+        <p class="small">Information systems and registers are nodality; laws, standards, taxes and agreements are authority; transfers, subsidies, loans, funds and tax incentives are money; facilities, networks and partnerships are organisation.</p></div>
+    </div>`;
+  const famEntries = famOrder.filter(f => fam[f] || famS[f]).map(f => [f, fam[f] || 0]);
+  document.getElementById("ov-fam").innerHTML = barsHtml(famEntries, Math.max(1, n), { label: f => FAM[f].family, title: f => FAM[f].meaning, sec: famS, secN: sec.length });
+  document.getElementById("ov-fam").querySelectorAll(".k").forEach(k => k.onclick = () => { sel.fam = k.dataset.k; sel.mec = null; sel.path = null; location.hash = "#tree"; });
+  const subs = by(rows, s => FAM[s.family_id].subpillar_code);
+  document.getElementById("ov-sub").innerHTML = T.pillars.map(p => { const ss = T.subpillars.filter(s => s.pillar === p.code), tot = ss.reduce((a, s) => a + (subs[s.code] || 0), 0);
+    return `<div class="grp"><b>${esc(p.name)}</b> <span class="small">${n0(tot)} · ${pct(tot / Math.max(1, n))}</span></div>${barsHtml(ss.map(s => [s.code, subs[s.code] || 0]), Math.max(1, n), { label: c => SUB[c].name })}`; }).join("");
+}
+
+// ---------------------------------------------------------------- tree
+const sel = { fam: null, mec: null, path: null, risk: "", q: "" };
+function tree() {
+  const el = document.getElementById("tree"), rows = natRows(), sec = secRows();
+  const hit = s => (!sel.risk || s.links.some(l => l.risk === sel.risk)) && (!sel.q || (s.name + " " + s.objective).toLowerCase().includes(sel.q));
+  const R = rows.filter(hit), Rs = sec.filter(hit);
+  const famN = by(R, s => s.family_id), famS = by(Rs, s => s.family_id), mecN = by(R.filter(s => s.mechanism_id), s => s.mechanism_id), mecS = by(Rs.filter(s => s.mechanism_id), s => s.mechanism_id);
+  const pathN = by(R.filter(s => s.pathway_id), s => s.pathway_id), pathS = by(Rs.filter(s => s.pathway_id), s => s.pathway_id);
+  const cnt = (a, b) => `${n0(a || 0)}${b ? `<em> +${n0(b)}</em>` : ""}`;
+  el.innerHTML = `
+    <div class="filters">
+      <label>Risk<select id="tr-risk"><option value="">Any</option>${RISKS.map(r => `<option ${sel.risk === r ? "selected" : ""}>${esc(r)}</option>`).join("")}</select></label>
+      <label>Search strategies<input type="search" id="tr-q" value="${esc(sel.q)}" placeholder="words in name or objective"></label>
+      <span class="small">Counts are the national plan in view; <span style="color:var(--sector)">+n</span> is the sector plans switched on. Gold tags mark depth: pathway, mechanism, family.</span>
+    </div>
+    <div class="tree">
+      <div class="card"><h3>Families (L1)</h3><div class="list" id="tr-fams"></div></div>
+      <div class="card" id="tr-mecs"><h3>Mechanisms (L2)</h3><p class="small">Pick a family.</p></div>
+      <div class="card" id="tr-detail"><h3>Pathways (L3) and strategies</h3><p class="small">Pick a family or mechanism.</p></div>
+    </div>`;
+  document.getElementById("tr-risk").onchange = e => { sel.risk = e.target.value; tree(); };
+  document.getElementById("tr-q").oninput = e => { sel.q = e.target.value.trim().toLowerCase(); tree(); };
+  const fl = document.getElementById("tr-fams");
+  T.pillars.forEach(p => {
+    fl.insertAdjacentHTML("beforeend", `<div class="grp lbl">${esc(p.name)}</div>`);
+    T.subpillars.filter(s => s.pillar === p.code).forEach(sp => {
+      fl.insertAdjacentHTML("beforeend", `<div class="small" style="margin:4px 0 2px 4px">${esc(sp.name)}</div>`);
+      T.families.filter(f => f.subpillar_code === sp.code).forEach(f => {
+        fl.insertAdjacentHTML("beforeend", `<button type="button" class="rowbtn" data-f="${f.family_id}" aria-pressed="${sel.fam === f.family_id}"><span>${esc(f.family)}</span><span class="n">${cnt(famN[f.family_id], famS[f.family_id])}</span></button>`);
+      });
+    });
+  });
+  fl.querySelectorAll(".rowbtn").forEach(b => b.onclick = () => { sel.fam = b.dataset.f; sel.mec = null; sel.path = null; tree(); });
+  if (!sel.fam) return;
+  const f = FAM[sel.fam];
+  const mecs = document.getElementById("tr-mecs");
+  const held = R.filter(s => s.family_id === f.family_id && !s.mechanism_id).length, heldS = Rs.filter(s => s.family_id === f.family_id && !s.mechanism_id).length;
+  mecs.innerHTML = `<h3>${esc(f.family)}</h3><p class="small">${esc(f.meaning)}</p><p class="small"><b>RHDR:</b> ${esc(f.subpillar)} · "${esc(f.rhdr_clause)}"</p>
+    <p class="small"><b>Literature:</b> ${esc(f.literature)}</p><p class="small"><b>SDG targets:</b> ${f.sdg_targets.join(", ")} (${esc(f.sdg_primary_dimension)})</p>
+    <p class="small"><b>Risks the literature ties to this family:</b> ${f.risks.length ? f.risks.map(esc).join(" · ") : "none"}</p>
+    <div class="list">${f.mechanism_ids.map(m => `<button type="button" class="rowbtn" data-m="${m}" aria-pressed="${sel.mec === m}"><span>${esc(MEC[m].mechanism)}<small>${esc(MEC[m].intermediate_variable)}</small></span><span class="n">${cnt(mecN[m], mecS[m])}</span></button>`).join("")}
+    <button type="button" class="rowbtn" data-m="held" aria-pressed="${sel.mec === "held"}"><span>Held at family level<small>the plan names the domain, not the lever</small></span><span class="n">${cnt(held, heldS)}</span></button></div>`;
+  mecs.querySelectorAll(".rowbtn").forEach(b => b.onclick = () => { sel.mec = b.dataset.m; sel.path = null; tree(); });
+  const det = document.getElementById("tr-detail");
+  let list;
+  if (sel.mec === "held") {
+    list = [...R, ...Rs].filter(s => s.family_id === f.family_id && !s.mechanism_id);
+    det.innerHTML = `<h3>Held at family level: ${esc(f.family)}</h3><p class="small">These strategies name the domain but no lever in this family. Where the plan words matched several mechanisms, the candidates are listed on the strategy.</p><div id="tr-list"></div>`;
+  } else if (sel.mec) {
+    const m = MEC[sel.mec];
+    list = [...R, ...Rs].filter(s => s.mechanism_id === m.mechanism_id && (!sel.path || s.pathway_id === sel.path));
+    det.innerHTML = `<h3>${esc(m.mechanism)}</h3><p class="small">Moves: <b>${esc(m.intermediate_variable)}</b> · SDG ${m.sdg_targets.join(", ")} (${esc(m.sdg_primary_dimension)})${m.assets.length ? ` · assets: ${m.assets.map(a => esc(T.assets.find(x => x.asset_id === a).asset)).join(", ")}` : ""}</p>
+      <p class="small">Risks tagged through its pathways: ${m.risks.length ? m.risks.map(esc).join(" · ") : "none (baseline development mechanism)"}${m.conditional_risks.length ? ` · conditional: ${m.conditional_risks.map(c => esc(c.risk)).join(", ")}` : ""}</p>
+      <p class="small mono">plan words: ${esc(m.plan_words.length > 160 ? m.plan_words.slice(0, 160) + "…" : m.plan_words)}</p>
+      <div class="list">${m.pathway_ids.map(p => PATH[p]).map(p => `<button type="button" class="rowbtn" data-p="${p.pathway_id}" aria-pressed="${sel.path === p.pathway_id}"><span>${esc(p.pathway)}${p.merged_into ? ` <span class="tag">merged into ${p.merged_into}</span>` : ""}<small>${esc(p.causal_input)} → ${esc(p.transmission)} → ${esc(p.outcome)}</small><small>${esc(p.evidence)}${p.risks.length ? " · risks: " + p.risks.map(esc).join(", ") : ""}${p.baseline ? " · baseline, no risk tag by design" : ""}</small></span><span class="n">${cnt(pathN[p.pathway_id], pathS[p.pathway_id])}</span></button>`).join("")}</div>
+      <h3 style="margin-top:12px">Strategies${sel.path ? " on " + esc(PATH[sel.path].pathway) : ""}</h3><div id="tr-list"></div>`;
+    det.querySelectorAll(".rowbtn").forEach(b => b.onclick = () => { sel.path = sel.path === b.dataset.p ? null : b.dataset.p; tree(); });
+  } else {
+    list = [...R, ...Rs].filter(s => s.family_id === f.family_id);
+    det.innerHTML = `<h3>All strategies in ${esc(f.family)}</h3><div id="tr-list"></div>`;
+  }
+  stratList(list, document.getElementById("tr-list"), true);
+}
+
+// ---------------------------------------------------------------- strategies table
+const sf = { plan: "", pillar: "", fam: "", mec: "", level: "", basis: "", ori: "", tcl: "", icl: "", risk: "", kind: "", q: "" };
+function strategies() {
+  const el = document.getElementById("strategies");
+  const pool = S.filter(s => !isSec(s.p) || secOn.has(s.p));
+  const opt = (vals, cur) => `<option value="">Any</option>` + vals.map(v => `<option value="${esc(v[0])}" ${cur === v[0] ? "selected" : ""}>${esc(v[1])}</option>`).join("");
+  const uniq = (arr, f, lab) => [...new Set(arr.map(f).filter(Boolean))].sort().map(v => [v, lab ? lab(v) : v]);
+  el.innerHTML = `<div class="filters">
+    <label>Plan<select data-k="plan">${opt(PLANS.map((p, i) => [String(i), planLabel(i) + (isSec(i) ? " (sector)" : "")]).filter(([i]) => !isSec(+i) || secOn.has(+i)), sf.plan)}</select></label>
+    <label>Pillar<select data-k="pillar">${opt(T.pillars.map(p => [p.name, p.name]), sf.pillar)}</select></label>
+    <label>Family<select data-k="fam">${opt(T.families.map(f => [f.family_id, f.family]), sf.fam)}</select></label>
+    <label>Mechanism<select data-k="mec">${opt(T.mechanisms.filter(m => !sf.fam || m.family_id === sf.fam).map(m => [m.mechanism_id, m.mechanism]), sf.mec)}</select></label>
+    <label>Depth<select data-k="level">${opt([["L3", "Pathway"], ["L2", "Mechanism"], ["L1", "Family"]], sf.level)}</select></label>
+    <label>Placement basis<select data-k="basis">${opt(uniq(pool, s => s.basis), sf.basis)}</select></label>
+    <label>Orientation<select data-k="ori">${opt(uniq(pool, s => s.response_orientation), sf.ori)}</select></label>
+    <label>Target class<select data-k="tcl">${opt(uniq(pool, s => s.target_class), sf.tcl)}</select></label>
+    <label>Instrument class<select data-k="icl">${opt(uniq(pool, s => s.instrument_class), sf.icl)}</select></label>
+    <label>Risk<select data-k="risk">${opt(RISKS.map(r => [r, r]), sf.risk)}</select></label>
+    <label>Link kind<select data-k="kind">${opt(uniq(pool.flatMap(s => s.links), l => l.kind), sf.kind)}</select></label>
+    <label>Search<input type="search" data-k="q" value="${esc(sf.q)}" placeholder="name, objective, target, instrument"></label>
+    <button type="button" class="plain" id="sf-clear">Clear</button>
+  </div><p class="small" id="sf-n"></p><div class="frame" style="max-height:70vh"><table id="sf-table"></table></div>`;
+  el.querySelectorAll("select,input").forEach(c => c[c.tagName === "INPUT" ? "oninput" : "onchange"] = () => { sf[c.dataset.k] = c.value.trim(); if (c.dataset.k === "fam") sf.mec = ""; strategies(); });
+  document.getElementById("sf-clear").onclick = () => { Object.keys(sf).forEach(k => sf[k] = ""); strategies(); };
+  const q = sf.q.toLowerCase();
+  const rows = pool.filter(s => (!sf.plan || s.p === +sf.plan) && (!sf.pillar || s.pillar === sf.pillar) && (!sf.fam || s.family_id === sf.fam) && (!sf.mec || s.mechanism_id === sf.mec)
+    && (!sf.level || s.level === sf.level) && (!sf.basis || s.basis === sf.basis) && (!sf.ori || s.response_orientation === sf.ori) && (!sf.tcl || s.target_class === sf.tcl) && (!sf.icl || s.instrument_class === sf.icl)
+    && (!sf.risk || s.links.some(l => l.risk === sf.risk && (!sf.kind || l.kind === sf.kind))) && (sf.risk || !sf.kind || s.links.some(l => l.kind === sf.kind))
+    && (!q || `${s.name} ${s.objective} ${s.target_label} ${s.instrument_label}`.toLowerCase().includes(q)));
+  const nat = rows.filter(s => !isSec(s.p)).length;
+  document.getElementById("sf-n").textContent = `${n0(rows.length)} strategies (${n0(nat)} from national plans, ${n0(rows.length - nat)} from sector plans switched on). Click a heading to sort; the first 2,000 rows are shown.`;
+  sortable(document.getElementById("sf-table"), rows.map(s => ({ ...s, plan: planShort(s.p), path: s.pathway_id ? PATH[s.pathway_id].pathway : "", risks: s.links.map(l => `${l.risk} (${l.kind.replace("mechanism-consistent", "consistent")})`).join("; ") })),
+    [{ k: "plan", h: "Plan" }, { k: "name", h: "Strategy" }, { k: "family", h: "Family" }, { k: "mechanism", h: "Mechanism" }, { k: "path", h: "Pathway" }, { k: "level", h: "Depth" }, { k: "basis", h: "Basis" }, { k: "response_orientation", h: "Orientation" }, { k: "target_class", h: "Target class" }, { k: "instrument_class", h: "Instrument class" }, { k: "risks", h: "Risk links" }],
+    r => `<tr class="${isSec(r.p) ? "sec" : ""}"><td>${esc(r.plan)}</td><td class="wrap" title="${esc(r.objective)}">${esc(r.name)}${r.objective ? `<div class="small">${esc(r.objective)}</div>` : ""}</td><td>${esc(r.family)}</td><td>${esc(r.mechanism)}${r.candidates.length ? `<div class="small">candidates: ${r.candidates.map(c => esc(MEC[c].mechanism)).join(", ")}</div>` : ""}</td><td>${esc(r.path)}</td><td><span class="tag ${r.level === "L3" ? "l3" : r.level === "L2" ? "l2" : ""}">${r.level}</span></td><td class="small">${esc(r.basis)}</td><td>${esc(r.response_orientation)}</td><td>${esc(r.target_class)}<div class="small">${esc(r.target_label)}</div></td><td>${esc(r.instrument_class)}<div class="small">${esc(r.instrument_label)}</div></td><td class="small">${esc(r.risks)}</td></tr>`,
+    { limit: 2000, key: "plan" });
+}
+
+// ---------------------------------------------------------------- risks: RAG per risk x mechanism for the plan in view
+const rk = { risk: RISKS[0], cell: null };
+function risks() {
+  const el = document.getElementById("risks");
+  const idxs = natIn(), rows = natRows(), n = rows.length;
+  const rag = {}; // merged over the plans in view
+  RISKS.forEach(r => { rag[r] = { framed: false, records: 0, links: 0, cells: {} };
+    idxs.forEach(i => { const x = M[i].rag[r]; rag[r].framed = rag[r].framed || x.framed; rag[r].records += x.records; rag[r].links += x.links;
+      Object.entries(x.cells).forEach(([m, c]) => { const o = rag[r].cells[m] || (rag[r].cells[m] = { n: 0, strong: 0, weak: 0, fam_n: 0, carries: c.carries, share: 0 }); o.n += c.n; o.strong += c.strong; o.weak += c.weak; o.fam_n += c.fam_n; o.share += c.share / idxs.length; }); });
+    Object.values(rag[r].cells).forEach(o => o.c = o.strong ? "green" : o.weak ? "amber" : (rag[r].framed && o.carries ? "red" : "none")); });
+  const summary = RISKS.map(r => { const cells = Object.values(rag[r].cells); const links = rows.flatMap(s => s.links.filter(l => l.risk === r)); const kinds = by(links, l => l.kind);
+    return { risk: r, records: rag[r].records, links: links.length, prominence: links.length / Math.max(1, n), consistent: (kinds["mechanism-consistent"] || 0) + (kinds["mechanism-consistent (conditional)"] || 0), family: kinds["family-consistent"] || 0, group: kinds["affected-group support"] || 0, mention: kinds["mention-only"] || 0,
+      green: cells.filter(c => c.c === "green").length, amber: cells.filter(c => c.c === "amber").length, red: cells.filter(c => c.c === "red").length, carrying: cells.filter(c => c.carries).length }; });
+  el.innerHTML = `<p class="note">For every strategy × risk link: <b>mechanism-consistent</b> when the literature ties the risk to the node at the depth placed (or a conditional link's trigger is met); <b>family-consistent</b> when only the family carries it; <b>affected-group support</b> when the target group is the population the factor bears on; <b>mention-only</b> otherwise. A cell is green with at least one mechanism-consistent strategy, amber with only affected-group or family-depth support, red when the plan frames the risk but no strategy sits on a mechanism the literature ties to it. Depth of colour is the share of the plan's strategies on that mechanism.</p>
+    <div class="frame"><table id="rk-sum"></table></div>
+    <h2>Risk × mechanism</h2>
+    <div class="chips" id="rk-chips"></div>
+    <div class="legend"><span><i class="sw" style="background:var(--good)"></i>mechanism-consistent strategy present</span><span><i class="sw" style="background:var(--warn)"></i>affected-group or family-depth only</span><span><i class="sw" style="background:var(--bad)"></i>framed as a risk, mechanism untouched</span><span><i class="sw" style="background:var(--panel2);border:1px solid var(--line)"></i>mechanism linked without a literature tag</span></div>
+    <div class="grid2"><div class="card" id="rk-heat"></div><div class="card" id="rk-cell"><h3>Pick a cell</h3><p class="small">The strategies behind it appear here.</p></div></div>`;
+  sortable(document.getElementById("rk-sum"), summary,
+    [{ k: "risk", h: "Risk" }, { k: "records", h: "Risk records in plan", num: 1 }, { k: "links", h: "Strategy links", num: 1 }, { k: "prominence", h: "Links per strategy", num: 1 }, { k: "consistent", h: "Mechanism-consistent", num: 1 }, { k: "family", h: "Family-depth", num: 1 }, { k: "group", h: "Affected-group", num: 1 }, { k: "mention", h: "Mention-only", num: 1 }, { k: "green", h: "Green cells", num: 1 }, { k: "amber", h: "Amber", num: 1 }, { k: "red", h: "Red", num: 1 }, { k: "carrying", h: "Mechanisms tagged", num: 1 }],
+    r => `<tr><td><button type="button" class="plain" data-r="${esc(r.risk)}" style="padding:2px 6px">${esc(r.risk)}</button></td><td class="num">${n0(r.records)}</td><td class="num">${n0(r.links)}</td><td class="num">${pct(r.prominence)}</td><td class="num" style="color:var(--good)">${n0(r.consistent)}</td><td class="num">${n0(r.family)}</td><td class="num" style="color:var(--warn)">${n0(r.group)}</td><td class="num" style="color:var(--bad)">${n0(r.mention)}</td><td class="num">${r.green}</td><td class="num">${r.amber}</td><td class="num">${r.red}</td><td class="num">${r.carrying}</td></tr>`,
+    { key: "links", dir: -1 });
+  el.querySelectorAll("#rk-sum button").forEach(b => b.onclick = () => { rk.risk = b.dataset.r; rk.cell = null; risks(); });
+  const chips = document.getElementById("rk-chips");
+  RISKS.forEach(r => { const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = r; b.setAttribute("aria-pressed", rk.risk === r); b.onclick = () => { rk.risk = r; rk.cell = null; risks(); }; chips.appendChild(b); });
+  const cells = rag[rk.risk].cells, mids = Object.keys(cells).sort((a, b) => famOrder.indexOf(MEC[a].family_id) - famOrder.indexOf(MEC[b].family_id) || a.localeCompare(b));
+  const heat = document.getElementById("rk-heat");
+  heat.innerHTML = `<h3>${esc(rk.risk)}: ${mids.length} mechanisms the literature ties to it or the plan links to it</h3><p class="small">${rag[rk.risk].framed ? `Framed as a risk in the plan (${n0(rag[rk.risk].records)} risk records, ${n0(rag[rk.risk].links)} strategy links).` : "Not framed as a risk in the plan in view."}</p>
+    <div class="heat" style="grid-template-columns: minmax(160px, 1fr) 70px 70px 70px 1fr">
+      <span class="lbl">Mechanism</span><span class="lbl">Status</span><span class="lbl num">Links</span><span class="lbl num">Share</span><span class="lbl">Family</span>
+      ${mids.map(m => { const c = cells[m]; return `<span class="r" title="${esc(MEC[m].mechanism)}">${esc(MEC[m].mechanism)}</span><button type="button" class="cell ${c.c}" style="--a:${Math.round(25 + 75 * Math.min(1, c.share / .08))}%" data-m="${m}" aria-pressed="${rk.cell === m}" title="${c.strong} mechanism-consistent, ${c.weak} supporting, ${c.n} links">${c.c === "none" ? "" : c.c === "green" ? "✓" : c.c === "amber" ? "~" : "✗"}</button><span class="r num">${n0(c.n)}${c.fam_n ? ` <span class="small">+${c.fam_n} fam</span>` : ""}</span><span class="r num">${pct(c.share)}</span><span class="r small">${esc(MEC[m].family)}</span>`; }).join("")}
+    </div>`;
+  heat.querySelectorAll(".cell").forEach(b => b.onclick = () => { rk.cell = b.dataset.m; risks(); });
+  if (rk.cell) {
+    const m = MEC[rk.cell];
+    const list = [...rows, ...secRows()].filter(s => (s.mechanism_id === rk.cell || (!s.mechanism_id && s.family_id === m.family_id)) && s.links.some(l => l.risk === rk.risk));
+    const srcs = T.pathways.filter(p => p.mechanism_id === rk.cell && p.risks.includes(rk.risk));
+    document.getElementById("rk-cell").innerHTML = `<h3>${esc(m.mechanism)} × ${esc(rk.risk)}</h3><p class="small">${srcs.length ? "Literature link through: " + srcs.map(p => `${esc(p.pathway)} (${esc(p.evidence)})`).join("; ") : "No literature tag on this mechanism; links here are affected-group support or mention-only."}</p><div id="rk-list"></div>`;
+    stratList(list, document.getElementById("rk-list"), true);
+  }
+}
+
+// ---------------------------------------------------------------- over time: the national plans in period order
+function time() {
+  const el = document.getElementById("time");
+  const ndp = NAT.filter(i => PLANS[i].doc_type === "ndp").sort((a, b) => PLANS[a].period_start - PLANS[b].period_start), vis = NAT.filter(i => PLANS[i].doc_type === "vision");
+  const cols = [...ndp, ...vis];
+  const row = (label, f, fmt = pct) => `<tr><td>${label}</td>${cols.map(i => `<td class="num" ${vis.includes(i) ? 'style="color:var(--muted)"' : ""}>${fmt(f(M[i], i))}</td>`).join("")}</tr>`;
+  el.innerHTML = `<p class="note">Thailand's five-year plans in order, with the 20-year National Strategy beside them in grey: a different document class, compared like with like only against itself. Shares, not counts, because the plans differ in length by a factor of two. Depth is a finding: a plan that names levers but not channels is reported as such.</p>
+    <div class="frame"><table><thead><tr><th>Measure</th>${cols.map(i => `<th class="num">${esc(planLabel(i))}</th>`).join("")}</tr></thead><tbody>
+      ${row("Strategies placed", m => m.n, n0)}
+      ${row("Name a lever or channel (L2 + L3)", m => m.indices.mechanism_depth)}
+      ${row("At a pathway (L3)", m => m.depth.L3 || 0)}
+      ${row("Proactive or transformative", m => m.indices.future_orientation)}
+      ${row("Risk links per strategy", m => m.n_links / Math.max(1, m.n))}
+      ${row("Risk links mechanism-consistent", m => m.indices.consistency)}
+      ${row("Families reached (of 28)", m => Object.keys(m.family_n).length, n0)}
+      ${row("Mechanisms reached (of 99)", m => Object.keys(m.mechanism_n).length, n0)}
+      ${row("Target years beyond the plan period", m => m.indices.beyond_period_share, x => x == null ? "needs run outputs" : pct(x))}
+      ${row("Stated urgency high", m => m.indices.urgency_high_share, x => x == null ? "needs run outputs" : pct(x))}
+    </tbody></table></div>
+    <h2>Policy emphasis: family shares plan by plan</h2>
+    <p class="small">Each column is one plan; the bars are the share of that plan's strategies. Reading across a row shows a family rising or fading between editions.</p>
+    <div class="frame" id="tm-fam"></div>
+    <h2>Risk prominence plan by plan</h2>
+    <p class="small">Strategy links per risk as a share of the plan's strategies, with the share of those links that are mechanism-consistent.</p>
+    <div class="frame" id="tm-risk"></div>
+    <h2>Mechanisms carried, added and dropped between editions</h2>
+    <div class="filters"><label>Edition step<select id="tm-step">${D.editions.filter(e => e.level === "mechanism").map(e => e.from + "→" + e.to).filter((v, i, a) => a.indexOf(v) === i).map(v => `<option value="${esc(v)}">${esc(v.split("→").map(id => planLabel(PLANS.findIndex(p => p.plan_id === id))).join(" → "))}</option>`).join("")}</select></label>
+      <label>Status<select id="tm-status"><option value="">Any</option><option>carried</option><option>added</option><option>dropped</option></select></label></div>
+    <div class="frame" style="max-height:60vh"><table id="tm-ed"></table></div>`;
+  const famRows = famOrder.filter(f => cols.some(i => M[i].family_share[f]));
+  const maxF = Math.max(...famRows.flatMap(f => cols.map(i => M[i].family_share[f] || 0)));
+  document.getElementById("tm-fam").innerHTML = `<table><thead><tr><th>Family</th>${cols.map(i => `<th>${esc(planShort(i))}</th>`).join("")}</tr></thead><tbody>${famRows.map(f => `<tr><td>${esc(FAM[f].family)}<div class="small">${esc(FAM[f].subpillar)}</div></td>${cols.map(i => { const v = M[i].family_share[f] || 0; return `<td style="min-width:120px"><div class="bar" title="${pct(v)}"><i style="width:${100 * v / maxF}%;${vis.includes(i) ? "opacity:.5" : ""}"></i></div><span class="small">${pct(v)} · ${n0(M[i].family_n[f] || 0)}</span></td>`; }).join("")}</tr>`).join("")}</tbody></table>`;
+  const maxR = Math.max(...RISKS.flatMap(r => cols.map(i => M[i].risk_prominence[r] || 0)));
+  document.getElementById("tm-risk").innerHTML = `<table><thead><tr><th>Risk</th>${cols.map(i => `<th>${esc(planShort(i))}</th>`).join("")}</tr></thead><tbody>${RISKS.map(r => `<tr><td>${esc(r)}</td>${cols.map(i => { const v = M[i].risk_prominence[r] || 0; const ls = S.filter(s => s.p === i).flatMap(s => s.links.filter(l => l.risk === r)); const c = ls.filter(l => l.kind.startsWith("mechanism")).length; return `<td style="min-width:120px"><div class="bar" title="${pct(v)}"><i style="width:${100 * v / Math.max(1e-9, maxR)}%;${vis.includes(i) ? "opacity:.5" : ""}"></i></div><span class="small">${pct(v)} · ${ls.length ? pct(c / ls.length) + " consistent" : "no links"}</span></td>`; }).join("")}</tr>`).join("")}</tbody></table>`;
+  const drawEd = () => { const step = document.getElementById("tm-step").value, st = document.getElementById("tm-status").value; const [a, b] = step.split("→");
+    const rows = D.editions.filter(e => e.level === "mechanism" && e.from === a && e.to === b && (!st || e.status === st)).map(e => ({ ...e, mechanism: MEC[e.node_id].mechanism, family: MEC[e.node_id].family, change: e.share_to - e.share_from }));
+    const c = by(rows, e => e.status);
+    sortable(document.getElementById("tm-ed"), rows, [{ k: "status", h: `Status (${["carried", "added", "dropped"].map(k => `${k} ${c[k] || 0}`).join(", ")})` }, { k: "mechanism", h: "Mechanism" }, { k: "family", h: "Family" }, { k: "n_from", h: "Strategies before", num: 1 }, { k: "n_to", h: "Strategies after", num: 1 }, { k: "share_from", h: "Share before", num: 1 }, { k: "share_to", h: "Share after", num: 1 }, { k: "change", h: "Change", num: 1 }],
+      e => `<tr><td><span class="tag ${e.status === "carried" ? "ok" : e.status === "added" ? "l2" : "bad"}">${e.status}</span></td><td>${esc(e.mechanism)}</td><td class="small">${esc(e.family)}</td><td class="num">${n0(e.n_from)}</td><td class="num">${n0(e.n_to)}</td><td class="num">${pct(e.share_from)}</td><td class="num">${pct(e.share_to)}</td><td class="num" style="color:${e.change > 0 ? "var(--good)" : e.change < 0 ? "var(--bad)" : "inherit"}">${(e.change > 0 ? "+" : "") + (100 * e.change).toFixed(1)} pts</td></tr>`, { key: "change", dir: -1 }); };
+  document.getElementById("tm-step").onchange = drawEd; document.getElementById("tm-status").onchange = drawEd;
+  const steps = document.getElementById("tm-step"); if (steps.options.length) { steps.selectedIndex = steps.options.length - 1; drawEd(); } else document.getElementById("tm-ed").innerHTML = "<tr><td>Only one edition of each document type is loaded.</td></tr>";
+}
+
+// ---------------------------------------------------------------- sector plans: a subordinate layer
+function sector() {
+  const el = document.getElementById("sector");
+  el.innerHTML = `<p class="note">Sector plans are read against the national plan in force during their period. They are a lighter layer: their strategies never enter the national counts, and a family or mechanism they reach that the national plan does not is reported as a sector addition, not as national emphasis. Switch them on in the top bar to see them in the Tree, Strategies and Risks sections.</p><div class="multi" id="sc-cards"></div>`;
+  const box = document.getElementById("sc-cards");
+  D.sector.forEach(sp => {
+    const i = PLANS.findIndex(p => p.plan_id === sp.plan_id), m = M[i], nat = sp.national_in_force.map(id => PLANS.findIndex(p => p.plan_id === id));
+    const famN = m.family_n, natFam = {}; nat.forEach(j => Object.entries(M[j].family_share).forEach(([f, v]) => natFam[f] = Math.max(natFam[f] || 0, v)));
+    const fams = famOrder.filter(f => famN[f]).map(f => [f, famN[f]]);
+    box.insertAdjacentHTML("beforeend", `<div class="card"><h3 style="color:var(--sector)">${esc(PLANS[i].title)}</h3><p class="small">${PLANS[i].period_start}–${PLANS[i].period_end} · ${n0(m.n)} strategies placed · national plan in force: ${nat.map(j => esc(planLabel(j))).join(", ") || "none loaded"}</p>
+      <p class="small">Names a lever or channel: ${pct(m.indices.mechanism_depth)} · proactive or transformative: ${pct(m.indices.future_orientation)} · risk links mechanism-consistent: ${pct(m.indices.consistency)}</p>
+      <h3>Where it sits</h3><p class="small">Share of the sector plan's strategies; the dark tick is the national plan in force.</p>
+      ${barsHtml(fams, m.n, { label: f => FAM[f].family, cmp: natFam })}
+      ${Object.entries(sp.overlap).map(([id, o]) => `<h3>Against ${esc(planShort(PLANS.findIndex(p => p.plan_id === id)))}</h3><p class="small">${pct(o.share_of_sector_strategies_on_shared)} of the sector plan's mechanism-level strategies sit on mechanisms the national plan also reaches (${o.shared_mechanisms.length} shared).</p>
+        ${o.sector_only_mechanisms.length ? `<p class="small"><b>Mechanisms only the sector plan reaches:</b> ${o.sector_only_mechanisms.map(k => `${esc(MEC[k].mechanism)} (${n0(m.mechanism_n[k])})`).join("; ")}</p>` : ""}`).join("")}
+      <details><summary>Top mechanisms</summary><div class="sm">${barsHtml(sp.top_mechanisms.map(k => [k, m.mechanism_n[k]]), m.n, { label: k => MEC[k].mechanism })}</div></details>
+      <button type="button" class="chip sec" aria-pressed="${secOn.has(i)}" data-i="${i}">${secOn.has(i) ? "Shown as a layer" : "Show as a layer"}</button></div>`);
+  });
+  box.querySelectorAll(".chip").forEach(b => b.onclick = () => { const i = +b.dataset.i; secOn.has(i) ? secOn.delete(i) : secOn.add(i); save(); render(); });
+}
+
+// ---------------------------------------------------------------- crosswalks
+let cw = "rhdr";
+function crosswalks() {
+  const el = document.getElementById("crosswalks");
+  const tabs = [["rhdr", "RHDR clauses"], ["sdg", "SDG targets and 5 Ps"], ["risk", "Risk matrix"], ["asset", "Assets"], ["mech", "Mechanisms"], ["path", "Pathways and v1 mapping"], ["classes", "Target and instrument classes"]];
+  el.innerHTML = `<div class="chips">${tabs.map(([k, l]) => `<button type="button" class="chip" data-k="${k}" aria-pressed="${cw === k}">${l}</button>`).join("")}</div><div id="cw-body" style="margin-top:12px"></div>`;
+  el.querySelectorAll(".chip").forEach(b => b.onclick = () => { cw = b.dataset.k; crosswalks(); });
+  const body = document.getElementById("cw-body"), tbl = () => { body.innerHTML = `<div class="frame" style="max-height:75vh"><table id="cw-t"></table></div>`; return document.getElementById("cw-t"); };
+  const reach = by(natRows(), s => s.mechanism_id), reachF = by(natRows(), s => s.family_id);
+  if (cw === "rhdr") {
+    body.innerHTML = `<p class="small">Each family quotes the clause of the amended RHDR definition it rests on, so a placement can be checked against the text. The RHDR category of a strategy is read off its family.</p>`;
+    const t = document.createElement("table"); const fr = document.createElement("div"); fr.className = "frame"; fr.appendChild(t); body.appendChild(fr);
+    sortable(t, T.families.map(f => ({ ...f, n: reachF[f.family_id] || 0 })), [{ k: "pillar", h: "Pillar" }, { k: "subpillar", h: "RHDR category" }, { k: "family", h: "Family" }, { k: "rhdr_clause", h: "Clause the placement rests on" }, { k: "meaning", h: "Meaning" }, { k: "n", h: "Strategies in view", num: 1 }],
+      f => `<tr><td>${esc(f.pillar)}</td><td>${esc(f.subpillar)}</td><td><b>${esc(f.family)}</b></td><td class="wrap">“${esc(f.rhdr_clause)}”</td><td class="wrap">${esc(f.meaning)}</td><td class="num">${n0(f.n)}</td></tr>`);
+    body.insertAdjacentHTML("beforeend", `<h3>The amended definitions</h3>${T.subpillars.map(s => `<p class="small"><b>${esc(s.name)}</b> (${esc(T.pillars.find(p => p.code === s.pillar).name)}): ${esc(s.definition)}</p>`).join("")}`);
+  } else if (cw === "sdg") {
+    const prof = {}; natRows().forEach(s => { const tg = s.mechanism_id ? MEC[s.mechanism_id].sdg_targets : FAM[s.family_id].sdg_targets; tg.forEach(t => prof[t] = (prof[t] || 0) + 1 / tg.length); });
+    const dims = {}; Object.entries(prof).forEach(([t, v]) => { const d = SDGDIM[t]; if (d) dims[d] = (dims[d] || 0) + v; });
+    body.innerHTML = `<p class="small">A mechanism's SDG targets are the targets whose indicators move with its intermediate variable; a family's are the union. The 5 P dimension comes from the workflow's 169-target mapping. The SDG profile of a plan falls out of its tree placements with no model call; the coherence check against the targets step E names per strategy ${D.meta.full_outputs ? "is in the Strategies table" : "needs the run outputs"}.</p>
+      <div class="grid2"><div class="card"><h3>SDG profile of the plan in view</h3><p class="small">Each strategy spreads one unit over its node's targets.</p>${barsHtml(sortDesc(dims), Math.max(1, natRows().length))}</div>
+      <div class="card"><h3>Targets most pulled</h3>${barsHtml(sortDesc(prof).slice(0, 15).map(([k, v]) => [k, Math.round(v)]), Math.max(1, natRows().length), { label: t => `${t} ${T.sdg_goals[+t.split(".")[0] - 1]}` })}</div></div>
+      <h3>Mechanism × SDG targets</h3><div class="frame" style="max-height:70vh"><table id="cw-t"></table></div>`;
+    sortable(document.getElementById("cw-t"), T.mechanisms.map(m => ({ ...m, targets: m.sdg_targets.join(", "), n: reach[m.mechanism_id] || 0 })), [{ k: "family", h: "Family" }, { k: "mechanism", h: "Mechanism" }, { k: "intermediate_variable", h: "Intermediate variable" }, { k: "targets", h: "SDG targets" }, { k: "sdg_primary_dimension", h: "5 P profile" }, { k: "n", h: "Strategies in view", num: 1 }],
+      m => `<tr><td>${esc(m.family)}</td><td><b>${esc(m.mechanism)}</b></td><td class="wrap">${esc(m.intermediate_variable)}</td><td>${esc(m.targets)}</td><td>${esc(m.sdg_primary_dimension)}</td><td class="num">${n0(m.n)}</td></tr>`);
+  } else if (cw === "risk") {
+    body.innerHTML = `<p class="small">Risk tags roll up from the pathways' literature tags; a conditional tag applies only when a strategy's wording meets its trigger. 28 pathways carry no tag by design (baseline development mechanisms). Two of 259 pathways are source-verified; the rest are cited, not yet independently verified.</p><div class="frame" style="max-height:75vh"><table><thead><tr><th>Mechanism</th>${RISKS.map(r => `<th class="h" title="${esc(r)}">${esc(r.split(" ").map(w => w[0]).join(""))}</th>`).join("")}</tr></thead><tbody>
+      ${T.mechanisms.map(m => `<tr><td>${esc(m.mechanism)}<div class="small">${esc(m.family)}</div></td>${RISKS.map(r => { const t = m.risks.includes(r), c = m.conditional_risks.some(x => x.risk === r); return `<td class="num" title="${esc(r)}${t ? ": tagged through " + m.pathway_ids.filter(p => PATH[p].risks.includes(r)).map(p => PATH[p].pathway).join("; ") : c ? ": conditional" : ""}">${t ? "●" : c ? "◐" : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div>
+      <p class="small">● tagged · ◐ conditional. Columns: ${RISKS.map(r => `${r.split(" ").map(w => w[0]).join("")} = ${r}`).join("; ")}.</p>`;
+  } else if (cw === "asset") {
+    body.innerHTML = `<p class="small">Comparative advantage enters as country assets, a short closed list tagged onto the mechanisms that mobilise them, not as a twelfth risk. The asset-consistency test will be identical to the risk test once step E records the assets a plan leans on.</p>
+      <div class="frame"><table><thead><tr><th>Asset class</th><th>Why it is an asset</th><th>Mechanisms that mobilise it</th></tr></thead><tbody>${T.assets.map(a => `<tr><td><b>${esc(a.asset)}</b></td><td class="wrap">${esc(a.why)}</td><td class="wrap">${T.mechanisms.filter(m => m.assets.includes(a.asset_id)).map(m => esc(m.mechanism)).join("; ")}</td></tr>`).join("")}</tbody></table></div>`;
+  } else if (cw === "mech") {
+    sortable(tbl(), T.mechanisms.map(m => ({ ...m, n: reach[m.mechanism_id] || 0, risksTxt: m.risks.join(", "), paths: m.pathway_ids.map(p => PATH[p].pathway).join("; ") })), [{ k: "mechanism_id", h: "Id" }, { k: "family", h: "Family" }, { k: "mechanism", h: "Mechanism" }, { k: "intermediate_variable", h: "Intermediate variable" }, { k: "paths", h: "Pathways" }, { k: "risksTxt", h: "Risks" }, { k: "plan_words", h: "Plan words" }, { k: "n", h: "Strategies in view", num: 1 }],
+      m => `<tr><td class="mono">${m.mechanism_id}</td><td>${esc(m.family)}</td><td><b>${esc(m.mechanism)}</b></td><td class="wrap">${esc(m.intermediate_variable)}</td><td class="wrap small">${esc(m.paths)}</td><td class="wrap small">${esc(m.risksTxt)}</td><td class="mono wrap">${esc(m.plan_words)}</td><td class="num">${n0(m.n)}</td></tr>`);
+  } else if (cw === "path") {
+    const reachP = by(natRows(), s => s.pathway_id);
+    sortable(tbl(), T.pathways.map(p => ({ ...p, n: reachP[p.pathway_id] || 0, risksTxt: p.risks.join(", ") })), [{ k: "pathway_id", h: "Id" }, { k: "pathway", h: "Pathway (v1 mechanism)" }, { k: "mechanism", h: "v2 mechanism" }, { k: "family", h: "v2 family" }, { k: "old_family", h: "v1 family" }, { k: "subpillar_changed", h: "RHDR changed" }, { k: "merged_into", h: "Merged into" }, { k: "outcome", h: "Outcome" }, { k: "risksTxt", h: "Risks" }, { k: "evidence", h: "Evidence" }, { k: "n", h: "Strategies in view", num: 1 }],
+      p => `<tr><td class="mono">${p.pathway_id}</td><td>${esc(p.pathway)}</td><td>${esc(p.mechanism)}</td><td>${esc(p.family)}</td><td class="small">${esc(p.old_family)}</td><td>${p.subpillar_changed ? `<span class="tag warn">${esc(p.old_subpillar)} → ${esc(p.subpillar)}</span>` : ""}</td><td class="mono">${esc(p.merged_into)}</td><td class="wrap small">${esc(p.outcome)}</td><td class="wrap small">${esc(p.risksTxt)}</td><td class="wrap small">${esc(p.evidence)}</td><td class="num">${n0(p.n)}</td></tr>`);
+  } else {
+    body.innerHTML = `<div class="grid2"><div><h3>Target groups: 197 labels in 11 classes</h3><div class="frame" style="max-height:60vh"><table id="cw-tc"></table></div></div><div><h3>Instruments: 19 labels in Hood's four resources</h3><div class="frame" style="max-height:60vh"><table id="cw-ic"></table></div></div></div>`;
+    sortable(document.getElementById("cw-tc"), T.target_classes, [{ k: "target_class", h: "Class" }, { k: "target_label", h: "Label" }, { k: "target_family", h: "Label family" }], t => `<tr><td>${esc(t.target_class)}</td><td>${esc(t.target_label)}</td><td class="small">${esc(t.target_family)}</td></tr>`);
+    sortable(document.getElementById("cw-ic"), T.instrument_classes, [{ k: "instrument_class", h: "Class" }, { k: "instrument_label", h: "Label" }, { k: "class_note", h: "Note" }], t => `<tr><td>${esc(t.instrument_class)}</td><td>${esc(t.instrument_label)}</td><td class="small wrap">${esc(t.class_note)}</td></tr>`);
+  }
+}
+const SDGDIM = T.sdg_dim || {};  // primary 5 P dimension per SDG target
+
+// ---------------------------------------------------------------- bottom-up test
+function test() {
+  const el = document.getElementById("test");
+  if (!TEST) { el.innerHTML = `<p class="note">The bottom-up test has not been run. Run test_bottomup.py with the strategy tree review file to add it.</p>`; return; }
+  const rows = TEST.rows, c = by(rows, r => r.outcome), areas = by(rows, r => r.area);
+  el.innerHTML = `<p class="note">${esc(TEST.note)}</p>
+    <div class="tiles">${Object.entries(c).map(([k, v]) => `<div class="tile"><span class="lbl">${esc(k)}</span><b>${n0(v)}</b><div class="d">${pct(v / rows.length)} of ${n0(rows.length)} leaf objectives</div></div>`).join("")}</div>
+    <div class="grid2"><div class="card"><h3>Mechanisms that gather objectives from several bottom-up areas</h3><p class="small">A mechanism cutting across many areas is doing what a lever should: the same lever appears in several sector chapters. One with many objectives from one area may be a sector in disguise.</p>${barsHtml(sortDesc(TEST.spread).slice(0, 25), 1, { label: k => MEC[k] ? MEC[k].mechanism : k, title: k => (TEST.spread_areas[k] || []).join(", ") }).replace(/ · [0-9.]+%/g, "")}</div>
+    <div class="card"><h3>Bottom-up areas and where their objectives land</h3>${Object.entries(TEST.area_families).map(([a, fs]) => `<p class="small"><b>${esc(a)}</b> (${n0(areas[a])} objectives): ${sortDesc(fs).map(([f, n]) => `${esc(FAM[f] ? FAM[f].family : f)} ${n}`).join("; ")}</p>`).join("")}</div></div>
+    <h3>Every leaf objective</h3><div class="filters"><label>Outcome<select id="ts-o"><option value="">Any</option>${Object.keys(c).map(k => `<option>${esc(k)}</option>`).join("")}</select></label><label>Area<select id="ts-a"><option value="">Any</option>${Object.keys(areas).sort().map(k => `<option>${esc(k)}</option>`).join("")}</select></label><label>Search<input type="search" id="ts-q"></label></div>
+    <div class="frame" style="max-height:65vh"><table id="ts-t"></table></div>`;
+  const draw = () => { const o = document.getElementById("ts-o").value, a = document.getElementById("ts-a").value, q = document.getElementById("ts-q").value.toLowerCase();
+    sortable(document.getElementById("ts-t"), rows.filter(r => (!o || r.outcome === o) && (!a || r.area === a) && (!q || `${r.label} ${r.mechanism} ${r.family}`.toLowerCase().includes(q))),
+      [{ k: "area", h: "Bottom-up area" }, { k: "label", h: "Leaf objective" }, { k: "n", h: "Strategies", num: 1 }, { k: "outcome", h: "Outcome" }, { k: "family", h: "v2 family" }, { k: "mechanism", h: "v2 mechanism" }, { k: "how", h: "How placed" }, { k: "note", h: "Note" }],
+      r => `<tr><td class="small">${esc(r.area)}</td><td>${esc(r.label)}</td><td class="num">${n0(r.n)}</td><td><span class="tag ${r.outcome.startsWith("one mechanism") ? "ok" : r.outcome.startsWith("family") ? "warn" : r.outcome.startsWith("outside") ? "" : "bad"}">${esc(r.outcome)}</span></td><td>${esc(r.family)}</td><td>${esc(r.mechanism)}</td><td class="small">${esc(r.how)}</td><td class="small wrap">${esc(r.note)}</td></tr>`); };
+  ["ts-o", "ts-a"].forEach(id => document.getElementById(id).onchange = draw); document.getElementById("ts-q").oninput = draw; draw();
+}
+
+// ---------------------------------------------------------------- method
+function method() {
+  document.getElementById("method").innerHTML = `
+    <h2>How to read this page</h2>
+    <div class="cols">
+    <p><b>The tree.</b> RHDR pillar → RHDR category → family (L1, 28: what is built or protected) → mechanism (L2, 99: the lever a plan pulls, in plan-chapter language, each with the intermediate variable it moves) → pathway (L3, 259: the causal channel, with its citation, risk tags and text cues; the v1 mechanisms with frozen ids). Seven pathway pairs are merged; the merged id is kept and counts on its survivor.</p>
+    <p><b>Placement.</b> A strategy sits at the deepest level its whole wording supports. Pathway placements come from the v1 run. A strategy v1 held at a family falls to its v2 family and is tried against the plan words of that family's mechanisms: exactly one match places it at the mechanism, flagged provisional until step M re-runs; several or none leave it at the family with the candidates listed. Nothing is invented.</p>
+    <p><b>Shares, not counts.</b> Plans differ in length, so every comparison is a share of the plan's placed strategies. Goal-shaped and Standard-branch strategies are outside the tree and outside the denominators.</p>
+    <p><b>Risk links.</b> Each strategy carries the risks step E found quoted beside it. The flag is a join between what the plan says and what the literature says: mechanism-consistent, family-consistent, affected-group support, or mention-only. Link confidence is explicit when the node is a mechanism or pathway, inferred at family depth.</p>
+    <p><b>RAG.</b> Per risk and mechanism: green with a mechanism-consistent strategy, amber with only affected-group or family-depth support, red when the plan frames the risk but no strategy sits on a mechanism the literature ties to it; depth of colour is the share of the plan's strategies on the mechanism.</p>
+    <p><b>SDG.</b> Targets sit on mechanisms; a plan's SDG and 5 P profile falls out of its placements. Coherence (consistent, adjacent, off-node) compares the targets step E names per strategy with its node's targets.</p>
+    <p><b>Over time.</b> Five-year plans are compared with each other; the National Strategy is a different document class and is shown beside them in grey. Carried, added and dropped are read at mechanism level between consecutive editions.</p>
+    <p><b>Sector plans.</b> Read against the national plan in force, shown as a lighter layer, never added to national counts.</p>
+    <p><b>Classes.</b> Target groups roll up to 11 classes, instruments to Hood's four resources of government (information, authority, money, organisation).</p>
+    <p><b>What this cannot say.</b> That an instrument will work here; that a country is at risk; that a plan "addresses" a risk. Say: the plan names a lever the literature links to the risk; placed at family depth, the plan does not name the channel; framed as a risk in the plan.</p>
+    <p><b>Source.</b> ${esc(D.meta.source)}. ${esc(D.meta.note)}</p>
+    </div>`;
+}
+
+// ---------------------------------------------------------------- routing
+const SECTIONS = { overview, tree, strategies, risks, time, sector, crosswalks, test, method };
+function render() {
+  planChips();
+  const h = (location.hash || "#overview").slice(1), key = SECTIONS[h] ? h : "overview";
+  document.querySelectorAll("main section").forEach(s => s.hidden = s.id !== key);
+  document.querySelectorAll("#tabs a").forEach(a => a.getAttribute("href") === "#" + key ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  SECTIONS[key]();
+}
+document.getElementById("built").textContent = `${D.meta.country[0].toUpperCase()}${D.meta.country.slice(1)} · ${PLANS.filter(p => p.doc_type !== "sector").length} national documents, ${PLANS.filter(p => p.doc_type === "sector").length} sector plans · ${n0(D.meta.n_strategies)} strategies placed · tree ${D.meta.tree_version} · built ${D.meta.built}`;
+window.addEventListener("hashchange", render);
+render();
+</script>

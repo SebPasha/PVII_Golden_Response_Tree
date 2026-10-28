@@ -1,5 +1,7 @@
 # The mother tree
 
+`v2/` is the draft of the next release: three placement levels with crosswalks and the Thailand page, see its [README](v2/README.md). The workflow still reads v1.
+
 `v1/` is the mother tree v1 release (draft for sign-off, built 20 October 2026), moved here from PV2 `support/golden_tree/tree_v1/` unchanged. Its own [README](v1/README.md) and [HANDOVER](v1/HANDOVER.md) explain the six levels, the depth rule and the open items.
 
 The workflow reads exactly three files and writes nothing here:

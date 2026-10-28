@@ -1,0 +1,92 @@
+asset_id,asset,mechanism_id,mechanism,family_id,family
+AST-03,Demographic structure,MEC-02,Gender equality and care work,FAM-01,Equal rights and inclusion
+AST-07,Institutions and governance quality,MEC-06,"Justice, rehabilitation and legal empowerment",FAM-02,Safety from violence and exploitation
+AST-09,"Culture, heritage and natural beauty",MEC-08,Shared identity and intergroup contact,FAM-03,Social cohesion and peace
+AST-03,Demographic structure,MEC-11,Early childhood development and nutrition,FAM-04,Human capital formation
+AST-03,Demographic structure,MEC-12,Access to and completion of schooling,FAM-04,Human capital formation
+AST-04,"Skills, human capital and diaspora",MEC-13,Teaching and learning quality,FAM-04,Human capital formation
+AST-03,Demographic structure,MEC-14,Skills for work,FAM-04,Human capital formation
+AST-04,"Skills, human capital and diaspora",MEC-14,Skills for work,FAM-04,Human capital formation
+AST-04,"Skills, human capital and diaspora",MEC-15,Higher education and research skills,FAM-04,Human capital formation
+AST-10,Technology and digital capability,MEC-15,Higher education and research skills,FAM-04,Human capital formation
+AST-04,"Skills, human capital and diaspora",MEC-17,Health workforce and medicines,FAM-05,Health and longevity
+AST-08,Financial wealth and sovereign funds,MEC-21,Social insurance and pensions,FAM-06,Income security and social protection
+AST-07,Institutions and governance quality,MEC-28,Carbon pricing and climate regulation,FAM-08,Climate mitigation and energy transition
+AST-01,Natural resources and land,MEC-29,Clean energy and technology deployment,FAM-08,Climate mitigation and energy transition
+AST-10,Technology and digital capability,MEC-29,Clean energy and technology deployment,FAM-08,Climate mitigation and energy transition
+AST-06,Infrastructure and connectivity,MEC-31,Low-carbon infrastructure and avoiding lock-in,FAM-08,Climate mitigation and energy transition
+AST-01,Natural resources and land,MEC-32,Conservation and protected areas,FAM-09,Natural capital and ecosystems
+AST-09,"Culture, heritage and natural beauty",MEC-32,Conservation and protected areas,FAM-09,Natural capital and ecosystems
+AST-01,Natural resources and land,MEC-33,"Sustainable use of forests, fisheries and land",FAM-09,Natural capital and ecosystems
+AST-01,Natural resources and land,MEC-34,Restoration of degraded ecosystems,FAM-09,Natural capital and ecosystems
+AST-01,Natural resources and land,MEC-35,Water resources management,FAM-09,Natural capital and ecosystems
+AST-06,Infrastructure and connectivity,MEC-41,Resilient infrastructure and asset protection,FAM-11,Resilience to climate and disasters
+AST-01,Natural resources and land,MEC-42,Nature-based protection,FAM-11,Resilience to climate and disasters
+AST-08,Financial wealth and sovereign funds,MEC-44,Debt and fiscal sustainability,FAM-12,Intergenerational balance
+AST-01,Natural resources and land,MEC-45,Managing natural resource wealth,FAM-12,Intergenerational balance
+AST-08,Financial wealth and sovereign funds,MEC-45,Managing natural resource wealth,FAM-12,Intergenerational balance
+AST-03,Demographic structure,MEC-46,Demographic change and ageing,FAM-12,Intergenerational balance
+AST-05,Productive capabilities and industrial base,MEC-47,Industrial upgrading and diversification,FAM-13,Productive transformation
+AST-05,Productive capabilities and industrial base,MEC-48,Industrial policy and priority sectors,FAM-13,Productive transformation
+AST-10,Technology and digital capability,MEC-49,Modern services and the digital economy,FAM-13,Productive transformation
+AST-09,"Culture, heritage and natural beauty",MEC-50,Tourism,FAM-13,Productive transformation
+AST-02,Location and market access,MEC-51,"Trade facilitation, logistics and standards",FAM-14,Integration into world markets
+AST-06,Infrastructure and connectivity,MEC-51,"Trade facilitation, logistics and standards",FAM-14,Integration into world markets
+AST-02,Location and market access,MEC-52,Trade agreements and regional integration,FAM-14,Integration into world markets
+AST-05,Productive capabilities and industrial base,MEC-53,Foreign investment and global value chains,FAM-14,Integration into world markets
+AST-02,Location and market access,MEC-53,Foreign investment and global value chains,FAM-14,Integration into world markets
+AST-10,Technology and digital capability,MEC-54,Research and development,FAM-15,Innovation and technology
+AST-04,"Skills, human capital and diaspora",MEC-54,Research and development,FAM-15,Innovation and technology
+AST-10,Technology and digital capability,MEC-55,Technology adoption and diffusion to firms,FAM-15,Innovation and technology
+AST-10,Technology and digital capability,MEC-56,Knowledge transfer and intellectual property,FAM-15,Innovation and technology
+AST-06,Infrastructure and connectivity,MEC-57,Transport connectivity,FAM-16,Infrastructure networks
+AST-02,Location and market access,MEC-57,Transport connectivity,FAM-16,Infrastructure networks
+AST-06,Infrastructure and connectivity,MEC-58,Digital connectivity,FAM-16,Infrastructure networks
+AST-10,Technology and digital capability,MEC-58,Digital connectivity,FAM-16,Infrastructure networks
+AST-06,Infrastructure and connectivity,MEC-59,Reliable and affordable utilities,FAM-16,Infrastructure networks
+AST-01,Natural resources and land,MEC-59,Reliable and affordable utilities,FAM-16,Infrastructure networks
+AST-06,Infrastructure and connectivity,MEC-60,"Urban productivity, planning and housing supply",FAM-17,"Cities, regions and spatial development"
+AST-05,Productive capabilities and industrial base,MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development"
+AST-01,Natural resources and land,MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development"
+AST-02,Location and market access,MEC-62,Lagging regions and place-based development,FAM-17,"Cities, regions and spatial development"
+AST-01,Natural resources and land,MEC-63,Agricultural productivity and inputs,FAM-18,Farmers and small enterprises
+AST-03,Demographic structure,MEC-63,Agricultural productivity and inputs,FAM-18,Farmers and small enterprises
+AST-05,Productive capabilities and industrial base,MEC-65,Firm capability and entrepreneurship,FAM-18,Farmers and small enterprises
+AST-03,Demographic structure,MEC-66,Job matching and active labour-market programmes,FAM-19,Jobs and labour markets
+AST-04,"Skills, human capital and diaspora",MEC-69,Migration and remittances,FAM-19,Jobs and labour markets
+AST-07,Institutions and governance quality,MEC-70,"Competition, business regulation and contract enforcement",FAM-20,"Markets, finance and property rights"
+AST-08,Financial wealth and sovereign funds,MEC-71,Access to finance,FAM-20,"Markets, finance and property rights"
+AST-01,Natural resources and land,MEC-72,Land and property rights,FAM-20,"Markets, finance and property rights"
+AST-07,Institutions and governance quality,MEC-72,Land and property rights,FAM-20,"Markets, finance and property rights"
+AST-10,Technology and digital capability,MEC-73,Early warning and surveillance,FAM-21,"Foresight, data and early warning"
+AST-07,Institutions and governance quality,MEC-74,"Statistics, evidence and planning",FAM-21,"Foresight, data and early warning"
+AST-10,Technology and digital capability,MEC-74,"Statistics, evidence and planning",FAM-21,"Foresight, data and early warning"
+AST-08,Financial wealth and sovereign funds,MEC-75,Pre-arranged risk finance,FAM-21,"Foresight, data and early warning"
+AST-08,Financial wealth and sovereign funds,MEC-76,Macro-financial buffers,FAM-22,Economic resilience to external shocks
+AST-07,Institutions and governance quality,MEC-76,Macro-financial buffers,FAM-22,Economic resilience to external shocks
+AST-05,Productive capabilities and industrial base,MEC-77,Supply-chain and economic security,FAM-22,Economic resilience to external shocks
+AST-01,Natural resources and land,MEC-77,Supply-chain and economic security,FAM-22,Economic resilience to external shocks
+AST-07,Institutions and governance quality,MEC-78,Judicial independence and review,FAM-23,Rule of law and checks on power
+AST-07,Institutions and governance quality,MEC-79,Legislative oversight and audit,FAM-23,Rule of law and checks on power
+AST-07,Institutions and governance quality,MEC-80,Guarding against erosion of accountability,FAM-23,Rule of law and checks on power
+AST-07,Institutions and governance quality,MEC-81,"Monitoring, evaluation and course correction",FAM-24,Adaptive and learning government
+AST-07,Institutions and governance quality,MEC-82,Whole-of-government coordination,FAM-24,Adaptive and learning government
+AST-10,Technology and digital capability,MEC-83,Keeping laws and regulation up to date,FAM-24,Adaptive and learning government
+AST-07,Institutions and governance quality,MEC-83,Keeping laws and regulation up to date,FAM-24,Adaptive and learning government
+AST-07,Institutions and governance quality,MEC-84,Civil service and public management,FAM-25,State capability and service delivery
+AST-10,Technology and digital capability,MEC-85,Digital government,FAM-25,State capability and service delivery
+AST-07,Institutions and governance quality,MEC-85,Digital government,FAM-25,State capability and service delivery
+AST-07,Institutions and governance quality,MEC-86,Decentralisation and local government,FAM-25,State capability and service delivery
+AST-07,Institutions and governance quality,MEC-87,Regulation and enforcement capacity,FAM-25,State capability and service delivery
+AST-07,Institutions and governance quality,MEC-88,Tax revenue and administration,FAM-26,Public finances
+AST-07,Institutions and governance quality,MEC-89,"Budgeting, procurement and public investment",FAM-26,Public finances
+AST-08,Financial wealth and sovereign funds,MEC-90,Public-private partnerships,FAM-26,Public finances
+AST-06,Infrastructure and connectivity,MEC-90,Public-private partnerships,FAM-26,Public finances
+AST-07,Institutions and governance quality,MEC-91,"Preparedness, surge capacity and stockpiles",FAM-27,Emergency response and recovery
+AST-07,Institutions and governance quality,MEC-92,Emergency relief and service continuity,FAM-27,Emergency response and recovery
+AST-06,Infrastructure and connectivity,MEC-93,Recovery and reconstruction,FAM-27,Emergency response and recovery
+AST-07,Institutions and governance quality,MEC-94,Citizen participation and community-driven development,FAM-28,"Voice, participation and accountability"
+AST-07,Institutions and governance quality,MEC-95,"Transparency, media and information integrity",FAM-28,"Voice, participation and accountability"
+AST-10,Technology and digital capability,MEC-95,"Transparency, media and information integrity",FAM-28,"Voice, participation and accountability"
+AST-07,Institutions and governance quality,MEC-96,Elections and political institutions,FAM-28,"Voice, participation and accountability"
+AST-07,Institutions and governance quality,MEC-97,Reform coalitions and social dialogue,FAM-28,"Voice, participation and accountability"

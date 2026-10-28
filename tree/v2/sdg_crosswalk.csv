@@ -1,0 +1,349 @@
+mechanism_id,mechanism,family_id,family,subpillar,sdg_target,sdg_goal,sdg_goal_name,primary_dimension,secondary_dimensions
+MEC-01,Non-discrimination and equal access,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,10.2,10,Reduced Inequalities,People,Peace | Prosperity
+MEC-01,Non-discrimination and equal access,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,10.3,10,Reduced Inequalities,Peace,People
+MEC-01,Non-discrimination and equal access,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,16.9,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-01,Non-discrimination and equal access,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,16.b,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-01,Non-discrimination and equal access,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-02,Gender equality and care work,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,5.1,5,Gender Equality,Peace,People
+MEC-02,Gender equality and care work,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,5.4,5,Gender Equality,People,Prosperity
+MEC-02,Gender equality and care work,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,5.5,5,Gender Equality,Peace,Prosperity
+MEC-02,Gender equality and care work,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,5.c,5,Gender Equality,Peace,People
+MEC-02,Gender equality and care work,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,5.a,5,Gender Equality,Prosperity,People | Peace
+MEC-03,Representation of excluded groups,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,5.5,5,Gender Equality,Peace,Prosperity
+MEC-03,Representation of excluded groups,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,10.2,10,Reduced Inequalities,People,Peace | Prosperity
+MEC-03,Representation of excluded groups,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-99,Decent work and protection of informal workers,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,8.8,8,Decent Work and Economic Growth,People,Peace | Prosperity
+MEC-99,Decent work and protection of informal workers,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-99,Decent work and protection of informal workers,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,10.4,10,Reduced Inequalities,Prosperity,People
+MEC-99,Decent work and protection of informal workers,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion,1.3,1,No Poverty,People,Prosperity
+MEC-04,Violence against women and children,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,5.2,5,Gender Equality,Peace,People
+MEC-04,Violence against women and children,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,5.3,5,Gender Equality,People,Peace
+MEC-04,Violence against women and children,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,8.7,8,Decent Work and Economic Growth,Peace,People | Prosperity
+MEC-04,Violence against women and children,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.2,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-05,Crime prevention and policing,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.1,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-05,Crime prevention and policing,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.4,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-05,Crime prevention and policing,FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.a,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-06,"Justice, rehabilitation and legal empowerment",FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.3,16,"Peace, Justice and Strong Institutions",Peace,People | Prosperity
+MEC-06,"Justice, rehabilitation and legal empowerment",FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-06,"Justice, rehabilitation and legal empowerment",FAM-02,Safety from violence and exploitation,Enhancing Capabilities,16.b,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-07,Reducing group grievance and polarisation,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,10.2,10,Reduced Inequalities,People,Peace | Prosperity
+MEC-07,Reducing group grievance and polarisation,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.1,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-07,Reducing group grievance and polarisation,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.a,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-08,Shared identity and intergroup contact,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-08,Shared identity and intergroup contact,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,10.2,10,Reduced Inequalities,People,Peace | Prosperity
+MEC-08,Shared identity and intergroup contact,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,4.7,4,Quality Education,People,Planet | Peace
+MEC-09,Reconciliation and peacebuilding,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.1,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-09,Reconciliation and peacebuilding,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.3,16,"Peace, Justice and Strong Institutions",Peace,People | Prosperity
+MEC-09,Reconciliation and peacebuilding,FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.a,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-10,"Displacement, resettlement and refugee integration",FAM-03,Social cohesion and peace,Tackling Structural Exclusion,10.7,10,Reduced Inequalities,Peace,People | Prosperity
+MEC-10,"Displacement, resettlement and refugee integration",FAM-03,Social cohesion and peace,Tackling Structural Exclusion,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-10,"Displacement, resettlement and refugee integration",FAM-03,Social cohesion and peace,Tackling Structural Exclusion,16.1,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-11,Early childhood development and nutrition,FAM-04,Human capital formation,Enhancing Capabilities,2.2,2,Zero Hunger,People,Prosperity
+MEC-11,Early childhood development and nutrition,FAM-04,Human capital formation,Enhancing Capabilities,4.2,4,Quality Education,People,Prosperity
+MEC-11,Early childhood development and nutrition,FAM-04,Human capital formation,Enhancing Capabilities,3.2,3,Good Health and Well-Being,People,
+MEC-12,Access to and completion of schooling,FAM-04,Human capital formation,Enhancing Capabilities,4.1,4,Quality Education,People,Prosperity
+MEC-12,Access to and completion of schooling,FAM-04,Human capital formation,Enhancing Capabilities,4.5,4,Quality Education,People,Peace
+MEC-12,Access to and completion of schooling,FAM-04,Human capital formation,Enhancing Capabilities,4.a,4,Quality Education,People,Peace
+MEC-13,Teaching and learning quality,FAM-04,Human capital formation,Enhancing Capabilities,4.1,4,Quality Education,People,Prosperity
+MEC-13,Teaching and learning quality,FAM-04,Human capital formation,Enhancing Capabilities,4.6,4,Quality Education,People,Prosperity
+MEC-13,Teaching and learning quality,FAM-04,Human capital formation,Enhancing Capabilities,4.c,4,Quality Education,People,Prosperity
+MEC-14,Skills for work,FAM-04,Human capital formation,Enhancing Capabilities,4.3,4,Quality Education,People,Prosperity
+MEC-14,Skills for work,FAM-04,Human capital formation,Enhancing Capabilities,4.4,4,Quality Education,Prosperity,People
+MEC-14,Skills for work,FAM-04,Human capital formation,Enhancing Capabilities,8.6,8,Decent Work and Economic Growth,People,Prosperity
+MEC-15,Higher education and research skills,FAM-04,Human capital formation,Enhancing Capabilities,4.3,4,Quality Education,People,Prosperity
+MEC-15,Higher education and research skills,FAM-04,Human capital formation,Enhancing Capabilities,4.b,4,Quality Education,Prosperity,People
+MEC-15,Higher education and research skills,FAM-04,Human capital formation,Enhancing Capabilities,9.5,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-16,Coverage and quality of health care,FAM-05,Health and longevity,Enhancing Capabilities,3.1,3,Good Health and Well-Being,People,
+MEC-16,Coverage and quality of health care,FAM-05,Health and longevity,Enhancing Capabilities,3.2,3,Good Health and Well-Being,People,
+MEC-16,Coverage and quality of health care,FAM-05,Health and longevity,Enhancing Capabilities,3.8,3,Good Health and Well-Being,People,Prosperity
+MEC-16,Coverage and quality of health care,FAM-05,Health and longevity,Enhancing Capabilities,3.4,3,Good Health and Well-Being,People,Prosperity
+MEC-17,Health workforce and medicines,FAM-05,Health and longevity,Enhancing Capabilities,3.c,3,Good Health and Well-Being,People,Prosperity
+MEC-17,Health workforce and medicines,FAM-05,Health and longevity,Enhancing Capabilities,3.b,3,Good Health and Well-Being,People,Prosperity
+MEC-17,Health workforce and medicines,FAM-05,Health and longevity,Enhancing Capabilities,3.8,3,Good Health and Well-Being,People,Prosperity
+MEC-18,Infectious disease control and food safety,FAM-05,Health and longevity,Enhancing Capabilities,3.3,3,Good Health and Well-Being,People,Prosperity
+MEC-18,Infectious disease control and food safety,FAM-05,Health and longevity,Enhancing Capabilities,2.1,2,Zero Hunger,People,Prosperity
+MEC-18,Infectious disease control and food safety,FAM-05,Health and longevity,Enhancing Capabilities,3.d,3,Good Health and Well-Being,People,Peace | Prosperity
+MEC-98,"Healthy behaviours, mental health and injury prevention",FAM-05,Health and longevity,Enhancing Capabilities,3.4,3,Good Health and Well-Being,People,Prosperity
+MEC-98,"Healthy behaviours, mental health and injury prevention",FAM-05,Health and longevity,Enhancing Capabilities,3.5,3,Good Health and Well-Being,People,Peace
+MEC-98,"Healthy behaviours, mental health and injury prevention",FAM-05,Health and longevity,Enhancing Capabilities,3.6,3,Good Health and Well-Being,People,Prosperity
+MEC-98,"Healthy behaviours, mental health and injury prevention",FAM-05,Health and longevity,Enhancing Capabilities,3.a,3,Good Health and Well-Being,People,Peace
+MEC-19,Financial protection and health insurance,FAM-05,Health and longevity,Enhancing Capabilities,3.8,3,Good Health and Well-Being,People,Prosperity
+MEC-19,Financial protection and health insurance,FAM-05,Health and longevity,Enhancing Capabilities,1.3,1,No Poverty,People,Prosperity
+MEC-20,Social assistance and cash transfers,FAM-06,Income security and social protection,Enhancing Capabilities,1.3,1,No Poverty,People,Prosperity
+MEC-20,Social assistance and cash transfers,FAM-06,Income security and social protection,Enhancing Capabilities,1.2,1,No Poverty,People,Prosperity
+MEC-20,Social assistance and cash transfers,FAM-06,Income security and social protection,Enhancing Capabilities,10.4,10,Reduced Inequalities,Prosperity,People
+MEC-21,Social insurance and pensions,FAM-06,Income security and social protection,Enhancing Capabilities,1.3,1,No Poverty,People,Prosperity
+MEC-21,Social insurance and pensions,FAM-06,Income security and social protection,Enhancing Capabilities,10.4,10,Reduced Inequalities,Prosperity,People
+MEC-21,Social insurance and pensions,FAM-06,Income security and social protection,Enhancing Capabilities,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-22,Shock-responsive protection,FAM-06,Income security and social protection,Enhancing Capabilities,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-22,Shock-responsive protection,FAM-06,Income security and social protection,Enhancing Capabilities,1.3,1,No Poverty,People,Prosperity
+MEC-22,Shock-responsive protection,FAM-06,Income security and social protection,Enhancing Capabilities,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-23,Graduation from poverty,FAM-06,Income security and social protection,Enhancing Capabilities,1.1,1,No Poverty,People,Prosperity
+MEC-23,Graduation from poverty,FAM-06,Income security and social protection,Enhancing Capabilities,1.2,1,No Poverty,People,Prosperity
+MEC-23,Graduation from poverty,FAM-06,Income security and social protection,Enhancing Capabilities,1.4,1,No Poverty,People,Prosperity | Peace
+MEC-24,Household food security and food prices,FAM-06,Income security and social protection,Enhancing Capabilities,2.1,2,Zero Hunger,People,Prosperity
+MEC-24,Household food security and food prices,FAM-06,Income security and social protection,Enhancing Capabilities,2.c,2,Zero Hunger,Prosperity,People
+MEC-24,Household food security and food prices,FAM-06,Income security and social protection,Enhancing Capabilities,1.2,1,No Poverty,People,Prosperity
+MEC-25,Water and sanitation,FAM-07,Basic services and living conditions,Enhancing Capabilities,6.1,6,Clean Water and Sanitation,People,Planet
+MEC-25,Water and sanitation,FAM-07,Basic services and living conditions,Enhancing Capabilities,6.2,6,Clean Water and Sanitation,People,Planet
+MEC-25,Water and sanitation,FAM-07,Basic services and living conditions,Enhancing Capabilities,3.9,3,Good Health and Well-Being,People,Planet
+MEC-26,Household energy access,FAM-07,Basic services and living conditions,Enhancing Capabilities,7.1,7,Affordable and Clean Energy,Prosperity,People
+MEC-26,Household energy access,FAM-07,Basic services and living conditions,Enhancing Capabilities,3.9,3,Good Health and Well-Being,People,Planet
+MEC-27,Housing and settlements,FAM-07,Basic services and living conditions,Enhancing Capabilities,11.1,11,Sustainable Cities and Communities,People,Prosperity
+MEC-27,Housing and settlements,FAM-07,Basic services and living conditions,Enhancing Capabilities,1.4,1,No Poverty,People,Prosperity | Peace
+MEC-28,Carbon pricing and climate regulation,FAM-08,Climate mitigation and energy transition,Future Generations,13.2,13,Climate Action,Planet,Prosperity | Peace
+MEC-28,Carbon pricing and climate regulation,FAM-08,Climate mitigation and energy transition,Future Generations,12.c,12,Responsible Consumption and Production,Planet,Prosperity | People
+MEC-28,Carbon pricing and climate regulation,FAM-08,Climate mitigation and energy transition,Future Generations,9.4,9,"Industry, Innovation and Infrastructure",Planet,Prosperity
+MEC-29,Clean energy and technology deployment,FAM-08,Climate mitigation and energy transition,Future Generations,7.2,7,Affordable and Clean Energy,Planet,Prosperity
+MEC-29,Clean energy and technology deployment,FAM-08,Climate mitigation and energy transition,Future Generations,7.a,7,Affordable and Clean Energy,Prosperity,Planet
+MEC-29,Clean energy and technology deployment,FAM-08,Climate mitigation and energy transition,Future Generations,7.b,7,Affordable and Clean Energy,Prosperity,People | Planet
+MEC-29,Clean energy and technology deployment,FAM-08,Climate mitigation and energy transition,Future Generations,13.2,13,Climate Action,Planet,Prosperity | Peace
+MEC-30,Energy efficiency,FAM-08,Climate mitigation and energy transition,Future Generations,7.3,7,Affordable and Clean Energy,Planet,Prosperity
+MEC-30,Energy efficiency,FAM-08,Climate mitigation and energy transition,Future Generations,12.2,12,Responsible Consumption and Production,Planet,Prosperity
+MEC-30,Energy efficiency,FAM-08,Climate mitigation and energy transition,Future Generations,9.4,9,"Industry, Innovation and Infrastructure",Planet,Prosperity
+MEC-31,Low-carbon infrastructure and avoiding lock-in,FAM-08,Climate mitigation and energy transition,Future Generations,9.4,9,"Industry, Innovation and Infrastructure",Planet,Prosperity
+MEC-31,Low-carbon infrastructure and avoiding lock-in,FAM-08,Climate mitigation and energy transition,Future Generations,11.2,11,Sustainable Cities and Communities,People,Prosperity | Planet
+MEC-31,Low-carbon infrastructure and avoiding lock-in,FAM-08,Climate mitigation and energy transition,Future Generations,13.2,13,Climate Action,Planet,Prosperity | Peace
+MEC-32,Conservation and protected areas,FAM-09,Natural capital and ecosystems,Future Generations,15.1,15,Life on Land,Planet,People
+MEC-32,Conservation and protected areas,FAM-09,Natural capital and ecosystems,Future Generations,15.5,15,Life on Land,Planet,
+MEC-32,Conservation and protected areas,FAM-09,Natural capital and ecosystems,Future Generations,14.5,14,Life Below Water,Planet,
+MEC-32,Conservation and protected areas,FAM-09,Natural capital and ecosystems,Future Generations,15.8,15,Life on Land,Planet,Prosperity
+MEC-33,"Sustainable use of forests, fisheries and land",FAM-09,Natural capital and ecosystems,Future Generations,15.2,15,Life on Land,Planet,Prosperity
+MEC-33,"Sustainable use of forests, fisheries and land",FAM-09,Natural capital and ecosystems,Future Generations,14.4,14,Life Below Water,Planet,Prosperity
+MEC-33,"Sustainable use of forests, fisheries and land",FAM-09,Natural capital and ecosystems,Future Generations,15.3,15,Life on Land,Planet,People | Prosperity
+MEC-33,"Sustainable use of forests, fisheries and land",FAM-09,Natural capital and ecosystems,Future Generations,2.4,2,Zero Hunger,Planet,People | Prosperity
+MEC-34,Restoration of degraded ecosystems,FAM-09,Natural capital and ecosystems,Future Generations,15.3,15,Life on Land,Planet,People | Prosperity
+MEC-34,Restoration of degraded ecosystems,FAM-09,Natural capital and ecosystems,Future Generations,15.1,15,Life on Land,Planet,People
+MEC-34,Restoration of degraded ecosystems,FAM-09,Natural capital and ecosystems,Future Generations,6.6,6,Clean Water and Sanitation,Planet,People
+MEC-34,Restoration of degraded ecosystems,FAM-09,Natural capital and ecosystems,Future Generations,14.2,14,Life Below Water,Planet,Prosperity
+MEC-35,Water resources management,FAM-09,Natural capital and ecosystems,Future Generations,6.4,6,Clean Water and Sanitation,Planet,Prosperity
+MEC-35,Water resources management,FAM-09,Natural capital and ecosystems,Future Generations,6.5,6,Clean Water and Sanitation,Planet,Peace
+MEC-35,Water resources management,FAM-09,Natural capital and ecosystems,Future Generations,6.6,6,Clean Water and Sanitation,Planet,People
+MEC-35,Water resources management,FAM-09,Natural capital and ecosystems,Future Generations,6.a,6,Clean Water and Sanitation,Planet,Prosperity
+MEC-36,"Air, water and industrial pollution control",FAM-10,Pollution and a healthy environment,Future Generations,6.3,6,Clean Water and Sanitation,Planet,People
+MEC-36,"Air, water and industrial pollution control",FAM-10,Pollution and a healthy environment,Future Generations,11.6,11,Sustainable Cities and Communities,Planet,People
+MEC-36,"Air, water and industrial pollution control",FAM-10,Pollution and a healthy environment,Future Generations,12.4,12,Responsible Consumption and Production,Planet,People
+MEC-36,"Air, water and industrial pollution control",FAM-10,Pollution and a healthy environment,Future Generations,9.4,9,"Industry, Innovation and Infrastructure",Planet,Prosperity
+MEC-37,Waste management and circular economy,FAM-10,Pollution and a healthy environment,Future Generations,12.5,12,Responsible Consumption and Production,Planet,Prosperity
+MEC-37,Waste management and circular economy,FAM-10,Pollution and a healthy environment,Future Generations,11.6,11,Sustainable Cities and Communities,Planet,People
+MEC-37,Waste management and circular economy,FAM-10,Pollution and a healthy environment,Future Generations,12.4,12,Responsible Consumption and Production,Planet,People
+MEC-38,Protecting people from pollution exposure,FAM-10,Pollution and a healthy environment,Future Generations,3.9,3,Good Health and Well-Being,People,Planet
+MEC-38,Protecting people from pollution exposure,FAM-10,Pollution and a healthy environment,Future Generations,12.4,12,Responsible Consumption and Production,Planet,People
+MEC-38,Protecting people from pollution exposure,FAM-10,Pollution and a healthy environment,Future Generations,6.3,6,Clean Water and Sanitation,Planet,People
+MEC-39,Environmental behaviour and awareness,FAM-10,Pollution and a healthy environment,Future Generations,12.8,12,Responsible Consumption and Production,People,Planet
+MEC-39,Environmental behaviour and awareness,FAM-10,Pollution and a healthy environment,Future Generations,4.7,4,Quality Education,People,Planet | Peace
+MEC-39,Environmental behaviour and awareness,FAM-10,Pollution and a healthy environment,Future Generations,13.3,13,Climate Action,Planet,People
+MEC-40,Risk-informed land use and settlement,FAM-11,Resilience to climate and disasters,Future Generations,11.b,11,Sustainable Cities and Communities,Planet,People | Peace
+MEC-40,Risk-informed land use and settlement,FAM-11,Resilience to climate and disasters,Future Generations,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-40,Risk-informed land use and settlement,FAM-11,Resilience to climate and disasters,Future Generations,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-41,Resilient infrastructure and asset protection,FAM-11,Resilience to climate and disasters,Future Generations,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-41,Resilient infrastructure and asset protection,FAM-11,Resilience to climate and disasters,Future Generations,11.5,11,Sustainable Cities and Communities,People,Planet | Prosperity
+MEC-41,Resilient infrastructure and asset protection,FAM-11,Resilience to climate and disasters,Future Generations,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-42,Nature-based protection,FAM-11,Resilience to climate and disasters,Future Generations,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-42,Nature-based protection,FAM-11,Resilience to climate and disasters,Future Generations,14.2,14,Life Below Water,Planet,Prosperity
+MEC-42,Nature-based protection,FAM-11,Resilience to climate and disasters,Future Generations,15.1,15,Life on Land,Planet,People
+MEC-43,Climate-resilient livelihoods and adaptation,FAM-11,Resilience to climate and disasters,Future Generations,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-43,Climate-resilient livelihoods and adaptation,FAM-11,Resilience to climate and disasters,Future Generations,2.4,2,Zero Hunger,Planet,People | Prosperity
+MEC-43,Climate-resilient livelihoods and adaptation,FAM-11,Resilience to climate and disasters,Future Generations,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-43,Climate-resilient livelihoods and adaptation,FAM-11,Resilience to climate and disasters,Future Generations,13.b,13,Climate Action,Planet,People | Peace
+MEC-44,Debt and fiscal sustainability,FAM-12,Intergenerational balance,Future Generations,17.4,17,Partnerships for the Goals,Prosperity,Peace
+MEC-44,Debt and fiscal sustainability,FAM-12,Intergenerational balance,Future Generations,17.1,17,Partnerships for the Goals,Prosperity,Peace
+MEC-44,Debt and fiscal sustainability,FAM-12,Intergenerational balance,Future Generations,17.13,17,Partnerships for the Goals,Prosperity,Peace
+MEC-45,Managing natural resource wealth,FAM-12,Intergenerational balance,Future Generations,12.2,12,Responsible Consumption and Production,Planet,Prosperity
+MEC-45,Managing natural resource wealth,FAM-12,Intergenerational balance,Future Generations,17.1,17,Partnerships for the Goals,Prosperity,Peace
+MEC-45,Managing natural resource wealth,FAM-12,Intergenerational balance,Future Generations,8.4,8,Decent Work and Economic Growth,Planet,Prosperity
+MEC-46,Demographic change and ageing,FAM-12,Intergenerational balance,Future Generations,3.7,3,Good Health and Well-Being,People,Peace
+MEC-46,Demographic change and ageing,FAM-12,Intergenerational balance,Future Generations,1.3,1,No Poverty,People,Prosperity
+MEC-46,Demographic change and ageing,FAM-12,Intergenerational balance,Future Generations,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-46,Demographic change and ageing,FAM-12,Intergenerational balance,Future Generations,5.4,5,Gender Equality,People,Prosperity
+MEC-47,Industrial upgrading and diversification,FAM-13,Productive transformation,Export-led,8.2,8,Decent Work and Economic Growth,Prosperity,
+MEC-47,Industrial upgrading and diversification,FAM-13,Productive transformation,Export-led,9.2,9,"Industry, Innovation and Infrastructure",Prosperity,People | Planet
+MEC-47,Industrial upgrading and diversification,FAM-13,Productive transformation,Export-led,9.b,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-47,Industrial upgrading and diversification,FAM-13,Productive transformation,Export-led,17.11,17,Partnerships for the Goals,Prosperity,
+MEC-48,Industrial policy and priority sectors,FAM-13,Productive transformation,Export-led,9.2,9,"Industry, Innovation and Infrastructure",Prosperity,People | Planet
+MEC-48,Industrial policy and priority sectors,FAM-13,Productive transformation,Export-led,8.2,8,Decent Work and Economic Growth,Prosperity,
+MEC-48,Industrial policy and priority sectors,FAM-13,Productive transformation,Export-led,9.3,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-49,Modern services and the digital economy,FAM-13,Productive transformation,Export-led,8.2,8,Decent Work and Economic Growth,Prosperity,
+MEC-49,Modern services and the digital economy,FAM-13,Productive transformation,Export-led,9.c,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-49,Modern services and the digital economy,FAM-13,Productive transformation,Export-led,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-49,Modern services and the digital economy,FAM-13,Productive transformation,Export-led,17.11,17,Partnerships for the Goals,Prosperity,
+MEC-50,Tourism,FAM-13,Productive transformation,Export-led,8.9,8,Decent Work and Economic Growth,Prosperity,Planet
+MEC-50,Tourism,FAM-13,Productive transformation,Export-led,12.b,12,Responsible Consumption and Production,Prosperity,Planet
+MEC-50,Tourism,FAM-13,Productive transformation,Export-led,14.7,14,Life Below Water,Prosperity,Planet | People
+MEC-51,"Trade facilitation, logistics and standards",FAM-14,Integration into world markets,Export-led,17.10,17,Partnerships for the Goals,Prosperity,Peace
+MEC-51,"Trade facilitation, logistics and standards",FAM-14,Integration into world markets,Export-led,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-51,"Trade facilitation, logistics and standards",FAM-14,Integration into world markets,Export-led,17.11,17,Partnerships for the Goals,Prosperity,
+MEC-51,"Trade facilitation, logistics and standards",FAM-14,Integration into world markets,Export-led,8.a,8,Decent Work and Economic Growth,Prosperity,
+MEC-52,Trade agreements and regional integration,FAM-14,Integration into world markets,Export-led,17.10,17,Partnerships for the Goals,Prosperity,Peace
+MEC-52,Trade agreements and regional integration,FAM-14,Integration into world markets,Export-led,17.12,17,Partnerships for the Goals,Prosperity,Peace
+MEC-52,Trade agreements and regional integration,FAM-14,Integration into world markets,Export-led,10.a,10,Reduced Inequalities,Prosperity,Peace
+MEC-52,Trade agreements and regional integration,FAM-14,Integration into world markets,Export-led,17.11,17,Partnerships for the Goals,Prosperity,
+MEC-53,Foreign investment and global value chains,FAM-14,Integration into world markets,Export-led,17.3,17,Partnerships for the Goals,Prosperity,People
+MEC-53,Foreign investment and global value chains,FAM-14,Integration into world markets,Export-led,17.5,17,Partnerships for the Goals,Prosperity,
+MEC-53,Foreign investment and global value chains,FAM-14,Integration into world markets,Export-led,9.2,9,"Industry, Innovation and Infrastructure",Prosperity,People | Planet
+MEC-53,Foreign investment and global value chains,FAM-14,Integration into world markets,Export-led,10.b,10,Reduced Inequalities,Prosperity,People
+MEC-54,Research and development,FAM-15,Innovation and technology,Export-led,9.5,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-54,Research and development,FAM-15,Innovation and technology,Export-led,9.b,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-54,Research and development,FAM-15,Innovation and technology,Export-led,17.6,17,Partnerships for the Goals,Prosperity,People
+MEC-55,Technology adoption and diffusion to firms,FAM-15,Innovation and technology,Export-led,9.5,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-55,Technology adoption and diffusion to firms,FAM-15,Innovation and technology,Export-led,9.b,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-55,Technology adoption and diffusion to firms,FAM-15,Innovation and technology,Export-led,8.2,8,Decent Work and Economic Growth,Prosperity,
+MEC-55,Technology adoption and diffusion to firms,FAM-15,Innovation and technology,Export-led,9.c,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-56,Knowledge transfer and intellectual property,FAM-15,Innovation and technology,Export-led,9.5,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-56,Knowledge transfer and intellectual property,FAM-15,Innovation and technology,Export-led,17.7,17,Partnerships for the Goals,Prosperity,Planet
+MEC-56,Knowledge transfer and intellectual property,FAM-15,Innovation and technology,Export-led,9.b,9,"Industry, Innovation and Infrastructure",Prosperity,
+MEC-57,Transport connectivity,FAM-16,Infrastructure networks,Domestic Integration,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-57,Transport connectivity,FAM-16,Infrastructure networks,Domestic Integration,11.2,11,Sustainable Cities and Communities,People,Prosperity | Planet
+MEC-57,Transport connectivity,FAM-16,Infrastructure networks,Domestic Integration,9.a,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-58,Digital connectivity,FAM-16,Infrastructure networks,Domestic Integration,9.c,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-58,Digital connectivity,FAM-16,Infrastructure networks,Domestic Integration,17.8,17,Partnerships for the Goals,Prosperity,People
+MEC-58,Digital connectivity,FAM-16,Infrastructure networks,Domestic Integration,5.b,5,Gender Equality,Prosperity,People
+MEC-59,Reliable and affordable utilities,FAM-16,Infrastructure networks,Domestic Integration,7.1,7,Affordable and Clean Energy,Prosperity,People
+MEC-59,Reliable and affordable utilities,FAM-16,Infrastructure networks,Domestic Integration,7.b,7,Affordable and Clean Energy,Prosperity,People | Planet
+MEC-59,Reliable and affordable utilities,FAM-16,Infrastructure networks,Domestic Integration,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-59,Reliable and affordable utilities,FAM-16,Infrastructure networks,Domestic Integration,12.c,12,Responsible Consumption and Production,Planet,Prosperity | People
+MEC-60,"Urban productivity, planning and housing supply",FAM-17,"Cities, regions and spatial development",Domestic Integration,11.3,11,Sustainable Cities and Communities,Peace,Prosperity | Planet
+MEC-60,"Urban productivity, planning and housing supply",FAM-17,"Cities, regions and spatial development",Domestic Integration,11.1,11,Sustainable Cities and Communities,People,Prosperity
+MEC-60,"Urban productivity, planning and housing supply",FAM-17,"Cities, regions and spatial development",Domestic Integration,11.2,11,Sustainable Cities and Communities,People,Prosperity | Planet
+MEC-60,"Urban productivity, planning and housing supply",FAM-17,"Cities, regions and spatial development",Domestic Integration,11.a,11,Sustainable Cities and Communities,Prosperity,Planet | Peace
+MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development",Domestic Integration,9.2,9,"Industry, Innovation and Infrastructure",Prosperity,People | Planet
+MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development",Domestic Integration,9.3,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development",Domestic Integration,8.2,8,Decent Work and Economic Growth,Prosperity,
+MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development",Domestic Integration,12.3,12,Responsible Consumption and Production,Planet,People | Prosperity
+MEC-61,"Clusters, zones and local supply chains",FAM-17,"Cities, regions and spatial development",Domestic Integration,2.3,2,Zero Hunger,Prosperity,People
+MEC-62,Lagging regions and place-based development,FAM-17,"Cities, regions and spatial development",Domestic Integration,10.1,10,Reduced Inequalities,Prosperity,People
+MEC-62,Lagging regions and place-based development,FAM-17,"Cities, regions and spatial development",Domestic Integration,11.a,11,Sustainable Cities and Communities,Prosperity,Planet | Peace
+MEC-62,Lagging regions and place-based development,FAM-17,"Cities, regions and spatial development",Domestic Integration,1.4,1,No Poverty,People,Prosperity | Peace
+MEC-62,Lagging regions and place-based development,FAM-17,"Cities, regions and spatial development",Domestic Integration,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-63,Agricultural productivity and inputs,FAM-18,Farmers and small enterprises,Growth through Inclusion,2.3,2,Zero Hunger,Prosperity,People
+MEC-63,Agricultural productivity and inputs,FAM-18,Farmers and small enterprises,Growth through Inclusion,2.4,2,Zero Hunger,Planet,People | Prosperity
+MEC-63,Agricultural productivity and inputs,FAM-18,Farmers and small enterprises,Growth through Inclusion,2.a,2,Zero Hunger,Prosperity,People
+MEC-63,Agricultural productivity and inputs,FAM-18,Farmers and small enterprises,Growth through Inclusion,2.5,2,Zero Hunger,Planet,People
+MEC-64,Market access for small producers,FAM-18,Farmers and small enterprises,Growth through Inclusion,2.3,2,Zero Hunger,Prosperity,People
+MEC-64,Market access for small producers,FAM-18,Farmers and small enterprises,Growth through Inclusion,2.c,2,Zero Hunger,Prosperity,People
+MEC-64,Market access for small producers,FAM-18,Farmers and small enterprises,Growth through Inclusion,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-64,Market access for small producers,FAM-18,Farmers and small enterprises,Growth through Inclusion,9.3,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-65,Firm capability and entrepreneurship,FAM-18,Farmers and small enterprises,Growth through Inclusion,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-65,Firm capability and entrepreneurship,FAM-18,Farmers and small enterprises,Growth through Inclusion,9.3,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-65,Firm capability and entrepreneurship,FAM-18,Farmers and small enterprises,Growth through Inclusion,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-66,Job matching and active labour-market programmes,FAM-19,Jobs and labour markets,Growth through Inclusion,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-66,Job matching and active labour-market programmes,FAM-19,Jobs and labour markets,Growth through Inclusion,8.6,8,Decent Work and Economic Growth,People,Prosperity
+MEC-66,Job matching and active labour-market programmes,FAM-19,Jobs and labour markets,Growth through Inclusion,8.b,8,Decent Work and Economic Growth,Prosperity,People
+MEC-67,Labour regulation and firm formalisation,FAM-19,Jobs and labour markets,Growth through Inclusion,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-67,Labour regulation and firm formalisation,FAM-19,Jobs and labour markets,Growth through Inclusion,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-67,Labour regulation and firm formalisation,FAM-19,Jobs and labour markets,Growth through Inclusion,10.4,10,Reduced Inequalities,Prosperity,People
+MEC-68,Adjustment to trade and technology shocks,FAM-19,Jobs and labour markets,Growth through Inclusion,8.5,8,Decent Work and Economic Growth,Prosperity,People
+MEC-68,Adjustment to trade and technology shocks,FAM-19,Jobs and labour markets,Growth through Inclusion,8.8,8,Decent Work and Economic Growth,People,Peace | Prosperity
+MEC-68,Adjustment to trade and technology shocks,FAM-19,Jobs and labour markets,Growth through Inclusion,10.1,10,Reduced Inequalities,Prosperity,People
+MEC-68,Adjustment to trade and technology shocks,FAM-19,Jobs and labour markets,Growth through Inclusion,13.b,13,Climate Action,Planet,People | Peace
+MEC-69,Migration and remittances,FAM-19,Jobs and labour markets,Growth through Inclusion,10.7,10,Reduced Inequalities,Peace,People | Prosperity
+MEC-69,Migration and remittances,FAM-19,Jobs and labour markets,Growth through Inclusion,10.c,10,Reduced Inequalities,Prosperity,People
+MEC-69,Migration and remittances,FAM-19,Jobs and labour markets,Growth through Inclusion,8.8,8,Decent Work and Economic Growth,People,Peace | Prosperity
+MEC-69,Migration and remittances,FAM-19,Jobs and labour markets,Growth through Inclusion,17.3,17,Partnerships for the Goals,Prosperity,People
+MEC-70,"Competition, business regulation and contract enforcement",FAM-20,"Markets, finance and property rights",Growth through Inclusion,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-70,"Competition, business regulation and contract enforcement",FAM-20,"Markets, finance and property rights",Growth through Inclusion,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-70,"Competition, business regulation and contract enforcement",FAM-20,"Markets, finance and property rights",Growth through Inclusion,9.3,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-70,"Competition, business regulation and contract enforcement",FAM-20,"Markets, finance and property rights",Growth through Inclusion,10.5,10,Reduced Inequalities,Peace,Prosperity
+MEC-71,Access to finance,FAM-20,"Markets, finance and property rights",Growth through Inclusion,8.10,8,Decent Work and Economic Growth,Prosperity,People
+MEC-71,Access to finance,FAM-20,"Markets, finance and property rights",Growth through Inclusion,9.3,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-71,Access to finance,FAM-20,"Markets, finance and property rights",Growth through Inclusion,8.3,8,Decent Work and Economic Growth,Prosperity,People
+MEC-71,Access to finance,FAM-20,"Markets, finance and property rights",Growth through Inclusion,1.4,1,No Poverty,People,Prosperity | Peace
+MEC-72,Land and property rights,FAM-20,"Markets, finance and property rights",Growth through Inclusion,1.4,1,No Poverty,People,Prosperity | Peace
+MEC-72,Land and property rights,FAM-20,"Markets, finance and property rights",Growth through Inclusion,5.a,5,Gender Equality,Prosperity,People | Peace
+MEC-72,Land and property rights,FAM-20,"Markets, finance and property rights",Growth through Inclusion,2.3,2,Zero Hunger,Prosperity,People
+MEC-72,Land and property rights,FAM-20,"Markets, finance and property rights",Growth through Inclusion,16.3,16,"Peace, Justice and Strong Institutions",Peace,People | Prosperity
+MEC-73,Early warning and surveillance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,13.3,13,Climate Action,Planet,People
+MEC-73,Early warning and surveillance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,3.d,3,Good Health and Well-Being,People,Peace | Prosperity
+MEC-73,Early warning and surveillance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,11.b,11,Sustainable Cities and Communities,Planet,People | Peace
+MEC-73,Early warning and surveillance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-74,"Statistics, evidence and planning",FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,17.18,17,Partnerships for the Goals,Peace,Prosperity | People
+MEC-74,"Statistics, evidence and planning",FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,17.19,17,Partnerships for the Goals,Peace,Prosperity
+MEC-74,"Statistics, evidence and planning",FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,17.14,17,Partnerships for the Goals,Peace,Prosperity | Planet
+MEC-74,"Statistics, evidence and planning",FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-75,Pre-arranged risk finance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-75,Pre-arranged risk finance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,11.5,11,Sustainable Cities and Communities,People,Planet | Prosperity
+MEC-75,Pre-arranged risk finance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-75,Pre-arranged risk finance,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight,17.3,17,Partnerships for the Goals,Prosperity,People
+MEC-76,Macro-financial buffers,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,17.13,17,Partnerships for the Goals,Prosperity,Peace
+MEC-76,Macro-financial buffers,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,10.5,10,Reduced Inequalities,Peace,Prosperity
+MEC-76,Macro-financial buffers,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,8.1,8,Decent Work and Economic Growth,Prosperity,People
+MEC-76,Macro-financial buffers,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,17.4,17,Partnerships for the Goals,Prosperity,Peace
+MEC-77,Supply-chain and economic security,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,17.13,17,Partnerships for the Goals,Prosperity,Peace
+MEC-77,Supply-chain and economic security,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,12.2,12,Responsible Consumption and Production,Planet,Prosperity
+MEC-77,Supply-chain and economic security,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,2.c,2,Zero Hunger,Prosperity,People
+MEC-77,Supply-chain and economic security,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-78,Judicial independence and review,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.3,16,"Peace, Justice and Strong Institutions",Peace,People | Prosperity
+MEC-78,Judicial independence and review,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-78,Judicial independence and review,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.10,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-79,Legislative oversight and audit,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.5,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-79,Legislative oversight and audit,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-79,Legislative oversight and audit,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.a,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-80,Guarding against erosion of accountability,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-80,Guarding against erosion of accountability,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.10,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-80,Guarding against erosion of accountability,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.3,16,"Peace, Justice and Strong Institutions",Peace,People | Prosperity
+MEC-80,Guarding against erosion of accountability,FAM-23,Rule of law and checks on power,Adaptability and Course Correction,16.b,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-81,"Monitoring, evaluation and course correction",FAM-24,Adaptive and learning government,Adaptability and Course Correction,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-81,"Monitoring, evaluation and course correction",FAM-24,Adaptive and learning government,Adaptability and Course Correction,17.14,17,Partnerships for the Goals,Peace,Prosperity | Planet
+MEC-81,"Monitoring, evaluation and course correction",FAM-24,Adaptive and learning government,Adaptability and Course Correction,17.18,17,Partnerships for the Goals,Peace,Prosperity | People
+MEC-82,Whole-of-government coordination,FAM-24,Adaptive and learning government,Adaptability and Course Correction,17.14,17,Partnerships for the Goals,Peace,Prosperity | Planet
+MEC-82,Whole-of-government coordination,FAM-24,Adaptive and learning government,Adaptability and Course Correction,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-82,Whole-of-government coordination,FAM-24,Adaptive and learning government,Adaptability and Course Correction,16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-83,Keeping laws and regulation up to date,FAM-24,Adaptive and learning government,Adaptability and Course Correction,16.10,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-83,Keeping laws and regulation up to date,FAM-24,Adaptive and learning government,Adaptability and Course Correction,9.c,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-83,Keeping laws and regulation up to date,FAM-24,Adaptive and learning government,Adaptability and Course Correction,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-83,Keeping laws and regulation up to date,FAM-24,Adaptive and learning government,Adaptability and Course Correction,17.6,17,Partnerships for the Goals,Prosperity,People
+MEC-84,Civil service and public management,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-84,Civil service and public management,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-84,Civil service and public management,FAM-25,State capability and service delivery,Agility and Delivery Capability,17.9,17,Partnerships for the Goals,Peace,Prosperity
+MEC-85,Digital government,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-85,Digital government,FAM-25,State capability and service delivery,Agility and Delivery Capability,9.c,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-85,Digital government,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.9,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-85,Digital government,FAM-25,State capability and service delivery,Agility and Delivery Capability,17.8,17,Partnerships for the Goals,Prosperity,People
+MEC-86,Decentralisation and local government,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-86,Decentralisation and local government,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-86,Decentralisation and local government,FAM-25,State capability and service delivery,Agility and Delivery Capability,11.3,11,Sustainable Cities and Communities,Peace,Prosperity | Planet
+MEC-86,Decentralisation and local government,FAM-25,State capability and service delivery,Agility and Delivery Capability,17.1,17,Partnerships for the Goals,Prosperity,Peace
+MEC-87,Regulation and enforcement capacity,FAM-25,State capability and service delivery,Agility and Delivery Capability,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-87,Regulation and enforcement capacity,FAM-25,State capability and service delivery,Agility and Delivery Capability,12.4,12,Responsible Consumption and Production,Planet,People
+MEC-87,Regulation and enforcement capacity,FAM-25,State capability and service delivery,Agility and Delivery Capability,9.4,9,"Industry, Innovation and Infrastructure",Planet,Prosperity
+MEC-87,Regulation and enforcement capacity,FAM-25,State capability and service delivery,Agility and Delivery Capability,3.9,3,Good Health and Well-Being,People,Planet
+MEC-88,Tax revenue and administration,FAM-26,Public finances,Agility and Delivery Capability,17.1,17,Partnerships for the Goals,Prosperity,Peace
+MEC-88,Tax revenue and administration,FAM-26,Public finances,Agility and Delivery Capability,10.4,10,Reduced Inequalities,Prosperity,People
+MEC-88,Tax revenue and administration,FAM-26,Public finances,Agility and Delivery Capability,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-88,Tax revenue and administration,FAM-26,Public finances,Agility and Delivery Capability,17.13,17,Partnerships for the Goals,Prosperity,Peace
+MEC-89,"Budgeting, procurement and public investment",FAM-26,Public finances,Agility and Delivery Capability,16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-89,"Budgeting, procurement and public investment",FAM-26,Public finances,Agility and Delivery Capability,17.1,17,Partnerships for the Goals,Prosperity,Peace
+MEC-89,"Budgeting, procurement and public investment",FAM-26,Public finances,Agility and Delivery Capability,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-89,"Budgeting, procurement and public investment",FAM-26,Public finances,Agility and Delivery Capability,16.5,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-90,Public-private partnerships,FAM-26,Public finances,Agility and Delivery Capability,17.17,17,Partnerships for the Goals,Peace,Prosperity
+MEC-90,Public-private partnerships,FAM-26,Public finances,Agility and Delivery Capability,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-90,Public-private partnerships,FAM-26,Public finances,Agility and Delivery Capability,17.3,17,Partnerships for the Goals,Prosperity,People
+MEC-90,Public-private partnerships,FAM-26,Public finances,Agility and Delivery Capability,17.5,17,Partnerships for the Goals,Prosperity,
+MEC-91,"Preparedness, surge capacity and stockpiles",FAM-27,Emergency response and recovery,Agility and Delivery Capability,3.d,3,Good Health and Well-Being,People,Peace | Prosperity
+MEC-91,"Preparedness, surge capacity and stockpiles",FAM-27,Emergency response and recovery,Agility and Delivery Capability,11.5,11,Sustainable Cities and Communities,People,Planet | Prosperity
+MEC-91,"Preparedness, surge capacity and stockpiles",FAM-27,Emergency response and recovery,Agility and Delivery Capability,13.1,13,Climate Action,Planet,People | Prosperity
+MEC-91,"Preparedness, surge capacity and stockpiles",FAM-27,Emergency response and recovery,Agility and Delivery Capability,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-92,Emergency relief and service continuity,FAM-27,Emergency response and recovery,Agility and Delivery Capability,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-92,Emergency relief and service continuity,FAM-27,Emergency response and recovery,Agility and Delivery Capability,11.5,11,Sustainable Cities and Communities,People,Planet | Prosperity
+MEC-92,Emergency relief and service continuity,FAM-27,Emergency response and recovery,Agility and Delivery Capability,2.1,2,Zero Hunger,People,Prosperity
+MEC-92,Emergency relief and service continuity,FAM-27,Emergency response and recovery,Agility and Delivery Capability,3.d,3,Good Health and Well-Being,People,Peace | Prosperity
+MEC-93,Recovery and reconstruction,FAM-27,Emergency response and recovery,Agility and Delivery Capability,11.5,11,Sustainable Cities and Communities,People,Planet | Prosperity
+MEC-93,Recovery and reconstruction,FAM-27,Emergency response and recovery,Agility and Delivery Capability,9.1,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-93,Recovery and reconstruction,FAM-27,Emergency response and recovery,Agility and Delivery Capability,1.5,1,No Poverty,People,Planet | Prosperity
+MEC-93,Recovery and reconstruction,FAM-27,Emergency response and recovery,Agility and Delivery Capability,11.b,11,Sustainable Cities and Communities,Planet,People | Peace
+MEC-94,Citizen participation and community-driven development,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-94,Citizen participation and community-driven development,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-94,Citizen participation and community-driven development,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",11.3,11,Sustainable Cities and Communities,Peace,Prosperity | Planet
+MEC-94,Citizen participation and community-driven development,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",17.17,17,Partnerships for the Goals,Peace,Prosperity
+MEC-95,"Transparency, media and information integrity",FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.10,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-95,"Transparency, media and information integrity",FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-95,"Transparency, media and information integrity",FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.5,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-95,"Transparency, media and information integrity",FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",9.c,9,"Industry, Innovation and Infrastructure",Prosperity,People
+MEC-96,Elections and political institutions,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-96,Elections and political institutions,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity
+MEC-96,Elections and political institutions,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",5.5,5,Gender Equality,Peace,Prosperity
+MEC-96,Elections and political institutions,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.10,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-97,Reform coalitions and social dialogue,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.7,16,"Peace, Justice and Strong Institutions",Peace,People
+MEC-97,Reform coalitions and social dialogue,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",8.8,8,Decent Work and Economic Growth,People,Peace | Prosperity
+MEC-97,Reform coalitions and social dialogue,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",17.17,17,Partnerships for the Goals,Peace,Prosperity
+MEC-97,Reform coalitions and social dialogue,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement",16.6,16,"Peace, Justice and Strong Institutions",Peace,Prosperity

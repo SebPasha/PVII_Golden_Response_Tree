@@ -1,0 +1,198 @@
+target_id,target_label,target_family,target_class
+T0001,Development partners and diplomatic missions,Civil society and external partners,Public institutions
+T0002,Civil society organisations,Civil society and external partners,Public institutions
+T0003,Stakeholders,Civil society and external partners,Public institutions
+T0004,Traditional and religious leaders,Civil society and external partners,Public institutions
+T0005,Trade unions,Civil society and external partners,Workers and informal workers
+T0006,Firms and enterprises,Firms and MSMEs,Firms and MSMEs
+T0007,MSMEs,Firms and MSMEs,Firms and MSMEs
+T0008,Exporters,Firms and MSMEs,Firms and MSMEs
+T0009,Producers and suppliers,Firms and MSMEs,Firms and MSMEs
+T0010,Investors,Firms and MSMEs,Firms and MSMEs
+T0011,Startups and innovators,Firms and MSMEs,Firms and MSMEs
+T0012,Traders and retailers,Firms and MSMEs,Firms and MSMEs
+T0013,Cooperatives and social enterprises,Firms and MSMEs,Firms and MSMEs
+T0014,Entrepreneurs,Firms and MSMEs,Firms and MSMEs
+T0015,Private service providers and contractors,Firms and MSMEs,Firms and MSMEs
+T0016,Tourism enterprises,Firms and MSMEs,Firms and MSMEs
+T0017,Women-led enterprises,Firms and MSMEs,Women and girls
+T0018,Indigenous-owned enterprises,Firms and MSMEs,Firms and MSMEs
+T0019,Students,Households and individuals,Children and youth
+T0020,Poor households,Households and individuals,Households and the poor
+T0021,Consumers,Households and individuals,Households and the poor
+T0022,Families,Households and individuals,Households and the poor
+T0023,Patients,Households and individuals,Households and the poor
+T0024,Service users,Households and individuals,Households and the poor
+T0025,Tourists and visitors,Households and individuals,Households and the poor
+T0026,Households,Households and individuals,Households and the poor
+T0027,Vulnerable households,Households and individuals,Households and the poor
+T0028,Urban poor and slum residents,Households and individuals,Households and the poor
+T0029,TVET learners and apprentices,Households and individuals,Children and youth
+T0030,Low-income households,Households and individuals,Households and the poor
+T0031,Rural households,Households and individuals,Households and the poor
+T0032,Taxpayers,Households and individuals,Households and the poor
+T0033,Homeless and landless households,Households and individuals,Households and the poor
+T0034,Voters,Households and individuals,Whole population and future generations
+T0035,Extremely poor households,Households and individuals,Households and the poor
+T0036,Graduates,Households and individuals,Children and youth
+T0037,Social assistance recipients,Households and individuals,Households and the poor
+T0038,Disadvantaged learners,Households and individuals,Children and youth
+T0039,Homebuyers,Households and individuals,Households and the poor
+T0040,Disaster-affected households,Households and individuals,Households and the poor
+T0041,Female-headed households,Households and individuals,Households and the poor
+T0042,Middle-income households,Households and individuals,Households and the poor
+T0043,Urban households,Households and individuals,Households and the poor
+T0044,Urban areas,Places and regions,Regions and places
+T0045,Rural areas,Places and regions,Regions and places
+T0046,Regions,Places and regions,Regions and places
+T0047,Cities,Places and regions,Regions and places
+T0048,River basins and deltas,Places and regions,Regions and places
+T0049,Border areas,Places and regions,Regions and places
+T0050,Lagging regions,Places and regions,Regions and places
+T0051,Provinces and districts,Places and regions,Regions and places
+T0052,Special and autonomous regions,Places and regions,Regions and places
+T0053,Coastal areas,Places and regions,Regions and places
+T0054,Mountain and hill areas,Places and regions,Regions and places
+T0055,Hazard-prone areas,Places and regions,Regions and places
+T0056,Island areas,Places and regions,Regions and places
+T0057,Metropolitan areas,Places and regions,Regions and places
+T0058,Rural and urban areas,Places and regions,Regions and places
+T0059,Protected areas,Places and regions,Regions and places
+T0060,Ecosystems and natural resources,Places and regions,Regions and places
+T0061,Marine and maritime areas,Places and regions,Regions and places
+T0062,Informal settlements,Places and regions,Regions and places
+T0063,Remote areas,Places and regions,Regions and places
+T0064,Dryland and arid areas,Places and regions,Regions and places
+T0065,Economic zones and corridors,Places and regions,Regions and places
+T0066,Conflict-affected areas,Places and regions,Regions and places
+T0067,Resource-dependent regions,Places and regions,Regions and places
+T0068,Agricultural areas,Places and regions,Farmers and fishers
+T0069,General population,Population groups,Whole population and future generations
+T0070,Women and girls,Population groups,Women and girls
+T0071,Local communities,Population groups,Regions and places
+T0072,Vulnerable and marginalised groups,Population groups,Excluded and affected groups
+T0073,Youth,Population groups,Children and youth
+T0074,Children,Population groups,Children and youth
+T0075,Indigenous peoples,Population groups,Excluded and affected groups
+T0076,Persons with disabilities,Population groups,Excluded and affected groups
+T0077,Older persons,Population groups,Older people
+T0078,Diaspora and citizens abroad,Population groups,Excluded and affected groups
+T0079,Prisoners and offenders,Population groups,Excluded and affected groups
+T0080,Ethnic minorities,Population groups,Excluded and affected groups
+T0081,Migrants,Population groups,Excluded and affected groups
+T0082,Rural communities,Population groups,Regions and places
+T0083,Mothers and young children,Population groups,Women and girls
+T0084,Victims and survivors,Population groups,Excluded and affected groups
+T0085,Athletes and coaches,Population groups,Excluded and affected groups
+T0086,Religious and faith communities,Population groups,Excluded and affected groups
+T0087,Veterans and former combatants,Population groups,Excluded and affected groups
+T0088,Refugees and displaced people,Population groups,Excluded and affected groups
+T0089,People who use drugs,Population groups,Excluded and affected groups
+T0090,Disaster-affected people,Population groups,Excluded and affected groups
+T0091,Vulnerable children,Population groups,Children and youth
+T0092,Women and children,Population groups,Women and girls
+T0093,Women and youth,Population groups,Children and youth
+T0094,Landowners and land users,Population groups,Farmers and fishers
+T0095,Forest and resource-dependent communities,Population groups,Farmers and fishers
+T0096,Conflict-affected people,Population groups,Excluded and affected groups
+T0097,Returning migrants,Population groups,Excluded and affected groups
+T0098,At-risk youth,Population groups,Children and youth
+T0099,Road accident victims,Population groups,Excluded and affected groups
+T0100,Sexual and gender minorities,Population groups,Women and girls
+T0101,Out-of-school children,Population groups,Children and youth
+T0102,Parents,Population groups,Children and youth
+T0103,Unpaid carers,Population groups,Women and girls
+T0104,Men,Population groups,Whole population and future generations
+T0105,Government agencies,Public institutions,Public institutions
+T0106,Local and subnational governments,Public institutions,Public institutions
+T0107,Health facilities and providers,Public institutions,Public institutions
+T0108,Public sector,Public institutions,Public institutions
+T0109,Universities and higher education institutions,Public institutions,Public institutions
+T0110,Schools,Public institutions,Public institutions
+T0111,Armed forces and security sector,Public institutions,Public institutions
+T0112,State-owned enterprises,Public institutions,Public institutions
+T0113,Courts and justice sector,Public institutions,Public institutions
+T0114,Police and law enforcement,Public institutions,Public institutions
+T0115,Parliament and electoral bodies,Public institutions,Public institutions
+T0116,Public procurement and spending,Public institutions,Public institutions
+T0117,TVET institutions,Public institutions,Public institutions
+T0118,Revenue and customs agencies,Public institutions,Public institutions
+T0119,Statistical system,Public institutions,Public institutions
+T0120,Central bank and financial regulators,Public institutions,Public institutions
+T0121,Education institutions,Public institutions,Public institutions
+T0122,Emergency services,Public institutions,Public institutions
+T0123,Prisons and corrections,Public institutions,Public institutions
+T0124,Social security funds,Public institutions,Public institutions
+T0125,Agriculture sector,Sectors and value chains,Farmers and fishers
+T0126,Manufacturing sector,Sectors and value chains,Firms and MSMEs
+T0127,Water sector,Sectors and value chains,Firms and MSMEs
+T0128,Health sector,Sectors and value chains,Public institutions
+T0129,Transport sector,Sectors and value chains,Firms and MSMEs
+T0130,Creative and cultural sector,Sectors and value chains,Firms and MSMEs
+T0131,Fisheries and aquaculture sector,Sectors and value chains,Farmers and fishers
+T0132,Road sector,Sectors and value chains,Firms and MSMEs
+T0133,Maritime and ports sector,Sectors and value chains,Firms and MSMEs
+T0134,Education sector,Sectors and value chains,Public institutions
+T0135,Livestock and dairy sector,Sectors and value chains,Farmers and fishers
+T0136,Financial sector,Sectors and value chains,Firms and MSMEs
+T0137,Mining and extractives sector,Sectors and value chains,Firms and MSMEs
+T0138,Cultural heritage,Sectors and value chains,Firms and MSMEs
+T0139,Research and innovation sector,Sectors and value chains,Firms and MSMEs
+T0140,Plantation and industrial crops,Sectors and value chains,Farmers and fishers
+T0141,Rail sector,Sectors and value chains,Firms and MSMEs
+T0142,Tourism sector,Sectors and value chains,Firms and MSMEs
+T0143,Digital and ICT sector,Sectors and value chains,Firms and MSMEs
+T0144,Logistics and freight,Sectors and value chains,Firms and MSMEs
+T0145,Aviation sector,Sectors and value chains,Firms and MSMEs
+T0146,Food and agro-processing sector,Sectors and value chains,Firms and MSMEs
+T0147,Construction sector,Sectors and value chains,Firms and MSMEs
+T0148,Advanced manufacturing and electronics,Sectors and value chains,Firms and MSMEs
+T0149,Trade and commerce sector,Sectors and value chains,Firms and MSMEs
+T0150,Pharmaceutical sector,Sectors and value chains,Firms and MSMEs
+T0151,Media and broadcasting sector,Sectors and value chains,Firms and MSMEs
+T0152,Staple and food crops,Sectors and value chains,Farmers and fishers
+T0153,Services sector,Sectors and value chains,Firms and MSMEs
+T0154,Priority and productive sectors,Sectors and value chains,Firms and MSMEs
+T0155,Inland waterways,Sectors and value chains,Firms and MSMEs
+T0156,Energy sector,Sectors and value chains,Firms and MSMEs
+T0157,Telecommunications and postal sector,Sectors and value chains,Firms and MSMEs
+T0158,"Textile, apparel and leather sector",Sectors and value chains,Firms and MSMEs
+T0159,Infrastructure and investment projects,Sectors and value chains,Firms and MSMEs
+T0160,"Oil, gas and coal sector",Sectors and value chains,Firms and MSMEs
+T0161,Whole economy,Sectors and value chains,Whole population and future generations
+T0162,Forestry sector,Sectors and value chains,Farmers and fishers
+T0163,Utilities,Sectors and value chains,Firms and MSMEs
+T0164,Horticulture and high-value crops,Sectors and value chains,Farmers and fishers
+T0165,Public transport,Sectors and value chains,Firms and MSMEs
+T0166,Social sectors,Sectors and value chains,Public institutions
+T0167,Buildings,Sectors and value chains,Firms and MSMEs
+T0168,Informal economy,Sectors and value chains,Workers and informal workers
+T0169,Housing and real estate sector,Sectors and value chains,Firms and MSMEs
+T0170,Waste sector,Sectors and value chains,Firms and MSMEs
+T0171,Irrigation sector,Sectors and value chains,Farmers and fishers
+T0172,Sports sector,Sectors and value chains,Firms and MSMEs
+T0173,Farmers,Workers,Farmers and fishers
+T0174,Workers,Workers,Workers and informal workers
+T0175,Civil servants,Workers,Workers and informal workers
+T0176,Migrant workers,Workers,Workers and informal workers
+T0177,Health workers,Workers,Workers and informal workers
+T0178,Teachers and educators,Workers,Workers and informal workers
+T0179,Fishers,Workers,Farmers and fishers
+T0180,Researchers,Workers,Workers and informal workers
+T0181,Skilled workers and professionals,Workers,Workers and informal workers
+T0182,Jobseekers and unemployed,Workers,Workers and informal workers
+T0183,Pastoralists and livestock keepers,Workers,Farmers and fishers
+T0184,Smallholder farmers,Workers,Farmers and fishers
+T0185,Informal workers,Workers,Workers and informal workers
+T0186,Self-employed and platform workers,Workers,Workers and informal workers
+T0187,Transport and logistics workers,Workers,Workers and informal workers
+T0188,Industrial and mining workers,Workers,Workers and informal workers
+T0189,Construction workers,Workers,Workers and informal workers
+T0190,Social workers and volunteers,Workers,Workers and informal workers
+T0191,Creative and media workers,Workers,Workers and informal workers
+T0192,Domestic and care workers,Workers,Workers and informal workers
+T0193,Tourism workers,Workers,Workers and informal workers
+T0194,Utility and infrastructure workers,Workers,Workers and informal workers
+T0195,Women workers,Workers,Women and girls
+T0196,Older workers,Workers,Older people
+T0197,Plantation and seasonal workers,Workers,Workers and informal workers

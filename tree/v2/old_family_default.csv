@@ -1,0 +1,58 @@
+old_family_id,old_family,family_id,family,subpillar
+L2-01,Group-based barriers and discrimination,FAM-01,Equal rights and inclusion,Tackling Structural Exclusion
+L2-02,"Violence, coercion and exploitation",FAM-02,Safety from violence and exploitation,Enhancing Capabilities
+L2-03,Horizontal inequality and social cohesion,FAM-03,Social cohesion and peace,Tackling Structural Exclusion
+L2-04,Forced displacement and resettlement,FAM-03,Social cohesion and peace,Tackling Structural Exclusion
+L2-05,Household risk protection and consumption stability,FAM-06,Income security and social protection,Enhancing Capabilities
+L2-06,Escape from poverty traps,FAM-06,Income security and social protection,Enhancing Capabilities
+L2-07,Skills formation for work,FAM-04,Human capital formation,Enhancing Capabilities
+L2-08,Human capital formation through schooling,FAM-04,Human capital formation,Enhancing Capabilities
+L2-09,Health service coverage and quality,FAM-05,Health and longevity,Enhancing Capabilities
+L2-10,Disease and injury prevention,FAM-05,Health and longevity,Enhancing Capabilities
+L2-11,Food and nutrition security,FAM-06,Income security and social protection,Enhancing Capabilities
+L2-12,Access to basic services,FAM-07,Basic services and living conditions,Enhancing Capabilities
+L2-13,"Crime, violence and personal security",FAM-02,Safety from violence and exploitation,Enhancing Capabilities
+L2-14,Emissions mitigation,FAM-08,Climate mitigation and energy transition,Future Generations
+L2-15,Natural capital stewardship,FAM-09,Natural capital and ecosystems,Future Generations
+L2-16,"Pollution, waste and environmental behaviour",FAM-10,Pollution and a healthy environment,Future Generations
+L2-17,Climate hazard exposure and adaptation,FAM-11,Resilience to climate and disasters,Future Generations
+L2-18,Resource rents and intergenerational wealth,FAM-12,Intergenerational balance,Future Generations
+L2-19,Fiscal sustainability across generations,FAM-12,Intergenerational balance,Future Generations
+L2-20,Population age structure and lifecycle resources,FAM-12,Intergenerational balance,Future Generations
+L2-21,Water scarcity and allocation,FAM-09,Natural capital and ecosystems,Future Generations
+L2-22,Productive capability accumulation,FAM-13,Productive transformation,Export-led
+L2-23,Trade costs and market connectivity,FAM-14,Integration into world markets,Export-led
+L2-24,Market access and integration,FAM-14,Integration into world markets,Export-led
+L2-25,International capital and knowledge transmission,FAM-14,Integration into world markets,Export-led
+L2-26,International tourism demand,FAM-13,Productive transformation,Export-led
+L2-27,Innovation and technology diffusion,FAM-15,Innovation and technology,Export-led
+L2-28,Internal market connectivity,FAM-16,Infrastructure networks,Domestic Integration
+L2-29,Urban agglomeration and land use,FAM-17,"Cities, regions and spatial development",Domestic Integration
+L2-30,Network utility performance,FAM-16,Infrastructure networks,Domestic Integration
+L2-31,Domestic linkages and agglomeration of production,FAM-17,"Cities, regions and spatial development",Domestic Integration
+L2-32,Market participation of small producers,FAM-18,Farmers and small enterprises,Growth through Inclusion
+L2-33,Primary-sector productivity growth,FAM-18,Farmers and small enterprises,Growth through Inclusion
+L2-34,Firm capability and growth,FAM-18,Farmers and small enterprises,Growth through Inclusion
+L2-35,Market institutions and competition,FAM-20,"Markets, finance and property rights",Growth through Inclusion
+L2-36,"Credit, savings and financial access",FAM-20,"Markets, finance and property rights",Growth through Inclusion
+L2-37,Labour market matching and regulation,FAM-19,Jobs and labour markets,Growth through Inclusion
+L2-38,Adjustment of displaced workers and lagging places,FAM-19,Jobs and labour markets,Growth through Inclusion
+L2-39,Labour mobility and remittances,FAM-19,Jobs and labour markets,Growth through Inclusion
+L2-40,Property rights and land markets,FAM-20,"Markets, finance and property rights",Growth through Inclusion
+L2-41,External balance and shock absorption,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight
+L2-42,Supply-chain and economic security,FAM-22,Economic resilience to external shocks,Anticipation and Strategic Foresight
+L2-43,Hazard anticipation,FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight
+L2-44,"Foresight, planning and evidence",FAM-21,"Foresight, data and early warning",Anticipation and Strategic Foresight
+L2-45,Institutional checks on executive power,FAM-23,Rule of law and checks on power,Adaptability and Course Correction
+L2-46,"Feedback, learning and policy adaptation",FAM-24,Adaptive and learning government,Adaptability and Course Correction
+L2-47,Regulatory updating for technological change,FAM-24,Adaptive and learning government,Adaptability and Course Correction
+L2-48,Bureaucratic capability and service delivery,FAM-25,State capability and service delivery,Agility and Delivery Capability
+L2-49,Decentralised provision,FAM-25,State capability and service delivery,Agility and Delivery Capability
+L2-50,Revenue capacity,FAM-26,Public finances,Agility and Delivery Capability
+L2-51,Public expenditure quality,FAM-26,Public finances,Agility and Delivery Capability
+L2-52,Regulatory enforcement capacity,FAM-25,State capability and service delivery,Agility and Delivery Capability
+L2-53,Crisis response capacity,FAM-27,Emergency response and recovery,Agility and Delivery Capability
+L2-54,Participation and community voice,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement"
+L2-55,Information and accountability,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement"
+L2-56,Political accountability and contestation,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement"
+L2-57,Reform coalitions and economic dialogue,FAM-28,"Voice, participation and accountability","Reform Leadership, Coalitions and Civic Engagement"
