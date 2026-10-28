@@ -21,7 +21,7 @@ python3 test_bottomup.py <review.html> # bottom-up tree v48 leaf objectives read
 
 `thailand.py` reads the workflow outputs under `data/`. Until those are at hand, `--from <mirror.json>` runs it on the Mirror Forests export instead, which has no SDG targets, urgency, status or quotes; the page says so on the Method tab. Mechanism placement in that mode is provisional, by plan words, and is replaced by the model's `node_id` once the workflow places strategies on v2.
 
-`thailand_v2.html` is the page: tree, strategies, risks, plan-to-plan change, sector plans as a subordinate layer, crosswalks, the bottom-up test and the method. It is a single file with no dependencies.
+`thailand_v2.html` is the page, drawn in the Mirror Forests style: the tree as a rice paddy (stalk per family, head branch per mechanism, grain per strategy, bright grain at a pathway), risk clouds with a storm test per mechanism, plan-to-plan growth, sector plans as optional coloured leaves, and views for the profile, strategies, risks, over time, sector plans, crosswalks, the bottom-up test and the method. It is a single file built from `page_template.html`.
 
 ## Status
 
