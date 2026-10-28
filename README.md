@@ -22,6 +22,19 @@ cd workflow && python3 -m pytest -q      # 6 smoke tests, no keys or documents n
 
 To run a real plan you need Azure OpenAI and Document Intelligence keys in `workflow/.env`, and the source PDFs. [workflow/RUNBOOK.md](workflow/RUNBOOK.md) walks through it step by step, with the Thai costs. `workflow/run_thailand.sh` runs every Thai plan one at a time, with a dry run before each.
 
+## Environment
+
+**Python:** 3.9 or later. Sebastian's runs used Python 3.12 in a `.venv`. Every package is listed in `requirements.txt`: the `openai` client, the Azure Document Intelligence client, `pypdf`, `pymupdf`, `tiktoken` and `pytest`.
+
+**Services:** PV II uses no Anthropic APIs. It calls two Azure services:
+
+| Service | Used for | Variables in `workflow/.env` |
+|---|---|---|
+| Azure OpenAI, through the `openai` client | Every model call (steps C, E, F and M) | `OPENAI_BASE_URL`, `AZURE_API_KEY`, `OPENAI_MODEL` (small model, step E), `OPENAI_MODEL_ALL_AT_ONCE` (large model, C, F and M) |
+| Azure AI Document Intelligence | Parsing each PDF once (the result is cached) | `AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT`, `AZURE_DOCUMENT_INTELLIGENCE_KEY` |
+
+To set it up, copy `workflow/.env.example` to `workflow/.env` and fill it in. The example lists every variable the code reads; the optional ones can stay blank. `.env` is gitignored. Keys are shared privately, never through the repo. No keys are needed for the tests or for the tree.
+
 ## Repository layout
 
 ```
