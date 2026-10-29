@@ -1,0 +1,883 @@
+<title>Thailand on the Golden Tree</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Serif:ital@0;1&family=DM+Mono&family=Jura:wght@400;600&display=swap">
+<style>
+/* Layout: the paddy drawing across the page (three stands over the water, one rice stalk per family), the plan strip and
+   risk chips above it, the reading panel below it; the other readings are views under the same header. Dark by design. */
+:root {
+  --bg: #06110d; --panel: #0b1a14; --panel2: #10241c; --line: #1d3529; --sage: #8db8a0; --sage-d: #3e7a62; --pale: #cfe3d6;
+  --gold: #d4a72c; --gold2: #f1d58a; --rust: #c2603f; --red: #d8625e; --amber: #c9a35a; --ok: #d4a72c;
+  --display: "Italiana", "Didot", Georgia, serif; --serif: "Instrument Serif", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, Menlo, monospace; --label: "Jura", "Avenir Next", system-ui, sans-serif;
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { background: var(--bg); }
+body { margin: 0; color: var(--pale); font: 14px/1.5 var(--label); }
+.wrap { max-width: 1500px; margin: 0 auto; padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.kicker { font-family: var(--mono); color: var(--gold); letter-spacing: .28em; font-size: 12px; text-transform: uppercase; }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(38px, 6vw, 72px); letter-spacing: .06em; margin: 6px 0 2px; color: #fff; }
+h1 .yrs { font-family: var(--mono); font-size: .32em; letter-spacing: .14em; color: var(--gold2); margin-left: .6em; vertical-align: middle; white-space: nowrap; }
+.sub { font-family: var(--serif); font-style: italic; color: var(--gold2); font-size: clamp(19px, 2.4vw, 24px); margin: 0 0 14px; }
+.live { font-size: 14.5px; color: var(--pale); margin: -4px 0 12px; line-height: 1.5; max-width: 980px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--mono); font-size: 12px; color: var(--sage); letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+.stats b { color: var(--pale); font-weight: 400; }
+
+.views { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 18px 0 6px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+.views .g { font-family: var(--mono); font-size: 10.5px; letter-spacing: .22em; color: var(--gold); align-self: center; margin-right: 4px; }
+.views a { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; color: var(--sage); padding: 3px 0; border-bottom: 1px solid transparent; text-decoration: none; text-transform: uppercase; }
+.views a:hover { color: var(--pale); }
+.views a[aria-current="page"] { color: var(--gold2); border-bottom-color: var(--gold); }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.strip { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 14px 0 6px; }
+.strip .grp { display: flex; align-items: flex-end; gap: 8px; overflow-x: auto; max-width: 100%; padding-bottom: 2px; }
+.strip .grp .l { font-family: var(--mono); font-size: 10.5px; letter-spacing: .22em; color: var(--gold); align-self: center; margin-right: 4px; }
+.thumb { all: unset; cursor: pointer; display: flex; flex-direction: column; gap: 3px; padding: 6px 8px; border: 1px solid var(--line); }
+.thumb svg { width: 112px; height: 30px; display: block; }
+.thumb .t { font-size: 12px; color: var(--pale); white-space: nowrap; }
+.thumb .y { font-family: var(--mono); font-size: 10.5px; color: var(--sage); white-space: nowrap; }
+.thumb:hover { border-color: var(--sage-d); }
+.thumb[aria-pressed="true"] { border-color: var(--gold); background: var(--panel2); }
+.thumb:disabled { cursor: default; opacity: .35; }
+.thumb.part { opacity: .7; }
+.thumb.vis { border-style: dashed; }
+.sw { display: inline-block; width: 9px; height: 9px; margin-right: 6px; vertical-align: 0; }
+
+.risks { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 6px; align-items: center; }
+.risks .l { font-family: var(--mono); font-size: 11px; letter-spacing: .2em; color: var(--gold); margin-right: 6px; }
+.chip { font: 12px var(--label); color: var(--sage); background: transparent; border: 1px solid var(--line); padding: 4px 10px; border-radius: 2px; cursor: pointer; }
+.chip:hover { color: var(--pale); border-color: var(--sage-d); }
+.chip[aria-pressed="true"] { color: var(--bg); background: var(--sage); border-color: var(--sage); }
+.find { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+input[type=search], select { font: 12.5px var(--label); color: var(--pale); background: var(--panel); border: 1px solid var(--line); padding: 5px 8px; border-radius: 2px; max-width: 230px; }
+input[type=search]::placeholder { color: var(--sage); opacity: .7; }
+
+.stage { position: relative; margin-top: 8px; overflow-x: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+svg#paddy { display: block; width: 100%; min-width: 900px; height: auto; }
+.culm { cursor: pointer; }
+.culm:focus { outline: none; }
+.culm:focus-visible .hit, .culm.sel .hit { stroke: var(--gold2); stroke-width: 1.2; stroke-dasharray: 3 4; }
+.culm.dim { opacity: .16; }
+.mnode { cursor: pointer; }
+.cloud { cursor: pointer; }
+.cloud:focus { outline: none; }
+.cloud:focus-visible ellipse:first-of-type { stroke: var(--gold); stroke-width: 1.5; }
+#paddy .rain { pointer-events: none; }
+#paddy.iso .culm .gr:not(.keep), #paddy.iso .culm .sl:not(.keep) { opacity: .12; }
+#paddy.iso-nat .culm .sl { opacity: .1; }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fall { to { stroke-dashoffset: -24; } }
+  #paddy .rain line { animation: fall 1.4s linear infinite; }
+  #paddy .culm, #paddy .gr, #paddy .sl { transition: opacity .2s; }
+  @keyframes grainin { from { opacity: 0; } }
+  #paddy.anim .gr { animation: grainin .7s ease-out; }
+}
+#tip { position: absolute; pointer-events: none; background: rgba(6, 17, 13, .95); border: 1px solid var(--line); padding: 8px 10px; font-size: 12px; max-width: 300px; line-height: 1.45; display: none; z-index: 3; }
+#tip b { display: block; color: #fff; font-weight: 600; margin-bottom: 2px; }
+#tip .m { font-family: var(--mono); color: var(--sage); font-size: 11px; }
+.key { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 24px; margin: 18px 0 0; }
+.key div { font-size: 13px; color: var(--sage); line-height: 1.45; min-width: 0; }
+.key b { display: block; font-family: var(--mono); font-weight: 400; color: var(--gold); letter-spacing: .2em; font-size: 11px; margin-bottom: 3px; }
+.key i { display: inline-block; width: 10px; height: 6px; border-radius: 50%; margin: 0 4px 0 0; vertical-align: 1px; }
+
+#panel { margin-top: 28px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 28px; }
+@media (max-width: 880px) { #panel { grid-template-columns: 1fr; } }
+.card { background: var(--panel); border: 1px solid var(--line); padding: 20px 22px; min-width: 0; }
+.card h2 { font-family: var(--display); font-weight: 400; font-size: 30px; color: #fff; margin: 4px 0 6px; letter-spacing: .03em; text-wrap: balance; }
+.path { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+.card p { font-size: 14px; line-height: 1.55; color: var(--pale); margin: 8px 0; }
+.quote { font-family: var(--serif); font-style: italic; font-size: 17px !important; color: var(--gold2) !important; }
+h3 { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: .2em; color: var(--gold); margin: 18px 0 8px; text-transform: uppercase; }
+.mech { display: grid; grid-template-columns: minmax(0, 1fr) 90px 52px; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13px; cursor: pointer; }
+.mech small { display: block; color: var(--sage); font-size: 11.5px; }
+.mech .bar { height: 6px; background: var(--line); }
+.mech .bar i { display: block; height: 100%; background: var(--gold); }
+.mech .n { font-family: var(--mono); font-size: 12px; text-align: right; color: var(--sage); font-variant-numeric: tabular-nums; }
+.mech .n em { font-style: normal; color: var(--sage); opacity: .8; }
+.mech.off { color: var(--sage); opacity: .65; }
+.mech:hover { color: #fff; opacity: 1; }
+.mech[aria-pressed="true"] { color: var(--gold2); opacity: 1; box-shadow: inset 2px 0 0 var(--gold); padding-left: 6px; }
+.pw { margin: 4px 0 10px 12px; border-left: 1px solid var(--sage-d); padding-left: 10px; }
+.pw .mech { grid-template-columns: minmax(0, 1fr) 52px; font-size: 12.5px; }
+.strat { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; line-height: 1.45; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em; color: var(--sage); }
+.tag { border: 1px solid var(--line); padding: 1px 6px; overflow-wrap: anywhere; }
+.tag.l3 { color: var(--bg); background: var(--gold2); border-color: var(--gold2); }
+.tag.l2 { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.tag.l1 { color: var(--pale); }
+.tag.ok { color: var(--gold2); border-color: var(--gold); }
+.tag.weak { color: var(--pale); border-color: var(--sage-d); }
+.tag.bad { color: var(--rust); border-color: var(--rust); }
+.tag.sec { color: var(--pale); }
+.list { max-height: 640px; overflow-y: auto; padding-right: 6px; }
+.empty, .hint { color: var(--sage); font-size: 13px; }
+.mfilter { font-family: var(--mono); font-size: 12px; color: var(--gold2); }
+.linkbtn { all: unset; cursor: pointer; color: var(--sage); text-decoration: underline; }
+
+.growth { margin-top: 34px; border-top: 1px solid var(--line); padding-top: 18px; }
+.growth p { font-size: 13px; color: var(--sage); margin: 0 0 14px; max-width: 820px; line-height: 1.5; }
+.rkey { font-family: var(--mono); font-size: 11px; color: var(--sage); }
+.rkey b { font-weight: 400; color: var(--pale); }
+.grow { display: flex; align-items: center; gap: 8px; overflow-x: auto; padding-bottom: 6px; }
+.grow figure { margin: 0; flex: 0 0 auto; width: min(300px, 78vw); }
+.grow svg { width: 100%; height: auto; display: block; background: linear-gradient(#06110d, #0c2219); }
+.grow figcaption { font-family: var(--mono); font-size: 12px; color: var(--pale); margin-top: 6px; line-height: 1.5; }
+.grow figcaption b { font-weight: 400; color: var(--gold2); margin-right: 6px; }
+.grow figcaption span { display: block; color: var(--sage); font-size: 11px; }
+.grow .step { flex: 0 0 auto; font-family: var(--mono); color: var(--sage); font-size: 11px; text-align: center; line-height: 1.6; min-width: 64px; }
+.grow .step b { display: block; font-size: 18px; font-weight: 400; color: var(--sage); }
+.grow .step .a { color: var(--gold2); } .grow .step .d { color: var(--rust); }
+.grow .apart { flex: 0 0 auto; width: 1px; align-self: stretch; background: var(--line); margin: 0 10px; }
+.foot { margin-top: 36px; font-family: var(--mono); font-size: 11.5px; color: var(--sage); line-height: 1.7; }
+
+/* readings */
+section[hidden] { display: none; }
+.note { font-size: 13.5px; color: var(--pale); border-left: 2px solid var(--gold); padding: 4px 12px; margin: 14px 0; max-width: 92ch; line-height: 1.55; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 16px 0; }
+.tile { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.tile .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+.tile b { display: block; font: 400 34px/1.1 var(--display); color: #fff; margin-top: 6px; font-variant-numeric: tabular-nums; }
+.tile .d { font-size: 12px; color: var(--sage); margin-top: 4px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; align-items: start; }
+.grid2 > * { min-width: 0; }
+.bars { display: grid; grid-template-columns: minmax(120px, 2fr) 5fr auto; gap: 4px 10px; align-items: center; font-size: 13px; }
+.bars .n { text-align: right; font-family: var(--mono); font-size: 11.5px; color: var(--sage); min-width: 64px; font-variant-numeric: tabular-nums; }
+.bar { height: 8px; background: var(--line); position: relative; overflow: hidden; }
+.bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--gold); }
+.bar i.s { background: var(--sage); opacity: .8; top: 5px; }
+.bar i.cmp { background: transparent; border-right: 2px solid var(--pale); }
+.bars .k { cursor: default; }
+.bars .k.go { cursor: pointer; }
+.bars .k.go:hover { color: var(--gold2); }
+.grp { margin: 12px 0 4px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--sage); text-transform: uppercase; }
+.grp b { color: var(--pale); font-weight: 400; }
+.frame { overflow: auto; max-width: 100%; border: 1px solid var(--line); background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { position: sticky; top: 0; background: var(--panel2); font: 400 10.5px var(--mono); letter-spacing: .14em; color: var(--gold); text-transform: uppercase; cursor: pointer; white-space: nowrap; user-select: none; z-index: 1; }
+th .dir { color: var(--gold2); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.num { font-family: var(--mono); font-size: 12px; }
+td .tag { white-space: nowrap; overflow-wrap: normal; }
+tr.sec td { color: var(--sage); }
+tr.sec td:first-child { box-shadow: inset 3px 0 0 var(--sage-d); }
+.small { font-size: 12px; color: var(--sage); }
+.mono { font-family: var(--mono); font-size: 11.5px; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin: 12px 0; }
+.filters label { display: flex; flex-direction: column; gap: 4px; font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+button.plain { font: 12px var(--label); color: var(--sage); background: transparent; border: 1px solid var(--line); padding: 5px 10px; cursor: pointer; border-radius: 2px; }
+button.plain:hover { color: var(--pale); border-color: var(--sage-d); }
+.heat { display: grid; gap: 3px 8px; font-size: 12.5px; align-items: center; }
+.heat .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; color: var(--gold); text-transform: uppercase; }
+.heat .r { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cell { height: 24px; border: 1px solid transparent; cursor: pointer; font: 11px var(--mono); color: var(--bg); background: var(--line); }
+.cell:hover, .cell[aria-pressed="true"] { border-color: var(--pale); }
+.cell.green { background: color-mix(in oklab, var(--gold) var(--a), var(--panel)); }
+.cell.amber { background: color-mix(in oklab, var(--sage) var(--a), var(--panel)); }
+.cell.red { background: color-mix(in oklab, var(--red) var(--a), var(--panel)); color: #fff; }
+.cell.none { background: var(--panel2); color: var(--sage); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--sage); margin: 10px 0; align-items: center; }
+.legend .sw { width: 12px; height: 12px; }
+.cols { columns: 2 340px; column-gap: 32px; }
+.cols p { break-inside: avoid; margin: 0 0 12px; font-size: 13.5px; line-height: 1.6; }
+.cols p b { color: var(--gold2); font-weight: 400; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; display: block; }
+.multi { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.wrapc { white-space: normal; }
+details summary { cursor: pointer; color: var(--gold2); font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em; margin-top: 10px; }
+</style>
+
+<div class="wrap">
+  <div class="kicker">Project Vision II · The golden tree v2</div>
+  <h1 id="cname">THAILAND</h1>
+  <p class="sub" id="cline">Rice in the flooded paddy: one stalk per family, one branch of the head per mechanism, one grain per strategy.</p>
+  <p class="live" id="live" aria-live="polite"></p>
+  <div class="stats" id="stats"></div>
+  <div class="strip" id="strip"></div>
+  <nav class="views" id="views" aria-label="Views"><span class="g">READ AS</span>
+    <a href="#paddy">The paddy</a><a href="#profile">Profile</a><a href="#strategies">Strategies</a><a href="#risks">Risks</a><a href="#time">Over time</a>
+    <a href="#sector">Sector plans</a><a href="#crosswalks">Crosswalks</a><a href="#test">Bottom-up test</a><a href="#method">Method</a></nav>
+
+  <section id="v-paddy">
+    <div class="risks" id="riskchips"><span class="l">STORM</span></div>
+    <div class="risks"><span class="l">FIND</span><input type="search" id="find" placeholder="words in a strategy or objective" aria-label="Find strategies"><span class="small" id="findn"></span></div>
+    <div class="stage" id="stage"><svg id="paddy" role="img"></svg><div id="tip"></div></div>
+    <div class="key" id="key"></div>
+    <div id="panel"></div>
+    <div id="growth" class="growth"></div>
+  </section>
+  <section id="v-profile" hidden></section>
+  <section id="v-strategies" hidden></section>
+  <section id="v-risks" hidden></section>
+  <section id="v-time" hidden></section>
+  <section id="v-sector" hidden></section>
+  <section id="v-crosswalks" hidden></section>
+  <section id="v-test" hidden></section>
+  <section id="v-method" hidden></section>
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+const D = /*DATA*/;
+const TEST = /*TEST*/;
+const T = D.tree, FAM = Object.fromEntries(T.families.map(f => [f.family_id, f])), MEC = Object.fromEntries(T.mechanisms.map(m => [m.mechanism_id, m])),
+      PATH = Object.fromEntries(T.pathways.map(p => [p.pathway_id, p])), SUB = Object.fromEntries(T.subpillars.map(s => [s.code, s]));
+const PLANS = D.plans, M = D.measures, S = D.strategies, RISKS = T.risks, SDGDIM = T.sdg_dim || {};
+S.forEach((s, i) => (s.i = i));
+const NAT = PLANS.map((p, i) => i).filter(i => PLANS[i].doc_type !== "sector"), SEC = PLANS.map((p, i) => i).filter(i => PLANS[i].doc_type === "sector");
+const NDP = NAT.filter(i => PLANS[i].doc_type === "ndp").sort((a, b) => PLANS[a].period_start - PLANS[b].period_start), VIS = NAT.filter(i => PLANS[i].doc_type === "vision");
+const LATEST = NDP[NDP.length - 1];
+const ORDER = ["SMG", "PFA", "MCH"], STAND = { SMG: "ECONOMY", PFA: "PEOPLE", MCH: "GOVERNANCE" };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const pct = x => (100 * (x || 0)).toFixed(x >= .1 || !x ? 0 : 1) + "%";
+const n0 = x => Number(x || 0).toLocaleString("en-GB");
+const by = (arr, f) => { const o = {}; arr.forEach(x => { const k = f(x); o[k] = (o[k] || 0) + 1; }); return o; };
+const sortDesc = o => Object.entries(o).sort((a, b) => b[1] - a[1]);
+const isSec = i => PLANS[i].doc_type === "sector";
+const planShort = i => PLANS[i].short || PLANS[i].title;
+const planLabel = i => `${planShort(i)} ${PLANS[i].period_start}–${PLANS[i].period_end}`;
+const famOrder = ORDER.flatMap(p => T.subpillars.filter(s => s.pillar === p)).flatMap(s => T.families.filter(f => f.subpillar_code === s.code).map(f => f.family_id));
+const strong = k => k.startsWith("mechanism-consistent");
+const kindCls = k => strong(k) ? "ok" : k === "mention-only" ? "bad" : "weak";
+
+// ---------------------------------------------------------------- state
+// plan: a national document index, or null for the three five-year plans together. secOn: sector plans switched on (off by default:
+// they are a subordinate layer and the national plan leads).
+let plan = LATEST, secOn = new Set(), active = null, findQ = "", selFam = null, selMec = null, selPath = null, iso = null, animate = false;
+try { const p = JSON.parse(localStorage.getItem("gt3") || "{}"); if (p.plan === null || (Number.isInteger(p.plan) && PLANS[p.plan] && !isSec(p.plan))) plan = p.plan; if (Array.isArray(p.on)) secOn = new Set(p.on.filter(i => PLANS[i] && isSec(i))); } catch (e) {}
+const save = () => { try { localStorage.setItem("gt3", JSON.stringify({ plan, on: [...secOn] })); } catch (e) {} };
+const natIn = () => plan === null ? NDP : [plan];
+function years() { const n = natIn(); return [Math.min(...n.map(i => PLANS[i].period_start)), Math.max(...n.map(i => PLANS[i].period_end))]; }
+const ov = i => { const y = years(); return [Math.max(y[0], PLANS[i].period_start), Math.min(y[1], PLANS[i].period_end)]; };
+const fits = i => { const o = ov(i); return o[0] <= o[1]; };
+const secIn = () => SEC.filter(i => secOn.has(i) && fits(i));
+const natRows = () => { const n = new Set(natIn()); return S.filter(s => n.has(s.p)); };
+const secRows = () => { const n = new Set(secIn()); return S.filter(s => n.has(s.p)); };
+const hit = s => !active || s.links.some(l => l.risk === active);
+const found = s => !findQ || `${s.name} ${s.objective} ${s.target_label} ${s.instrument_label}`.toLowerCase().includes(findQ);
+const linkOf = s => active ? s.links.find(l => l.risk === active) : null;
+
+// ---------------------------------------------------------------- header, plan strip
+function header() {
+  const y = years(), rows = natRows(), sec = secRows(), d = by(rows, s => s.level);
+  document.getElementById("cname").innerHTML = `THAILAND<span class="yrs">${y[0]}–${y[1]}</span>`;
+  const who = plan === null ? `The three five-year plans, ${y[0]}–${y[1]}` : `${PLANS[plan].title}, ${y[0]}–${y[1]}`;
+  const nS = secIn().length;
+  document.getElementById("live").textContent = `${who}${nS ? `, with ${nS} sector plan${nS > 1 ? "s" : ""} as coloured leaves` : ""}: ${n0(rows.length)} strategies on the tree, ${Object.keys(by(rows, s => s.family_id)).length} of 28 families and ${Object.keys(by(rows.filter(s => s.mechanism_id), s => s.mechanism_id)).length} of 99 mechanisms reached.`;
+  const links = rows.flatMap(s => s.links), cons = links.filter(l => strong(l.kind)).length;
+  document.getElementById("stats").innerHTML =
+    `<span><b>${n0(rows.length)}</b> strategies placed</span><span><b>${n0(d.L3 || 0)}</b> at a pathway</span><span><b>${n0(d.L2 || 0)}</b> at a mechanism</span><span><b>${n0(d.L1 || 0)}</b> held at a family</span>` +
+    `<span><b>${pct(cons / Math.max(1, links.length))}</b> of risk links mechanism-consistent</span>` + (sec.length ? `<span><b>+${n0(sec.length)}</b> from ${nS} sector plan${nS > 1 ? "s" : ""}, never in these counts</span>` : "");
+}
+const AUT = "#94a05a", LEAF = "#5f9a80", GOLD = "#d4a72c", GOLD2 = "#f1d58a", RUST = "#c2603f", RED = "#d8625e", DIM = "#2a3d33", PALE = "#cfe3d6", VISC = "#8db8a0";
+const planCol = i => isSec(i) ? PLANS[i].colour : PLANS[i].doc_type === "vision" ? VISC : i === LATEST ? LEAF : AUT;
+const FMAX = Math.max(...NAT.flatMap(i => Object.values(M[i].family_n)));
+function strip() {
+  const box = document.getElementById("strip"); box.innerHTML = "";
+  const thumb = (i, col) => `<svg viewBox="0 0 112 30" aria-hidden="true">${famOrder.map((f, j) => { const n = M[i].family_n[f] || 0, h = Math.min(30, 30 * Math.sqrt(n / FMAX)); return n ? `<rect x="${j * 4}" y="${30 - h}" width="2.6" height="${h}" fill="${col}"/>` : ""; }).join("")}</svg>`;
+  const group = l => { const d = document.createElement("div"); d.className = "grp"; d.innerHTML = `<span class="l">${l}</span>`; box.appendChild(d); return d; };
+  const button = (g, html, pressed, o = {}) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "thumb" + (o.cls ? " " + o.cls : ""); b.innerHTML = html; b.disabled = !!o.disabled;
+    b.setAttribute("aria-pressed", String(pressed)); if (o.title) b.title = o.title; if (o.click) b.addEventListener("click", o.click);
+    if (o.iso !== undefined) { const on = () => { iso = o.iso; applyIso(); }, off = () => { iso = null; applyIso(); }; b.addEventListener("mouseenter", on); b.addEventListener("mouseleave", off); b.addEventListener("focus", on); b.addEventListener("blur", off); }
+    g.appendChild(b);
+  };
+  const g = group("NATIONAL");
+  button(g, `<span class="t">ALL FIVE-YEAR PLANS</span><span class="y">${PLANS[NDP[0]].period_start}–${PLANS[LATEST].period_end}</span>`, plan === null, { click: () => setPlan(null), title: "The 11th, 12th and 13th Plans pooled; the National Strategy stays apart" });
+  NDP.forEach(i => button(g, `${thumb(i, planCol(i))}<span class="t">${esc(planShort(i))}</span><span class="y">${PLANS[i].period_start}–${PLANS[i].period_end}</span>`, plan === i, { iso: i, title: PLANS[i].title, click: () => setPlan(plan === i ? null : i) }));
+  VIS.forEach(i => button(g, `${thumb(i, planCol(i))}<span class="t">${esc(planShort(i))}</span><span class="y">${PLANS[i].period_start}–${PLANS[i].period_end} · 20-year</span>`, plan === i, { cls: "vis", iso: i, title: PLANS[i].title + ": a different document class, read on its own", click: () => setPlan(plan === i ? null : i) }));
+  const s = group("SECTOR · OFF UNTIL CHOSEN");
+  SEC.forEach(i => { const f = fits(i), [a, b] = f ? ov(i) : [0, 0], y = years(), part = f && (a > y[0] || b < y[1]);
+    const note = !f ? `outside ${y[0]}–${y[1]}` : part ? `overlap ${a}–${b}` : "";
+    button(s, `${thumb(i, PLANS[i].colour)}<span class="t"><i class="sw" style="background:${PLANS[i].colour}"></i>${esc(planShort(i))}</span><span class="y">${PLANS[i].period_start}–${PLANS[i].period_end}${note ? " · " + note : ""}</span>`, f && secOn.has(i),
+      { iso: i, disabled: !f, cls: part ? "part" : "", title: `${PLANS[i].title}${f ? " (click to lay its leaves over the national stalks, or take them off)" : " does not overlap the national plans in view"}`, click: () => { secOn.has(i) ? secOn.delete(i) : secOn.add(i); save(); render(); } }); });
+}
+function setPlan(p) { plan = p; animate = true; save(); render(); }
+
+// ---------------------------------------------------------------- the paddy
+const NS = "http://www.w3.org/2000/svg", W = 1760, H = 1000, GROUND = 700, TOP_MIN = 170;
+const svg = document.getElementById("paddy"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
+const el = (tag, a = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (parent) parent.appendChild(e); return e; };
+const mixc = (a, b, t) => `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(",")})`;
+const quad = (a, c, b, t) => [(1 - t) ** 2 * a[0] + 2 * (1 - t) * t * c[0] + t * t * b[0], (1 - t) ** 2 * a[1] + 2 * (1 - t) * t * c[1] + t * t * b[1]];
+const quadAng = (a, c, b, t) => Math.atan2(2 * (1 - t) * (c[1] - a[1]) + 2 * t * (b[1] - c[1]), 2 * (1 - t) * (c[0] - a[0]) + 2 * t * (b[0] - c[0]));
+function grad(defs, id, stops) { const g = el("linearGradient", { id, x1: 0, y1: 0, x2: 0, y2: 1 }, defs); stops.forEach(([o, c, a]) => el("stop", { offset: o, "stop-color": c, "stop-opacity": a ?? 1 }, g)); }
+function leafPath(x, y, ang, L, wr = .16) {
+  const w = L * wr, c = Math.cos(ang), s = Math.sin(ang), nx = -s, ny = c, tx = x + c * L, ty = y + s * L;
+  return `M${x},${y} Q${x + c * L * .45 + nx * w},${y + s * L * .45 + ny * w} ${tx},${ty} Q${x + c * L * .45 - nx * w},${y + s * L * .45 - ny * w} ${x},${y}Z`;
+}
+function stemShape(g, pt, w, taper, fill, steps = 24) {
+  const L = [], R = [];
+  for (let i = 0; i <= steps; i++) { const t = i / steps, [px, py] = pt(t), ww = w * (1 - taper * t) / 2; L.push(`${px - ww},${py}`); R.unshift(`${px + ww},${py}`); }
+  el("path", { d: `M${L.join(" L")} L${R.join(" L")}Z`, fill }, g);
+}
+// a grain's colour: by depth, or with a storm chosen by the kind of link the strategy has to it
+function grainCol(s) {
+  if (!found(s)) return [DIM, .3, 0];
+  if (active) { const l = linkOf(s); if (!l) return [DIM, .3, 0]; return strong(l.kind) ? [GOLD, .95, 0] : l.kind === "mention-only" ? [RUST, .95, 0] : [PALE, .85, 0]; }
+  return s.level === "L3" ? [GOLD2, 1, 1] : s.level === "L2" ? [GOLD, .92, 0] : [LEAF, .8, 0];
+}
+function grain(g, x, y, ang, s, cls = "gr") {
+  const [c, a, rim] = grainCol(s);
+  el("ellipse", { class: cls, "data-p": s.p, cx: x, cy: y, rx: 4.4, ry: 2.2, fill: c, opacity: a, stroke: rim ? GOLD : "none", "stroke-width": rim ? .6 : 0, transform: `rotate(${ang * 180 / Math.PI} ${x} ${y})` }, g);
+}
+// the storm's verdict on a mechanism, over the national plans in view: sheltered (a mechanism-consistent strategy), partly (only weaker
+// links), exposed (the plans frame the risk, the literature ties it to this mechanism, and no strategy here links to it)
+function stormCells() {
+  if (!active) return {};
+  const rows = natRows(), framed = natIn().some(i => (PLANS[i].risk_records || {})[active]), out = {};
+  T.mechanisms.forEach(m => {
+    const here = rows.filter(s => s.mechanism_id === m.mechanism_id), ls = here.flatMap(s => s.links.filter(l => l.risk === active));
+    const carries = m.risks.includes(active) || m.conditional_risks.some(c => c.risk === active);
+    out[m.mechanism_id] = ls.some(l => strong(l.kind)) ? "sheltered" : ls.length ? "partly" : carries && framed ? "exposed" : "";
+  });
+  return out;
+}
+const SCENE = bg => {  // the paddy: sugar palms on the far bund, mist over the fields
+  const palm = (x, y0, h, a) => { el("line", { x1: x, y1: y0, x2: x + (rnd() - .5) * 20, y2: y0 - h, stroke: "#3e7a62", "stroke-width": 2.2, opacity: a }, bg);
+    for (let k = 0; k < 9; k++) { const d = (k - 4) / 4; el("path", { d: `M${x},${y0 - h} q${d * 18},-12 ${d * 34},${6 + Math.abs(d) * 14}`, stroke: "#3e7a62", "stroke-width": 1.4, fill: "none", opacity: a }, bg); } };
+  for (let x = 30; x < W; x += 150 + rnd() * 170) palm(x, GROUND - 70, 120 + rnd() * 70, .35);
+  el("rect", { x: 0, y: GROUND - 74, width: W, height: 4, fill: "#3e7a62", opacity: .4 }, bg);
+  for (let k = 0; k < 3; k++) { const y = GROUND - 60 + k * 18; el("path", { d: `M0,${y} C500,${y - 8} 1100,${y + 6} ${W},${y - 4}`, stroke: "#8db8a0", "stroke-opacity": .08, fill: "none" }, bg); }
+  el("rect", { x: 0, y: GROUND - 300, width: W, height: 260, fill: "url(#mist)" }, bg);
+};
+let state = { slots: [] };
+function paddy() {
+  const natR = natRows(), secR = secRows(), cells = stormCells();
+  seed = 7; svg.innerHTML = "";
+  const famN = {}, famS = {};
+  natR.forEach(s => (famN[s.family_id] ||= []).push(s));
+  secR.forEach(s => (famS[s.family_id] ||= []).push(s));
+  const scale = Math.max(FMAX, ...Object.values(famN).map(a => a.length));
+  const unit = Math.max(1, Math.ceil(Math.max(0, ...Object.values(famN).map(a => a.length)) / 260));
+  svg.setAttribute("aria-label", `Thailand: ${natR.length} strategies of the plans in view as rice on 28 family stalks`);
+  const defs = el("defs", {}, svg);
+  grad(defs, "sky", [[0, "#06110d"], [1, "#0c2219"]]); grad(defs, "mist", [[0, "#10241c", 0], [.5, "#10241c", .5], [1, "#10241c", 0]]); grad(defs, "water", [[0, "#0d2a2c"], [1, "#06141a"]]);
+  const glow = el("radialGradient", { id: "glow" }, defs); el("stop", { offset: 0, "stop-color": GOLD, "stop-opacity": .6 }, glow); el("stop", { offset: 1, "stop-color": GOLD, "stop-opacity": 0 }, glow);
+  const hal = el("radialGradient", { id: "halo" }, defs); el("stop", { offset: 0, "stop-color": PALE, "stop-opacity": .26 }, hal); el("stop", { offset: 1, "stop-color": PALE, "stop-opacity": 0 }, hal);
+  el("rect", { x: 0, y: 0, width: W, height: GROUND, fill: "url(#sky)" }, svg);
+  SCENE(el("g", { "aria-hidden": "true" }, svg));
+  // slots: families in tree order, biggest in the middle of each subpillar clump
+  const slots = [], clumpX = {}, standX = {}; let x = 60;
+  ORDER.forEach((p, pi) => { if (pi) x += 90; const s0 = x;
+    T.subpillars.filter(s => s.pillar === p).forEach((sp, si) => { if (si) x += 34; const c0 = x;
+      const fs = T.families.filter(f => f.subpillar_code === sp.code).sort((a, b) => (famN[b.family_id] || []).length - (famN[a.family_id] || []).length), centred = [];
+      fs.forEach((f, i) => (i % 2 ? centred.push(f) : centred.unshift(f)));
+      centred.forEach(f => { slots.push({ f, x: x + 26, p, s: sp }); x += 52; });
+      clumpX[sp.code] = [c0, x]; });
+    standX[p] = [s0, x]; });
+  const sc = (W - 60) / x; slots.forEach(o => (o.x *= sc)); for (const k in clumpX) clumpX[k] = clumpX[k].map(v => v * sc); for (const k in standX) standX[k] = standX[k].map(v => v * sc);
+  // water, the bund under each clump, labels
+  const ground = el("g", {}, svg);
+  el("rect", { x: 0, y: GROUND, width: W, height: H - GROUND, fill: "url(#water)" }, ground);
+  for (let i = 0; i < 260; i++) { const yy = GROUND + 4 + rnd() ** 1.5 * 150, xx = rnd() * W; el("line", { x1: xx, y1: yy, x2: xx + 20 + rnd() * 80, y2: yy, stroke: PALE, "stroke-opacity": .05 + rnd() * .12 }, ground); }
+  el("line", { x1: 0, y1: GROUND, x2: W, y2: GROUND, stroke: VISC, "stroke-opacity": .35 }, ground);
+  const RZ = GROUND + 44;
+  el("path", { d: `M${standX.SMG[0] - 10},${RZ} L${standX.MCH[1] + 10},${RZ}`, stroke: "#3e7a62", "stroke-width": 5, fill: "none", "stroke-linecap": "round" }, ground);
+  T.subpillars.forEach(sp => { const [a, b] = clumpX[sp.code], mid = (a + b) / 2;
+    slots.filter(o => o.s.code === sp.code).forEach(o => el("path", { d: `M${o.x},${GROUND} L${o.x},${RZ - 16} Q${o.x},${RZ - 4} ${mid},${RZ}`, stroke: VISC, "stroke-opacity": .5, "stroke-width": 1.1, "stroke-dasharray": "1.5 4", fill: "none" }, ground));
+    el("circle", { cx: mid, cy: RZ, r: 6, fill: "#06110d", stroke: PALE, "stroke-width": 1.4 }, ground);
+    const t = el("text", { x: mid, y: RZ + 34, "text-anchor": "middle", fill: PALE, "font-family": "Jura, sans-serif", "font-size": 13 }, ground);
+    let line = "", rws = []; sp.name.replace("Reform Leadership, Coalitions and Civic Engagement", "Reform Leadership and Coalitions").split(" ").forEach(wd => { if ((line + " " + wd).trim().length > Math.max(12, (b - a) / 7.4)) { rws.push(line.trim()); line = ""; } line += " " + wd; }); rws.push(line.trim());
+    rws.forEach((r, k) => (el("tspan", { x: mid, dy: k ? 15 : 0 }, t).textContent = r)); });
+  ORDER.forEach(p => { const [a, b] = standX[p], mid = (a + b) / 2, yb = H - 88;
+    el("path", { d: `M${a + 2},${yb - 10} L${a + 2},${yb} L${b - 2},${yb} L${b - 2},${yb - 10}`, stroke: GOLD, "stroke-opacity": .7, "stroke-width": 1.4, "stroke-dasharray": "2 5", fill: "none" }, ground);
+    el("text", { x: mid, y: H - 38, "text-anchor": "middle", fill: GOLD, "font-family": "Italiana, Didot, Georgia, serif", "font-size": 40, "letter-spacing": 12 }, ground).textContent = STAND[p]; });
+  sky(slots, famN, famS);
+  const field = el("g", {}, svg);
+  slots.forEach((o, si) => {
+    const f = o.f, rows = famN[f.family_id] || [], sRows = famS[f.family_id] || [], n = rows.length;
+    const g = el("g", { class: "culm", tabindex: 0, role: "button", "aria-label": `${f.family}: ${n} strategies${sRows.length ? `, ${sRows.length} from sector plans` : ""}` }, field);
+    o.g = g; o.n = n;
+    const hitR = el("rect", { class: "hit", fill: "transparent" }, g);
+    if (!n) {
+      el("path", { d: `M${o.x - 6},${GROUND} L${o.x},${GROUND - 26} L${o.x + 6},${GROUND}Z`, fill: "none", stroke: PALE, "stroke-opacity": .55, "stroke-dasharray": "2 3" }, g);
+      let top = GROUND - 26;
+      if (sRows.length) { const pt0 = t => [o.x, GROUND - 26 - 130 * t]; el("path", { d: `M${o.x},${GROUND - 26} L${o.x},${GROUND - 156}`, stroke: PALE, "stroke-opacity": .4, "stroke-dasharray": "2 3", fill: "none" }, g);
+        g.insertBefore(el("ellipse", { cx: o.x, cy: GROUND - 96, rx: 30, ry: 80, fill: "url(#halo)" }), hitR.nextSibling); coat(g, f, sRows, pt0); top = GROUND - 170; }
+      hitR.setAttribute("x", o.x - 16); hitR.setAttribute("y", top - 6); hitR.setAttribute("width", 32); hitR.setAttribute("height", GROUND - top + 6);
+      return;
+    }
+    const r = Math.sqrt(n / scale), hgt = 130 + (GROUND - TOP_MIN - 130 - 70) * r, w = 3.2 + 5.5 * r;
+    const lean = (rnd() - .5) * .08 + (o.p === "SMG" ? -.025 : o.p === "MCH" ? .025 : 0);
+    const pt = t => [o.x + lean * hgt * t + Math.sin(t * 2.2) * 30 * lean, GROUND - hgt * t];
+    const deep = rows.filter(s => s.level !== "L1").length / n, col = mixc([86, 140, 108], [212, 167, 44], deep ** 1.2);
+    for (let k = 0; k < 3; k++) { const [px, py] = pt(.12 + k * .13), sd = k % 2 ? 1 : -1; el("path", { d: leafPath(px, py, -Math.PI / 2 + sd * (.45 + rnd() * .3), 55 + rnd() * 45 + 30 * r, .05), fill: "#3e7a62", opacity: .7 }, g); }
+    stemShape(g, pt, w, .45, col);
+    // the head: a rachis drooping to one side; one branch per mechanism of the family; the family-level grains at the tip
+    const [tx, ty] = pt(1), side = si % 2 ? 1 : -1, sample = a => a.filter((_, j) => j % unit === 0);
+    const nU = Math.ceil(n / unit), L = 34 + Math.sqrt(nU) * 7.5, a = [tx, ty], b = [tx + side * L * .62, ty + L * .9], c = [tx + side * L * .55, ty - L * .32];
+    el("path", { d: `M${a} Q${c} ${b}`, stroke: col, "stroke-width": 1.6, fill: "none" }, g);
+    const mids = f.mechanism_ids, k = mids.length;
+    mids.forEach((mid, j) => {
+      const ms = rows.filter(s => s.mechanism_id === mid).sort((p, q) => (q.level === "L3") - (p.level === "L3")), mU = sample(ms);
+      const t = .1 + .66 * (j + .5) / k, [bx, by] = quad(a, c, b, t), tang = quadAng(a, c, b, t), sd2 = j % 2 ? 1 : -1;
+      const ang = tang + sd2 * .8, lb = mU.length ? 13 + Math.sqrt(mU.length) * 6.5 : 10, ex = bx + Math.cos(ang) * lb, ey = by + Math.sin(ang) * lb;
+      el("line", { x1: bx, y1: by, x2: ex, y2: ey, stroke: col, "stroke-width": mU.length ? 1.1 : .8, "stroke-dasharray": mU.length ? "none" : "2 2", opacity: mU.length ? .9 : .6 }, g);
+      mU.forEach((s, q) => { const u = (q + 1) / (mU.length + 1), off = (q % 2 ? 1 : -1) * 3, gx = bx + Math.cos(ang) * lb * u - Math.sin(ang) * off, gy = by + Math.sin(ang) * lb * u + Math.cos(ang) * off; grain(g, gx, gy, ang + (q % 2 ? .5 : -.5), s); });
+      const v = cells[mid], nm = ms.length;
+      if (v === "exposed") el("circle", { cx: bx, cy: by, r: 8, fill: "none", stroke: RED, "stroke-width": 1.6, "stroke-dasharray": "2 2" }, g);
+      if (v === "sheltered") el("circle", { cx: bx, cy: by, r: 7, fill: "none", stroke: GOLD2, "stroke-width": 1.2 }, g);
+      const kn = el("circle", { class: "mnode", "data-m": mid, cx: bx, cy: by, r: Math.max(5, 2.5 + Math.sqrt(nm) * 1.3), fill: nm ? "url(#glow)" : "transparent" }, g);
+      el("circle", { cx: bx, cy: by, r: nm ? 2 : 1.6, fill: nm ? GOLD2 : "none", stroke: nm ? "none" : PALE, "stroke-opacity": .6, "pointer-events": "none" }, g);
+      kn.addEventListener("click", e => { e.stopPropagation(); selFam = f.family_id; selMec = selMec === mid ? null : mid; selPath = null; select(); });
+      kn.addEventListener("mousemove", e => { e.stopPropagation(); tipAt(e, `<b>${esc(MEC[mid].mechanism)}</b><span class="m">${esc(MEC[mid].intermediate_variable)}<br>${n0(nm)} strategies · ${ms.filter(s => s.level === "L3").length} at a pathway${v ? `<br>${esc(active)}: ${v}` : ""}</span>`); });
+    });
+    const held = sample(rows.filter(s => !s.mechanism_id));
+    held.forEach((s, q) => { const t = .8 + .2 * (q + 1) / (held.length + 1), [px, py] = quad(a, c, b, t), tang = quadAng(a, c, b, t), sd = q % 2 ? 1 : -1; grain(g, px + Math.cos(tang + sd * 1.57) * 3, py + Math.sin(tang + sd * 1.57) * 3, tang + sd * .6, s); });
+    coat(g, f, sRows, pt);
+    const xs = [o.x, tx, b[0]], top = Math.min(ty - L * .45, b[1] - L);
+    hitR.setAttribute("x", Math.min(...xs) - 22); hitR.setAttribute("y", top); hitR.setAttribute("width", Math.max(...xs) - Math.min(...xs) + 44); hitR.setAttribute("height", GROUND - top);
+  });
+  state = { slots };
+  slots.forEach(o => {
+    o.g.addEventListener("mousemove", e => { const f = o.f, rows = famN[f.family_id] || [], d = by(rows, s => s.level), sr = (famS[f.family_id] || []).length;
+      tipAt(e, `<b>${esc(f.family)}</b><span class="m">${esc(f.subpillar)}<br>${n0(rows.length)} strategies · ${n0(d.L3 || 0)} pathway · ${n0(d.L2 || 0)} mechanism · ${n0(d.L1 || 0)} family${sr ? `<br>+${n0(sr)} from the sector plans shown` : ""}</span>`); });
+    o.g.addEventListener("mouseleave", () => (tip.style.display = "none"));
+    o.g.addEventListener("click", () => { selFam = o.f.family_id; selMec = null; selPath = null; select(); });
+    o.g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selFam = o.f.family_id; selMec = null; selPath = null; select(); } });
+    o.g.classList.toggle("dim", (!!active || !!findQ) && !(famN[o.f.family_id] || []).some(s => hit(s) && found(s)) && !(famS[o.f.family_id] || []).some(s => hit(s) && found(s)));
+  });
+  applyIso();
+  if (animate) { svg.classList.add("anim"); setTimeout(() => svg.classList.remove("anim"), 900); animate = false; }
+  keyText(unit, secR.length);
+  if (!selFam || !slots.some(o => o.f.family_id === selFam)) selFam = slots.reduce((a, o) => (o.n > a.n ? o : a)).f.family_id;
+  select();
+  const fq = findQ ? natR.filter(found).length : null;
+  document.getElementById("findn").textContent = fq === null ? "" : `${n0(fq)} of ${n0(natR.length)} strategies match${secR.length ? `, +${n0(secR.filter(found).length)} in sector plans` : ""}`;
+}
+// sector plans: one coloured leaf per four strategies on the stalk, seeded per family and plan so a toggle never moves another leaf
+const PER = 4;
+function coat(g, f, sRows, pt) {
+  const byP = {}; sRows.forEach(s => (byP[s.p] ||= []).push(s));
+  Object.keys(byP).forEach(pi => { const ss = byP[pi], colr = PLANS[pi].colour;
+    let sd = 7; for (const ch of f.family_id + "/" + pi) sd = (sd * 31 + ch.charCodeAt(0)) % 2147483647; const r2 = () => ((sd = (sd * 16807) % 2147483647) - 1) / 2147483646;
+    for (let j = 0; j < Math.ceil(ss.length / PER); j++) { const grp = ss.slice(j * PER, j * PER + PER), on = grp.some(s => hit(s) && found(s)), gold = on && 2 * grp.filter(x => x.level !== "L1").length >= grp.length;
+      const [px, py] = pt(.25 + .6 * r2()), side = r2() < .5 ? -1 : 1, ang = side > 0 ? -.7 + r2() * 1.1 : Math.PI + .7 - r2() * 1.1;
+      el("path", { class: "sl", "data-p": pi, d: leafPath(px + side * 3, py, ang, 9 + r2() * 4, .34), fill: on ? colr : DIM, opacity: on ? .78 : .3, stroke: gold ? GOLD : "none", "stroke-width": gold ? .8 : 0 }, g); } });
+}
+function applyIso() {
+  svg.querySelectorAll(".keep").forEach(e => e.classList.remove("keep"));
+  const p = iso, inV = p !== null && natIn().includes(p);
+  svg.classList.toggle("iso", p !== null && (isSec(p) || (inV && natIn().length > 1)));
+  svg.classList.toggle("iso-nat", inV && natIn().length === 1);
+  if (p !== null) svg.querySelectorAll(isSec(p) ? `.sl[data-p="${p}"]` : `.gr[data-p="${p}"]`).forEach(e => e.classList.add("keep"));
+}
+// risks as storm clouds: placed over the clump where the national plans in view carry most of the risk, sized by the risk records of
+// every plan in view, rain falling on each family whose strategies link to it
+function sky(slots, famN, famS) {
+  const g0 = el("g", { class: "sky" }, svg), plansIn = [...natIn(), ...secIn()];
+  const clouds = RISKS.map(r => {
+    const tag = (o, src) => (src[o.f.family_id] || []).filter(s => s.links.some(l => l.risk === r)).length;
+    let at = slots.map(o => [o, tag(o, famN)]).filter(([, n]) => n); const on = slots.map(o => [o, tag(o, famN) + tag(o, famS)]).filter(([, n]) => n);
+    if (!at.length) at = slots.filter(o => FAM[o.f.family_id].risks.includes(r)).map(o => [o, 1]);
+    const byS = {}; at.forEach(([o, n]) => (byS[o.s.code] = (byS[o.s.code] || 0) + n));
+    const best = Object.keys(byS).sort((a, b) => byS[b] - byS[a])[0], here = at.filter(([o]) => o.s.code === best), hn = here.reduce((a, [, n]) => a + n, 0) || 1;
+    const links = Object.values(famN).flat().flatMap(s => s.links.filter(l => l.risk === r));
+    return { r, x: here.length ? here.reduce((a, [o, n]) => a + o.x * n, 0) / hn : W / 2, on, size: plansIn.reduce((a, i) => a + ((PLANS[i].risk_records || {})[r] || 0), 0), links: links.length, cons: links.filter(l => strong(l.kind)).length };
+  }).filter(c => c.size || c.on.length);
+  const top = Math.max(1, ...clouds.map(c => c.size));
+  clouds.forEach(c => { c.t = Math.sqrt(c.size / top); c.rx = 40 + 58 * c.t; const w = c.r.toUpperCase().split(" "), cut = w.length > 2 ? Math.ceil(w.length / 2) : w.length;
+    c.lines = cut < w.length ? [w.slice(0, cut).join(" "), w.slice(cut).join(" ")] : [w.join(" ")]; c.half = Math.max(c.rx, Math.max(...c.lines.map(l => l.length)) * 3.6 + 8); });
+  const right = [-1e9, -1e9, -1e9];
+  [...clouds].sort((a, b) => a.x - b.x).forEach(c => { c.x = Math.max(c.x, 20 + c.half); let row = right.findIndex(rr => c.x - c.half - 16 >= rr); if (row < 0) row = right.indexOf(Math.min(...right)); c.row = row; c.x = Math.max(c.x, right[row] + c.half + 16); right[row] = c.x + c.half; });
+  [0, 1, 2].forEach(row => { const over = Math.max(0, ...clouds.filter(c => c.row === row).map(c => c.x + c.half - (W - 20))); if (over) clouds.filter(c => c.row === row).forEach(c => (c.x -= over)); });
+  let sd = 11; const r3 = () => ((sd = (sd * 16807) % 2147483647) - 1) / 2147483646;
+  clouds.forEach(c => {
+    const cy = 34 + c.row * 56, ry = 15 + 10 * c.t, dim = active && active !== c.r, a = dim ? .25 : 1;
+    const g = el("g", { class: "cloud", tabindex: 0, role: "button", "aria-pressed": String(active === c.r), "aria-label": `${c.r}: ${c.size} risk records in the plans in view` }, g0);
+    const rain = el("g", { class: "rain", opacity: a }, g), maxn = Math.max(1, ...c.on.map(([, n]) => n));
+    c.on.forEach(([o, n]) => { const k = Math.max(1, Math.round((1 + 3 * c.t) * n / maxn)); for (let j = 0; j < k; j++) { const x0 = c.x + (r3() - .5) * c.rx * 1.4, y0 = cy + ry * .6, len = 70 + 150 * c.t * (.5 + r3() * .5), tx = o.x + (r3() - .5) * 10, fr = len / Math.max(1, Math.hypot(tx - x0, 600));
+      el("line", { x1: x0, y1: y0, x2: x0 + (tx - x0) * fr, y2: y0 + 600 * fr, stroke: PALE, "stroke-opacity": .1 + .3 * c.t, "stroke-width": 1.1, "stroke-dasharray": "5 7" }, rain); } });
+    [[-.45, .2, .62], [.4, .25, .58], [0, -.05, .82]].forEach(([dx, dy, s]) => el("ellipse", { cx: c.x + dx * c.rx, cy: cy + dy * ry, rx: c.rx * s, ry: ry * (s + .25), fill: "#5f6f69", "fill-opacity": (.22 + .55 * c.t) * a }, g));
+    const tx = el("text", { x: c.x, y: cy + (c.lines.length > 1 ? -2 : 4), "text-anchor": "middle", fill: PALE, "fill-opacity": dim ? .35 : .95, "font-family": "DM Mono, monospace", "font-size": 10.5, "letter-spacing": 1 }, g);
+    c.lines.forEach((l, i) => (el("tspan", { x: c.x, dy: i ? 12 : 0 }, tx).textContent = l));
+    if (active === c.r) el("ellipse", { cx: c.x, cy: cy + 2, rx: c.rx + 6, ry: ry + 10, fill: "none", stroke: GOLD, "stroke-width": 1.2, "stroke-dasharray": "2 4" }, g);
+    g.addEventListener("click", () => setRisk(c.r)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRisk(c.r); } });
+    g.addEventListener("mousemove", e => tipAt(e, `<b>${esc(c.r)}</b><span class="m">${n0(c.size)} risk records in the plans in view · rain on ${c.on.length} famil${c.on.length === 1 ? "y" : "ies"}<br>${n0(c.links)} strategy links in the national plans, ${pct(c.cons / Math.max(1, c.links))} mechanism-consistent</span>`));
+    g.addEventListener("mouseleave", () => (tip.style.display = "none"));
+  });
+}
+const tip = document.getElementById("tip"), stage = document.getElementById("stage");
+function tipAt(ev, html) { tip.innerHTML = html; const r = stage.getBoundingClientRect(); tip.style.display = "block"; let lx = ev.clientX - r.left + stage.scrollLeft + 14; if (lx + 310 > stage.scrollLeft + r.width) lx -= 330; tip.style.left = lx + "px"; tip.style.top = ev.clientY - r.top + 14 + "px"; }
+function setRisk(r) { active = active === r ? null : r; render(); }
+function riskChips() {
+  const box = document.getElementById("riskchips"); box.querySelectorAll(".chip").forEach(c => c.remove());
+  RISKS.forEach(r => { const b = document.createElement("button"); b.className = "chip"; b.type = "button"; b.textContent = r; b.setAttribute("aria-pressed", String(active === r)); b.addEventListener("click", () => setRisk(r)); box.appendChild(b); });
+}
+function keyText(unit, nSec) {
+  const g = (c, rim) => `<i style="background:${c};${rim ? `box-shadow:0 0 0 1px ${GOLD}` : ""}"></i>`;
+  document.getElementById("key").innerHTML = [
+    ["STANDS", "economy left, people centre, governance right: the three RHDR pillars"],
+    ["CLUMPS", "the ten RHDR categories, joined under the water"],
+    ["STALKS", "one per family (28); height grows with the strategies in it, colour turns gold with the share placed at a mechanism or pathway"],
+    ["BRANCHES", "one per mechanism (99) on the head; a dashed stub is a mechanism with no strategy yet; the knot glows with the count"],
+    ["GRAINS", active ? `with a storm chosen: ${g(GOLD)}mechanism-consistent link ${g(PALE)}family-depth or affected-group link ${g(RUST)}mention only ${g(DIM)}no link` : `${g(GOLD2, 1)}pathway named ${g(GOLD)}mechanism named ${g(LEAF)}held at the family, at the tip of the head${unit > 1 ? `; one grain per ${unit} strategies` : "; one grain per strategy"}`],
+    ["CLOUDS", "one per risk, over the clump where the national plans carry most of it; size and rain follow the risk records of every plan in view, sector plans included; click one to bring the storm"],
+    ...(active ? [["RINGS", `${active}: a gold ring is a mechanism sheltered by a mechanism-consistent strategy; a red dashed ring is a mechanism the literature ties to the risk, in plans that frame it, with no strategy linking to it`]] : []),
+    ...(nSec ? [["SECTOR LEAVES", "one per four strategies of a sector plan, in its colour, gold rim where at least half sit below the family; they never lengthen a stalk or enter a count"], ["HALO", "a family only the sector plans shown reach"]] : []),
+    ["EMPTY", "a seedling just above the water: a family with no strategy in the plans in view"],
+  ].map(([k, v]) => `<div><b>${k}</b>${v}</div>`).join("");
+}
+
+// ---------------------------------------------------------------- the reading panel
+const panel = document.getElementById("panel");
+function select() {
+  state.slots.forEach(o => o.g.classList.toggle("sel", o.f.family_id === selFam));
+  const f = FAM[selFam], natR = natRows().filter(s => s.family_id === selFam), secR = secRows().filter(s => s.family_id === selFam), multi = natIn().length > 1, cells = stormCells();
+  const mN = by(natR.filter(hit), s => s.mechanism_id || "held"), mS = by(secR.filter(hit), s => s.mechanism_id || "held"), mmax = Math.max(1, ...f.mechanism_ids.map(m => mN[m] || 0));
+  const cnt = (a, b) => `${n0(a || 0)}${b ? `<em> +${n0(b)}</em>` : ""}`;
+  const stand = STAND[f.pillar_code];
+  const mrow = m => { const me = MEC[m], v = cells[m];
+    let h = `<div class="mech ${mN[m] || mS[m] ? "" : "off"}" role="button" tabindex="0" data-m="${m}" aria-pressed="${selMec === m}"><span>${esc(me.mechanism)}<small>${esc(me.intermediate_variable)}${v ? ` · <span style="color:${v === "exposed" ? RED : v === "sheltered" ? GOLD2 : PALE}">${esc(active)}: ${v}</span>` : ""}</small></span><span class="bar"><i style="width:${100 * (mN[m] || 0) / mmax}%"></i></span><span class="n">${cnt(mN[m], mS[m])}</span></div>`;
+    if (selMec === m) { const pN = by(natR.filter(hit).filter(s => s.mechanism_id === m && s.pathway_id), s => s.pathway_id);
+      h += `<div class="pw"><p class="small">SDG ${me.sdg_targets.join(", ")} · ${esc(me.sdg_primary_dimension)}${me.assets.length ? ` · assets: ${me.assets.map(a => esc(T.assets.find(x => x.asset_id === a).asset)).join(", ")}` : ""}</p>
+        <p class="small">Risks through its pathways: ${me.risks.length ? me.risks.map(esc).join(" · ") : "none, a baseline development lever"}${me.conditional_risks.length ? ` · conditional: ${me.conditional_risks.map(c => esc(c.risk)).join(", ")}` : ""}</p>
+        ${me.pathway_ids.map(p => { const pw = PATH[p]; return `<div class="mech ${pN[p] ? "" : "off"}" role="button" tabindex="0" data-p="${p}" aria-pressed="${selPath === p}"><span>${esc(pw.pathway)}${pw.merged_into ? ` <span class="tag">merged into ${esc(pw.merged_into)}</span>` : ""}<small>${esc(pw.causal_input)} → ${esc(pw.transmission)} → ${esc(pw.outcome)}</small><small>${esc(pw.evidence)}</small></span><span class="n">${n0(pN[p] || 0)}</span></div>`; }).join("")}</div>`; }
+    return h; };
+  const pool = [...natR, ...secR].filter(hit).filter(found).filter(s => !selMec || (selMec === "held" ? !s.mechanism_id : s.mechanism_id === selMec)).filter(s => !selPath || s.pathway_id === selPath);
+  const list = [...pool].sort((a, b) => isSec(a.p) - isSec(b.p) || (a.mechanism_id || "~").localeCompare(b.mechanism_id || "~") || a.p - b.p);
+  const lim = 300;
+  panel.innerHTML = `<div class="card">
+      <div class="path">${stand} · ${esc(f.subpillar)} · ${f.family_id}</div><h2>${esc(f.family)}</h2><p>${esc(f.meaning)}</p>
+      <p class="quote">“${esc(f.rhdr_clause)}”</p><p class="small">The clause of the RHDR definition this family rests on. Literature: ${esc(f.literature)}.</p>
+      <h3>Mechanisms (${f.mechanism_ids.filter(m => mN[m]).length} of ${f.mechanism_ids.length} reached${active ? `, by strategies linked to ${esc(active)}` : ""})</h3>
+      ${f.mechanism_ids.map(mrow).join("")}
+      <div class="mech off" role="button" tabindex="0" data-m="held" aria-pressed="${selMec === "held"}"><span>Held at the family<small>the plan names the domain, not the lever</small></span><span></span><span class="n">${cnt(mN.held, mS.held)}</span></div>
+      ${secR.length ? `<p class="hint">Counts are the national plans in view; <em>+n</em> is the sector plans shown.</p>` : ""}
+      <h3>Risks the literature ties to this family</h3><p class="small">${f.risks.length ? f.risks.map(esc).join(" · ") : "None tagged"}</p>
+      <h3>SDG targets</h3><p class="small">${f.sdg_targets.join(", ")} · ${esc(f.sdg_primary_dimension)}</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:4px">Thailand's strategies (${n0(pool.length)}${pool.length !== natR.length + secR.length ? ` of ${n0(natR.length + secR.length)}` : ""})</h3>
+      ${selMec || selPath ? `<p class="mfilter">Showing ${selPath ? esc(PATH[selPath].pathway) : selMec === "held" ? "strategies held at the family" : esc(MEC[selMec].mechanism)} · <button type="button" class="linkbtn" id="clr">clear</button></p>` : ""}
+      ${list.length ? `<div class="list">${list.slice(0, lim).map(s => stratCard(s, multi)).join("")}${list.length > lim ? `<p class="hint">The first ${lim} are listed; the Strategies view has them all.</p>` : ""}</div>` : `<p class="empty">${!natR.length && !secR.length ? "No strategy sits in this family yet. The stalk stays in the paddy as a gap." : "No strategy here matches the storm or search chosen."}</p>`}
+    </div>`;
+}
+function stratCard(s, showPlan) {
+  const p = PLANS[s.p], sec = isSec(s.p);
+  return `<div class="strat">${esc(s.name)}<div class="tags">
+    ${sec ? `<span class="tag sec"><i class="sw" style="background:${p.colour}"></i>${esc(planShort(s.p))} ${p.period_start}–${p.period_end}</span>` : showPlan ? `<span class="tag">${esc(planShort(s.p))}</span>` : ""}
+    <span class="tag ${s.level.toLowerCase()}">${s.level === "L3" ? "pathway: " + esc(PATH[s.pathway_id].pathway) : s.level === "L2" ? esc(s.mechanism) : "family level"}</span>
+    <span class="tag">${esc(s.response_orientation || "orientation not stated")}</span>
+    ${s.target_label ? `<span class="tag">for: ${esc(s.target_class)}</span>` : ""}${s.instrument_label ? `<span class="tag">uses: ${esc(s.instrument_class)}</span>` : ""}
+    ${s.basis.includes("provisional") ? `<span class="tag">provisional</span>` : ""}</div>
+    ${s.objective ? `<div class="tags"><span>objective: ${esc(s.objective)}</span></div>` : ""}
+    ${s.candidates.length ? `<div class="tags"><span>could sit on: ${s.candidates.map(c => esc(MEC[c].mechanism)).join(" · ")}</span></div>` : ""}
+    ${s.links.length ? `<div class="tags">${s.links.map(l => `<span class="tag ${kindCls(l.kind)}">${esc(l.risk)}: ${esc(l.kind)}</span>`).join("")}</div>` : ""}</div>`;
+}
+panel.addEventListener("click", e => {
+  const pr = e.target.closest("[data-p]"), mr = e.target.closest("[data-m]");
+  if (e.target.closest("#clr")) { selMec = null; selPath = null; }
+  else if (pr) selPath = selPath === pr.dataset.p ? null : pr.dataset.p;
+  else if (mr) { selMec = selMec === mr.dataset.m ? null : mr.dataset.m; selPath = null; }
+  else return;
+  select();
+});
+panel.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.closest("[data-m],[data-p]")) { e.preventDefault(); e.target.click(); } });
+
+// ---------------------------------------------------------------- how the paddy grew: the five-year plans in order, the National Strategy apart
+function growth() {
+  const box = document.getElementById("growth"); box.innerHTML = "";
+  const VW = 560, VH = 400, GR = 340, x0 = 18, RC = RISKS.map(r => r.split(" ").map(w => w[0]).join(""));
+  const top = Math.max(1, ...NAT.flatMap(i => Object.values(M[i].family_n))), rtop = Math.max(1, ...NAT.flatMap(i => Object.values(PLANS[i].risk_records || {})));
+  let x = 0; const pos = {}, clump = {}, stand = {};
+  ORDER.forEach((p, pi) => { if (pi) x += 26; const s0 = x; T.subpillars.filter(s => s.pillar === p).forEach((sp, si) => { if (si) x += 10; const c0 = x; T.families.filter(f => f.subpillar_code === sp.code).forEach(f => { pos[f.family_id] = x + 7; x += 14; }); clump[sp.code] = [c0, x]; }); stand[p] = [s0, x]; });
+  const X = v => x0 + v * (VW - 2 * x0) / x;
+  box.insertAdjacentHTML("beforeend", `<h3>How the paddy grew, plan to plan</h3><p>The five-year plans in order, each drawn as its 28 family stalks on one scale, with the mechanisms carried, added and dropped between editions. Older editions in autumn tones. The National Strategy is a different kind of document, so it stands apart and is compared only with itself. Each plan's clouds sit over the clump where it carries most of that risk and grow with its own risk records, on one scale across the panels.</p>
+    <p class="rkey">${RISKS.map((r, i) => `<b>${RC[i]}</b> ${esc(r)}`).join(" · ")}</p>`);
+  const row = document.createElement("div"); row.className = "grow"; box.appendChild(row);
+  const fig = i => {
+    const F = {}; S.filter(s => s.p === i).forEach(s => (F[s.family_id] ||= []).push(s));
+    const col = planCol(i), f = document.createElement("figure"); row.appendChild(f);
+    const sv = el("svg", { viewBox: `0 0 ${VW} ${VH}`, role: "img", "aria-label": `${planLabel(i)}: ${Object.keys(F).length} of 28 families reached` }); f.appendChild(sv);
+    el("line", { x1: 0, y1: GR, x2: VW, y2: GR, stroke: VISC, "stroke-opacity": .35 }, sv);
+    const cl = RISKS.map((r, ri) => { const on = T.families.map(fm => [fm, (F[fm.family_id] || []).filter(s => s.links.some(l => l.risk === r)).length]).filter(([, c]) => c), byS = {};
+      on.forEach(([fm, c]) => (byS[fm.subpillar_code] = (byS[fm.subpillar_code] || 0) + c));
+      const best = Object.keys(byS).sort((a, b) => byS[b] - byS[a])[0], here = on.filter(([fm]) => fm.subpillar_code === best), hn = here.reduce((a, [, c]) => a + c, 0);
+      const size = (PLANS[i].risk_records || {})[r] || 0, t = Math.sqrt(size / rtop);
+      return { ri, on, size, t, rx: 12 + 20 * t, x: hn ? X(here.reduce((a, [fm, c]) => a + pos[fm.family_id] * c, 0) / hn) : VW / 2 }; }).filter(c => c.size || c.on.length);
+    const rr = [-1e9, -1e9, -1e9];
+    [...cl].sort((a, b) => a.x - b.x).forEach(c => { c.x = Math.max(c.x, 6 + c.rx); let rw = rr.findIndex(v => c.x - c.rx - 4 >= v); if (rw < 0) rw = rr.indexOf(Math.min(...rr)); c.row = rw; c.x = Math.max(c.x, rr[rw] + c.rx + 4); rr[rw] = c.x + c.rx; });
+    [0, 1, 2].forEach(rw => { const over = Math.max(0, ...cl.filter(c => c.row === rw).map(c => c.x + c.rx - (VW - 4))); if (over) cl.filter(c => c.row === rw).forEach(c => (c.x -= over)); });
+    let sd = 5 + i; const r4 = () => ((sd = (sd * 16807) % 2147483647) - 1) / 2147483646;
+    cl.forEach(c => { const cy = 18 + c.row * 30, ry = 7 + 5 * c.t, mx = Math.max(1, ...c.on.map(([, n]) => n));
+      c.on.forEach(([fm, n]) => { if (n / mx < .34) return; const fx = X(pos[fm.family_id]), x1 = c.x + (r4() - .5) * c.rx, len = 30 + 70 * c.t, d = Math.hypot(fx - x1, 300);
+        el("line", { x1, y1: cy + ry * .6, x2: x1 + (fx - x1) * len / d, y2: cy + ry * .6 + 300 * len / d, stroke: PALE, "stroke-opacity": .1 + .3 * c.t, "stroke-dasharray": "3 5" }, sv); });
+      [[-.4, .2, .62], [.4, .25, .58], [0, -.05, .82]].forEach(([dx, dy, k]) => el("ellipse", { cx: c.x + dx * c.rx, cy: cy + dy * ry, rx: c.rx * k, ry: ry * (k + .25), fill: "#5f6f69", "fill-opacity": .22 + .55 * c.t }, sv));
+      el("text", { x: c.x, y: cy + 3.5, "text-anchor": "middle", fill: PALE, "font-family": "DM Mono, monospace", "font-size": 9.5 }, sv).textContent = RC[c.ri]; });
+    T.families.forEach(fm => { const rows = F[fm.family_id] || [], c = rows.length, fx = X(pos[fm.family_id]);
+      if (!c) { el("path", { d: `M${fx - 2.5},${GR} L${fx},${GR - 9} L${fx + 2.5},${GR}Z`, fill: "none", stroke: PALE, "stroke-opacity": .45, "stroke-dasharray": "1.5 2" }, sv); return; }
+      const r = Math.sqrt(c / top), ht = 20 + (GR - 130) * r, deep = rows.filter(s => s.level !== "L1").length / c;
+      el("line", { x1: fx, y1: GR, x2: fx, y2: GR - ht, stroke: col, "stroke-width": 1.6 + 3 * r, "stroke-linecap": "round" }, sv);
+      el("ellipse", { cx: fx + 2, cy: GR - ht + 3, rx: 2 + 3 * r, ry: 1.4 + 1.6 * r, fill: mixc([95, 154, 128], [212, 167, 44], deep), transform: `rotate(50 ${fx + 2} ${GR - ht + 3})` }, sv); });
+    T.subpillars.forEach(sp => { const [a, b] = clump[sp.code]; el("line", { x1: X(a), y1: GR + 8, x2: X(b), y2: GR + 8, stroke: VISC, "stroke-opacity": .55, "stroke-dasharray": "1.5 3" }, sv); });
+    ORDER.forEach(q => { const [a, b] = stand[q]; el("path", { d: `M${X(a)},${GR + 18} L${X(b)},${GR + 18}`, stroke: GOLD, "stroke-opacity": .6, "stroke-dasharray": "2 4" }, sv);
+      el("text", { x: (X(a) + X(b)) / 2, y: GR + 40, "text-anchor": "middle", fill: GOLD, "font-family": "Italiana, Didot, Georgia, serif", "font-size": 17, "letter-spacing": 4 }, sv).textContent = STAND[q]; });
+    const m = M[i], cap = document.createElement("figcaption");
+    cap.innerHTML = `<b>${esc(planShort(i))}</b> ${PLANS[i].period_start}–${PLANS[i].period_end}<span>${n0(m.n)} strategies · ${Object.keys(m.family_n).length} of 28 families · ${Object.keys(m.mechanism_n).length} of 99 mechanisms · ${pct(m.indices.mechanism_depth)} name a lever or channel</span>`;
+    f.appendChild(cap);
+  };
+  NDP.forEach((i, j) => {
+    if (j) { const a = PLANS[NDP[j - 1]].plan_id, b = PLANS[i].plan_id, e = D.editions.filter(x => x.level === "mechanism" && x.from === a && x.to === b), c = by(e, x => x.status);
+      row.insertAdjacentHTML("beforeend", `<div class="step" aria-label="between editions"><b>→</b><span class="a">+${c.added || 0} added</span><br><span class="d">−${c.dropped || 0} dropped</span><br>${c.carried || 0} carried</div>`); }
+    fig(i);
+  });
+  if (VIS.length) { row.insertAdjacentHTML("beforeend", `<div class="apart" aria-hidden="true"></div>`); VIS.forEach(fig); }
+}
+
+// ---------------------------------------------------------------- readings: shared pieces
+function barsHtml(entries, total, o = {}) {
+  const max = Math.max(1e-9, ...entries.map(e => e[1] / total), ...(o.cmp ? entries.map(e => o.cmp[e[0]] || 0) : []));
+  return `<div class="bars">${entries.map(([k, v]) => { const share = v / total, sv = o.secN && o.sec ? (o.sec[k] || 0) / o.secN : 0;
+    return `<span class="k ${o.go ? "go" : ""}" data-k="${esc(k)}" title="${esc(o.title ? o.title(k) : k)}">${esc(o.label ? o.label(k) : k)}</span>
+    <span class="bar"><i style="width:${100 * share / max}%"></i>${sv ? `<i class="s" style="width:${100 * sv / max}%"></i>` : ""}${o.cmp && o.cmp[k] != null ? `<i class="cmp" style="width:${100 * o.cmp[k] / max}%"></i>` : ""}</span>
+    <span class="n">${o.raw ? n0(v) : `${n0(v)} · ${pct(share)}`}</span>`; }).join("")}</div>`;
+}
+function sortable(table, rows, cols, render, o = {}) {
+  let key = o.key || cols[0].k, dir = o.dir || 1;
+  const draw = () => { const sorted = [...rows].sort((a, b) => { const x = a[key], y = b[key]; return (typeof x === "number" && typeof y === "number" ? x - y : String(x ?? "").localeCompare(String(y ?? ""))) * dir; });
+    table.innerHTML = `<thead><tr>${cols.map(c => `<th class="${c.num ? "num" : ""}" data-k="${c.k}" tabindex="0" aria-sort="${key === c.k ? (dir > 0 ? "ascending" : "descending") : "none"}">${esc(c.h)}${key === c.k ? `<span class="dir"> ${dir > 0 ? "▲" : "▼"}</span>` : ""}</th>`).join("")}</tr></thead><tbody>${sorted.slice(0, o.limit || 5000).map(render).join("")}</tbody>`;
+    table.querySelectorAll("th").forEach(th => { const go = () => { const k = th.dataset.k; dir = key === k ? -dir : 1; key = k; draw(); }; th.onclick = go; th.onkeydown = e => { if (e.key === "Enter") go(); }; }); };
+  draw();
+}
+const goFam = f => { selFam = f; selMec = null; selPath = null; location.hash = "#paddy"; };
+const who = () => plan === null ? "the three five-year plans" : PLANS[plan].title;
+
+// ---------------------------------------------------------------- profile
+function profile() {
+  const el = document.getElementById("v-profile"), rows = natRows(), n = rows.length, sec = secRows();
+  const links = rows.flatMap(s => s.links), cons = links.filter(l => strong(l.kind)).length, d = by(rows, s => s.level), ori = by(rows, s => s.response_orientation || "not stated");
+  const fam = by(rows, s => s.family_id), famS = by(sec, s => s.family_id), fo = ((ori.proactive || 0) + (ori.transformative || 0)) / Math.max(1, n);
+  el.innerHTML = `<p class="note">${esc(D.meta.note)} Counts are ${esc(who())}; sector plans shown are drawn as a thin sage bar, as a share of their own strategies, and never enter these numbers.</p>
+    <div class="tiles">
+      <div class="tile"><span class="k">Strategies placed</span><b>${n0(n)}</b><div class="d">${plan === null ? "across the 11th, 12th and 13th Plans" : `${PLANS[plan].period_start}–${PLANS[plan].period_end}, of ${n0(PLANS[plan].n_all)} extracted`}</div></div>
+      <div class="tile"><span class="k">Name a lever or channel</span><b>${pct(((d.L2 || 0) + (d.L3 || 0)) / Math.max(1, n))}</b><div class="d">${n0(d.L3 || 0)} at a pathway, ${n0(d.L2 || 0)} at a mechanism, ${n0(d.L1 || 0)} held at a family</div></div>
+      <div class="tile"><span class="k">Risk links consistent</span><b>${pct(cons / Math.max(1, links.length))}</b><div class="d">${n0(cons)} of ${n0(links.length)} strategy × risk links sit on a mechanism the literature ties to the risk</div></div>
+      <div class="tile"><span class="k">Looking ahead</span><b>${pct(fo)}</b><div class="d">proactive or transformative, in the plan's own words</div></div>
+      <div class="tile"><span class="k">Families reached</span><b>${Object.keys(fam).length}<span class="small"> of 28</span></b><div class="d">${Object.keys(by(rows.filter(s => s.mechanism_id), s => s.mechanism_id)).length} of 99 mechanisms</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Where the strategies sit: 28 families</h3><p class="small">Click a family to open it in the paddy.</p><div id="pf-fam"></div></div>
+      <div class="card"><h3>By RHDR pillar and category</h3><div id="pf-sub"></div>
+        <h3>Response orientation</h3>${barsHtml(sortDesc(ori), n)}
+        <h3>Depth reached</h3>${barsHtml([["L3", d.L3 || 0], ["L2", d.L2 || 0], ["L1", d.L1 || 0]], n, { label: k => ({ L3: "Pathway: causal channel named", L2: "Mechanism: lever named", L1: "Family: domain only" })[k] })}</div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card"><h3>Who the strategies are for: 11 target classes</h3>${barsHtml(sortDesc(by(rows, s => s.target_class)), n)}</div>
+      <div class="card"><h3>What the state uses: Hood's four resources</h3>${barsHtml(sortDesc(by(rows, s => s.instrument_class)), n)}<p class="small">Registers and information systems are information; laws, standards, taxes and agreements are authority; transfers, subsidies, loans and funds are money; facilities, networks and partnerships are organisation.</p></div>
+    </div>`;
+  document.getElementById("pf-fam").innerHTML = barsHtml(famOrder.filter(f => fam[f] || famS[f]).map(f => [f, fam[f] || 0]), Math.max(1, n), { label: f => FAM[f].family, title: f => FAM[f].meaning, sec: famS, secN: sec.length, go: 1 });
+  el.querySelectorAll("#pf-fam .k").forEach(k => (k.onclick = () => goFam(k.dataset.k)));
+  const subs = by(rows, s => FAM[s.family_id].subpillar_code);
+  document.getElementById("pf-sub").innerHTML = ORDER.map(p => { const ss = T.subpillars.filter(s => s.pillar === p), tot = ss.reduce((a, s) => a + (subs[s.code] || 0), 0);
+    return `<div class="grp"><b>${STAND[p]}</b> · ${esc(T.pillars.find(x => x.code === p).name)} · ${n0(tot)} · ${pct(tot / Math.max(1, n))}</div>${barsHtml(ss.map(s => [s.code, subs[s.code] || 0]), Math.max(1, n), { label: c => SUB[c].name })}`; }).join("");
+}
+
+// ---------------------------------------------------------------- strategies table
+const sf = { plan: "", pillar: "", fam: "", mec: "", level: "", basis: "", ori: "", tcl: "", icl: "", risk: "", kind: "", q: "" };
+function strategies() {
+  const el = document.getElementById("v-strategies"), sin = new Set(secIn()), pool = S.filter(s => !isSec(s.p) || sin.has(s.p));
+  const opt = (vals, cur) => `<option value="">Any</option>` + vals.map(v => `<option value="${esc(v[0])}" ${cur === v[0] ? "selected" : ""}>${esc(v[1])}</option>`).join("");
+  const uniq = (arr, f) => [...new Set(arr.map(f).filter(Boolean))].sort().map(v => [v, v]);
+  el.innerHTML = `<p class="note">Every strategy of the nine plans, with the sector plans switched on in the strip above. Filter, search and sort; a click on a family opens it in the paddy.</p><div class="filters">
+    <label>Plan<select data-k="plan">${opt(PLANS.map((p, i) => [String(i), planLabel(i) + (isSec(i) ? " · sector" : "")]).filter(([i]) => !isSec(+i) || sin.has(+i)), sf.plan)}</select></label>
+    <label>Pillar<select data-k="pillar">${opt(T.pillars.map(p => [p.name, p.name]), sf.pillar)}</select></label>
+    <label>Family<select data-k="fam">${opt(famOrder.map(f => [f, FAM[f].family]), sf.fam)}</select></label>
+    <label>Mechanism<select data-k="mec">${opt(T.mechanisms.filter(m => !sf.fam || m.family_id === sf.fam).map(m => [m.mechanism_id, m.mechanism]), sf.mec)}</select></label>
+    <label>Depth<select data-k="level">${opt([["L3", "Pathway"], ["L2", "Mechanism"], ["L1", "Family"]], sf.level)}</select></label>
+    <label>Basis<select data-k="basis">${opt(uniq(pool, s => s.basis), sf.basis)}</select></label>
+    <label>Orientation<select data-k="ori">${opt(uniq(pool, s => s.response_orientation), sf.ori)}</select></label>
+    <label>Target class<select data-k="tcl">${opt(uniq(pool, s => s.target_class), sf.tcl)}</select></label>
+    <label>Instrument class<select data-k="icl">${opt(uniq(pool, s => s.instrument_class), sf.icl)}</select></label>
+    <label>Risk<select data-k="risk">${opt(RISKS.map(r => [r, r]), sf.risk)}</select></label>
+    <label>Link kind<select data-k="kind">${opt(uniq(pool.flatMap(s => s.links), l => l.kind), sf.kind)}</select></label>
+    <label>Search<input type="search" data-k="q" value="${esc(sf.q)}" placeholder="name, objective, target, instrument"></label>
+    <button type="button" class="plain" id="sf-clear">Clear</button></div><p class="small" id="sf-n"></p><div class="frame" style="max-height:72vh"><table id="sf-t"></table></div>`;
+  el.querySelectorAll("select,input").forEach(c => (c[c.tagName === "INPUT" ? "oninput" : "onchange"] = () => { sf[c.dataset.k] = c.value.trim(); if (c.dataset.k === "fam") sf.mec = ""; if (c.tagName === "INPUT") drawT(); else strategies(); }));
+  document.getElementById("sf-clear").onclick = () => { Object.keys(sf).forEach(k => (sf[k] = "")); strategies(); };
+  const drawT = () => { const q = sf.q.toLowerCase();
+    const rows = pool.filter(s => (!sf.plan || s.p === +sf.plan) && (!sf.pillar || s.pillar === sf.pillar) && (!sf.fam || s.family_id === sf.fam) && (!sf.mec || s.mechanism_id === sf.mec) && (!sf.level || s.level === sf.level) && (!sf.basis || s.basis === sf.basis) && (!sf.ori || s.response_orientation === sf.ori) && (!sf.tcl || s.target_class === sf.tcl) && (!sf.icl || s.instrument_class === sf.icl)
+      && (!sf.risk || s.links.some(l => l.risk === sf.risk && (!sf.kind || l.kind === sf.kind))) && (sf.risk || !sf.kind || s.links.some(l => l.kind === sf.kind)) && (!q || `${s.name} ${s.objective} ${s.target_label} ${s.instrument_label}`.toLowerCase().includes(q)));
+    const nat = rows.filter(s => !isSec(s.p)).length;
+    document.getElementById("sf-n").textContent = `${n0(rows.length)} strategies: ${n0(nat)} from national documents, ${n0(rows.length - nat)} from sector plans. Click a heading to sort; the first 2,000 rows are shown.`;
+    sortable(document.getElementById("sf-t"), rows.map(s => ({ ...s, plan: planShort(s.p), path: s.pathway_id ? PATH[s.pathway_id].pathway : "", risks: s.links.map(l => l.risk).join("; ") })),
+      [{ k: "plan", h: "Plan" }, { k: "name", h: "Strategy" }, { k: "family", h: "Family" }, { k: "mechanism", h: "Mechanism" }, { k: "path", h: "Pathway" }, { k: "level", h: "Depth" }, { k: "response_orientation", h: "Orientation" }, { k: "target_class", h: "For" }, { k: "instrument_class", h: "Uses" }, { k: "risks", h: "Risk links" }],
+      r => `<tr class="${isSec(r.p) ? "sec" : ""}"><td>${isSec(r.p) ? `<i class="sw" style="background:${PLANS[r.p].colour}"></i>` : ""}${esc(r.plan)}</td><td class="wrapc">${esc(r.name)}${r.objective ? `<div class="small">${esc(r.objective)}</div>` : ""}</td><td><button type="button" class="linkbtn" data-f="${r.family_id}">${esc(r.family)}</button></td><td>${esc(r.mechanism)}${r.candidates.length ? `<div class="small">could sit on: ${r.candidates.map(c => esc(MEC[c].mechanism)).join(", ")}</div>` : ""}</td><td class="small">${esc(r.path)}</td><td><span class="tag ${r.level.toLowerCase()}">${r.level === "L3" ? "pathway" : r.level === "L2" ? "mechanism" : "family"}</span></td><td>${esc(r.response_orientation)}</td><td>${esc(r.target_class)}<div class="small">${esc(r.target_label)}</div></td><td>${esc(r.instrument_class)}<div class="small">${esc(r.instrument_label)}</div></td><td>${r.links.map(l => `<span class="tag ${kindCls(l.kind)}" title="${esc(l.kind)}">${esc(l.risk)}</span>`).join(" ")}</td></tr>`,
+      { limit: 2000, key: "plan" });
+    el.querySelectorAll("#sf-t [data-f]").forEach(b => (b.onclick = () => goFam(b.dataset.f))); };
+  drawT();
+}
+
+// ---------------------------------------------------------------- risks: the storm test per mechanism
+const rk = { risk: null, cell: null };
+function risks() {
+  const el = document.getElementById("v-risks"), idxs = natIn(), rows = natRows(), n = rows.length;
+  if (!rk.risk) rk.risk = active || RISKS[0];
+  const rag = {};
+  RISKS.forEach(r => { rag[r] = { framed: false, records: 0, cells: {} };
+    idxs.forEach(i => { const x = M[i].rag[r]; rag[r].framed ||= x.framed; rag[r].records += x.records;
+      Object.entries(x.cells).forEach(([m, c]) => { const o = rag[r].cells[m] ||= { n: 0, strong: 0, weak: 0, fam_n: 0, carries: c.carries, share: 0 }; o.n += c.n; o.strong += c.strong; o.weak += c.weak; o.fam_n += c.fam_n; o.share += c.share / idxs.length; }); });
+    Object.values(rag[r].cells).forEach(o => (o.c = o.strong ? "green" : o.weak ? "amber" : rag[r].framed && o.carries ? "red" : "none")); });
+  const sum = RISKS.map(r => { const cs = Object.values(rag[r].cells), ls = rows.flatMap(s => s.links.filter(l => l.risk === r)), k = by(ls, l => l.kind);
+    return { risk: r, records: rag[r].records, links: ls.length, prom: ls.length / Math.max(1, n), cons: (k["mechanism-consistent"] || 0) + (k["mechanism-consistent (conditional)"] || 0), fam: k["family-consistent"] || 0, grp: k["affected-group support"] || 0, men: k["mention-only"] || 0,
+      green: cs.filter(c => c.c === "green").length, amber: cs.filter(c => c.c === "amber").length, red: cs.filter(c => c.c === "red").length }; });
+  el.innerHTML = `<p class="note">The storm test, for ${esc(who())}. Each strategy × risk link is <b>mechanism-consistent</b> when the literature ties the risk to the node the strategy sits on, <b>family-depth</b> when only its family carries it, <b>affected-group</b> when the strategy's target is the population the risk bears on, and <b>mention-only</b> otherwise. Per mechanism: sheltered (gold) with a consistent strategy, partly (sage) with only weaker links, exposed (red) when the plan frames the risk and the literature ties it to a mechanism no strategy reaches. Depth of colour is the share of the plan's strategies on the mechanism.</p>
+    <div class="frame"><table id="rk-s"></table></div>
+    <h3 style="margin-top:24px">Risk × mechanism</h3><div class="risks" id="rk-c" style="margin-top:0"></div>
+    <div class="legend"><span><i class="sw" style="background:var(--gold)"></i>sheltered</span><span><i class="sw" style="background:var(--sage)"></i>partly</span><span><i class="sw" style="background:var(--red)"></i>exposed</span><span><i class="sw" style="background:var(--panel2);border:1px solid var(--line)"></i>linked by the plan, no literature tag</span></div>
+    <div class="grid2"><div class="card" id="rk-h"></div><div class="card" id="rk-x"><h3>Pick a cell</h3><p class="small">The strategies behind it appear here.</p></div></div>`;
+  sortable(document.getElementById("rk-s"), sum, [{ k: "risk", h: "Risk" }, { k: "records", h: "Records", num: 1 }, { k: "links", h: "Links", num: 1 }, { k: "prom", h: "Per strategy", num: 1 }, { k: "cons", h: "Consistent", num: 1 }, { k: "fam", h: "Family-depth", num: 1 }, { k: "grp", h: "Affected-group", num: 1 }, { k: "men", h: "Mention-only", num: 1 }, { k: "green", h: "Sheltered", num: 1 }, { k: "amber", h: "Partly", num: 1 }, { k: "red", h: "Exposed", num: 1 }],
+    r => `<tr><td><button type="button" class="linkbtn" data-r="${esc(r.risk)}">${esc(r.risk)}</button></td><td class="num">${n0(r.records)}</td><td class="num">${n0(r.links)}</td><td class="num">${pct(r.prom)}</td><td class="num" style="color:var(--gold2)">${n0(r.cons)}</td><td class="num">${n0(r.fam)}</td><td class="num">${n0(r.grp)}</td><td class="num" style="color:var(--rust)">${n0(r.men)}</td><td class="num">${r.green}</td><td class="num">${r.amber}</td><td class="num" style="color:var(--red)">${r.red}</td></tr>`, { key: "links", dir: -1 });
+  el.querySelectorAll("#rk-s [data-r]").forEach(b => (b.onclick = () => { rk.risk = b.dataset.r; rk.cell = null; risks(); }));
+  const ch = document.getElementById("rk-c"); RISKS.forEach(r => { const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = r; b.setAttribute("aria-pressed", String(rk.risk === r)); b.onclick = () => { rk.risk = r; rk.cell = null; risks(); }; ch.appendChild(b); });
+  const cells = rag[rk.risk].cells, mids = Object.keys(cells).sort((a, b) => famOrder.indexOf(MEC[a].family_id) - famOrder.indexOf(MEC[b].family_id) || a.localeCompare(b));
+  document.getElementById("rk-h").innerHTML = `<h3 style="margin-top:0">${esc(rk.risk)}: ${mids.length} mechanisms</h3><p class="small">${rag[rk.risk].framed ? `Framed as a risk in the plans in view: ${n0(rag[rk.risk].records)} risk records.` : "Not framed as a risk in the plans in view."}</p>
+    <div class="heat" style="grid-template-columns:minmax(150px,1.4fr) 54px 64px 56px minmax(100px,1fr)"><span class="h">Mechanism</span><span class="h">Test</span><span class="h">Links</span><span class="h">Share</span><span class="h">Family</span>
+    ${mids.map(m => { const c = cells[m]; return `<span class="r" title="${esc(MEC[m].mechanism)}">${esc(MEC[m].mechanism)}</span><button type="button" class="cell ${c.c}" style="--a:${Math.round(30 + 70 * Math.min(1, c.share / .08))}%" data-m="${m}" aria-pressed="${rk.cell === m}" title="${c.strong} consistent, ${c.weak} weaker, ${c.n} links">${c.c === "green" ? "✓" : c.c === "amber" ? "~" : c.c === "red" ? "✗" : ""}</button><span class="r num mono">${n0(c.n)}${c.fam_n ? ` +${c.fam_n}` : ""}</span><span class="r num mono">${pct(c.share)}</span><span class="r small">${esc(MEC[m].family)}</span>`; }).join("")}</div>`;
+  el.querySelectorAll("#rk-h .cell").forEach(b => (b.onclick = () => { rk.cell = b.dataset.m; risks(); }));
+  if (rk.cell) { const m = MEC[rk.cell], list = [...rows, ...secRows()].filter(s => (s.mechanism_id === rk.cell || (!s.mechanism_id && s.family_id === m.family_id)) && s.links.some(l => l.risk === rk.risk)), srcs = T.pathways.filter(p => p.mechanism_id === rk.cell && p.risks.includes(rk.risk));
+    document.getElementById("rk-x").innerHTML = `<h3 style="margin-top:0">${esc(m.mechanism)} × ${esc(rk.risk)}</h3><p class="small">${srcs.length ? "The literature links them through " + srcs.map(p => `${esc(p.pathway)} (${esc(p.evidence)})`).join("; ") : "No literature tag on this mechanism; links here are affected-group support or mention-only."}</p><div class="list">${list.slice(0, 200).map(s => stratCard(s, true)).join("") || `<p class="empty">No strategy links here.</p>`}</div>`; }
+}
+
+// ---------------------------------------------------------------- over time
+function time() {
+  const el = document.getElementById("v-time"), cols = [...NDP, ...VIS];
+  const row = (label, f, fmt = pct) => `<tr><td>${label}</td>${cols.map(i => `<td class="num" ${VIS.includes(i) ? 'style="color:var(--sage)"' : ""}>${fmt(f(M[i], i))}</td>`).join("")}</tr>`;
+  el.innerHTML = `<p class="note">Thailand's five-year plans in order, with the 20-year National Strategy beside them in sage: a different document class, compared only with itself. Shares, not counts, since the plans differ in length by a factor of two. Depth is a finding: a plan that names levers but not channels is reported as such.</p>
+    <div class="frame"><table><thead><tr><th>Measure</th>${cols.map(i => `<th class="num">${esc(planLabel(i))}</th>`).join("")}</tr></thead><tbody>
+      ${row("Strategies placed", m => m.n, n0)}${row("Name a lever or channel", m => m.indices.mechanism_depth)}${row("At a pathway", m => m.depth.L3 || 0)}
+      ${row("Proactive or transformative", m => m.indices.future_orientation)}${row("Risk links per strategy", m => m.n_links / Math.max(1, m.n))}${row("Risk links mechanism-consistent", m => m.indices.consistency)}
+      ${row("Families reached, of 28", m => Object.keys(m.family_n).length, n0)}${row("Mechanisms reached, of 99", m => Object.keys(m.mechanism_n).length, n0)}
+      ${row("Target years beyond the plan period", m => m.indices.beyond_period_share, x => x == null ? "needs run outputs" : pct(x))}${row("Stated urgency high", m => m.indices.urgency_high_share, x => x == null ? "needs run outputs" : pct(x))}
+    </tbody></table></div>
+    <h3 style="margin-top:24px">Policy emphasis: family shares plan by plan</h3><p class="small">Each column is one plan; a row shows a family rising or fading between editions.</p><div class="frame" id="tm-f"></div>
+    <h3 style="margin-top:24px">Risk prominence plan by plan</h3><p class="small">Strategy links per risk as a share of the plan's strategies, with the share of those links that are mechanism-consistent.</p><div class="frame" id="tm-r"></div>
+    <h3 style="margin-top:24px">Mechanisms carried, added and dropped</h3>
+    <div class="filters"><label>Between<select id="tm-s">${[...new Set(D.editions.filter(e => e.level === "mechanism").map(e => e.from + "→" + e.to))].map(v => `<option value="${esc(v)}">${esc(v.split("→").map(id => planLabel(PLANS.findIndex(p => p.plan_id === id))).join(" and "))}</option>`).join("")}</select></label>
+      <label>Status<select id="tm-st"><option value="">Any</option><option>carried</option><option>added</option><option>dropped</option></select></label></div>
+    <div class="frame" style="max-height:60vh"><table id="tm-e"></table></div>`;
+  const fr = famOrder.filter(f => cols.some(i => M[i].family_share[f])), maxF = Math.max(...fr.flatMap(f => cols.map(i => M[i].family_share[f] || 0)));
+  document.getElementById("tm-f").innerHTML = `<table><thead><tr><th>Family</th>${cols.map(i => `<th>${esc(planShort(i))}</th>`).join("")}</tr></thead><tbody>${fr.map(f => `<tr><td><button type="button" class="linkbtn" data-f="${f}">${esc(FAM[f].family)}</button><div class="small">${esc(FAM[f].subpillar)}</div></td>${cols.map(i => { const v = M[i].family_share[f] || 0; return `<td style="min-width:120px"><div class="bar"><i style="width:${100 * v / maxF}%;${VIS.includes(i) ? "background:var(--sage)" : i === LATEST ? "" : "background:#94a05a"}"></i></div><span class="small">${pct(v)} · ${n0(M[i].family_n[f] || 0)}</span></td>`; }).join("")}</tr>`).join("")}</tbody></table>`;
+  el.querySelectorAll("#tm-f [data-f]").forEach(b => (b.onclick = () => goFam(b.dataset.f)));
+  const maxR = Math.max(1e-9, ...RISKS.flatMap(r => cols.map(i => M[i].risk_prominence[r] || 0)));
+  document.getElementById("tm-r").innerHTML = `<table><thead><tr><th>Risk</th>${cols.map(i => `<th>${esc(planShort(i))}</th>`).join("")}</tr></thead><tbody>${RISKS.map(r => `<tr><td>${esc(r)}</td>${cols.map(i => { const v = M[i].risk_prominence[r] || 0, ls = S.filter(s => s.p === i).flatMap(s => s.links.filter(l => l.risk === r)), c = ls.filter(l => strong(l.kind)).length;
+    return `<td style="min-width:120px"><div class="bar"><i style="width:${100 * v / maxR}%;${VIS.includes(i) ? "background:var(--sage)" : i === LATEST ? "" : "background:#94a05a"}"></i></div><span class="small">${pct(v)} · ${ls.length ? pct(c / ls.length) + " consistent" : "no links"}</span></td>`; }).join("")}</tr>`).join("")}</tbody></table>`;
+  const drawE = () => { const [a, b] = document.getElementById("tm-s").value.split("→"), st = document.getElementById("tm-st").value;
+    const rows = D.editions.filter(e => e.level === "mechanism" && e.from === a && e.to === b && (!st || e.status === st)).map(e => ({ ...e, mechanism: MEC[e.node_id].mechanism, family: MEC[e.node_id].family, change: e.share_to - e.share_from })), c = by(rows, e => e.status);
+    sortable(document.getElementById("tm-e"), rows, [{ k: "status", h: ["carried", "added", "dropped"].map(k => `${k} ${c[k] || 0}`).join(" · ") }, { k: "mechanism", h: "Mechanism" }, { k: "family", h: "Family" }, { k: "n_from", h: "Before", num: 1 }, { k: "n_to", h: "After", num: 1 }, { k: "share_from", h: "Share before", num: 1 }, { k: "share_to", h: "Share after", num: 1 }, { k: "change", h: "Change", num: 1 }],
+      e => `<tr><td><span class="tag ${e.status === "carried" ? "weak" : e.status === "added" ? "ok" : "bad"}">${e.status}</span></td><td>${esc(e.mechanism)}</td><td class="small">${esc(e.family)}</td><td class="num">${n0(e.n_from)}</td><td class="num">${n0(e.n_to)}</td><td class="num">${pct(e.share_from)}</td><td class="num">${pct(e.share_to)}</td><td class="num" style="color:${e.change > 0 ? "var(--gold2)" : e.change < 0 ? "var(--rust)" : "inherit"}">${(e.change > 0 ? "+" : "") + (100 * e.change).toFixed(1)} pts</td></tr>`, { key: "change", dir: -1 }); };
+  const s = document.getElementById("tm-s"); s.onchange = drawE; document.getElementById("tm-st").onchange = drawE; if (s.options.length) { s.selectedIndex = s.options.length - 1; drawE(); }
+}
+
+// ---------------------------------------------------------------- sector plans
+function sector() {
+  const el = document.getElementById("v-sector");
+  el.innerHTML = `<p class="note">Sector plans are read against the national plan in force during their years. They are a subordinate layer: their strategies never enter the national counts, and a family or mechanism only they reach is reported as a sector addition, not as national emphasis. In the paddy they are coloured leaves on the national stalks.</p><div class="multi" id="sc"></div>`;
+  const box = document.getElementById("sc");
+  D.sector.forEach(sp => { const i = PLANS.findIndex(p => p.plan_id === sp.plan_id), m = M[i], nat = sp.national_in_force.map(id => PLANS.findIndex(p => p.plan_id === id)).filter(j => j >= 0), natF = {};
+    nat.forEach(j => Object.entries(M[j].family_share).forEach(([f, v]) => (natF[f] = Math.max(natF[f] || 0, v))));
+    box.insertAdjacentHTML("beforeend", `<div class="card"><div class="path"><i class="sw" style="background:${PLANS[i].colour}"></i>Sector plan · ${PLANS[i].period_start}–${PLANS[i].period_end}</div><h2 style="font-size:24px">${esc(PLANS[i].title)}</h2>
+      <p class="small">${n0(m.n)} strategies placed · read against ${nat.map(j => esc(planLabel(j))).join(", ") || "no national plan loaded"}</p>
+      <p class="small">Names a lever or channel ${pct(m.indices.mechanism_depth)} · proactive or transformative ${pct(m.indices.future_orientation)} · risk links consistent ${pct(m.indices.consistency)}</p>
+      <h3>Where it sits</h3><p class="small">Share of the sector plan's strategies; the pale tick is the national plan in force.</p>${barsHtml(famOrder.filter(f => m.family_n[f]).map(f => [f, m.family_n[f]]), m.n, { label: f => FAM[f].family, cmp: natF })}
+      ${Object.entries(sp.overlap).filter(([id]) => PLANS.some(p => p.plan_id === id)).map(([id, o]) => `<h3>Against the ${esc(planShort(PLANS.findIndex(p => p.plan_id === id)))}</h3><p class="small">${pct(o.share_of_sector_strategies_on_shared)} of its mechanism-level strategies sit on mechanisms the national plan also reaches (${o.shared_mechanisms.length} shared).</p>${o.sector_only_mechanisms.length ? `<p class="small">Only the sector plan reaches: ${o.sector_only_mechanisms.map(k => `${esc(MEC[k].mechanism)} (${n0(m.mechanism_n[k])})`).join("; ")}</p>` : ""}`).join("")}
+      <details><summary>Top mechanisms</summary>${barsHtml(sp.top_mechanisms.map(k => [k, m.mechanism_n[k]]), m.n, { label: k => MEC[k].mechanism })}</details></div>`); });
+}
+
+// ---------------------------------------------------------------- crosswalks
+let cw = "rhdr";
+function crosswalks() {
+  const el = document.getElementById("v-crosswalks"), tabs = [["rhdr", "RHDR clauses"], ["sdg", "SDG targets and 5 Ps"], ["risk", "Risk matrix"], ["asset", "Assets"], ["mech", "Mechanisms"], ["path", "Pathways and v1"], ["classes", "Target and instrument classes"]];
+  el.innerHTML = `<div class="risks">${tabs.map(([k, l]) => `<button type="button" class="chip" data-k="${k}" aria-pressed="${cw === k}">${l}</button>`).join("")}</div><div id="cw-b" style="margin-top:12px"></div>`;
+  el.querySelectorAll(".chip").forEach(b => (b.onclick = () => { cw = b.dataset.k; crosswalks(); }));
+  const body = document.getElementById("cw-b"), tbl = (pre = "") => { body.innerHTML = `${pre}<div class="frame" style="max-height:75vh"><table id="cw-t"></table></div>`; return document.getElementById("cw-t"); };
+  const reach = by(natRows(), s => s.mechanism_id), reachF = by(natRows(), s => s.family_id);
+  if (cw === "rhdr") {
+    sortable(tbl(`<p class="small">Each family quotes the clause of the amended RHDR definition it rests on, so a placement can be checked against the text. A strategy's RHDR category is read off its family.</p>`), T.families.map(f => ({ ...f, n: reachF[f.family_id] || 0 })), [{ k: "pillar", h: "Pillar" }, { k: "subpillar", h: "RHDR category" }, { k: "family", h: "Family" }, { k: "rhdr_clause", h: "Clause" }, { k: "meaning", h: "Meaning" }, { k: "n", h: "In view", num: 1 }],
+      f => `<tr><td>${esc(f.pillar)}</td><td>${esc(f.subpillar)}</td><td><button type="button" class="linkbtn" data-f="${f.family_id}">${esc(f.family)}</button></td><td class="wrapc" style="font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold2)">“${esc(f.rhdr_clause)}”</td><td class="wrapc">${esc(f.meaning)}</td><td class="num">${n0(f.n)}</td></tr>`);
+    body.insertAdjacentHTML("beforeend", `<h3 style="margin-top:20px">The amended definitions</h3>${T.subpillars.map(s => `<p class="small"><b style="color:var(--pale)">${esc(s.name)}</b>: ${esc(s.definition)}</p>`).join("")}`);
+  } else if (cw === "sdg") {
+    const prof = {}; natRows().forEach(s => { const tg = s.mechanism_id ? MEC[s.mechanism_id].sdg_targets : FAM[s.family_id].sdg_targets; tg.forEach(t => (prof[t] = (prof[t] || 0) + 1 / tg.length)); });
+    const dims = {}; Object.entries(prof).forEach(([t, v]) => { const d = SDGDIM[t]; if (d) dims[d] = (dims[d] || 0) + v; });
+    sortable(tbl(`<p class="small">A mechanism's SDG targets are those whose indicators move with its intermediate variable; a family's are the union. The 5 P dimension comes from the workflow's 169-target mapping. The SDG profile below falls out of the placements with no model call.</p>
+      <div class="grid2" style="margin-bottom:20px"><div class="card"><h3 style="margin-top:0">SDG profile of ${esc(who())}</h3><p class="small">Each strategy spreads one unit over its node's targets.</p>${barsHtml(sortDesc(dims).map(([k, v]) => [k, Math.round(v)]), Math.max(1, natRows().length))}</div>
+      <div class="card"><h3 style="margin-top:0">Targets most pulled</h3>${barsHtml(sortDesc(prof).slice(0, 15).map(([k, v]) => [k, Math.round(v)]), Math.max(1, natRows().length), { label: t => `${t} ${T.sdg_goals[+t.split(".")[0] - 1] || ""}` })}</div></div>`),
+      T.mechanisms.map(m => ({ ...m, targets: m.sdg_targets.join(", "), n: reach[m.mechanism_id] || 0 })), [{ k: "family", h: "Family" }, { k: "mechanism", h: "Mechanism" }, { k: "intermediate_variable", h: "Moves" }, { k: "targets", h: "SDG targets" }, { k: "sdg_primary_dimension", h: "5 P" }, { k: "n", h: "In view", num: 1 }],
+      m => `<tr><td>${esc(m.family)}</td><td>${esc(m.mechanism)}</td><td class="wrapc small">${esc(m.intermediate_variable)}</td><td class="mono">${esc(m.targets)}</td><td class="small">${esc(m.sdg_primary_dimension)}</td><td class="num">${n0(m.n)}</td></tr>`);
+  } else if (cw === "risk") {
+    const ab = r => r.split(" ").map(w => w[0]).join("");
+    body.innerHTML = `<p class="small">Risk tags roll up from the pathways' literature tags; a conditional tag applies only when a strategy's wording meets its trigger. Baseline development pathways carry no tag by design.</p><div class="frame" style="max-height:75vh"><table><thead><tr><th>Mechanism</th>${RISKS.map(r => `<th class="num" title="${esc(r)}">${ab(r)}</th>`).join("")}</tr></thead><tbody>
+      ${famOrder.flatMap(f => FAM[f].mechanism_ids).map(id => MEC[id]).map(m => `<tr><td>${esc(m.mechanism)}<div class="small">${esc(m.family)}</div></td>${RISKS.map(r => { const t = m.risks.includes(r), c = m.conditional_risks.some(x => x.risk === r); return `<td class="num" style="color:var(--gold2)" title="${esc(r)}${t ? ": through " + m.pathway_ids.filter(p => PATH[p].risks.includes(r)).map(p => PATH[p].pathway).join("; ") : c ? ": conditional" : ""}">${t ? "●" : c ? "◐" : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div>
+      <p class="small">● tagged · ◐ conditional · ${RISKS.map(r => `${ab(r)} ${esc(r)}`).join(" · ")}</p>`;
+  } else if (cw === "asset") {
+    body.innerHTML = `<p class="small">Comparative advantage enters as country assets, a short closed list tagged onto the mechanisms that mobilise them, not as a twelfth risk.</p><div class="frame"><table><thead><tr><th>Asset</th><th>Why it is an asset</th><th>Mechanisms that mobilise it</th></tr></thead><tbody>${T.assets.map(a => `<tr><td>${esc(a.asset)}</td><td class="wrapc">${esc(a.why)}</td><td class="wrapc small">${T.mechanisms.filter(m => m.assets.includes(a.asset_id)).map(m => esc(m.mechanism)).join(" · ")}</td></tr>`).join("")}</tbody></table></div>`;
+  } else if (cw === "mech") {
+    sortable(tbl(), T.mechanisms.map(m => ({ ...m, n: reach[m.mechanism_id] || 0, rs: m.risks.join(", "), ps: m.pathway_ids.map(p => PATH[p].pathway).join("; ") })), [{ k: "mechanism_id", h: "Id" }, { k: "family", h: "Family" }, { k: "mechanism", h: "Mechanism" }, { k: "intermediate_variable", h: "Moves" }, { k: "ps", h: "Pathways" }, { k: "rs", h: "Risks" }, { k: "plan_words", h: "Plan words" }, { k: "n", h: "In view", num: 1 }],
+      m => `<tr><td class="mono">${m.mechanism_id}</td><td>${esc(m.family)}</td><td>${esc(m.mechanism)}</td><td class="wrapc small">${esc(m.intermediate_variable)}</td><td class="wrapc small">${esc(m.ps)}</td><td class="wrapc small">${esc(m.rs)}</td><td class="mono wrapc" style="max-width:280px;overflow-wrap:anywhere">${esc(m.plan_words)}</td><td class="num">${n0(m.n)}</td></tr>`);
+  } else if (cw === "path") {
+    const rp = by(natRows(), s => s.pathway_id);
+    sortable(tbl(), T.pathways.map(p => ({ ...p, n: rp[p.pathway_id] || 0, rs: p.risks.join(", ") })), [{ k: "pathway_id", h: "Id" }, { k: "pathway", h: "Pathway" }, { k: "mechanism", h: "v2 mechanism" }, { k: "family", h: "v2 family" }, { k: "old_family", h: "v1 family" }, { k: "subpillar_changed", h: "RHDR moved" }, { k: "merged_into", h: "Merged into" }, { k: "rs", h: "Risks" }, { k: "evidence", h: "Evidence" }, { k: "n", h: "In view", num: 1 }],
+      p => `<tr><td class="mono">${p.pathway_id}</td><td>${esc(p.pathway)}<div class="small">${esc(p.causal_input)} → ${esc(p.transmission)} → ${esc(p.outcome)}</div></td><td>${esc(p.mechanism)}</td><td>${esc(p.family)}</td><td class="small">${esc(p.old_family)}</td><td>${p.subpillar_changed ? `<span class="tag ok">${esc(p.old_subpillar)} → ${esc(p.subpillar)}</span>` : ""}</td><td class="mono">${esc(p.merged_into)}</td><td class="wrapc small">${esc(p.rs)}</td><td class="wrapc small">${esc(p.evidence)}</td><td class="num">${n0(p.n)}</td></tr>`);
+  } else {
+    body.innerHTML = `<div class="grid2"><div><h3 style="margin-top:0">Target groups: 197 labels in 11 classes</h3><div class="frame" style="max-height:62vh"><table id="cw-tc"></table></div></div><div><h3 style="margin-top:0">Instruments: 19 labels in Hood's four resources</h3><div class="frame" style="max-height:62vh"><table id="cw-ic"></table></div></div></div>`;
+    sortable(document.getElementById("cw-tc"), T.target_classes, [{ k: "target_class", h: "Class" }, { k: "target_label", h: "Label" }, { k: "target_family", h: "Label family" }], t => `<tr><td>${esc(t.target_class)}</td><td>${esc(t.target_label)}</td><td class="small">${esc(t.target_family)}</td></tr>`);
+    sortable(document.getElementById("cw-ic"), T.instrument_classes, [{ k: "instrument_class", h: "Class" }, { k: "instrument_label", h: "Label" }, { k: "class_note", h: "Note" }], t => `<tr><td>${esc(t.instrument_class)}</td><td>${esc(t.instrument_label)}</td><td class="small wrapc">${esc(t.class_note)}</td></tr>`);
+  }
+  body.querySelectorAll("[data-f]").forEach(b => (b.onclick = () => goFam(b.dataset.f)));
+}
+
+// ---------------------------------------------------------------- bottom-up test
+function test() {
+  const el = document.getElementById("v-test");
+  if (!TEST) { el.innerHTML = `<p class="note">The bottom-up test has not been run. Run test_bottomup.py with the strategy tree review file to add it.</p>`; return; }
+  const rows = TEST.rows, c = by(rows, r => r.outcome), areas = by(rows, r => r.area);
+  el.innerHTML = `<p class="note">The tree is built from the literature, top down. This is the test afterwards: every leaf objective of the bottom-up strategy tree, read through the v2 families and mechanisms. ${esc(TEST.note)}</p>
+    <div class="tiles">${Object.entries(c).map(([k, v]) => `<div class="tile"><span class="k">${esc(k)}</span><b>${n0(v)}</b><div class="d">${pct(v / rows.length)} of ${n0(rows.length)} leaf objectives</div></div>`).join("")}</div>
+    <div class="grid2"><div class="card"><h3 style="margin-top:0">Mechanisms gathering objectives from several areas</h3><p class="small">A mechanism cutting across many areas is doing what a lever should: the same lever appears in several sector chapters. One fed from a single area may be a sector in disguise.</p>${barsHtml(sortDesc(TEST.spread).slice(0, 25), 1, { label: k => MEC[k] ? MEC[k].mechanism : k, title: k => (TEST.spread_areas[k] || []).join(", "), raw: 1 })}</div>
+    <div class="card"><h3 style="margin-top:0">Where each bottom-up area lands</h3>${Object.entries(TEST.area_families).map(([a, fs]) => `<p class="small"><b style="color:var(--pale)">${esc(a)}</b> (${n0(areas[a])}): ${sortDesc(fs).map(([f, n]) => `${esc(FAM[f] ? FAM[f].family : f)} ${n}`).join(" · ")}</p>`).join("")}</div></div>
+    <h3 style="margin-top:24px">Every leaf objective</h3><div class="filters"><label>Outcome<select id="ts-o"><option value="">Any</option>${Object.keys(c).map(k => `<option>${esc(k)}</option>`).join("")}</select></label><label>Area<select id="ts-a"><option value="">Any</option>${Object.keys(areas).sort().map(k => `<option>${esc(k)}</option>`).join("")}</select></label><label>Search<input type="search" id="ts-q"></label></div>
+    <div class="frame" style="max-height:65vh"><table id="ts-t"></table></div>`;
+  const draw = () => { const o = document.getElementById("ts-o").value, a = document.getElementById("ts-a").value, q = document.getElementById("ts-q").value.toLowerCase();
+    sortable(document.getElementById("ts-t"), rows.filter(r => (!o || r.outcome === o) && (!a || r.area === a) && (!q || `${r.label} ${r.mechanism} ${r.family}`.toLowerCase().includes(q))),
+      [{ k: "area", h: "Area" }, { k: "label", h: "Leaf objective" }, { k: "n", h: "Strategies", num: 1 }, { k: "outcome", h: "Outcome" }, { k: "family", h: "v2 family" }, { k: "mechanism", h: "v2 mechanism" }, { k: "how", h: "How placed" }, { k: "note", h: "Note" }],
+      r => `<tr><td class="small">${esc(r.area)}</td><td>${esc(r.label)}</td><td class="num">${n0(r.n)}</td><td><span class="tag ${r.outcome.startsWith("one mechanism") ? "ok" : r.outcome.startsWith("family") ? "weak" : "bad"}">${esc(r.outcome)}</span></td><td>${esc(r.family)}</td><td>${esc(r.mechanism)}</td><td class="small">${esc(r.how)}</td><td class="small wrapc">${esc(r.note)}</td></tr>`); };
+  ["ts-o", "ts-a"].forEach(id => (document.getElementById(id).onchange = draw)); document.getElementById("ts-q").oninput = draw; draw();
+}
+
+// ---------------------------------------------------------------- method
+function method() {
+  document.getElementById("v-method").innerHTML = `<div class="cols" style="margin-top:16px">
+    <p><b>The tree</b>RHDR pillar, then RHDR category, then family (28: what is built or protected), mechanism (99: the lever a plan pulls, in plan-chapter language, each with the intermediate variable it moves) and pathway (259: the causal channel, with its citation, risk tags and text cues; the v1 mechanisms with frozen ids). Seven pathway pairs are merged; the merged id counts on its survivor.</p>
+    <p><b>Placement</b>A strategy sits at the deepest level its whole wording supports. Pathway placements come from the v1 run. A strategy v1 held at a family falls to its v2 family and is tried against the plan words of that family's mechanisms: exactly one match places it at the mechanism, flagged provisional until step M re-runs on v2; several or none leave it at the family with the candidates listed. Nothing is invented.</p>
+    <p><b>Shares, not counts</b>Plans differ in length, so every comparison is a share of a plan's placed strategies. Goal-shaped and Standard-branch strategies are outside the tree and outside the denominators.</p>
+    <p><b>Risk links</b>Each strategy carries the risks step E found quoted beside it. The flag joins what the plan says with what the literature says: mechanism-consistent, family-depth, affected-group support, or mention-only.</p>
+    <p><b>The storm test</b>Per risk and mechanism: sheltered with a mechanism-consistent strategy, partly with only weaker links, exposed when the plans frame the risk and the literature ties it to a mechanism no strategy reaches.</p>
+    <p><b>SDG</b>Targets sit on mechanisms, so a plan's SDG and 5 P profile falls out of its placements. Coherence against the targets step E names per strategy needs the run outputs.</p>
+    <p><b>Over time</b>Five-year plans are compared with each other; the National Strategy is a different document class and stands apart. Carried, added and dropped are read at mechanism level between consecutive editions.</p>
+    <p><b>Sector plans</b>Read against the national plan in force, drawn as coloured leaves, never added to national counts.</p>
+    <p><b>Classes</b>Target groups roll up to 11 classes, instruments to Hood's four resources of government: information, authority, money, organisation.</p>
+    <p><b>What this cannot say</b>That an instrument will work here, that a country is at risk, or that a plan addresses a risk. It can say: the plan names a lever the literature links to the risk; placed at the family, the plan does not name the channel; the plan frames it as a risk.</p>
+    <p><b>Source</b>${esc(D.meta.source)}. ${esc(D.meta.note)}</p></div>`;
+}
+
+// ---------------------------------------------------------------- routing
+const VIEWS = { paddy: () => { riskChips(); paddy(); growth(); }, profile, strategies, risks, time, sector, crosswalks, test, method };
+let lastView = null;
+function render() {
+  header(); strip();
+  const h = (location.hash || "#paddy").slice(1), v = VIEWS[h] ? h : "paddy";
+  Object.keys(VIEWS).forEach(k => (document.getElementById("v-" + k).hidden = k !== v));
+  document.querySelectorAll("#views a").forEach(a => a.getAttribute("href") === "#" + v ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  VIEWS[v]();
+  if (lastView !== v && lastView !== null && v === "paddy" && selFam) { const s = document.getElementById("panel"); if (s) s.scrollIntoView({ block: "start" }); }
+  lastView = v;
+  document.getElementById("foot").textContent = `Source: mother tree v2 (draft, built ${T.meta.built}), tree_v2.json; ${D.meta.source}. The five-year plans are the stalks; the National Strategy is read on its own; sector plans are leaves that never lengthen a stalk. Budget is not shown: the tree carries no funding per strategy.`;
+}
+let ft; document.getElementById("find").addEventListener("input", e => { clearTimeout(ft); ft = setTimeout(() => { findQ = e.target.value.trim().toLowerCase(); paddy(); }, 200); });
+window.addEventListener("hashchange", render);
+render();
+</script>
