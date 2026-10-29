@@ -342,6 +342,19 @@ def parse_document(path, cache_dir=None, use_cache=True, offline_ok=False,
     return ParsedDoc(path, name, _paragraphs(raw, name), raw["markdown"], raw.get("page_count", 0))
 
 
+def parse_documents(paths):
+    """Several files of one plan -> one ParsedDoc, in order. One file is parse_document."""
+    docs = [parse_document(p) for p in paths]
+    if len(docs) == 1:
+        return docs[0]
+    paragraphs = []
+    for d in docs:
+        for p in d.paragraphs:
+            paragraphs.append(dict(p, index=len(paragraphs) + 1))
+    return ParsedDoc(paths[0], " + ".join(d.name for d in docs), paragraphs,
+                     "\n\n".join(d.markdown or "" for d in docs), sum(d.page_count for d in docs))
+
+
 def _analyze_with_retry(path, endpoint, key, attempts=5, sleep=None):
     """Document Intelligence, retried on a dropped connection with backoff.
 

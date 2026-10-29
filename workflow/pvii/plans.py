@@ -22,7 +22,10 @@ RUNNABLE = ("ndp", "vision", "sector")     # budget and unga are the parked lane
 class Plan:
     def __init__(self, slug, country, entry):
         self.slug, self.country, self.entry = slug, country, entry
-        self.file = entry.get("file") or ""
+        # A plan published as several files (Brazil's PPA annexes) lists them under `files`;
+        # they are read as one document, in the order given.
+        self.files = list(entry.get("files") or ([entry["file"]] if entry.get("file") else []))
+        self.file = " + ".join(self.files)
         self.doc_type = entry.get("doc_type") or ""
         self.start, self.end = entry.get("start"), entry.get("end")
         self.language = entry.get("language") or ""
@@ -41,8 +44,8 @@ class Plan:
         return "%s_%s_%d-%d%s" % (self.slug, self.doc_type, int(self.start), int(self.end), tag)
 
     @property
-    def path(self):
-        return config.resolve(self.file)
+    def paths(self):
+        return [config.resolve(f) for f in self.files]
 
     def why_not_runnable(self):
         if self.entry.get("skip"):

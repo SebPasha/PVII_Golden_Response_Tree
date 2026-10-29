@@ -24,13 +24,14 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
     why = plan.why_not_runnable()
     if why:
         raise SystemExit("%s does not run: %s" % (plan.plan_id or plan.file, why))
-    if not plan.path or not os.path.exists(plan.path):
-        raise SystemExit("source document not found: %s (set PVII_SOURCES_ROOT)" % plan.path)
+    missing = [p for p in plan.paths if not os.path.exists(p)] if plan.paths else ["(no file)"]
+    if missing:
+        raise SystemExit("source document not found: %s (set PVII_SOURCES_ROOT)" % missing[0])
     out = P.plan_dir(plan.plan_id)
     os.makedirs(out, exist_ok=True)
     started = datetime.datetime.now().isoformat(timespec="seconds")
     print("== %s: %s (%s-%s)" % (plan.plan_id, plan.title, plan.start, plan.end), flush=True)
-    doc = parse.parse_document(plan.path)
+    doc = parse.parse_documents(plan.paths)
     print("parsed: %d pages, %d paragraphs" % (doc.page_count, len(doc.paragraphs)), flush=True)
     record = {"plan_id": plan.plan_id, "started": started, "file": plan.file,
               "pages": doc.page_count, "paragraphs": len(doc.paragraphs),

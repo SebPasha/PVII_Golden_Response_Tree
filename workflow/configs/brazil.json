@@ -1,0 +1,53 @@
+{
+ "slug": "brazil",
+ "country": "Brazil",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "files": [
+    "data/sources/brazil/ndp_2024-2027_ppa_anexo1_dimensao_estrategica.pdf",
+    "data/sources/brazil/ndp_2024-2027_ppa_anexo3_programas_finalisticos.pdf",
+    "data/sources/brazil/ndp_2024-2027_ppa_anexo4_programas_de_gestao.pdf"
+   ],
+   "doc_type": "ndp",
+   "start": 2024,
+   "end": 2027,
+   "language": "pt",
+   "title": "Plano Plurianual 2024-2027 (Lei 14.802/2024), Annexes I, III and IV",
+   "edition": "PPA 2024-2027",
+   "period_source": "filename"
+  },
+  {
+   "files": [
+    "data/sources/brazil/ndp_2020-2023_ppa_espelho_programas.pdf",
+    "data/sources/brazil/ndp_2020-2023_ppa_anexo3_investimentos_prioritarios.pdf"
+   ],
+   "doc_type": "ndp",
+   "start": 2020,
+   "end": 2023,
+   "language": "pt",
+   "title": "Plano Plurianual 2020-2023 (Lei 13.971/2019), programme catalogue and priority investments",
+   "edition": "PPA 2020-2023",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/brazil/ndp_2016-2019_ppa.html",
+   "doc_type": "ndp",
+   "start": 2016,
+   "end": 2019,
+   "language": "pt",
+   "title": "Plano Plurianual 2016-2019 (Lei 13.249/2016)",
+   "edition": "PPA 2016-2019",
+   "skip": true,
+   "needs": "the plan's annexes: only the law text (html) was found"
+  }
+ ],
+ "parked": {
+  "budget": {
+   "2017": "data/sources/brazil/budget_FY2017_orcamento_despesa_dados.zip",
+   "2021": "data/sources/brazil/budget_FY2021_orcamento_despesa_dados.zip",
+   "2024": "data/sources/brazil/budget_FY2024_orcamento_despesa_dados.zip"
+  },
+  "unga": {}
+ }
+}
