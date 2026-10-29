@@ -11,7 +11,7 @@ WORKFLOW = os.path.dirname(HERE)                               # workflow/
 ROOT = os.path.dirname(WORKFLOW)                               # the repo
 PROMPTS_DIR = os.path.join(WORKFLOW, "prompts")
 CONFIGS_DIR = os.environ.get("PVII_CONFIGS") or os.path.join(WORKFLOW, "configs")
-TREE_DIR = os.environ.get("PVII_TREE") or os.path.join(ROOT, "tree", "v1")
+TREE_DIR = os.environ.get("PVII_TREE") or os.path.join(ROOT, "tree", "v2")
 TREE_INPUTS = os.path.join(ROOT, "tree", "inputs")
 # Outputs: data/plans/<plan_id>/, data/country/<slug>/, data/global/. Gitignored.
 DATA_DIR = os.environ.get("PVII_DATA") or os.path.join(ROOT, "data")
@@ -136,7 +136,10 @@ RISKS = ["Climate Change", "Pandemics", "Biodiversity Loss",
          "Democratic Backsliding", "Growing Populism", "Increased Polarisation"]
 
 PROMPT_FILES = {"C": "C_context.txt", "C_reduce": "C_context_reduce.txt",
-                "E": "E_extract.txt", "F": "F_fold.txt", "M": "M_map.txt"}
+                "E": "E_extract.txt", "F": "F_fold.txt",
+                # M's prompt follows the tree release in TREE_DIR
+                "M": "M_map_v2.txt" if os.path.exists(os.path.join(TREE_DIR, "tree_v2.json"))
+                else "M_map.txt"}
 
 
 def load_prompt(stage):

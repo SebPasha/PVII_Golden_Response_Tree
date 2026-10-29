@@ -47,13 +47,14 @@ def _extract(names):
     return answer
 
 
-def _map(objective_for):
+def _map(node_for):
     def answer(prompt):
         lines = prompt.rsplit("STRATEGIES\n", 1)[1].strip().splitlines()
         out = []
         for line in lines:
             i, name = line.split(" | ")[:2]
-            out.append({"id": int(i), "objective_id": objective_for[name], "node_id": ""})
+            out.append({"id": int(i), "node_id": node_for[name], "new_objective": name,
+                        "relation": "placed"})
         return out
     return answer
 
@@ -72,7 +73,9 @@ def world(configs, data, tmp_path, monkeypatch):
     return docs
 
 
-OBJ = {"Mechanise farming": "O0006", "Digitise services": "M02", "Protect fisheries": "O0004"}
+# Tree v2 answers: a pathway whose cues the wording carries, another pathway, and a mechanism
+# whose plan words the wording does not carry (held at its family by the depth rule).
+OBJ = {"Mechanise farming": "L3-162", "Digitise services": "L3-227", "Protect fisheries": "MEC-85"}
 
 
 @pytest.mark.contract
@@ -94,6 +97,8 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert io.as_list(farm["sdg_targets"]) == ["2.3"] and farm["sdg_primary_dimension"]
     assert (farm["stated_urgency"], farm["legal_or_plan_basis"]) == ("high", "none")
     assert farm["subpillar"] and farm["pillar_rhdr"]
+    assert (farm["node_id"], farm["level"], farm["mechanism_id"]) == ("L3-162", "L3", "MEC-63")
+    assert farm["relation"] == "placed" and farm["new_objective"] == "Mechanise farming"
     assert farm["published"] == "2016-12-29"
     guards = io.read_json(os.path.join(P.plan_dir("testland_ndp_2017-2021"), "run.json"))[
         "extract"]["guards"]
@@ -103,8 +108,10 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert len(c["strategies"]) == 2 + 2 and len(c["risks"]) == 4
     assert {s["period_start"] for s in c["strategies"]} == {"2017", "2022"}
     status = {(e["node_id"], e["status"]) for e in c["editions"]}
-    assert ("L2-33", "carried") in status
-    assert ("L3-227", "dropped") in status and ("L3-074", "new") in status
+    assert ("L3-162", "carried") in status
+    assert ("L3-227", "dropped") in status and ("FAM-25", "new") in status
+    fish = next(s for s in c["strategies"] if s["name"] == "Protect fisheries")
+    assert (fish["node_id"], fish["level"]) == ("FAM-25", "L1") and "held at FAM-25" in fish["map_note"]
     runs = {p["plan_id"]: p["status"] for p in c["plans"]}
     assert runs["testland_ndp_2017-2021"] == "run"
     assert runs["testland_sector_2022-2026_health-plan"] == "not run"

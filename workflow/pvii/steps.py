@@ -45,8 +45,8 @@ STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "ed
                     # step M
                     "tree_version", "relation", "objective_id", "tree_objective",
                     "new_objective", "node_id", "level", "depth_basis", "depth_words",
-                    "family_id", "family", "mechanism_id", "mechanism", "subpillar", "pillar_rhdr",
-                    "target_id", "target_label", "instrument_id",
+                    "family_id", "family", "mechanism_id", "mechanism", "pathway_id", "pathway",
+                    "subpillar", "pillar_rhdr", "target_id", "target_label", "instrument_id",
                     "instrument_label", "proposal", "confidence", "map_note"]
 PROPOSAL_COLUMNS = ["plan_id", "strategy_id", "name", "objective", "relation", "new_objective",
                     "node_id", "proposal", "quote_en", "quote"]
@@ -560,7 +560,7 @@ def map_to_tree(client, plan, strategies, ctx, tree, out_dir):
                     continue
         for i, s in enumerate(batch):
             resolve(s, answers.get(i + 1), tree)
-            if s["relation"] in ("differs", "new"):
+            if s["relation"] in ("differs", "new"):   # v1: no objective fits; v2: no node fits
                 proposals.append({k: s.get(k, "") for k in PROPOSAL_COLUMNS})
     io.write_csv(os.path.join(out_dir, "strategies.csv"), strategies, STRATEGY_COLUMNS)
     io.write_csv(os.path.join(out_dir, "proposals.csv"), proposals, PROPOSAL_COLUMNS)
@@ -571,12 +571,40 @@ def map_to_tree(client, plan, strategies, ctx, tree, out_dir):
     return strategies, proposals, [e[1] for e in errors]
 
 
+def _resolve_v2(s, a, tree, node, text, notes):
+    """Tree v2: no objectives to match, so the answer is a node and a proposed objective.
+
+    The depth rule is tested here as the tree states it: a pathway needs its text cues in the
+    strategy's wording, a mechanism its plan words; a claim without them steps up one level,
+    and the reason is written on the row. A merged pathway becomes the sibling it merged into.
+    """
+    s["new_objective"] = _str(a.get("new_objective"))
+    final = tree.canonical(node) if tree.level_of(node) else ""
+    if node and not final:
+        notes.append("node %s is not in the tree" % node)
+    while final in tree.pathways or final in tree.mechanisms:
+        cue = tree.cue_matches(final, text)
+        if cue:
+            s["depth_basis"], s["depth_words"] = "strategy wording", cue
+            break
+        up = tree.parent_of(final)
+        notes.append("held at %s: the wording carries none of %s's cues" % (up, final))
+        final = up
+    if final and not s["depth_basis"]:
+        s["depth_basis"] = "family" if tree.level_of(final) == "L1" else "holding"
+    s["relation"] = "placed" if final else "new"
+    if not final:
+        s["proposal"] = _str(a.get("proposal")) or (
+            "no node fits: %s" % (s["new_objective"] or s["objective"]))
+    return final
+
+
 def resolve(s, a, tree):
     """Apply one model answer to one strategy under the tree's own rules, in place."""
     s.update(tree_version=tree.version, relation="unmapped", objective_id="", tree_objective="",
              new_objective="", node_id="", level="", depth_basis="", depth_words="",
-             family_id="", family="", mechanism_id="", mechanism="", subpillar="",
-             pillar_rhdr="", target_id="", target_label="", instrument_id="",
+             family_id="", family="", mechanism_id="", mechanism="", pathway_id="", pathway="",
+             subpillar="", pillar_rhdr="", target_id="", target_label="", instrument_id="",
              instrument_label="", proposal="", confidence="", map_note="")
     if not a:
         s["map_note"] = "no answer for this strategy"
@@ -586,7 +614,9 @@ def resolve(s, a, tree):
     node = _str(a.get("node_id"))
     text = " ".join([s.get("name", ""), s.get("objective", ""), s.get("quote_en", ""),
                      s.get("quote", ""), _str(a.get("depth_words"))])
-    if oid and oid != "NEW" and oid in tree.objectives:
+    if not tree.objectives:
+        final = _resolve_v2(s, a, tree, node, text, notes)
+    elif oid and oid != "NEW" and oid in tree.objectives:
         base, level = tree.node_of_objective(oid)
         s.update(relation="same", objective_id=oid,
                  tree_objective=tree.objectives[oid]["objective"], depth_basis="inherited from objective")
@@ -625,6 +655,7 @@ def resolve(s, a, tree):
     d = tree.describe(final) if final else {}
     s.update(family_id=d.get("family_id", ""), family=d.get("family", ""),
              mechanism_id=d.get("mechanism_id", ""), mechanism=d.get("mechanism", ""),
+             pathway_id=d.get("pathway_id", ""), pathway=d.get("pathway", ""),
              # The official RHDR category and pillar: the tree's own, never a separate guess.
              subpillar=d.get("subpillar", ""), pillar_rhdr=d.get("pillar", ""))
     tid, iid = _str(a.get("target_id")), _str(a.get("instrument_id"))
