@@ -15,7 +15,7 @@ import os
 from pvii import config, io, plans as P, steps
 
 PLAN_COLUMNS = ["plan_id", "country", "slug", "doc_type", "edition", "plan_title",
-                "period_start", "period_end", "language", "status", "n_risks", "n_strategies",
+                "period_start", "period_end", "published", "language", "status", "n_risks", "n_strategies",
                 "n_same", "n_differs", "n_new", "n_unmapped", "tree_version"]
 EDITION_COLUMNS = ["country", "doc_type", "from_plan", "to_plan", "from_period", "to_period",
                    "node_id", "level", "family", "mechanism", "status", "n_from", "n_to"]
@@ -37,6 +37,9 @@ def stack_country(slug, configs_dir=None):
     for p in P.load_country(slug, configs_dir):
         row = dict(p.row(), status=p.why_not_runnable() or "not run")
         d = P.plan_dir(p.plan_id) if p.plan_id else ""
+        if d and os.path.exists(os.path.join(d, "context.json")):
+            row["published"] = ((io.read_json(os.path.join(d, "context.json")) or {})
+                                .get("publication") or {}).get("date", "")
         st = io.read_csv(os.path.join(d, "strategies.csv")) if d else []
         rk = io.read_csv(os.path.join(d, "risks.csv")) if d else []
         if st or rk:

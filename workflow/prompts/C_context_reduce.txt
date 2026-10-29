@@ -11,6 +11,9 @@ Task
 
 Merge the parts into one context for the whole document:
 
+- publication: the date the document states it was published, approved or adopted, with its
+  event and quote. Where parts give more than one, keep the final approval or publication of
+  this document, not of a draft or an earlier plan.
 - period: the period the document states. Where the parts disagree, or disagree with the
   register, keep the document's own statement and say so in `period_note`.
 - structure: one list, in the document's order, duplicates removed. Keep the document's own
@@ -26,6 +29,7 @@ Output
 
 A valid JSON object only, with the same keys as the parts plus "period_note":
 
-{"period": {"start": 0, "end": 0, "quote": ""}, "period_note": "",
+{"publication": {"date": "", "event": "", "quote": ""},
+ "period": {"start": 0, "end": 0, "quote": ""}, "period_note": "",
  "structure": [], "headline_targets": [], "risk_framing": {"summary": "", "risks_named": [], "quotes": []},
  "vocabulary": []}

@@ -12,6 +12,12 @@ Task
 
 Return what this part of the document says about:
 
+0. publication - when the document was published, approved or adopted, as the document states it
+   (a date on the cover or title page, a cabinet or parliament approval, a royal gazette or
+   official notice). Give the date as precisely as it is stated: "2022-10-24", "2022-10" or
+   "2022". Say which event it is. Quote the words. Leave it empty if this part does not say;
+   never infer it from the plan period.
+
 1. period - the years the document covers, as the document states them (for example "2023-2027",
    "fiscal years 2023 to 2027"). Quote the sentence. Leave it empty if this part does not say.
 
@@ -42,7 +48,8 @@ Output
 
 A valid JSON object only, no markdown and no commentary:
 
-{"period": {"start": 2023, "end": 2027, "quote": ""},
+{"publication": {"date": "", "event": "published|approved|adopted|gazetted", "quote": ""},
+ "period": {"start": 2023, "end": 2027, "quote": ""},
  "structure": [{"level": "goal|pillar|strategy|milestone|target|other",
                 "number": "the document's own number", "name": "the document's own words, in English",
                 "parent": "number of the level above it, or empty", "parent_quote": "the sentence that states the link, or empty"}],

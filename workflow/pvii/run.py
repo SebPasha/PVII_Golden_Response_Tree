@@ -40,6 +40,7 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
               "dry_run": bool(client.dry_run)}
     ctx = steps.context(client, plan, doc, out, force=force_context) if "C" in steps_wanted \
         else (io.read_json(os.path.join(out, "context.json")) or {})
+    plan.published = steps.published(ctx)
     result = {}
     if "E" in steps_wanted:
         result = steps.extract(client, plan, doc, ctx, out)

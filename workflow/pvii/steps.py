@@ -28,16 +28,16 @@ CLASS_COLUMNS = ["risk_evidence", "stated_urgency", "sdg_targets",
                  "has_timeline", "has_quantified_target", "has_monitoring", "legal_or_plan_basis"]
 
 RISK_COLUMNS = ["risk_id", "plan_id", "country", "slug", "doc_type", "edition", "plan_title",
-                "period_start", "period_end", "ref", "page", "heading", "section_type", "risk",
+                "period_start", "period_end", "published", "ref", "page", "heading", "section_type", "risk",
                 "other_risk", "framing", "quote", "quote_en", "quote_check"]
 ROW_COLUMNS = ["row_id", "plan_id", "country", "slug", "doc_type", "edition", "plan_title",
-               "period_start", "period_end", "ref", "page", "heading", "section_type",
+               "period_start", "period_end", "published", "ref", "page", "heading", "section_type",
                "statement_type", "name", "objective", "target_group", "instrument", "pillar",
                "related_risks", "target_year", "target_year_quote", "horizon", "place",
                "quantified_targets", "named_agencies", "quote", "quote_en", "quote_check"
                ] + CLASS_COLUMNS
 STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "edition",
-                    "plan_title", "period_start", "period_end", "name", "objective",
+                    "plan_title", "period_start", "period_end", "published", "name", "objective",
                     "target_group", "instrument", "pillar", "statement_type", "related_risks",
                     "target_year", "horizon", "place", "n_mentions", "members", "refs", "quote",
                     "quote_en", "quote_check", "quantified_targets", "named_agencies"
@@ -141,6 +141,7 @@ def context(client, plan, doc, out_dir, force=False):
 def _clean_context(ctx, plan, document_text):
     """Shape the context, check its quotes against the document, and compare its period."""
     out = {"plan_id": plan.plan_id, "title": plan.title,
+           "publication": _publication(ctx.get("publication")),
            "period": ctx.get("period") or {}, "period_note": _str(ctx.get("period_note")),
            "structure": [s for s in ctx.get("structure") or [] if isinstance(s, dict)],
            "headline_targets": [t for t in ctx.get("headline_targets") or [] if isinstance(t, dict)],
@@ -151,7 +152,7 @@ def _clean_context(ctx, plan, document_text):
         out["period_note"] = (out["period_note"] + " " if out["period_note"] else "") + (
             "The document reads %s-%s; the register says %s-%s." % (st, en, plan.start, plan.end))
     checks = {}
-    for q in ([(out["period"] or {}).get("quote")]
+    for q in ([out["publication"]["quote"], (out["period"] or {}).get("quote")]
               + [s.get("parent_quote") for s in out["structure"]]
               + [t.get("quote") for t in out["headline_targets"]]
               + list((out["risk_framing"] or {}).get("quotes") or [])):
@@ -167,11 +168,29 @@ def _clean_context(ctx, plan, document_text):
     return out
 
 
+def _publication(p):
+    """{date, event, quote}: the date as stated (YYYY, YYYY-MM or YYYY-MM-DD), "" when not."""
+    p = p if isinstance(p, dict) else {}
+    date = _str(p.get("date"))
+    if not re.fullmatch(r"(19|20)\d\d(-[01]\d(-[0-3]\d)?)?", date):
+        date = ""
+    return {"date": date, "event": _str(p.get("event")) if date else "",
+            "quote": _str(p.get("quote")) if date else ""}
+
+
+def published(ctx):
+    """The plan's publication date from its context, for the `published` column."""
+    return ((ctx or {}).get("publication") or {}).get("date", "")
+
+
 def context_markdown(ctx, plan):
     lines = ["# Context: %s" % plan.title, "",
              "plan_id `%s`, %s, %s to %s. This file is read by the extract and map steps; "
              "edit it freely, a re-run never overwrites it." % (plan.plan_id, plan.country,
                                                                  plan.start, plan.end), ""]
+    pub = ctx.get("publication") or {}
+    lines += ["**Published:** %s" % ("%s (%s)" % (pub["date"], pub.get("event") or "date")
+                                     if pub.get("date") else "not stated"), ""]
     if ctx.get("period_note"):
         lines += ["**Period note:** " + ctx["period_note"], ""]
     lines += ["## Structure", ""]

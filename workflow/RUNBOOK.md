@@ -69,7 +69,7 @@ Each plan writes `data/plans/<plan_id>/`:
 
 | File | Step | What it holds |
 |---|---|---|
-| `context.json`, `context.md` | C | Period, structure, headline targets, risk framing and vocabulary. Never overwritten; use `--force-context` to re-read it |
+| `context.json`, `context.md` | C | Publication date, period, structure, headline targets, risk framing and vocabulary. Never overwritten; use `--force-context` to re-read it |
 | `risks.csv` | E | Risks the plan frames as risks, each with its quote and quote check |
 | `strategy_rows.csv` | E | Strategies kept by the commitment test, one row per paragraph mention |
 | `strategy_rows_dropped.csv` | E | Completed and background statements, kept for review |

@@ -28,6 +28,7 @@ class Plan:
         self.language = entry.get("language") or ""
         self.title = entry.get("title") or os.path.basename(self.file)
         self.edition = entry.get("edition") or ""
+        self.published = ""   # set from the context file (step C)
 
     @property
     def plan_id(self):
@@ -58,7 +59,8 @@ class Plan:
         """The columns every output row of this plan carries."""
         return {"plan_id": self.plan_id, "country": self.country, "slug": self.slug,
                 "doc_type": self.doc_type, "edition": self.edition, "plan_title": self.title,
-                "period_start": self.start, "period_end": self.end, "language": self.language}
+                "period_start": self.start, "period_end": self.end, "published": self.published,
+                "language": self.language}
 
     def __repr__(self):
         return "<Plan %s>" % (self.plan_id or self.file)
