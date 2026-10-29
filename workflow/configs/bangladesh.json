@@ -1,0 +1,181 @@
+{
+ "slug": "bangladesh",
+ "country": "Bangladesh",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "files": [
+    "data/sources/bangladesh/ndp/BGD NDP 2026-31 (Vol 1).pdf",
+    "data/sources/bangladesh/ndp/BGD NDP 2026-31 (Vol 2 - Strategic Action Matrix).pdf"
+   ],
+   "doc_type": "ndp",
+   "start": 2026,
+   "end": 2031,
+   "language": "en",
+   "title": "Ninth Five Year Plan FY2026-FY2031, Volumes I and II (Strategic Action Matrix)",
+   "edition": "9th",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/ndp/BGD NDP 2020-25.pdf",
+   "doc_type": "ndp",
+   "start": 2020,
+   "end": 2025,
+   "language": "en",
+   "title": "Eighth Five Year Plan July 2020 - June 2025",
+   "edition": "8th",
+   "period_source": "cover"
+  },
+  {
+   "file": "data/sources/bangladesh/ndp/BGD NDP 2016-2020.pdf",
+   "doc_type": "ndp",
+   "start": 2016,
+   "end": 2020,
+   "language": "en",
+   "title": "Seventh Five Year Plan FY2016-FY2020",
+   "edition": "7th",
+   "period_source": "filename"
+  },
+  {
+   "files": [
+    "data/sources/bangladesh/ndp/BGD NDP 2011-2015 Part 1.pdf",
+    "data/sources/bangladesh/ndp/BGD NDP 2011-2015 Part 2-Sectoral Strategies.pdf"
+   ],
+   "doc_type": "ndp",
+   "start": 2011,
+   "end": 2015,
+   "language": "en",
+   "title": "Sixth Five Year Plan FY2011-FY2015, Parts 1 and 2",
+   "edition": "6th",
+   "period_source": "cover"
+  },
+  {
+   "file": "data/sources/bangladesh/Bangladesh Vision Doc 2041.pdf",
+   "doc_type": "vision",
+   "start": 2021,
+   "end": 2041,
+   "language": "en",
+   "title": "Making Vision 2041 a Reality: Perspective Plan of Bangladesh 2021-2041",
+   "edition": "Perspective Plan 2021-2041",
+   "period_source": "cover"
+  },
+  {
+   "file": "data/sources/bangladesh/Sixth_Five_Year_Plan-_Accelerating_Growth_and_Reducing_Poverty.pdf",
+   "doc_type": "ndp",
+   "start": 2011,
+   "end": 2015,
+   "language": "en",
+   "title": "Sixth Five Year Plan, as IMF Country Report 13/63",
+   "skip": "duplicate: the IMF's 2013 reprint of the Sixth Five Year Plan, read from its own two parts instead"
+  },
+  {
+   "file": "data/sources/bangladesh/bgd205536.pdf",
+   "doc_type": "ndp",
+   "start": 2020,
+   "end": 2025,
+   "language": "en",
+   "title": "Eighth Five Year Plan (second copy)",
+   "skip": "duplicate: byte-identical to ndp/BGD NDP 2020-25.pdf"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD Climate Prosperity Plan 2022-2041.pdf",
+   "doc_type": "sector",
+   "start": 2022,
+   "end": 2041,
+   "language": "en",
+   "title": "Mujib Climate Prosperity Plan 2022-2041",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD National Adaptation Plan 2023-2050.pdf",
+   "doc_type": "sector",
+   "start": 2023,
+   "end": 2050,
+   "language": "en",
+   "title": "National Adaptation Plan of Bangladesh 2023-2050",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD Education Sector Plan 2020-25.pdf",
+   "doc_type": "sector",
+   "start": 2020,
+   "end": 2025,
+   "language": "en",
+   "title": "Education Sector Plan 2020-2025",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD Export Policy 2024-27.pdf",
+   "doc_type": "sector",
+   "start": 2024,
+   "end": 2027,
+   "language": "en",
+   "title": "Export Policy 2024-2027",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD NAP for Skills Development 2022-27.pdf",
+   "doc_type": "sector",
+   "start": 2022,
+   "end": 2027,
+   "language": "en",
+   "title": "National Action Plan for Skills Development 2022-2027",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD National AI Policy 2026-30 (Draft V2).pdf",
+   "doc_type": "sector",
+   "start": 2026,
+   "end": 2030,
+   "language": "en",
+   "title": "National AI Policy 2026-2030 (Draft V2)",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD National Industry Policy 2022.pdf",
+   "doc_type": "sector",
+   "start": 2022,
+   "end": null,
+   "language": "en",
+   "title": "National Industry Policy 2022",
+   "needs": "end year: the gazette (25 September 2022) gives no plan period; confirm"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD National Skills Development Policy 2021.pdf",
+   "doc_type": "sector",
+   "start": 2021,
+   "end": null,
+   "language": "bn",
+   "title": "National Skills Development Policy 2021",
+   "needs": "end year: a policy with no period, in Bangla; confirm"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD National Social Security Strategy 2015.pdf",
+   "doc_type": "sector",
+   "start": 2015,
+   "end": null,
+   "language": "en",
+   "title": "National Social Security Strategy of Bangladesh (July 2015)",
+   "needs": "end year: the cover gives only July 2015; confirm"
+  },
+  {
+   "file": "data/sources/bangladesh/sector/BGD Smart Bangladesh 2041.pdf",
+   "doc_type": "sector",
+   "start": null,
+   "end": 2041,
+   "language": "en",
+   "title": "Smart Bangladesh ICT Master Plan 2041 (Draft)",
+   "needs": "start year: a draft with no start date; confirm"
+  }
+ ],
+ "parked": {
+  "budget": {
+   "2022": "data/sources/bangladesh/budget/BGD Budget Speech - 2021-22.pdf",
+   "2023": "data/sources/bangladesh/budget/BGD Budget Speech - 2022-23.pdf",
+   "2024": "data/sources/bangladesh/budget/BGD Budget Speech - 2023-24.pdf",
+   "2025": "data/sources/bangladesh/budget/BGD Budget Speech - 2024-25.pdf",
+   "2026": "data/sources/bangladesh/budget/BGD Budget Speech - 2025-26.pdf"
+  },
+  "unga": {}
+ }
+}
