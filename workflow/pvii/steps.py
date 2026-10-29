@@ -45,8 +45,8 @@ STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "ed
                     # step M
                     "tree_version", "relation", "objective_id", "tree_objective",
                     "new_objective", "node_id", "level", "depth_basis", "depth_words",
-                    "family_id", "family", "mechanism_id", "mechanism", "pathway_id", "pathway",
-                    "subpillar", "pillar_rhdr", "target_id", "target_label", "instrument_id",
+                    "group_id", "group", "family_id", "family", "mechanism_id", "mechanism",
+                    "pathway_id", "pathway", "subpillar", "pillar_rhdr", "target_id", "target_label", "instrument_id",
                     "instrument_label", "proposal", "confidence", "map_note"]
 PROPOSAL_COLUMNS = ["plan_id", "strategy_id", "name", "objective", "relation", "new_objective",
                     "node_id", "proposal", "quote_en", "quote"]
@@ -582,7 +582,7 @@ def _resolve_v2(s, a, tree, node, text, notes):
     final = tree.canonical(node) if tree.level_of(node) else ""
     if node and not final:
         notes.append("node %s is not in the tree" % node)
-    while final in tree.pathways or final in tree.mechanisms:
+    while final in tree.pathways or (final in tree.mid and tree.test_mid_cues):
         cue = tree.cue_matches(final, text)
         if cue:
             s["depth_basis"], s["depth_words"] = "strategy wording", cue
@@ -591,7 +591,12 @@ def _resolve_v2(s, a, tree, node, text, notes):
         notes.append("held at %s: the wording carries none of %s's cues" % (up, final))
         final = up
     if final and not s["depth_basis"]:
-        s["depth_basis"] = "family" if tree.level_of(final) == "L1" else "holding"
+        level = tree.level_of(final)
+        s["depth_basis"] = (tree.level_names[1] if level == "L2" else
+                            tree.level_names[0] if level == "L1" else "holding")
+        if tree.required_level and level == "L1":
+            # v3: a family is the required level; a group alone is a weak placement, counted.
+            notes.append("%s only: a %s is required" % (tree.level_names[0], tree.level_names[1]))
     s["relation"] = "placed" if final else "new"
     if not final:
         s["proposal"] = _str(a.get("proposal")) or (
@@ -603,8 +608,8 @@ def resolve(s, a, tree):
     """Apply one model answer to one strategy under the tree's own rules, in place."""
     s.update(tree_version=tree.version, relation="unmapped", objective_id="", tree_objective="",
              new_objective="", node_id="", level="", depth_basis="", depth_words="",
-             family_id="", family="", mechanism_id="", mechanism="", pathway_id="", pathway="",
-             subpillar="", pillar_rhdr="", target_id="", target_label="", instrument_id="",
+             group_id="", group="", family_id="", family="", mechanism_id="", mechanism="",
+             pathway_id="", pathway="", subpillar="", pillar_rhdr="", target_id="", target_label="", instrument_id="",
              instrument_label="", proposal="", confidence="", map_note="")
     if not a:
         s["map_note"] = "no answer for this strategy"
@@ -653,7 +658,8 @@ def resolve(s, a, tree):
             "no node fits: %s" % (s["new_objective"] or s["objective"]))
     s["node_id"], s["level"] = final, tree.level_of(final)
     d = tree.describe(final) if final else {}
-    s.update(family_id=d.get("family_id", ""), family=d.get("family", ""),
+    s.update(group_id=d.get("group_id", ""), group=d.get("group", ""),
+             family_id=d.get("family_id", ""), family=d.get("family", ""),
              mechanism_id=d.get("mechanism_id", ""), mechanism=d.get("mechanism", ""),
              pathway_id=d.get("pathway_id", ""), pathway=d.get("pathway", ""),
              # The official RHDR category and pillar: the tree's own, never a separate guess.

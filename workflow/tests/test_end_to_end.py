@@ -73,9 +73,9 @@ def world(configs, data, tmp_path, monkeypatch):
     return docs
 
 
-# Tree v2 answers: a pathway whose cues the wording carries, another pathway, and a mechanism
-# whose plan words the wording does not carry (held at its family by the depth rule).
-OBJ = {"Mechanise farming": "L3-162", "Digitise services": "L3-227", "Protect fisheries": "MEC-85"}
+# Tree v3 answers: two pathways whose cues the wording carries, and a family (the required
+# level, taken as answered) plus, in the third plan's place, nothing special.
+OBJ = {"Mechanise farming": "L3-162", "Digitise services": "L3-227", "Protect fisheries": "F-51"}
 
 
 @pytest.mark.contract
@@ -97,7 +97,7 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert io.as_list(farm["sdg_targets"]) == ["2.3"] and farm["sdg_primary_dimension"]
     assert (farm["stated_urgency"], farm["legal_or_plan_basis"]) == ("high", "none")
     assert farm["subpillar"] and farm["pillar_rhdr"]
-    assert (farm["node_id"], farm["level"], farm["mechanism_id"]) == ("L3-162", "L3", "MEC-63")
+    assert (farm["node_id"], farm["level"], farm["family_id"], farm["group_id"]) == ("L3-162", "L3", "F-31", "G-16")
     assert farm["relation"] == "placed" and farm["new_objective"] == "Mechanise farming"
     assert farm["published"] == "2016-12-29"
     guards = io.read_json(os.path.join(P.plan_dir("testland_ndp_2017-2021"), "run.json"))[
@@ -109,9 +109,9 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert {s["period_start"] for s in c["strategies"]} == {"2017", "2022"}
     status = {(e["node_id"], e["status"]) for e in c["editions"]}
     assert ("L3-162", "carried") in status
-    assert ("L3-227", "dropped") in status and ("FAM-25", "new") in status
+    assert ("L3-227", "dropped") in status and ("F-51", "new") in status
     fish = next(s for s in c["strategies"] if s["name"] == "Protect fisheries")
-    assert (fish["node_id"], fish["level"]) == ("FAM-25", "L1") and "held at FAM-25" in fish["map_note"]
+    assert (fish["node_id"], fish["level"], fish["depth_basis"]) == ("F-51", "L2", "family") and not fish["map_note"]
     runs = {p["plan_id"]: p["status"] for p in c["plans"]}
     assert runs["testland_ndp_2017-2021"] == "run"
     assert runs["testland_sector_2022-2026_health-plan"] == "not run"

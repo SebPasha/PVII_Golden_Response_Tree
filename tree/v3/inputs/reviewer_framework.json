@@ -1,0 +1,5996 @@
+[
+[
+"pillar",
+{
+"name": ""
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Tackling Structural Exclusion",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups World Bank 2013, Inclusion Matters. Groups are excluded from markets, services and spaces; dignity runs across all three."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Markets",
+"def": "Barriers that keep group members out of, or unprotected in, labour and other markets, including the worker side of the formality split.",
+"basis": "Inclusion Matters: markets (labour, land, credit)",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 7 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Exclusion from markets: labour, informality and workers' rights",
+"def": "Barriers that keep group members out of, or unprotected in, labour and other markets: discrimination, care burdens, informality of work, labour contracts and rights. Holds the worker side of the formality split.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Protect worker rights and labour standards · Reform labour market regulation · Expand care services",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Taste-based and statistical discrimination",
+"def": "",
+"basis": "",
+"cite": "Becker 1957; Phelps 1972; Bertrand and Mullainathan 2004",
+"chain": "Works when enforcement of non-discrimination · How group identity in hiring, lending and services → prejudice or group averages lower access · Result gaps in employment, pay and services",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Unpaid care burden and female labour supply",
+"def": "",
+"basis": "",
+"cite": "Goldin 1995; Clark et al. 2019",
+"chain": "Works when affordable care services · How care responsibilities → time in unpaid care limits paid work · Result female employment and earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Employment protection and hiring",
+"def": "",
+"basis": "",
+"cite": "Besley and Burgess 2004",
+"chain": "Works when enforcement · How dismissal rules and labour regulation → stricter rules lower hiring and formal employment · Result formal employment and output",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Informality and formalisation costs",
+"def": "",
+"basis": "",
+"cite": "La Porta and Shleifer 2014; Ulyssea 2018",
+"chain": "Works when enforcement and benefits · How costs and benefits of formal work → high costs keep workers and firms informal · Result formal employment and coverage",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Worker voice and labour standards",
+"def": "",
+"basis": "",
+"cite": "Freeman and Medoff 1984",
+"chain": "Works when freedom of association · How collective representation and standards → voice improves conditions and reduces turnover · Result working conditions and wages",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Workplace safety enforcement",
+"def": "",
+"basis": "",
+"cite": "Levine, Toffel and Johnson 2012",
+"chain": "Works when credible inspections · How inspections and safety rules → enforcement lowers injury without job loss · Result injury rates",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Extension of contributory social insurance to informal workers",
+"def": "",
+"basis": "",
+"cite": "Levy 2008; ILO World Social Protection Report 2020-22 (source still to check)",
+"chain": "Works when contribution design and enforcement · How informality of work → contribution and eligibility rules exclude informal workers · Result coverage gaps in pensions and health insurance",
+"ex": "",
+"objs": [
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Services",
+"def": "Administrative, physical and informational barriers to services and entitlements.",
+"basis": "Inclusion Matters: services",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 2 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Exclusion from services and entitlements",
+"def": "Administrative, physical and informational barriers that keep group members from services and entitlements they are eligible for.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Promote social inclusion · Strengthen disability inclusion · Expand legal identity and civil registration",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Disability-related access barriers",
+"def": "",
+"basis": "",
+"cite": "Mitra, Posarac and Vick 2013",
+"chain": "Works when accessible design · How physical, information and attitudinal barriers → barriers limit schooling, work and services · Result poverty and exclusion of disabled people",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Documentation barriers to entitlements",
+"def": "",
+"basis": "",
+"cite": "Dahan and Gelb 2015",
+"chain": "Works when registration reach · How lack of legal identity → no document, no access to services, finance and voting · Result exclusion from services and rights",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Spaces",
+"def": "Voice and standing in social and political spaces, protection from violence, and the place of displaced people.",
+"basis": "Inclusion Matters: political, social, physical and cultural spaces; dignity",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 11 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Exclusion from social and political spaces",
+"def": "Norms, under-representation and between-group inequality that restrict voice and standing of excluded groups.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Advance gender equality · Preserve language and traditional knowledge",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Gender norms and intra-household bargaining",
+"def": "",
+"basis": "",
+"cite": "Duflo 2003; Duflo 2012; Jayachandran 2015",
+"chain": "Works when outside options · How women's control of resources → norms and bargaining power decide allocation within households · Result women's and children's outcomes",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Political representation of excluded groups",
+"def": "",
+"basis": "",
+"cite": "Pande 2003; Chattopadhyay and Duflo 2004",
+"chain": "Works when real authority · How reserved or increased representation → representatives allocate to their group's priorities · Result public goods matching excluded groups' needs",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Horizontal inequalities and group grievance",
+"def": "",
+"basis": "",
+"cite": "Stewart 2008; Cederman, Weidmann and Gleditsch 2011",
+"chain": "Works when political exclusion of the group · How inequality between identity groups → group-level grievance mobilises · Result risk of conflict",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Intergroup contact and prejudice reduction",
+"def": "",
+"basis": "",
+"cite": "Allport 1954; Mousa 2020; Lowe 2021",
+"chain": "Works when equal status; common goals · How structured contact across groups → cooperation reduces prejudice · Result tolerance and cooperation",
+"ex": "",
+"objs": [
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Violence, coercion and denial of dignity",
+"def": "Violence and exploitation inside households and labour markets that strip rights and dignity from the most exposed groups.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen child protection · Prevent gender-based violence · Strengthen social services",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Intimate-partner violence and women's bargaining power",
+"def": "",
+"basis": "",
+"cite": "Aizer 2010",
+"chain": "Works when services and justice response · How women's outside options and norms → stronger options lower violence; backlash is possible · Result prevalence of intimate-partner violence",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Household poverty and child labour",
+"def": "",
+"basis": "",
+"cite": "Basu and Van 1998; Edmonds 2007",
+"chain": "Works when income support and schooling · How household income near subsistence → children work when adult income is too low · Result child labour and lost schooling",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Child marriage and girls' human capital",
+"def": "",
+"basis": "",
+"cite": "Field and Ambrus 2008",
+"chain": "Works when enforcement and incentives · How age at marriage → early marriage cuts schooling and work · Result girls' education and earnings",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Early adversity and lifetime outcomes",
+"def": "",
+"basis": "",
+"cite": "Currie and Widom 2010",
+"chain": "Works when protective services · How abuse and neglect in childhood → trauma impairs development · Result adult earnings and health",
+"ex": "",
+"objs": [
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Displaced and uprooted populations",
+"def": "Displacement by conflict, disaster, climate or projects, and integration of displaced people in host communities.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Compensate and resettle affected communities · Support refugees, migrants and returnees",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Impoverishment risks of displacement",
+"def": "",
+"basis": "",
+"cite": "Cernea 1997",
+"chain": "Works when restoration of livelihoods · How forced displacement or resettlement → loss of land, jobs, housing and networks · Result impoverishment of the displaced",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Migration as adaptation",
+"def": "",
+"basis": "",
+"cite": "Black et al. 2011",
+"chain": "Works when barriers trap the poorest · How environmental pressure on livelihoods → mobility lets households diversify risk · Result resilience, if mobility is supported",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Refugee integration and host labour markets",
+"def": "",
+"basis": "",
+"cite": "Becker and Ferrara 2019",
+"chain": "Works when right to work · How refugees' access to work and services → integration turns refugees into workers and consumers · Result outcomes for refugees and hosts",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Enhancing Capabilities",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups UNDP Human Development Index dimensions; HDR 1994 human security. A long and healthy life, knowledge, and a decent standard of living."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Decent standard of living",
+"def": "Income security, food security and personal safety.",
+"basis": "HDI: decent standard of living; HDR 1994: economic, food and personal security",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 21 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Economic security",
+"def": "Transfers, insurance and asset building that hold household consumption steady and lift households past poverty thresholds.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand social protection coverage · Expand social assistance · Improve social protection delivery and targeting",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Consumption smoothing through transfers and insurance",
+"def": "",
+"basis": "",
+"cite": "Townsend 1994; Gertler and Gruber 2002",
+"chain": "Works when speed and adequacy · How transfers or insurance when income falls → income support holds consumption · Result stable consumption",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Prevention of adverse coping",
+"def": "",
+"basis": "",
+"cite": "Jacoby and Skoufias 1997; Hoddinott 2006",
+"chain": "Works when timing before coping · How support during shocks → stops distress asset sales and school withdrawal · Result avoided persistent losses",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Ex ante risk-taking under protection",
+"def": "",
+"basis": "",
+"cite": "Karlan, Osei, Osei-Akoto and Udry 2014",
+"chain": "Works when credible payout · How credible insurance → lower risk lets households invest in riskier, higher-return activities · Result investment and income",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Shock-responsive scale-up",
+"def": "",
+"basis": "",
+"cite": "Bowen et al. 2020",
+"chain": "Works when registry coverage · How systems that expand automatically in a shock → pre-built registries and triggers add caseload fast · Result timely support after shocks",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Old-age income security",
+"def": "",
+"basis": "",
+"cite": "Holzmann and Hinz 2005; Barr and Diamond 2008",
+"chain": "Works when coverage and adequacy · How pensions → income in old age without earnings · Result old-age poverty and consumption",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Financial protection from catastrophic health costs",
+"def": "",
+"basis": "",
+"cite": "Xu et al. 2003; Wagstaff et al. 2018",
+"chain": "Works when benefit package and enrolment · How health insurance and fee exemptions → pooling stops medical bills from impoverishing · Result catastrophic spending and impoverishment",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Targeting accuracy and coverage of the poor",
+"def": "",
+"basis": "",
+"cite": "Coady, Grosh and Hoddinott 2004; Alatas et al. 2012",
+"chain": "Works when data quality and community input · How eligibility rules and registries → better targeting reduces exclusion and inclusion errors · Result share of transfers reaching the poor",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Cash transfers and productive investment",
+"def": "",
+"basis": "",
+"cite": "Haushofer and Shapiro 2016; Egger et al. 2022",
+"chain": "Works when local supply response · How unconditional cash → relieves liquidity constraints; spending creates local multipliers · Result assets, consumption and local output",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Big-push asset transfers",
+"def": "",
+"basis": "",
+"cite": "Banerjee et al. 2015 (Science); Bandiera et al. 2017",
+"chain": "Works when complementary support · How asset plus training and support → a big push moves households past an asset threshold · Result sustained income gains",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Conditional transfers and human-capital investment",
+"def": "",
+"basis": "",
+"cite": "Schultz 2004; Fiszbein and Schady 2009",
+"chain": "Works when supply of services · How transfers conditioned on schooling or health → conditions shift spending to children's human capital · Result schooling and health of children",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Food security",
+"def": "Household command over adequate, safe food and the nutrition that follows.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve food security · Improve nutrition · Strengthen food safety and quality",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Entitlement failure and food access",
+"def": "",
+"basis": "",
+"cite": "Sen 1981",
+"chain": "Works when functioning markets · How income and prices facing households → famines and hunger follow loss of command over food, not only supply · Result food access",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Early-life nutrition and lifetime productivity",
+"def": "",
+"basis": "",
+"cite": "Hoddinott et al. 2008; Victora et al. 2008",
+"chain": "Works when timing · How nutrition in the first 1000 days → early nutrition shapes growth and cognition · Result adult earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Food price shocks and net-buyer welfare",
+"def": "",
+"basis": "",
+"cite": "Deaton 1989; Ivanic and Martin 2008",
+"chain": "Works when household position · How food price changes → net buyers lose and net sellers gain · Result poverty",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Foodborne disease and food safety",
+"def": "",
+"basis": "",
+"cite": "Havelaar et al. 2015; Jaffee et al. 2019",
+"chain": "Works when enforcement along chains · How food safety controls → contaminated food causes illness and trade rejections · Result disease burden and market access",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Food loss along supply chains",
+"def": "",
+"basis": "",
+"cite": "Affognon et al. 2015",
+"chain": "Works when storage incentives · How post-harvest handling and storage → losses cut supply and income · Result food available and farm income",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "School feeding and attendance",
+"def": "",
+"basis": "",
+"cite": "Alderman and Bundy 2012",
+"chain": "Works when local procurement · How meals at school → food at school raises attendance and nutrition · Result attendance and nutrition",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Personal security",
+"def": "Crime and violence in public life and the deterrence, justice and rehabilitation channels that reduce them.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Reform the justice sector · Strengthen law enforcement and policing · Expand access to justice",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Deterrence and the economics of crime",
+"def": "",
+"basis": "",
+"cite": "Becker 1968; Chalfin and McCrary 2017",
+"chain": "Works when certainty matters more than severity · How probability and severity of sanction → higher expected cost deters offending · Result crime rates",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Behavioural and social prevention of violence",
+"def": "",
+"basis": "",
+"cite": "Blattman, Jamison and Sheridan 2017; Heller et al. 2017",
+"chain": "Works when follow-up · How programmes changing decisions and opportunities of at-risk people → therapy and support reduce impulsive violence · Result violence and crime",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Legal empowerment and dispute resolution",
+"def": "",
+"basis": "",
+"cite": "Blattman, Hartman and Blair 2014; Sandefur and Siddiqi 2013",
+"chain": "Works when legitimacy of fora · How access to legal aid and fair dispute resolution → disputes resolved peacefully protect property and safety · Result violence and security of property",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Incarceration, rehabilitation and recidivism",
+"def": "",
+"basis": "",
+"cite": "Bhuller, Dahl, Loken and Mogstad 2020",
+"chain": "Works when programme quality · How custody and rehabilitation → rehabilitative custody lowers re-offending · Result recidivism and employment",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Illicit markets and trafficking violence",
+"def": "",
+"basis": "",
+"cite": "Dell 2015; Mejia and Restrepo 2016",
+"chain": "Works when coordination across places · How enforcement against illicit markets → crackdowns can redirect and increase violence · Result violence and trafficking",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Long and healthy life",
+"def": "Health services, prevention, and the living environment that shapes health.",
+"basis": "HDI: long and healthy life; HDR 1994: health and environmental security",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 14 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Health security",
+"def": "Health service coverage and quality, and prevention of disease and injury.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve transport safety · Expand access to health services · Build health workforce",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Service coverage and avoidable mortality",
+"def": "",
+"basis": "",
+"cite": "Starfield, Shi and Macinko 2005; Kruk et al. 2018",
+"chain": "Works when quality of care (Kruk et al. 2018) · How coverage of effective services → access to care averts deaths · Result mortality and morbidity",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Provider quality and effort",
+"def": "",
+"basis": "",
+"cite": "Das, Hammer and Leonard 2008",
+"chain": "Works when incentives and supervision · How provider knowledge and effort → the know-do gap determines care quality · Result health outcomes",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Health workforce density and coverage",
+"def": "",
+"basis": "",
+"cite": "Anand and Barnighausen 2004",
+"chain": "Works when distribution of staff · How health workers per capita → workforce density enables service coverage · Result coverage and mortality",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Essential medicines access and quality",
+"def": "",
+"basis": "",
+"cite": "Wirtz et al. 2017",
+"chain": "Works when supply chains; regulation · How availability, price and quality of medicines → access to quality medicines makes treatment effective · Result treatment outcomes",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Maternal and newborn intervention coverage",
+"def": "",
+"basis": "",
+"cite": "Bhutta et al. 2014",
+"chain": "Works when quality of facility births · How coverage of proven maternal and newborn interventions → skilled care at birth averts deaths · Result maternal and newborn mortality",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Behavioural risk factors and prevention",
+"def": "",
+"basis": "",
+"cite": "Dupas 2011; Cawley and Ruhm 2011; Lee et al. 2012",
+"chain": "Works when information and price signals · How diet, inactivity and health behaviours → behaviour drives chronic disease risk; under-investment in prevention · Result NCD burden",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Infectious disease externalities",
+"def": "",
+"basis": "",
+"cite": "Gersovitz and Hammer 2004; Miguel and Kremer 2004",
+"chain": "Works when public subsidy · How control of infectious disease → treatment and prevention protect others, so private demand is too low · Result incidence and transmission",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Addictive consumption and harm",
+"def": "",
+"basis": "",
+"cite": "Becker and Murphy 1988; Chaloupka and Warner 2000",
+"chain": "Works when enforcement · How tobacco, alcohol and drugs → addiction makes current use raise future demand; taxes and limits work · Result use and harm",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Injury prevention",
+"def": "",
+"basis": "",
+"cite": "Kopits and Cropper 2005; Habyarimana and Jack 2011",
+"chain": "Works when enforcement · How road and transport safety measures → lower risk-taking and safer environments cut crashes · Result injury deaths",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Mental health and economic functioning",
+"def": "",
+"basis": "",
+"cite": "Ridley, Rao, Schilbach and Patel 2020",
+"chain": "Works when access to treatment · How mental health → depression and anxiety impair decisions and work; poverty worsens them · Result employment and earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Living environment and basic services",
+"def": "First access to electricity, water, sanitation, clean cooking and adequate housing.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand affordable housing · Expand access to basic services · Expand water and sanitation services",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Electrification and household time use",
+"def": "",
+"basis": "",
+"cite": "Dinkelman 2011; Lee, Miguel and Wolfram 2020",
+"chain": "Works when affordability and reliability · How household electricity → light and appliances free time, especially women's · Result employment and study time; small average income gains",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Water, sanitation and disease burden",
+"def": "",
+"basis": "",
+"cite": "Cutler and Miller 2005; Duflo, Greenstone, Guiteras and Clasen 2015",
+"chain": "Works when use and maintenance · How safe water and sanitation → lower faecal contamination cuts disease · Result child mortality and diarrhoea",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Household air pollution from cooking fuels",
+"def": "",
+"basis": "",
+"cite": "Hanna, Duflo and Greenstone 2016",
+"chain": "Works when sustained use (Hanna et al. 2016) · How cooking fuel and stove → clean fuels cut indoor smoke · Result respiratory disease",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 ver",
+"name": "Housing quality and health",
+"def": "",
+"basis": "",
+"cite": "Cattaneo et al. 2009; Galiani et al. 2017",
+"chain": "Works when Health effects depend on the specific housing exposure altered (for example dirt floors and enteric pathogens), baseline exposure and implementation; improvements in housing satisfaction do not imply universal or consistent health, income or labour effects (source-verified 20 Oct 2026) · How floors, roofs and structure → better housing cuts parasites and exposure · Result child health and wellbeing",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Knowledge",
+"def": "Schooling, skills for work, and digital access and use.",
+"basis": "HDI: knowledge; capability approach",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 12 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Knowledge: schooling",
+"def": "Knowledge and skills built through early childhood, school and university.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve education quality · Reform education governance and management · Expand inclusive education",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "School access and attainment",
+"def": "",
+"basis": "",
+"cite": "Duflo 2001",
+"chain": "Works when teacher supply · How school supply and proximity → more schools and places raise attainment · Result years of schooling and earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Learning quality and cognitive skills",
+"def": "",
+"basis": "",
+"cite": "Hanushek and Woessmann 2008; Glewwe and Muralidharan 2016",
+"chain": "Works when measurement of learning · How learning outcomes → cognitive skills, not years, drive growth · Result growth and earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Teacher supply, effort and accountability",
+"def": "",
+"basis": "",
+"cite": "Muralidharan and Sundararaman 2011; Duflo, Hanna and Ryan 2012",
+"chain": "Works when credible monitoring · How teacher recruitment, pay and incentives → effort and presence respond to incentives and monitoring · Result learning",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Early-childhood skill formation",
+"def": "",
+"basis": "",
+"cite": "Heckman 2006; Cunha and Heckman 2007",
+"chain": "Works when quality of provision · How investment in early childhood → skills beget skills; dynamic complementarity · Result later learning and earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Demand-side cost barriers to schooling",
+"def": "",
+"basis": "",
+"cite": "Duflo, Dupas and Kremer 2021; Dynarski 2003",
+"chain": "Works when school supply · How fees and opportunity costs → lower costs raise enrolment of poorer students · Result enrolment and completion",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "School-based health and attendance",
+"def": "",
+"basis": "",
+"cite": "Miguel and Kremer 2004",
+"chain": "Works when coverage · How health and nutrition services at school → healthier children attend and learn more · Result attendance and learning",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Skills for work",
+"def": "Job-relevant skills formed after or alongside schooling, and the signals that make them pay.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Build workforce skills · Strengthen technical and vocational education · Build digital skills and literacy",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Race between education and technology",
+"def": "",
+"basis": "",
+"cite": "Goldin and Katz 2008",
+"chain": "Works when technology direction · How supply of skills → skill supply keeps pace or not with skill-biased demand · Result wage premium and inequality",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Returns to vocational training",
+"def": "",
+"basis": "",
+"cite": "Attanasio, Kugler and Meghir 2011",
+"chain": "Works when employer links; quality · How classroom and practical training → skills raise earnings and formal employment · Result employment and earnings",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Work-based learning and the school-to-work transition",
+"def": "",
+"basis": "",
+"cite": "Ryan 2001",
+"chain": "Works when employer participation · How apprenticeships and work placements → learning on the job eases the transition to employment · Result youth employment",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Skill signals and mismatch",
+"def": "",
+"basis": "",
+"cite": "Spence 1973; Jensen 2010",
+"chain": "Works when recognition by employers · How qualifications and labour-market information → credible signals reduce mismatch · Result match quality and returns",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Digital skill complementarity",
+"def": "",
+"basis": "",
+"cite": "Akerman, Gaarder and Mogstad 2015",
+"chain": "Works when access to technology · How digital skills → complements digital technology, raising productivity of skilled workers · Result wages and adoption",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Digital access and use",
+"def": "Household and individual access to, and effective use of, digital connectivity and devices.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand digital inclusion",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Household digital access and effective use",
+"def": "",
+"basis": "",
+"cite": "Hjort and Poulsen 2019 (source still to check)",
+"chain": "Works when affordability and digital skills · How connectivity, devices and affordability → access lowers information and transaction costs · Result employment, services use and inclusion",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Future Generations",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups Inclusive wealth (UNEP IWR 2018; World Bank CWON 2021; OECD How's Life?); IPCC; ILO 2015 just transition guidelines. Future well-being depends on the climate system and on natural, produced and human capital stocks."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Climate",
+"def": "Cutting emissions, protecting people and assets from climate hazards, and a fair transition.",
+"basis": "IPCC mitigation and adaptation; ILO 2015 just transition",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 11 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Climate stabilisation and just transition",
+"def": "Reduction of greenhouse gas emissions, and the adjustment of workers and places to decarbonisation.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand renewable energy · Mobilise climate and environmental finance · Strengthen climate governance",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Emissions pricing and the climate externality",
+"def": "",
+"basis": "",
+"cite": "Pigou 1920; Nordhaus 2008; Nordhaus 2015",
+"chain": "Works when coverage and level; clubs against free-riding · How a price on emissions → pricing internalises the global externality · Result emissions",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Directed technical change to clean technology",
+"def": "",
+"basis": "",
+"cite": "Acemoglu, Aghion, Bursztyn and Hemous 2012",
+"chain": "Works when path dependence · How subsidies and research for clean technology → redirects innovation from dirty to clean · Result clean technology share",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Learning curves in clean technology",
+"def": "",
+"basis": "",
+"cite": "Way, Ives, Mealy and Farmer 2022",
+"chain": "Works when global deployment · How deployment of solar, wind, batteries → cumulative deployment drives cost declines · Result cheaper clean energy",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Energy-efficiency gap",
+"def": "",
+"basis": "",
+"cite": "Allcott and Greenstone 2012",
+"chain": "Works when rebound effects · How efficiency standards and information → information and principal-agent failures leave efficiency unadopted · Result energy use",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Carbon lock-in of long-lived capital",
+"def": "",
+"basis": "",
+"cite": "Unruh 2000; Seto et al. 2016",
+"chain": "Works when turnover rate of capital · How long-lived high-carbon infrastructure → sunk capital and institutions lock in emissions · Result persistent emissions or stranded assets",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Local labour-market adjustment to decarbonisation",
+"def": "",
+"basis": "",
+"cite": "Hanson 2023 (source still to check)",
+"chain": "Works when mobility, retraining, place-based support · How closure of fossil-dependent activity → concentrated job and revenue losses in specific places · Result local employment, earnings and fiscal base",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Climate risk to assets and people",
+"def": "Losses from climate hazards, and the location, protection and practice changes that reduce them.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Build climate resilience and adaptation · Reduce disaster risk · Reduce flood risk",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Exposure reduction through location and land use",
+"def": "",
+"basis": "",
+"cite": "Kahn 2005; Kocornik-Mina et al. 2020",
+"chain": "Works when income and institutions (Kahn 2005) · How where people and assets locate → less exposure lowers losses for a given hazard · Result disaster losses",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Asset protection through hardened infrastructure",
+"def": "",
+"basis": "",
+"cite": "Hallegatte, Rentschler and Rozenberg 2019",
+"chain": "Works when maintenance · How resilient design and protective works → hardened assets fail less · Result disruption losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Ecosystem buffers against hazards",
+"def": "",
+"basis": "",
+"cite": "Das and Vincent 2009",
+"chain": "Works when ecosystem extent · How mangroves, wetlands and forests → ecosystems absorb surge and floods · Result deaths and damage",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Adaptive change in production practices",
+"def": "",
+"basis": "",
+"cite": "Burke and Emerick 2016",
+"chain": "Works when information and finance · How practices adjusted to climate → producers change crops, timing and inputs · Result losses avoided",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Asset vulnerability and well-being losses of the poor",
+"def": "",
+"basis": "",
+"cite": "Hallegatte et al. 2017",
+"chain": "Works when coping capacity · How assets held by poor households → the poor lose a larger share of assets and recover more slowly · Result well-being losses beyond asset losses",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Natural capital",
+"def": "Ecosystems, water and environmental quality as assets held for future generations.",
+"basis": "Inclusive wealth: natural capital",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 17 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Living natural capital",
+"def": "Ecosystems, wild stocks and land as assets under common-pool and incentive problems.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Conserve biodiversity and wildlife · Manage fisheries sustainably · Manage natural resources sustainably",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Open-access depletion and common-pool governance",
+"def": "",
+"basis": "",
+"cite": "Gordon 1954; Ostrom 1990",
+"chain": "Works when clear boundaries and monitoring · How rules over common resources → without rules users over-extract; local institutions can manage · Result stock levels",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Rights-based harvest management",
+"def": "",
+"basis": "",
+"cite": "Costello, Gaines and Lynham 2008",
+"chain": "Works when monitoring and enforcement · How catch shares and harvest limits → secure shares end the race to fish · Result stock recovery",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Protected-area habitat protection",
+"def": "",
+"basis": "",
+"cite": "Andam et al. 2008; Naidoo et al. 2019",
+"chain": "Works when enforcement; leakage · How protected status → protection reduces conversion of habitat · Result habitat and species",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Conservation incentives through nature-based income",
+"def": "",
+"basis": "",
+"cite": "Jayachandran et al. 2017; Naidoo et al. 2019",
+"chain": "Works when additionality · How payments or incomes tied to conservation → aligns local incentives with conservation · Result forest cover and local income",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Political economy of deforestation",
+"def": "",
+"basis": "",
+"cite": "Burgess et al. 2012",
+"chain": "Works when jurisdiction design · How local political incentives → decentralised rent-seeking raises illegal logging · Result deforestation",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Restoration returns on degraded land",
+"def": "",
+"basis": "",
+"cite": "Nkonya, Mirzabaev and von Braun 2016",
+"chain": "Works when land tenure · How restoration investment → restored land yields ecosystem and production returns · Result productivity and services",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Invasive species and biosecurity",
+"def": "",
+"basis": "",
+"cite": "Pimentel, Zuniga and Morrison 2005",
+"chain": "Works when border controls · How entry and spread of invasive species → invasives displace natives and damage production · Result biodiversity and output losses",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Water resources",
+"def": "Allocation of scarce, variable and shared water.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Manage water resources · Expand water storage and transfer · Improve water efficiency",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Scarcity pricing and allocation",
+"def": "",
+"basis": "",
+"cite": "Olmstead 2010",
+"chain": "Works when metering and enforcement · How prices and allocation rules for water → prices and tradable rights move water to higher-value uses · Result efficient use under scarcity",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Groundwater commons depletion",
+"def": "",
+"basis": "",
+"cite": "Ryan and Sudarshan 2022",
+"chain": "Works when electricity pricing for pumps · How pumping from shared aquifers → unpriced pumping depletes the aquifer · Result falling water tables",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Storage and hydrological variability",
+"def": "",
+"basis": "",
+"cite": "Brown and Lall 2006",
+"chain": "Works when variability of rainfall · How storage relative to variability → storage smooths supply across seasons and years · Result reliable supply and growth",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Transboundary basin cooperation",
+"def": "",
+"basis": "",
+"cite": "Wolf 1998",
+"chain": "Works when institutional capacity · How shared river basins → treaties and institutions turn rivalry into cooperation · Result joint management, lower conflict",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Environmental quality",
+"def": "Local pollution and waste as drawdown of environmental sinks, with health and human-capital costs.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve waste management · Control pollution · Promote cleaner production and sustainable consumption",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Regulation and pricing of local pollution",
+"def": "",
+"basis": "",
+"cite": "Pigou 1920; Goulder 1995; Greenstone and Hanna 2014",
+"chain": "Works when enforcement capacity · How standards, levies and taxes on local pollutants → binding regulation reduces emissions where enforced · Result pollution",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Pollution exposure and human capital",
+"def": "",
+"basis": "",
+"cite": "Chay and Greenstone 2003; Graff Zivin and Neidell 2012; Ebenstein et al. 2017",
+"chain": "Works when exposure of children · How exposure to air and water pollution → pollution harms health, cognition and productivity · Result mortality, learning, productivity",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Scale, composition and technique effects",
+"def": "",
+"basis": "",
+"cite": "Grossman and Krueger 1995; Copeland and Taylor 2004; Stern 2004",
+"chain": "Works when regulation must bind (Stern 2004) · How growth and cleaner techniques → pollution rises with scale and falls with composition and technique · Result pollution per unit of output",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Waste collection, disposal and circular material flows",
+"def": "",
+"basis": "",
+"cite": "Kaza et al. 2018",
+"chain": "Works when collection coverage · How collection, recycling and disposal → uncollected and unmanaged waste pollutes; recovery returns materials · Result pollution and recovered materials",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 ver",
+"name": "Toxic exposure and child development",
+"def": "",
+"basis": "",
+"cite": "Aizer, Currie, Simon and Vivier 2018",
+"chain": "Works when The measured effect depends on the pollutant and biomarker, exposure level and age at measurement, the outcome assessed, and whether an intervention actually reduces exposure. For lead, Aizer et al. study preschool blood lead and later third-grade achievement; prenatal timing and other pollutants need separate citations (source-verified 20 Oct 2026) · How lead and other neurotoxic substances → early-life exposure impairs cognitive development (evidence so far is for lead) · Result later learning and health",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Information and social norms in environmental behaviour",
+"def": "",
+"basis": "",
+"cite": "Allcott 2011; Ferraro and Price 2013",
+"chain": "Works when persistence · How information, education and social comparison → norms and feedback change energy and water use · Result resource use and pollution",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Economic and human wealth",
+"def": "Resource rents, the public balance sheet and demographic change across generations.",
+"basis": "Inclusive wealth: produced, fiscal and human capital",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 14 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Subsoil wealth and resource rents",
+"def": "Extraction of exhaustible resources and whether the rents are reinvested.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen mining and resource governance · Develop the mining sector · Expand fossil fuel exploration and production",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Rent reinvestment",
+"def": "",
+"basis": "",
+"cite": "Hartwick 1977; van der Ploeg 2011",
+"chain": "Works when investment quality · How resource rents → reinvesting rents in other capital keeps wealth from falling · Result wealth and consumption across generations",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Dutch disease",
+"def": "",
+"basis": "",
+"cite": "Corden and Neary 1982; Sachs and Warner 1995",
+"chain": "Works when absorption and sterilisation · How resource boom → real appreciation crowds out other tradables · Result a narrower economy",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Rent-seeking and institutional quality",
+"def": "",
+"basis": "",
+"cite": "Mehlum, Moene and Torvik 2006",
+"chain": "Works when institutional quality · How resource rents → rents are captured unless institutions are producer-friendly · Result growth outcomes",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Volatility of resource revenues and procyclical spending",
+"def": "",
+"basis": "",
+"cite": "van der Ploeg and Poelhekke 2009",
+"chain": "Works when fiscal rules · How volatile commodity revenues → procyclical spending amplifies booms and busts · Result growth and fiscal stability",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Public balance sheet",
+"def": "Whether debt and fiscal policy shift burdens onto future taxpayers.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen fiscal sustainability · Strengthen fiscal governance",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Debt dynamics and fiscal reaction",
+"def": "",
+"basis": "",
+"cite": "Bohn 1998; Ghosh et al. 2013",
+"chain": "Works when fiscal fatigue at high debt · How primary balance responses to debt → sustainability requires surpluses to rise with debt · Result debt path",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Debt overhang and investment",
+"def": "",
+"basis": "",
+"cite": "Krugman 1988; Reinhart, Reinhart and Rogoff 2012",
+"chain": "Works when level and composition of debt · How high public debt → expected taxes to service debt depress investment · Result lower investment and growth",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Fiscal rules and procyclicality",
+"def": "",
+"basis": "",
+"cite": "Kaminsky, Reinhart and Vegh 2004; Frankel, Vegh and Vuletin 2013",
+"chain": "Works when credibility and escape clauses · How fiscal rules and institutions → rules restrain procyclical spending · Result fiscal stability",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Contingent liabilities and hidden debt",
+"def": "",
+"basis": "",
+"cite": "Bova et al. 2016",
+"chain": "Works when disclosure · How guarantees, SOE and PPP liabilities → liabilities crystallise in shocks · Result debt jumps",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Intergenerational fiscal burden",
+"def": "",
+"basis": "",
+"cite": "Auerbach, Gokhale and Kotlikoff 1991",
+"chain": "Works when ageing · How fiscal policy over the lifecycle → current policy shifts net taxes between generations · Result burden on future generations",
+"ex": "",
+"objs": [
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Human and demographic capital",
+"def": "Fertility, ageing and lifecycle behaviour that change labour input, saving and care across generations.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Manage population and demographic change · Expand reproductive health services · Expand elderly care",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Fertility control and family size",
+"def": "",
+"basis": "",
+"cite": "Miller 2010; Canning and Schultz 2012",
+"chain": "Works when demand for smaller families · How access to family planning → control over timing and number of births · Result lower fertility, more schooling and work for women",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Quantity-quality trade-off",
+"def": "",
+"basis": "",
+"cite": "Becker and Lewis 1973",
+"chain": "Works when returns to education · How returns to child human capital → parents trade number of children for investment per child · Result human capital per child",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Lifecycle saving and the second dividend",
+"def": "",
+"basis": "",
+"cite": "Mason and Lee 2006; Lee and Mason 2010",
+"chain": "Works when financial institutions · How a larger share of prime-age savers → lifecycle saving raises capital per worker · Result higher income per capita",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Older-worker participation",
+"def": "",
+"basis": "",
+"cite": "Gruber and Wise 1999",
+"chain": "Works when health · How retirement rules and incentives → incentives to keep working raise labour input · Result participation at older ages",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Long-term care demand and family caregiving",
+"def": "",
+"basis": "",
+"cite": "Colombo et al. 2011",
+"chain": "Works when formal care supply · How ageing → care needs rise; families, mostly women, supply it unpaid · Result care gaps and lost female labour supply",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "General People",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"note": "Routine government functions with no development mechanism. No groups or families."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2 std",
+"name": "Routine-function objectives",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function"
+],
+"gmeta": "11 objectives"
+}
+],
+[
+"pillar",
+{
+"name": ""
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Export-led",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups Commission on Growth and Development 2008, The Growth Report; WDR 2020 on global value chains. Economies grow through external markets by tapping global demand, importing know-how, and linking to foreign capital and value chains."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Reaching foreign markets",
+"def": "Trade costs, market access and services exports such as tourism.",
+"basis": "Growth Report: exploiting global demand",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 10 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Cost of reaching foreign markets",
+"def": "Fixed, variable and time costs of trading and the terms of access to foreign markets.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Facilitate trade · Expand and modernise ports and shipping · Improve logistics and freight",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Market-entry cost reduction",
+"def": "",
+"basis": "",
+"cite": "Melitz 2003; Das, Roberts and Tybout 2007; Maertens and Swinnen 2009",
+"chain": "Works when heterogeneous firms near the threshold · How lower fixed costs of entering export markets (standards, certification, information) → more firms clear the fixed-cost threshold to export · Result higher export participation (extensive margin)",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Variable trade-cost reduction",
+"def": "",
+"basis": "",
+"cite": "Limao and Venables 2001; Clark, Dollar and Micco 2004; Anderson and van Wincoop 2004",
+"chain": "Works when competition in transport services; port efficiency · How lower per-unit freight, port and handling costs → delivered prices fall, so traded volumes and reach expand · Result higher trade volumes (intensive margin)",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Time-sensitivity of trade",
+"def": "",
+"basis": "",
+"cite": "Djankov, Freund and Pham 2010; Hummels and Schaur 2013",
+"chain": "Works when reliability matters as much as speed · How shorter, more predictable border and transit times → time-sensitive goods and network inputs become viable · Result participation in production networks and time-sensitive trade",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Air-link knowledge and investment flows",
+"def": "",
+"basis": "",
+"cite": "Campante and Yanagizawa-Drott 2018",
+"chain": "Works when routes to economic hubs · How direct air connections → face-to-face contact lowers the cost of business travel, knowledge flows and investment · Result higher FDI, business links and growth in connected places",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Trade creation through agreements and blocs",
+"def": "",
+"basis": "",
+"cite": "Viner 1950; Baier and Bergstrand 2007",
+"chain": "Works when low external tariffs limit diversion; deep provisions matter · How preferential or regional reductions in barriers → lower barriers among members create trade (net of diversion) · Result higher trade and welfare among members",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Preference-margin effects on market access",
+"def": "",
+"basis": "",
+"cite": "Frazer and Van Biesebroeck 2010",
+"chain": "Works when rules of origin; supply response · How unilateral tariff preferences and their erosion → preferences raise the price received; losing them lowers it · Result exports in preference-sensitive goods",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Import-competition productivity effects",
+"def": "",
+"basis": "",
+"cite": "Pavcnik 2002; Amiti and Konings 2007; Topalova and Khandelwal 2011",
+"chain": "Works when complementary reforms allow exit and reallocation · How lower own tariffs on outputs and inputs → competition and cheaper inputs raise productivity and variety · Result higher productivity of domestic firms",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Tourism export destinations",
+"def": "Foreign visitor spending as a services export: spillovers, carrying capacity and shock exposure.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Develop tourism · Diversify tourism markets and products · Promote sustainable tourism",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Tourism-led local spillovers",
+"def": "",
+"basis": "",
+"cite": "Faber and Gaubert 2019",
+"chain": "Works when linkages to local suppliers · How visitor spending in a place → demand for local services and agglomeration spill over into other sectors · Result local employment and output beyond tourism",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Destination life cycle and carrying capacity",
+"def": "",
+"basis": "",
+"cite": "Butler 1980",
+"chain": "Works when fragile ecosystems and heritage · How growth in visitor numbers → congestion and degradation erode the destination's appeal · Result stagnation or decline without management",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Tourism demand volatility and shock exposure",
+"def": "",
+"basis": "",
+"cite": "Gossling, Scott and Hall 2021",
+"chain": "Works when concentration of source markets · How health, security or climate shocks → travel demand collapses faster than other exports · Result large swings in receipts and jobs",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Upgrading and innovation",
+"def": "Export upgrading, diversification and the innovation system.",
+"basis": "Growth Report: importing ideas, technology and know-how",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 14 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Self-discovery and export upgrading",
+"def": "Learning, related diversification and reallocation toward new and upgraded traded products.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand and diversify exports · Develop manufacturing industries · Develop creative and cultural industries",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Learning by exporting",
+"def": "",
+"basis": "",
+"cite": "De Loecker 2007; Atkin, Khandelwal and Osman 2017",
+"chain": "Works when firms with capacity to absorb feedback; buyers who demand quality · How exposure to foreign buyers and markets → buyer demands and feedback transfer know-how to the exporting firm · Result higher firm productivity and product quality",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Capability-related diversification",
+"def": "",
+"basis": "",
+"cite": "Hausmann, Hwang and Rodrik 2007; Hidalgo and Hausmann 2009",
+"chain": "Works when proximity in the product space; coordination of missing inputs · How existing productive capabilities → capabilities make entry into nearby, more complex products cheaper · Result a more complex, diversified export basket and faster growth",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Structural-change reallocation",
+"def": "",
+"basis": "",
+"cite": "Lewis 1954; McMillan and Rodrik 2011; Rodrik 2013; Rodrik 2016",
+"chain": "Works when absorbing sectors expand fast enough; premature deindustrialisation can reverse it · How movement of labour and capital toward higher-productivity sectors → between-sector productivity gaps are closed by reallocation · Result higher aggregate productivity",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Infant-industry learning",
+"def": "",
+"basis": "",
+"cite": "Juhasz 2018; Juhasz, Lane and Rodrik 2023",
+"chain": "Works when learning is sector-specific and external; support is time-bound and disciplined · How temporary protection or support of a new sector → learning-by-doing lowers costs until the sector competes · Result a competitive new industry",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Services-led productivity growth",
+"def": "",
+"basis": "",
+"cite": "Nayyar, Hallward-Driemeier and Davies 2021; Baldwin 2016",
+"chain": "Works when digital connectivity; skills; services trade openness · How tradable and ICT-enabled services → scale and productivity gains in services that no longer need proximity · Result growth and jobs led by modern services",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Innovation system and appropriability",
+"def": "Creation, appropriation and diffusion of knowledge, including university and sector research. Sector is a tag.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen research and innovation · Strengthen research capacity and infrastructure · Develop the digital economy",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Endogenous growth from R&D",
+"def": "",
+"basis": "",
+"cite": "Romer 1990; Aghion and Howitt 1992",
+"chain": "Works when researchers and absorptive capacity · How R&D investment → new ideas are non-rival and raise productivity economy-wide · Result productivity growth",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Technology adoption lags and diffusion",
+"def": "",
+"basis": "",
+"cite": "Comin and Hobijn 2010; Comin and Mestieri 2018",
+"chain": "Works when complementary skills, finance and management · How existing technologies reaching firms → falling adoption lags and rising intensity of use · Result productivity convergence",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Absorptive capacity",
+"def": "",
+"basis": "",
+"cite": "Cohen and Levinthal 1990; Cirera and Maloney 2017",
+"chain": "Works when managerial and technical skills · How firm and national capabilities to use knowledge → capabilities determine how much external knowledge can be used · Result returns to R&D and to technology transfer",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Knowledge appropriability and IP",
+"def": "",
+"basis": "",
+"cite": "Arrow 1962; Williams 2013",
+"chain": "Works when breadth of rights; enforcement · How intellectual property protection → exclusive rights raise private returns to invention but restrict follow-on use · Result investment in invention and its diffusion",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "University-industry knowledge transfer",
+"def": "",
+"basis": "",
+"cite": "Jaffe 1989; Valero and Van Reenen 2019",
+"chain": "Works when proximity; incentives for researchers · How academic research → localised spillovers to firms through people, licences and collaboration · Result commercialised innovation",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Public funding of basic research",
+"def": "",
+"basis": "",
+"cite": "Azoulay et al. 2019",
+"chain": "Works when funding stability · How public research funding → basic research raises the stock of knowledge firms draw on · Result private patenting and innovation downstream",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Mission-oriented frontier programmes",
+"def": "",
+"basis": "",
+"cite": "Gross and Sampat 2023",
+"chain": "Works when clear missions; private participation · How large, directed public R&D programmes → concentrated investment builds capabilities and clusters in frontier fields · Result new technological capabilities",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "University skills and local innovation",
+"def": "",
+"basis": "",
+"cite": "Card 2001; Valero and Van Reenen 2019",
+"chain": "Works when quality · How higher education → graduates and universities raise skills and local innovation · Result productivity and innovation",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Returns to agricultural research",
+"def": "",
+"basis": "",
+"cite": "Evenson and Gollin 2003",
+"chain": "Works when adaptive research and seed systems · How crop and livestock research → improved varieties and practices raise productivity · Result yields and output",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Foreign capital and networks",
+"def": "Foreign investment, know-how spillovers, value-chain links and diaspora networks.",
+"basis": "WDR 2020: FDI and global value chains",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 5 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Foreign capital, knowledge and networks",
+"def": "Inflows of foreign capital, know-how, value-chain links and diaspora networks.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Attract investment · Improve the investment climate · Engage the diaspora",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Capital deepening through inward investment",
+"def": "",
+"basis": "",
+"cite": "Solow 1956; Borensztein, De Gregorio and Lee 1998",
+"chain": "Works when allocation to productive uses; absorptive capacity (Borensztein et al. 1998) · How foreign capital inflows → additional capital raises output per worker · Result higher output",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Knowledge spillovers from foreign firms",
+"def": "",
+"basis": "",
+"cite": "Javorcik 2004; Harding and Javorcik 2011",
+"chain": "Works when backward linkages; absorptive capacity · How presence of foreign affiliates → supplier links, worker mobility and imitation transfer know-how · Result productivity of domestic suppliers",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Information frictions in investor location choice",
+"def": "",
+"basis": "",
+"cite": "Harding and Javorcik 2011",
+"chain": "Works when effective where information is the binding constraint · How information and facilitation for prospective investors → lower search and entry costs change location choices · Result higher investment inflows",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "GVC participation and upgrading",
+"def": "",
+"basis": "",
+"cite": "Baldwin 2016; World Bank 2020",
+"chain": "Works when connectivity, standards and policy stability · How entry into stages of global value chains → specialisation in tasks and lead-firm relationships transfer standards · Result export growth and upgrading within chains",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Diaspora networks in trade and investment",
+"def": "",
+"basis": "",
+"cite": "Rauch and Trindade 2002; Kugler and Rapoport 2007",
+"chain": "Works when engagement channels · How diaspora ties → networks lower information costs for trade and investment · Result trade and FDI with destinations",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Domestic Integration",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups WDR 2009, Reshaping Economic Geography (\"three I's\"). Connective infrastructure, targeted interventions that build density, and spatially blind institutions."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Infrastructure and connectivity",
+"def": "Internal transport and information links, and utility services.",
+"basis": "WDR 2009: connective infrastructure",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 12 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Internal connectivity",
+"def": "Cost of moving goods, people and information within the country.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand digital connectivity · Improve transport connectivity · Expand and modernise railways",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Transport cost and internal market access",
+"def": "",
+"basis": "",
+"cite": "Donaldson 2018; Donaldson and Hornbeck 2016",
+"chain": "Works when complementary local supply response · How lower internal transport costs → price gaps narrow and places gain market access · Result trade within the country and real income gains",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Rural access and structural change",
+"def": "",
+"basis": "",
+"cite": "Asher and Novosad 2020",
+"chain": "Works when remaining constraints on local demand · How all-weather access to villages → workers and firms reach outside markets · Result movement out of agriculture and new rural firms",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Core-periphery effects of connectivity",
+"def": "",
+"basis": "",
+"cite": "Faber 2014",
+"chain": "Works when initial size differences · How connecting peripheral places to cores → activity can concentrate in the core rather than spread · Result uneven local growth",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Information frictions and price dispersion",
+"def": "",
+"basis": "",
+"cite": "Jensen 2007; Aker 2010",
+"chain": "Works when mobile coverage; market depth · How information on prices and buyers → search costs fall, arbitrage narrows price gaps · Result lower price dispersion and higher producer prices",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Public capital and output",
+"def": "",
+"basis": "",
+"cite": "Aschauer 1989; Calderon, Moral-Benito and Serven 2015",
+"chain": "Works when maintenance and allocation decide returns (Pritchett 2000) · How stock of public infrastructure → infrastructure services raise private productivity · Result higher output",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Broadband and firm entry and jobs",
+"def": "",
+"basis": "",
+"cite": "Hjort and Poulsen 2019",
+"chain": "Works when skills to use it · How fast internet arrival → lower communication costs raise demand for skilled and service work · Result employment and firm entry",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "E-commerce and remote market reach",
+"def": "",
+"basis": "",
+"cite": "Couture et al. 2021",
+"chain": "Works when logistics and payments · How online marketplaces and delivery → remote buyers and sellers join a national market · Result consumption gains and new sales from remote places",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Infrastructure services",
+"def": "Reliability, pricing and market structure of power, water and other network utilities.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen electricity grid and infrastructure · Reform transport markets and regulation · Reform energy pricing and subsidies",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Supply reliability and firm output",
+"def": "",
+"basis": "",
+"cite": "Allcott, Collard-Wexler and O'Connell 2016",
+"chain": "Works when shortages are binding · How reliable electricity and network supply → fewer outages cut lost output and self-generation costs · Result firm output and productivity",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Cost-recovery trap in utilities",
+"def": "",
+"basis": "",
+"cite": "Burgess, Greenstone, Ryan and Sudarshan 2020; Galiani, Gertler and Schargrodsky 2005",
+"chain": "Works when political tolerance of non-payment · How tariffs below cost and non-payment → utilities ration supply and underinvest; service quality falls · Result poor service and fiscal drains",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Subsidy and tariff distortions",
+"def": "",
+"basis": "",
+"cite": "Coady et al. 2019",
+"chain": "Works when targeted compensation enables reform · How energy and water subsidies → underpricing raises consumption and fiscal cost and is regressive · Result overuse, fiscal burden and emissions",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Natural-monopoly regulation and market structure",
+"def": "",
+"basis": "",
+"cite": "Laffont and Tirole 1993; Joskow 2008",
+"chain": "Works when independent regulator · How unbundling, competition and regulation of networks → competition where possible and regulated access where not · Result efficiency and investment in network industries",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Network interconnection and pooling",
+"def": "",
+"basis": "",
+"cite": "Timilsina and Toman 2016",
+"chain": "Works when trust and market rules among partners · How cross-border or inter-regional links → pooling of loads and resources lowers reserves and cost · Result cheaper, more reliable supply",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Linkages, clusters and cities",
+"def": "Production linkages, clusters and urban systems.",
+"basis": "WDR 2009: interventions that build density",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 8 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Production linkages and clusters",
+"def": "Backward and forward links between firms and the clustering that lets them find each other.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Develop agricultural and food value chains · Strengthen value chains and supply chains · Raise value addition",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Backward and forward linkages",
+"def": "",
+"basis": "",
+"cite": "Hirschman 1958; Rodriguez-Clare 1996",
+"chain": "Works when local supplier capability · How investment in one stage of a chain → demand for inputs and supply of outputs induce investment upstream and downstream · Result domestic value added",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Agglomeration economies in clusters",
+"def": "",
+"basis": "",
+"cite": "Duranton and Puga 2004; Greenstone, Hornbeck and Moretti 2010",
+"chain": "Works when critical mass · How co-location of firms in a sector → shared inputs, labour pooling and knowledge spillovers · Result productivity of clustered firms",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Zone-based concentration",
+"def": "",
+"basis": "",
+"cite": "Farole and Akinci 2011; Wang 2013",
+"chain": "Works when location, governance and links outside · How special economic zones and industrial parks → bundled infrastructure and rules attract firms to a site · Result investment and jobs in the zone, sometimes at the expense of elsewhere",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Resource-based linkages and local content",
+"def": "",
+"basis": "",
+"cite": "Morris, Kaplinsky and Kaplan 2012; Aragon and Rud 2013",
+"chain": "Works when supplier capacity; credible local-content rules · How extractive or primary-commodity activity → procurement and processing link the enclave to local firms · Result local value added and jobs",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Urban systems",
+"def": "Productivity of density and the congestion, land and housing costs that limit it.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen urban planning · Improve urban mobility · Upgrade urban infrastructure and services",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Density and urban productivity",
+"def": "",
+"basis": "",
+"cite": "Duranton and Puga 2004; Combes and Gobillon 2015",
+"chain": "Works when congestion and land costs held in check · How urban density and scale → sharing, matching and learning in cities · Result higher productivity and wages",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Congestion and induced demand",
+"def": "",
+"basis": "",
+"cite": "Duranton and Turner 2011",
+"chain": "Works when pricing and land use · How road capacity and urban transport supply → new road capacity induces traffic; transit and pricing change it · Result commute times and urban productivity",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Land-use regulation and housing supply",
+"def": "",
+"basis": "",
+"cite": "Glaeser and Gyourko 2018; Bertaud 2018",
+"chain": "Works when elastic supply where rules allow · How planning and building rules → restrictive rules raise land and housing prices · Result housing affordability and city size",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Planned urban expansion",
+"def": "",
+"basis": "",
+"cite": "Angel 2012; Lall, Henderson and Venables 2017",
+"chain": "Works when enforcement of rights-of-way · How infrastructure and plots laid out ahead of settlement → arterial grids and serviced land guide growth · Result orderly expansion at lower cost than retrofitting",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Property rights and market rules",
+"def": "Property rights, contract enforcement, competition and state-ownership rules.",
+"basis": "WDR 2009: spatially blind institutions",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 7 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Property rights and market rules",
+"def": "Security of property, contract enforcement, competition and state ownership rules that decide who captures returns.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve the business environment · Reform state-owned enterprises · Secure land and property rights",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Competition and innovation incentives",
+"def": "",
+"basis": "",
+"cite": "Aghion et al. 2005",
+"chain": "Works when inverted-U at high competition · How competitive pressure → rivalry lowers markups and changes innovation incentives · Result prices, productivity and innovation",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Soft budget constraints in state firms",
+"def": "",
+"basis": "",
+"cite": "Kornai 1986; Megginson and Netter 2001",
+"chain": "Works when credible hard budgets or privatisation · How state ownership and bailouts → expected rescue weakens cost discipline · Result losses, fiscal drains and low productivity",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Contract enforcement and court efficiency",
+"def": "",
+"basis": "",
+"cite": "Djankov et al. 2003; Visaria 2009",
+"chain": "Works when court capacity · How speed and reliability of commercial justice → credible enforcement allows credit and arm's-length trade · Result credit, investment and firm size",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Tenure security and investment",
+"def": "",
+"basis": "",
+"cite": "Besley 1995; Goldstein and Udry 2008",
+"chain": "Works when credible enforcement · How secure rights to land → security raises expected returns to land-attached investment · Result investment and productivity",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Titling, collateral and labour supply",
+"def": "",
+"basis": "",
+"cite": "De Soto 2000; Field 2007; Galiani and Schargrodsky 2010",
+"chain": "Works when credit markets that accept land · How formal titles → titles free time spent guarding land and can serve as collateral · Result labour supply, investment, some credit",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Land-market transaction costs and allocation",
+"def": "",
+"basis": "",
+"cite": "Deininger and Jin 2005; Deininger and Feder 2009",
+"chain": "Works when records and dispute resolution · How costs of transferring and renting land → lower costs let land move to productive users · Result productivity and access",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Land redistribution and agrarian reform",
+"def": "",
+"basis": "",
+"cite": "Besley and Burgess 2000",
+"chain": "Works when complementary services · How redistribution and tenancy reform → changes incentives and assets of the landless · Result poverty reduction, mixed output effects",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Growth through Inclusion",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups WDR 2008, Agriculture for Development; Ianchovichina & Lundström 2009, Inclusive Growth Analytics; World Bank 2008, Finance for All?. Groups left out of growth get there through enterprise and finance, farming, and labour markets and migration."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Enterprise and finance",
+"def": "Small-firm capability, business formalisation and access to finance.",
+"basis": "Inclusive Growth Analytics (firm constraints); Finance for All?",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 9 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Small-firm capability and business formalisation",
+"def": "Management, capital and entry constraints of small firms, including registration and licensing (business side of the formality split).",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Support enterprise development · Support entrepreneurs and startups · Promote entrepreneurship and business skills",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Managerial capability and firm productivity",
+"def": "",
+"basis": "",
+"cite": "Bloom et al. 2013; Bruhn, Karlan and Schoar 2018; McKenzie and Woodruff 2014",
+"chain": "Works when information about practices · How management practices → better practices raise productivity · Result firm productivity and growth",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Credit constraints and returns to capital",
+"def": "",
+"basis": "",
+"cite": "de Mel, McKenzie and Woodruff 2008; Banerjee et al. 2015 (AEJ Applied)",
+"chain": "Works when returns are heterogeneous · How access to capital for small firms → high marginal returns go unrealised without finance · Result investment and profits",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Misallocation across firms",
+"def": "",
+"basis": "",
+"cite": "Hsieh and Klenow 2009; Hsieh and Olken 2014",
+"chain": "Works when size-dependent policies · How distortions that favour some firms → resources flow to less productive firms · Result lower aggregate productivity; missing middle",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Start-up finance and high-growth entrepreneurship",
+"def": "",
+"basis": "",
+"cite": "McKenzie 2017",
+"chain": "Works when screening for potential · How funding and support for new ventures → relieving early-stage constraints lets high-potential firms grow · Result firm entry, survival and jobs",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Entry regulation and formal firm creation",
+"def": "",
+"basis": "",
+"cite": "Djankov et al. 2002; Bruhn 2011",
+"chain": "Works when enforcement and benefits of formality · How costs and procedures of starting and licensing firms → lower entry costs raise formal registration · Result formal firm creation",
+"ex": "",
+"objs": [
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Finance for small borrowers and savers",
+"def": "Access to credit, savings and payments for households and small firms.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Expand financial inclusion · Develop the financial sector · Expand enterprise finance",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Financial deepening and capital allocation",
+"def": "",
+"basis": "",
+"cite": "King and Levine 1993; Levine 2005",
+"chain": "Works when supervision prevents excess · How size and efficiency of the financial system → intermediation allocates savings to productive investment · Result growth",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Credit access for small borrowers",
+"def": "",
+"basis": "",
+"cite": "Banerjee et al. 2015 (AEJ Applied); de Mel, McKenzie and Woodruff 2008",
+"chain": "Works when heterogeneous returns · How credit for households and microenterprises → smoothing and small investments · Result modest gains in business investment, limited average poverty effects",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Savings commitment and accumulation",
+"def": "",
+"basis": "",
+"cite": "Ashraf, Karlan and Yin 2006; Dupas and Robinson 2013",
+"chain": "Works when trust and cost of accounts · How safe, accessible savings products → commitment and safe storage raise savings · Result investment and resilience",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Digital payments and risk sharing",
+"def": "",
+"basis": "",
+"cite": "Jack and Suri 2014; Suri and Jack 2016",
+"chain": "Works when agent networks · How mobile money and digital payments → cheap transfers let networks share risk and save · Result consumption smoothing and poverty reduction",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Rural producers",
+"def": "Smallholder productivity and market participation of small producers.",
+"basis": "WDR 2008: farming pathway",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 8 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Smallholder productivity",
+"def": "Adoption, learning and allocation frictions in farming, livestock and fisheries.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Develop fisheries and aquaculture · Expand and modernise irrigation · Modernise agriculture",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Input adoption under credit and behavioural constraints",
+"def": "",
+"basis": "",
+"cite": "Duflo, Kremer and Robinson 2011; Suri 2011; Jayne et al. 2018",
+"chain": "Works when heterogeneous returns (Suri 2011) · How access to fertiliser, seed and other inputs → liquidity and present bias limit adoption despite high returns · Result yields",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Social learning and extension",
+"def": "",
+"basis": "",
+"cite": "Foster and Rosenzweig 1995; Conley and Udry 2010; BenYishay and Mobarak 2019",
+"chain": "Works when credible contact farmers; relevance · How information on new practices → farmers learn from peers and advisers · Result adoption of better practices",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Water control and irrigation returns",
+"def": "",
+"basis": "",
+"cite": "Jones, Kondylis, Loeser and Magruder 2022",
+"chain": "Works when factor-market frictions limit uptake (Jones et al. 2022) · How irrigation and on-farm water control → multiple seasons and lower rainfall risk · Result output and income",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Farm size, mechanisation and land allocation",
+"def": "",
+"basis": "",
+"cite": "Adamopoulos and Restuccia 2014; Foster and Rosenzweig 2022",
+"chain": "Works when land markets; non-farm jobs · How consolidation and mechanisation → scale and machinery change labour productivity · Result output per worker",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Pest and disease losses",
+"def": "",
+"basis": "",
+"cite": "Oerke 2006; Perry and Grace 2009",
+"chain": "Works when surveillance and veterinary capacity · How pests and diseases of crops and animals → outbreaks destroy output and assets · Result yields and livestock holdings",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Market participation of small producers",
+"def": "Transaction costs that keep smallholders and small firms out of markets, and collective arrangements that lower them.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve agricultural market access · Develop cooperatives and the social economy · Strengthen producer organisations and cooperatives",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Transaction costs and market participation",
+"def": "",
+"basis": "",
+"cite": "de Janvry, Fafchamps and Sadoulet 1991; Barrett 2008",
+"chain": "Works when assets and access to roads · How costs of finding buyers, transport and contracting → high costs keep producers in autarky · Result share of output sold and prices received",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Collective marketing through producer organisations",
+"def": "",
+"basis": "",
+"cite": "Bernard and Spielman 2009",
+"chain": "Works when governance of the group; elite capture · How farmer groups and cooperatives → pooling lowers per-unit costs and raises bargaining power · Result higher prices and market access",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Contract farming and value-chain coordination",
+"def": "",
+"basis": "",
+"cite": "Bellemare 2012",
+"chain": "Works when enforcement; side-selling · How contracts with processors or buyers → assured market and inputs in exchange for quality and volume · Result incomes of participating farmers",
+"ex": "",
+"objs": [
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Jobs, places and mobility",
+"def": "Jobs and matching, lagging places and displaced workers, and labour migration.",
+"basis": "WDR 2008: labour and migration pathways",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 13 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Jobs and job matching",
+"def": "How workers left out of growth find jobs, and the wage rules that shape their earnings.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Promote employment · Promote inclusive employment · Strengthen labour market institutions",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Search and matching frictions",
+"def": "",
+"basis": "",
+"cite": "Mortensen and Pissarides 1994; Abebe et al. 2021",
+"chain": "Works when vacancies exist · How information and costs of job search → frictions slow matching of workers to jobs · Result unemployment duration and match quality",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Training and job-search assistance effects",
+"def": "",
+"basis": "",
+"cite": "Card, Kluve and Weber 2018; McKenzie 2017 (WBRO)",
+"chain": "Works when design and targeting · How active labour-market programmes → programmes raise employability and search · Result employment, often modest and larger in the medium run",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Wage floors and employment",
+"def": "",
+"basis": "",
+"cite": "Card and Krueger 1994; Dube, Lester and Reich 2010",
+"chain": "Works when the bite relative to median wages · How minimum wages → higher floors raise pay with small employment effects at moderate bites · Result earnings of low-paid workers",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Lagging places and displaced workers",
+"def": "Concentrated shocks and persistent spatial gaps in local labour markets.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Promote local and regional economic development · Reduce regional disparities · Promote rural development",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Local labour-market adjustment to trade shocks",
+"def": "",
+"basis": "",
+"cite": "Autor, Dorn and Hanson 2013; Dix-Carneiro and Kovak 2017",
+"chain": "Works when slow migration; weak transfers · How concentrated import competition → job losses persist where exposure concentrates; mobility is low · Result lasting local employment and wage losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Task displacement and reinstatement",
+"def": "",
+"basis": "",
+"cite": "Acemoglu and Restrepo 2019",
+"chain": "Works when creation of new tasks · How automation of tasks → displacement of labour from tasks, offset by new tasks · Result labour share and employment",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Place-based policy and spatial equilibrium",
+"def": "",
+"basis": "",
+"cite": "Kline and Moretti 2014; Barca, McCann and Rodriguez-Pose 2012",
+"chain": "Works when agglomeration in the target · How targeted support for lagging places → investment and subsidies shift activity, partly offset by mobility and prices · Result local incomes, with national effects uncertain",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Geographic poverty traps",
+"def": "",
+"basis": "",
+"cite": "Jalan and Ravallion 2002",
+"chain": "Works when mobility constraints · How place characteristics → local capital and externalities keep places poor · Result persistent spatial poverty",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Political backlash from concentrated loss",
+"def": "",
+"basis": "",
+"cite": "Colantone and Stanig 2018; Rodriguez-Pose 2018; Autor et al. 2020",
+"chain": "Works when visibility of losses · How economic losses concentrated in places → grievance turns into support for populist and polarising politics · Result electoral and policy backlash",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Rural non-farm diversification",
+"def": "",
+"basis": "",
+"cite": "Haggblade, Hazell and Reardon 2010",
+"chain": "Works when local demand and connectivity · How non-farm enterprises and jobs in rural areas → diversification raises and stabilises rural incomes · Result rural income and resilience",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Labour mobility and remittances",
+"def": "International migration as access to higher-wage labour markets, and what it returns.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Govern labour migration · Govern migration",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Remittance income effects",
+"def": "",
+"basis": "",
+"cite": "Adams and Page 2005; Yang 2008",
+"chain": "Works when costs of sending money · How remittances → higher and smoother household income funds consumption and investment · Result household investment, schooling, poverty reduction",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Brain drain and brain gain",
+"def": "",
+"basis": "",
+"cite": "Beine, Docquier and Rapoport 2001; Docquier and Rapoport 2012",
+"chain": "Works when emigration rate not too high · How emigration prospects for the skilled → emigration lowers skilled stock but raises incentives to acquire skills · Result net human capital",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Return migration and skill transfer",
+"def": "",
+"basis": "",
+"cite": "Dustmann and Gorlach 2016",
+"chain": "Works when reintegration support · How return of migrants → returnees bring savings, skills and networks · Result entrepreneurship and productivity at home",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Migration wage gains",
+"def": "",
+"basis": "",
+"cite": "Clemens 2011; McKenzie, Stillman and Gibson 2010",
+"chain": "Works when legal pathways and recruitment costs · How access to foreign labour markets → workers earn the destination's higher wage · Result large income gains for migrants",
+"ex": "",
+"objs": [
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "General Economy",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"note": "Routine government functions with no development mechanism. No groups or families."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2 std",
+"name": "Routine-function objectives",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [
+"Routine function"
+],
+"gmeta": "1 objectives"
+}
+],
+[
+"pillar",
+{
+"name": ""
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Anticipation and Strategic Foresight",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups Future-Ready Governance Index (dynamic governance capabilities). See emerging risks and opportunities, and prepare options before problems escalate."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Risk sensing and early warning",
+"def": "Detecting hazards and exposures early, and the buffers and pre-arranged finance that prepare options before problems escalate.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 12 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Hazard and exposure sensing",
+"def": "Detection of natural, biological and external economic hazards and exposures before they escalate.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen health emergency preparedness · Secure energy supply · Strengthen weather, climate and hydrological services",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Early-warning lead time and loss avoidance",
+"def": "",
+"basis": "",
+"cite": "Hallegatte 2012",
+"chain": "Works when last-mile communication · How forecasts and warnings → lead time allows evacuation and protection · Result deaths and losses avoided",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Disease surveillance and outbreak containment",
+"def": "",
+"basis": "",
+"cite": "Oppenheim et al. 2019; Eichenbaum, Rebelo and Trabandt 2021",
+"chain": "Works when reporting and response · How surveillance and laboratory detection → early detection allows containment before spread · Result outbreak size",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Zoonotic spillover at the animal-human interface",
+"def": "",
+"basis": "",
+"cite": "Jones et al. 2008",
+"chain": "Works when land-use change · How contact between wildlife, livestock and people → spillover generates emerging infections · Result emerging disease events",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Terms-of-trade exposure through concentration",
+"def": "",
+"basis": "",
+"cite": "Prebisch 1950; Singer 1950; Deaton 1999",
+"chain": "Works when diversification · How export or import concentration in commodities → price swings pass straight into income · Result volatility of income",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Input-concentration risk",
+"def": "",
+"basis": "",
+"cite": "Baldwin and Freeman 2022",
+"chain": "Works when substitutability · How dependence on few suppliers of essentials → a disruption at one supplier halts production · Result disruption losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Weaponised-interdependence exposure",
+"def": "",
+"basis": "",
+"cite": "Farrell and Newman 2019",
+"chain": "Works when control of hubs · How network chokepoints → states controlling hubs use them as leverage · Result coercion risk",
+"ex": "",
+"objs": [
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Contingency buffers and pre-arranged finance",
+"def": "Buffers, reserves and pre-arranged finance put in place before shocks.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen disaster preparedness and response · Strengthen financial stability and supervision · Maintain macroeconomic stability",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Reserve and exchange-rate buffering of external shocks",
+"def": "",
+"basis": "",
+"cite": "Calvo 1998; Obstfeld, Shambaugh and Taylor 2010; Rey 2015",
+"chain": "Works when currency mismatch · How reserves and exchange-rate flexibility → buffers absorb sudden stops and terms-of-trade swings · Result smaller output losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "External-debt amplification of shocks",
+"def": "",
+"basis": "",
+"cite": "Eichengreen, Hausmann and Panizza 2005; Reinhart and Rogoff 2009",
+"chain": "Works when debt composition · How foreign-currency and short-term debt → depreciation and rollover risk magnify shocks · Result crises",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Banking fragility and financial crises",
+"def": "",
+"basis": "",
+"cite": "Reinhart and Rogoff 2009; Laeven and Valencia 2013",
+"chain": "Works when supervisory independence · How bank leverage and supervision → fragility turns shocks into credit crunches · Result crisis frequency and cost",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Strategic-sector protection effects",
+"def": "",
+"basis": "",
+"cite": "Juhasz, Lane and Rodrik 2023",
+"chain": "Works when discipline of support · How support for strategic sectors → domestic capacity in critical goods, at efficiency cost · Result resilience and its cost",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Strategic stocks and reserves",
+"def": "",
+"basis": "",
+"cite": "Wright 2011",
+"chain": "Works when cost of storage · How physical reserves of food and fuel → stocks bridge supply interruptions · Result price and supply stability",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Pre-arranged risk finance and response speed",
+"def": "",
+"basis": "",
+"cite": "Clarke and Dercon 2016",
+"chain": "Works when triggers and plans · How contingent finance and insurance agreed in advance → money arrives faster, so losses are smaller · Result response time and losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Foresight and futures",
+"def": "Scenario and futures work that keeps strategic options open.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 1 mechanism"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Scenario and futures work",
+"def": "Scenario and futures work that keeps strategic options open.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans none yet",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Scenario planning and strategic option value",
+"def": "",
+"basis": "",
+"cite": "Wack 1985; Schwartz 1991",
+"chain": "Works when use in decisions · How scenarios and foresight → considering futures in advance improves robustness of choices · Result robust strategy",
+"ex": "",
+"objs": [],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Long-term planning",
+"def": "Development planning and coordination of long-horizon investments.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 1 mechanism"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Development planning",
+"def": "Development planning and coordination of complementary long-horizon investments.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen development planning · Mainstream SDGs in planning",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Coordination of complementary investments",
+"def": "",
+"basis": "",
+"cite": "Rosenstein-Rodan 1943; Murphy, Shleifer and Vishny 1989",
+"chain": "Works when credibility of the plan · How a plan that coordinates investments → complementary investments become profitable together · Result a big push",
+"ex": "",
+"objs": [
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Data sharing",
+"def": "Statistics and data shared across agencies for decisions.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 2 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Statistics and data sharing",
+"def": "Statistical capacity and data shared across agencies for decisions.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen data and statistical systems · Strengthen environmental monitoring and data · Develop geospatial information",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Statistical capacity and decision quality",
+"def": "",
+"basis": "",
+"cite": "Jerven 2013; Devarajan 2013",
+"chain": "Works when use of data · How statistics and data systems → better data improve targeting and decisions · Result policy quality",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Interoperability and data sharing across agencies",
+"def": "",
+"basis": "",
+"cite": "OECD 2019, The Path to Becoming a Data-Driven Public Sector (source still to check)",
+"chain": "Works when legal basis, privacy safeguards · How shared data standards and access rules → agencies combine data for targeting and analysis · Result faster, better-informed decisions",
+"ex": "",
+"objs": [],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Adaptability and Course Correction",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups Future-Ready Governance Index (dynamic governance capabilities). Learn from evidence and feedback, and revise policies and routines."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Organisational learning and feedback",
+"def": "Monitoring, evaluation and iterative problem-solving that trigger corrective action.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 2 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Monitoring and corrective feedback",
+"def": "Monitoring, evaluation and iterative problem-solving that trigger corrective action.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen monitoring and evaluation",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Monitoring feedback and corrective action",
+"def": "",
+"basis": "",
+"cite": "Gertler et al. 2016; Duflo 2017",
+"chain": "Works when demand for evidence · How monitoring and evaluation → evidence on performance prompts correction · Result better programmes",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Problem-driven iterative adaptation",
+"def": "",
+"basis": "",
+"cite": "Andrews, Pritchett and Woolcock 2017",
+"chain": "Works when authorisation to experiment · How iterative, problem-led reform → small experiments and feedback build capability · Result functional reform",
+"ex": "",
+"objs": [],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Safe-to-fail innovation",
+"def": "Policy experiments, and regulatory approaches (such as sandboxes) that let rules adapt to new technology.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 5 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Policy experimentation",
+"def": "Policy experimentation and diffusion of what works.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans none yet",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Policy experimentation and diffusion",
+"def": "",
+"basis": "",
+"cite": "Heilmann 2008; Rodrik 2004",
+"chain": "Works when scaling discipline · How pilots → local experiments reveal what works before scale · Result policy learning",
+"ex": "",
+"objs": [],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Regulatory adaptation to technology",
+"def": "Keeping rules for data, cyber risk, digital markets and AI in step with technology.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen cybersecurity and online safety · Strengthen digital governance and policy · Modernise legislation",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Data protection and trust in digital markets",
+"def": "",
+"basis": "",
+"cite": "Acquisti, Taylor and Wagman 2016",
+"chain": "Works when enforcement · How rights over personal data → trust and the privacy-utility trade-off shape data use · Result digital adoption and welfare",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Cyber-risk externalities",
+"def": "",
+"basis": "",
+"cite": "Anderson and Moore 2006",
+"chain": "Works when liability and standards · How security investment → under-investment because losses fall on others · Result incidents and losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Market power in digital platforms",
+"def": "",
+"basis": "",
+"cite": "Cremer, de Montjoye and Schweitzer 2019",
+"chain": "Works when contestability rules · How network effects and data → platforms tip to dominance · Result competition and prices in digital markets",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Direction of AI and automation",
+"def": "",
+"basis": "",
+"cite": "Acemoglu and Restrepo 2020",
+"chain": "Works when tax and regulatory bias · How rules and incentives for AI → rules steer AI toward augmentation or replacement · Result labour demand and risks",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Participatory governance and budgeting",
+"def": "Citizen participation in policy and budget decisions.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 1 mechanism"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Participatory decision-making",
+"def": "Citizen participation in policy and budget decisions as a feedback channel.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen citizen participation",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Participatory decision-making and local public goods",
+"def": "",
+"basis": "",
+"cite": "Olken 2010; Mansuri and Rao 2013",
+"chain": "Works when real decision power · How participatory planning and budgeting → participation changes legitimacy more than allocation · Result satisfaction and allocation",
+"ex": "",
+"objs": [
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Cross-government coordination",
+"def": "Coordination across agencies and levels of government.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 1 mechanism"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Coordination across agencies and levels",
+"def": "Coordination across agencies and levels of government.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen policy coordination · Strengthen intergovernmental coordination",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Coordination across agencies and levels",
+"def": "",
+"basis": "",
+"cite": "Hooghe and Marks 2003",
+"chain": "Works when authority of the coordinator · How coordination bodies and rules → coordination resolves conflicts and overlaps · Result coherent policy",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Agility and Delivery Capability",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups Future-Ready Governance Index (dynamic governance capabilities). Mobilise authority and resources for a timely, accountable response."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Authorised flexibility",
+"def": "Delegated authority and autonomy to act, and the administrative, local and regulatory capacity that uses it.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 8 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Delegated management autonomy",
+"def": "Delegated autonomy that lets managers act without waiting for approval.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans none yet",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Management autonomy and incentives in bureaucracy",
+"def": "",
+"basis": "",
+"cite": "Rasul and Rogger 2018",
+"chain": "Works when fit with task · How management practices in agencies → autonomy and monitoring change completion · Result project completion",
+"ex": "",
+"objs": [],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Administrative, local and regulatory capacity",
+"def": "The people, management, local tiers and regulators that decide whether policy is delivered.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen sector governance and regulation · Strengthen environmental governance and compliance · Strengthen public administration",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Selection, pay and motivation of public servants",
+"def": "",
+"basis": "",
+"cite": "Dal Bo, Finan and Rossi 2013; Finan, Olken and Pande 2017",
+"chain": "Works when merit systems · How recruitment, pay and incentives → who joins and how hard they work · Result service quality",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Capability traps and isomorphic mimicry",
+"def": "",
+"basis": "",
+"cite": "Pritchett, Woolcock and Andrews 2013",
+"chain": "Works when space to adapt · How reforms that copy form → form without function stalls capability · Result persistent weak capability",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Local information advantage and responsiveness",
+"def": "",
+"basis": "",
+"cite": "Oates 1972; Faguet 2004",
+"chain": "Works when local capacity · How devolved decisions → local governments match services to needs · Result allocation that fits local needs",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Elite capture in local government",
+"def": "",
+"basis": "",
+"cite": "Bardhan and Mookherjee 2000; Bardhan 2002",
+"chain": "Works when local accountability · How local power structures → elites capture local spending · Result distorted allocation",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Intergovernmental transfers and fiscal effort",
+"def": "",
+"basis": "",
+"cite": "Hines and Thaler 1995; Oates 1999",
+"chain": "Works when formula design · How transfer design → transfers stick where they land and can blunt own effort · Result local spending and own revenue",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Sector regulatory capacity",
+"def": "",
+"basis": "",
+"cite": "Laffont and Tirole 1993; Estache and Wren-Lewis 2009",
+"chain": "Works when independence · How regulator skills, independence and information → capable regulators set and update rules that bind · Result sector performance",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Inspection independence and compliance",
+"def": "",
+"basis": "",
+"cite": "Duflo, Greenstone, Pande and Ryan 2013",
+"chain": "Works when auditor pay and assignment · How inspection incentives → independent inspectors report truthfully, raising compliance · Result compliance and pollution",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Rapid resource mobilisation",
+"def": "Surge capacity and relief in a shock, and the revenue and spending systems that make resources available.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 12 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Surge, continuity and relief",
+"def": "Surge capacity, continuity and fast relief and reconstruction once a shock hits.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Provide emergency and humanitarian relief · Support disaster recovery",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Surge capacity and stockpiles",
+"def": "",
+"basis": "",
+"cite": "Castillo et al. 2021",
+"chain": "Works when staff reserves · How reserve beds, staff and stocks → capacity that can expand fast caps excess mortality · Result deaths and service disruption in a shock",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Service continuity under disruption",
+"def": "",
+"basis": "",
+"cite": "Angrist, Bergman and Matsheng 2022",
+"chain": "Works when connectivity · How remote and backup delivery → services keep running during shocks · Result lost learning and care avoided",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Speed and modality of emergency relief",
+"def": "",
+"basis": "",
+"cite": "Doocy and Tappis 2017",
+"chain": "Works when markets functioning · How relief delivery → fast, appropriate relief protects consumption and health · Result post-shock welfare",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Reconstruction quality and future losses",
+"def": "",
+"basis": "",
+"cite": "Hallegatte, Rentschler and Walsh 2018",
+"chain": "Works when finance and standards · How reconstruction after disasters → rebuilding to higher standards and faster cuts future losses · Result lower future losses",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Revenue and spending systems",
+"def": "Raising revenue and making public money buy what it is meant to.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen public financial management · Improve public investment management · Reform tax policy",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Third-party information and tax enforcement",
+"def": "",
+"basis": "",
+"cite": "Pomeranz 2015; Kleven, Kreiner and Saez 2016",
+"chain": "Works when data matching · How information reported by third parties → verifiable information makes evasion detectable · Result compliance and revenue",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Tax design, distortion and equity",
+"def": "",
+"basis": "",
+"cite": "Diamond and Mirrlees 1971; Besley and Persson 2013",
+"chain": "Works when administration · How rates and bases → design sets distortion and incidence · Result efficiency and equity of taxation",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Fiscal contract between revenue and services",
+"def": "",
+"basis": "",
+"cite": "Gadenne 2017; Besley 2020",
+"chain": "Works when service delivery · How visible link between taxes and services → citizens comply when they see services · Result compliance and accountability",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Procurement waste and transparency",
+"def": "",
+"basis": "",
+"cite": "Bandiera, Prat and Valletti 2009; Lewis-Faupel et al. 2016",
+"chain": "Works when capacity of buyers · How procurement rules and transparency → competition and disclosure cut active and passive waste · Result prices paid and quality",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Public investment efficiency",
+"def": "",
+"basis": "",
+"cite": "Pritchett 2000; Rajaram et al. 2014",
+"chain": "Works when maintenance · How appraisal, selection and execution of projects → efficient management turns spending into capital · Result infrastructure quality per unit spent",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Budget institutions and execution",
+"def": "",
+"basis": "",
+"cite": "von Hagen 1992; Alesina and Perotti 1996",
+"chain": "Works when enforcement · How budget rules and procedures → procedures shape discipline and credibility · Result budget credibility",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Risk allocation in public-private partnerships",
+"def": "",
+"basis": "",
+"cite": "Engel, Fischer and Galetovic 2014",
+"chain": "Works when renegotiation discipline · How PPP contracts → allocation of risk and renegotiation decide value · Result value for money and fiscal risk",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Donor fragmentation and bureaucratic quality",
+"def": "",
+"basis": "",
+"cite": "Knack and Rahman 2007",
+"chain": "Works when country systems · How number and coordination of donors → fragmented aid strains bureaucracies · Result aid effectiveness",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Digitally-enabled delivery",
+"def": "Digital systems and digital public infrastructure that speed delivery.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 1 mechanism"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Digital delivery and DPI",
+"def": "Digital systems and DPI that speed delivery and cut leakage.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Digitise public services · Build digital public infrastructure",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Digital delivery and leakage reduction",
+"def": "",
+"basis": "",
+"cite": "Muralidharan, Niehaus and Sukhtankar 2016; Banerjee et al. 2020",
+"chain": "Works when exclusion errors · How digital systems for payment and services → authentication and digital records cut leakage and cost · Result reach and leakage",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Crisis communication and public engagement",
+"def": "Risk and crisis communication that keeps the public informed and engaged.",
+"basis": "Future-Ready Governance Index",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 1 mechanism"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Crisis and risk communication",
+"def": "Risk and crisis communication that keeps the public informed and engaged.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Improve public communication and awareness",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Crisis and emergency risk communication",
+"def": "",
+"basis": "",
+"cite": "Reynolds and Seeger 2005 (source still to check)",
+"chain": "Works when trust in the source · How timely, credible public risk information → informed public protective behaviour and trust · Result lower losses and better compliance in crises",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "Reform Leadership, Coalitions and Civic Engagement",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"rule": "Why these groups WDR 2017, Governance and the Law; WDR 2004 accountability triangle; DLP 2018; Fox 2015. Hold power to account, build coalitions that commit to reform, and sustain citizen voice and trust."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Accountability",
+"def": "Elections, information and transparency, and checks on the executive.",
+"basis": "WDR 2004 accountability triangle; horizontal accountability",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "3 families · 10 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Electoral accountability",
+"def": "Elections and parties as the channel through which citizens reward and punish government.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Strengthen electoral governance",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Electoral competition and responsiveness",
+"def": "",
+"basis": "",
+"cite": "Besley 2006; Ferraz and Finan 2011",
+"chain": "Works when information · How competitive elections → re-election incentives discipline incumbents · Result lower corruption and better performance",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Electoral integrity and legitimacy",
+"def": "",
+"basis": "",
+"cite": "Norris 2014",
+"chain": "Works when independent bodies · How integrity of electoral process → credible elections confer legitimacy · Result acceptance of results and stability",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Party institutionalisation",
+"def": "",
+"basis": "",
+"cite": "Mainwaring and Scully 1995",
+"chain": "Works when rules on party finance · How rooted, programmatic parties → stable parties channel contest predictably · Result policy stability",
+"ex": "",
+"objs": [
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Information and transparency",
+"def": "Independent media, disclosure and the information environment.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Develop the media sector · Protect media freedom · Expand public access to information",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Independent media and detection of misconduct",
+"def": "",
+"basis": "",
+"cite": "Besley and Burgess 2002; Snyder and Stromberg 2010",
+"chain": "Works when media independence · How independent and local media → coverage raises voters' information and responsiveness · Result responsiveness and lower capture",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Disinformation and belief formation",
+"def": "",
+"basis": "",
+"cite": "Allcott and Gentzkow 2017; Guriev, Melnikov and Zhuravskaya 2021",
+"chain": "Works when platform design · How false and partisan content → exposure shifts beliefs and trust · Result trust and polarisation",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Transparency and citizen monitoring",
+"def": "",
+"basis": "",
+"cite": "Reinikka and Svensson 2005",
+"chain": "Works when dissemination · How publication of government information → information lets citizens claim entitlements and monitor · Result leakage and capture",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Horizontal accountability",
+"def": "Constraints on the executive by courts, legislatures and audit bodies.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Combat corruption · Strengthen accountability and transparency · Protect human rights",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Judicial review constraining unlawful executive action",
+"def": "",
+"basis": "",
+"cite": "North and Weingast 1989; La Porta et al. 2004",
+"chain": "Works when independence of appointment and tenure · How independent courts → credible review deters unlawful acts · Result rule of law and property rights",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Legislative oversight and detection of misconduct",
+"def": "",
+"basis": "",
+"cite": "Persson, Roland and Tabellini 1997",
+"chain": "Works when committee capacity · How legislative oversight powers → separation of powers raises detection and sanction · Result accountability",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Audits and the detection of corruption",
+"def": "",
+"basis": "",
+"cite": "Olken 2007; Ferraz and Finan 2008",
+"chain": "Works when follow-up · How audit probability and publication → detection raises the expected cost of corruption · Result corruption",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Incremental erosion of horizontal accountability",
+"def": "",
+"basis": "",
+"cite": "Levitsky and Ziblatt 2018; Luhrmann and Lindberg 2019",
+"chain": "Works when polarisation lowers resistance (Svolik 2019) · How executive moves against checks → gradual capture of referees and rules · Result autocratisation",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General",
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Coalitions and commitment",
+"def": "Coalitions and dialogue that build and sustain reform.",
+"basis": "WDR 2017: commitment; DLP 2018",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "1 family · 3 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Reform commitment and coalitions",
+"def": "Coalitions and dialogue among state, business and labour that build and sustain reform.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Engage the private sector",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Reform coalitions and political settlements",
+"def": "",
+"basis": "",
+"cite": "Doner, Ritchie and Slater 2005; Khan 2010",
+"chain": "Works when distribution of holding power · How alignment of elites and groups → coalitions that share gains sustain reform · Result reform durability",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Public-private dialogue and information revelation",
+"def": "",
+"basis": "",
+"cite": "Hausmann and Rodrik 2003; Rodrik 2004",
+"chain": "Works when guard against capture · How structured dialogue with business → dialogue reveals binding constraints · Result better-targeted policy",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Social dialogue and wage bargaining",
+"def": "",
+"basis": "",
+"cite": "Calmfors and Driffill 1988",
+"chain": "Works when coordination level · How tripartite structures → coordinated bargaining internalises macro effects · Result employment and wage moderation",
+"ex": "",
+"objs": [],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2",
+"name": "Citizen voice and social trust",
+"def": "Community voice, civil society, social cohesion and trust.",
+"basis": "WDR 2017: cooperation; Fox 2015; OECD Trust Survey",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"gmeta": "2 families · 9 mechanisms"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Client power and community voice",
+"def": "Community monitoring of providers, community-driven development and civil society.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Support youth development · Strengthen civil society · Strengthen community development",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Community monitoring of providers",
+"def": "",
+"basis": "",
+"cite": "Bjorkman and Svensson 2009",
+"chain": "Works when information and follow-up · How community scorecards and meetings → monitoring raises provider effort · Result service outcomes",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Community-driven development and social capital",
+"def": "",
+"basis": "",
+"cite": "Casey, Glennerster and Miguel 2012; Casey 2018",
+"chain": "Works when facilitation · How community control of funds → communities deliver local public goods; institutions rarely change · Result local infrastructure; limited social-capital effects",
+"ex": "",
+"objs": [
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Civil society density and accountability",
+"def": "",
+"basis": "",
+"cite": "Putnam 1993",
+"chain": "Works when civic space · How associational life → dense associations aggregate voice and monitor government · Result government performance",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l2",
+{
+"level": "l2",
+"cls": "l2",
+"name": "Social cohesion and trust",
+"def": "Polarisation, shared identity, reconciliation and trust that make cooperation possible.",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "Examples from plans Promote social cohesion · Support peacebuilding and reconciliation · Prevent violence and conflict",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Polarisation and conflict intensity",
+"def": "",
+"basis": "",
+"cite": "Esteban and Ray 1994; Esteban, Mayoral and Ray 2012",
+"chain": "Works when rents to fight over · How concentration of a society into antagonistic groups → polarised distributions raise the stakes of contest · Result conflict intensity",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Nation-building and shared identity",
+"def": "",
+"basis": "",
+"cite": "Miguel 2004; Alesina, Giuliano and Reich 2021",
+"chain": "Works when inclusive content · How national language, curricula and symbols → a shared identity lowers ethnic division in public goods · Result cooperation and public goods",
+"ex": "",
+"objs": [
+"Linked to a mechanism",
+"Linked to a mechanism"
+]
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3",
+"name": "Transitional justice and reconciliation",
+"def": "",
+"basis": "",
+"cite": "Cilliers, Dube and Siddiqi 2016",
+"chain": "Works when local legitimacy · How truth-telling and reconciliation processes → addressing past violence restores social ties, at psychological cost · Result trust and social capital",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Opportunity cost of violence",
+"def": "",
+"basis": "",
+"cite": "Collier and Hoeffler 2004; Blattman and Miguel 2010",
+"chain": "Works when credible alternatives · How income and jobs for potential combatants → higher returns to peaceful work lower recruitment · Result conflict onset and participation",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Affective polarisation and partisan animosity",
+"def": "",
+"basis": "",
+"cite": "Iyengar et al. 2019",
+"chain": "Works when segregated information · How partisan identity and media environment → dislike of the other side grows independently of policy · Result distrust and gridlock",
+"ex": "",
+"objs": []
+}
+],
+[
+"l3",
+{
+"level": "l3",
+"cls": "l3 empty",
+"name": "Insecurity-driven erosion of institutional trust",
+"def": "",
+"basis": "",
+"cite": "Algan et al. 2017; Guriev and Papaioannou 2022",
+"chain": "Works when visible service delivery · How economic insecurity and poor service → losses and unmet expectations lower trust and raise populist demand · Result trust and support for populists",
+"ex": "",
+"objs": [
+"General",
+"General",
+"General"
+],
+"fh": "L4 General: the plan names this area but not how the policy works"
+}
+],
+[
+"l1",
+{
+"level": "l1",
+"cls": "l1",
+"name": "General Governance",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [],
+"note": "Routine government functions with no development mechanism. No groups or families."
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2 std",
+"name": "Routine-function objectives",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function",
+"Routine function"
+],
+"gmeta": "12 objectives"
+}
+],
+[
+"pillar",
+{
+"name": ""
+}
+],
+[
+"g2",
+{
+"level": "g2",
+"cls": "g2 std",
+"name": "Broad goals that name an end result, not a policy area",
+"def": "",
+"basis": "",
+"cite": "",
+"chain": "",
+"ex": "",
+"objs": [
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal",
+"Broad goal"
+],
+"gmeta": "10 objectives"
+}
+]
+]

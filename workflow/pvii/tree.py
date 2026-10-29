@@ -3,10 +3,13 @@
 The tree is built under tree/ and this module only reads its release file. `load()` reads
 whichever release is in config.TREE_DIR (tree/v2 unless PVII_TREE says otherwise):
 
-- v2 (tree_v2.json): RHDR pillar, subpillar, family (L1), mechanism (L2), pathway (L3), then
-  objective (L4) and strategy (L5). v2 holds no objectives yet: step M places each strategy on
-  a node and proposes the objective it needs. Depth is tested with the mechanism's `plan_words`
-  and the pathway's `text_cues`.
+- v3 (tree_v3.json): RHDR pillar, subpillar, group (L1), family (L2, the required level),
+  pathway (L3), then objective (L4) and strategy (L5). The reviewer's framework over v2's
+  pathways. A family placement is taken as answered; a pathway needs its `text_cues` in the
+  strategy's wording; a group alone is a weak placement and is counted.
+- v2 (tree_v2.json): pillar, subpillar, family (L1), mechanism (L2), pathway (L3). Depth is
+  tested with the mechanism's `plan_words` and the pathway's `text_cues`. Neither v2 nor v3
+  holds objectives yet: step M places each strategy on a node and proposes the objective.
 - v1 (tree_v1.json): pillar, subpillar, family (L2), mechanism (L3), objective (L4), strategy.
   Targets and instruments come from tree/inputs.
 
@@ -27,19 +30,37 @@ RELATIONS = ("same", "differs", "new", "placed")   # v1: same/differs/new; v2: p
 
 
 class TreeV2:
-    """tree_v2.json. Same interface as Tree, with pathways and no objectives."""
+    """tree_v2.json or tree_v3.json. Same interface as Tree, with pathways and no objectives.
+
+    The three placement levels are held as `top` (v2 family / v3 group), `mid` (v2 mechanism /
+    v3 family) and `pathways`; `level_names` says what each is called in this release.
+    """
 
     def __init__(self, tree_dir=None):
         tree_dir = tree_dir or config.TREE_DIR
-        with open(os.path.join(tree_dir, "tree_v2.json"), encoding="utf-8") as f:
+        v3 = os.path.join(tree_dir, "tree_v3.json")
+        path = v3 if os.path.exists(v3) else os.path.join(tree_dir, "tree_v2.json")
+        with open(path, encoding="utf-8") as f:
             d = json.load(f)
-        self.version = (d.get("meta") or {}).get("version", "v2")
-        self.built = (d.get("meta") or {}).get("built", "")
+        meta = d.get("meta") or {}
+        self.version = meta.get("version", "v2")
+        self.built = meta.get("built", "")
         self.pillars = {p["code"]: p for p in d["pillars"]}
         self.subpillars = {s["code"]: s for s in d["subpillars"]}
         self.sub_by_name = {s["name"]: s["code"] for s in d["subpillars"]}
-        self.families = {f["family_id"]: f for f in d["families"]}
-        self.mechanisms = {m["mechanism_id"]: m for m in d["mechanisms"]}
+        if "groups" in d:                                   # v3
+            self.level_names = ("group", "family", "pathway")
+            self.top = {g["group_id"]: g for g in d["groups"]}
+            self.mid = {f["family_id"]: f for f in d["families"]}
+            self.required_level = meta.get("required_level", "L2")
+            self.test_mid_cues = False                      # a family is taken as answered
+        else:                                               # v2
+            self.level_names = ("family", "mechanism", "pathway")
+            self.top = {f["family_id"]: f for f in d["families"]}
+            self.mid = {m["mechanism_id"]: m for m in d["mechanisms"]}
+            self.required_level = ""
+            self.test_mid_cues = True                       # a mechanism needs its plan words
+        self.families, self.mechanisms = self.top, self.mid     # the v2 names, kept for callers
         self.pathways = {p["pathway_id"]: p for p in d["pathways"]}
         self.holding = {h["id"]: h for h in d["holding"]}
         self.objectives = {}
@@ -47,7 +68,7 @@ class TreeV2:
         self.instruments = {i["instrument_id"]: {"label": i["instrument_label"]}
                             for i in d["instrument_classes"]}
         self._cues = {}
-        for nid, n in list(self.mechanisms.items()) + list(self.pathways.items()):
+        for nid, n in list(self.mid.items()) + list(self.pathways.items()):
             cue = (n.get("plan_words") or n.get("text_cues") or "").strip()
             if cue:
                 try:
@@ -71,19 +92,26 @@ class TreeV2:
             return "GOAL" if node_id == "H-GOAL" else "STD"
         return ""
 
+    def _mid_of(self, node):
+        return node.get("family_id") if self.level_names[1] == "family" else node.get("mechanism_id")
+
+    def _top_of(self, node):
+        return node.get("group_id") if self.level_names[0] == "group" else node.get("family_id")
+
     def parent_of(self, node_id):
         if node_id in self.pathways:
-            return self.pathways[node_id]["mechanism_id"]
-        if node_id in self.mechanisms:
-            return self.mechanisms[node_id]["family_id"]
+            return self._mid_of(self.pathways[node_id])
+        if node_id in self.mid:
+            return self._top_of(self.mid[node_id])
         return ""
 
     def family_of(self, node_id):
+        """The top-level node (v2 family, v3 group) a node sits under."""
         if node_id in self.pathways:
-            return self.pathways[node_id]["family_id"]
-        if node_id in self.mechanisms:
-            return self.mechanisms[node_id]["family_id"]
-        if node_id in self.families:
+            return self._top_of(self.pathways[node_id])
+        if node_id in self.mid:
+            return self._top_of(self.mid[node_id])
+        if node_id in self.top:
             return node_id
         return ""
 
@@ -93,41 +121,49 @@ class TreeV2:
         return m.group(0) if m else ""
 
     def describe(self, node_id):
-        out = {"family_id": "", "family": "", "mechanism_id": "", "mechanism": "",
-               "pathway_id": "", "pathway": "", "subpillar": "", "pillar": ""}
+        """The node's line of ancestors, in the release's own names. v3 fills group and family;
+        v2 fills family and mechanism."""
+        out = {"group_id": "", "group": "", "family_id": "", "family": "", "mechanism_id": "",
+               "mechanism": "", "pathway_id": "", "pathway": "", "subpillar": "", "pillar": ""}
+        top_key, mid_key, _ = self.level_names
         if node_id in self.pathways:
             p = self.pathways[node_id]
             out.update(pathway_id=node_id, pathway=p["pathway"])
-            node_id = p["mechanism_id"]
-        if node_id in self.mechanisms:
-            m = self.mechanisms[node_id]
-            out.update(mechanism_id=node_id, mechanism=m["mechanism"])
-            node_id = m["family_id"]
-        if node_id in self.families:
-            f = self.families[node_id]
-            out.update(family_id=node_id, family=f["family"], subpillar=f["subpillar"],
-                       pillar=f["pillar"])
+            node_id = self._mid_of(p)
+        if node_id in self.mid:
+            m = self.mid[node_id]
+            out[mid_key + "_id"], out[mid_key] = node_id, m[mid_key]
+            node_id = self._top_of(m)
+        if node_id in self.top:
+            f = self.top[node_id]
+            out[top_key + "_id"], out[top_key] = node_id, f[top_key]
+            out.update(subpillar=f["subpillar"], pillar=f["pillar"])
         elif node_id in self.holding:
-            sub = next((s for s in self.subpillars.values()
-                        if s["name"] == self.holding[node_id]["name"]), None)
-            code = node_id.replace("H-", "")
-            name = {"SPE": "Standard People", "SEC": "Standard Economy",
-                    "SGO": "Standard Governance"}.get(code, "")
-            pil = {"SPE": "PFA", "SEC": "SMG", "SGO": "MCH"}.get(code, "")
-            out.update(subpillar=name, pillar=self.pillars[pil]["name"] if pil in self.pillars else "")
+            # The holding branch's own name is the subpillar (Standard People in v2, General People in v3).
+            pil = {"H-SPE": "PFA", "H-SEC": "SMG", "H-SGO": "MCH"}.get(node_id, "")
+            out.update(subpillar=self.holding[node_id]["name"] if pil else "",
+                       pillar=self.pillars[pil]["name"] if pil in self.pillars else "")
         return out
 
     def menu(self):
-        """The tree as text: each family, its mechanisms and their pathways."""
-        lines = ["FAMILIES (L1), THEIR MECHANISMS (L2) AND PATHWAYS (L3)",
-                 "A family names a domain; a mechanism names the lever; a pathway names the causal channel.", ""]
-        for fid, f in sorted(self.families.items()):
-            lines.append("%s %s [%s] - %s" % (fid, f["family"], f.get("subpillar_code", ""),
-                                               _short(f.get("meaning"), 200)))
-            for mid in f.get("mechanism_ids") or []:
-                m = self.mechanisms[mid]
-                lines.append("  %s %s: moves %s" % (mid, m["mechanism"],
-                                                     _short(m.get("intermediate_variable"), 90)))
+        """The tree as text: each top node, its middle nodes and their pathways."""
+        top_key, mid_key, _ = self.level_names
+        if top_key == "group":
+            lines = ["GROUPS (L1), THEIR FAMILIES (L2, THE REQUIRED LEVEL) AND PATHWAYS (L3)",
+                     "A group names a broad area; a family names the development purpose; a pathway names the causal channel.", ""]
+        else:
+            lines = ["FAMILIES (L1), THEIR MECHANISMS (L2) AND PATHWAYS (L3)",
+                     "A family names a domain; a mechanism names the lever; a pathway names the causal channel.", ""]
+        for fid, f in sorted(self.top.items()):
+            lines.append("%s %s [%s] - %s" % (fid, f[top_key], f.get("subpillar_code", ""),
+                                               _short(f.get("meaning") or f.get("definition"), 200)))
+            for mid in f.get(mid_key + "_ids") or []:
+                m = self.mid[mid]
+                if mid_key == "family":
+                    lines.append("  %s %s: %s" % (mid, m["family"], _short(m.get("definition"), 160)))
+                else:
+                    lines.append("  %s %s: moves %s" % (mid, m["mechanism"],
+                                                         _short(m.get("intermediate_variable"), 90)))
                 for pid in m.get("pathway_ids") or []:
                     p = self.pathways.get(pid)
                     if p and not p.get("merged_into"):
@@ -135,7 +171,7 @@ class TreeV2:
                             pid, p["pathway"], _short(p.get("causal_input"), 50),
                             _short(p.get("transmission"), 70), _short(p.get("outcome"), 50)))
             lines.append("")
-        lines.append("HOLDING BRANCHES (no mechanism; standing functions of the state, or goals)")
+        lines.append("GENERAL BRANCHES (no family; standing functions of the state, or goals)")
         for hid, h in sorted(self.holding.items()):
             lines.append("%s %s" % (hid, h["name"]))
         lines += ["", "TARGET GROUPS"]
@@ -277,6 +313,6 @@ _TREE = None
 def load():
     global _TREE
     if _TREE is None:
-        v2 = os.path.exists(os.path.join(config.TREE_DIR, "tree_v2.json"))
-        _TREE = TreeV2() if v2 else Tree()
+        newer = any(os.path.exists(os.path.join(config.TREE_DIR, f)) for f in ("tree_v3.json", "tree_v2.json"))
+        _TREE = TreeV2() if newer else Tree()
     return _TREE

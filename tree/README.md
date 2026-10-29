@@ -4,7 +4,7 @@
 
 `v1/` is the mother tree v1 release (draft for sign-off, built 20 October 2026), moved here from PV2 `support/golden_tree/tree_v1/` unchanged. Its own [README](v1/README.md) and [HANDOVER](v1/HANDOVER.md) explain the six levels, the depth rule and the open items.
 
-Since 29 October 2026 the workflow reads `v2/tree_v2.json` (families, mechanisms with plan words, pathways with text cues, target and instrument classes). Set `PVII_TREE` to `tree/v1` to map onto v1 instead, which reads these three files:
+Since 29 October 2026 the workflow reads `v3/tree_v3.json` (groups, families with plan words, pathways with text cues, target and instrument classes; see [v3/README.md](v3/README.md)). `v2/` is the 28 October draft it was built on. Set `PVII_TREE` to `tree/v2` or `tree/v1` to map onto an older release; v1 reads these three files:
 
 - `v1/tree_v1.json`: families, mechanisms (with their `text_cues`), objectives and holding branches
 - `inputs/targets.csv`: the 197 target-group labels

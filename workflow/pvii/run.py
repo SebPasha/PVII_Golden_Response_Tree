@@ -63,7 +63,9 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
                              "relations": _count(strategies, "relation"),
                              "levels": _count(strategies, "level"),
                              "response_orientation": _count(strategies, "response_orientation"),
-                             "subpillar": _count(strategies, "subpillar")}
+                             "subpillar": _count(strategies, "subpillar"),
+                             # v3: placements that stopped at a group, where a family is required
+                             "group_only": sum(1 for s in strategies if "is required" in s.get("map_note", ""))}
     record["ledger"] = client.ledger.as_dict()
     record["finished"] = datetime.datetime.now().isoformat(timespec="seconds")
     if not client.dry_run:
