@@ -38,8 +38,7 @@
    "language": "pt",
    "title": "Plano Plurianual 2016-2019 (Lei 13.249/2016)",
    "edition": "PPA 2016-2019",
-   "skip": true,
-   "needs": "the plan's annexes: only the law text (html) was found"
+   "skip": "only the law text (html) was found; the plan's annexes were not located"
   }
  ],
  "parked": {
