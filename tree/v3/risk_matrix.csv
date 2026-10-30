@@ -5,152 +5,155 @@ F-01,"Exclusion from markets: labour, informality and workers' rights",Markets,T
 F-01,"Exclusion from markets: labour, informality and workers' rights",Markets,Tackling Structural Exclusion,Shifts in Globalisation,"[""L3-178""]",False
 F-02,Exclusion from services and entitlements,Services,Tackling Structural Exclusion,Demographic Shifts,"[""L3-004""]",False
 F-02,Exclusion from services and entitlements,Services,Tackling Structural Exclusion,Democratic Backsliding,"[""L3-006""]",False
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,Demographic Shifts,"[""L3-002"", ""L3-019""]",False
+F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,Demographic Shifts,"[""L3-002""]",False
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,Democratic Backsliding,"[""L3-003""]",False
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,Increased Polarisation,"[""L3-003"", ""L3-011"", ""L3-013"", ""L3-020""]",False
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,Climate Change,"[""L3-018"", ""L3-019""]",False
+F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,Increased Polarisation,"[""L3-003"", ""L3-011""]",False
 F-04,"Violence, coercion and denial of dignity",Spaces,Tackling Structural Exclusion,Pandemics,"[""L3-007""]",False
 F-04,"Violence, coercion and denial of dignity",Spaces,Tackling Structural Exclusion,Demographic Shifts,"[""L3-009""]",False
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,Pandemics,"[""L3-021"", ""L3-024"", ""L3-026""]",False
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,Shifts in Globalisation,"[""L3-021""]",False
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,Climate Change,"[""L3-022"", ""L3-023"", ""L3-024""]",False
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,Demographic Shifts,"[""L3-025"", ""L3-030""]",False
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,Growing Populism,"[""L3-027"", ""L3-028""]",False
-F-06,Food security,Decent standard of living,Enhancing Capabilities,Climate Change,"[""L3-053""]",False
-F-06,Food security,Decent standard of living,Enhancing Capabilities,Pandemics,"[""L3-053""]",False
-F-06,Food security,Decent standard of living,Enhancing Capabilities,Demographic Shifts,"[""L3-054""]",False
-F-06,Food security,Decent standard of living,Enhancing Capabilities,Shifts in Globalisation,"[""L3-055"", ""L3-056""]",False
-F-06,Food security,Decent standard of living,Enhancing Capabilities,Resource and Energy Pressures,"[""L3-055"", ""L3-057""]",False
-F-06,Food security,Decent standard of living,Enhancing Capabilities,Environmental Degradation and Pollution,"[""L3-056""]",False
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,Increased Polarisation,"[""L3-064""]",False
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,Democratic Backsliding,"[""L3-065""]",False
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,Shifts in Globalisation,"[""L3-067""]",False
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,Resource and Energy Pressures,"[""L3-059""]",False
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,Environmental Degradation and Pollution,"[""L3-060"", ""L3-061""]",False
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,Climate Change,"[""L3-061"", ""L3-062""]",False
-F-09,Health security,Long and healthy life,Enhancing Capabilities,Pandemics,"[""L3-043"", ""L3-045"", ""L3-046"", ""L3-049"", ""L3-052""]",True
-F-09,Health security,Long and healthy life,Enhancing Capabilities,Demographic Shifts,"[""L3-043"", ""L3-045"", ""L3-048""]",False
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,Demographic Shifts,"[""L3-036"", ""L3-039""]",False
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,Technological Change,"[""L3-037""]",False
-F-11,Skills for work,Knowledge,Enhancing Capabilities,Technological Change,"[""L3-032"", ""L3-035"", ""L3-261""]",True
-F-11,Skills for work,Knowledge,Enhancing Capabilities,Demographic Shifts,"[""L3-033""]",False
-F-12,Climate stabilisation and just transition,Climate,Future Generations,Climate Change,"[""L3-068"", ""L3-069"", ""L3-070"", ""L3-071"", ""L3-072"", ""L3-262""]",False
-F-12,Climate stabilisation and just transition,Climate,Future Generations,Technological Change,"[""L3-069""]",False
-F-12,Climate stabilisation and just transition,Climate,Future Generations,Resource and Energy Pressures,"[""L3-071"", ""L3-262""]",False
-F-13,Climate risk to assets and people,Climate,Future Generations,Climate Change,"[""L3-086"", ""L3-087"", ""L3-088"", ""L3-089"", ""L3-090""]",False
-F-13,Climate risk to assets and people,Climate,Future Generations,Biodiversity Loss,"[""L3-088""]",False
-F-14,Living natural capital,Natural capital,Future Generations,Biodiversity Loss,"[""L3-073"", ""L3-074"", ""L3-075"", ""L3-076"", ""L3-077"", ""L3-078"", ""L3-079""]",False
-F-14,Living natural capital,Natural capital,Future Generations,Resource and Energy Pressures,"[""L3-073""]",False
-F-14,Living natural capital,Natural capital,Future Generations,Climate Change,"[""L3-076"", ""L3-077"", ""L3-078""]",False
-F-14,Living natural capital,Natural capital,Future Generations,Environmental Degradation and Pollution,"[""L3-078""]",False
-F-15,Water resources,Natural capital,Future Generations,Resource and Energy Pressures,"[""L3-105"", ""L3-106"", ""L3-107"", ""L3-108""]",False
-F-15,Water resources,Natural capital,Future Generations,Climate Change,"[""L3-107""]",False
-F-15,Water resources,Natural capital,Future Generations,Increased Polarisation,"[""L3-108""]",False
-F-16,Environmental quality,Natural capital,Future Generations,Environmental Degradation and Pollution,"[""L3-080"", ""L3-081"", ""L3-083"", ""L3-084"", ""L3-085""]",False
-F-16,Environmental quality,Natural capital,Future Generations,Climate Change,"[""L3-081"", ""L3-085""]",False
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Resource and Energy Pressures,"[""L3-091"", ""L3-092"", ""L3-093"", ""L3-094""]",False
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Shifts in Globalisation,"[""L3-092"", ""L3-094"", ""L3-095"", ""L3-096"", ""L3-097"", ""L3-098""]",False
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Democratic Backsliding,"[""L3-093""]",False
-F-18,Human and demographic capital,Economic and human wealth,Future Generations,Demographic Shifts,"[""L3-100"", ""L3-101"", ""L3-102"", ""L3-103"", ""L3-104""]",False
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,Shifts in Globalisation,"[""L3-114"", ""L3-115"", ""L3-116"", ""L3-117"", ""L3-118"", ""L3-119"", ""L3-120""]",False
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,Pandemics,"[""L3-117""]",False
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,Shifts in Globalisation,"[""L3-125"", ""L3-127""]",False
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,Biodiversity Loss,"[""L3-126""]",False
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,Environmental Degradation and Pollution,"[""L3-126""]",False
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,Climate Change,"[""L3-126"", ""L3-127""]",False
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,Pandemics,"[""L3-127""]",False
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,Shifts in Globalisation,"[""L3-109"", ""L3-110"", ""L3-111"", ""L3-112"", ""L3-113""]",False
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,Technological Change,"[""L3-110"", ""L3-111"", ""L3-113""]",False
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,Technological Change,"[""L3-128"", ""L3-129"", ""L3-130"", ""L3-131"", ""L3-132"", ""L3-133"", ""L3-134"", ""L3-041"", ""L3-161""]",False
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,Pandemics,"[""L3-133""]",False
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,Climate Change,"[""L3-161""]",False
-F-23,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,Shifts in Globalisation,"[""L3-121"", ""L3-122"", ""L3-123"", ""L3-124"", ""L3-193""]",False
-F-23,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,Technological Change,"[""L3-122""]",False
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,Shifts in Globalisation,"[""L3-135""]",False
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,Growing Populism,"[""L3-136"", ""L3-137""]",False
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,Technological Change,"[""L3-138"", ""L3-140"", ""L3-141""]",False
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,Resource and Energy Pressures,"[""L3-146"", ""L3-147"", ""L3-148"", ""L3-149"", ""L3-150""]",False
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,Climate Change,"[""L3-148""]",False
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,Shifts in Globalisation,"[""L3-150""]",False
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,Shifts in Globalisation,"[""L3-151"", ""L3-152"", ""L3-153""]",False
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,Resource and Energy Pressures,"[""L3-154""]",False
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,Demographic Shifts,"[""L3-142"", ""L3-144"", ""L3-145""]",False
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,Environmental Degradation and Pollution,"[""L3-143""]",False
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,Climate Change,"[""L3-143"", ""L3-145""]",False
-F-28,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,Growing Populism,"[""L3-185"", ""L3-186""]",False
-F-28,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,Increased Polarisation,"[""L3-185""]",False
-F-29,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,Technological Change,"[""L3-164"", ""L3-167""]",False
-F-29,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,Shifts in Globalisation,"[""L3-165"", ""L3-166"", ""L3-168""]",False
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,Shifts in Globalisation,"[""L3-172""]",False
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,Growing Populism,"[""L3-173""]",False
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,Technological Change,"[""L3-175""]",False
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,Resource and Energy Pressures,"[""L3-158"", ""L3-160""]",False
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,Climate Change,"[""L3-158"", ""L3-159"", ""L3-160"", ""L3-163""]",False
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,Demographic Shifts,"[""L3-162""]",False
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,Pandemics,"[""L3-163""]",False
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,Biodiversity Loss,"[""L3-163""]",False
-F-32,Market participation of small producers,Rural producers,Growth through Inclusion,Growing Populism,"[""L3-155"", ""L3-156""]",False
-F-32,Market participation of small producers,Rural producers,Growth through Inclusion,Shifts in Globalisation,"[""L3-157""]",False
-F-33,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,Technological Change,"[""L3-176"", ""L3-177""]",False
-F-33,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,Demographic Shifts,"[""L3-176"", ""L3-177""]",False
-F-33,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,Growing Populism,"[""L3-179""]",False
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Shifts in Globalisation,"[""L3-183""]",False
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Climate Change,"[""L3-183"", ""L3-188""]",False
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Technological Change,"[""L3-184""]",False
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Growing Populism,"[""L3-188""]",False
-F-35,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,Shifts in Globalisation,"[""L3-189"", ""L3-190"", ""L3-191"", ""L3-192""]",False
-F-35,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,Demographic Shifts,"[""L3-190"", ""L3-191"", ""L3-192""]",False
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,Shifts in Globalisation,"[""L3-169"", ""L3-170""]",True
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,Growing Populism,"[""L3-169""]",False
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,Resource and Energy Pressures,"[""L3-194""]",False
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,Demographic Shifts,"[""L3-196""]",False
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,Increased Polarisation,"[""L3-197""]",False
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Climate Change,"[""L3-206""]",False
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Pandemics,"[""L3-207"", ""L3-208"", ""L3-202""]",False
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Biodiversity Loss,"[""L3-208""]",False
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Shifts in Globalisation,"[""L3-199"", ""L3-202"", ""L3-203""]",False
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Resource and Energy Pressures,"[""L3-199"", ""L3-202""]",False
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Shifts in Globalisation,"[""L3-198"", ""L3-200"", ""L3-201"", ""L3-204"", ""L3-205""]",False
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Resource and Energy Pressures,"[""L3-205""]",False
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Climate Change,"[""L3-209""]",False
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Pandemics,"[""L3-209""]",False
-F-39,Scenario and futures work,Foresight and futures,Anticipation and Strategic Foresight,Climate Change,"[""L3-211""]",False
-F-39,Scenario and futures work,Foresight and futures,Anticipation and Strategic Foresight,Technological Change,"[""L3-211""]",False
-F-41,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,Demographic Shifts,"[""L3-210""]",False
-F-41,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,Climate Change,"[""L3-210""]",False
-F-41,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,Technological Change,"[""L3-263""]",False
-F-42,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,Climate Change,"[""L3-217""]",False
-F-44,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,Technological Change,"[""L3-221"", ""L3-222"", ""L3-223"", ""L3-224""]",False
-F-45,Participatory decision-making,Participatory governance and budgeting,Adaptability and Course Correction,Democratic Backsliding,"[""L3-247""]",False
-F-45,Participatory decision-making,Participatory governance and budgeting,Adaptability and Course Correction,Increased Polarisation,"[""L3-247""]",False
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Growing Populism,"[""L3-225""]",False
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Democratic Backsliding,"[""L3-229"", ""L3-230""]",True
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Resource and Energy Pressures,"[""L3-240""]",False
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Environmental Degradation and Pollution,"[""L3-240"", ""L3-241""]",False
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,Pandemics,"[""L3-242"", ""L3-243"", ""L3-244""]",False
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,Climate Change,"[""L3-243"", ""L3-244"", ""L3-245""]",False
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Growing Populism,"[""L3-234""]",False
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Democratic Backsliding,"[""L3-235""]",False
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Climate Change,"[""L3-236""]",False
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Shifts in Globalisation,"[""L3-238""]",True
-F-51,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,Technological Change,"[""L3-227""]",False
-F-51,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,Pandemics,"[""L3-227""]",False
-F-52,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,Pandemics,"[""L3-264""]",False
-F-52,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,Climate Change,"[""L3-264""]",False
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-253"", ""L3-254""]",False
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-253"", ""L3-255""]",False
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-254"", ""L3-255""]",False
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-250"", ""L3-251"", ""L3-252""]",False
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-250"", ""L3-251""]",False
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-251""]",False
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Technological Change,"[""L3-251""]",False
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-213"", ""L3-214"", ""L3-215"", ""L3-216""]",False
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-216""]",False
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-256"", ""L3-258""]",False
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-256""]",False
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",Shifts in Globalisation,"[""L3-257""]",False
-F-57,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-246"", ""L3-249""]",False
-F-57,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-248"", ""L3-249""]",False
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-012"", ""L3-014"", ""L3-015"", ""L3-016"", ""L3-017""]",False
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-014""]",False
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-017""]",False
+F-05,Displaced and uprooted populations,Spaces,Tackling Structural Exclusion,Climate Change,"[""L3-018"", ""L3-019""]",False
+F-05,Displaced and uprooted populations,Spaces,Tackling Structural Exclusion,Demographic Shifts,"[""L3-019""]",False
+F-05,Displaced and uprooted populations,Spaces,Tackling Structural Exclusion,Increased Polarisation,"[""L3-020""]",False
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,Pandemics,"[""L3-021"", ""L3-024"", ""L3-026""]",False
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,Shifts in Globalisation,"[""L3-021""]",False
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,Climate Change,"[""L3-022"", ""L3-023"", ""L3-024""]",False
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,Demographic Shifts,"[""L3-025"", ""L3-030""]",False
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,Growing Populism,"[""L3-027"", ""L3-028""]",False
+F-07,Food security,Decent standard of living,Enhancing Capabilities,Climate Change,"[""L3-053""]",False
+F-07,Food security,Decent standard of living,Enhancing Capabilities,Pandemics,"[""L3-053""]",False
+F-07,Food security,Decent standard of living,Enhancing Capabilities,Demographic Shifts,"[""L3-054""]",False
+F-07,Food security,Decent standard of living,Enhancing Capabilities,Shifts in Globalisation,"[""L3-055"", ""L3-056""]",False
+F-07,Food security,Decent standard of living,Enhancing Capabilities,Resource and Energy Pressures,"[""L3-055"", ""L3-057""]",False
+F-07,Food security,Decent standard of living,Enhancing Capabilities,Environmental Degradation and Pollution,"[""L3-056""]",False
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,Increased Polarisation,"[""L3-064""]",False
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,Democratic Backsliding,"[""L3-065""]",False
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,Shifts in Globalisation,"[""L3-067""]",False
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,Resource and Energy Pressures,"[""L3-059""]",False
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,Environmental Degradation and Pollution,"[""L3-060"", ""L3-061""]",False
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,Climate Change,"[""L3-061"", ""L3-062""]",False
+F-10,Health security,Long and healthy life,Enhancing Capabilities,Pandemics,"[""L3-043"", ""L3-045"", ""L3-046"", ""L3-049"", ""L3-052""]",True
+F-10,Health security,Long and healthy life,Enhancing Capabilities,Demographic Shifts,"[""L3-043"", ""L3-045"", ""L3-047"", ""L3-048""]",False
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,Demographic Shifts,"[""L3-036"", ""L3-039""]",False
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,Technological Change,"[""L3-037"", ""L3-041""]",False
+F-12,Skills for work,Knowledge,Enhancing Capabilities,Technological Change,"[""L3-032"", ""L3-035"", ""L3-261""]",True
+F-12,Skills for work,Knowledge,Enhancing Capabilities,Demographic Shifts,"[""L3-033""]",False
+F-13,Climate stabilisation and just transition,Climate,Future Generations,Climate Change,"[""L3-068"", ""L3-069"", ""L3-070"", ""L3-071"", ""L3-072"", ""L3-262""]",False
+F-13,Climate stabilisation and just transition,Climate,Future Generations,Technological Change,"[""L3-069""]",False
+F-13,Climate stabilisation and just transition,Climate,Future Generations,Resource and Energy Pressures,"[""L3-071"", ""L3-262""]",False
+F-14,Climate risk to assets and people,Climate,Future Generations,Climate Change,"[""L3-086"", ""L3-087"", ""L3-088"", ""L3-089"", ""L3-090""]",False
+F-14,Climate risk to assets and people,Climate,Future Generations,Biodiversity Loss,"[""L3-088""]",False
+F-15,Living natural capital,Natural capital,Future Generations,Biodiversity Loss,"[""L3-073"", ""L3-074"", ""L3-075"", ""L3-076"", ""L3-077"", ""L3-078"", ""L3-079""]",False
+F-15,Living natural capital,Natural capital,Future Generations,Resource and Energy Pressures,"[""L3-073""]",False
+F-15,Living natural capital,Natural capital,Future Generations,Climate Change,"[""L3-076"", ""L3-077"", ""L3-078""]",False
+F-15,Living natural capital,Natural capital,Future Generations,Environmental Degradation and Pollution,"[""L3-078""]",False
+F-16,Water resources,Natural capital,Future Generations,Resource and Energy Pressures,"[""L3-105"", ""L3-106"", ""L3-107"", ""L3-108""]",False
+F-16,Water resources,Natural capital,Future Generations,Climate Change,"[""L3-107""]",False
+F-16,Water resources,Natural capital,Future Generations,Increased Polarisation,"[""L3-108""]",False
+F-17,Environmental quality,Natural capital,Future Generations,Environmental Degradation and Pollution,"[""L3-080"", ""L3-081"", ""L3-082"", ""L3-083"", ""L3-084"", ""L3-085""]",False
+F-17,Environmental quality,Natural capital,Future Generations,Climate Change,"[""L3-081"", ""L3-085""]",False
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Resource and Energy Pressures,"[""L3-091"", ""L3-092"", ""L3-093"", ""L3-094""]",False
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Shifts in Globalisation,"[""L3-092"", ""L3-094"", ""L3-095"", ""L3-096"", ""L3-097"", ""L3-098""]",False
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Democratic Backsliding,"[""L3-093""]",False
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,Demographic Shifts,"[""L3-099""]",False
+F-19,Human and demographic capital,Economic and human wealth,Future Generations,Demographic Shifts,"[""L3-100"", ""L3-101"", ""L3-102"", ""L3-103"", ""L3-104""]",False
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,Shifts in Globalisation,"[""L3-114"", ""L3-115"", ""L3-116"", ""L3-117"", ""L3-118"", ""L3-119"", ""L3-120""]",False
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,Pandemics,"[""L3-117""]",False
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,Shifts in Globalisation,"[""L3-125"", ""L3-127""]",False
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,Biodiversity Loss,"[""L3-126""]",False
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,Environmental Degradation and Pollution,"[""L3-126""]",False
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,Climate Change,"[""L3-126"", ""L3-127""]",False
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,Pandemics,"[""L3-127""]",False
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,Shifts in Globalisation,"[""L3-109"", ""L3-110"", ""L3-111"", ""L3-112"", ""L3-113""]",False
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,Technological Change,"[""L3-110"", ""L3-111"", ""L3-113""]",False
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,Technological Change,"[""L3-128"", ""L3-129"", ""L3-130"", ""L3-131"", ""L3-132"", ""L3-133"", ""L3-134"", ""L3-161""]",False
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,Pandemics,"[""L3-133""]",False
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,Climate Change,"[""L3-161""]",False
+F-24,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,Shifts in Globalisation,"[""L3-121"", ""L3-122"", ""L3-123"", ""L3-124"", ""L3-193""]",False
+F-24,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,Technological Change,"[""L3-122""]",False
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,Shifts in Globalisation,"[""L3-135""]",False
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,Growing Populism,"[""L3-136"", ""L3-137""]",False
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,Technological Change,"[""L3-138"", ""L3-140"", ""L3-141""]",False
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,Resource and Energy Pressures,"[""L3-146"", ""L3-147"", ""L3-148"", ""L3-149"", ""L3-150""]",False
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,Climate Change,"[""L3-148""]",False
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,Shifts in Globalisation,"[""L3-150""]",False
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,Shifts in Globalisation,"[""L3-151"", ""L3-152"", ""L3-153""]",False
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,Resource and Energy Pressures,"[""L3-154""]",False
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,Demographic Shifts,"[""L3-142"", ""L3-144"", ""L3-145""]",False
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,Environmental Degradation and Pollution,"[""L3-143""]",False
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,Climate Change,"[""L3-143"", ""L3-145""]",False
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,Growing Populism,"[""L3-185"", ""L3-186"", ""L3-188""]",False
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,Increased Polarisation,"[""L3-185""]",False
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,Climate Change,"[""L3-188""]",False
+F-30,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,Technological Change,"[""L3-164"", ""L3-167""]",False
+F-30,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,Shifts in Globalisation,"[""L3-165"", ""L3-168""]",False
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,Shifts in Globalisation,"[""L3-172""]",False
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,Growing Populism,"[""L3-173""]",False
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,Technological Change,"[""L3-175""]",False
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,Resource and Energy Pressures,"[""L3-158"", ""L3-160""]",False
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,Climate Change,"[""L3-158"", ""L3-159"", ""L3-160"", ""L3-163""]",False
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,Demographic Shifts,"[""L3-162""]",False
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,Pandemics,"[""L3-163""]",False
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,Biodiversity Loss,"[""L3-163""]",False
+F-33,Market participation of small producers,Rural producers,Growth through Inclusion,Growing Populism,"[""L3-155"", ""L3-156""]",False
+F-33,Market participation of small producers,Rural producers,Growth through Inclusion,Shifts in Globalisation,"[""L3-157""]",False
+F-34,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,Technological Change,"[""L3-176"", ""L3-177""]",False
+F-34,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,Demographic Shifts,"[""L3-176"", ""L3-177""]",False
+F-34,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,Growing Populism,"[""L3-179""]",False
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Shifts in Globalisation,"[""L3-183""]",False
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Climate Change,"[""L3-183""]",False
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,Technological Change,"[""L3-184""]",False
+F-36,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,Shifts in Globalisation,"[""L3-189"", ""L3-190"", ""L3-191"", ""L3-192""]",False
+F-36,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,Demographic Shifts,"[""L3-190"", ""L3-191"", ""L3-192""]",False
+F-37,"Competition, contracts and state ownership",Market rules and property rights,Growth through Inclusion,Shifts in Globalisation,"[""L3-169"", ""L3-170"", ""L3-166""]",True
+F-37,"Competition, contracts and state ownership",Market rules and property rights,Growth through Inclusion,Growing Populism,"[""L3-169""]",False
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,Resource and Energy Pressures,"[""L3-194""]",False
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,Demographic Shifts,"[""L3-196""]",False
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,Increased Polarisation,"[""L3-197""]",False
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Climate Change,"[""L3-206""]",False
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Pandemics,"[""L3-207"", ""L3-208"", ""L3-202""]",False
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Biodiversity Loss,"[""L3-208""]",False
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Shifts in Globalisation,"[""L3-199"", ""L3-202"", ""L3-203""]",False
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,Resource and Energy Pressures,"[""L3-199"", ""L3-202""]",False
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Shifts in Globalisation,"[""L3-198"", ""L3-200"", ""L3-201"", ""L3-204"", ""L3-205""]",False
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Resource and Energy Pressures,"[""L3-205""]",False
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Climate Change,"[""L3-209""]",False
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,Pandemics,"[""L3-209""]",False
+F-41,Scenario and futures work,Foresight and futures,Anticipation and Strategic Foresight,Climate Change,"[""L3-211""]",False
+F-41,Scenario and futures work,Foresight and futures,Anticipation and Strategic Foresight,Technological Change,"[""L3-211""]",False
+F-43,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,Demographic Shifts,"[""L3-210""]",False
+F-43,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,Climate Change,"[""L3-210""]",False
+F-43,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,Technological Change,"[""L3-263""]",False
+F-44,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,Climate Change,"[""L3-217""]",False
+F-46,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,Technological Change,"[""L3-221"", ""L3-222"", ""L3-223"", ""L3-224""]",False
+F-47,Participatory decision-making,Participatory governance and budgeting,Adaptability and Course Correction,Democratic Backsliding,"[""L3-247""]",False
+F-47,Participatory decision-making,Participatory governance and budgeting,Adaptability and Course Correction,Increased Polarisation,"[""L3-247""]",False
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Growing Populism,"[""L3-225""]",False
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Democratic Backsliding,"[""L3-229"", ""L3-230""]",True
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Resource and Energy Pressures,"[""L3-240""]",False
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,Environmental Degradation and Pollution,"[""L3-240"", ""L3-241""]",False
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,Pandemics,"[""L3-242"", ""L3-243"", ""L3-244""]",False
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,Climate Change,"[""L3-243"", ""L3-244"", ""L3-245""]",False
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Growing Populism,"[""L3-234""]",False
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Democratic Backsliding,"[""L3-235""]",False
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Climate Change,"[""L3-236""]",False
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,Shifts in Globalisation,"[""L3-238""]",True
+F-53,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,Technological Change,"[""L3-227""]",False
+F-53,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,Pandemics,"[""L3-227""]",False
+F-54,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,Pandemics,"[""L3-264""]",False
+F-54,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,Climate Change,"[""L3-264""]",False
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-253"", ""L3-254""]",False
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-253"", ""L3-255""]",False
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-254"", ""L3-255""]",False
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-250"", ""L3-251"", ""L3-252""]",False
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-250"", ""L3-251""]",False
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-251""]",False
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Technological Change,"[""L3-251""]",False
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-213"", ""L3-214"", ""L3-215"", ""L3-216""]",False
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-216""]",False
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-256"", ""L3-258""]",False
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-256""]",False
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",Shifts in Globalisation,"[""L3-257""]",False
+F-59,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-246"", ""L3-249""]",False
+F-59,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-248"", ""L3-249""]",False
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Increased Polarisation,"[""L3-012"", ""L3-014"", ""L3-015"", ""L3-016"", ""L3-017"", ""L3-013""]",False
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Growing Populism,"[""L3-014""]",False
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",Democratic Backsliding,"[""L3-017""]",False

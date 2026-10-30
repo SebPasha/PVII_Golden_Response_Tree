@@ -97,7 +97,7 @@ def test_two_editions_stack_without_loss_and_show_what_carried(world, data):
     assert io.as_list(farm["sdg_targets"]) == ["2.3"] and farm["sdg_primary_dimension"]
     assert (farm["stated_urgency"], farm["legal_or_plan_basis"]) == ("high", "none")
     assert farm["subpillar"] and farm["pillar_rhdr"]
-    assert (farm["node_id"], farm["level"], farm["family_id"], farm["group_id"]) == ("L3-162", "L3", "F-31", "G-16")
+    assert (farm["node_id"], farm["level"], farm["family_id"], farm["group_id"]) == ("L3-162", "L3", "F-32", "G-16")
     assert farm["relation"] == "placed" and farm["new_objective"] == "Mechanise farming"
     assert farm["published"] == "2016-12-29"
     guards = io.read_json(os.path.join(P.plan_dir("testland_ndp_2017-2021"), "run.json"))[

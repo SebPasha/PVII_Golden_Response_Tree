@@ -617,8 +617,9 @@ def resolve(s, a, tree):
     notes = []
     oid = _str(a.get("objective_id"))
     node = _str(a.get("node_id"))
-    text = " ".join([s.get("name", ""), s.get("objective", ""), s.get("quote_en", ""),
-                     s.get("quote", ""), _str(a.get("depth_words"))])
+    # The cue gate reads the strategy's own words only. The model's depth_words are not added:
+    # a cue it could pass with its own wording is no gate.
+    text = " ".join([s.get("name", ""), s.get("objective", ""), s.get("quote_en", ""), s.get("quote", "")])
     if not tree.objectives:
         final = _resolve_v2(s, a, tree, node, text, notes)
     elif oid and oid != "NEW" and oid in tree.objectives:

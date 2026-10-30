@@ -14,9 +14,6 @@ F-02,Exclusion from services and entitlements,Services,Tackling Structural Exclu
 F-02,Exclusion from services and entitlements,Services,Tackling Structural Exclusion,16.9,Peace
 F-02,Exclusion from services and entitlements,Services,Tackling Structural Exclusion,16.b,Peace
 F-02,Exclusion from services and entitlements,Services,Tackling Structural Exclusion,8.5,Prosperity
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,10.7,Peace
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,1.5,People
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,16.1,Peace
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,5.1,Peace
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,5.4,People
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,5.5,Peace
@@ -24,292 +21,294 @@ F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclu
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,5.a,Prosperity
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,10.2,People
 F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,16.7,Peace
-F-03,Exclusion from social and political spaces,Spaces,Tackling Structural Exclusion,4.7,People
 F-04,"Violence, coercion and denial of dignity",Spaces,Tackling Structural Exclusion,5.2,Peace
 F-04,"Violence, coercion and denial of dignity",Spaces,Tackling Structural Exclusion,5.3,People
 F-04,"Violence, coercion and denial of dignity",Spaces,Tackling Structural Exclusion,8.7,Peace
 F-04,"Violence, coercion and denial of dignity",Spaces,Tackling Structural Exclusion,16.2,Peace
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,1.3,People
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,1.2,People
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,10.4,Prosperity
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,1.5,People
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,13.1,Planet
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,8.5,Prosperity
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,3.8,People
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,1.1,People
-F-05,Economic security,Decent standard of living,Enhancing Capabilities,1.4,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,2.1,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,2.c,Prosperity
-F-06,Food security,Decent standard of living,Enhancing Capabilities,1.2,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,2.2,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,4.2,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,3.2,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,3.3,People
-F-06,Food security,Decent standard of living,Enhancing Capabilities,3.d,People
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,16.1,Peace
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,16.4,Peace
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,16.a,Peace
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,16.3,Peace
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,16.6,Peace
-F-07,Personal security,Decent standard of living,Enhancing Capabilities,16.b,Peace
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,7.1,Prosperity
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,3.9,People
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,6.1,People
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,6.2,People
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,11.1,People
-F-08,Living environment and basic services,Decent standard of living,Enhancing Capabilities,1.4,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.4,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.5,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.6,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.a,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.1,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.2,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.8,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.c,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.b,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.3,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,2.1,People
-F-09,Health security,Long and healthy life,Enhancing Capabilities,3.d,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,4.1,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,4.5,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,4.a,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,4.6,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,4.c,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,2.2,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,4.2,People
-F-10,Knowledge: schooling,Knowledge,Enhancing Capabilities,3.2,People
-F-11,Skills for work,Knowledge,Enhancing Capabilities,4.3,People
-F-11,Skills for work,Knowledge,Enhancing Capabilities,4.4,Prosperity
-F-11,Skills for work,Knowledge,Enhancing Capabilities,8.6,People
-F-12,Climate stabilisation and just transition,Climate,Future Generations,7.2,Planet
-F-12,Climate stabilisation and just transition,Climate,Future Generations,7.a,Prosperity
-F-12,Climate stabilisation and just transition,Climate,Future Generations,7.b,Prosperity
-F-12,Climate stabilisation and just transition,Climate,Future Generations,13.2,Planet
-F-12,Climate stabilisation and just transition,Climate,Future Generations,12.c,Planet
-F-12,Climate stabilisation and just transition,Climate,Future Generations,9.4,Planet
-F-12,Climate stabilisation and just transition,Climate,Future Generations,7.3,Planet
-F-12,Climate stabilisation and just transition,Climate,Future Generations,12.2,Planet
-F-12,Climate stabilisation and just transition,Climate,Future Generations,11.2,People
-F-13,Climate risk to assets and people,Climate,Future Generations,13.1,Planet
-F-13,Climate risk to assets and people,Climate,Future Generations,2.4,Planet
-F-13,Climate risk to assets and people,Climate,Future Generations,1.5,People
-F-13,Climate risk to assets and people,Climate,Future Generations,13.b,Planet
-F-13,Climate risk to assets and people,Climate,Future Generations,11.b,Planet
-F-13,Climate risk to assets and people,Climate,Future Generations,9.1,Prosperity
-F-13,Climate risk to assets and people,Climate,Future Generations,11.5,People
-F-13,Climate risk to assets and people,Climate,Future Generations,14.2,Planet
-F-13,Climate risk to assets and people,Climate,Future Generations,15.1,Planet
-F-14,Living natural capital,Natural capital,Future Generations,15.2,Planet
-F-14,Living natural capital,Natural capital,Future Generations,14.4,Planet
-F-14,Living natural capital,Natural capital,Future Generations,15.3,Planet
-F-14,Living natural capital,Natural capital,Future Generations,2.4,Planet
-F-14,Living natural capital,Natural capital,Future Generations,15.1,Planet
-F-14,Living natural capital,Natural capital,Future Generations,15.5,Planet
-F-14,Living natural capital,Natural capital,Future Generations,14.5,Planet
-F-14,Living natural capital,Natural capital,Future Generations,15.8,Planet
-F-14,Living natural capital,Natural capital,Future Generations,6.6,Planet
-F-14,Living natural capital,Natural capital,Future Generations,14.2,Planet
-F-15,Water resources,Natural capital,Future Generations,6.4,Planet
-F-15,Water resources,Natural capital,Future Generations,6.5,Planet
-F-15,Water resources,Natural capital,Future Generations,6.6,Planet
-F-15,Water resources,Natural capital,Future Generations,6.a,Planet
-F-16,Environmental quality,Natural capital,Future Generations,6.3,Planet
-F-16,Environmental quality,Natural capital,Future Generations,11.6,Planet
-F-16,Environmental quality,Natural capital,Future Generations,12.4,Planet
-F-16,Environmental quality,Natural capital,Future Generations,9.4,Planet
-F-16,Environmental quality,Natural capital,Future Generations,3.9,People
-F-16,Environmental quality,Natural capital,Future Generations,12.5,Planet
-F-16,Environmental quality,Natural capital,Future Generations,12.8,People
-F-16,Environmental quality,Natural capital,Future Generations,4.7,People
-F-16,Environmental quality,Natural capital,Future Generations,13.3,Planet
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,17.4,Prosperity
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,17.1,Prosperity
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,17.13,Prosperity
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,12.2,Planet
-F-17,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,8.4,Planet
-F-18,Human and demographic capital,Economic and human wealth,Future Generations,3.7,People
-F-18,Human and demographic capital,Economic and human wealth,Future Generations,1.3,People
-F-18,Human and demographic capital,Economic and human wealth,Future Generations,8.5,Prosperity
-F-18,Human and demographic capital,Economic and human wealth,Future Generations,5.4,People
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,17.10,Prosperity
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,9.1,Prosperity
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,17.11,Prosperity
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,8.a,Prosperity
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,17.12,Prosperity
-F-19,Cost of reaching foreign markets,Reaching foreign markets,Export-led,10.a,Prosperity
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,8.9,Prosperity
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,12.b,Prosperity
-F-20,Tourism export destinations,Reaching foreign markets,Export-led,14.7,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,8.2,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.2,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.b,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,17.11,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.3,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.c,Prosperity
-F-21,Self-discovery and export upgrading,Upgrading and innovation,Export-led,8.3,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,9.5,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,9.b,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,17.6,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,8.2,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,9.c,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,17.7,Prosperity
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,4.3,People
-F-22,Innovation system and appropriability,Upgrading and innovation,Export-led,4.b,Prosperity
-F-23,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,17.3,Prosperity
-F-23,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,17.5,Prosperity
-F-23,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,9.2,Prosperity
-F-23,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,10.b,Prosperity
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,9.1,Prosperity
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,11.2,People
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,9.a,Prosperity
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,9.c,Prosperity
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,17.8,Prosperity
-F-24,Internal connectivity,Infrastructure and connectivity,Domestic Integration,5.b,Prosperity
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,7.1,Prosperity
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,7.b,Prosperity
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,9.1,Prosperity
-F-25,Infrastructure services,Infrastructure and connectivity,Domestic Integration,12.c,Planet
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,9.2,Prosperity
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,9.3,Prosperity
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,8.2,Prosperity
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,12.3,Planet
-F-26,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,2.3,Prosperity
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.3,Peace
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.1,People
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.2,People
-F-27,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.a,Prosperity
-F-28,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,10.1,Prosperity
-F-28,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,11.a,Prosperity
-F-28,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,1.4,People
-F-28,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,8.3,Prosperity
-F-29,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,8.3,Prosperity
-F-29,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,9.3,Prosperity
-F-29,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,8.5,Prosperity
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,8.10,Prosperity
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,9.3,Prosperity
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,8.3,Prosperity
-F-30,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,1.4,People
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,2.3,Prosperity
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,2.4,Planet
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,2.a,Prosperity
-F-31,Smallholder productivity,Rural producers,Growth through Inclusion,2.5,Planet
-F-32,Market participation of small producers,Rural producers,Growth through Inclusion,2.3,Prosperity
-F-32,Market participation of small producers,Rural producers,Growth through Inclusion,2.c,Prosperity
-F-32,Market participation of small producers,Rural producers,Growth through Inclusion,8.3,Prosperity
-F-32,Market participation of small producers,Rural producers,Growth through Inclusion,9.3,Prosperity
-F-33,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,8.5,Prosperity
-F-33,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,8.6,People
-F-33,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,8.b,Prosperity
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,8.5,Prosperity
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,8.8,People
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,10.1,Prosperity
-F-34,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,13.b,Planet
-F-35,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,10.7,Peace
-F-35,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,10.c,Prosperity
-F-35,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,8.8,People
-F-35,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,17.3,Prosperity
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,1.4,People
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,5.a,Prosperity
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,2.3,Prosperity
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,16.3,Peace
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,8.3,Prosperity
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,16.6,Peace
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,9.3,Prosperity
-F-36,Property rights and market rules,Market rules and property rights,Growth through Inclusion,10.5,Peace
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,13.3,Planet
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,3.d,People
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,11.b,Planet
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,13.1,Planet
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,17.13,Prosperity
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,12.2,Planet
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,2.c,Prosperity
-F-37,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,9.1,Prosperity
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,17.13,Prosperity
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,10.5,Peace
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,8.1,Prosperity
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,17.4,Prosperity
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,12.2,Planet
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,2.c,Prosperity
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,9.1,Prosperity
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,1.5,People
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,11.5,People
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,13.1,Planet
-F-38,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,17.3,Prosperity
-F-39,Scenario and futures work,Foresight and futures,Anticipation and Strategic Foresight,16.6,Peace
-F-40,Development planning,Long-term planning,Anticipation and Strategic Foresight,17.14,Peace
-F-40,Development planning,Long-term planning,Anticipation and Strategic Foresight,16.6,Peace
-F-41,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,17.18,Peace
-F-41,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,17.19,Peace
-F-41,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,16.6,Peace
-F-42,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,16.6,Peace
-F-42,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,17.14,Peace
-F-42,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,17.18,Peace
-F-43,Policy experimentation,Safe-to-fail innovation,Adaptability and Course Correction,16.6,Peace
-F-44,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,16.10,Peace
-F-44,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,9.c,Prosperity
-F-44,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,16.6,Peace
-F-44,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,17.6,Prosperity
-F-45,Participatory decision-making,Participatory governance and budgeting,Adaptability and Course Correction,16.7,Peace
-F-46,Coordination across agencies and levels,Cross-government coordination,Adaptability and Course Correction,17.14,Peace
-F-46,Coordination across agencies and levels,Cross-government coordination,Adaptability and Course Correction,16.6,Peace
-F-46,Coordination across agencies and levels,Cross-government coordination,Adaptability and Course Correction,16.7,Peace
-F-47,Delegated management autonomy,Authorised flexibility,Agility and Delivery Capability,16.6,Peace
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,16.6,Peace
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,16.7,Peace
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,11.3,Peace
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,17.1,Prosperity
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,17.9,Peace
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,12.4,Planet
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,9.4,Planet
-F-48,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,3.9,People
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,1.5,People
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,11.5,People
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,2.1,People
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,3.d,People
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,13.1,Planet
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,9.1,Prosperity
-F-49,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,11.b,Planet
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,16.6,Peace
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.1,Prosperity
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,9.1,Prosperity
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,16.5,Peace
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,10.4,Prosperity
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.13,Prosperity
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.17,Peace
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.3,Prosperity
-F-50,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.5,Prosperity
-F-51,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,16.6,Peace
-F-51,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,9.c,Prosperity
-F-51,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,16.9,Peace
-F-51,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,17.8,Prosperity
-F-52,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,16.6,Peace
-F-52,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,13.3,Planet
-F-52,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,3.d,People
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",5.5,Peace
-F-53,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.10,Peace
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.10,Peace
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.5,Peace
-F-54,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",9.c,Prosperity
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.5,Peace
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.a,Peace
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.3,Peace
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.10,Peace
-F-55,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.b,Peace
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",8.8,People
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",17.17,Peace
-F-56,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
-F-57,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
-F-57,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
-F-57,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",11.3,Peace
-F-57,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",17.17,Peace
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",10.2,People
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.1,Peace
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.a,Peace
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.3,Peace
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
-F-58,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",4.7,People
+F-05,Displaced and uprooted populations,Spaces,Tackling Structural Exclusion,10.7,Peace
+F-05,Displaced and uprooted populations,Spaces,Tackling Structural Exclusion,1.5,People
+F-05,Displaced and uprooted populations,Spaces,Tackling Structural Exclusion,16.1,Peace
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,1.3,People
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,1.2,People
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,10.4,Prosperity
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,1.5,People
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,13.1,Planet
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,8.5,Prosperity
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,3.8,People
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,1.1,People
+F-06,Economic security,Decent standard of living,Enhancing Capabilities,1.4,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,2.1,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,2.c,Prosperity
+F-07,Food security,Decent standard of living,Enhancing Capabilities,1.2,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,2.2,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,4.2,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,3.2,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,3.3,People
+F-07,Food security,Decent standard of living,Enhancing Capabilities,3.d,People
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,16.1,Peace
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,16.4,Peace
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,16.a,Peace
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,16.3,Peace
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,16.6,Peace
+F-08,Personal security,Decent standard of living,Enhancing Capabilities,16.b,Peace
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,7.1,Prosperity
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,3.9,People
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,6.1,People
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,6.2,People
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,11.1,People
+F-09,Living environment and basic services,Decent standard of living,Enhancing Capabilities,1.4,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.4,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.5,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.6,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.a,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.1,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.2,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.8,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.c,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.b,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.3,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,2.1,People
+F-10,Health security,Long and healthy life,Enhancing Capabilities,3.d,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.1,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.5,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.a,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.6,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.c,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,2.2,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.2,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,3.2,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.3,People
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,4.b,Prosperity
+F-11,Knowledge: schooling and higher education,Knowledge,Enhancing Capabilities,9.5,Prosperity
+F-12,Skills for work,Knowledge,Enhancing Capabilities,4.3,People
+F-12,Skills for work,Knowledge,Enhancing Capabilities,4.4,Prosperity
+F-12,Skills for work,Knowledge,Enhancing Capabilities,8.6,People
+F-13,Climate stabilisation and just transition,Climate,Future Generations,7.2,Planet
+F-13,Climate stabilisation and just transition,Climate,Future Generations,7.a,Prosperity
+F-13,Climate stabilisation and just transition,Climate,Future Generations,7.b,Prosperity
+F-13,Climate stabilisation and just transition,Climate,Future Generations,13.2,Planet
+F-13,Climate stabilisation and just transition,Climate,Future Generations,12.c,Planet
+F-13,Climate stabilisation and just transition,Climate,Future Generations,9.4,Planet
+F-13,Climate stabilisation and just transition,Climate,Future Generations,7.3,Planet
+F-13,Climate stabilisation and just transition,Climate,Future Generations,12.2,Planet
+F-13,Climate stabilisation and just transition,Climate,Future Generations,11.2,People
+F-14,Climate risk to assets and people,Climate,Future Generations,13.1,Planet
+F-14,Climate risk to assets and people,Climate,Future Generations,2.4,Planet
+F-14,Climate risk to assets and people,Climate,Future Generations,1.5,People
+F-14,Climate risk to assets and people,Climate,Future Generations,13.b,Planet
+F-14,Climate risk to assets and people,Climate,Future Generations,11.b,Planet
+F-14,Climate risk to assets and people,Climate,Future Generations,9.1,Prosperity
+F-14,Climate risk to assets and people,Climate,Future Generations,11.5,People
+F-14,Climate risk to assets and people,Climate,Future Generations,14.2,Planet
+F-14,Climate risk to assets and people,Climate,Future Generations,15.1,Planet
+F-15,Living natural capital,Natural capital,Future Generations,15.2,Planet
+F-15,Living natural capital,Natural capital,Future Generations,14.4,Planet
+F-15,Living natural capital,Natural capital,Future Generations,15.3,Planet
+F-15,Living natural capital,Natural capital,Future Generations,2.4,Planet
+F-15,Living natural capital,Natural capital,Future Generations,15.1,Planet
+F-15,Living natural capital,Natural capital,Future Generations,15.5,Planet
+F-15,Living natural capital,Natural capital,Future Generations,14.5,Planet
+F-15,Living natural capital,Natural capital,Future Generations,15.8,Planet
+F-15,Living natural capital,Natural capital,Future Generations,6.6,Planet
+F-15,Living natural capital,Natural capital,Future Generations,14.2,Planet
+F-16,Water resources,Natural capital,Future Generations,6.4,Planet
+F-16,Water resources,Natural capital,Future Generations,6.5,Planet
+F-16,Water resources,Natural capital,Future Generations,6.6,Planet
+F-16,Water resources,Natural capital,Future Generations,6.a,Planet
+F-17,Environmental quality,Natural capital,Future Generations,6.3,Planet
+F-17,Environmental quality,Natural capital,Future Generations,11.6,Planet
+F-17,Environmental quality,Natural capital,Future Generations,12.4,Planet
+F-17,Environmental quality,Natural capital,Future Generations,9.4,Planet
+F-17,Environmental quality,Natural capital,Future Generations,3.9,People
+F-17,Environmental quality,Natural capital,Future Generations,12.5,Planet
+F-17,Environmental quality,Natural capital,Future Generations,12.8,People
+F-17,Environmental quality,Natural capital,Future Generations,4.7,People
+F-17,Environmental quality,Natural capital,Future Generations,13.3,Planet
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,17.4,Prosperity
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,17.1,Prosperity
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,17.13,Prosperity
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,12.2,Planet
+F-18,Public wealth: resource rents and the balance sheet,Economic and human wealth,Future Generations,8.4,Planet
+F-19,Human and demographic capital,Economic and human wealth,Future Generations,3.7,People
+F-19,Human and demographic capital,Economic and human wealth,Future Generations,1.3,People
+F-19,Human and demographic capital,Economic and human wealth,Future Generations,8.5,Prosperity
+F-19,Human and demographic capital,Economic and human wealth,Future Generations,5.4,People
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,17.10,Prosperity
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,9.1,Prosperity
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,17.11,Prosperity
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,8.a,Prosperity
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,17.12,Prosperity
+F-20,Cost of reaching foreign markets,Reaching foreign markets,Export-led,10.a,Prosperity
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,8.9,Prosperity
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,12.b,Prosperity
+F-21,Tourism export destinations,Reaching foreign markets,Export-led,14.7,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,8.2,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.2,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.b,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,17.11,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.3,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,9.c,Prosperity
+F-22,Self-discovery and export upgrading,Upgrading and innovation,Export-led,8.3,Prosperity
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,9.5,Prosperity
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,9.b,Prosperity
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,17.6,Prosperity
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,8.2,Prosperity
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,9.c,Prosperity
+F-23,Innovation system and appropriability,Upgrading and innovation,Export-led,17.7,Prosperity
+F-24,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,17.3,Prosperity
+F-24,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,17.5,Prosperity
+F-24,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,9.2,Prosperity
+F-24,"Foreign capital, knowledge and networks",Foreign capital and networks,Export-led,10.b,Prosperity
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,9.1,Prosperity
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,11.2,People
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,9.a,Prosperity
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,9.c,Prosperity
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,17.8,Prosperity
+F-25,Internal connectivity,Infrastructure and connectivity,Domestic Integration,5.b,Prosperity
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,7.1,Prosperity
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,7.b,Prosperity
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,9.1,Prosperity
+F-26,Infrastructure services,Infrastructure and connectivity,Domestic Integration,12.c,Planet
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,9.2,Prosperity
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,9.3,Prosperity
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,8.2,Prosperity
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,12.3,Planet
+F-27,Production linkages and clusters,"Linkages, clusters and cities",Domestic Integration,2.3,Prosperity
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.3,Peace
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.1,People
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.2,People
+F-28,Urban systems,"Linkages, clusters and cities",Domestic Integration,11.a,Prosperity
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,10.1,Prosperity
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,11.a,Prosperity
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,1.4,People
+F-29,Lagging regions and place-based development,"Linkages, clusters and cities",Domestic Integration,8.3,Prosperity
+F-30,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,8.3,Prosperity
+F-30,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,9.3,Prosperity
+F-30,Small-firm capability and business formalisation,Enterprise and finance,Growth through Inclusion,8.5,Prosperity
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,8.10,Prosperity
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,9.3,Prosperity
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,8.3,Prosperity
+F-31,Finance for small borrowers and savers,Enterprise and finance,Growth through Inclusion,1.4,People
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,2.3,Prosperity
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,2.4,Planet
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,2.a,Prosperity
+F-32,Smallholder productivity,Rural producers,Growth through Inclusion,2.5,Planet
+F-33,Market participation of small producers,Rural producers,Growth through Inclusion,2.3,Prosperity
+F-33,Market participation of small producers,Rural producers,Growth through Inclusion,2.c,Prosperity
+F-33,Market participation of small producers,Rural producers,Growth through Inclusion,8.3,Prosperity
+F-33,Market participation of small producers,Rural producers,Growth through Inclusion,9.3,Prosperity
+F-34,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,8.5,Prosperity
+F-34,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,8.6,People
+F-34,Jobs and job matching,"Jobs, places and mobility",Growth through Inclusion,8.b,Prosperity
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,8.5,Prosperity
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,8.8,People
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,10.1,Prosperity
+F-35,Displaced workers and local adjustment,"Jobs, places and mobility",Growth through Inclusion,13.b,Planet
+F-36,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,10.7,Peace
+F-36,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,10.c,Prosperity
+F-36,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,8.8,People
+F-36,Labour mobility and remittances,"Jobs, places and mobility",Growth through Inclusion,17.3,Prosperity
+F-37,"Competition, contracts and state ownership",Market rules and property rights,Growth through Inclusion,8.3,Prosperity
+F-37,"Competition, contracts and state ownership",Market rules and property rights,Growth through Inclusion,16.6,Peace
+F-37,"Competition, contracts and state ownership",Market rules and property rights,Growth through Inclusion,9.3,Prosperity
+F-37,"Competition, contracts and state ownership",Market rules and property rights,Growth through Inclusion,10.5,Peace
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,1.4,People
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,5.a,Prosperity
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,2.3,Prosperity
+F-38,Land rights and land markets,Market rules and property rights,Growth through Inclusion,16.3,Peace
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,13.3,Planet
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,3.d,People
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,11.b,Planet
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,13.1,Planet
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,17.13,Prosperity
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,12.2,Planet
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,2.c,Prosperity
+F-39,Hazard and exposure sensing,Risk sensing and early warning,Anticipation and Strategic Foresight,9.1,Prosperity
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,17.13,Prosperity
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,10.5,Peace
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,8.1,Prosperity
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,17.4,Prosperity
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,12.2,Planet
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,2.c,Prosperity
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,9.1,Prosperity
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,1.5,People
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,11.5,People
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,13.1,Planet
+F-40,Contingency buffers and pre-arranged finance,Risk sensing and early warning,Anticipation and Strategic Foresight,17.3,Prosperity
+F-41,Scenario and futures work,Foresight and futures,Anticipation and Strategic Foresight,16.6,Peace
+F-42,Development planning,Long-term planning,Anticipation and Strategic Foresight,17.14,Peace
+F-42,Development planning,Long-term planning,Anticipation and Strategic Foresight,16.6,Peace
+F-43,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,17.18,Peace
+F-43,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,17.19,Peace
+F-43,Statistics and data sharing,Data sharing,Anticipation and Strategic Foresight,16.6,Peace
+F-44,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,16.6,Peace
+F-44,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,17.14,Peace
+F-44,Monitoring and corrective feedback,Organisational learning and feedback,Adaptability and Course Correction,17.18,Peace
+F-45,Policy experimentation,Safe-to-fail innovation,Adaptability and Course Correction,16.6,Peace
+F-46,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,16.10,Peace
+F-46,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,9.c,Prosperity
+F-46,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,16.6,Peace
+F-46,Regulatory adaptation to technology,Safe-to-fail innovation,Adaptability and Course Correction,17.6,Prosperity
+F-47,Participatory decision-making,Participatory governance and budgeting,Adaptability and Course Correction,16.7,Peace
+F-48,Coordination across agencies and levels,Cross-government coordination,Adaptability and Course Correction,17.14,Peace
+F-48,Coordination across agencies and levels,Cross-government coordination,Adaptability and Course Correction,16.6,Peace
+F-48,Coordination across agencies and levels,Cross-government coordination,Adaptability and Course Correction,16.7,Peace
+F-49,Delegated management autonomy,Authorised flexibility,Agility and Delivery Capability,16.6,Peace
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,16.6,Peace
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,16.7,Peace
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,11.3,Peace
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,17.1,Prosperity
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,12.4,Planet
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,9.4,Planet
+F-50,"Administrative, local and regulatory capacity",Authorised flexibility,Agility and Delivery Capability,3.9,People
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,1.5,People
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,11.5,People
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,2.1,People
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,3.d,People
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,13.1,Planet
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,9.1,Prosperity
+F-51,"Surge, continuity and relief",Rapid resource mobilisation,Agility and Delivery Capability,11.b,Planet
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,16.6,Peace
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.1,Prosperity
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,9.1,Prosperity
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,16.5,Peace
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,10.4,Prosperity
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.13,Prosperity
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.17,Peace
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.3,Prosperity
+F-52,Revenue and spending systems,Rapid resource mobilisation,Agility and Delivery Capability,17.5,Prosperity
+F-53,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,16.6,Peace
+F-53,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,9.c,Prosperity
+F-53,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,16.9,Peace
+F-53,Digital delivery and DPI,Digitally-enabled delivery,Agility and Delivery Capability,17.8,Prosperity
+F-54,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,16.6,Peace
+F-54,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,13.3,Planet
+F-54,Crisis and risk communication,Crisis communication and public engagement,Agility and Delivery Capability,3.d,People
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",5.5,Peace
+F-55,Electoral accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.10,Peace
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.10,Peace
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.5,Peace
+F-56,Information and transparency,Accountability,"Reform Leadership, Coalitions and Civic Engagement",9.c,Prosperity
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.5,Peace
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.a,Peace
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.3,Peace
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.10,Peace
+F-57,Horizontal accountability,Accountability,"Reform Leadership, Coalitions and Civic Engagement",16.b,Peace
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",8.8,People
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",17.17,Peace
+F-58,Reform commitment and coalitions,Coalitions and commitment,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
+F-59,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
+F-59,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.6,Peace
+F-59,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",11.3,Peace
+F-59,Client power and community voice,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",17.17,Peace
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",10.2,People
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.1,Peace
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.a,Peace
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.7,Peace
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",4.7,People
+F-60,Social cohesion and trust,Citizen voice and social trust,"Reform Leadership, Coalitions and Civic Engagement",16.3,Peace
