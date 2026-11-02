@@ -47,3 +47,7 @@ Reads `inputs/reviewer_framework.json` (the reviewer's PVII_Mother_Tree.html of 
 ## Status
 
 Structure, plan words and crosswalks built. The workflow maps onto v3 by default (`workflow/prompts/M_map_v3.txt`). Not done: objectives (L4) under the families, which step M proposes; a Thailand page on v3; re-running M for the Thai plans mapped on v1; an independent check of the 257 citations.
+
+## Viewer
+
+`tree_v3_viewer.html` is a standalone page for browsing the tree: the canopy (economy left, people middle, governance right), the eleven risks as storms that rain on the families they are tagged to, each family's definition, pathways, evidence and SDG targets, and a full outline. Rebuild it after any change to the tree with `python3 viewer.py` (reads `tree_v3.json` and `viewer_template.html`).
