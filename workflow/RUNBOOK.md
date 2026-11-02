@@ -47,6 +47,8 @@ python3 -m pvii.run --plan thailand_ndp_2023-2027
 
 Or run one plan at a time with `run_thailand.sh`, which dry-runs each plan before running it.
 
+To re-map a plan onto a new tree release, `--steps F,M` reads `strategy_rows.csv` and `context.json` from the plan folder and needs neither the PDF nor the parse cache; the fold is served from the response cache, so only the mapping step is paid (about $1 to $2 a plan).
+
 Each run is capped by `--max-cost`, which defaults to $25 (set `PVII_MAX_COST_USD` to change it). Responses are cached by prompt, so a re-run after a failure only pays for the calls that didn't finish. Editing a prompt means paying again for that step.
 
 What Thailand cost on 21 October 2026, before the E prompt was shortened by about 30%:

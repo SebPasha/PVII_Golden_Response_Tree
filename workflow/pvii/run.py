@@ -25,16 +25,21 @@ def run_plan(plan, client, steps_wanted=STEPS, force_context=False):
     if why:
         raise SystemExit("%s does not run: %s" % (plan.plan_id or plan.file, why))
     missing = [p for p in plan.paths if not os.path.exists(p)] if plan.paths else ["(no file)"]
-    if missing:
+    if missing and ("C" in steps_wanted or "E" in steps_wanted or client.dry_run):
         raise SystemExit("source document not found: %s (set PVII_SOURCES_ROOT)" % missing[0])
     out = P.plan_dir(plan.plan_id)
     os.makedirs(out, exist_ok=True)
     started = datetime.datetime.now().isoformat(timespec="seconds")
     print("== %s: %s (%s-%s)" % (plan.plan_id, plan.title, plan.start, plan.end), flush=True)
-    doc = parse.parse_documents(plan.paths)
-    print("parsed: %d pages, %d paragraphs" % (doc.page_count, len(doc.paragraphs)), flush=True)
+    if "C" in steps_wanted or "E" in steps_wanted or client.dry_run:
+        doc = parse.parse_documents(plan.paths)
+        print("parsed: %d pages, %d paragraphs" % (doc.page_count, len(doc.paragraphs)), flush=True)
+    else:
+        # F and M read strategy_rows.csv and context.json; the source document is not needed,
+        # so a re-fold or a re-map runs wherever those two files are.
+        doc = None
     record = {"plan_id": plan.plan_id, "started": started, "file": plan.file,
-              "pages": doc.page_count, "paragraphs": len(doc.paragraphs),
+              "pages": doc.page_count if doc else None, "paragraphs": len(doc.paragraphs) if doc else None,
               "prompts": {s: steps.sha(steps.e_prompt() if s == "E" else config.load_prompt(s))
                           for s in config.PROMPT_FILES},
               "models": {s: config.STAGE_MODELS[s] for s in config.STAGE_MODELS},
