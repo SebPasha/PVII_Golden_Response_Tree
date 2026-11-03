@@ -232,7 +232,7 @@
    "pillar_code": "PFA",
    "subpillar": "Enhancing Capabilities",
    "subpillar_code": "CAP",
-   "basis": "HDI: decent standard of living; HDR 1994: economic, food and personal security",
+   "basis": "RHDR: decent standard of living; HDR 1994: economic, food and personal security",
    "definition": "Income security, food security, personal safety, and first access to basic services and adequate housing.",
    "family_ids": [
     "F-06",
@@ -296,7 +296,7 @@
    "pillar_code": "PFA",
    "subpillar": "Enhancing Capabilities",
    "subpillar_code": "CAP",
-   "basis": "HDI: long and healthy life; HDR 1994: health and environmental security",
+   "basis": "RHDR: long and healthy life; HDR 1994: health and environmental security",
    "definition": "Health services and the prevention of disease and injury.",
    "family_ids": [
     "F-10"
@@ -333,7 +333,7 @@
    "pillar_code": "PFA",
    "subpillar": "Enhancing Capabilities",
    "subpillar_code": "CAP",
-   "basis": "HDI: knowledge; capability approach",
+   "basis": "RHDR: knowledge; capability approach",
    "definition": "Schooling, skills for work, and digital access and use.",
    "family_ids": [
     "F-11",

@@ -302,7 +302,7 @@ def read_reviewer():
         if kind == "l1":
             sub = n["name"]
         elif kind == "g2":
-            grp = {"group": n["name"], "subpillar": sub, "basis": n.get("basis", ""),
+            grp = {"group": n["name"], "subpillar": sub, "basis": n.get("basis", "").replace("HDI:", "RHDR:"),
                    "definition": n.get("def", ""), "why": n.get("rule", "")}
             groups.append(grp)
         elif kind == "l2":
