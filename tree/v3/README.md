@@ -51,3 +51,5 @@ Structure, plan words and crosswalks built. The workflow maps onto v3 by default
 ## Viewer
 
 `tree_v3_viewer.html` is a standalone page for browsing the tree: the canopy (economy left, people middle, governance right), the eleven risks as storms that rain on the families they are tagged to, each family's definition, pathways, evidence and SDG targets, and a full outline. Rebuild it after any change to the tree with `python3 viewer.py` (reads `tree_v3.json` and `viewer_template.html`).
+
+`thailand/` holds the workflow's Thai country stack mapped on v3 (run of 2-3 November 2026: nine plans, 5,638 strategies, gpt-5.4): `strategies.csv`, `plans.csv`, `editions.csv`, `node_coverage.csv`. When that folder is present the viewer opens on Thailand: a timeline of the plans, the tree for any one plan or all of them, each family's strategies plan by plan, and a families-by-plan table. `python3 viewer.py <folder>` reads another country's stack instead.
