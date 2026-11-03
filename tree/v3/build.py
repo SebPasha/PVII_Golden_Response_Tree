@@ -8,7 +8,13 @@ tree_v3.json.
 Three placement levels under the RHDR subpillars:
   group (L1, 33): the reviewer's groups, each citing a published framework
   family (L2, 60): the reviewer's families, the required mapping level, with plan words
-  pathway (L3, 264): the reviewer's mechanisms = v2's 259 pathways (ids kept) plus 5 new ones
+  pathway (L3, 266): the reviewer's mechanisms = v2's 259 pathways (ids kept) plus 5 new ones,
+  plus 2 added with the bridge layer (3 November 2026)
+
+The bridge layer (3 November 2026) gives every pathway a government-side face beside its
+literature side: lever, joins_when, joins_not (bridge.py) and entry_points (inputs/
+entry_points.json, seeded from the Thai run). The mapping step joins on these by meaning; the
+text_cues match becomes an advisory flag.
 
 The reviewer's structure is taken whole for the governance subpillars (Future-Ready
 Governance Index and WDR 2017). Elsewhere the amendments below apply; each is a decision
@@ -25,8 +31,12 @@ import csv
 import json
 import os
 import re
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from bridge import bridge_of  # noqa: E402  (the government-side face of every pathway)
+ENTRY_POINTS = os.path.join(HERE, "inputs", "entry_points.json")
 V2 = os.path.join(os.path.dirname(HERE), "v2", "tree_v2.json")
 REVIEWER = os.path.join(HERE, "inputs", "reviewer_framework.json")
 
@@ -232,6 +242,28 @@ NEW_PATHWAYS = {
     "Crisis and emergency risk communication": {
         "text_cues": r"risk communication|crisis communication|emergency communication|public (warning|alert)|communicat.{0,40}(crisis|emergenc|disaster|outbreak)",
         "risks": ["Pandemics", "Climate Change"]},
+    # Added with the bridge layer (3 November 2026): the two channels the Thai run showed missing.
+    # About 150 strategies in Statistics and data sharing build or maintain one body's records, and
+    # about 200 in Administrative capacity redesign how an existing service is delivered.
+    "Administrative data and registries": {
+        "id": "L3-265",
+        "text_cues": r"(database|registry|register|records? system|information system|data (system|platform|base|warehouse|centre|center)|big data).{0,80}(develop|build|establish|maintain|upgrade|digiti[sz]e|improve)|(develop|build|establish|maintain|upgrade|digiti[sz]e).{0,80}(database|registry|register|records? system|information system|data (system|platform|base|warehouse|centre|center)|big data)",
+        "risks": ["Technological Change"]},
+    "Service delivery and process reform": {
+        "id": "L3-266",
+        "text_cues": r"one-?stop|service standard|process (re-?design|re-?engineering|simplif|improvement|review)|simplif.{0,40}(procedure|process|step|service)|(reduce|cut|shorten).{0,40}(steps|processing time|waiting time|red tape|paperwork)|service (delivery|quality|efficiency) (improvement|reform|upgrade)|e-?service",
+        "risks": []},
+}
+# The family each added pathway joins, with its causal chain and citation to verify.
+ADD_PATHWAYS = {
+    "Statistics and data sharing": [
+        {"name": "Administrative data and registries",
+         "chain": "Works when records are complete, current and used \u00b7 How registries and information systems a programme runs on \u2192 the state can see, target and deliver to the people and things it serves \u00b7 Result reach, accuracy and cost of delivery",
+         "cite": "Scott 1998; Lee and Zhang 2017 (to verify)"}],
+    "Administrative, local and regulatory capacity": [
+        {"name": "Service delivery and process reform",
+         "chain": "Works when the redesign is measured from the user's side \u00b7 How fewer steps, less time and clearer standards in an existing service \u2192 lower cost of compliance and access for users \u00b7 Result take-up, satisfaction and cost of services",
+         "cite": "Djankov et al. 2002; Herd and Moynihan 2018 (to verify)"}],
 }
 # SDG targets for families whose pathways came from no single v2 lever (the one-pathway
 # governance families); every other family rolls its targets up from the v2 mechanisms.
@@ -310,6 +342,8 @@ def main():
         moved = next(p for p in src["pathways"] if p["name"] == name)
         src["pathways"].remove(moved)
         fam_by_name[dst]["pathways"].append(moved)
+    for fam_name, specs in ADD_PATHWAYS.items():
+        fam_by_name[fam_name]["pathways"] += specs
     for f in families_in:
         if f["family"] in EXAMPLES:
             f["examples"] = EXAMPLES[f["family"]]
@@ -365,8 +399,8 @@ def main():
                     row.pop(k, None)
             else:
                 spec = NEW_PATHWAYS[p["name"]]
-                pid = "L3-%03d" % next_new
-                next_new += 1
+                pid = spec.get("id") or "L3-%03d" % next_new       # the bridge's two carry fixed ids
+                next_new += 0 if spec.get("id") else 1
                 row = dict(pathway_id=pid, pathway=p["name"], level="L3", family_id=fid, family=fam["family"],
                            group_id=g["group_id"], group=g["group"], subpillar=g["subpillar"], pillar=g["pillar"],
                            old_family_id="", old_family="", old_subpillar="", subpillar_changed="", merged_into="",
@@ -378,7 +412,10 @@ def main():
             pathways[row["pathway_id"]] = row
             fam["pathway_ids"].append(row["pathway_id"])
 
-    # ---- deep-check overrides on the rows
+    # ---- deep-check overrides and the bridge face on the rows
+    entry_points = {}
+    if os.path.exists(ENTRY_POINTS):
+        entry_points = json.load(open(ENTRY_POINTS, encoding="utf-8"))["entry_points"]
     for pid, row in pathways.items():
         row["revised"] = []
         if pid in CUES:
@@ -392,6 +429,8 @@ def main():
             row["merged_into"] = ""
             row["revised"].append("unmerged")
         row["distinction"] = (row.get("distinction") or "").replace("(F37)", "(L3-097)")
+        row["lever"], row["joins_when"], row["joins_not"] = bridge_of(pid)
+        row["entry_points"] = entry_points.get(pid, [])
     for name, dst in MOVE_PATHWAY.items():
         row = next(r for r in pathways.values() if r["pathway"] == name)
         row["revised"].append("moved")
@@ -449,7 +488,7 @@ def main():
     # ---- checks
     missing = [p["pathway"] for p in v2["pathways"] if p["pathway_id"] not in pathways]
     assert not missing, "v2 pathways not placed: %s" % missing
-    assert len(pathways) == 264, len(pathways)
+    assert len(pathways) == 266, len(pathways)
     assert all(f["plan_words"] for f in families.values()), [f["family"] for f in families.values() if not f["plan_words"]]
     assert all(f["sdg_targets"] for f in families.values()), [f["family"] for f in families.values() if not f["sdg_targets"]]
     # v2 merged seven pathways into siblings. Where the reviewer places the two under different
@@ -496,7 +535,8 @@ def main():
               ["pathway_id", "pathway", "level", "family_id", "family", "group_id", "group", "subpillar", "pillar",
                "v2_mechanism_id", "v2_mechanism", "v2_family_id", "v2_family", "subpillar_changed", "merged_into",
                "causal_input", "transmission", "outcome", "conditions", "distinction", "evidence", "risks",
-               "conditional_risks", "evidence_status", "risk_status", "text_cues", "added_in", "revised"])
+               "conditional_risks", "evidence_status", "risk_status", "text_cues", "lever", "joins_when", "joins_not",
+               "entry_points", "added_in", "revised"])
     sdg_rows = [{"family_id": f["family_id"], "family": f["family"], "group": f["group"], "subpillar": f["subpillar"],
                  "sdg_target": t, "sdg_dimension": v2["sdg_dim"].get(t, "")}
                 for f in families.values() for t in f["sdg_targets"]]
@@ -511,10 +551,12 @@ def main():
                      "levels": ["pillar", "subpillar", "L1 group", "L2 family", "L3 pathway", "L4 objective", "L5 strategy"],
                      "required_level": "L2",
                      "depth_rule": "Every strategy is placed on a family (L2), the required level; a group alone is not a placement. "
-                                   "A pathway (L3) only when the strategy's wording names that causal channel (text_cues) and no sibling. "
+                                   "A pathway (L3) when the strategy's action is the pathway's lever and passes its joins_when test "
+                                   "and not its joins_not test, judged by meaning; the text_cues match is an advisory flag. "
                                    "A standing function of the state with no family goes to the subpillar's General branch.",
                      "source": "The reviewer's framework of 27 October 2026 (inputs/reviewer_framework.json) over tree v2's pathways; "
-                               "amendments in build.py", "merges": merges},
+                               "amendments in build.py; bridge face (lever, joins_when, joins_not, entry_points) in bridge.py "
+                               "and inputs/entry_points.json, 3 November 2026", "merges": merges},
             "pillars": v2["pillars"], "subpillars": v2["subpillars"],
             "holding": [{"id": "H-SPE", "name": "General People"}, {"id": "H-SEC", "name": "General Economy"},
                         {"id": "H-SGO", "name": "General Governance"}, {"id": "H-GOAL", "name": "Goals held outside the tree"}],

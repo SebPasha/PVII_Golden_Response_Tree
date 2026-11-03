@@ -1,0 +1,878 @@
+{
+ "source": "Thai v3 run of 2 November 2026 (nine plans, gpt-5.4): the strategies the model placed on each pathway, whether or not the cue gate kept them; uncurated seed, to be replaced by curated entry points",
+ "entry_points": {
+  "L3-001": [
+   "Anti-stigma and anti-discrimination campaign for HIV"
+  ],
+  "L3-002": [
+   "Family Cohesion and Home-School Relationship Strengthening",
+   "Family Capacity and Intergenerational Learning Support Programme",
+   "Promote desirable character formation in families"
+  ],
+  "L3-003": [
+   "Gender equality attitudes and women’s leadership promotion",
+   "Women’s Leadership and Gender Equality Promotion Measures"
+  ],
+  "L3-004": [
+   "Inclusive Learning Materials Development",
+   "Elderly-Friendly Urbanization with Universal Design",
+   "Universal and Tailor-Designed Infrastructure for Inclusive Access",
+   "Universal Design for Urban Infrastructure",
+   "Digital Welfare Services for Persons with Disabilities Development Project"
+  ],
+  "L3-005": [
+   "Workplace and Government Child Care Center Promotion",
+   "Work-life balance measures for parents with young children"
+  ],
+  "L3-006": [
+   "One-Stop Labor Service Center with Integrated Identity and Border Document Services"
+  ],
+  "L3-013": [
+   "Community and Cultural Relationship-Building Networks"
+  ],
+  "L3-014": [
+   "Promote national pride and cultural heterogeneity",
+   "Reinforce Social Institutions through Values and Thai Culture",
+   "Promote positive cultural and family values",
+   "Community Identity and Learning Strengthening Initiative",
+   "Cultural Pride, Unity, and ASEAN Cultural Networks"
+  ],
+  "L3-015": [
+   "Peaceful Conflict Management Learning Programme",
+   "Study and promote peaceful conflict management approaches"
+  ],
+  "L3-021": [
+   "Agricultural Income Insurance System",
+   "Crop Insurance System Development",
+   "Climate Insurance Scheme Development"
+  ],
+  "L3-025": [
+   "Social Security Awareness and Housing Access Expansion"
+  ],
+  "L3-026": [
+   "Health Expenditure Oversight Measures",
+   "Health Insurance System for Foreign Workers and Tourists",
+   "Public Health Economics Division Strengthening and Health Insurance Accreditation for Migrants and Undocumented Laborers",
+   "Public Health Insurance Expansion for Vulnerable Groups"
+  ],
+  "L3-027": [
+   "Targeted Social Investment and Welfare Protection for Vulnerable Groups"
+  ],
+  "L3-030": [
+   "Improve the Child Support Grant System"
+  ],
+  "L3-032": [
+   "Logistics Human Resource and Planning Enhancement",
+   "Skilled workforce production for labour market and national development"
+  ],
+  "L3-033": [
+   "Educational Excellence and Workforce Preparation Programme",
+   "Incentives for Dual and Cooperative Education Participation",
+   "Dual and Cooperative Education Incentive Mechanisms",
+   "Collaborative Curriculum and Learner Evaluation Development",
+   "Dual Vocational and Cooperative Education Systems"
+  ],
+  "L3-034": [
+   "Vocational Education Curriculum Co-design and Standards Upgrade",
+   "Learning, Skills and Career Entry Platforms",
+   "Workforce Planning and Competency Information Systems Development",
+   "Labor Training Center Standards and Occupational Standards Development",
+   "Vocational Qualification Standards Upgrade and Skills Network Development"
+  ],
+  "L3-035": [
+   "Digital Infrastructure and Standard Systems Support for SMEs",
+   "Innovation and Digital Economy Knowledge Enhancement Project for New Graduates",
+   "English and Digital Skills Development",
+   "Learner English and digital skills development"
+  ],
+  "L3-036": [
+   "Student Tracking and Dropout Prevention Measures"
+  ],
+  "L3-037": [
+   "Quality Learner Assessment System Development",
+   "21st-Century Learning Model Development",
+   "Active Learning and STEM Integration Promotion"
+  ],
+  "L3-038": [
+   "Teacher Education and Development Upgrade Programme",
+   "Teacher Training and Professional Development Reform",
+   "Teacher Quality Development and Incentive Programme",
+   "Teaching Excellence Recognition and Incentive Measures",
+   "Teacher Role Modernisation and Capacity Development Programme"
+  ],
+  "L3-039": [
+   "Expand and improve early childhood development centers nationwide",
+   "Early Childhood Development and Child Care Expansion Programme",
+   "Preparedness and collaborative mechanisms for maternal and early childhood development services",
+   "Teacher and Caregiver Early Childhood Development Skills Programme",
+   "Early Childhood Development Facility Upgrading and Resource Support"
+  ],
+  "L3-040": [
+   "Scholarship Support for Disadvantaged Students"
+  ],
+  "L3-041": [
+   "Specialized institutional excellence development"
+  ],
+  "L3-042": [
+   "Healthy Living and School Sanitation Promotion"
+  ],
+  "L3-043": [
+   "Nationwide Health Resource Management and Referral System Upgrade",
+   "Remote Healthcare Service Expansion",
+   "Immunization Coverage Acceleration and Outreach Campaign",
+   "Essential Vaccines and Vaccination Campaigns",
+   "Target Group Vaccination Tracking and Completion"
+  ],
+  "L3-044": [
+   "Model IPC practitioner development",
+   "Hospital infection prevention and control strengthening",
+   "National Medical Practice Guidelines Development and Training Programme",
+   "Promote Proficiency Testing Providers",
+   "Health Facility and Healthcare Business Standards Compliance"
+  ],
+  "L3-045": [
+   "Encourage importation of medical personnel",
+   "Promote shared use of public and private medical personnel",
+   "Healthcare Workforce Rotation and Retention Mechanism",
+   "Health Workforce Expansion and Redistribution",
+   "Multidisciplinary Health Workforce Development"
+  ],
+  "L3-046": [
+   "Essential Medicines Selection, Procurement, and Stocking System",
+   "Essential Medical Supplies Logistics Enhancement",
+   "Universal Access to Antiviral Medications",
+   "Consumer Quality Healthcare Products Assurance",
+   "Rational Drug Use System Development"
+  ],
+  "L3-047": [
+   "National Immunization Program Vaccine Coverage Maintenance",
+   "Free Immunization Benefit Package for Target Groups",
+   "Vaccination Campaigns for High-Risk Groups and Areas",
+   "Immunization Operations and Vaccination Coverage Monitoring",
+   "Healthcare System Development for Mother and Child Health Standards"
+  ],
+  "L3-048": [
+   "Healthy Population Promotion Programme",
+   "Age-specific health activities, nutrition, and community sports facilities support",
+   "Healthy Food Innovation and Advertising Regulation Measures",
+   "Well-being Literacy and Health Information Promotion",
+   "Promote exercise and basic sports skills in everyday life"
+  ],
+  "L3-049": [
+   "National Immunization Coverage Maintenance and Expansion",
+   "Immunization access and vaccine hesitancy response in southern border provinces",
+   "Integrated AMR Response System for Health Facilities",
+   "Standard TB Treatment and Completion of Care",
+   "TB Diagnosis Access Expansion for Vulnerable Populations"
+  ],
+  "L3-050": [
+   "Reduce Antimicrobial Use in Humans and Animals"
+  ],
+  "L3-051": [
+   "Traffic Safety Culture Promotion and Road Accident Management Service",
+   "Road Network Quality and Capacity Upgrade Programme",
+   "Road Safety Rest Area Construction",
+   "Transport Fuel Efficiency and Emissions Control Measures",
+   "Assessment of manuals, ambulance standards, and operational processes"
+  ],
+  "L3-052": [
+   "Health Literacy and Mental Health Consultation Improvement"
+  ],
+  "L3-054": [
+   "Parent and caregiver early childhood nutrition and breastfeeding promotion",
+   "National Immunization Mechanism for Population Health and Child Development",
+   "National nutrition support for mothers and young children",
+   "Child nutrition support programme"
+  ],
+  "L3-056": [
+   "Food Production Quality and Safety Certification Support",
+   "Food Standards Control System Strengthening",
+   "Safe Farming and Organic Certification Programme",
+   "Food Chain Safety Monitoring and Control",
+   "National emergency alert and food safety traceability systems"
+  ],
+  "L3-064": [
+   "Substance Abuse Harm Reduction through Community Engagement",
+   "Drug Addiction Relapse Prevention Collaboration"
+  ],
+  "L3-065": [
+   "Alternative Judicial Proceedings and Judicial Assistance Promotion",
+   "Inclusive Legal Assistance for Judicial Process Participants",
+   "Legal Assistance and Access to Justice Expansion",
+   "Judicial complaint and remedy access improvement",
+   "Alternative and Community Justice Systems Promotion"
+  ],
+  "L3-066": [
+   "Alternative Punishment Measures and Parole System Reform",
+   "Vocational Skills and Reintegration Support for Offending Youth"
+  ],
+  "L3-068": [
+   "Climate Finance Mechanisms for Public-Private Cooperation",
+   "Carbon Credit Market Research and Emissions Quota Studies",
+   "Carbon Fund for Carbon Credits and Offsets",
+   "Promote a low-carbon society",
+   "Low-Carbon Urban Planning and Green Area Guidelines"
+  ],
+  "L3-069": [
+   "Renewable Energy Research and Commercialisation Support",
+   "Alternative Energy R&D Support",
+   "Energy-Saving Automobile Technology Development",
+   "Renewable Energy Incentives and Energy Management Regulation Update",
+   "Tropical Energy-Efficient Building R&D Programme"
+  ],
+  "L3-070": [
+   "Alternative Energy Technology Research and Development",
+   "Waste-to-Energy Technology Development Support"
+  ],
+  "L3-071": [
+   "Energy Conservation Incentives and Public Awareness Programme",
+   "Energy Conservation and Efficiency Law Enforcement",
+   "Energy Conservation Technology Research and Standards Programme",
+   "Energy Efficiency Improvement in Transport and Logistics",
+   "National energy efficiency promotion"
+  ],
+  "L3-073": [
+   "Ecosystem-Based Fisheries Management",
+   "Artisanal Fisheries Improvement and Coastal Conservation Programme"
+  ],
+  "L3-074": [
+   "Fishery Resource Restoration and Sustainable Management"
+  ],
+  "L3-075": [
+   "Land Use Controls for Conservation Area Protection",
+   "Accurate conservation area establishment",
+   "Marine Ecosystem Conservation and Protection Programme",
+   "Wetland Conservation and Ramsar Site Management",
+   "Marine, Coastal and Delta Protection Area Declaration and Restoration Measures"
+  ],
+  "L3-076": [
+   "Income Generation from Natural and Cultural Conservation",
+   "Community Income Generation through Zero-Waste Circular Economy",
+   "Community Income Generation from Biological and Cultural Diversity",
+   "Carbon Market System Development and Certification Programme",
+   "Forest Plantation Incentive and Tree Bank Initiative"
+  ],
+  "L3-077": [
+   "Deforestation Prevention and Forest Protection",
+   "Agricultural Zoning and Traceability System"
+  ],
+  "L3-078": [
+   "Expand watershed and economic forests",
+   "Government Investment Policy for Natural Resource Conservation and Restoration",
+   "Forest Restoration and Expansion Programme",
+   "Soil and Water Restoration in Disaster-Prone Areas",
+   "Restore Degraded Tourist Destinations"
+  ],
+  "L3-080": [
+   "Industrial Pollution Reduction and Resource Efficiency Measures",
+   "Environmental Tax and Fee Collection",
+   "Agricultural Chemicals Control and Organic Substitution Measures",
+   "Wastewater Discharge Permit Standards",
+   "Environmental Standards Support for Industrial Production and Investment"
+  ],
+  "L3-083": [
+   "Manufacturing and Services Efficiency Improvement for Circular Economy",
+   "Community-Level Systematic Garbage Management",
+   "Community Waste Reduction and Sorting System",
+   "Waste-to-Energy Conversion Support",
+   "Model Communities for Waste-Based Income Generation"
+  ],
+  "L3-085": [
+   "Transition to an environmentally friendly circular economy and low-carbon society",
+   "Raise social awareness for sustainable living",
+   "Cultivating consumers' motivation and life attitudes for sustainable consumption",
+   "Raise awareness and build motivation for natural resource conservation",
+   "Sustainable Consumption Behavior Change Incentives"
+  ],
+  "L3-086": [
+   "Manage economic activities within natural resource capacity",
+   "Define appropriate land use within resource capacity",
+   "Disaster Prevention Measures in Key Areas",
+   "Littoral Cell Coastal Management System",
+   "Climate-resilient city protection and adaptation planning"
+  ],
+  "L3-087": [
+   "Building and Infrastructure Safety Standards Upgrade",
+   "Climate-Resilient New Infrastructure Standards",
+   "Coastal Construction Standards Improvement",
+   "Disaster-Resilient Utilities and Infrastructure Standards",
+   "Flood Preparedness Infrastructure and Catchment Management"
+  ],
+  "L3-088": [
+   "Nature-based solutions for disaster and climate resilience",
+   "Mangrove, Coral Reef, and Seagrass Conservation Programme",
+   "Integrated Ecologically Friendly Coastal Restoration Plan",
+   "Upstream Forest Regeneration and Soil Conservation Programme",
+   "Wetland and Mangrove Conservation and Restoration"
+  ],
+  "L3-089": [
+   "Transition from inappropriate cultivated areas to high-value agricultural commodities",
+   "Agricultural Zoning and Productivity Improvement Measures",
+   "Agricultural Land Conversion and Sustainable Farming Programme",
+   "Agricultural Land Management Zoning",
+   "Agricultural water efficiency and zoning measures"
+  ],
+  "L3-098": [
+   "Fiscal Risk Prevention and Comprehensive Fiscal Position Assessment"
+  ],
+  "L3-100": [
+   "Population Structure and Distribution Adjustment",
+   "Fertility Support and Childbearing Encouragement",
+   "Quality Reproductive Health and Family Support Measures"
+  ],
+  "L3-103": [
+   "Elderly Social Participation and Lifelong Learning Programme",
+   "Monetary and fiscal incentives for elderly employment",
+   "Marketing, finance, and information support for elderly employment",
+   "Employment and Income Generation Support for Elderly People"
+  ],
+  "L3-104": [
+   "Elderly Social Protection and Long-Term Care Support",
+   "Long-term Care Legislation and Sustainable Financing System",
+   "Medium-term aftercare and long-term care system development",
+   "Long-term Care Innovation for the Elderly",
+   "Long-term care law for older persons"
+  ],
+  "L3-105": [
+   "Water Conservation and Efficiency Promotion",
+   "Water Allocation System for Multiple Uses",
+   "Area-based water allocation and rapid rehabilitation system",
+   "Water Conservation and Efficiency Improvement Programme",
+   "Local Water Demand Management Studies and Efficiency Measures"
+  ],
+  "L3-106": [
+   "Groundwater Use Control for Sustainable Carrying Capacity"
+  ],
+  "L3-107": [
+   "Irrigation and Water Source Rehabilitation and Management Programme",
+   "Sediment Management for Reservoir Water Retention",
+   "Water Storage and Distribution Efficiency Improvement",
+   "Small Water Storage Facility Cluster Development",
+   "Community Small Weir Construction"
+  ],
+  "L3-108": [
+   "International collaborative mechanisms for disaster, climate, and transboundary environmental management",
+   "River Basin Management Empowerment and Planning Reform"
+  ],
+  "L3-110": [
+   "Smart Electronics Industry Upgrading and Domestic Sourcing Promotion"
+  ],
+  "L3-114": [
+   "International Trade Platforms for SME Export Expansion"
+  ],
+  "L3-115": [
+   "IMT-GT Connectivity and Economic Zone Development Program",
+   "Logistics Facilities and Service Centers Development"
+  ],
+  "L3-116": [
+   "Cross-Border Transport Agreement Implementation and Border Checkpoint Operations",
+   "Border Checkpoint and Crossing Facilitation Improvement",
+   "Cross-border Transport Rules and Procedures Simplification"
+  ],
+  "L3-118": [
+   "Trade and investment relationship development through free trade agreements and special development zones",
+   "Construct New Trade and Cooperation Agreements",
+   "Feasibility Studies for New Free Trade Areas",
+   "Accelerate utilization of free trade agreements",
+   "FTA Activation and Enterprise Preparedness Programme"
+  ],
+  "L3-119": [
+   "Promote use of trade agreement preferences"
+  ],
+  "L3-121": [
+   "Attract International Big Tech Investment in Digital Infrastructure"
+  ],
+  "L3-122": [
+   "EV Export Market Expansion through Joint Ventures and Business Partnerships",
+   "EV Conversion Technology and Knowledge Transfer Support",
+   "Foreign Investment and Knowledge Transfer for Smart Electronics Upstream Industries",
+   "Technology upgrading support for local SMEs",
+   "National Research and Development and Technology Transfer Support Measures"
+  ],
+  "L3-123": [
+   "Private Sector Investment Support for Agricultural Market Development",
+   "Relax EV supply-chain investment regulations",
+   "Mechanism for integrated investment promotion review and new economic fields",
+   "Attract Highly Skilled Foreign Experts and Retain Foreign Graduates for Innovation",
+   "Private Investment Promotion in Key Target Sectors"
+  ],
+  "L3-124": [
+   "Regional Value Chain Linkage Promotion",
+   "Regional and ASEAN Investment Distribution and Value Chain Linkage Promotion",
+   "SME Cluster and Global Value Chain Integration",
+   "SME Overseas Market Access Support",
+   "Thai Entrepreneurs in Global Production Networks and R&D Hub"
+  ],
+  "L3-125": [
+   "Transform Thailand's tourism into high quality-oriented tourism",
+   "Happy Model Tourism Development Programme",
+   "Develop High-Potential Secondary Tourist Destinations and Diverse Tourist Routes",
+   "Develop Quality Tourist Attractions and Services at Secondary Destinations",
+   "Tourism Value-Addition and Community-Based OTOP Tourism Promotion"
+  ],
+  "L3-126": [
+   "Sustainable Tourism Area Management and Green Tourism Support",
+   "Sustainable Tourism Management under the BCG Economy",
+   "Tourism Law Amendment for Ecosystem Carrying Capacity",
+   "Creative Tourist Destination Development and Cluster Tourism Promotion",
+   "Top Tourist Attraction Development and Rehabilitation Scheme"
+  ],
+  "L3-128": [
+   "Electric vehicle industry transformation",
+   "Smart Electrical and Electronics R&D Investment Promotion"
+  ],
+  "L3-129": [
+   "Improve production management efficiency through ICT adoption",
+   "EV Export Market Expansion",
+   "Modern Technology Adoption in Production",
+   "Industrial automation promotion",
+   "Technology Access for Farmers, Community Enterprises, and SMEs"
+  ],
+  "L3-131": [
+   "Intellectual Property System Development Programme",
+   "Intellectual Property System Restructuring",
+   "World-Class Intellectual Property System and IP Database",
+   "R&D Translation and Commercialization Promotion Act",
+   "Intellectual Property Registration and Commercialization Reform"
+  ],
+  "L3-132": [
+   "Business-Education Collaboration for EV Technology Knowledge Transfer",
+   "Research network and innovation collaboration programme",
+   "University-startup innovation business collaboration",
+   "SME research collaboration for innovation-based economy",
+   "Stakeholder Partnership System for Research and Innovation"
+  ],
+  "L3-133": [
+   "Vaccine Production Capacity Research Support",
+   "Funding support for in-house health research",
+   "Public Research Funding and Multi-sector Participation Support"
+  ],
+  "L3-135": [
+   "Rail Network Development and Cross-Border Rail Linkage Programme"
+  ],
+  "L3-138": [
+   "Continuous Agricultural Commodity Price Data Collection",
+   "Bangkok Metropolitan Area Intelligent Transport Systems Integration",
+   "Digital Logistics Efficiency Improvements",
+   "Accessible Agricultural Knowledge Base Development"
+  ],
+  "L3-141": [
+   "Enhancing Farmers' Online Trade Skills",
+   "Thai Digital Platform Transaction Expansion",
+   "ICT and E-commerce Support for Entrepreneurs",
+   "SME E-commerce Market Access and Innovation Support",
+   "Digital Business and E-commerce Platform Promotion"
+  ],
+  "L3-143": [
+   "Urban Public Transportation Development in the Southern Region",
+   "Transport Energy Efficiency and Public Transport Development",
+   "Travel Demand Management and Modal Shift Measures",
+   "Travel Demand Management Measures",
+   "Transit-Oriented Urban Planning Measures"
+  ],
+  "L3-144": [
+   "Urban land-use control and anti-sprawl measures"
+  ],
+  "L3-145": [
+   "Sustainable Development Area and City Planning",
+   "Integrated Urban Zoning and Infrastructure Network Development",
+   "Urban Planning for High-Growth Municipalities"
+  ],
+  "L3-147": [
+   "Wastewater Treatment Facility Operation by Local Authorities",
+   "Area-Based Electricity Tariff Study",
+   "Waste Management Fee Financing for Solid Waste and Wastewater Services"
+  ],
+  "L3-148": [
+   "Energy Price Structure Revamp",
+   "Increase Biofuel Use in Transportation"
+  ],
+  "L3-149": [
+   "SOE Regulatory and Supervisory Framework Alignment",
+   "Natural Gas Supply and Pipeline Expansion Programme"
+  ],
+  "L3-150": [
+   "Smart Grid Technology for EV Charging Integration",
+   "Regional Energy Collaboration and Joint Electricity Network Development"
+  ],
+  "L3-151": [
+   "Promoting private-sector economic partnerships in agricultural development",
+   "Agricultural Supply Chain Partnership Mechanism",
+   "Enable public procurement from local communities for tourism development",
+   "Promoting EV Use in Public Transport and Public Institutions",
+   "Technology Transfer Conditions for Public Procurement"
+  ],
+  "L3-152": [
+   "National Automotive and Tyre Test Center",
+   "Thailand Food Valley Project",
+   "Creative Economy Cluster Development and Supply Chain Linkage Support"
+  ],
+  "L3-153": [
+   "Infrastructure and Supporting Factors for Special Development Zones and Strategic Gateway Development",
+   "Logistics Service Centers and Rail Mode Shift Initiative",
+   "Border Town and Border Economic Zone Development for Economic Corridors",
+   "Border Special Economic Zones Development Programme",
+   "Southern Pilot Districts Special Economic Area Development"
+  ],
+  "L3-154": [
+   "Farmer Value-Chain Participation and Benefit-Sharing",
+   "Southern Agro-processing Base Development"
+  ],
+  "L3-155": [
+   "Basic Agricultural Collection and Transport Infrastructure Development",
+   "Link Local Production and Consumption Networks"
+  ],
+  "L3-156": [
+   "Promoting Agricultural Institutions as Business Units",
+   "Farmer Cooperative and Partnership Development",
+   "Agroindustry Value Chain Strengthening Programme",
+   "Cooperative Production Network and Finance Linkage Strengthening",
+   "Upper Northern Organic and Safe Agricultural Production Cluster Development"
+  ],
+  "L3-157": [
+   "Private Sector Linkages for Certified Agricultural Supply Chains",
+   "Fair Contract Farming Arrangements",
+   "Contract Farming Fairness and Information Sharing Initiative"
+  ],
+  "L3-158": [
+   "Support inputs for eco-friendly high-value agricultural models"
+  ],
+  "L3-159": [
+   "Encouraging farmers to use science, technology, and innovation in agricultural production and processing",
+   "Agricultural Knowledge Transfer and Climate-Resilient Production Support",
+   "Agricultural Technology Transfer and Knowledge Management System",
+   "Organic Agriculture Promotion and Pilot City Support",
+   "Learning Centers of Agricultural Productivity Enhancement"
+  ],
+  "L3-160": [
+   "Agricultural Water Storage and Watershed Management Programme",
+   "Water Resource Development for Unirrigated Agricultural Areas",
+   "Irrigation Infrastructure Expansion for Climate Adaptation",
+   "Climate-Smart Agricultural Methods for Small-Scale Farmers"
+  ],
+  "L3-161": [
+   "High-value agricultural produce and processed products development",
+   "Targeted agricultural technology and innovation R&D support",
+   "Agricultural R&D and Mechanisation Upgrade Programme",
+   "Forest Research and High-value Wood Product Innovation",
+   "Agricultural Research and Development Programme"
+  ],
+  "L3-162": [
+   "Large-Scale Agricultural Production in Pilot Areas",
+   "Agricultural Automation Adoption Support"
+  ],
+  "L3-163": [
+   "Livestock Production Value-Addition and Biosecurity Improvement",
+   "Climate-related Plant Pest and Disease Surveillance and Early Warning Systems"
+  ],
+  "L3-165": [
+   "Low-Interest Loan Support for EV and Parts Businesses",
+   "Expand SME and local enterprise access to loans"
+  ],
+  "L3-167": [
+   "Smart Electronic Products and Parts Manufacturing Incentives"
+  ],
+  "L3-168": [
+   "Tourism Business Licensing and Regulatory Reform",
+   "Review and revise outdated laws, regulations and procedures for small enterprises",
+   "SME Registration Incentives for Health Business",
+   "SME Business Operations Facilitation and E-Government Platform",
+   "Review and revise laws to ease startup business operations"
+  ],
+  "L3-169": [
+   "Trade Competition Act Amendment"
+  ],
+  "L3-170": [
+   "Restructure state-owned enterprise management and restore financially troubled SOEs",
+   "SOE Rationalisation and Restructuring Programme",
+   "State Enterprise Restructuring and Strategic Management Reform",
+   "State Enterprise Supervision and Risk Management Reform"
+  ],
+  "L3-171": [
+   "Investment protection and investor-state dispute settlement mechanism"
+  ],
+  "L3-173": [
+   "Digital collateral financing mechanism for SMEs",
+   "Agricultural Credit Monitoring System",
+   "Financial Access Facilitation and Credit Evaluation Tools"
+  ],
+  "L3-174": [
+   "Financial Literacy and Household Savings Promotion"
+  ],
+  "L3-180": [
+   "Tourism Employment Registration Facilitation"
+  ],
+  "L3-185": [
+   "Special Economic Zones and Corridor Development"
+  ],
+  "L3-191": [
+   "Regional human capital development and labor mobility partnerships"
+  ],
+  "L3-193": [
+   "Establish overseas chambers and coordination centers",
+   "Incentivise expert foreigners and Thais abroad for technology and innovation development"
+  ],
+  "L3-194": [
+   "Community Land Title Act Advancement"
+  ],
+  "L3-195": [
+   "Accelerated Land Title Issuance for Landless Farmers"
+  ],
+  "L3-197": [
+   "Agricultural Land Reform Expropriation and Land Use Tax Measures",
+   "Land Utilization and Equitable Holdings Tax Reform",
+   "Land redistribution through progressive taxation"
+  ],
+  "L3-202": [
+   "Fostering supply chain connections for ZEV production"
+  ],
+  "L3-205": [
+   "Reserve System for Medicines and Medical Supplies",
+   "Emergency Medicines and Medical Supplies Reserve System",
+   "Integrated Vaccine Security and Management System",
+   "Vaccine Reserve Legislation"
+  ],
+  "L3-206": [
+   "Integrated Disaster Prevention Planning and Coordination",
+   "Early Warning System Enhancement for Natural Disasters and Climate Change",
+   "Disaster Response and Warning System Development",
+   "National security monitoring and early warning system",
+   "Geo-informatics and Digital Surveillance Alert Systems"
+  ],
+  "L3-207": [
+   "Reforming the system of epidemics and health threats surveillance and management",
+   "Integrated Health and Environmental Surveillance Mechanism",
+   "Disease Surveillance, Prevention and Control System",
+   "Capacity improvement and regional cooperation for epidemic prevention",
+   "Early health warning systems"
+  ],
+  "L3-208": [
+   "National Zoonotic Disease Management Capacity Enhancement",
+   "One Health capacity-building and coordination programme",
+   "Village Health Volunteer zoonotic disease surveillance network",
+   "Multi-sectoral zoonotic disease transmission minimization mechanism",
+   "One Health Zoonotic Disease Surveillance and Response Capacity Development"
+  ],
+  "L3-209": [
+   "Natural Disaster and Climate Change Risk Insurance and Continuity Planning",
+   "Pandemic Preparedness and Public Health Emergency Financing Framework",
+   "Natural Disaster Insurance Systems Development",
+   "Disaster and Crop Insurance Schemes"
+  ],
+  "L3-210": [
+   "Harmonize Tourism Data Collection System",
+   "Integrated Labor Demand and Supply Database Development",
+   "Public Development Data Platform",
+   "Efficient Monitoring and Evaluation Database",
+   "Local-level databases for planning and evaluation"
+  ],
+  "L3-212": [
+   "Formulate investment plans for growth",
+   "All-Hazards Emergency Health Crisis Management Planning and Preparedness",
+   "Integrated Renewable Energy and Energy Efficiency Research Planning"
+  ],
+  "L3-215": [
+   "Corruption Risk Management and Procurement Integrity System",
+   "Procurement Data Monitoring and Transparency Measures",
+   "Official Appointment of Action Plan Agencies and Biannual Evaluation Coordination"
+  ],
+  "L3-217": [
+   "Tourism Monitoring Systems Development",
+   "Monitoring and evaluation system for area and urban development",
+   "Promoting the utilization of databases for policy design and monitoring",
+   "Monitoring and Evaluation of the 13th Plan",
+   "Integrated budget allocation and development monitoring system"
+  ],
+  "L3-218": [
+   "Adoption of PDCA Cycle for Plan Implementation",
+   "Design Thinking Support for Public Service Development",
+   "Review and update education measures and success targets"
+  ],
+  "L3-219": [
+   "Public Relations Plan and Pilot Program for ZEV Awareness",
+   "Local Digital Industry Competitiveness Development",
+   "Urban Development Replication of the Khon Kaen Model",
+   "Pilot Projects for Building Energy Management Systems and Grid Flexibility",
+   "Digital Standards Sandbox for Pre-implementation Testing"
+  ],
+  "L3-220": [
+   "Integrated central-local governance system",
+   "Provincial Agricultural Collaboration Mechanisms",
+   "Develop monitoring systems for community development programmes",
+   "Cross-organizational Public Administration Integration",
+   "Outcome-Based Integration Mechanism"
+  ],
+  "L3-221": [
+   "Personal Data Retention and Cross-Border Exchange Regulation System",
+   "Cybersecurity and Personal Data Protection Standards",
+   "Data Protection and Security Measures Development",
+   "Data Classification for Public Sector Data Governance",
+   "Digital identity and personal data governance development"
+  ],
+  "L3-222": [
+   "Cybersecurity Risk Management and Data Sovereignty Policy Framework",
+   "National cyber security bill",
+   "Cybersecurity Protection Measures for Digital Public Services",
+   "Secure government service platform and data protection",
+   "Government Computer Security Incident Co-ordination Center"
+  ],
+  "L3-225": [
+   "Public Sector Human Resources Management Reform",
+   "External Appointment of Heads for High-Priority Organizations",
+   "Public Sector Recruitment of High-Potential New Generation Candidates",
+   "Civil Service Remuneration and Benefits Adjustment",
+   "Public Official Promotion and Transfer Reform"
+  ],
+  "L3-226": [
+   "Performance Evaluation System for Senior Government Officers"
+  ],
+  "L3-227": [
+   "Public Digital Dashboard for Government Service Transactions",
+   "Digital Public Service Modernization",
+   "Smart Card and Central Electronic Identity Verification",
+   "Digital Payment System Provision",
+   "Digital Identity Verification System"
+  ],
+  "L3-229": [
+   "Education Governance Decentralization Reform",
+   "Educational Outcome-Based Budget Management Project",
+   "Transfer tax and fee collection functions to Local Administrative Organizations",
+   "Transfer public service delivery functions to Local Administrative Organizations",
+   "Decentralized Public Management Tasks"
+  ],
+  "L3-231": [
+   "Improve Local Administrative Organizations' revenue collection effectiveness",
+   "Provincial Cluster and Local Budget Allocation Reform",
+   "Local Revenue Management and Subsidy Restructuring",
+   "Local Revenue Strengthening for Self-Reliant Local Administration"
+  ],
+  "L3-233": [
+   "Tax system reform for fairer resource allocation",
+   "Tax System Reform for Fair Income Distribution",
+   "National Revenue Collection System Improvement",
+   "Fiscal revenue base expansion and tax reform"
+  ],
+  "L3-235": [
+   "Public Procurement and Inventory Management Reform",
+   "Transparent and efficient public spending and performance appraisal reform",
+   "Green Procurement System",
+   "Digital Public Procurement, Budget and Fiscal Management Oversight System",
+   "Procurement Regulation Revision for Crisis Response"
+  ],
+  "L3-236": [
+   "Provide investment guidelines for major development plans and projects"
+  ],
+  "L3-237": [
+   "Fiscal Budget Preparation Effectiveness Enhancement",
+   "Link Eleventh Plan implementation to annual budgeting",
+   "Priority-Based Budget Allocation and Expenditure Efficiency Reform",
+   "Results-Based Local Budgeting Reform",
+   "Integrate Eleventh Plan priorities into government policy and budgeting"
+  ],
+  "L3-238": [
+   "Review and revise budget and public procurement rules for tourism destination development",
+   "Private Infrastructure Investment and Service Provision Expansion",
+   "Promote public-private cooperation in investment and management of state assets",
+   "Public-Private Partnership Promotion for Mega Projects",
+   "Private Sector Participation in Infrastructure and Basic Public Services"
+  ],
+  "L3-240": [
+   "Air and Waterway Transport Regulatory Capacity Upgrade"
+  ],
+  "L3-241": [
+   "Environmental Law Monitoring and Enforcement for Factories"
+  ],
+  "L3-242": [
+   "Chemical, Biological, Radiological, Nuclear, and Explosive Incident Preparedness Enhancement",
+   "Essential Medical Supplies Logistics Capacity Strengthening",
+   "Emergency Operations Center Capacity Strengthening",
+   "Public Health Emergency Management Knowledge Transfer and PHEOC Capacity Building",
+   "Secure Essential Materials for Public Health Emergency Response"
+  ],
+  "L3-243": [
+   "Disaster Preparedness and Business Continuity Measures",
+   "Emergency Preparedness and Health Service Continuity Strengthening",
+   "Health Service Maintenance Plan under the Communicable Diseases Act",
+   "Comprehensive Business Continuity Plan for Health Facilities",
+   "Emergency Health Service Regulations and Guidelines"
+  ],
+  "L3-244": [
+   "Emergency Preparedness and Response Sub-strategy",
+   "Disaster Victim Assistance and Fair Relief Delivery",
+   "Natural Disaster Remedial and Relief Mechanisms"
+  ],
+  "L3-245": [
+   "Post-Disaster Inspection Standards"
+  ],
+  "L3-246": [
+   "Environmental Monitoring Participation Empowerment"
+  ],
+  "L3-247": [
+   "Budget Act Revision for Integrated and Area-Based Budgeting",
+   "Civil Society Participation in Budget Decision-Making and Monitoring",
+   "Community Plan Formulation and Participatory Project Proposal Development",
+   "Tambon Community Brainstorming and Development Planning Mechanism",
+   "Participatory local development and plan formulation"
+  ],
+  "L3-248": [
+   "Community-based tourism and secondary city tourism support programme",
+   "Community-Based Tourism and Secondary Cities Tourism Support",
+   "Community Tourism Enterprise Incubation and Financing Network",
+   "Community Social Welfare and Services Provision",
+   "Strengthening local community participation in public-interest and social organization"
+  ],
+  "L3-249": [
+   "Volunteering Networks for Corruption Surveillance",
+   "Civil Society Oversight of Public Agencies and Officials"
+  ],
+  "L3-251": [
+   "Social media threat awareness and fake news literacy"
+  ],
+  "L3-252": [
+   "Promote public participation in budget auditing",
+   "Public Service Performance Monitoring",
+   "Transparent monitoring of LAOs",
+   "Local Budget Transparency and Participatory Monitoring Initiative",
+   "Public Information Disclosure and Oversight of Megaprojects"
+  ],
+  "L3-257": [
+   "Public-Private Partnerships for Overseas Market Outreach and Market Research",
+   "Private Sector Development Partnership and JPPCC Strengthening",
+   "Create public-private coordination systems for trade support",
+   "Private Sector Development Partnership Integration and JPPCC Strengthening",
+   "Public-Private Forum for GHG Mitigation Mechanisms"
+  ],
+  "L3-260": [
+   "Social Security System Improvement for Informal Workers",
+   "Voluntary Retirement Savings Incentives",
+   "Comprehensive Social Insurance and Welfare Service Integration",
+   "Health Security and Reimbursement Access for Undocumented Migrants and Workers"
+  ],
+  "L3-261": [
+   "Digital Platforms for Agricultural Markets and Operators",
+   "Promotion of advanced digital technologies in everyday living",
+   "Develop High-Quality and Accessible Technological Infrastructure",
+   "E-learning Materials and Low-cost Learning Materials Incentive Programme",
+   "Nationwide Free Wifi for Education"
+  ],
+  "L3-262": [
+   "EV Industry Transition Support Programme",
+   "Transition Support for Internal Combustion Engine and Power Transmission Enterprises",
+   "Remedy Measures for Parties Affected by the EV Transition"
+  ],
+  "L3-263": [
+   "Upgrading tourism information systems to smart tourism systems",
+   "Large-Scale Tourism Database Development",
+   "National Health Database and Interoperable Health Data Platform",
+   "Public Sector Efficiency and Digital Transformation Reform",
+   "Government and private-sector data linkage for R&D big data"
+  ],
+  "L3-264": [
+   "Provincial public communication and feedback channels",
+   "Risk Communication and Community Engagement for Public Health Risk Management",
+   "Provincial Public Health Risk Communication Units",
+   "Public Warning System for Civil Society",
+   "Food Safety Risk Communication Improvement"
+  ]
+ }
+}

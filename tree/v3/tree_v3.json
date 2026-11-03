@@ -12,8 +12,8 @@
    "L5 strategy"
   ],
   "required_level": "L2",
-  "depth_rule": "Every strategy is placed on a family (L2), the required level; a group alone is not a placement. A pathway (L3) only when the strategy's wording names that causal channel (text_cues) and no sibling. A standing function of the state with no family goes to the subpillar's General branch.",
-  "source": "The reviewer's framework of 27 October 2026 (inputs/reviewer_framework.json) over tree v2's pathways; amendments in build.py",
+  "depth_rule": "Every strategy is placed on a family (L2), the required level; a group alone is not a placement. A pathway (L3) when the strategy's action is the pathway's lever and passes its joins_when test and not its joins_not test, judged by meaning; the text_cues match is an advisory flag. A standing function of the state with no family goes to the subpillar's General branch.",
+  "source": "The reviewer's framework of 27 October 2026 (inputs/reviewer_framework.json) over tree v2's pathways; amendments in build.py; bridge face (lever, joins_when, joins_not, entry_points) in bridge.py and inputs/entry_points.json, 3 November 2026",
   "merges": {
    "L3-031": "L3-034",
    "L3-139": "L3-135",
@@ -973,7 +973,7 @@
    ],
    "assets": [],
    "n_families": 1,
-   "n_pathways": 2
+   "n_pathways": 3
   },
   {
    "group_id": "G-23",
@@ -1114,7 +1114,7 @@
     "AST-07"
    ],
    "n_families": 2,
-   "n_pathways": 7
+   "n_pathways": 8
   },
   {
    "group_id": "G-28",
@@ -3685,10 +3685,11 @@
    "subpillar_code": "ANT",
    "definition": "Statistical capacity and data shared across agencies for decisions.",
    "examples": "Strengthen data and statistical systems · Strengthen environmental monitoring and data · Develop geospatial information",
-   "plan_words": "statistic|census|survey|data (system|platform|integration)|information system|monitoring network|geospatial|mapping|data (sharing|exchange|interoperab)|interoperab|shared (data|registr|database)|data governance|open data|integrated (database|data platform|information system)",
+   "plan_words": "statistic|census|survey|data (system|platform|integration)|information system|monitoring network|geospatial|mapping|data (sharing|exchange|interoperab)|interoperab|shared (data|registr|database)|data governance|open data|integrated (database|data platform|information system)|(database|registry|register|records? system|information system|data (system|platform|base|warehouse|centre|center)|big data).{0,80}(develop|build|establish|maintain|upgrade|digiti[sz]e|improve)|(develop|build|establish|maintain|upgrade|digiti[sz]e).{0,80}(database|registry|register|records? system|information system|data (system|platform|base|warehouse|centre|center)|big data)",
    "pathway_ids": [
     "L3-210",
-    "L3-263"
+    "L3-263",
+    "L3-265"
    ],
    "v2_mechanisms": [],
    "sdg_targets": [
@@ -3703,7 +3704,7 @@
     "Technological Change"
    ],
    "conditional_risks": [],
-   "n_pathways": 2,
+   "n_pathways": 3,
    "risk_sources": {
     "Demographic Shifts": [
      "L3-210"
@@ -3712,7 +3713,8 @@
      "L3-210"
     ],
     "Technological Change": [
-     "L3-263"
+     "L3-263",
+     "L3-265"
     ]
    }
   },
@@ -3955,14 +3957,15 @@
    "subpillar_code": "AGI",
    "definition": "The people, management, local tiers and regulators that decide whether policy is delivered.",
    "examples": "Strengthen sector governance and regulation · Strengthen environmental governance and compliance · Strengthen public administration",
-   "plan_words": "decentrali[sz]|devolution|local (government|authorit|administration|council|governance|fiscal|revenue|budget|capacity|tax|autonom|administrative organi[sz]ation)|sub-?national|municipal (government|council|administration|finance|capacity)|provincial (administration|government|council|budget|capacity)|district (administration|council|government|office)|tambon|village (fund|committee)|intergovernmental (transfer|fiscal)|fiscal (transfer|decentrali[sz]ation|federalism|equali[sz]ation)|grant(s)? to local|local (service|public service) delivery|area-?based (administration|development|governance)|regional (administration|office|governance|government)|regulator(y)? (agenc|authorit|bod|capacit|institution|independence|enforcement|oversight|commission)|regulatory (and supervisory|enforcement|compliance|capacity)|inspection|inspectorate|enforcement (capacity|of (environmental|safety|standard|regulation|law))|complian(ce|t) (monitoring|enforcement|system|inspection)|licensing (authorit|bod|system|regime|enforcement)|safety (regulation|authorit|oversight|inspection|standard enforcement)|environmental (enforcement|inspection|compliance|regulator|governance)|nuclear (safety|regulat)|radiation|food (safety )?(regulator|inspection|control authority)|drug (regulator|regulation|authorit|control)|market (surveillance|supervision|oversight)|quality (control|assurance|inspection) (system|authorit|agency)|standards? (bod|agenc|authorit|enforcement|institution|regime)|sector regulat|civil service|merit|recruit|pay reform|remunerat|public servant",
+   "plan_words": "decentrali[sz]|devolution|local (government|authorit|administration|council|governance|fiscal|revenue|budget|capacity|tax|autonom|administrative organi[sz]ation)|sub-?national|municipal (government|council|administration|finance|capacity)|provincial (administration|government|council|budget|capacity)|district (administration|council|government|office)|tambon|village (fund|committee)|intergovernmental (transfer|fiscal)|fiscal (transfer|decentrali[sz]ation|federalism|equali[sz]ation)|grant(s)? to local|local (service|public service) delivery|area-?based (administration|development|governance)|regional (administration|office|governance|government)|regulator(y)? (agenc|authorit|bod|capacit|institution|independence|enforcement|oversight|commission)|regulatory (and supervisory|enforcement|compliance|capacity)|inspection|inspectorate|enforcement (capacity|of (environmental|safety|standard|regulation|law))|complian(ce|t) (monitoring|enforcement|system|inspection)|licensing (authorit|bod|system|regime|enforcement)|safety (regulation|authorit|oversight|inspection|standard enforcement)|environmental (enforcement|inspection|compliance|regulator|governance)|nuclear (safety|regulat)|radiation|food (safety )?(regulator|inspection|control authority)|drug (regulator|regulation|authorit|control)|market (surveillance|supervision|oversight)|quality (control|assurance|inspection) (system|authorit|agency)|standards? (bod|agenc|authorit|enforcement|institution|regime)|sector regulat|civil service|merit|recruit|pay reform|remunerat|public servant|one-?stop|service standard|process (re-?design|re-?engineering|simplif|improvement|review)|simplif.{0,40}(procedure|process|step|service)|(reduce|cut|shorten).{0,40}(steps|processing time|waiting time|red tape|paperwork)|service (delivery|quality|efficiency) (improvement|reform|upgrade)|e-?service",
    "pathway_ids": [
     "L3-225",
     "L3-229",
     "L3-230",
     "L3-231",
     "L3-240",
-    "L3-241"
+    "L3-241",
+    "L3-266"
    ],
    "v2_mechanisms": [
     "MEC-86",
@@ -3994,7 +3997,7 @@
      "pathway_id": "L3-231"
     }
    ],
-   "n_pathways": 6,
+   "n_pathways": 7,
    "risk_sources": {
     "Growing Populism": [
      "L3-225"
@@ -4572,7 +4575,13 @@
    "v2_mechanism": "Non-discrimination and equal access",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": ""
+   "revised": "",
+   "lever": "Non-discrimination rules and their enforcement in hiring, lending and services; affirmative action; anti-stigma campaigns",
+   "joins_when": "it stops a group being treated worse by employers, lenders or providers because of who they are",
+   "joins_not": "the barrier is physical or administrative (goes to L3-004, L3-006) or inside the household (L3-002)",
+   "entry_points": [
+    "Anti-stigma and anti-discrimination campaign for HIV"
+   ]
   },
   {
    "pathway_id": "L3-005",
@@ -4608,7 +4617,14 @@
    "v2_mechanism": "Gender equality and care work",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": ""
+   "revised": "",
+   "lever": "Childcare, elder care and care leave that free women's time for paid work",
+   "joins_when": "it provides or pays for care so that carers, mostly women, can take paid work",
+   "joins_not": "it is about women's rights or representation in general (L3-003) or household bargaining (L3-002)",
+   "entry_points": [
+    "Workplace and Government Child Care Center Promotion",
+    "Work-life balance measures for parents with young children"
+   ]
   },
   {
    "pathway_id": "L3-178",
@@ -4644,7 +4660,11 @@
    "v2_mechanism": "Labour regulation and firm formalisation",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Rules on hiring, dismissal and contract types",
+   "joins_when": "it changes how costly it is to hire or dismiss workers, or what contracts are allowed",
+   "joins_not": "it sets wages (L3-179) or lowers the cost of being formal (L3-180)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-180",
@@ -4680,7 +4700,13 @@
    "v2_mechanism": "Labour regulation and firm formalisation",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Lower taxes, simpler registration and visible benefits for formal work",
+   "joins_when": "it makes formal employment or formal self-employment cheaper or more attractive",
+   "joins_not": "it registers firms rather than workers (L3-168) or extends insurance to informal workers (L3-260)",
+   "entry_points": [
+    "Tourism Employment Registration Facilitation"
+   ]
   },
   {
    "pathway_id": "L3-181",
@@ -4716,7 +4742,11 @@
    "v2_mechanism": "Decent work and protection of informal workers",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Collective bargaining rights, labour standards and their enforcement",
+   "joins_when": "it strengthens workers' representation, rights or standards at work",
+   "joins_not": "it is only about safety inspection (L3-182) or wages (L3-179)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-182",
@@ -4756,7 +4786,11 @@
    "v2_mechanism": "Decent work and protection of informal workers",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Workplace safety rules and inspection",
+   "joins_when": "it inspects or regulates safety and health at work",
+   "joins_not": "it is about labour rights in general (L3-181)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-260",
@@ -4793,7 +4827,16 @@
    "v2_family_id": "",
    "v2_family": "",
    "added_in": "v3",
-   "revised": ""
+   "revised": "",
+   "lever": "Contribution rules, subsidies and enrolment channels that bring informal workers into pensions and health insurance",
+   "joins_when": "it extends social insurance, pensions or health cover to workers outside formal employment",
+   "joins_not": "it covers the poor through assistance rather than insurance (F-06) or formalises work (L3-180)",
+   "entry_points": [
+    "Social Security System Improvement for Informal Workers",
+    "Voluntary Retirement Savings Incentives",
+    "Comprehensive Social Insurance and Welfare Service Integration",
+    "Health Security and Reimbursement Access for Undocumented Migrants and Workers"
+   ]
   },
   {
    "pathway_id": "L3-004",
@@ -4829,7 +4872,17 @@
    "v2_mechanism": "Non-discrimination and equal access",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Accessible buildings, transport, information and services; universal design; assistive devices",
+   "joins_when": "it removes physical, information or attitudinal barriers for people with disabilities or reduced mobility",
+   "joins_not": "it is a general service expansion with no access barrier named (the family) or anti-discrimination law (L3-001)",
+   "entry_points": [
+    "Inclusive Learning Materials Development",
+    "Elderly-Friendly Urbanization with Universal Design",
+    "Universal and Tailor-Designed Infrastructure for Inclusive Access",
+    "Universal Design for Urban Infrastructure",
+    "Digital Welfare Services for Persons with Disabilities Development Project"
+   ]
   },
   {
    "pathway_id": "L3-006",
@@ -4865,7 +4918,13 @@
    "v2_mechanism": "Non-discrimination and equal access",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Civil registration, identity documents and one-stop registration services",
+   "joins_when": "it registers people or issues the documents they need to claim services, rights or finance",
+   "joins_not": "it registers firms (L3-168) or builds a data system for the state (F-43)",
+   "entry_points": [
+    "One-Stop Labor Service Center with Integrated Identity and Border Document Services"
+   ]
   },
   {
    "pathway_id": "L3-002",
@@ -4901,7 +4960,15 @@
    "v2_mechanism": "Gender equality and care work",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": ""
+   "revised": "",
+   "lever": "Family support, parenting and household programmes that change who decides inside the home",
+   "joins_when": "it works on relations and decisions inside the household: women's control of resources, family functioning",
+   "joins_not": "it is about care services (L3-005) or violence (L3-007)",
+   "entry_points": [
+    "Family Cohesion and Home-School Relationship Strengthening",
+    "Family Capacity and Intergenerational Learning Support Programme",
+    "Promote desirable character formation in families"
+   ]
   },
   {
    "pathway_id": "L3-003",
@@ -4938,7 +5005,14 @@
    "v2_mechanism": "Representation of excluded groups",
    "v2_family_id": "FAM-01",
    "v2_family": "Equal rights and inclusion",
-   "revised": ""
+   "revised": "",
+   "lever": "Quotas, reserved seats and leadership programmes for women and excluded groups",
+   "joins_when": "it puts excluded groups into decision-making bodies or leadership",
+   "joins_not": "it is about attitudes in general with no decision-making role named (L3-013 or the family)",
+   "entry_points": [
+    "Gender equality attitudes and women’s leadership promotion",
+    "Women’s Leadership and Gender Equality Promotion Measures"
+   ]
   },
   {
    "pathway_id": "L3-011",
@@ -4974,7 +5048,11 @@
    "v2_mechanism": "Reducing group grievance and polarisation",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": "cues; cues of L3-259"
+   "revised": "cues; cues of L3-259",
+   "lever": "Policies that close gaps between identity groups: targeted services, regional equity, recognition",
+   "joins_when": "it names a gap between ethnic, religious or regional groups and acts to close it",
+   "joins_not": "it is about national identity (L3-014) or contact (L3-013)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-007",
@@ -5010,7 +5088,11 @@
    "v2_mechanism": "Violence against women and children",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": ""
+   "revised": "",
+   "lever": "Protection services, shelters, legal response and economic options for women facing violence",
+   "joins_when": "it prevents or responds to violence against women by partners",
+   "joins_not": "it concerns children (L3-008, L3-009, L3-010) or crime in general (F-08)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-008",
@@ -5044,7 +5126,11 @@
    "v2_mechanism": "Violence against women and children",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": ""
+   "revised": "",
+   "lever": "Income support and schooling that take children out of work; child labour enforcement",
+   "joins_when": "it reduces child labour or keeps children of poor households in school instead of work",
+   "joins_not": "it is general child protection (L3-010) or school access (L3-036)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-009",
@@ -5080,7 +5166,11 @@
    "v2_mechanism": "Violence against women and children",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": ""
+   "revised": "",
+   "lever": "Laws, incentives and schooling that delay marriage",
+   "joins_when": "it raises the age of marriage or keeps girls in school to that end",
+   "joins_not": "it is reproductive health in general (L3-100)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-010",
@@ -5114,7 +5204,11 @@
    "v2_mechanism": "Violence against women and children",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Child protection services, case management, early intervention after abuse or neglect",
+   "joins_when": "it protects children from abuse, neglect or exploitation, or treats its effects",
+   "joins_not": "it is early-childhood education (L3-039) or child labour (L3-008)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-018",
@@ -5150,7 +5244,11 @@
    "v2_mechanism": "Displacement, resettlement and refugee integration",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Resettlement with livelihood restoration, compensation and housing for the displaced",
+   "joins_when": "it resettles or compensates people displaced by projects, disasters or conflict",
+   "joins_not": "it supports voluntary migrants (L3-019) or refugees' work rights (L3-020)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-019",
@@ -5187,7 +5285,11 @@
    "v2_mechanism": "Climate-resilient livelihoods and adaptation",
    "v2_family_id": "FAM-11",
    "v2_family": "Resilience to climate and disasters",
-   "revised": ""
+   "revised": "",
+   "lever": "Support for households to move or diversify when their place cannot sustain them",
+   "joins_when": "it helps people move away from environmental pressure or supports seasonal mobility",
+   "joins_not": "it moves assets out of hazard zones in place (L3-086) or resettles involuntarily (L3-018)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-020",
@@ -5223,7 +5325,11 @@
    "v2_mechanism": "Displacement, resettlement and refugee integration",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": ""
+   "revised": "",
+   "lever": "Work permits, services and integration programmes for refugees and their hosts",
+   "joins_when": "it gives refugees or displaced foreigners access to work, services or integration",
+   "joins_not": "it is labour migration for earnings (F-36)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-021",
@@ -5260,7 +5366,15 @@
    "v2_mechanism": "Social assistance and cash transfers",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Insurance and transfers that replace income when it falls: crop, weather, unemployment insurance",
+   "joins_when": "it pays out or transfers when income drops, so consumption holds",
+   "joins_not": "it is a standing pension (L3-025), health cover (L3-026) or the delivery system (L3-024)",
+   "entry_points": [
+    "Agricultural Income Insurance System",
+    "Crop Insurance System Development",
+    "Climate Insurance Scheme Development"
+   ]
   },
   {
    "pathway_id": "L3-022",
@@ -5296,7 +5410,11 @@
    "v2_mechanism": "Shock-responsive protection",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Early support in a shock that stops asset sales, school withdrawal and debt",
+   "joins_when": "it names stopping families from selling assets, pulling children from school or borrowing in a shock",
+   "joins_not": "it is income replacement in general (L3-021)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-023",
@@ -5332,7 +5450,11 @@
    "v2_mechanism": "Social insurance and pensions",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": ""
+   "revised": "",
+   "lever": "Credible insurance that lets households take productive risks",
+   "joins_when": "it insures so that households invest or plant higher-return crops",
+   "joins_not": "it only smooths consumption after the event (L3-021)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-024",
@@ -5369,7 +5491,11 @@
    "v2_mechanism": "Shock-responsive protection",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Registries, triggers and payment rails that scale support automatically in a shock",
+   "joins_when": "it builds the system (registry, trigger, payment channel) that expands benefits fast in a crisis",
+   "joins_not": "it is emergency relief delivery itself (L3-244) or a transfer with no scaling mechanism (L3-021)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-025",
@@ -5405,7 +5531,13 @@
    "v2_mechanism": "Social insurance and pensions",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": ""
+   "revised": "",
+   "lever": "Pensions and old-age allowances",
+   "joins_when": "it provides, extends or reforms income in old age",
+   "joins_not": "it keeps older people working (L3-103) or provides care (L3-104)",
+   "entry_points": [
+    "Social Security Awareness and Housing Access Expansion"
+   ]
   },
   {
    "pathway_id": "L3-026",
@@ -5441,7 +5573,16 @@
    "v2_mechanism": "Financial protection and health insurance",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": ""
+   "revised": "",
+   "lever": "Health insurance, fee exemptions and benefit packages that cap what patients pay",
+   "joins_when": "it covers or caps the cost of care to the patient",
+   "joins_not": "it expands the services themselves (L3-043) or insurance for informal workers specifically (L3-260)",
+   "entry_points": [
+    "Health Expenditure Oversight Measures",
+    "Health Insurance System for Foreign Workers and Tourists",
+    "Public Health Economics Division Strengthening and Health Insurance Accreditation for Migrants and Undocumented Laborers",
+    "Public Health Insurance Expansion for Vulnerable Groups"
+   ]
   },
   {
    "pathway_id": "L3-027",
@@ -5477,7 +5618,13 @@
    "v2_mechanism": "Social assistance and cash transfers",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Targeting systems, poverty registries and eligibility rules",
+   "joins_when": "it decides or improves who receives benefits: targeting, registries, eligibility",
+   "joins_not": "it is the scaling mechanism in a shock (L3-024) or the data system in general (F-43)",
+   "entry_points": [
+    "Targeted Social Investment and Welfare Protection for Vulnerable Groups"
+   ]
   },
   {
    "pathway_id": "L3-028",
@@ -5513,7 +5660,11 @@
    "v2_mechanism": "Social assistance and cash transfers",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": ""
+   "revised": "",
+   "lever": "Unconditional cash transfers and allowances",
+   "joins_when": "it gives cash to poor households with no condition attached",
+   "joins_not": "it attaches schooling or health conditions (L3-030) or bundles assets and training (L3-029)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-029",
@@ -5547,7 +5698,11 @@
    "v2_mechanism": "Graduation from poverty",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": ""
+   "revised": "",
+   "lever": "Graduation programmes: assets plus training, coaching and consumption support",
+   "joins_when": "it hands over productive assets with support to move households out of poverty",
+   "joins_not": "it is cash alone (L3-028) or microcredit (L3-173)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-030",
@@ -5583,7 +5738,13 @@
    "v2_mechanism": "Social assistance and cash transfers",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": ""
+   "revised": "",
+   "lever": "Cash transfers conditioned on school attendance or health visits",
+   "joins_when": "it ties a transfer to schooling, health checks or nutrition of children",
+   "joins_not": "it is unconditional (L3-028) or a scholarship paid by the education system (L3-040)",
+   "entry_points": [
+    "Improve the Child Support Grant System"
+   ]
   },
   {
    "pathway_id": "L3-053",
@@ -5620,7 +5781,11 @@
    "v2_mechanism": "Household food security and food prices",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": ""
+   "revised": "",
+   "lever": "Food access measures: price support for consumers, food aid, income support in food crises",
+   "joins_when": "it secures households' access to food through income, prices or distribution",
+   "joins_not": "it is about nutrition quality (L3-054), price stabilisation on its own (L3-055) or production (F-32)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-054",
@@ -5656,7 +5821,16 @@
    "v2_mechanism": "Early childhood development and nutrition",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Maternal and infant nutrition programmes, breastfeeding, micronutrients, first-1000-days care",
+   "joins_when": "it improves nutrition of mothers, infants and young children",
+   "joins_not": "it is school-age feeding (L3-058) or food safety (L3-056)",
+   "entry_points": [
+    "Parent and caregiver early childhood nutrition and breastfeeding promotion",
+    "National Immunization Mechanism for Population Health and Child Development",
+    "National nutrition support for mothers and young children",
+    "Child nutrition support programme"
+   ]
   },
   {
    "pathway_id": "L3-055",
@@ -5693,7 +5867,11 @@
    "v2_mechanism": "Household food security and food prices",
    "v2_family_id": "FAM-06",
    "v2_family": "Income security and social protection",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Price stabilisation and compensation for food price spikes",
+   "joins_when": "it stabilises food prices or compensates consumers when they spike",
+   "joins_not": "it holds strategic food stocks (L3-205) or supports farm prices (F-33)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-056",
@@ -5730,7 +5908,17 @@
    "v2_mechanism": "Infectious disease control and food safety",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Food safety standards, inspection, certification and traceability",
+   "joins_when": "it controls the safety or standards of food along the chain",
+   "joins_not": "it is product quality for export in general (L3-114) or animal disease (L3-163)",
+   "entry_points": [
+    "Food Production Quality and Safety Certification Support",
+    "Food Standards Control System Strengthening",
+    "Safe Farming and Organic Certification Programme",
+    "Food Chain Safety Monitoring and Control",
+    "National emergency alert and food safety traceability systems"
+   ]
   },
   {
    "pathway_id": "L3-057",
@@ -5766,7 +5954,11 @@
    "v2_mechanism": "Clusters, zones and local supply chains",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Storage, cold chains and post-harvest handling",
+   "joins_when": "it cuts losses between harvest and market: storage, handling, cold chain",
+   "joins_not": "it is transport to market (L3-155) or processing industry (L3-151)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-058",
@@ -5800,7 +5992,11 @@
    "v2_mechanism": "Early childhood development and nutrition",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "School meals",
+   "joins_when": "it feeds children at school",
+   "joins_not": "it is school health services (L3-042) or early nutrition (L3-054)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-063",
@@ -5834,7 +6030,11 @@
    "v2_mechanism": "Crime prevention and policing",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Policing, sanctions and their certainty",
+   "joins_when": "it raises the chance or cost of being caught: policing, courts, penalties",
+   "joins_not": "it changes offenders' choices through programmes (L3-064) or rehabilitation (L3-066)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-064",
@@ -5870,7 +6070,14 @@
    "v2_mechanism": "Crime prevention and policing",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Prevention programmes for at-risk people: therapy, mentoring, drug demand reduction, community engagement",
+   "joins_when": "it prevents violence or crime by changing the decisions and opportunities of people at risk",
+   "joins_not": "it is enforcement (L3-063) or health treatment of addiction (L3-050)",
+   "entry_points": [
+    "Substance Abuse Harm Reduction through Community Engagement",
+    "Drug Addiction Relapse Prevention Collaboration"
+   ]
   },
   {
    "pathway_id": "L3-065",
@@ -5906,7 +6113,17 @@
    "v2_mechanism": "Justice, rehabilitation and legal empowerment",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": ""
+   "revised": "",
+   "lever": "Legal aid, alternative dispute resolution, access to justice",
+   "joins_when": "it helps people resolve disputes or get legal help",
+   "joins_not": "it is commercial contract enforcement (L3-171) or court independence (L3-213)",
+   "entry_points": [
+    "Alternative Judicial Proceedings and Judicial Assistance Promotion",
+    "Inclusive Legal Assistance for Judicial Process Participants",
+    "Legal Assistance and Access to Justice Expansion",
+    "Judicial complaint and remedy access improvement",
+    "Alternative and Community Justice Systems Promotion"
+   ]
   },
   {
    "pathway_id": "L3-066",
@@ -5940,7 +6157,14 @@
    "v2_mechanism": "Justice, rehabilitation and legal empowerment",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Prisons, parole, rehabilitation and reintegration",
+   "joins_when": "it concerns custody, sentencing alternatives or reintegration of offenders",
+   "joins_not": "it is prevention before offending (L3-064)",
+   "entry_points": [
+    "Alternative Punishment Measures and Parole System Reform",
+    "Vocational Skills and Reintegration Support for Offending Youth"
+   ]
   },
   {
    "pathway_id": "L3-067",
@@ -5976,7 +6200,11 @@
    "v2_mechanism": "Crime prevention and policing",
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
-   "revised": ""
+   "revised": "",
+   "lever": "Enforcement against trafficking, drug markets and organised crime",
+   "joins_when": "it targets organised or illicit markets: trafficking, smuggling, drug supply",
+   "joins_not": "it treats drug demand (L3-050, L3-064)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-059",
@@ -6012,7 +6240,11 @@
    "v2_mechanism": "Household energy access",
    "v2_family_id": "FAM-07",
    "v2_family": "Basic services and living conditions",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Household electrification and affordable connections",
+   "joins_when": "it connects or keeps households on electricity",
+   "joins_not": "it is supply reliability for firms (L3-146) or renewable generation (F-13)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-060",
@@ -6048,7 +6280,11 @@
    "v2_mechanism": "Water and sanitation",
    "v2_family_id": "FAM-07",
    "v2_family": "Basic services and living conditions",
-   "revised": ""
+   "revised": "",
+   "lever": "Water supply and sanitation for households",
+   "joins_when": "it provides safe drinking water or sanitation to households or communities",
+   "joins_not": "it manages water resources (F-16) or monitors water quality for the environment (F-17)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-061",
@@ -6085,7 +6321,11 @@
    "v2_mechanism": "Household energy access",
    "v2_family_id": "FAM-07",
    "v2_family": "Basic services and living conditions",
-   "revised": "evidence"
+   "revised": "evidence",
+   "lever": "Clean cooking fuels and stoves",
+   "joins_when": "it replaces polluting household cooking fuels or stoves",
+   "joins_not": "it is ambient air pollution (L3-081)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-062",
@@ -6121,7 +6361,11 @@
    "v2_mechanism": "Housing and settlements",
    "v2_family_id": "FAM-07",
    "v2_family": "Basic services and living conditions",
-   "revised": ""
+   "revised": "",
+   "lever": "Housing upgrades, slum improvement, building standards for dwellings",
+   "joins_when": "it improves the quality or supply of homes for poor households",
+   "joins_not": "it is land-use rules (L3-144) or hazard-proofing (L3-087)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-043",
@@ -6158,7 +6402,17 @@
    "v2_mechanism": "Coverage and quality of health care",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Build, staff and run facilities and services so that more people are reached: clinics, hospitals, referral, outreach, telemedicine",
+   "joins_when": "it adds or extends a health service, facility, clinic, referral line, outreach or package of care for a population or place",
+   "joins_not": "it is about who pays (L3-026), staff numbers (L3-045), medicines (L3-046), maternal care (L3-047) or one disease's control (L3-049)",
+   "entry_points": [
+    "Nationwide Health Resource Management and Referral System Upgrade",
+    "Remote Healthcare Service Expansion",
+    "Immunization Coverage Acceleration and Outreach Campaign",
+    "Essential Vaccines and Vaccination Campaigns",
+    "Target Group Vaccination Tracking and Completion"
+   ]
   },
   {
    "pathway_id": "L3-044",
@@ -6198,7 +6452,17 @@
    "v2_mechanism": "Coverage and quality of health care",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": ""
+   "revised": "",
+   "lever": "Clinical guidelines, accreditation, supervision, infection control and provider incentives",
+   "joins_when": "it raises the quality of care given: standards, guidelines, accreditation, patient safety, provider effort",
+   "joins_not": "it expands reach (L3-043) or trains new staff (L3-045)",
+   "entry_points": [
+    "Model IPC practitioner development",
+    "Hospital infection prevention and control strengthening",
+    "National Medical Practice Guidelines Development and Training Programme",
+    "Promote Proficiency Testing Providers",
+    "Health Facility and Healthcare Business Standards Compliance"
+   ]
   },
   {
    "pathway_id": "L3-045",
@@ -6235,7 +6499,17 @@
    "v2_mechanism": "Health workforce and medicines",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": ""
+   "revised": "",
+   "lever": "Train, recruit, deploy and retain health workers",
+   "joins_when": "it increases or redistributes doctors, nurses, health workers or volunteers",
+   "joins_not": "it is their clinical quality (L3-044)",
+   "entry_points": [
+    "Encourage importation of medical personnel",
+    "Promote shared use of public and private medical personnel",
+    "Healthcare Workforce Rotation and Retention Mechanism",
+    "Health Workforce Expansion and Redistribution",
+    "Multidisciplinary Health Workforce Development"
+   ]
   },
   {
    "pathway_id": "L3-046",
@@ -6271,7 +6545,17 @@
    "v2_mechanism": "Health workforce and medicines",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Procurement, pricing, regulation and supply of medicines, vaccines and medical products",
+   "joins_when": "it secures the supply, quality or affordability of medicines, vaccines or medical products",
+   "joins_not": "it is research into new medicines (L3-133) or emergency stockpiles (L3-205, L3-242)",
+   "entry_points": [
+    "Essential Medicines Selection, Procurement, and Stocking System",
+    "Essential Medical Supplies Logistics Enhancement",
+    "Universal Access to Antiviral Medications",
+    "Consumer Quality Healthcare Products Assurance",
+    "Rational Drug Use System Development"
+   ]
   },
   {
    "pathway_id": "L3-047",
@@ -6307,7 +6591,17 @@
    "v2_mechanism": "Coverage and quality of health care",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": "unmerged"
+   "revised": "unmerged",
+   "lever": "Antenatal, delivery, newborn and child health programmes including immunisation",
+   "joins_when": "it is a maternal, newborn or child health package, including routine immunisation",
+   "joins_not": "it is disease control for the whole population (L3-049)",
+   "entry_points": [
+    "National Immunization Program Vaccine Coverage Maintenance",
+    "Free Immunization Benefit Package for Target Groups",
+    "Vaccination Campaigns for High-Risk Groups and Areas",
+    "Immunization Operations and Vaccination Coverage Monitoring",
+    "Healthcare System Development for Mother and Child Health Standards"
+   ]
   },
   {
    "pathway_id": "L3-048",
@@ -6343,7 +6637,17 @@
    "v2_mechanism": "Healthy behaviours, mental health and injury prevention",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": ""
+   "revised": "",
+   "lever": "Health promotion, nutrition and exercise programmes, health literacy, food and advertising rules",
+   "joins_when": "it changes diet, activity or other non-addictive health behaviours, or promotes health",
+   "joins_not": "it targets tobacco, alcohol or drugs (L3-050) or mental health (L3-052)",
+   "entry_points": [
+    "Healthy Population Promotion Programme",
+    "Age-specific health activities, nutrition, and community sports facilities support",
+    "Healthy Food Innovation and Advertising Regulation Measures",
+    "Well-being Literacy and Health Information Promotion",
+    "Promote exercise and basic sports skills in everyday life"
+   ]
   },
   {
    "pathway_id": "L3-049",
@@ -6379,7 +6683,17 @@
    "v2_mechanism": "Infectious disease control and food safety",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": ""
+   "revised": "",
+   "lever": "Control of infectious diseases: vaccination campaigns, treatment programmes, vector control, antimicrobial stewardship",
+   "joins_when": "it controls a communicable disease or antimicrobial resistance",
+   "joins_not": "it is surveillance and detection (L3-207) or routine child immunisation (L3-047)",
+   "entry_points": [
+    "National Immunization Coverage Maintenance and Expansion",
+    "Immunization access and vaccine hesitancy response in southern border provinces",
+    "Integrated AMR Response System for Health Facilities",
+    "Standard TB Treatment and Completion of Care",
+    "TB Diagnosis Access Expansion for Vulnerable Populations"
+   ]
   },
   {
    "pathway_id": "L3-050",
@@ -6413,7 +6727,13 @@
    "v2_mechanism": "Healthy behaviours, mental health and injury prevention",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Taxes, limits, treatment and control of tobacco, alcohol and drugs",
+   "joins_when": "it reduces use or harm from tobacco, alcohol or drugs",
+   "joins_not": "it is drug trafficking enforcement (L3-067)",
+   "entry_points": [
+    "Reduce Antimicrobial Use in Humans and Animals"
+   ]
   },
   {
    "pathway_id": "L3-051",
@@ -6447,7 +6767,17 @@
    "v2_mechanism": "Healthy behaviours, mental health and injury prevention",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": ""
+   "revised": "",
+   "lever": "Road and transport safety, injury prevention, emergency medical response",
+   "joins_when": "it prevents injuries, especially road accidents, or treats them",
+   "joins_not": "it builds transport infrastructure for its own sake (F-25)",
+   "entry_points": [
+    "Traffic Safety Culture Promotion and Road Accident Management Service",
+    "Road Network Quality and Capacity Upgrade Programme",
+    "Road Safety Rest Area Construction",
+    "Transport Fuel Efficiency and Emissions Control Measures",
+    "Assessment of manuals, ambulance standards, and operational processes"
+   ]
   },
   {
    "pathway_id": "L3-052",
@@ -6483,7 +6813,13 @@
    "v2_mechanism": "Healthy behaviours, mental health and injury prevention",
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Mental health services, counselling, suicide prevention",
+   "joins_when": "it provides or improves mental health care or psychosocial support",
+   "joins_not": "it is addiction (L3-050)",
+   "entry_points": [
+    "Health Literacy and Mental Health Consultation Improvement"
+   ]
   },
   {
    "pathway_id": "L3-036",
@@ -6519,7 +6855,13 @@
    "v2_mechanism": "Access to and completion of schooling",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Build schools and places, keep children enrolled, prevent dropout",
+   "joins_when": "it adds school places or keeps children enrolled and in school",
+   "joins_not": "it lowers fees or pays stipends (L3-040) or changes what is learned (L3-037)",
+   "entry_points": [
+    "Student Tracking and Dropout Prevention Measures"
+   ]
   },
   {
    "pathway_id": "L3-037",
@@ -6555,7 +6897,15 @@
    "v2_mechanism": "Teaching and learning quality",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Curriculum, pedagogy, assessment and learning standards",
+   "joins_when": "it changes what or how children learn: curriculum, teaching methods, assessment",
+   "joins_not": "it is teachers' recruitment or pay (L3-038) or vocational content (F-12)",
+   "entry_points": [
+    "Quality Learner Assessment System Development",
+    "21st-Century Learning Model Development",
+    "Active Learning and STEM Integration Promotion"
+   ]
   },
   {
    "pathway_id": "L3-038",
@@ -6589,7 +6939,17 @@
    "v2_mechanism": "Teaching and learning quality",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Teacher recruitment, training, pay, incentives and accountability",
+   "joins_when": "it concerns teachers: their training, supply, pay, incentives or accountability",
+   "joins_not": "it is the curriculum they teach (L3-037)",
+   "entry_points": [
+    "Teacher Education and Development Upgrade Programme",
+    "Teacher Training and Professional Development Reform",
+    "Teacher Quality Development and Incentive Programme",
+    "Teaching Excellence Recognition and Incentive Measures",
+    "Teacher Role Modernisation and Capacity Development Programme"
+   ]
   },
   {
    "pathway_id": "L3-039",
@@ -6625,7 +6985,17 @@
    "v2_mechanism": "Early childhood development and nutrition",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Early childhood development centres, pre-school, parenting support",
+   "joins_when": "it serves children before school age: centres, pre-school, caregivers",
+   "joins_not": "it is childcare to free parents' time (L3-005) or infant nutrition (L3-054)",
+   "entry_points": [
+    "Expand and improve early childhood development centers nationwide",
+    "Early Childhood Development and Child Care Expansion Programme",
+    "Preparedness and collaborative mechanisms for maternal and early childhood development services",
+    "Teacher and Caregiver Early Childhood Development Skills Programme",
+    "Early Childhood Development Facility Upgrading and Resource Support"
+   ]
   },
   {
    "pathway_id": "L3-040",
@@ -6659,7 +7029,13 @@
    "v2_mechanism": "Access to and completion of schooling",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Scholarships, fee abolition, stipends and student loans",
+   "joins_when": "it lowers the cost of schooling to the household",
+   "joins_not": "it is a conditional cash transfer run by welfare (L3-030)",
+   "entry_points": [
+    "Scholarship Support for Disadvantaged Students"
+   ]
   },
   {
    "pathway_id": "L3-042",
@@ -6693,7 +7069,13 @@
    "v2_mechanism": "Early childhood development and nutrition",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "School health, sanitation and nutrition services",
+   "joins_when": "it provides health, sanitation or nutrition at school",
+   "joins_not": "it is school meals alone (L3-058)",
+   "entry_points": [
+    "Healthy Living and School Sanitation Promotion"
+   ]
   },
   {
    "pathway_id": "L3-041",
@@ -6729,7 +7111,13 @@
    "v2_mechanism": "Higher education and research skills",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": "moved"
+   "revised": "moved",
+   "lever": "Universities, tertiary quality, research skills and institutional excellence",
+   "joins_when": "it expands or improves higher education or research training",
+   "joins_not": "it is university-industry transfer (L3-132) or vocational training (L3-032)",
+   "entry_points": [
+    "Specialized institutional excellence development"
+   ]
   },
   {
    "pathway_id": "L3-031",
@@ -6765,7 +7153,11 @@
    "v2_mechanism": "Skills for work",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "",
+   "joins_when": "",
+   "joins_not": "",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-032",
@@ -6801,7 +7193,14 @@
    "v2_mechanism": "Skills for work",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Vocational and technical training institutions and programmes",
+   "joins_when": "it trains people for work in institutions or courses",
+   "joins_not": "it places learners with employers (L3-033) or certifies skills (L3-034)",
+   "entry_points": [
+    "Logistics Human Resource and Planning Enhancement",
+    "Skilled workforce production for labour market and national development"
+   ]
   },
   {
    "pathway_id": "L3-033",
@@ -6837,7 +7236,17 @@
    "v2_mechanism": "Skills for work",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Apprenticeships, dual systems, internships, cooperative education",
+   "joins_when": "it puts learners in workplaces as part of training or eases the move from school to work",
+   "joins_not": "it is classroom training (L3-032)",
+   "entry_points": [
+    "Educational Excellence and Workforce Preparation Programme",
+    "Incentives for Dual and Cooperative Education Participation",
+    "Dual and Cooperative Education Incentive Mechanisms",
+    "Collaborative Curriculum and Learner Evaluation Development",
+    "Dual Vocational and Cooperative Education Systems"
+   ]
   },
   {
    "pathway_id": "L3-034",
@@ -6877,7 +7286,17 @@
    "v2_mechanism": "Skills for work",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": "cues; cues of L3-031"
+   "revised": "cues; cues of L3-031",
+   "lever": "Qualification frameworks, skills certification, occupational standards, labour-market information",
+   "joins_when": "it makes skills visible or comparable: standards, certification, workforce information systems",
+   "joins_not": "it builds the skills themselves (L3-032)",
+   "entry_points": [
+    "Vocational Education Curriculum Co-design and Standards Upgrade",
+    "Learning, Skills and Career Entry Platforms",
+    "Workforce Planning and Competency Information Systems Development",
+    "Labor Training Center Standards and Occupational Standards Development",
+    "Vocational Qualification Standards Upgrade and Skills Network Development"
+   ]
   },
   {
    "pathway_id": "L3-035",
@@ -6913,7 +7332,16 @@
    "v2_mechanism": "Skills for work",
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
-   "revised": ""
+   "revised": "",
+   "lever": "Digital skills training for workers, students and firms",
+   "joins_when": "it teaches digital skills",
+   "joins_not": "it provides connectivity or devices (L3-261)",
+   "entry_points": [
+    "Digital Infrastructure and Standard Systems Support for SMEs",
+    "Innovation and Digital Economy Knowledge Enhancement Project for New Graduates",
+    "English and Digital Skills Development",
+    "Learner English and digital skills development"
+   ]
   },
   {
    "pathway_id": "L3-261",
@@ -6950,7 +7378,17 @@
    "v2_family_id": "",
    "v2_family": "",
    "added_in": "v3",
-   "revised": "evidence"
+   "revised": "evidence",
+   "lever": "Affordable connectivity, devices and public access points for households",
+   "joins_when": "it gives households or citizens internet access, devices or affordable connectivity",
+   "joins_not": "it serves firms (L3-140), delivers government services digitally (L3-227) or teaches skills (L3-035)",
+   "entry_points": [
+    "Digital Platforms for Agricultural Markets and Operators",
+    "Promotion of advanced digital technologies in everyday living",
+    "Develop High-Quality and Accessible Technological Infrastructure",
+    "E-learning Materials and Low-cost Learning Materials Incentive Programme",
+    "Nationwide Free Wifi for Education"
+   ]
   },
   {
    "pathway_id": "L3-068",
@@ -6986,7 +7424,17 @@
    "v2_mechanism": "Carbon pricing and climate regulation",
    "v2_family_id": "FAM-08",
    "v2_family": "Climate mitigation and energy transition",
-   "revised": ""
+   "revised": "",
+   "lever": "Carbon pricing, emissions trading, carbon credits and offsets",
+   "joins_when": "it puts a price on emissions or builds a carbon market or credit scheme",
+   "joins_not": "it funds clean technology (L3-069) or sets efficiency standards (L3-071)",
+   "entry_points": [
+    "Climate Finance Mechanisms for Public-Private Cooperation",
+    "Carbon Credit Market Research and Emissions Quota Studies",
+    "Carbon Fund for Carbon Credits and Offsets",
+    "Promote a low-carbon society",
+    "Low-Carbon Urban Planning and Green Area Guidelines"
+   ]
   },
   {
    "pathway_id": "L3-069",
@@ -7023,7 +7471,17 @@
    "v2_mechanism": "Clean energy and technology deployment",
    "v2_family_id": "FAM-08",
    "v2_family": "Climate mitigation and energy transition",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Subsidies, incentives and research for clean and low-carbon technology",
+   "joins_when": "it supports developing or adopting clean technology: renewables R&D, EV incentives, clean industry",
+   "joins_not": "it prices emissions (L3-068) or deploys at scale to bring costs down (L3-070)",
+   "entry_points": [
+    "Renewable Energy Research and Commercialisation Support",
+    "Alternative Energy R&D Support",
+    "Energy-Saving Automobile Technology Development",
+    "Renewable Energy Incentives and Energy Management Regulation Update",
+    "Tropical Energy-Efficient Building R&D Programme"
+   ]
   },
   {
    "pathway_id": "L3-070",
@@ -7059,7 +7517,14 @@
    "v2_mechanism": "Clean energy and technology deployment",
    "v2_family_id": "FAM-08",
    "v2_family": "Climate mitigation and energy transition",
-   "revised": ""
+   "revised": "",
+   "lever": "Deployment programmes for solar, wind, storage and other clean energy",
+   "joins_when": "it builds or buys clean energy capacity at scale",
+   "joins_not": "it funds research rather than deployment (L3-069)",
+   "entry_points": [
+    "Alternative Energy Technology Research and Development",
+    "Waste-to-Energy Technology Development Support"
+   ]
   },
   {
    "pathway_id": "L3-071",
@@ -7096,7 +7561,17 @@
    "v2_mechanism": "Energy efficiency",
    "v2_family_id": "FAM-08",
    "v2_family": "Climate mitigation and energy transition",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Efficiency standards, labels, audits and conservation incentives",
+   "joins_when": "it cuts energy use through standards, labelling, audits, building codes or conservation campaigns",
+   "joins_not": "it prices energy or emissions (L3-068, L3-148)",
+   "entry_points": [
+    "Energy Conservation Incentives and Public Awareness Programme",
+    "Energy Conservation and Efficiency Law Enforcement",
+    "Energy Conservation Technology Research and Standards Programme",
+    "Energy Efficiency Improvement in Transport and Logistics",
+    "National energy efficiency promotion"
+   ]
   },
   {
    "pathway_id": "L3-072",
@@ -7132,7 +7607,11 @@
    "v2_mechanism": "Low-carbon infrastructure and avoiding lock-in",
    "v2_family_id": "FAM-08",
    "v2_family": "Climate mitigation and energy transition",
-   "revised": ""
+   "revised": "",
+   "lever": "Planning and investment rules that avoid new high-carbon infrastructure",
+   "joins_when": "it steers long-lived infrastructure or capital away from high-carbon forms, or retires it",
+   "joins_not": "it is efficiency of existing use (L3-071)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-262",
@@ -7170,7 +7649,15 @@
    "v2_family_id": "",
    "v2_family": "",
    "added_in": "v3",
-   "revised": ""
+   "revised": "",
+   "lever": "Transition support for workers, firms and places hit by decarbonisation",
+   "joins_when": "it supports workers, enterprises or regions that lose from the move away from fossil fuels or combustion engines",
+   "joins_not": "it supports the new industry itself (L3-069) or workers hit by trade or automation (F-35)",
+   "entry_points": [
+    "EV Industry Transition Support Programme",
+    "Transition Support for Internal Combustion Engine and Power Transmission Enterprises",
+    "Remedy Measures for Parties Affected by the EV Transition"
+   ]
   },
   {
    "pathway_id": "L3-086",
@@ -7206,7 +7693,17 @@
    "v2_mechanism": "Risk-informed land use and settlement",
    "v2_family_id": "FAM-11",
    "v2_family": "Resilience to climate and disasters",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Hazard mapping, land-use zoning and relocation out of exposed areas",
+   "joins_when": "it keeps people and assets out of harm's way: zoning, hazard maps, relocation, coastal setbacks",
+   "joins_not": "it protects assets in place (L3-087) or uses ecosystems (L3-088)",
+   "entry_points": [
+    "Manage economic activities within natural resource capacity",
+    "Define appropriate land use within resource capacity",
+    "Disaster Prevention Measures in Key Areas",
+    "Littoral Cell Coastal Management System",
+    "Climate-resilient city protection and adaptation planning"
+   ]
   },
   {
    "pathway_id": "L3-087",
@@ -7242,7 +7739,17 @@
    "v2_mechanism": "Resilient infrastructure and asset protection",
    "v2_family_id": "FAM-11",
    "v2_family": "Resilience to climate and disasters",
-   "revised": ""
+   "revised": "",
+   "lever": "Resilient building codes, protective works and hardened infrastructure",
+   "joins_when": "it strengthens buildings or infrastructure against hazards: standards, flood defences, resilient design",
+   "joins_not": "it relocates (L3-086) or restores ecosystems (L3-088)",
+   "entry_points": [
+    "Building and Infrastructure Safety Standards Upgrade",
+    "Climate-Resilient New Infrastructure Standards",
+    "Coastal Construction Standards Improvement",
+    "Disaster-Resilient Utilities and Infrastructure Standards",
+    "Flood Preparedness Infrastructure and Catchment Management"
+   ]
   },
   {
    "pathway_id": "L3-088",
@@ -7279,7 +7786,17 @@
    "v2_mechanism": "Nature-based protection",
    "v2_family_id": "FAM-11",
    "v2_family": "Resilience to climate and disasters",
-   "revised": ""
+   "revised": "",
+   "lever": "Mangroves, wetlands, forests and other nature-based protection",
+   "joins_when": "it protects or restores ecosystems as a buffer against hazards",
+   "joins_not": "it conserves habitat for its own sake (L3-075, L3-078)",
+   "entry_points": [
+    "Nature-based solutions for disaster and climate resilience",
+    "Mangrove, Coral Reef, and Seagrass Conservation Programme",
+    "Integrated Ecologically Friendly Coastal Restoration Plan",
+    "Upstream Forest Regeneration and Soil Conservation Programme",
+    "Wetland and Mangrove Conservation and Restoration"
+   ]
   },
   {
    "pathway_id": "L3-089",
@@ -7315,7 +7832,17 @@
    "v2_mechanism": "Climate-resilient livelihoods and adaptation",
    "v2_family_id": "FAM-11",
    "v2_family": "Resilience to climate and disasters",
-   "revised": "evidence"
+   "revised": "evidence",
+   "lever": "Climate-resilient farming practices, zoning of crops to suitability",
+   "joins_when": "it changes what or how producers grow or make to suit the climate",
+   "joins_not": "it is irrigation (L3-160) or general productivity (F-32)",
+   "entry_points": [
+    "Transition from inappropriate cultivated areas to high-value agricultural commodities",
+    "Agricultural Zoning and Productivity Improvement Measures",
+    "Agricultural Land Conversion and Sustainable Farming Programme",
+    "Agricultural Land Management Zoning",
+    "Agricultural water efficiency and zoning measures"
+   ]
   },
   {
    "pathway_id": "L3-090",
@@ -7351,7 +7878,11 @@
    "v2_mechanism": "Climate-resilient livelihoods and adaptation",
    "v2_family_id": "FAM-11",
    "v2_family": "Resilience to climate and disasters",
-   "revised": ""
+   "revised": "",
+   "lever": "Protection and recovery support aimed at poor households' assets",
+   "joins_when": "it names the poor's assets or recovery after disasters as the target",
+   "joins_not": "it is general relief (L3-244) or insurance (L3-021)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-073",
@@ -7388,7 +7919,14 @@
    "v2_mechanism": "Sustainable use of forests, fisheries and land",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Community or co-management rules for shared resources",
+   "joins_when": "it sets rules or community institutions for a shared resource: fisheries, forests, pasture",
+   "joins_not": "it allocates individual harvest rights (L3-074) or declares protected areas (L3-075)",
+   "entry_points": [
+    "Ecosystem-Based Fisheries Management",
+    "Artisanal Fisheries Improvement and Coastal Conservation Programme"
+   ]
   },
   {
    "pathway_id": "L3-074",
@@ -7424,7 +7962,13 @@
    "v2_mechanism": "Sustainable use of forests, fisheries and land",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Catch shares, quotas and harvest limits",
+   "joins_when": "it sets harvest limits or rights to a share of a stock",
+   "joins_not": "it is community management (L3-073)",
+   "entry_points": [
+    "Fishery Resource Restoration and Sustainable Management"
+   ]
   },
   {
    "pathway_id": "L3-075",
@@ -7460,7 +8004,17 @@
    "v2_mechanism": "Conservation and protected areas",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Protected areas, conservation zoning and enforcement against encroachment",
+   "joins_when": "it designates or enforces protected areas or land-use controls to conserve habitat",
+   "joins_not": "it pays for conservation (L3-076) or restores degraded land (L3-078)",
+   "entry_points": [
+    "Land Use Controls for Conservation Area Protection",
+    "Accurate conservation area establishment",
+    "Marine Ecosystem Conservation and Protection Programme",
+    "Wetland Conservation and Ramsar Site Management",
+    "Marine, Coastal and Delta Protection Area Declaration and Restoration Measures"
+   ]
   },
   {
    "pathway_id": "L3-076",
@@ -7497,7 +8051,17 @@
    "v2_mechanism": "Sustainable use of forests, fisheries and land",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Payments for ecosystem services, conservation-linked livelihoods, carbon and biodiversity credits",
+   "joins_when": "it ties income or payments to conserving nature",
+   "joins_not": "it regulates (L3-075)",
+   "entry_points": [
+    "Income Generation from Natural and Cultural Conservation",
+    "Community Income Generation through Zero-Waste Circular Economy",
+    "Community Income Generation from Biological and Cultural Diversity",
+    "Carbon Market System Development and Certification Programme",
+    "Forest Plantation Incentive and Tree Bank Initiative"
+   ]
   },
   {
    "pathway_id": "L3-077",
@@ -7534,7 +8098,14 @@
    "v2_mechanism": "Sustainable use of forests, fisheries and land",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": ""
+   "revised": "",
+   "lever": "Governance of forest rents: concessions, local accountability, traceability",
+   "joins_when": "it changes the incentives of officials or politicians over forests and land conversion",
+   "joins_not": "it is protection on the ground (L3-075)",
+   "entry_points": [
+    "Deforestation Prevention and Forest Protection",
+    "Agricultural Zoning and Traceability System"
+   ]
   },
   {
    "pathway_id": "L3-078",
@@ -7572,7 +8143,17 @@
    "v2_mechanism": "Restoration of degraded ecosystems",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Reforestation, land and watershed restoration",
+   "joins_when": "it restores degraded forest, land, soil or water",
+   "joins_not": "it protects what exists (L3-075) or is a buffer against hazards (L3-088)",
+   "entry_points": [
+    "Expand watershed and economic forests",
+    "Government Investment Policy for Natural Resource Conservation and Restoration",
+    "Forest Restoration and Expansion Programme",
+    "Soil and Water Restoration in Disaster-Prone Areas",
+    "Restore Degraded Tourist Destinations"
+   ]
   },
   {
    "pathway_id": "L3-079",
@@ -7608,7 +8189,11 @@
    "v2_mechanism": "Conservation and protected areas",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": ""
+   "revised": "",
+   "lever": "Biosecurity and invasive species control",
+   "joins_when": "it controls invasive species or plant and animal biosecurity at borders",
+   "joins_not": "it is animal disease in farming (L3-163)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-105",
@@ -7644,7 +8229,17 @@
    "v2_mechanism": "Water resources management",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Water pricing, allocation rules, conservation and efficiency measures",
+   "joins_when": "it allocates water among users or raises the efficiency of its use",
+   "joins_not": "it stores water (L3-107) or supplies households (L3-060)",
+   "entry_points": [
+    "Water Conservation and Efficiency Promotion",
+    "Water Allocation System for Multiple Uses",
+    "Area-based water allocation and rapid rehabilitation system",
+    "Water Conservation and Efficiency Improvement Programme",
+    "Local Water Demand Management Studies and Efficiency Measures"
+   ]
   },
   {
    "pathway_id": "L3-106",
@@ -7680,7 +8275,13 @@
    "v2_mechanism": "Water resources management",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": ""
+   "revised": "",
+   "lever": "Groundwater regulation and pumping controls",
+   "joins_when": "it controls groundwater extraction",
+   "joins_not": "it is surface-water allocation (L3-105)",
+   "entry_points": [
+    "Groundwater Use Control for Sustainable Carrying Capacity"
+   ]
   },
   {
    "pathway_id": "L3-107",
@@ -7717,7 +8318,17 @@
    "v2_mechanism": "Water resources management",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Reservoirs, irrigation storage, small water sources and distribution",
+   "joins_when": "it builds or rehabilitates water storage and distribution",
+   "joins_not": "it is on-farm irrigation returns (L3-160) or household supply (L3-060)",
+   "entry_points": [
+    "Irrigation and Water Source Rehabilitation and Management Programme",
+    "Sediment Management for Reservoir Water Retention",
+    "Water Storage and Distribution Efficiency Improvement",
+    "Small Water Storage Facility Cluster Development",
+    "Community Small Weir Construction"
+   ]
   },
   {
    "pathway_id": "L3-108",
@@ -7754,7 +8365,14 @@
    "v2_mechanism": "Water resources management",
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
-   "revised": ""
+   "revised": "",
+   "lever": "River basin institutions and cross-border water cooperation",
+   "joins_when": "it sets up basin-level or transboundary water management",
+   "joins_not": "it is domestic allocation (L3-105)",
+   "entry_points": [
+    "International collaborative mechanisms for disaster, climate, and transboundary environmental management",
+    "River Basin Management Empowerment and Planning Reform"
+   ]
   },
   {
    "pathway_id": "L3-080",
@@ -7790,7 +8408,17 @@
    "v2_mechanism": "Air, water and industrial pollution control",
    "v2_family_id": "FAM-10",
    "v2_family": "Pollution and a healthy environment",
-   "revised": ""
+   "revised": "",
+   "lever": "Emission standards, permits, environmental taxes and fees",
+   "joins_when": "it regulates or prices pollution: standards, permits, levies, chemical controls",
+   "joins_not": "it monitors or enforces an existing rule (L3-241), promotes cleaner production (L3-082) or manages waste (L3-083)",
+   "entry_points": [
+    "Industrial Pollution Reduction and Resource Efficiency Measures",
+    "Environmental Tax and Fee Collection",
+    "Agricultural Chemicals Control and Organic Substitution Measures",
+    "Wastewater Discharge Permit Standards",
+    "Environmental Standards Support for Industrial Production and Investment"
+   ]
   },
   {
    "pathway_id": "L3-081",
@@ -7827,7 +8455,11 @@
    "v2_mechanism": "Protecting people from pollution exposure",
    "v2_family_id": "FAM-10",
    "v2_family": "Pollution and a healthy environment",
-   "revised": ""
+   "revised": "",
+   "lever": "Measures that cut people's exposure to polluted air and water",
+   "joins_when": "it names protecting health from air or water pollution: clean-air zones, exposure reduction",
+   "joins_not": "it regulates emitters (L3-080)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-082",
@@ -7863,7 +8495,11 @@
    "v2_mechanism": "Air, water and industrial pollution control",
    "v2_family_id": "FAM-10",
    "v2_family": "Pollution and a healthy environment",
-   "revised": "unmerged"
+   "revised": "unmerged",
+   "lever": "Cleaner production, resource efficiency and green industry programmes",
+   "joins_when": "it helps firms produce with less pollution or material per unit",
+   "joins_not": "it regulates them (L3-080) or manages waste after the fact (L3-083)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-083",
@@ -7899,7 +8535,17 @@
    "v2_mechanism": "Waste management and circular economy",
    "v2_family_id": "FAM-10",
    "v2_family": "Pollution and a healthy environment",
-   "revised": ""
+   "revised": "",
+   "lever": "Waste collection, recycling, treatment, disposal and circular economy",
+   "joins_when": "it manages waste or material flows: collection, sorting, recycling, waste-to-energy, circular economy",
+   "joins_not": "it is production efficiency (L3-082)",
+   "entry_points": [
+    "Manufacturing and Services Efficiency Improvement for Circular Economy",
+    "Community-Level Systematic Garbage Management",
+    "Community Waste Reduction and Sorting System",
+    "Waste-to-Energy Conversion Support",
+    "Model Communities for Waste-Based Income Generation"
+   ]
   },
   {
    "pathway_id": "L3-084",
@@ -7935,7 +8581,11 @@
    "v2_mechanism": "Protecting people from pollution exposure",
    "v2_family_id": "FAM-10",
    "v2_family": "Pollution and a healthy environment",
-   "revised": ""
+   "revised": "",
+   "lever": "Control of lead, pesticides and other toxic substances",
+   "joins_when": "it controls or removes toxic substances that harm development",
+   "joins_not": "it is general pollution regulation (L3-080)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-085",
@@ -7972,7 +8622,17 @@
    "v2_mechanism": "Environmental behaviour and awareness",
    "v2_family_id": "FAM-10",
    "v2_family": "Pollution and a healthy environment",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Campaigns, environmental education, labels and feedback that change behaviour",
+   "joins_when": "it informs, educates or nudges households and firms towards environmental behaviour",
+   "joins_not": "it regulates or prices (L3-080)",
+   "entry_points": [
+    "Transition to an environmentally friendly circular economy and low-carbon society",
+    "Raise social awareness for sustainable living",
+    "Cultivating consumers' motivation and life attitudes for sustainable consumption",
+    "Raise awareness and build motivation for natural resource conservation",
+    "Sustainable Consumption Behavior Change Incentives"
+   ]
   },
   {
    "pathway_id": "L3-091",
@@ -8008,7 +8668,11 @@
    "v2_mechanism": "Managing natural resource wealth",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Sovereign funds and rules that invest resource revenues",
+   "joins_when": "it saves or invests resource revenues for the future",
+   "joins_not": "it stabilises spending against volatility (L3-094, L3-097)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-092",
@@ -8045,7 +8709,11 @@
    "v2_mechanism": "Managing natural resource wealth",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Exchange-rate and absorption management during resource booms",
+   "joins_when": "it names protecting other tradable sectors from a resource boom",
+   "joins_not": "it is diversification policy in general (F-22)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-093",
@@ -8082,7 +8750,11 @@
    "v2_mechanism": "Managing natural resource wealth",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Transparency and governance of resource revenues",
+   "joins_when": "it concerns who captures resource rents: contracts, transparency, revenue governance",
+   "joins_not": "it is corruption in general (L3-215)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-094",
@@ -8119,7 +8791,11 @@
    "v2_mechanism": "Managing natural resource wealth",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Stabilisation funds and counter-cyclical rules for resource revenues",
+   "joins_when": "it smooths spending against swings in resource revenues",
+   "joins_not": "it is fiscal rules in general (L3-097)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-095",
@@ -8155,7 +8831,11 @@
    "v2_mechanism": "Debt and fiscal sustainability",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Debt management and fiscal consolidation",
+   "joins_when": "it manages public debt or the fiscal balance to keep debt sustainable",
+   "joins_not": "it is budget procedure (L3-237)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-096",
@@ -8191,7 +8871,11 @@
    "v2_mechanism": "Debt and fiscal sustainability",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Debt reduction to restore private investment",
+   "joins_when": "it names high public debt as a drag on investment and acts on it",
+   "joins_not": "it is routine debt management (L3-095)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-097",
@@ -8227,7 +8911,11 @@
    "v2_mechanism": "Debt and fiscal sustainability",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Fiscal rules, debt ceilings and fiscal councils",
+   "joins_when": "it sets rules or institutions over aggregate fiscal policy",
+   "joins_not": "it is budget execution (L3-237)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-098",
@@ -8263,7 +8951,13 @@
    "v2_mechanism": "Debt and fiscal sustainability",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Disclosure and management of guarantees, SOE and PPP liabilities",
+   "joins_when": "it assesses or controls fiscal risks and contingent liabilities",
+   "joins_not": "it is the PPP contract itself (L3-238)",
+   "entry_points": [
+    "Fiscal Risk Prevention and Comprehensive Fiscal Position Assessment"
+   ]
   },
   {
    "pathway_id": "L3-099",
@@ -8299,7 +8993,11 @@
    "v2_mechanism": "Debt and fiscal sustainability",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": "unmerged"
+   "revised": "unmerged",
+   "lever": "Long-term fiscal planning for ageing and future generations",
+   "joins_when": "it names future generations or long-run fiscal burdens as the reason",
+   "joins_not": "it is pension design (L3-025)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-100",
@@ -8335,7 +9033,15 @@
    "v2_mechanism": "Demographic change and ageing",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Family planning, reproductive health and fertility policy",
+   "joins_when": "it provides reproductive health or family planning, or aims to raise or lower fertility",
+   "joins_not": "it is maternal care (L3-047)",
+   "entry_points": [
+    "Population Structure and Distribution Adjustment",
+    "Fertility Support and Childbearing Encouragement",
+    "Quality Reproductive Health and Family Support Measures"
+   ]
   },
   {
    "pathway_id": "L3-101",
@@ -8371,7 +9077,11 @@
    "v2_mechanism": "Demographic change and ageing",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Incentives for investment per child: education returns, child allowances tied to quality",
+   "joins_when": "it names raising investment per child as the aim of fertility or family policy",
+   "joins_not": "it is schooling policy itself (F-11)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-102",
@@ -8407,7 +9117,11 @@
    "v2_mechanism": "Demographic change and ageing",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Savings and financial institutions for a working-age population",
+   "joins_when": "it builds savings for the demographic dividend",
+   "joins_not": "it is general financial deepening (L3-172)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-103",
@@ -8443,7 +9157,16 @@
    "v2_mechanism": "Demographic change and ageing",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Retirement age, incentives and support for older workers",
+   "joins_when": "it keeps or brings older people into work",
+   "joins_not": "it provides pensions (L3-025) or care (L3-104)",
+   "entry_points": [
+    "Elderly Social Participation and Lifelong Learning Programme",
+    "Monetary and fiscal incentives for elderly employment",
+    "Marketing, finance, and information support for elderly employment",
+    "Employment and Income Generation Support for Elderly People"
+   ]
   },
   {
    "pathway_id": "L3-104",
@@ -8479,7 +9202,17 @@
    "v2_mechanism": "Demographic change and ageing",
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
-   "revised": ""
+   "revised": "",
+   "lever": "Long-term care systems, financing and family caregiver support",
+   "joins_when": "it provides, finances or organises long-term care for older or dependent people",
+   "joins_not": "it is income in old age (L3-025)",
+   "entry_points": [
+    "Elderly Social Protection and Long-Term Care Support",
+    "Long-term Care Legislation and Sustainable Financing System",
+    "Medium-term aftercare and long-term care system development",
+    "Long-term Care Innovation for the Elderly",
+    "Long-term care law for older persons"
+   ]
   },
   {
    "pathway_id": "L3-114",
@@ -8515,7 +9248,13 @@
    "v2_mechanism": "Trade facilitation, logistics and standards",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Export promotion, standards certification and market information for new exporters",
+   "joins_when": "it helps firms start exporting: certification, trade platforms, market information",
+   "joins_not": "it cuts per-unit freight or port costs (L3-115) or border times (L3-116)",
+   "entry_points": [
+    "International Trade Platforms for SME Export Expansion"
+   ]
   },
   {
    "pathway_id": "L3-115",
@@ -8551,7 +9290,14 @@
    "v2_mechanism": "Trade facilitation, logistics and standards",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Ports, logistics corridors and freight services",
+   "joins_when": "it lowers the cost of moving goods to foreign markets",
+   "joins_not": "it is border procedure and time (L3-116) or domestic connectivity (F-25)",
+   "entry_points": [
+    "IMT-GT Connectivity and Economic Zone Development Program",
+    "Logistics Facilities and Service Centers Development"
+   ]
   },
   {
    "pathway_id": "L3-116",
@@ -8587,7 +9333,15 @@
    "v2_mechanism": "Trade facilitation, logistics and standards",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Customs, border procedures and transit agreements",
+   "joins_when": "it shortens or simplifies border crossing and customs",
+   "joins_not": "it is freight infrastructure (L3-115)",
+   "entry_points": [
+    "Cross-Border Transport Agreement Implementation and Border Checkpoint Operations",
+    "Border Checkpoint and Crossing Facilitation Improvement",
+    "Cross-border Transport Rules and Procedures Simplification"
+   ]
   },
   {
    "pathway_id": "L3-117",
@@ -8624,7 +9378,11 @@
    "v2_mechanism": "Trade facilitation, logistics and standards",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Air routes and connectivity for business travel",
+   "joins_when": "it builds direct air links for business and investment",
+   "joins_not": "it is tourism arrivals (F-21)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-118",
@@ -8660,7 +9418,17 @@
    "v2_mechanism": "Trade agreements and regional integration",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Free trade agreements, regional integration and their use",
+   "joins_when": "it negotiates, joins or uses trade agreements and blocs",
+   "joins_not": "it is unilateral preferences (L3-119)",
+   "entry_points": [
+    "Trade and investment relationship development through free trade agreements and special development zones",
+    "Construct New Trade and Cooperation Agreements",
+    "Feasibility Studies for New Free Trade Areas",
+    "Accelerate utilization of free trade agreements",
+    "FTA Activation and Enterprise Preparedness Programme"
+   ]
   },
   {
    "pathway_id": "L3-119",
@@ -8696,7 +9464,13 @@
    "v2_mechanism": "Trade agreements and regional integration",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Use and defence of unilateral trade preferences",
+   "joins_when": "it concerns preferential access granted by others and its erosion",
+   "joins_not": "it is a reciprocal agreement (L3-118)",
+   "entry_points": [
+    "Promote use of trade agreement preferences"
+   ]
   },
   {
    "pathway_id": "L3-120",
@@ -8732,7 +9506,11 @@
    "v2_mechanism": "Trade agreements and regional integration",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Own tariff and import liberalisation",
+   "joins_when": "it lowers the country's own tariffs or import barriers",
+   "joins_not": "it is market access abroad (L3-118)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-125",
@@ -8768,7 +9546,17 @@
    "v2_mechanism": "Tourism",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": ""
+   "revised": "",
+   "lever": "Destination development, secondary destinations, quality tourism and local linkages",
+   "joins_when": "it develops tourism destinations, routes or quality so that spending spreads locally",
+   "joins_not": "it manages visitor numbers against capacity (L3-126) or shock exposure (L3-127)",
+   "entry_points": [
+    "Transform Thailand's tourism into high quality-oriented tourism",
+    "Happy Model Tourism Development Programme",
+    "Develop High-Potential Secondary Tourist Destinations and Diverse Tourist Routes",
+    "Develop Quality Tourist Attractions and Services at Secondary Destinations",
+    "Tourism Value-Addition and Community-Based OTOP Tourism Promotion"
+   ]
   },
   {
    "pathway_id": "L3-126",
@@ -8806,7 +9594,17 @@
    "v2_mechanism": "Tourism",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": ""
+   "revised": "",
+   "lever": "Carrying-capacity rules, sustainable tourism management and site protection",
+   "joins_when": "it limits or manages tourism to protect the destination",
+   "joins_not": "it grows tourism (L3-125)",
+   "entry_points": [
+    "Sustainable Tourism Area Management and Green Tourism Support",
+    "Sustainable Tourism Management under the BCG Economy",
+    "Tourism Law Amendment for Ecosystem Carrying Capacity",
+    "Creative Tourist Destination Development and Cluster Tourism Promotion",
+    "Top Tourist Attraction Development and Rehabilitation Scheme"
+   ]
   },
   {
    "pathway_id": "L3-127",
@@ -8844,7 +9642,11 @@
    "v2_mechanism": "Tourism",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Diversification of source markets and tourism crisis measures",
+   "joins_when": "it reduces tourism's exposure to shocks or spreads its source markets",
+   "joins_not": "it is destination development (L3-125)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-109",
@@ -8880,7 +9682,11 @@
    "v2_mechanism": "Industrial upgrading and diversification",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": ""
+   "revised": "",
+   "lever": "Linking firms to demanding foreign buyers",
+   "joins_when": "it exposes firms to foreign buyers so that they learn and upgrade",
+   "joins_not": "it is export cost reduction (F-20)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-110",
@@ -8917,7 +9723,13 @@
    "v2_mechanism": "Industrial upgrading and diversification",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Support for entry into new, related and more complex products",
+   "joins_when": "it moves the economy into new or higher-value products near its current capabilities",
+   "joins_not": "it protects an infant sector (L3-112)",
+   "entry_points": [
+    "Smart Electronics Industry Upgrading and Domestic Sourcing Promotion"
+   ]
   },
   {
    "pathway_id": "L3-111",
@@ -8954,7 +9766,11 @@
    "v2_mechanism": "Industrial upgrading and diversification",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": ""
+   "revised": "",
+   "lever": "Policies that move labour and capital into higher-productivity sectors",
+   "joins_when": "it names moving workers or capital from low- to high-productivity sectors",
+   "joins_not": "it is one sector's support (L3-112)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-112",
@@ -8990,7 +9806,11 @@
    "v2_mechanism": "Industrial policy and priority sectors",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": ""
+   "revised": "",
+   "lever": "Time-bound protection or support for a new industry",
+   "joins_when": "it supports a named new industry until it can compete: EV, electronics, bio-industry",
+   "joins_not": "it is innovation policy in general (F-23)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-113",
@@ -9027,7 +9847,11 @@
    "v2_mechanism": "Modern services and the digital economy",
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
-   "revised": ""
+   "revised": "",
+   "lever": "Modern and digital services as an export and growth sector",
+   "joins_when": "it develops tradable or digital services as a growth sector",
+   "joins_not": "it is domestic digital infrastructure (F-25)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-128",
@@ -9063,7 +9887,14 @@
    "v2_mechanism": "Research and development",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": ""
+   "revised": "",
+   "lever": "Public and private R&D investment and incentives",
+   "joins_when": "it raises R&D spending or investment in new knowledge",
+   "joins_not": "it spreads existing technology (L3-129), transfers it from universities (L3-132) or funds basic science (L3-133)",
+   "entry_points": [
+    "Electric vehicle industry transformation",
+    "Smart Electrical and Electronics R&D Investment Promotion"
+   ]
   },
   {
    "pathway_id": "L3-129",
@@ -9099,7 +9930,17 @@
    "v2_mechanism": "Technology adoption and diffusion to firms",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Technology adoption support for firms: automation, ICT, modern methods",
+   "joins_when": "it helps firms adopt existing technology",
+   "joins_not": "it creates new technology (L3-128)",
+   "entry_points": [
+    "Improve production management efficiency through ICT adoption",
+    "EV Export Market Expansion",
+    "Modern Technology Adoption in Production",
+    "Industrial automation promotion",
+    "Technology Access for Farmers, Community Enterprises, and SMEs"
+   ]
   },
   {
    "pathway_id": "L3-130",
@@ -9135,7 +9976,11 @@
    "v2_mechanism": "Technology adoption and diffusion to firms",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": ""
+   "revised": "",
+   "lever": "Building firms' and the country's capability to use knowledge",
+   "joins_when": "it names building capability to absorb or use technology, rather than the technology itself",
+   "joins_not": "it is adoption support (L3-129)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-131",
@@ -9171,7 +10016,17 @@
    "v2_mechanism": "Knowledge transfer and intellectual property",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": ""
+   "revised": "",
+   "lever": "Intellectual property systems and enforcement",
+   "joins_when": "it concerns patents, IP rights, their system or enforcement",
+   "joins_not": "it is R&D funding (L3-128)",
+   "entry_points": [
+    "Intellectual Property System Development Programme",
+    "Intellectual Property System Restructuring",
+    "World-Class Intellectual Property System and IP Database",
+    "R&D Translation and Commercialization Promotion Act",
+    "Intellectual Property Registration and Commercialization Reform"
+   ]
   },
   {
    "pathway_id": "L3-132",
@@ -9207,7 +10062,17 @@
    "v2_mechanism": "Knowledge transfer and intellectual property",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": ""
+   "revised": "",
+   "lever": "University-industry collaboration, commercialisation, spin-offs, technology transfer",
+   "joins_when": "it links research institutions to firms or commercialises research",
+   "joins_not": "it is higher education itself (L3-041)",
+   "entry_points": [
+    "Business-Education Collaboration for EV Technology Knowledge Transfer",
+    "Research network and innovation collaboration programme",
+    "University-startup innovation business collaboration",
+    "SME research collaboration for innovation-based economy",
+    "Stakeholder Partnership System for Research and Innovation"
+   ]
   },
   {
    "pathway_id": "L3-133",
@@ -9244,7 +10109,15 @@
    "v2_mechanism": "Research and development",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": ""
+   "revised": "",
+   "lever": "Public research funding and institutes",
+   "joins_when": "it funds research in public institutions or basic science",
+   "joins_not": "it is a directed mission programme (L3-134)",
+   "entry_points": [
+    "Vaccine Production Capacity Research Support",
+    "Funding support for in-house health research",
+    "Public Research Funding and Multi-sector Participation Support"
+   ]
   },
   {
    "pathway_id": "L3-134",
@@ -9280,7 +10153,11 @@
    "v2_mechanism": "Research and development",
    "v2_family_id": "FAM-15",
    "v2_family": "Innovation and technology",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Mission-oriented programmes in frontier fields: space, bio, quantum",
+   "joins_when": "it is a large directed programme in a frontier field",
+   "joins_not": "it is general R&D support (L3-128)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-161",
@@ -9317,7 +10194,17 @@
    "v2_mechanism": "Agricultural productivity and inputs",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Agricultural research, breeding and farm technology development",
+   "joins_when": "it researches or develops agricultural technology, varieties or practices",
+   "joins_not": "it extends known practices to farmers (L3-159)",
+   "entry_points": [
+    "High-value agricultural produce and processed products development",
+    "Targeted agricultural technology and innovation R&D support",
+    "Agricultural R&D and Mechanisation Upgrade Programme",
+    "Forest Research and High-value Wood Product Innovation",
+    "Agricultural Research and Development Programme"
+   ]
   },
   {
    "pathway_id": "L3-121",
@@ -9353,7 +10240,13 @@
    "v2_mechanism": "Foreign investment and global value chains",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Attracting foreign investment for capital and capacity",
+   "joins_when": "it attracts foreign capital as investment",
+   "joins_not": "it names knowledge transfer from foreign firms (L3-122) or investor facilitation (L3-123)",
+   "entry_points": [
+    "Attract International Big Tech Investment in Digital Infrastructure"
+   ]
   },
   {
    "pathway_id": "L3-122",
@@ -9390,7 +10283,17 @@
    "v2_mechanism": "Foreign investment and global value chains",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": "cues; evidence"
+   "revised": "cues; evidence",
+   "lever": "Supplier linkages, joint ventures and technology transfer from foreign firms",
+   "joins_when": "it names learning, technology or supplier links from foreign firms",
+   "joins_not": "it is capital alone (L3-121)",
+   "entry_points": [
+    "EV Export Market Expansion through Joint Ventures and Business Partnerships",
+    "EV Conversion Technology and Knowledge Transfer Support",
+    "Foreign Investment and Knowledge Transfer for Smart Electronics Upstream Industries",
+    "Technology upgrading support for local SMEs",
+    "National Research and Development and Technology Transfer Support Measures"
+   ]
   },
   {
    "pathway_id": "L3-123",
@@ -9426,7 +10329,17 @@
    "v2_mechanism": "Foreign investment and global value chains",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Investment promotion, facilitation and regulation of entry",
+   "joins_when": "it promotes, facilitates or deregulates investment entry",
+   "joins_not": "it is the capital's effect once in (L3-121)",
+   "entry_points": [
+    "Private Sector Investment Support for Agricultural Market Development",
+    "Relax EV supply-chain investment regulations",
+    "Mechanism for integrated investment promotion review and new economic fields",
+    "Attract Highly Skilled Foreign Experts and Retain Foreign Graduates for Innovation",
+    "Private Investment Promotion in Key Target Sectors"
+   ]
   },
   {
    "pathway_id": "L3-124",
@@ -9462,7 +10375,17 @@
    "v2_mechanism": "Foreign investment and global value chains",
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Global and regional value chain participation and upgrading",
+   "joins_when": "it links firms into regional or global value chains",
+   "joins_not": "it is export cost reduction (F-20)",
+   "entry_points": [
+    "Regional Value Chain Linkage Promotion",
+    "Regional and ASEAN Investment Distribution and Value Chain Linkage Promotion",
+    "SME Cluster and Global Value Chain Integration",
+    "SME Overseas Market Access Support",
+    "Thai Entrepreneurs in Global Production Networks and R&D Hub"
+   ]
   },
   {
    "pathway_id": "L3-193",
@@ -9498,7 +10421,14 @@
    "v2_mechanism": "Migration and remittances",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Diaspora engagement for trade, investment and knowledge",
+   "joins_when": "it mobilises nationals abroad for trade, investment or expertise",
+   "joins_not": "it brings migrants home (L3-191)",
+   "entry_points": [
+    "Establish overseas chambers and coordination centers",
+    "Incentivise expert foreigners and Thais abroad for technology and innovation development"
+   ]
   },
   {
    "pathway_id": "L3-135",
@@ -9534,7 +10464,13 @@
    "v2_mechanism": "Transport connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": "cues of L3-139"
+   "revised": "cues of L3-139",
+   "lever": "National road, rail and inland transport networks",
+   "joins_when": "it builds or upgrades transport between domestic markets and regions",
+   "joins_not": "it reaches villages (L3-136) or serves one city (F-28)",
+   "entry_points": [
+    "Rail Network Development and Cross-Border Rail Linkage Programme"
+   ]
   },
   {
    "pathway_id": "L3-136",
@@ -9570,7 +10506,11 @@
    "v2_mechanism": "Transport connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": ""
+   "revised": "",
+   "lever": "Rural roads and last-mile access",
+   "joins_when": "it connects villages or rural areas to markets and services",
+   "joins_not": "it is national trunk infrastructure (L3-135)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-137",
@@ -9606,7 +10546,11 @@
    "v2_mechanism": "Transport connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Connectivity designed to spread, not concentrate, activity",
+   "joins_when": "it names connecting peripheral regions to centres as a regional-balance measure",
+   "joins_not": "it is place-based subsidy (L3-185)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-138",
@@ -9642,7 +10586,16 @@
    "v2_mechanism": "Digital connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": ""
+   "revised": "",
+   "lever": "Market information systems and price data",
+   "joins_when": "it provides price or market information to producers and traders",
+   "joins_not": "it is physical transport (L3-135) or statistics for the state (L3-210)",
+   "entry_points": [
+    "Continuous Agricultural Commodity Price Data Collection",
+    "Bangkok Metropolitan Area Intelligent Transport Systems Integration",
+    "Digital Logistics Efficiency Improvements",
+    "Accessible Agricultural Knowledge Base Development"
+   ]
   },
   {
    "pathway_id": "L3-139",
@@ -9678,7 +10631,11 @@
    "v2_mechanism": "Transport connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": ""
+   "revised": "",
+   "lever": "",
+   "joins_when": "",
+   "joins_not": "",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-140",
@@ -9714,7 +10671,11 @@
    "v2_mechanism": "Digital connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": ""
+   "revised": "",
+   "lever": "Broadband and digital infrastructure for firms and places",
+   "joins_when": "it extends broadband or digital infrastructure",
+   "joins_not": "it is household access (L3-261) or e-commerce (L3-141)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-141",
@@ -9750,7 +10711,17 @@
    "v2_mechanism": "Digital connectivity",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": ""
+   "revised": "",
+   "lever": "E-commerce platforms, digital trade skills and delivery",
+   "joins_when": "it brings producers or firms onto online markets",
+   "joins_not": "it is the network itself (L3-140)",
+   "entry_points": [
+    "Enhancing Farmers' Online Trade Skills",
+    "Thai Digital Platform Transaction Expansion",
+    "ICT and E-commerce Support for Entrepreneurs",
+    "SME E-commerce Market Access and Innovation Support",
+    "Digital Business and E-commerce Platform Promotion"
+   ]
   },
   {
    "pathway_id": "L3-146",
@@ -9786,7 +10757,11 @@
    "v2_mechanism": "Reliable and affordable utilities",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Reliable electricity, gas and network supply for production",
+   "joins_when": "it improves the reliability or adequacy of utility supply to firms",
+   "joins_not": "it is household connection (L3-059) or clean generation (F-13)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-147",
@@ -9822,7 +10797,15 @@
    "v2_mechanism": "Reliable and affordable utilities",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Utility tariffs, fee collection and cost recovery",
+   "joins_when": "it fixes utility finances: tariffs that cover cost, fee collection, local service financing",
+   "joins_not": "it removes consumer subsidies (L3-148)",
+   "entry_points": [
+    "Wastewater Treatment Facility Operation by Local Authorities",
+    "Area-Based Electricity Tariff Study",
+    "Waste Management Fee Financing for Solid Waste and Wastewater Services"
+   ]
   },
   {
    "pathway_id": "L3-148",
@@ -9859,7 +10842,14 @@
    "v2_mechanism": "Reliable and affordable utilities",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Energy and water subsidy reform and price restructuring",
+   "joins_when": "it reforms subsidies or price structures for energy or water",
+   "joins_not": "it is the utility's own cost recovery (L3-147)",
+   "entry_points": [
+    "Energy Price Structure Revamp",
+    "Increase Biofuel Use in Transportation"
+   ]
   },
   {
    "pathway_id": "L3-149",
@@ -9895,7 +10885,14 @@
    "v2_mechanism": "Reliable and affordable utilities",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Regulation, unbundling and competition in network industries",
+   "joins_when": "it regulates or restructures a network industry: regulator, unbundling, SOE supervision in utilities",
+   "joins_not": "it is general competition law (L3-169)",
+   "entry_points": [
+    "SOE Regulatory and Supervisory Framework Alignment",
+    "Natural Gas Supply and Pipeline Expansion Programme"
+   ]
   },
   {
    "pathway_id": "L3-150",
@@ -9932,7 +10929,14 @@
    "v2_mechanism": "Reliable and affordable utilities",
    "v2_family_id": "FAM-16",
    "v2_family": "Infrastructure networks",
-   "revised": ""
+   "revised": "",
+   "lever": "Grid interconnection, pooling and regional energy links",
+   "joins_when": "it connects grids or pools supply across regions or borders",
+   "joins_not": "it is domestic capacity (L3-146)",
+   "entry_points": [
+    "Smart Grid Technology for EV Charging Integration",
+    "Regional Energy Collaboration and Joint Electricity Network Development"
+   ]
   },
   {
    "pathway_id": "L3-151",
@@ -9968,7 +10972,17 @@
    "v2_mechanism": "Clusters, zones and local supply chains",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Supply-chain development, local processing, supplier programmes, procurement from local producers",
+   "joins_when": "it builds links between stages of a chain: processing, supplier development, local procurement",
+   "joins_not": "it clusters firms in one place (L3-152, L3-153)",
+   "entry_points": [
+    "Promoting private-sector economic partnerships in agricultural development",
+    "Agricultural Supply Chain Partnership Mechanism",
+    "Enable public procurement from local communities for tourism development",
+    "Promoting EV Use in Public Transport and Public Institutions",
+    "Technology Transfer Conditions for Public Procurement"
+   ]
   },
   {
    "pathway_id": "L3-152",
@@ -10004,7 +11018,15 @@
    "v2_mechanism": "Clusters, zones and local supply chains",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Cluster development and shared facilities for a sector",
+   "joins_when": "it develops a sector cluster, shared facility or network of firms",
+   "joins_not": "it is a zone with its own rules and infrastructure (L3-153)",
+   "entry_points": [
+    "National Automotive and Tyre Test Center",
+    "Thailand Food Valley Project",
+    "Creative Economy Cluster Development and Supply Chain Linkage Support"
+   ]
   },
   {
    "pathway_id": "L3-153",
@@ -10040,7 +11062,17 @@
    "v2_mechanism": "Clusters, zones and local supply chains",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Special economic zones, industrial estates, corridors",
+   "joins_when": "it sets up or develops a zone, estate, corridor or border economic area",
+   "joins_not": "it is a cluster without a defined zone (L3-152) or a lagging-region policy (L3-185)",
+   "entry_points": [
+    "Infrastructure and Supporting Factors for Special Development Zones and Strategic Gateway Development",
+    "Logistics Service Centers and Rail Mode Shift Initiative",
+    "Border Town and Border Economic Zone Development for Economic Corridors",
+    "Border Special Economic Zones Development Programme",
+    "Southern Pilot Districts Special Economic Area Development"
+   ]
   },
   {
    "pathway_id": "L3-154",
@@ -10076,7 +11108,14 @@
    "v2_mechanism": "Clusters, zones and local supply chains",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Local content and processing rules around resource and primary industries",
+   "joins_when": "it links a resource or primary industry to local processing or suppliers",
+   "joins_not": "it is supply chains in general (L3-151)",
+   "entry_points": [
+    "Farmer Value-Chain Participation and Benefit-Sharing",
+    "Southern Agro-processing Base Development"
+   ]
   },
   {
    "pathway_id": "L3-142",
@@ -10112,7 +11151,11 @@
    "v2_mechanism": "Urban productivity, planning and housing supply",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Policies that raise the productivity of cities: density, planning for agglomeration",
+   "joins_when": "it names making cities more productive through density or scale",
+   "joins_not": "it is transport within cities (L3-143) or housing rules (L3-144)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-143",
@@ -10149,7 +11192,17 @@
    "v2_mechanism": "Urban productivity, planning and housing supply",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Urban public transport, demand management and congestion pricing",
+   "joins_when": "it manages urban traffic: public transport, modal shift, pricing",
+   "joins_not": "it is intercity transport (L3-135)",
+   "entry_points": [
+    "Urban Public Transportation Development in the Southern Region",
+    "Transport Energy Efficiency and Public Transport Development",
+    "Travel Demand Management and Modal Shift Measures",
+    "Travel Demand Management Measures",
+    "Transit-Oriented Urban Planning Measures"
+   ]
   },
   {
    "pathway_id": "L3-144",
@@ -10185,7 +11238,13 @@
    "v2_mechanism": "Urban productivity, planning and housing supply",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Land-use and building regulation affecting housing supply",
+   "joins_when": "it changes land-use or building rules in existing urban areas",
+   "joins_not": "it plans new land at the edge (L3-145)",
+   "entry_points": [
+    "Urban land-use control and anti-sprawl measures"
+   ]
   },
   {
    "pathway_id": "L3-145",
@@ -10222,7 +11281,15 @@
    "v2_mechanism": "Urban productivity, planning and housing supply",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Planned expansion: zoning, serviced land and infrastructure ahead of growth",
+   "joins_when": "it plans and services new urban land or whole city plans",
+   "joins_not": "it regulates existing land (L3-144)",
+   "entry_points": [
+    "Sustainable Development Area and City Planning",
+    "Integrated Urban Zoning and Infrastructure Network Development",
+    "Urban Planning for High-Growth Municipalities"
+   ]
   },
   {
    "pathway_id": "L3-185",
@@ -10259,7 +11326,13 @@
    "v2_mechanism": "Lagging regions and place-based development",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Targeted investment, incentives and zones for lagging regions",
+   "joins_when": "it directs support to a lagging region or province to lift it",
+   "joins_not": "it is a zone for its own sake (L3-153) or household diversification (L3-188)",
+   "entry_points": [
+    "Special Economic Zones and Corridor Development"
+   ]
   },
   {
    "pathway_id": "L3-186",
@@ -10295,7 +11368,11 @@
    "v2_mechanism": "Lagging regions and place-based development",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": ""
+   "revised": "",
+   "lever": "Measures aimed at the conditions that keep a place poor",
+   "joins_when": "it names a persistent poor area and the local conditions that trap it",
+   "joins_not": "it is the policy instrument itself (L3-185)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-188",
@@ -10332,7 +11409,11 @@
    "v2_mechanism": "Lagging regions and place-based development",
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
-   "revised": "moved"
+   "revised": "moved",
+   "lever": "Rural non-farm enterprise and job creation",
+   "joins_when": "it creates non-farm income in rural areas: rural enterprise, village industry, rural services",
+   "joins_not": "it is farm productivity (F-32)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-164",
@@ -10368,7 +11449,11 @@
    "v2_mechanism": "Firm capability and entrepreneurship",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Management training, business development services, consulting for firms",
+   "joins_when": "it improves how firms are managed: training, advisory, business development services",
+   "joins_not": "it lends (L3-165) or helps start-ups (L3-167)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-165",
@@ -10404,7 +11489,14 @@
    "v2_mechanism": "Access to finance",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Loans, guarantees and credit lines for small firms",
+   "joins_when": "it lends to or guarantees credit for existing small firms",
+   "joins_not": "it finances new ventures (L3-167) or households and microenterprises (L3-173)",
+   "entry_points": [
+    "Low-Interest Loan Support for EV and Parts Businesses",
+    "Expand SME and local enterprise access to loans"
+   ]
   },
   {
    "pathway_id": "L3-167",
@@ -10440,7 +11532,13 @@
    "v2_mechanism": "Firm capability and entrepreneurship",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": ""
+   "revised": "",
+   "lever": "Start-up funding, incubation and venture support",
+   "joins_when": "it funds or incubates new ventures and entrepreneurs",
+   "joins_not": "it is credit for existing firms (L3-165)",
+   "entry_points": [
+    "Smart Electronic Products and Parts Manufacturing Incentives"
+   ]
   },
   {
    "pathway_id": "L3-168",
@@ -10476,7 +11574,17 @@
    "v2_mechanism": "Competition, business regulation and contract enforcement",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Business registration, licensing and permit simplification",
+   "joins_when": "it makes it easier or cheaper to register, license or operate a business",
+   "joins_not": "it registers workers (L3-180) or enforces competition (L3-169)",
+   "entry_points": [
+    "Tourism Business Licensing and Regulatory Reform",
+    "Review and revise outdated laws, regulations and procedures for small enterprises",
+    "SME Registration Incentives for Health Business",
+    "SME Business Operations Facilitation and E-Government Platform",
+    "Review and revise laws to ease startup business operations"
+   ]
   },
   {
    "pathway_id": "L3-172",
@@ -10512,7 +11620,11 @@
    "v2_mechanism": "Access to finance",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": ""
+   "revised": "",
+   "lever": "Financial sector development, capital markets, supervision",
+   "joins_when": "it deepens or supervises the financial system as a whole",
+   "joins_not": "it targets excluded borrowers (L3-173)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-173",
@@ -10548,7 +11660,15 @@
    "v2_mechanism": "Access to finance",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Microcredit, credit scoring and access for households and microenterprises",
+   "joins_when": "it gives credit access to households, farmers or microenterprises",
+   "joins_not": "it is SME lending (L3-165) or savings (L3-174)",
+   "entry_points": [
+    "Digital collateral financing mechanism for SMEs",
+    "Agricultural Credit Monitoring System",
+    "Financial Access Facilitation and Credit Evaluation Tools"
+   ]
   },
   {
    "pathway_id": "L3-174",
@@ -10582,7 +11702,13 @@
    "v2_mechanism": "Access to finance",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Savings products and financial literacy",
+   "joins_when": "it promotes saving or financial literacy",
+   "joins_not": "it lends (L3-173) or is a pension (L3-025)",
+   "entry_points": [
+    "Financial Literacy and Household Savings Promotion"
+   ]
   },
   {
    "pathway_id": "L3-175",
@@ -10618,7 +11744,11 @@
    "v2_mechanism": "Access to finance",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": ""
+   "revised": "",
+   "lever": "Mobile money and digital payments",
+   "joins_when": "it extends digital payments or mobile money",
+   "joins_not": "it digitises government payments (L3-227)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-158",
@@ -10655,7 +11785,13 @@
    "v2_mechanism": "Agricultural productivity and inputs",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Input subsidies, credit and supply of seed and fertiliser",
+   "joins_when": "it supplies or subsidises farm inputs or finance for them",
+   "joins_not": "it teaches practices (L3-159) or supplies water (L3-160)",
+   "entry_points": [
+    "Support inputs for eco-friendly high-value agricultural models"
+   ]
   },
   {
    "pathway_id": "L3-159",
@@ -10691,7 +11827,17 @@
    "v2_mechanism": "Agricultural productivity and inputs",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Agricultural extension, farmer training and technology transfer",
+   "joins_when": "it transfers knowledge or practices to farmers: extension, demonstration, farmer networks",
+   "joins_not": "it develops the technology (L3-161) or supplies inputs (L3-158)",
+   "entry_points": [
+    "Encouraging farmers to use science, technology, and innovation in agricultural production and processing",
+    "Agricultural Knowledge Transfer and Climate-Resilient Production Support",
+    "Agricultural Technology Transfer and Knowledge Management System",
+    "Organic Agriculture Promotion and Pilot City Support",
+    "Learning Centers of Agricultural Productivity Enhancement"
+   ]
   },
   {
    "pathway_id": "L3-160",
@@ -10728,7 +11874,16 @@
    "v2_mechanism": "Agricultural productivity and inputs",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": ""
+   "revised": "",
+   "lever": "Irrigation and on-farm water management",
+   "joins_when": "it brings irrigation or water control to farms",
+   "joins_not": "it stores water at basin level (L3-107)",
+   "entry_points": [
+    "Agricultural Water Storage and Watershed Management Programme",
+    "Water Resource Development for Unirrigated Agricultural Areas",
+    "Irrigation Infrastructure Expansion for Climate Adaptation",
+    "Climate-Smart Agricultural Methods for Small-Scale Farmers"
+   ]
   },
   {
    "pathway_id": "L3-162",
@@ -10764,7 +11919,14 @@
    "v2_mechanism": "Agricultural productivity and inputs",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Land consolidation, large-scale farming and mechanisation",
+   "joins_when": "it enlarges farms, consolidates plots or mechanises",
+   "joins_not": "it reforms land rights (F-38)",
+   "entry_points": [
+    "Large-Scale Agricultural Production in Pilot Areas",
+    "Agricultural Automation Adoption Support"
+   ]
   },
   {
    "pathway_id": "L3-163",
@@ -10802,7 +11964,14 @@
    "v2_mechanism": "Agricultural productivity and inputs",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Plant and animal pest and disease control, biosecurity on farms",
+   "joins_when": "it controls pests or diseases of crops or livestock",
+   "joins_not": "it is food safety for consumers (L3-056) or human disease (L3-049)",
+   "entry_points": [
+    "Livestock Production Value-Addition and Biosecurity Improvement",
+    "Climate-related Plant Pest and Disease Surveillance and Early Warning Systems"
+   ]
   },
   {
    "pathway_id": "L3-155",
@@ -10838,7 +12007,14 @@
    "v2_mechanism": "Market access for small producers",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Collection points, rural market infrastructure and transport to market",
+   "joins_when": "it lowers producers' cost of reaching buyers: collection centres, rural markets, transport",
+   "joins_not": "it organises producers (L3-156) or contracts them (L3-157)",
+   "entry_points": [
+    "Basic Agricultural Collection and Transport Infrastructure Development",
+    "Link Local Production and Consumption Networks"
+   ]
   },
   {
    "pathway_id": "L3-156",
@@ -10874,7 +12050,17 @@
    "v2_mechanism": "Market access for small producers",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Cooperatives, producer groups and collective marketing",
+   "joins_when": "it organises producers into groups, cooperatives or institutions",
+   "joins_not": "it is a buyer contract (L3-157)",
+   "entry_points": [
+    "Promoting Agricultural Institutions as Business Units",
+    "Farmer Cooperative and Partnership Development",
+    "Agroindustry Value Chain Strengthening Programme",
+    "Cooperative Production Network and Finance Linkage Strengthening",
+    "Upper Northern Organic and Safe Agricultural Production Cluster Development"
+   ]
   },
   {
    "pathway_id": "L3-157",
@@ -10910,7 +12096,15 @@
    "v2_mechanism": "Market access for small producers",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": ""
+   "revised": "",
+   "lever": "Contract farming and buyer-producer arrangements",
+   "joins_when": "it links producers to processors or buyers by contract",
+   "joins_not": "it is a producer group (L3-156) or supply-chain industry policy (L3-151)",
+   "entry_points": [
+    "Private Sector Linkages for Certified Agricultural Supply Chains",
+    "Fair Contract Farming Arrangements",
+    "Contract Farming Fairness and Information Sharing Initiative"
+   ]
   },
   {
    "pathway_id": "L3-176",
@@ -10947,7 +12141,11 @@
    "v2_mechanism": "Job matching and active labour-market programmes",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Job information, employment services and matching platforms",
+   "joins_when": "it matches workers to jobs: employment services, job portals, labour-market information for job search",
+   "joins_not": "it trains (L3-177) or certifies skills (L3-034)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-177",
@@ -10984,7 +12182,11 @@
    "v2_mechanism": "Job matching and active labour-market programmes",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Active labour-market programmes: training, job-search assistance, wage subsidies",
+   "joins_when": "it runs programmes for the unemployed or job seekers",
+   "joins_not": "it is vocational education (F-12)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-179",
@@ -11020,7 +12222,11 @@
    "v2_mechanism": "Labour regulation and firm formalisation",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Minimum wages",
+   "joins_when": "it sets or raises wage floors",
+   "joins_not": "it is dismissal rules (L3-178)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-183",
@@ -11057,7 +12263,11 @@
    "v2_mechanism": "Adjustment to trade and technology shocks",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Adjustment assistance for workers and places hit by import competition",
+   "joins_when": "it supports workers or regions losing to trade",
+   "joins_not": "it is decarbonisation (L3-262) or automation (L3-184)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-184",
@@ -11093,7 +12303,11 @@
    "v2_mechanism": "Adjustment to trade and technology shocks",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Reskilling and support for workers displaced by automation",
+   "joins_when": "it supports workers displaced by technology or steers automation towards new tasks",
+   "joins_not": "it is digital skills in general (L3-035)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-187",
@@ -11131,7 +12345,11 @@
    "v2_mechanism": "Adjustment to trade and technology shocks",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "",
+   "joins_when": "",
+   "joins_not": "",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-189",
@@ -11167,7 +12385,11 @@
    "v2_mechanism": "Migration and remittances",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Lower remittance costs and channels to productive use",
+   "joins_when": "it concerns remittances: cost, channels, use",
+   "joins_not": "it is migrants' own earnings (L3-192)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-190",
@@ -11204,7 +12426,11 @@
    "v2_mechanism": "Migration and remittances",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": ""
+   "revised": "",
+   "lever": "Policies on skilled emigration and retention",
+   "joins_when": "it addresses emigration of skilled people or their retention",
+   "joins_not": "it brings them back (L3-191)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-191",
@@ -11241,7 +12467,13 @@
    "v2_mechanism": "Migration and remittances",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Return migration programmes and reintegration",
+   "joins_when": "it brings migrants or experts back and reintegrates them",
+   "joins_not": "it engages them abroad (L3-193)",
+   "entry_points": [
+    "Regional human capital development and labor mobility partnerships"
+   ]
   },
   {
    "pathway_id": "L3-192",
@@ -11278,7 +12510,11 @@
    "v2_mechanism": "Migration and remittances",
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Legal migration pathways and recruitment regulation",
+   "joins_when": "it opens or regulates work abroad for nationals, or foreign workers at home",
+   "joins_not": "it is refugees (L3-020)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-169",
@@ -11315,7 +12551,13 @@
    "v2_mechanism": "Competition, business regulation and contract enforcement",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Competition law and enforcement",
+   "joins_when": "it strengthens competition: antitrust, competition authority, market rivalry",
+   "joins_not": "it is entry registration (L3-168) or utility regulation (L3-149)",
+   "entry_points": [
+    "Trade Competition Act Amendment"
+   ]
   },
   {
    "pathway_id": "L3-170",
@@ -11351,7 +12593,16 @@
    "v2_mechanism": "Competition, business regulation and contract enforcement",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": ""
+   "revised": "",
+   "lever": "SOE reform, hard budget constraints, privatisation",
+   "joins_when": "it reforms, restructures or disciplines state-owned enterprises",
+   "joins_not": "it is utility regulation (L3-149)",
+   "entry_points": [
+    "Restructure state-owned enterprise management and restore financially troubled SOEs",
+    "SOE Rationalisation and Restructuring Programme",
+    "State Enterprise Restructuring and Strategic Management Reform",
+    "State Enterprise Supervision and Risk Management Reform"
+   ]
   },
   {
    "pathway_id": "L3-171",
@@ -11391,7 +12642,13 @@
    "v2_mechanism": "Competition, business regulation and contract enforcement",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": ""
+   "revised": "",
+   "lever": "Commercial courts, contract enforcement, dispute settlement",
+   "joins_when": "it enforces contracts or settles commercial and investment disputes",
+   "joins_not": "it is access to justice for people (L3-065)",
+   "entry_points": [
+    "Investment protection and investor-state dispute settlement mechanism"
+   ]
   },
   {
    "pathway_id": "L3-166",
@@ -11427,7 +12684,11 @@
    "v2_mechanism": "Firm capability and entrepreneurship",
    "v2_family_id": "FAM-18",
    "v2_family": "Farmers and small enterprises",
-   "revised": "moved"
+   "revised": "moved",
+   "lever": "Removing size-dependent and firm-specific distortions",
+   "joins_when": "it removes rules or subsidies that favour some firms over more productive ones",
+   "joins_not": "it is competition enforcement (L3-169)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-194",
@@ -11463,7 +12724,13 @@
    "v2_mechanism": "Land and property rights",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Secure tenure, community land rights, protection against eviction",
+   "joins_when": "it secures rights to land: community titles, tenure recognition",
+   "joins_not": "it issues formal titles (L3-195) or redistributes land (L3-197)",
+   "entry_points": [
+    "Community Land Title Act Advancement"
+   ]
   },
   {
    "pathway_id": "L3-195",
@@ -11497,7 +12764,13 @@
    "v2_mechanism": "Land and property rights",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Land titling and registration",
+   "joins_when": "it issues or registers formal land titles",
+   "joins_not": "it is tenure security without a title (L3-194)",
+   "entry_points": [
+    "Accelerated Land Title Issuance for Landless Farmers"
+   ]
   },
   {
    "pathway_id": "L3-196",
@@ -11533,7 +12806,11 @@
    "v2_mechanism": "Land and property rights",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Land registries, rental markets and transaction rules",
+   "joins_when": "it makes land easier to transfer, rent or record",
+   "joins_not": "it is titling (L3-195)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-197",
@@ -11569,7 +12846,15 @@
    "v2_mechanism": "Land and property rights",
    "v2_family_id": "FAM-20",
    "v2_family": "Markets, finance and property rights",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Land redistribution, agrarian reform and land taxation for equity",
+   "joins_when": "it redistributes land or taxes holdings to spread ownership",
+   "joins_not": "it is land market efficiency (L3-196)",
+   "entry_points": [
+    "Agricultural Land Reform Expropriation and Land Use Tax Measures",
+    "Land Utilization and Equitable Holdings Tax Reform",
+    "Land redistribution through progressive taxation"
+   ]
   },
   {
    "pathway_id": "L3-206",
@@ -11605,7 +12890,17 @@
    "v2_mechanism": "Early warning and surveillance",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": ""
+   "revised": "",
+   "lever": "Forecasting, early-warning systems and hazard monitoring",
+   "joins_when": "it forecasts, monitors or warns of natural hazards",
+   "joins_not": "it tells the public how to act (L3-264), detects disease (L3-207) or finances response (L3-209)",
+   "entry_points": [
+    "Integrated Disaster Prevention Planning and Coordination",
+    "Early Warning System Enhancement for Natural Disasters and Climate Change",
+    "Disaster Response and Warning System Development",
+    "National security monitoring and early warning system",
+    "Geo-informatics and Digital Surveillance Alert Systems"
+   ]
   },
   {
    "pathway_id": "L3-207",
@@ -11641,7 +12936,17 @@
    "v2_mechanism": "Early warning and surveillance",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": "evidence"
+   "revised": "evidence",
+   "lever": "Disease surveillance, laboratories and outbreak response",
+   "joins_when": "it detects or contains disease outbreaks: surveillance, testing, laboratories, response teams",
+   "joins_not": "it controls an endemic disease (L3-049) or the animal-human source (L3-208)",
+   "entry_points": [
+    "Reforming the system of epidemics and health threats surveillance and management",
+    "Integrated Health and Environmental Surveillance Mechanism",
+    "Disease Surveillance, Prevention and Control System",
+    "Capacity improvement and regional cooperation for epidemic prevention",
+    "Early health warning systems"
+   ]
   },
   {
    "pathway_id": "L3-208",
@@ -11678,7 +12983,17 @@
    "v2_mechanism": "Early warning and surveillance",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": ""
+   "revised": "",
+   "lever": "One Health programmes at the animal-human-environment interface",
+   "joins_when": "it works on zoonotic disease at its source: animal health, wildlife, One Health coordination",
+   "joins_not": "it is human surveillance (L3-207)",
+   "entry_points": [
+    "National Zoonotic Disease Management Capacity Enhancement",
+    "One Health capacity-building and coordination programme",
+    "Village Health Volunteer zoonotic disease surveillance network",
+    "Multi-sectoral zoonotic disease transmission minimization mechanism",
+    "One Health Zoonotic Disease Surveillance and Response Capacity Development"
+   ]
   },
   {
    "pathway_id": "L3-199",
@@ -11715,7 +13030,11 @@
    "v2_mechanism": "Macro-financial buffers",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": "evidence"
+   "revised": "evidence",
+   "lever": "Diversification away from concentrated commodity exposure",
+   "joins_when": "it names reducing dependence on a few commodities or markets",
+   "joins_not": "it holds reserves against the swings (L3-198)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-202",
@@ -11753,7 +13072,13 @@
    "v2_mechanism": "Supply-chain and economic security",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Diversifying suppliers and securing critical inputs",
+   "joins_when": "it reduces dependence on few suppliers of essentials: energy security, supply-chain resilience",
+   "joins_not": "it builds domestic capacity (L3-204) or stocks (L3-205)",
+   "entry_points": [
+    "Fostering supply chain connections for ZEV production"
+   ]
   },
   {
    "pathway_id": "L3-203",
@@ -11789,7 +13114,11 @@
    "v2_mechanism": "Supply-chain and economic security",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": ""
+   "revised": "",
+   "lever": "Measures against coercive use of trade, finance or technology chokepoints",
+   "joins_when": "it names geopolitical or coercive leverage as the risk",
+   "joins_not": "it is accidental disruption (L3-202)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-198",
@@ -11825,7 +13154,11 @@
    "v2_mechanism": "Macro-financial buffers",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": "evidence"
+   "revised": "evidence",
+   "lever": "Foreign reserves and exchange-rate management",
+   "joins_when": "it builds reserves or manages the exchange rate against external shocks",
+   "joins_not": "it is debt composition (L3-200)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-200",
@@ -11861,7 +13194,11 @@
    "v2_mechanism": "Macro-financial buffers",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": ""
+   "revised": "",
+   "lever": "Management of external and short-term debt",
+   "joins_when": "it limits foreign-currency or short-term debt",
+   "joins_not": "it is public debt sustainability (L3-095)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-201",
@@ -11897,7 +13234,11 @@
    "v2_mechanism": "Macro-financial buffers",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": ""
+   "revised": "",
+   "lever": "Banking supervision and financial stability",
+   "joins_when": "it supervises banks or guards financial stability",
+   "joins_not": "it deepens finance (L3-172)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-204",
@@ -11933,7 +13274,11 @@
    "v2_mechanism": "Supply-chain and economic security",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": ""
+   "revised": "",
+   "lever": "Domestic capacity in strategic goods",
+   "joins_when": "it builds domestic production of critical goods as a hedge",
+   "joins_not": "it diversifies suppliers (L3-202)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-205",
@@ -11970,7 +13315,16 @@
    "v2_mechanism": "Supply-chain and economic security",
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
-   "revised": ""
+   "revised": "",
+   "lever": "Strategic stocks of food, fuel, medicines and vaccines",
+   "joins_when": "it holds physical reserves against supply interruption",
+   "joins_not": "it is surge capacity of services (L3-242)",
+   "entry_points": [
+    "Reserve System for Medicines and Medical Supplies",
+    "Emergency Medicines and Medical Supplies Reserve System",
+    "Integrated Vaccine Security and Management System",
+    "Vaccine Reserve Legislation"
+   ]
   },
   {
    "pathway_id": "L3-209",
@@ -12007,7 +13361,16 @@
    "v2_mechanism": "Pre-arranged risk finance",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": ""
+   "revised": "",
+   "lever": "Disaster insurance, contingent credit and emergency financing frameworks",
+   "joins_when": "it arranges finance in advance for disasters or emergencies",
+   "joins_not": "it is household insurance (L3-021) or the warning (L3-206)",
+   "entry_points": [
+    "Natural Disaster and Climate Change Risk Insurance and Continuity Planning",
+    "Pandemic Preparedness and Public Health Emergency Financing Framework",
+    "Natural Disaster Insurance Systems Development",
+    "Disaster and Crop Insurance Schemes"
+   ]
   },
   {
    "pathway_id": "L3-211",
@@ -12044,7 +13407,11 @@
    "v2_mechanism": "Statistics, evidence and planning",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": ""
+   "revised": "",
+   "lever": "Foresight, scenarios and long-term strategy units",
+   "joins_when": "it builds or uses foresight, scenarios or futures analysis",
+   "joins_not": "it is statistics on the present (L3-210) or a development plan (L3-212)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-212",
@@ -12084,7 +13451,15 @@
    "v2_mechanism": "Statistics, evidence and planning",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "National, sector and investment plans that coordinate investment",
+   "joins_when": "it formulates or implements a plan that coordinates investments or sectors",
+   "joins_not": "it monitors the plan (L3-217) or coordinates agencies day to day (L3-220)",
+   "entry_points": [
+    "Formulate investment plans for growth",
+    "All-Hazards Emergency Health Crisis Management Planning and Preparedness",
+    "Integrated Renewable Energy and Energy Efficiency Research Planning"
+   ]
   },
   {
    "pathway_id": "L3-210",
@@ -12121,7 +13496,17 @@
    "v2_mechanism": "Statistics, evidence and planning",
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
-   "revised": ""
+   "revised": "",
+   "lever": "Statistical systems, surveys, censuses and analysis for decisions",
+   "joins_when": "it produces, analyses or publishes data for planning or decisions: statistics, surveys, dashboards for analysis",
+   "joins_not": "it links data across bodies (L3-263), builds the records a programme runs on (L3-265) or monitors a programme (L3-217)",
+   "entry_points": [
+    "Harmonize Tourism Data Collection System",
+    "Integrated Labor Demand and Supply Database Development",
+    "Public Development Data Platform",
+    "Efficient Monitoring and Evaluation Database",
+    "Local-level databases for planning and evaluation"
+   ]
   },
   {
    "pathway_id": "L3-263",
@@ -12158,7 +13543,58 @@
    "v2_family_id": "",
    "v2_family": "",
    "added_in": "v3",
-   "revised": ""
+   "revised": "",
+   "lever": "Shared registries, data standards, exchange platforms and data governance across agencies",
+   "joins_when": "it links records or systems held by separate bodies, or sets the standards and rules for sharing them",
+   "joins_not": "it is one body's own system (L3-265) or data protection rights (L3-221)",
+   "entry_points": [
+    "Upgrading tourism information systems to smart tourism systems",
+    "Large-Scale Tourism Database Development",
+    "National Health Database and Interoperable Health Data Platform",
+    "Public Sector Efficiency and Digital Transformation Reform",
+    "Government and private-sector data linkage for R&D big data"
+   ]
+  },
+  {
+   "pathway_id": "L3-265",
+   "pathway": "Administrative data and registries",
+   "level": "L3",
+   "family_id": "F-43",
+   "family": "Statistics and data sharing",
+   "group_id": "G-22",
+   "group": "Data sharing",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "pillar": "Making Change Happen",
+   "old_family_id": "",
+   "old_family": "",
+   "old_subpillar": "",
+   "subpillar_changed": "",
+   "merged_into": "",
+   "conditions": "records are complete, current and used",
+   "causal_input": "registries and information systems a programme runs on",
+   "transmission": "the state can see, target and deliver to the people and things it serves",
+   "outcome": "reach, accuracy and cost of delivery",
+   "distinction": "",
+   "evidence": "Scott 1998; Lee and Zhang 2017 (to verify)",
+   "risks": [
+    "Technological Change"
+   ],
+   "risk_justification": "assigned at the v3 build from the reviewer's note; not source-verified",
+   "conditional_risks": [],
+   "baseline": "",
+   "evidence_status": "cited by the reviewer, not yet independently verified",
+   "risk_status": "assigned at the v3 build from the reviewer's note; not source-verified",
+   "text_cues": "(database|registry|register|records? system|information system|data (system|platform|base|warehouse|centre|center)|big data).{0,80}(develop|build|establish|maintain|upgrade|digiti[sz]e|improve)|(develop|build|establish|maintain|upgrade|digiti[sz]e).{0,80}(database|registry|register|records? system|information system|data (system|platform|base|warehouse|centre|center)|big data)",
+   "v2_mechanism_id": "",
+   "v2_mechanism": "",
+   "v2_family_id": "",
+   "v2_family": "",
+   "added_in": "v3",
+   "revised": "",
+   "lever": "Build, digitise and maintain the registries, records and information systems a programme or body runs on",
+   "joins_when": "it builds, digitises, upgrades or maintains the data a service or programme runs on, within one body",
+   "joins_not": "it links systems across bodies (L3-263), publishes statistics (L3-210) or delivers the service online (L3-227)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-217",
@@ -12194,7 +13630,17 @@
    "v2_mechanism": "Monitoring, evaluation and course correction",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": ""
+   "revised": "",
+   "lever": "Monitoring and evaluation systems and their use",
+   "joins_when": "it monitors or evaluates programmes or plans and feeds results back",
+   "joins_not": "it is the statistics base (L3-210) or iterative reform (L3-218)",
+   "entry_points": [
+    "Tourism Monitoring Systems Development",
+    "Monitoring and evaluation system for area and urban development",
+    "Promoting the utilization of databases for policy design and monitoring",
+    "Monitoring and Evaluation of the 13th Plan",
+    "Integrated budget allocation and development monitoring system"
+   ]
   },
   {
    "pathway_id": "L3-218",
@@ -12234,7 +13680,15 @@
    "v2_mechanism": "Monitoring, evaluation and course correction",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": ""
+   "revised": "",
+   "lever": "Iterative, problem-driven reform methods: PDCA, design thinking, delivery units",
+   "joins_when": "it adopts an iterative or experimental way of working inside government",
+   "joins_not": "it is a territorial pilot (L3-219)",
+   "entry_points": [
+    "Adoption of PDCA Cycle for Plan Implementation",
+    "Design Thinking Support for Public Service Development",
+    "Review and update education measures and success targets"
+   ]
   },
   {
    "pathway_id": "L3-228",
@@ -12268,7 +13722,11 @@
    "v2_mechanism": "Civil service and public management",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": "moved"
+   "revised": "moved",
+   "lever": "Reforms sequenced to what the administration can do, judged on results",
+   "joins_when": "it names form-over-function reform or capability as the problem",
+   "joins_not": "it is monitoring (L3-217)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-219",
@@ -12308,7 +13766,17 @@
    "v2_mechanism": "Monitoring, evaluation and course correction",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": ""
+   "revised": "",
+   "lever": "Pilots, sandboxes and scaling of what works",
+   "joins_when": "it pilots a policy in a place or sector before scaling, or replicates a model",
+   "joins_not": "it is a method inside one agency (L3-218)",
+   "entry_points": [
+    "Public Relations Plan and Pilot Program for ZEV Awareness",
+    "Local Digital Industry Competitiveness Development",
+    "Urban Development Replication of the Khon Kaen Model",
+    "Pilot Projects for Building Energy Management Systems and Grid Flexibility",
+    "Digital Standards Sandbox for Pre-implementation Testing"
+   ]
   },
   {
    "pathway_id": "L3-221",
@@ -12344,7 +13812,17 @@
    "v2_mechanism": "Keeping laws and regulation up to date",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Data protection law and rights",
+   "joins_when": "it protects personal data or sets rights over it",
+   "joins_not": "it is cybersecurity (L3-222) or data sharing for the state (L3-263)",
+   "entry_points": [
+    "Personal Data Retention and Cross-Border Exchange Regulation System",
+    "Cybersecurity and Personal Data Protection Standards",
+    "Data Protection and Security Measures Development",
+    "Data Classification for Public Sector Data Governance",
+    "Digital identity and personal data governance development"
+   ]
   },
   {
    "pathway_id": "L3-222",
@@ -12380,7 +13858,17 @@
    "v2_mechanism": "Keeping laws and regulation up to date",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": ""
+   "revised": "",
+   "lever": "Cybersecurity standards, agencies and incident response",
+   "joins_when": "it secures systems against cyber attack",
+   "joins_not": "it is privacy rights (L3-221)",
+   "entry_points": [
+    "Cybersecurity Risk Management and Data Sovereignty Policy Framework",
+    "National cyber security bill",
+    "Cybersecurity Protection Measures for Digital Public Services",
+    "Secure government service platform and data protection",
+    "Government Computer Security Incident Co-ordination Center"
+   ]
   },
   {
    "pathway_id": "L3-223",
@@ -12416,7 +13904,11 @@
    "v2_mechanism": "Keeping laws and regulation up to date",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Platform competition and digital market rules",
+   "joins_when": "it regulates digital platforms' market power",
+   "joins_not": "it is general competition (L3-169)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-224",
@@ -12452,7 +13944,11 @@
    "v2_mechanism": "Keeping laws and regulation up to date",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": ""
+   "revised": "",
+   "lever": "Rules and incentives steering AI and automation",
+   "joins_when": "it regulates or steers AI and automation",
+   "joins_not": "it reskills displaced workers (L3-184)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-247",
@@ -12489,7 +13985,17 @@
    "v2_mechanism": "Citizen participation and community-driven development",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Participatory planning and budgeting",
+   "joins_when": "it gives citizens or communities a say in plans or budgets",
+   "joins_not": "it hands them the funds (L3-248) or has them monitor providers (L3-246)",
+   "entry_points": [
+    "Budget Act Revision for Integrated and Area-Based Budgeting",
+    "Civil Society Participation in Budget Decision-Making and Monitoring",
+    "Community Plan Formulation and Participatory Project Proposal Development",
+    "Tambon Community Brainstorming and Development Planning Mechanism",
+    "Participatory local development and plan formulation"
+   ]
   },
   {
    "pathway_id": "L3-220",
@@ -12529,7 +14035,17 @@
    "v2_mechanism": "Whole-of-government coordination",
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
-   "revised": ""
+   "revised": "",
+   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government arrangements",
+   "joins_when": "it sets up or strengthens coordination among agencies, sectors or levels of government",
+   "joins_not": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
+   "entry_points": [
+    "Integrated central-local governance system",
+    "Provincial Agricultural Collaboration Mechanisms",
+    "Develop monitoring systems for community development programmes",
+    "Cross-organizational Public Administration Integration",
+    "Outcome-Based Integration Mechanism"
+   ]
   },
   {
    "pathway_id": "L3-226",
@@ -12569,7 +14085,13 @@
    "v2_mechanism": "Civil service and public management",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": ""
+   "revised": "",
+   "lever": "Performance management, autonomy and incentives for agencies and their managers",
+   "joins_when": "it changes the authority, incentives or performance management of a delivery unit or its managers",
+   "joins_not": "it is who is hired and paid (L3-225)",
+   "entry_points": [
+    "Performance Evaluation System for Senior Government Officers"
+   ]
   },
   {
    "pathway_id": "L3-225",
@@ -12605,7 +14127,17 @@
    "v2_mechanism": "Civil service and public management",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": ""
+   "revised": "",
+   "lever": "Civil service recruitment, pay, careers and HR reform",
+   "joins_when": "it changes who joins the public service, how they are paid or motivated",
+   "joins_not": "it changes how units are managed (L3-226) or how a service is delivered (L3-266)",
+   "entry_points": [
+    "Public Sector Human Resources Management Reform",
+    "External Appointment of Heads for High-Priority Organizations",
+    "Public Sector Recruitment of High-Potential New Generation Candidates",
+    "Civil Service Remuneration and Benefits Adjustment",
+    "Public Official Promotion and Transfer Reform"
+   ]
   },
   {
    "pathway_id": "L3-229",
@@ -12641,7 +14173,17 @@
    "v2_mechanism": "Decentralisation and local government",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": ""
+   "revised": "",
+   "lever": "Decentralisation and transfer of functions to local government",
+   "joins_when": "it devolves functions, decisions or revenue powers to local government",
+   "joins_not": "it is local finance formulas (L3-231) or local capture (L3-230)",
+   "entry_points": [
+    "Education Governance Decentralization Reform",
+    "Educational Outcome-Based Budget Management Project",
+    "Transfer tax and fee collection functions to Local Administrative Organizations",
+    "Transfer public service delivery functions to Local Administrative Organizations",
+    "Decentralized Public Management Tasks"
+   ]
   },
   {
    "pathway_id": "L3-230",
@@ -12677,7 +14219,11 @@
    "v2_mechanism": "Decentralisation and local government",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": ""
+   "revised": "",
+   "lever": "Local accountability rules against capture",
+   "joins_when": "it names capture of local spending by elites and acts on it",
+   "joins_not": "it is decentralisation itself (L3-229)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-231",
@@ -12717,7 +14263,16 @@
    "v2_mechanism": "Decentralisation and local government",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Intergovernmental transfers and local revenue",
+   "joins_when": "it changes transfers to or revenue of local governments",
+   "joins_not": "it devolves functions (L3-229)",
+   "entry_points": [
+    "Improve Local Administrative Organizations' revenue collection effectiveness",
+    "Provincial Cluster and Local Budget Allocation Reform",
+    "Local Revenue Management and Subsidy Restructuring",
+    "Local Revenue Strengthening for Self-Reliant Local Administration"
+   ]
   },
   {
    "pathway_id": "L3-240",
@@ -12754,7 +14309,13 @@
    "v2_mechanism": "Regulation and enforcement capacity",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Sector regulators and their capacity",
+   "joins_when": "it builds or empowers a regulator for a sector",
+   "joins_not": "it inspects in the field (L3-241)",
+   "entry_points": [
+    "Air and Waterway Transport Regulatory Capacity Upgrade"
+   ]
   },
   {
    "pathway_id": "L3-241",
@@ -12790,7 +14351,52 @@
    "v2_mechanism": "Regulation and enforcement capacity",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Inspection, monitoring and enforcement of rules",
+   "joins_when": "it monitors or enforces compliance with an existing standard or law",
+   "joins_not": "it sets the standard (L3-080, L3-240)",
+   "entry_points": [
+    "Environmental Law Monitoring and Enforcement for Factories"
+   ]
+  },
+  {
+   "pathway_id": "L3-266",
+   "pathway": "Service delivery and process reform",
+   "level": "L3",
+   "family_id": "F-50",
+   "family": "Administrative, local and regulatory capacity",
+   "group_id": "G-27",
+   "group": "Authorised flexibility",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "old_family_id": "",
+   "old_family": "",
+   "old_subpillar": "",
+   "subpillar_changed": "",
+   "merged_into": "",
+   "conditions": "the redesign is measured from the user's side",
+   "causal_input": "fewer steps, less time and clearer standards in an existing service",
+   "transmission": "lower cost of compliance and access for users",
+   "outcome": "take-up, satisfaction and cost of services",
+   "distinction": "",
+   "evidence": "Djankov et al. 2002; Herd and Moynihan 2018 (to verify)",
+   "risks": [],
+   "risk_justification": "assigned at the v3 build from the reviewer's note; not source-verified",
+   "conditional_risks": [],
+   "baseline": "",
+   "evidence_status": "cited by the reviewer, not yet independently verified",
+   "risk_status": "assigned at the v3 build from the reviewer's note; not source-verified",
+   "text_cues": "one-?stop|service standard|process (re-?design|re-?engineering|simplif|improvement|review)|simplif.{0,40}(procedure|process|step|service)|(reduce|cut|shorten).{0,40}(steps|processing time|waiting time|red tape|paperwork)|service (delivery|quality|efficiency) (improvement|reform|upgrade)|e-?service",
+   "v2_mechanism_id": "",
+   "v2_mechanism": "",
+   "v2_family_id": "",
+   "v2_family": "",
+   "added_in": "v3",
+   "revised": "",
+   "lever": "Simplify procedures, cut steps and time, redesign how an existing service is delivered",
+   "joins_when": "it changes how an existing service is delivered: fewer steps, less time, one-stop, process redesign, service standards",
+   "joins_not": "it changes staff (L3-225), unit management (L3-226) or digital rails (L3-227)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-242",
@@ -12826,7 +14432,17 @@
    "v2_mechanism": "Preparedness, surge capacity and stockpiles",
    "v2_family_id": "FAM-27",
    "v2_family": "Emergency response and recovery",
-   "revised": ""
+   "revised": "",
+   "lever": "Emergency operations centres, surge staff, beds and stockpiles for services",
+   "joins_when": "it builds capacity that can expand in an emergency: operations centres, reserves, preparedness training",
+   "joins_not": "it keeps routine services running (L3-243) or relieves households (L3-244)",
+   "entry_points": [
+    "Chemical, Biological, Radiological, Nuclear, and Explosive Incident Preparedness Enhancement",
+    "Essential Medical Supplies Logistics Capacity Strengthening",
+    "Emergency Operations Center Capacity Strengthening",
+    "Public Health Emergency Management Knowledge Transfer and PHEOC Capacity Building",
+    "Secure Essential Materials for Public Health Emergency Response"
+   ]
   },
   {
    "pathway_id": "L3-243",
@@ -12863,7 +14479,17 @@
    "v2_mechanism": "Emergency relief and service continuity",
    "v2_family_id": "FAM-27",
    "v2_family": "Emergency response and recovery",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Continuity plans and backup delivery",
+   "joins_when": "it keeps services running through disruption",
+   "joins_not": "it scales up (L3-242)",
+   "entry_points": [
+    "Disaster Preparedness and Business Continuity Measures",
+    "Emergency Preparedness and Health Service Continuity Strengthening",
+    "Health Service Maintenance Plan under the Communicable Diseases Act",
+    "Comprehensive Business Continuity Plan for Health Facilities",
+    "Emergency Health Service Regulations and Guidelines"
+   ]
   },
   {
    "pathway_id": "L3-244",
@@ -12900,7 +14526,15 @@
    "v2_mechanism": "Emergency relief and service continuity",
    "v2_family_id": "FAM-27",
    "v2_family": "Emergency response and recovery",
-   "revised": ""
+   "revised": "",
+   "lever": "Relief delivery and victim assistance",
+   "joins_when": "it delivers relief or assistance to affected people",
+   "joins_not": "it is the registry that scales benefits (L3-024)",
+   "entry_points": [
+    "Emergency Preparedness and Response Sub-strategy",
+    "Disaster Victim Assistance and Fair Relief Delivery",
+    "Natural Disaster Remedial and Relief Mechanisms"
+   ]
   },
   {
    "pathway_id": "L3-245",
@@ -12936,7 +14570,13 @@
    "v2_mechanism": "Recovery and reconstruction",
    "v2_family_id": "FAM-27",
    "v2_family": "Emergency response and recovery",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Build-back-better reconstruction",
+   "joins_when": "it rebuilds after disasters to higher standards",
+   "joins_not": "it hardens assets before the event (L3-087)",
+   "entry_points": [
+    "Post-Disaster Inspection Standards"
+   ]
   },
   {
    "pathway_id": "L3-232",
@@ -12970,7 +14610,11 @@
    "v2_mechanism": "Tax revenue and administration",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Third-party reporting, data matching and tax enforcement",
+   "joins_when": "it enforces tax through information and audit",
+   "joins_not": "it changes rates and bases (L3-233)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-233",
@@ -13004,7 +14648,16 @@
    "v2_mechanism": "Tax revenue and administration",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": ""
+   "revised": "",
+   "lever": "Tax reform of rates, bases and equity",
+   "joins_when": "it reforms the tax system's rates, bases or fairness",
+   "joins_not": "it is collection enforcement (L3-232)",
+   "entry_points": [
+    "Tax system reform for fairer resource allocation",
+    "Tax System Reform for Fair Income Distribution",
+    "National Revenue Collection System Improvement",
+    "Fiscal revenue base expansion and tax reform"
+   ]
   },
   {
    "pathway_id": "L3-234",
@@ -13040,7 +14693,11 @@
    "v2_mechanism": "Tax revenue and administration",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": ""
+   "revised": "",
+   "lever": "Linking taxes visibly to services",
+   "joins_when": "it names the link between paying taxes and receiving services",
+   "joins_not": "it is enforcement (L3-232)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-235",
@@ -13076,7 +14733,17 @@
    "v2_mechanism": "Budgeting, procurement and public investment",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": ""
+   "revised": "",
+   "lever": "Procurement reform and transparency",
+   "joins_when": "it reforms public procurement or purchasing",
+   "joins_not": "it is project appraisal (L3-236)",
+   "entry_points": [
+    "Public Procurement and Inventory Management Reform",
+    "Transparent and efficient public spending and performance appraisal reform",
+    "Green Procurement System",
+    "Digital Public Procurement, Budget and Fiscal Management Oversight System",
+    "Procurement Regulation Revision for Crisis Response"
+   ]
   },
   {
    "pathway_id": "L3-236",
@@ -13112,7 +14779,13 @@
    "v2_mechanism": "Budgeting, procurement and public investment",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": ""
+   "revised": "",
+   "lever": "Public investment management: appraisal, selection, execution",
+   "joins_when": "it improves how public investment projects are chosen and delivered",
+   "joins_not": "it is procurement (L3-235) or the budget cycle (L3-237)",
+   "entry_points": [
+    "Provide investment guidelines for major development plans and projects"
+   ]
   },
   {
    "pathway_id": "L3-237",
@@ -13152,7 +14825,17 @@
    "v2_mechanism": "Budgeting, procurement and public investment",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Budget preparation, execution and results-based budgeting",
+   "joins_when": "it reforms budgeting: preparation, allocation, execution, results-based or area-based budgeting",
+   "joins_not": "it is a fiscal rule (L3-097)",
+   "entry_points": [
+    "Fiscal Budget Preparation Effectiveness Enhancement",
+    "Link Eleventh Plan implementation to annual budgeting",
+    "Priority-Based Budget Allocation and Expenditure Efficiency Reform",
+    "Results-Based Local Budgeting Reform",
+    "Integrate Eleventh Plan priorities into government policy and budgeting"
+   ]
   },
   {
    "pathway_id": "L3-238",
@@ -13188,7 +14871,17 @@
    "v2_mechanism": "Public-private partnerships",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": ""
+   "revised": "",
+   "lever": "Public-private partnerships and private infrastructure investment",
+   "joins_when": "it uses private finance or partnerships for public assets or services",
+   "joins_not": "it manages the fiscal risk of them (L3-098)",
+   "entry_points": [
+    "Review and revise budget and public procurement rules for tourism destination development",
+    "Private Infrastructure Investment and Service Provision Expansion",
+    "Promote public-private cooperation in investment and management of state assets",
+    "Public-Private Partnership Promotion for Mega Projects",
+    "Private Sector Participation in Infrastructure and Basic Public Services"
+   ]
   },
   {
    "pathway_id": "L3-239",
@@ -13222,7 +14915,11 @@
    "v2_mechanism": "Budgeting, procurement and public investment",
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
-   "revised": ""
+   "revised": "",
+   "lever": "Aid coordination and use of country systems",
+   "joins_when": "it coordinates donors or aligns aid with national systems",
+   "joins_not": "it is budget institutions (L3-237)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-227",
@@ -13259,7 +14956,17 @@
    "v2_mechanism": "Digital government",
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
-   "revised": ""
+   "revised": "",
+   "lever": "Digital identity, digital payments and online service delivery",
+   "joins_when": "it delivers public services or payments digitally, or builds the identity and payment rails",
+   "joins_not": "it links data across agencies (L3-263), connects households (L3-261) or redesigns the process itself (L3-266)",
+   "entry_points": [
+    "Public Digital Dashboard for Government Service Transactions",
+    "Digital Public Service Modernization",
+    "Smart Card and Central Electronic Identity Verification",
+    "Digital Payment System Provision",
+    "Digital Identity Verification System"
+   ]
   },
   {
    "pathway_id": "L3-264",
@@ -13297,7 +15004,17 @@
    "v2_family_id": "",
    "v2_family": "",
    "added_in": "v3",
-   "revised": ""
+   "revised": "",
+   "lever": "Public risk communication, warning dissemination and community engagement in crises",
+   "joins_when": "it informs the public in a crisis or health emergency and engages communities",
+   "joins_not": "it is the forecast (L3-206) or routine health promotion (L3-048)",
+   "entry_points": [
+    "Provincial public communication and feedback channels",
+    "Risk Communication and Community Engagement for Public Health Risk Management",
+    "Provincial Public Health Risk Communication Units",
+    "Public Warning System for Civil Society",
+    "Food Safety Risk Communication Improvement"
+   ]
   },
   {
    "pathway_id": "L3-253",
@@ -13334,7 +15051,11 @@
    "v2_mechanism": "Elections and political institutions",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Competitive elections and voter information",
+   "joins_when": "it strengthens electoral competition or voters' information",
+   "joins_not": "it is electoral administration (L3-254)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-254",
@@ -13371,7 +15092,11 @@
    "v2_mechanism": "Elections and political institutions",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Electoral administration and integrity",
+   "joins_when": "it runs or safeguards the electoral process",
+   "joins_not": "it is parties (L3-255)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-255",
@@ -13408,7 +15133,11 @@
    "v2_mechanism": "Elections and political institutions",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Party institutions and finance rules",
+   "joins_when": "it regulates or builds political parties",
+   "joins_not": "it is elections (L3-254)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-250",
@@ -13445,7 +15174,11 @@
    "v2_mechanism": "Transparency, media and information integrity",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Independent media support and press freedom",
+   "joins_when": "it supports independent media or press freedom",
+   "joins_not": "it counters disinformation (L3-251)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-251",
@@ -13484,7 +15217,13 @@
    "v2_mechanism": "Transparency, media and information integrity",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Countering disinformation and media literacy",
+   "joins_when": "it counters false information or builds media literacy",
+   "joins_not": "it is government disclosure (L3-252)",
+   "entry_points": [
+    "Social media threat awareness and fake news literacy"
+   ]
   },
   {
    "pathway_id": "L3-252",
@@ -13520,7 +15259,17 @@
    "v2_mechanism": "Transparency, media and information integrity",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Open government, disclosure and citizen monitoring of budgets",
+   "joins_when": "it publishes government information or enables citizens to monitor spending",
+   "joins_not": "it is independent media (L3-250)",
+   "entry_points": [
+    "Promote public participation in budget auditing",
+    "Public Service Performance Monitoring",
+    "Transparent monitoring of LAOs",
+    "Local Budget Transparency and Participatory Monitoring Initiative",
+    "Public Information Disclosure and Oversight of Megaprojects"
+   ]
   },
   {
    "pathway_id": "L3-213",
@@ -13556,7 +15305,11 @@
    "v2_mechanism": "Judicial independence and review",
    "v2_family_id": "FAM-23",
    "v2_family": "Rule of law and checks on power",
-   "revised": ""
+   "revised": "",
+   "lever": "Judicial independence and review",
+   "joins_when": "it strengthens courts' independence or review of government",
+   "joins_not": "it is legislative oversight (L3-214)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-214",
@@ -13592,7 +15345,11 @@
    "v2_mechanism": "Legislative oversight and audit",
    "v2_family_id": "FAM-23",
    "v2_family": "Rule of law and checks on power",
-   "revised": ""
+   "revised": "",
+   "lever": "Legislative oversight",
+   "joins_when": "it strengthens parliament's oversight",
+   "joins_not": "it is audit (L3-215)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-215",
@@ -13628,7 +15385,15 @@
    "v2_mechanism": "Legislative oversight and audit",
    "v2_family_id": "FAM-23",
    "v2_family": "Rule of law and checks on power",
-   "revised": ""
+   "revised": "",
+   "lever": "Audit institutions, anti-corruption bodies and integrity systems",
+   "joins_when": "it audits, detects or prevents corruption",
+   "joins_not": "it is procurement transparency as a purchasing reform (L3-235)",
+   "entry_points": [
+    "Corruption Risk Management and Procurement Integrity System",
+    "Procurement Data Monitoring and Transparency Measures",
+    "Official Appointment of Action Plan Agencies and Biannual Evaluation Coordination"
+   ]
   },
   {
    "pathway_id": "L3-216",
@@ -13665,7 +15430,11 @@
    "v2_mechanism": "Guarding against erosion of accountability",
    "v2_family_id": "FAM-23",
    "v2_family": "Rule of law and checks on power",
-   "revised": ""
+   "revised": "",
+   "lever": "Safeguards against erosion of checks and balances",
+   "joins_when": "it names protecting checks and balances from executive capture",
+   "joins_not": "it is one institution's capacity (L3-213, L3-214)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-256",
@@ -13702,7 +15471,11 @@
    "v2_mechanism": "Reform coalitions and social dialogue",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Building coalitions and settlements for reform",
+   "joins_when": "it builds political coalitions or settlements behind reform",
+   "joins_not": "it is dialogue with business (L3-257)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-257",
@@ -13738,7 +15511,17 @@
    "v2_mechanism": "Reform coalitions and social dialogue",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Public-private dialogue and joint committees",
+   "joins_when": "it creates structured dialogue between government and business",
+   "joins_not": "it is a labour tripartite body (L3-258)",
+   "entry_points": [
+    "Public-Private Partnerships for Overseas Market Outreach and Market Research",
+    "Private Sector Development Partnership and JPPCC Strengthening",
+    "Create public-private coordination systems for trade support",
+    "Private Sector Development Partnership Integration and JPPCC Strengthening",
+    "Public-Private Forum for GHG Mitigation Mechanisms"
+   ]
   },
   {
    "pathway_id": "L3-258",
@@ -13774,7 +15557,11 @@
    "v2_mechanism": "Reform coalitions and social dialogue",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Tripartite social dialogue and wage bargaining",
+   "joins_when": "it organises dialogue among government, employers and workers",
+   "joins_not": "it is business dialogue (L3-257)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-246",
@@ -13810,7 +15597,13 @@
    "v2_mechanism": "Citizen participation and community-driven development",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Community scorecards and monitoring of providers",
+   "joins_when": "it has communities monitor service providers",
+   "joins_not": "it has them decide (L3-247) or manage funds (L3-248)",
+   "entry_points": [
+    "Environmental Monitoring Participation Empowerment"
+   ]
   },
   {
    "pathway_id": "L3-248",
@@ -13846,7 +15639,17 @@
    "v2_mechanism": "Citizen participation and community-driven development",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": ""
+   "revised": "",
+   "lever": "Community-driven development and community enterprise funds",
+   "joins_when": "it gives communities control of funds or projects, including community enterprises",
+   "joins_not": "it is participation in planning only (L3-247)",
+   "entry_points": [
+    "Community-based tourism and secondary city tourism support programme",
+    "Community-Based Tourism and Secondary Cities Tourism Support",
+    "Community Tourism Enterprise Incubation and Financing Network",
+    "Community Social Welfare and Services Provision",
+    "Strengthening local community participation in public-interest and social organization"
+   ]
   },
   {
    "pathway_id": "L3-249",
@@ -13883,7 +15686,14 @@
    "v2_mechanism": "Citizen participation and community-driven development",
    "v2_family_id": "FAM-28",
    "v2_family": "Voice, participation and accountability",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Support for civil society and volunteer networks",
+   "joins_when": "it strengthens civil society organisations or volunteer networks as watchdogs",
+   "joins_not": "it is community management of funds (L3-248)",
+   "entry_points": [
+    "Volunteering Networks for Corruption Surveillance",
+    "Civil Society Oversight of Public Agencies and Officials"
+   ]
   },
   {
    "pathway_id": "L3-012",
@@ -13919,7 +15729,11 @@
    "v2_mechanism": "Reducing group grievance and polarisation",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": ""
+   "revised": "",
+   "lever": "Measures that lower the stakes of group contest",
+   "joins_when": "it names polarisation between groups and acts to lower it",
+   "joins_not": "it is identity-building (L3-014) or contact (L3-013)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-014",
@@ -13956,7 +15770,17 @@
    "v2_mechanism": "Shared identity and intergroup contact",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": ""
+   "revised": "",
+   "lever": "National identity, shared values, culture and civic education",
+   "joins_when": "it builds shared identity, values or culture",
+   "joins_not": "it is intergroup contact (L3-013)",
+   "entry_points": [
+    "Promote national pride and cultural heterogeneity",
+    "Reinforce Social Institutions through Values and Thai Culture",
+    "Promote positive cultural and family values",
+    "Community Identity and Learning Strengthening Initiative",
+    "Cultural Pride, Unity, and ASEAN Cultural Networks"
+   ]
   },
   {
    "pathway_id": "L3-015",
@@ -13992,7 +15816,14 @@
    "v2_mechanism": "Reconciliation and peacebuilding",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Reconciliation, peace processes and transitional justice",
+   "joins_when": "it deals with past conflict or builds peace",
+   "joins_not": "it is crime (F-08)",
+   "entry_points": [
+    "Peaceful Conflict Management Learning Programme",
+    "Study and promote peaceful conflict management approaches"
+   ]
   },
   {
    "pathway_id": "L3-016",
@@ -14028,7 +15859,11 @@
    "v2_mechanism": "Reconciliation and peacebuilding",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": ""
+   "revised": "",
+   "lever": "Jobs and income for potential combatants",
+   "joins_when": "it offers livelihoods to people at risk of joining violence",
+   "joins_not": "it is general employment (F-34)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-017",
@@ -14065,7 +15900,11 @@
    "v2_mechanism": "Reducing group grievance and polarisation",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": "cues"
+   "revised": "cues",
+   "lever": "Measures against partisan animosity and media segregation",
+   "joins_when": "it names partisan or political polarisation",
+   "joins_not": "it is group grievance (L3-011)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-259",
@@ -14102,7 +15941,11 @@
    "v2_mechanism": "Reducing group grievance and polarisation",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": ""
+   "revised": "",
+   "lever": "Visible service delivery and economic security to restore trust",
+   "joins_when": "it names restoring trust in institutions as the aim",
+   "joins_not": "it is a service expansion with no trust aim stated (its own family)",
+   "entry_points": []
   },
   {
    "pathway_id": "L3-013",
@@ -14138,7 +15981,13 @@
    "v2_mechanism": "Shared identity and intergroup contact",
    "v2_family_id": "FAM-03",
    "v2_family": "Social cohesion and peace",
-   "revised": "cues; moved"
+   "revised": "cues; moved",
+   "lever": "Structured contact and cooperation across groups",
+   "joins_when": "it brings groups together in cooperation or shared activity",
+   "joins_not": "it is national identity (L3-014)",
+   "entry_points": [
+    "Community and Cultural Relationship-Building Networks"
+   ]
   }
  ],
  "assets": [
