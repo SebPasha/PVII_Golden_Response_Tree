@@ -217,7 +217,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
   <div class="storms" id="storms" aria-label="Risks"><span class="eyebrow">Storms</span></div>
   <div class="tools">
-    <input id="q" type="search" placeholder="Search families, levers and pathways" aria-label="Search families, levers and pathways">
+    <input id="q" type="search" placeholder="Search strategies, levers, families and pathways" aria-label="Search strategies, levers, families and pathways">
     <button class="clear" id="clear" type="button">Clear selection</button>
   </div>
 
@@ -468,8 +468,17 @@ function setRisk(r) {
   if (r) show({ r }); else if (!state.sel && !state.lv) show({});
 }
 const lvHay = v => [v.lever, v.lever_full, ...v.pathway_ids.map(id => pwOf(id)?.pathway || "")].join(" ").toLowerCase();
+// strategies whose name, objective or reason holds the query; the levers and families they sit on
+function stratHits(q) { return (typeof C !== "undefined" && C) ? C.rows.filter(r => (r[1] + " " + r[2] + " " + (r[11] || "")).toLowerCase().includes(q)) : []; }
+let qLev = new Set(), qFam = new Set();
+function indexHits(q) {
+  qLev = new Set(); qFam = new Set();
+  if (!q) return;
+  stratHits(q).forEach(r => { if (r[5]) qLev.add(r[5]); if (r[4]) qFam.add(r[4]); });
+}
 function matches(f, q) {
   if (!q) return true;
+  if (qFam.has(f.family_id)) return true;
   const hay = [f.family, f.definition, f.examples, G[f.group_id].group, ...f.lever_ids.map(id => lvHay(V[id]))].join(" ").toLowerCase();
   return hay.includes(q);
 }
@@ -485,7 +494,7 @@ function paint() {
     L.g.classList.toggle("sel", state.sel === f.family_id);
     f.lever_ids.forEach(lid => {
       const B = budEl[lid];
-      const lon = on && (!state.q || lvHay(V[lid]).includes(state.q) || f.family.toLowerCase().includes(state.q));
+      const lon = on && (!state.q || qLev.has(lid) || lvHay(V[lid]).includes(state.q) || f.family.toLowerCase().includes(state.q));
       B.g.classList.toggle("dim", !lon && !selF);
       B.g.classList.toggle("on", state.lv === lid);
     });
@@ -547,7 +556,8 @@ function show(o) {
       ${v.lever_full && v.lever_full !== v.lever ? `<p class="def">${esc(v.lever_full)}</p>` : ""}
       <!--CTRY-->
       <div class="sect"><div class="eyebrow">Placement tests</div><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl></div>
-      ${v.intervention_evidence ? `<div class="sect"><div class="eyebrow">What the evidence says (${esc(v.evidence_strength || "")}${v.evidence_verified === "yes" ? ", source verified" : ", source not verified"})</div><p class="def">${esc(v.evidence_finding || "")}</p><p class="muted">${v.evidence_url ? `<a href="${esc(v.evidence_url)}" target="_blank" rel="noopener">${esc(v.intervention_evidence)}</a>` : esc(v.intervention_evidence)}</p></div>` : ""}
+      ${v.intervention_evidence ? `<div class="sect"><div class="eyebrow">What the evidence says (${esc(v.evidence_strength || "")}${v.evidence_design ? ", " + esc(v.evidence_design) : ""}${v.evidence_fit ? ", fit " + esc(v.evidence_fit) : ""}${v.evidence_checked && v.evidence_checked !== "not reached" ? ", read: " + esc(v.evidence_checked) : v.evidence_verified === "yes" ? ", source verified" : ", source not verified"})</div><p class="def">${esc(v.evidence_finding || "")}</p>${v.evidence_basis ? `<p class="muted">Basis: ${esc(v.evidence_basis)}</p>` : ""}<p class="muted">${v.evidence_url ? `<a href="${esc(v.evidence_url)}" target="_blank" rel="noopener">${esc(v.intervention_evidence)}</a>` : esc(v.intervention_evidence)}</p></div>` : ""}
+      ${v.framework_says ? `<div class="sect"><div class="eyebrow">In the framework${v.framework_source ? ": " + esc(v.framework_source) : ""}${v.framework_where ? " (" + esc(v.framework_where) + ")" : ""}</div><p class="def">${esc(v.framework_says)}</p>${(v.framework_refs || []).length ? `<p class="muted">Cites: ${v.framework_refs.map(esc).join("; ")}</p>` : ""}</div>` : ""}
       <div class="sect"><div class="eyebrow">Works through (${v.pathway_ids.length} pathway${v.pathway_ids.length > 1 ? "s" : ""}): the literature</div>${v.pathway_ids.map(id => pwOf(id)).filter(Boolean).map(p => pathwayHtml(p, v.pathway_ids.length === 1)).join("")}</div>
       ${(v.risks || []).length ? `<div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(v.risks)}</div></div>` : ""}
       ${(v.entry_points || []).length ? `<div class="sect"><div class="eyebrow">Thai entry points</div><div class="chips">${v.entry_points.map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>` : ""}
@@ -595,10 +605,13 @@ function show(o) {
       ${cond.length ? `<div class="sect"><div class="eyebrow">Conditional (${cond.length})</div>${familyList(cond.map(f => f.family_id))}</div>` : ""}
       <div class="sect"><div class="eyebrow">Levers whose pathways carry it (${lvs.length})</div>${leverList(lvs)}</div>`;
   } else if (o.q) {
+    indexHits(o.q);
+    const shits = stratHits(o.q);
     const hits = D.families.filter(f => matches(f, o.q));
     const vhits = D.levers.filter(v => lvHay(v).includes(o.q) || [v.joins_when].join(" ").toLowerCase().includes(o.q));
     const phits = D.pathways.filter(p => [p.pathway, p.causal_input, p.outcome, p.transmission].join(" ").toLowerCase().includes(o.q));
     h = `<div class="sect"><div class="eyebrow">Search</div><h2>“${esc(o.q)}”</h2></div>
+      ${(typeof C !== "undefined" && C) ? `<div class="sect"><div class="eyebrow">${esc(C.name)} strategies (${shits.length}${shits.length > 120 ? ", first 120 shown" : ""}) · select one to open its lever or family</div>${stratSearchList(shits)}</div>` : ""}
       <div class="sect"><div class="eyebrow">Levers (${vhits.length})</div>${leverList(vhits.slice(0, 60).map(v => v.lever_id))}</div>
       <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>
       <div class="sect"><div class="eyebrow">Pathways (${phits.length})</div>${phits.slice(0, 40).map(p => pathwayHtml(p, false)).join("")}</div>`;
@@ -626,9 +639,10 @@ panel.addEventListener("click", e => { const a = e.target.closest("[data-o]"); i
 
 $("#q").addEventListener("input", e => {
   state.q = e.target.value.trim().toLowerCase();
+  indexHits(state.q);
   if (state.q.length >= 2) show({ q: state.q }); else { paint(); if (!state.q) show(state.risk ? { r: state.risk } : {}); }
 });
-$("#clear").addEventListener("click", () => { $("#q").value = ""; state.q = ""; state.risk = null; setRisk(null); show({}); });
+$("#clear").addEventListener("click", () => { $("#q").value = ""; state.q = ""; indexHits(""); state.risk = null; setRisk(null); show({}); });
 
 // ---------- outline ----------
 const out = $("#outline");
@@ -748,6 +762,18 @@ function countryOverview() {
     <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
     <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
     <p class="muted">Pick a plan on the timeline to see that plan's tree; the table below the tree shows every family and lever across all plans.</p>`;
+}
+function stratSearchList(rows) {
+  if (!rows.length) return `<p class="muted">No strategy matches.</p>`;
+  const sorted = rows.slice().sort((a, b) => (a[5] ? 0 : 1) - (b[5] ? 0 : 1) || a[0] - b[0]);
+  return sorted.slice(0, 120).map(r => {
+    const where = r[5] ? `<b>${esc(short(V[r[5]].lever, 50))}</b> <span class="muted">${esc(F[V[r[5]].family_id].family)}</span>` : r[4] && F[r[4]] ? `<b>${esc(F[r[4]].family)}</b> <span class="muted">family only</span>` : `<span class="muted">${esc(r[3])}</span>`;
+    const o = r[5] ? { v: r[5] } : r[4] ? { f: r[4] } : null;
+    const bits = [esc(short(planLabel(C.plans[r[0]]), 30)), where];
+    if (r[6] && pwOf(r[6])) bits.push(`via ${esc(pwOf(r[6]).pathway)}`);
+    if (r[11]) bits.push(`<span title="${esc(r[11])}">${esc(short(r[11], 70))}</span>`);
+    return `<div class="strat"${o ? ` ${O(o)} style="cursor:pointer"` : ""}><span title="${esc(r[2])}">${esc(r[1])}</span><span class="meta">${bits.join(" · ")}</span></div>`;
+  }).join("");
 }
 function stratList(rows, showLever) {
   rows.sort((a, b) => (a[5] ? 0 : 1) - (b[5] ? 0 : 1) || a[0] - b[0]);

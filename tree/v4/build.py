@@ -116,8 +116,25 @@ def short_name(lever_text):
 # Intervention-level evidence per lever (inputs/lever_evidence.json, scan of 3 November 2026): a
 # systematic review or flagship evaluation of the action itself, beside the mechanism citations.
 EVIDENCE_FILE = os.path.join(HERE, "inputs", "lever_evidence.json")
-EVIDENCE_KEYS = ("intervention_evidence", "evidence_finding", "evidence_strength", "evidence_verified", "evidence_url")
+EVIDENCE_KEYS = ("intervention_evidence", "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
+                 "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url")
 EMPTY_EVIDENCE = {k: "" for k in EVIDENCE_KEYS}
+
+
+# Jude's framework documents (the basis of the groups) read against each lever: what the document says
+# about the action and the references it cites for it (inputs/framework_refs.json, 3 November 2026).
+FRAMEWORK_FILE = os.path.join(HERE, "inputs", "framework_refs.json")
+FRAMEWORK_KEYS = ("framework_source", "framework_where", "framework_says", "framework_refs")
+
+
+def load_framework_refs():
+    if not os.path.exists(FRAMEWORK_FILE):
+        return {}
+    out = {}
+    for e in json.load(open(FRAMEWORK_FILE, encoding="utf-8")):
+        out[e["lever_id"]] = {"framework_source": e.get("framework_source", ""), "framework_where": e.get("framework_where", ""),
+                              "framework_says": e.get("framework_says", ""), "framework_refs": list(e.get("framework_refs") or [])}
+    return out
 
 
 def load_lever_evidence():
@@ -127,12 +144,15 @@ def load_lever_evidence():
     for e in json.load(open(EVIDENCE_FILE, encoding="utf-8")):
         out[e["lever_id"]] = {"intervention_evidence": e.get("intervention_evidence", ""),
                               "evidence_finding": e.get("finding", ""), "evidence_strength": e.get("strength", ""),
+                              "evidence_design": e.get("design", ""), "evidence_fit": e.get("fit", ""),
+                              "evidence_basis": e.get("basis", ""), "evidence_checked": e.get("checked", ""),
                               "evidence_verified": e.get("verified", ""), "evidence_url": e.get("url", "")}
     return out
 
 
 def main():
     lever_evidence = load_lever_evidence()
+    framework_refs = load_framework_refs()
     v3 = json.load(open(V3, encoding="utf-8"))
     groups = {g["group_id"]: dict(g) for g in v3["groups"]}
     families = {f["family_id"]: dict(f) for f in v3["families"]}
@@ -184,6 +204,7 @@ def main():
                      "text_cues": "|".join(cues), "risks": risks, "entry_points": entry[:8],
                      "evidence": "; ".join("%s: %s" % (paths[m]["pathway"], paths[m].get("evidence", "")) for m in members)}
             lever.update(lever_evidence.get(lid, EMPTY_EVIDENCE))
+            lever.update(framework_refs.get(lid, {k: ([] if k == "framework_refs" else "") for k in FRAMEWORK_KEYS}))
             levers[lid] = lever
             fam["lever_ids"].append(lid)
             for m in members:
@@ -211,7 +232,9 @@ def main():
     write_csv(os.path.join(HERE, "levers_v4.csv"), levers.values(),
               ["lever_id", "lever", "level", "family_id", "family", "group_id", "group", "subpillar", "pillar",
                "lever_full", "joins_when", "joins_not", "n_pathways", "pathway_ids", "pathways", "evidence",
-               "intervention_evidence", "evidence_finding", "evidence_strength", "evidence_verified", "evidence_url",
+               "intervention_evidence", "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
+               "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
+               "framework_source", "framework_where", "framework_says", "framework_refs",
                "risks", "entry_points", "text_cues"])
     write_csv(os.path.join(HERE, "pathways_v4.csv"), paths.values(),
               ["pathway_id", "pathway", "lever_id", "lever", "family_id", "family", "group_id", "group",

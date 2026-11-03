@@ -38,7 +38,9 @@ data = {
                                          "conditional_risks", "assets")} for f in tree["families"]],
     "levers": [{k: lv.get(k) for k in ("lever_id", "lever", "lever_full", "family_id", "joins_when", "joins_not",
                                         "pathway_ids", "risks", "entry_points", "intervention_evidence",
-                                        "evidence_finding", "evidence_strength", "evidence_verified", "evidence_url")}
+                                        "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
+                                        "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
+                                        "framework_source", "framework_where", "framework_says", "framework_refs")}
                for lv in tree["levers"]],
     "pathways": [{k: p.get(k, "") for k in ("pathway_id", "pathway", "family_id", "lever_id", "causal_input",
                                              "transmission", "outcome", "conditions", "distinction", "evidence",
