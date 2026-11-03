@@ -45,9 +45,9 @@ STRATEGY_COLUMNS = ["strategy_id", "plan_id", "country", "slug", "doc_type", "ed
                     # step M
                     "tree_version", "relation", "objective_id", "tree_objective",
                     "new_objective", "node_id", "level", "depth_basis", "depth_words",
-                    "group_id", "group", "family_id", "family", "mechanism_id", "mechanism",
+                    "group_id", "group", "family_id", "family", "lever_id", "lever", "mechanism_id", "mechanism",
                     "pathway_id", "pathway", "subpillar", "pillar_rhdr", "target_id", "target_label", "instrument_id",
-                    "instrument_label", "proposal", "confidence", "map_note"]
+                    "instrument_label", "proposal", "confidence", "reason", "map_note"]
 PROPOSAL_COLUMNS = ["plan_id", "strategy_id", "name", "objective", "relation", "new_objective",
                     "node_id", "proposal", "quote_en", "quote"]
 
@@ -587,6 +587,11 @@ def _resolve_v2(s, a, tree, node, text, notes):
         if cue:
             s["depth_basis"], s["depth_words"] = "strategy wording", cue
             break
+        if tree.gate_advisory:
+            # v4: the lever is judged by meaning; a missing cue is written down, not acted on
+            s["depth_basis"] = "%s by meaning" % tree.level_names[2]
+            notes.append("no cue of %s in the wording (advisory)" % final)
+            break
         up = tree.parent_of(final)
         notes.append("held at %s: the wording carries none of %s's cues" % (up, final))
         final = up
@@ -597,6 +602,19 @@ def _resolve_v2(s, a, tree, node, text, notes):
         if tree.required_level and level == "L1":
             # v3: a family is the required level; a group alone is a weak placement, counted.
             notes.append("%s only: a %s is required" % (tree.level_names[0], tree.level_names[1]))
+    if tree.literature and final in tree.pathways:
+        # v4: the pathway under the lever is an optional, literature-backed depth
+        lever = tree.pathways[final]
+        pid = _str(a.get("pathway_id"))
+        if pid and pid in tree.literature and tree.literature[pid]["lever_id"] == final:
+            s["pathway_id"], s["pathway"] = pid, tree.literature[pid]["pathway"]
+            s["depth_basis"] += "; pathway named"
+        elif pid:
+            notes.append("pathway %s is not under %s; not recorded" % (pid, final))
+        elif len(lever.get("pathway_ids") or []) == 1:
+            only = lever["pathway_ids"][0]
+            s["pathway_id"], s["pathway"] = only, tree.literature[only]["pathway"]
+    s["reason"] = _str(a.get("reason"))
     s["relation"] = "placed" if final else "new"
     if not final:
         s["proposal"] = _str(a.get("proposal")) or (
@@ -608,9 +626,9 @@ def resolve(s, a, tree):
     """Apply one model answer to one strategy under the tree's own rules, in place."""
     s.update(tree_version=tree.version, relation="unmapped", objective_id="", tree_objective="",
              new_objective="", node_id="", level="", depth_basis="", depth_words="",
-             group_id="", group="", family_id="", family="", mechanism_id="", mechanism="",
+             group_id="", group="", family_id="", family="", lever_id="", lever="", mechanism_id="", mechanism="",
              pathway_id="", pathway="", subpillar="", pillar_rhdr="", target_id="", target_label="", instrument_id="",
-             instrument_label="", proposal="", confidence="", map_note="")
+             instrument_label="", proposal="", confidence="", reason="", map_note="")
     if not a:
         s["map_note"] = "no answer for this strategy"
         return s
@@ -661,8 +679,10 @@ def resolve(s, a, tree):
     d = tree.describe(final) if final else {}
     s.update(group_id=d.get("group_id", ""), group=d.get("group", ""),
              family_id=d.get("family_id", ""), family=d.get("family", ""),
+             lever_id=d.get("lever_id", ""), lever=d.get("lever", ""),
              mechanism_id=d.get("mechanism_id", ""), mechanism=d.get("mechanism", ""),
-             pathway_id=d.get("pathway_id", ""), pathway=d.get("pathway", ""),
+             # v4 sets the pathway in _resolve_v2 (an optional depth under the lever); keep it
+             pathway_id=s.get("pathway_id") or d.get("pathway_id", ""), pathway=s.get("pathway") or d.get("pathway", ""),
              # The official RHDR category and pillar: the tree's own, never a separate guess.
              subpillar=d.get("subpillar", ""), pillar_rhdr=d.get("pillar", ""))
     tid, iid = _str(a.get("target_id")), _str(a.get("instrument_id"))

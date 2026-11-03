@@ -1,0 +1,12 @@
+plan_id,country,slug,doc_type,edition,plan_title,period_start,period_end,published,language,status,n_risks,n_strategies,n_same,n_differs,n_new,n_unmapped,tree_version
+thailand_ndp_2023-2027,Thailand,thailand,ndp,13th,13th National Economic and Social Development Plan,2023,2027,,en,run,307,519,0,0,1,0,v3
+thailand_ndp_2017-2021,Thailand,thailand,ndp,12th,12th National Economic and Social Development Plan,2017,2021,,en,run,515,1175,0,0,3,0,v3
+thailand_ndp_2012-2016,Thailand,thailand,ndp,11th,11th National Economic and Social Development Plan,2012,2016,,en,run,708,888,0,0,0,0,v3
+thailand_vision_2018-2037,Thailand,thailand,vision,NS,National Strategy 2018-2037 (identified from its period; confirm),2018,2037,,en,run,143,295,0,0,0,0,v3
+thailand_sector_2023-2027_digital-government-development-plan,Thailand,thailand,sector,,Digital Government Development Plan,2023,2027,,th,run,180,467,0,0,0,0,v3
+thailand_sector_2023-2027_national-action-plan-for-health-security,Thailand,thailand,sector,,National Action Plan for Health Security,2023,2027,,en,run,477,1089,0,0,1,0,v3
+thailand_sector_2015-2050_climate-change-master-plan,Thailand,thailand,sector,,Climate Change Master Plan,2015,2050,,en,run,242,368,0,0,0,0,v3
+thailand_sector_2017-2036_national-strategic-plan-for-public-healt,Thailand,thailand,sector,,National Strategic Plan for Public Health,2017,2036,,en,run,98,257,0,0,0,0,v3
+thailand_sector_2017-2036_national-education-plan,Thailand,thailand,sector,,National Education Plan,2017,2036,,th,run,231,580,0,0,1,0,v3
+,Thailand,thailand,sector,,Digital Economy and Society Development Plan (20-year),2016,,,en,needs end year: the plan is 20 years from 2016 per its title; confirm,,,,,,,
+,Thailand,thailand,sector,,National Adaptation Plan,2024,,,en,needs period,,,,,,,
