@@ -842,6 +842,10 @@ if (C && C.rows.length) {
     const b = $("#banner"); b.hidden = false;
     b.innerHTML = `<b>Provisional: v3 placements lifted onto v4 levers</b><span>The ${esc(C.name)} strategies here are the v3 run, not a v4 run. A strategy v3 placed on a pathway sits on that pathway's lever, with the pathway recorded; a strategy v3 placed on a family stays on the family. The lever share is therefore v3's pathway share; the v4 run places by the levers' own tests and will replace this.</span>`;
   }
+  if (!C.provisional && C.lifted_plans && C.lifted_plans.length) {
+    const b = $("#banner"); b.hidden = false;
+    b.innerHTML = `<b>Mixed: ${C.lifted_plans.length} earlier plans lifted from v3</b><span>The 13th Plan rows are the v4 run (placed by the levers' own tests). The other plans were mapped on v3: a strategy placed on a pathway there sits on that pathway's lever, one placed on a family stays on the family. Lifted plans: ${esc(C.lifted_plans.join(", "))}.</span>`;
+  }
   $("#ctry").hidden = false;
   $("#m-ctry").textContent = `${C.name} on the tree`;
   $("#ct-h").textContent = `${C.name} over time: families and levers by plan`;

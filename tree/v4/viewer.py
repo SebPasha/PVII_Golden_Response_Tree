@@ -94,7 +94,8 @@ def country(paths):
         lifted = "lever_id" not in (rd.fieldnames or [])
         lifted_any = lifted_any or lifted
         for r in rd:
-            r["_lifted"] = lifted
+            # a row from an older run (no lever_id, placed on a pathway) is lifted onto the lever
+            r["_lifted"] = lifted or (not (r.get("lever_id") or "").strip() and (r.get("tree_version") or "") != "v4")
             rows.append(r)
         for p in read_plans(path):
             plans_csv.setdefault(p["plan_id"], p)
@@ -124,6 +125,7 @@ def country(paths):
     return {
         "name": first.get("country") or "Country",
         "provisional": lifted_any,
+        "lifted_plans": sorted({r.get("plan_id", "") for r in rows if r["_lifted"]}),
         "sources": [os.path.relpath(p, HERE) for p in paths],
         "plans": [{"id": p["plan_id"], "doc_type": p.get("doc_type", ""), "edition": p.get("edition", ""),
                    "title": p.get("plan_title", ""), "start": int(p.get("period_start") or 0),

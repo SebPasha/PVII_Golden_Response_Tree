@@ -1,0 +1,336 @@
+{
+ "plan_id": "thailand_ndp_2023-2027",
+ "title": "13th National Economic and Social Development Plan",
+ "period": {
+  "start": 2023,
+  "end": 2027,
+  "quote": "The 13th National Economic and Social Development Plan (2023-2027) is a second-level plan that acts as a key mechanism to translate the National Strategy into implementation and serves as a framework for the formulation of third-level plans so as to enable relevant development partners to function in support of achieving the targets of the National Strategy within the expected timeframe."
+ },
+ "period_note": "",
+ "structure": [
+  {
+   "level": "other",
+   "number": "Part 3",
+   "name": "Objectives, Targets, and Development Milestones",
+   "parent": "",
+   "parent_quote": ""
+  },
+  {
+   "level": "target",
+   "number": "3.1.1",
+   "name": "Restructuring the manufacturing and service sectors towards an innovation-based economy",
+   "parent": "Part 3",
+   "parent_quote": "To pursue the objectives, the five main development targets of the 13th plan are determined as follows:"
+  },
+  {
+   "level": "target",
+   "number": "3.1.2",
+   "name": "Developing human capital for the new global era",
+   "parent": "Part 3",
+   "parent_quote": "To pursue the objectives, the five main development targets of the 13th plan are determined as follows:"
+  },
+  {
+   "level": "target",
+   "number": "3.1.3",
+   "name": "Creating a society of opportunities and fairness",
+   "parent": "Part 3",
+   "parent_quote": "To pursue the objectives, the five main development targets of the 13th plan are determined as follows:"
+  },
+  {
+   "level": "target",
+   "number": "3.1.4",
+   "name": "Ensuring the transition of production and consumption towards sustainability",
+   "parent": "Part 3",
+   "parent_quote": "To pursue the objectives, the five main development targets of the 13th plan are determined as follows:"
+  },
+  {
+   "level": "target",
+   "number": "3.1.5",
+   "name": "Enhancing Thailand's capability to cope with changes and risks in the new global context",
+   "parent": "Part 3",
+   "parent_quote": "To pursue the objectives, the five main development targets of the 13th plan are determined as follows:"
+  },
+  {
+   "level": "other",
+   "number": "3.2.1",
+   "name": "Targeted manufacturing and service sectors",
+   "parent": "Part 3",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 1",
+   "name": "Thailand is a leading country in high-value agricultural produce and processed agricultural products",
+   "parent": "3.2.1",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 2",
+   "name": "Thailand is a sustainable quality-oriented tourist destination",
+   "parent": "3.2.1",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 3",
+   "name": "Thailand is the world's major electric vehicle manufacturing base",
+   "parent": "3.2.1",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 4",
+   "name": "Thailand is a high-value medical and wellness hub",
+   "parent": "3.2.1",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 5",
+   "name": "Thailand is the region's key strategic trade, investment and logistics gateway",
+   "parent": "3.2.1",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 6",
+   "name": "Thailand is ASEAN's hub for digital and smart electronics industry",
+   "parent": "3.2.1",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "other",
+   "number": "3.2.2",
+   "name": "Socioeconomic opportunity and equality",
+   "parent": "Part 3",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 7",
+   "name": "Thailand has strong, high-potential and competitive SMEs",
+   "parent": "3.2.2",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 8",
+   "name": "Thailand has smart cities as well as safe and livable regions with sustainable growth",
+   "parent": "3.2.2",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 9",
+   "name": "Thailand has less intergenerational poverty and adequate, appropriate social protection",
+   "parent": "3.2.2",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "other",
+   "number": "3.2.3",
+   "name": "Natural resources and environmental sustainability",
+   "parent": "Part 3",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 10",
+   "name": "Thailand is a circular economy and low-carbon society",
+   "parent": "3.2.3",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 11",
+   "name": "Thailand can mitigate the risks and impacts of natural disaster and climate change",
+   "parent": "3.2.3",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "other",
+   "number": "3.2.4",
+   "name": "Key enablers for Thailand's transformation",
+   "parent": "Part 3",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 12",
+   "name": "Thailand has a high-capability workforce committed to lifelong learning and responsive to future development context",
+   "parent": "3.2.4",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  },
+  {
+   "level": "milestone",
+   "number": "Milestone 13",
+   "name": "Thailand has a modern, efficient, and responsive public sector",
+   "parent": "3.2.4",
+   "parent_quote": "The 13 development milestones are categorized in 4 development areas as follows:"
+  }
+ ],
+ "headline_targets": [
+  {
+   "target": "Gross National Income per capita: US$9,300 (THB300,000)",
+   "year": 2027,
+   "quote": "Gross National Income per capita US$9,300 (THB300,000)"
+  },
+  {
+   "target": "Human Achievement Index (HAI): 0.7209 (High human achievement level)",
+   "year": 2027,
+   "quote": "0.7209 (High human achievement level)"
+  },
+  {
+   "target": "Disparity in wellbeing (expenditure) between Top 10 and Bottom 40: lower than 5 times",
+   "year": 2027,
+   "quote": "Lower than 5 times"
+  },
+  {
+   "target": "Reduction of overall GHG emissions (energy and transport/ industry/waste management) by no less than 20% from business-as-usual (BAU) level",
+   "year": 2027,
+   "quote": "Reduction of overall GHG emissions (energy and transport/ industry/waste management) by no less than 20% from business-as-usual (BAU) level"
+  },
+  {
+   "target": "International Health Regulations (IHR) capacity and health emergency preparedness: 90% with each core competency at no less than 80%",
+   "year": 2027,
+   "quote": "90% With each core competency at no less than 80%"
+  },
+  {
+   "target": "Digital Competitiveness Rank: 30th",
+   "year": 2027,
+   "quote": "30th"
+  },
+  {
+   "target": "Government Effectiveness Rank: 15th",
+   "year": 2027,
+   "quote": "15th"
+  },
+  {
+   "target": "Thailand to achieve carbon neutrality by 2050",
+   "year": 2050,
+   "quote": "Pushing for a reduction of greenhouse gas emissions for Thailand to achieve carbon neutrality by 2050 and net zero greenhouse gas emissions by 2065."
+  },
+  {
+   "target": "Thailand to achieve net zero greenhouse gas emissions by 2065",
+   "year": 2065,
+   "quote": "Pushing for a reduction of greenhouse gas emissions for Thailand to achieve carbon neutrality by 2050 and net zero greenhouse gas emissions by 2065."
+  },
+  {
+   "target": "GHG emissions reduced by 40 per cent, or GHG emissions of 222 million tons of carbon dioxide equivalent by 2030",
+   "year": 2030,
+   "quote": "Thailand will have to consider more challenging tactical targets and lay down long-term strategic targets in order to reduce GHG emissions by 40 per cent, or GHG emissions of 222 million tons of carbon dioxide equivalent by 2030."
+  },
+  {
+   "target": "Thailand's GHG emissions after 2020 reduced by 20 to 25 per cent compared with business-as-usual in 2030, with total emissions no more than 444 million tons of carbon dioxide equivalent",
+   "year": 2030,
+   "quote": "Thailand has announced its goal to reduce its greenhouse gas (GHG) emissions and implement measures regarding climate change after 2020 when the GHG emissions were set to be reduced by 20 to 25 per cent in comparison with a business-as-usual level of GHG emissions in 2030, meaning that total GHG emissions are to be no more than 444 million tons of carbon dioxide equivalent."
+  },
+  {
+   "target": "By 2030, 440,000 zero emission vehicles in domestic use (50 per cent of all vehicles)",
+   "year": 2030,
+   "quote": "setting targets by 2030 at 440,000 units in domestic use (50 per cent of all vehicles) and 725,000 units in production (30 per cent of all vehicles)."
+  },
+  {
+   "target": "By 2030, 725,000 zero emission vehicles in production (30 per cent of all vehicles)",
+   "year": 2030,
+   "quote": "setting targets by 2030 at 440,000 units in domestic use (50 per cent of all vehicles) and 725,000 units in production (30 per cent of all vehicles)."
+  },
+  {
+   "target": "Thailand's public sector to rank not lower than the world's 40th with scores not lower than 0.82 in the E-Government Development Index",
+   "year": 2027,
+   "quote": "Thailand ranks not lower than the world's 40th with scores not lower than 0.82 in the E-Government Development Index (EGDI) for the overall e-government, e-participation, human capital, and online services indices."
+  },
+  {
+   "target": "Public service satisfaction level not lower than 90 per cent",
+   "year": 2027,
+   "quote": "The satisfaction level for public services is not lower than 90 per cent."
+  }
+ ],
+ "risk_framing": {
+  "summary": "The plan is framed as a response to a period of overlapping shocks and structural transitions. It emphasizes recovery from COVID-19, adaptation to rapid technological change, worsening climate change, ageing, geopolitical and trade shifts, and domestic structural weaknesses such as inequality, low productivity, environmental stress, and weak state capability. It treats these not as isolated issues but as interacting pressures requiring resilience, structural transformation, and stronger preparedness systems.",
+  "risks_named": [
+   "Climate Change",
+   "Pandemics",
+   "Biodiversity Loss",
+   "Environmental Degradation and Pollution",
+   "Resource and Energy Pressures",
+   "Shifts in Globalisation",
+   "Technological Change",
+   "Demographic Shifts"
+  ],
+  "quotes": [
+   "The 13th Plan was formulated when the world and Thailand were still facing various limitations due to the COVID-19 pandemic, which not only caused illness and death but also adversely affected economic conditions, impacting the livelihoods of all groups of the population.",
+   "In addition, the 13th Plan period fall within a time of rapidly-evolving technological development, worsening climate change, an ageing society in Thailand and many countries around the world, as well as geo-political changes.",
+   "The synthesis of the development context and the status of multi-dimensional capitals of Thailand during the 13th Plan was completed by collecting and processing data derived from the outcomes of the 12th National Economic and Social Development Plan, many issues of which still need to be implemented continually; together with assessing the impacts of the COVID-19 pandemic that brought about dramatic changes to the global development scenario and affected Thailand in many dimensions; and by contemplating on predictions of key global megatrends that can potentially affect Thailand's future development.",
+   "The overexploitations of natural resources beyond the ecosystem's capacity, together with limitations in management, lead to the degradation of natural resources and intensifying environmental problems.",
+   "Thailand is highly vulnerable to threats from natural disasters and climate change while having limited capability to cope with disasters and their risks."
+  ]
+ },
+ "vocabulary": [
+  {
+   "term": "second-level plan",
+   "gloss": "A formal tier in Thailand's planning hierarchy below the National Strategy and above third-level action plans."
+  },
+  {
+   "term": "third-level plans",
+   "gloss": "Operational plans and action plans of agencies that implement second-level plans."
+  },
+  {
+   "term": "development milestones",
+   "gloss": "The plan's 13 priority outcome areas stating what Thailand aims to 'be' or 'have' during the plan period."
+  },
+  {
+   "term": "Sufficiency Economy Philosophy",
+   "gloss": "Thailand's guiding development philosophy emphasizing moderation, reasonableness, resilience/immunity, knowledge and integrity."
+  },
+  {
+   "term": "BCG Model",
+   "gloss": "Bio-Circular-Green Economy Model; Thailand's framework for combining innovation-led growth with resource efficiency and environmental sustainability."
+  },
+  {
+   "term": "OEM",
+   "gloss": "Original Equipment Manufacturer; production for others' brands with limited domestic value capture."
+  },
+  {
+   "term": "OBM",
+   "gloss": "Owned Brands Manufacturer; firms producing under their own brands."
+  },
+  {
+   "term": "ODM",
+   "gloss": "Owned Design Manufacturer; firms designing and manufacturing products, implying higher capability than OEM."
+  },
+  {
+   "term": "TPF",
+   "gloss": "Total factor productivity; a measure of efficiency/productivity growth beyond labor and capital inputs."
+  },
+  {
+   "term": "intergenerational poor households",
+   "gloss": "Households with children or youth facing income or non-income deprivation across specified dimensions, used to target chronic poverty transmission."
+  },
+  {
+   "term": "TPMAP",
+   "gloss": "Thai People Map and Analytics Platform; the government's data platform used to identify poverty and deprivation."
+  },
+  {
+   "term": "One Health",
+   "gloss": "An integrated approach linking human, animal and environmental health in surveillance and response systems."
+  },
+  {
+   "term": "HTS",
+   "gloss": "Home-Temple-School; a local collaboration model including communities, religious institutions, schools and related local actors."
+  },
+  {
+   "term": "PDCA cycle",
+   "gloss": "Plan-Do-Check-Act; the management cycle adopted for implementation and monitoring of the plan."
+  },
+  {
+   "term": "Thailand 4.0",
+   "gloss": "Thailand's policy vision for restructuring toward innovation-driven, higher-value industry and services."
+  }
+ ],
+ "quote_checks": {
+  "verbatim": 42,
+  "edited": 1
+ }
+}

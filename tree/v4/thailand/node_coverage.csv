@@ -1,0 +1,758 @@
+node_id,level,family_id,family,mechanism,subpillar,country,plan_id,period_start,period_end,n_strategies
+F-01,L2,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_ndp_2012-2016,2012,2016,2
+F-01,L2,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,5
+F-01,L2,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+F-01,L2,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-01,L2,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-02,L2,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_ndp_2012-2016,2012,2016,5
+F-02,L2,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,3
+F-02,L2,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,9
+F-02,L2,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,37
+F-02,L2,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-02,L2,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-03,L2,F-03,Exclusion from social and political spaces,,Tackling Structural Exclusion,Thailand,thailand_ndp_2012-2016,2012,2016,6
+F-03,L2,F-03,Exclusion from social and political spaces,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,2
+F-03,L2,F-03,Exclusion from social and political spaces,,Tackling Structural Exclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-03,L2,F-03,Exclusion from social and political spaces,,Tackling Structural Exclusion,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,4
+F-03,L2,F-03,Exclusion from social and political spaces,,Tackling Structural Exclusion,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-04,L2,F-04,"Violence, coercion and denial of dignity",,Tackling Structural Exclusion,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,6
+F-05,L2,F-05,Displaced and uprooted populations,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,18
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,10
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,8
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,5
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-06,L2,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-07,L2,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,9
+F-07,L2,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,4
+F-07,L2,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+F-07,L2,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,10
+F-07,L2,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-08,L2,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,1
+F-08,L2,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+F-08,L2,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+F-08,L2,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+F-08,L2,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-09,L2,F-09,Living environment and basic services,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,5
+F-09,L2,F-09,Living environment and basic services,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,14
+F-09,L2,F-09,Living environment and basic services,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,10
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,9
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,4
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,87
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,5
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,162
+F-10,L2,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,6
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,29
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,26
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,9
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,171
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,5
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,3
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,8
+F-11,L2,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,8
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,24
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,34
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,5
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,81
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,7
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,8
+F-12,L2,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,9
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,25
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,13
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,39
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-13,L2,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,6
+F-14,L2,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,19
+F-14,L2,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,20
+F-14,L2,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,4
+F-14,L2,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,26
+F-14,L2,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,5
+F-15,L2,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,24
+F-15,L2,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,19
+F-15,L2,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,4
+F-15,L2,F-15,Living natural capital,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,24
+F-15,L2,F-15,Living natural capital,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,13
+F-16,L2,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,10
+F-16,L2,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,15
+F-16,L2,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-16,L2,F-16,Water resources,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,8
+F-16,L2,F-16,Water resources,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,26
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,28
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,2
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,15
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,6
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,22
+F-17,L2,F-17,Environmental quality,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,9
+F-18,L2,F-18,Public wealth: resource rents and the balance sheet,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,4
+F-18,L2,F-18,Public wealth: resource rents and the balance sheet,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,2
+F-19,L2,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,2
+F-19,L2,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,1
+F-19,L2,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,2
+F-19,L2,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+F-19,L2,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-20,L2,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,23
+F-20,L2,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,55
+F-20,L2,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+F-20,L2,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,2
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,4
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,34
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,5
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,2
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-21,L2,F-21,Tourism export destinations,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,12
+F-22,L2,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,17
+F-22,L2,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,22
+F-22,L2,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,3
+F-22,L2,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+F-22,L2,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-22,L2,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,9
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,32
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,61
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,3
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,12
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,11
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,11
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,14
+F-23,L2,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,6
+F-24,L2,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,18
+F-24,L2,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,26
+F-24,L2,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+F-24,L2,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-24,L2,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-25,L2,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,9
+F-25,L2,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,42
+F-25,L2,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-25,L2,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,8
+F-25,L2,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+F-25,L2,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-26,L2,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,5
+F-26,L2,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,32
+F-26,L2,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+F-26,L2,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-27,L2,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,12
+F-27,L2,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,25
+F-27,L2,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+F-27,L2,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-27,L2,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-28,L2,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,13
+F-28,L2,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,21
+F-28,L2,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-28,L2,F-28,Urban systems,,Domestic Integration,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,5
+F-28,L2,F-28,Urban systems,,Domestic Integration,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-29,L2,F-29,Lagging regions and place-based development,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,11
+F-29,L2,F-29,Lagging regions and place-based development,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,19
+F-29,L2,F-29,Lagging regions and place-based development,,Domestic Integration,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+F-29,L2,F-29,Lagging regions and place-based development,,Domestic Integration,Thailand,thailand_vision_2018-2037,2018,2037,6
+F-30,L2,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,4
+F-30,L2,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,13
+F-30,L2,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,2
+F-30,L2,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,3
+F-30,L2,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_vision_2018-2037,2018,2037,4
+F-31,L2,F-31,Finance for small borrowers and savers,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,13
+F-31,L2,F-31,Finance for small borrowers and savers,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,14
+F-31,L2,F-31,Finance for small borrowers and savers,,Growth through Inclusion,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-32,L2,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,26
+F-32,L2,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,25
+F-32,L2,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,3
+F-32,L2,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,10
+F-32,L2,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-32,L2,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_vision_2018-2037,2018,2037,6
+F-33,L2,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,5
+F-33,L2,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,17
+F-33,L2,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,2
+F-33,L2,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+F-33,L2,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_vision_2018-2037,2018,2037,2
+F-34,L2,F-34,Jobs and job matching,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,4
+F-35,L2,F-35,Displaced workers and local adjustment,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,3
+F-36,L2,F-36,Labour mobility and remittances,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,4
+F-36,L2,F-36,Labour mobility and remittances,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+F-37,L2,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,4
+F-37,L2,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,10
+F-37,L2,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_vision_2018-2037,2018,2037,5
+F-38,L2,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,8
+F-38,L2,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,11
+F-38,L2,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,10
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,6
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,9
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,5
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,72
+F-39,L2,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_vision_2018-2037,2018,2037,2
+F-40,L2,F-40,Contingency buffers and pre-arranged finance,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,5
+F-40,L2,F-40,Contingency buffers and pre-arranged finance,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,2
+F-40,L2,F-40,Contingency buffers and pre-arranged finance,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,5
+F-40,L2,F-40,Contingency buffers and pre-arranged finance,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,10
+F-41,L2,F-41,Scenario and futures work,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,5
+F-41,L2,F-41,Scenario and futures work,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,2
+F-41,L2,F-41,Scenario and futures work,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+F-41,L2,F-41,Scenario and futures work,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,14
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,25
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,12
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,20
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,5
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,17
+F-42,L2,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_vision_2018-2037,2018,2037,4
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,22
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,24
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,17
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,26
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,22
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,89
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,96
+F-43,L2,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_vision_2018-2037,2018,2037,7
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,3
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,21
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,11
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,4
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,14
+F-44,L2,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,44
+F-45,L2,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,1
+F-45,L2,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+F-45,L2,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+F-45,L2,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,8
+F-45,L2,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-46,L2,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,1
+F-46,L2,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,5
+F-46,L2,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,2
+F-46,L2,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+F-46,L2,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,12
+F-46,L2,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,3
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,18
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,19
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,11
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,10
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,5
+F-47,L2,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_vision_2018-2037,2018,2037,7
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,36
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,51
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,12
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,26
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,20
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,24
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,95
+F-48,L2,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_vision_2018-2037,2018,2037,13
+F-49,L2,F-49,Delegated management autonomy,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,3
+F-49,L2,F-49,Delegated management autonomy,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,3
+F-49,L2,F-49,Delegated management autonomy,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,3
+F-49,L2,F-49,Delegated management autonomy,,Agility and Delivery Capability,Thailand,thailand_vision_2018-2037,2018,2037,1
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,31
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,49
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,5
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,13
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,57
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,24
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,54
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,86
+F-50,L2,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_vision_2018-2037,2018,2037,14
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,6
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,9
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,4
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,110
+F-51,L2,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_vision_2018-2037,2018,2037,2
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,12
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,15
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,4
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,23
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,5
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,30
+F-52,L2,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_vision_2018-2037,2018,2037,4
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,7
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,3
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,6
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,64
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,11
+F-53,L2,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_vision_2018-2037,2018,2037,3
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,3
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,2
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+F-54,L2,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,56
+F-55,L2,F-55,Electoral accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,2
+F-55,L2,F-55,Electoral accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,2
+F-55,L2,F-55,Electoral accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,1
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,9
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,12
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2023-2027,2023,2027,1
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,3
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,19
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-56,L2,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,6
+F-57,L2,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,6
+F-57,L2,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,21
+F-57,L2,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+F-57,L2,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+F-57,L2,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,9
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,8
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,10
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,4
+F-58,L2,F-58,Reform commitment and coalitions,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,1
+F-59,L2,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,13
+F-59,L2,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,13
+F-59,L2,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,3
+F-59,L2,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+F-59,L2,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+F-59,L2,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,4
+F-60,L2,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,13
+F-60,L2,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,6
+F-60,L2,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,7
+F-60,L2,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,9
+G-01,L1,,,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+G-02,L1,,,,Tackling Structural Exclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+G-02,L1,,,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,3
+G-03,L1,,,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,3
+G-03,L1,,,,Tackling Structural Exclusion,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,4
+G-03,L1,,,,Tackling Structural Exclusion,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,2
+G-04,L1,,,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,1
+G-04,L1,,,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+G-05,L1,,,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+G-06,L1,,,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,2
+G-06,L1,,,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,4
+G-06,L1,,,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+G-06,L1,,,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,2
+G-06,L1,,,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,2
+G-07,L1,,,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,4
+G-07,L1,,,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,3
+G-07,L1,,,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+G-07,L1,,,,Future Generations,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+G-08,L1,,,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,6
+G-08,L1,,,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,5
+G-08,L1,,,,Future Generations,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+G-08,L1,,,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,2
+G-09,L1,,,,Future Generations,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+G-10,L1,,,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,6
+G-10,L1,,,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,4
+G-11,L1,,,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,13
+G-11,L1,,,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,4
+G-11,L1,,,,Export-led,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+G-11,L1,,,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,2
+G-13,L1,,,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,9
+G-13,L1,,,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,8
+G-13,L1,,,,Domestic Integration,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+G-14,L1,,,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,1
+G-14,L1,,,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,3
+G-14,L1,,,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+G-15,L1,,,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+G-16,L1,,,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,5
+G-16,L1,,,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,4
+G-17,L1,,,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,2
+G-17,L1,,,,Growth through Inclusion,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+G-18,L1,,,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,2
+G-19,L1,,,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,2
+G-19,L1,,,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,1
+G-19,L1,,,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,1
+G-21,L1,,,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,1
+G-22,L1,,,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+G-24,L1,,,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,1
+G-24,L1,,,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+G-24,L1,,,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,2
+G-27,L1,,,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,2
+G-27,L1,,,,Agility and Delivery Capability,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+G-27,L1,,,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+G-28,L1,,,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+G-31,L1,,,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,1
+H-GOAL,GOAL,,,,,Thailand,thailand_ndp_2012-2016,2012,2016,25
+H-GOAL,GOAL,,,,,Thailand,thailand_ndp_2017-2021,2017,2021,10
+H-GOAL,GOAL,,,,,Thailand,thailand_ndp_2023-2027,2023,2027,5
+H-GOAL,GOAL,,,,,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+H-GOAL,GOAL,,,,,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,15
+H-GOAL,GOAL,,,,,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,3
+H-GOAL,GOAL,,,,,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,7
+H-GOAL,GOAL,,,,,Thailand,thailand_vision_2018-2037,2018,2037,5
+H-SEC,STD,,,,General Economy,Thailand,thailand_ndp_2012-2016,2012,2016,23
+H-SEC,STD,,,,General Economy,Thailand,thailand_ndp_2017-2021,2017,2021,10
+H-SEC,STD,,,,General Economy,Thailand,thailand_ndp_2023-2027,2023,2027,2
+H-SEC,STD,,,,General Economy,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+H-SEC,STD,,,,General Economy,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,2
+H-SEC,STD,,,,General Economy,Thailand,thailand_vision_2018-2037,2018,2037,9
+H-SGO,STD,,,,General Governance,Thailand,thailand_ndp_2012-2016,2012,2016,11
+H-SGO,STD,,,,General Governance,Thailand,thailand_ndp_2017-2021,2017,2021,16
+H-SGO,STD,,,,General Governance,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,17
+H-SGO,STD,,,,General Governance,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+H-SGO,STD,,,,General Governance,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,3
+H-SGO,STD,,,,General Governance,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,2
+H-SGO,STD,,,,General Governance,Thailand,thailand_vision_2018-2037,2018,2037,10
+H-SPE,STD,,,,General People,Thailand,thailand_ndp_2012-2016,2012,2016,17
+H-SPE,STD,,,,General People,Thailand,thailand_ndp_2017-2021,2017,2021,27
+H-SPE,STD,,,,General People,Thailand,thailand_ndp_2023-2027,2023,2027,3
+H-SPE,STD,,,,General People,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+H-SPE,STD,,,,General People,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+H-SPE,STD,,,,General People,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+H-SPE,STD,,,,General People,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,12
+H-SPE,STD,,,,General People,Thailand,thailand_vision_2018-2037,2018,2037,11
+L3-001,L3,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-003,L3,F-03,Exclusion from social and political spaces,,Tackling Structural Exclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-004,L3,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-004,L3,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-014,L3,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+L3-014,L3,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-025,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-026,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-026,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-026,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-027,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-033,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-034,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,4
+L3-034,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-034,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,8
+L3-035,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+L3-036,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-038,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-038,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-038,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+L3-038,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-039,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-039,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-039,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,6
+L3-039,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-040,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-043,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-044,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-044,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-045,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-045,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,4
+L3-045,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,4
+L3-046,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+L3-046,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-047,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-047,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,3
+L3-048,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-048,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,3
+L3-049,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+L3-049,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,2
+L3-051,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-051,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,2
+L3-052,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-054,L3,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-054,L3,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-056,L3,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-056,L3,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+L3-056,L3,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,10
+L3-056,L3,F-07,Food security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-065,L3,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-065,L3,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-065,L3,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-066,L3,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-068,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-068,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-068,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+L3-069,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-071,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,3
+L3-071,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-071,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,16
+L3-071,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-075,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-075,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-076,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-076,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+L3-077,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-077,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-078,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,5
+L3-078,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-080,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,4
+L3-080,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-083,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-083,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,7
+L3-083,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,10
+L3-083,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-085,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,5
+L3-085,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-085,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,4
+L3-085,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-085,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-087,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+L3-088,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-088,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-089,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-098,L3,F-18,Public wealth: resource rents and the balance sheet,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-100,L3,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,3
+L3-103,L3,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-104,L3,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,4
+L3-105,L3,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-105,L3,F-16,Water resources,,Future Generations,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-106,L3,F-16,Water resources,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-107,L3,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-107,L3,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2017-2021,2017,2021,4
+L3-107,L3,F-16,Water resources,,Future Generations,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+L3-115,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-116,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-118,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,3
+L3-118,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-123,L3,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-124,L3,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-125,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-125,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-126,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,6
+L3-126,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-126,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-129,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-131,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,5
+L3-131,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-131,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-132,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-132,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-133,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-141,L3,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-143,L3,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-143,L3,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-143,L3,F-28,Urban systems,,Domestic Integration,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-148,L3,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-149,L3,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-151,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-151,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-152,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-152,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-153,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-153,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-156,L3,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-156,L3,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,3
+L3-157,L3,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-160,L3,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+L3-161,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2012-2016,2012,2016,4
+L3-161,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,3
+L3-161,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-163,L3,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-163,L3,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-165,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-168,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-168,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-169,L3,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-170,L3,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-171,L3,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-174,L3,F-31,Finance for small borrowers and savers,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-194,L3,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-195,L3,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-197,L3,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-206,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-206,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,8
+L3-206,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-207,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-207,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-207,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,2
+L3-207,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,7
+L3-207,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,44
+L3-207,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-208,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-208,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,15
+L3-210,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-210,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-210,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-210,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-210,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,3
+L3-215,L3,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-215,L3,F-57,Horizontal accountability,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,9
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,8
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,4
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,13
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,3
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,12
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,19
+L3-217,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_vision_2018-2037,2018,2037,2
+L3-219,L3,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-219,L3,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,1
+L3-219,L3,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,4
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,13
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,4
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,6
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,2
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,4
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,31
+L3-220,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_vision_2018-2037,2018,2037,4
+L3-221,L3,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-221,L3,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,4
+L3-222,L3,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-222,L3,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,3
+L3-225,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-225,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,5
+L3-225,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,5
+L3-225,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,2
+L3-225,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-225,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-227,L3,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-229,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-231,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-231,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-233,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-235,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-235,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-235,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-235,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-235,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-237,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-237,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-237,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,1
+L3-237,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,1
+L3-238,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-238,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-240,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-241,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-243,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-243,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,14
+L3-244,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-244,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_sector_2015-2050_climate-change-master-plan,2015,2050,1
+L3-245,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-247,L3,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-247,L3,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-247,L3,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,2
+L3-248,L3,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-249,L3,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,1
+L3-249,L3,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,1
+L3-252,L3,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2012-2016,2012,2016,2
+L3-252,L3,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2017-2021,2017,2021,2
+L3-252,L3,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,8
+L3-260,L3,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-261,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_vision_2018-2037,2018,2037,1
+L3-263,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-education-plan,2017,2036,3
+L3-263,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-263,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_digital-government-development-plan,2023,2027,44
+L3-263,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,15
+L3-264,L3,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2017-2036_national-strategic-plan-for-public-healt,2017,2036,1
+L3-264,L3,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_sector_2023-2027_national-action-plan-for-health-security,2023,2027,14
+LV-002,L3,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-005,L3,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-007,L3,F-01,"Exclusion from markets: labour, informality and workers' rights",,Tackling Structural Exclusion,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-008,L3,F-02,Exclusion from services and entitlements,,Tackling Structural Exclusion,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-016,L3,F-04,"Violence, coercion and denial of dignity",,Tackling Structural Exclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-022,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-023,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-027,L3,F-06,Economic security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-035,L3,F-08,Personal security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-041,L3,F-09,Living environment and basic services,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-042,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-043,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-044,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,5
+LV-045,L3,F-10,Health security,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-053,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-054,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-055,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,8
+LV-056,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-058,L3,F-11,Knowledge: schooling and higher education,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-059,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,11
+LV-061,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-062,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-063,L3,F-12,Skills for work,,Enhancing Capabilities,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-064,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-065,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,8
+LV-066,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-067,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-068,L3,F-13,Climate stabilisation and just transition,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-069,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-071,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-072,L3,F-14,Climate risk to assets and people,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-077,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-079,L3,F-15,Living natural capital,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-081,L3,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-083,L3,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-084,L3,F-16,Water resources,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-087,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,9
+LV-088,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,8
+LV-089,L3,F-17,Environmental quality,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-099,L3,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-100,L3,F-19,Human and demographic capital,,Future Generations,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-101,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,11
+LV-102,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-105,L3,F-20,Cost of reaching foreign markets,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-107,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,12
+LV-108,L3,F-21,Tourism export destinations,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-111,L3,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-112,L3,F-22,Self-discovery and export upgrading,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,13
+LV-114,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-115,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,9
+LV-117,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,12
+LV-118,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-119,L3,F-23,Innovation system and appropriability,,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-120,L3,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,5
+LV-121,L3,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-122,L3,F-24,"Foreign capital, knowledge and networks",,Export-led,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-124,L3,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-126,L3,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-127,L3,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,5
+LV-128,L3,F-25,Internal connectivity,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,5
+LV-129,L3,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-130,L3,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-131,L3,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-132,L3,F-26,Infrastructure services,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-133,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-134,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-135,L3,F-27,Production linkages and clusters,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-136,L3,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-137,L3,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-138,L3,F-28,Urban systems,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-139,L3,F-29,Lagging regions and place-based development,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-140,L3,F-29,Lagging regions and place-based development,,Domestic Integration,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-141,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,5
+LV-142,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-143,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-144,L3,F-30,Small-firm capability and business formalisation,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-149,L3,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-150,L3,F-32,Smallholder productivity,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-154,L3,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-155,L3,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-156,L3,F-33,Market participation of small producers,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-157,L3,F-34,Jobs and job matching,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-163,L3,F-36,Labour mobility and remittances,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-164,L3,F-37,"Competition, contracts and state ownership",,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-169,L3,F-38,Land rights and land markets,,Growth through Inclusion,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-170,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-171,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-172,L3,F-39,Hazard and exposure sensing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-175,L3,F-40,Contingency buffers and pre-arranged finance,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-176,L3,F-40,Contingency buffers and pre-arranged finance,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-177,L3,F-41,Scenario and futures work,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-178,L3,F-42,Development planning,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-179,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-180,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-181,L3,F-43,Statistics and data sharing,,Anticipation and Strategic Foresight,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-182,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-183,L3,F-44,Monitoring and corrective feedback,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-184,L3,F-45,Policy experimentation,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,6
+LV-186,L3,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-188,L3,F-46,Regulatory adaptation to technology,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-189,L3,F-47,Participatory decision-making,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-190,L3,F-48,Coordination across agencies and levels,,Adaptability and Course Correction,Thailand,thailand_ndp_2023-2027,2023,2027,15
+LV-192,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-193,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-194,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-195,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-196,L3,F-50,"Administrative, local and regulatory capacity",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,10
+LV-197,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-199,L3,F-51,"Surge, continuity and relief",,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-201,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-202,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,2
+LV-203,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,5
+LV-205,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,4
+LV-206,L3,F-52,Revenue and spending systems,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-208,L3,F-53,Digital delivery and DPI,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,9
+LV-209,L3,F-54,Crisis and risk communication,,Agility and Delivery Capability,Thailand,thailand_ndp_2023-2027,2023,2027,3
+LV-213,L3,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-214,L3,F-56,Information and transparency,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-222,L3,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2023-2027,2023,2027,7
+LV-223,L3,F-59,Client power and community voice,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2023-2027,2023,2027,1
+LV-225,L3,F-60,Social cohesion and trust,,"Reform Leadership, Coalitions and Civic Engagement",Thailand,thailand_ndp_2023-2027,2023,2027,2
