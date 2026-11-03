@@ -137,6 +137,45 @@ def load_framework_refs():
     return out
 
 
+# Thesis literature (inputs/thesis_refs.json, 3 November 2026): papers from the thesis library whose
+# intervention or setting matches the lever, with the catalogue's identification tag and a one-line finding.
+THESIS_FILE = os.path.join(HERE, "inputs", "thesis_refs.json")
+THESIS_KEYS = ("thesis_refs", "thesis_n", "thesis_citations")
+EMPTY_THESIS = {"thesis_refs": [], "thesis_n": 0, "thesis_citations": ""}
+
+
+def _thesis_ref(r):
+    if isinstance(r, str):
+        return {"citation": r, "ident": "", "setting": "", "finding": "", "fit": "", "key": ""}
+    cit = r.get("citation") or r.get("ref") or ""
+    if not cit:
+        head = ", ".join(x for x in (r.get("authors") or r.get("author") or "", str(r.get("year") or "")) if x)
+        cit = ". ".join(x for x in (head, r.get("title") or "", r.get("outlet") or r.get("journal") or "") if x)
+    out = {"citation": cit, "ident": r.get("ident") or r.get("design") or "", "setting": r.get("setting") or "",
+           "finding": r.get("finding") or "", "fit": r.get("fit") or "", "key": r.get("key") or r.get("paper") or ""}
+    for k, v in r.items():
+        out.setdefault(k, v)
+    return out
+
+
+def load_thesis_refs():
+    if not os.path.exists(THESIS_FILE):
+        return {}
+    data = json.load(open(THESIS_FILE, encoding="utf-8"))
+    entries = data if isinstance(data, list) else [dict(v, lever_id=k) if isinstance(v, dict) else {"lever_id": k, "refs": v}
+                                                   for k, v in data.items()]
+    out = {}
+    for e in entries:
+        refs = e.get("thesis_refs") or e.get("refs") or e.get("papers") or []
+        refs = [_thesis_ref(r) for r in refs]
+        if not refs:
+            continue
+        out[e["lever_id"]] = {"thesis_refs": refs, "thesis_n": len(refs),
+                              "thesis_citations": "; ".join(r["citation"] + (" [%s]" % r["ident"] if r["ident"] else "")
+                                                            for r in refs)}
+    return out
+
+
 def load_lever_evidence():
     if not os.path.exists(EVIDENCE_FILE):
         return {}
@@ -153,6 +192,7 @@ def load_lever_evidence():
 def main():
     lever_evidence = load_lever_evidence()
     framework_refs = load_framework_refs()
+    thesis_refs = load_thesis_refs()
     v3 = json.load(open(V3, encoding="utf-8"))
     groups = {g["group_id"]: dict(g) for g in v3["groups"]}
     families = {f["family_id"]: dict(f) for f in v3["families"]}
@@ -205,6 +245,7 @@ def main():
                      "evidence": "; ".join("%s: %s" % (paths[m]["pathway"], paths[m].get("evidence", "")) for m in members)}
             lever.update(lever_evidence.get(lid, EMPTY_EVIDENCE))
             lever.update(framework_refs.get(lid, {k: ([] if k == "framework_refs" else "") for k in FRAMEWORK_KEYS}))
+            lever.update(thesis_refs.get(lid, dict(EMPTY_THESIS)))
             levers[lid] = lever
             fam["lever_ids"].append(lid)
             for m in members:
@@ -235,6 +276,7 @@ def main():
                "intervention_evidence", "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
                "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
                "framework_source", "framework_where", "framework_says", "framework_refs",
+               "thesis_n", "thesis_citations", "thesis_refs",
                "risks", "entry_points", "text_cues"])
     write_csv(os.path.join(HERE, "pathways_v4.csv"), paths.values(),
               ["pathway_id", "pathway", "lever_id", "lever", "family_id", "family", "group_id", "group",

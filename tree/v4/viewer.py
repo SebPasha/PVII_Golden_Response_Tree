@@ -40,7 +40,8 @@ data = {
                                         "pathway_ids", "risks", "entry_points", "intervention_evidence",
                                         "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
                                         "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
-                                        "framework_source", "framework_where", "framework_says", "framework_refs")}
+                                        "framework_source", "framework_where", "framework_says", "framework_refs",
+                                        "thesis_refs")}
                for lv in tree["levers"]],
     "pathways": [{k: p.get(k, "") for k in ("pathway_id", "pathway", "family_id", "lever_id", "causal_input",
                                              "transmission", "outcome", "conditions", "distinction", "evidence",

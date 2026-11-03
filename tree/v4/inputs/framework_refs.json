@@ -1,0 +1,1960 @@
+[
+ {
+  "lever_id": "LV-001",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Cross-Cutting Approaches Spanning Many Domains, p. 229",
+  "framework_says": "Treats laws ensuring equal opportunity in employment, credit, housing and education as affirmative action, notes preferential policies are politicised with ambiguous evidence, and cites enforcement bodies such as the US EEOC (p. 241).",
+  "framework_refs": [
+   "Weiner 1983, The Political Consequences of Preferential Policies: A Comparative Perspective",
+   "Burger and Jafta 2006, Returns to Race: Labour Market Discrimination in Post-Apartheid South Africa"
+  ]
+ },
+ {
+  "lever_id": "LV-002",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Intervening for Social Inclusion through Markets, p. 217",
+  "framework_says": "Many women cannot work because of family responsibilities and child care is costly and scarce; subsidised child care improves labour outcomes, and Colombia's Hogares Comunitarios raised the probability of female employment from 0.12 to 0.37.",
+  "framework_refs": [
+   "Attanasio and Vera-Hernandez 2004, Medium and Long Run Effects of Nutrition and Child Care: Evaluation of a Community Nursery Programme in Rural Colombia",
+   "Todd 2012, Effectiveness of Interventions Aimed at Improving Women's Employability and Quality of Work: A Critical Review"
+  ]
+ },
+ {
+  "lever_id": "LV-003",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 6, Change in What? (Jordan), p. 199",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-004",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 2, Box 2.1 Domestic Workers in the United States: Working in the Informal Economy, p. 69",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-005",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 4, Table 4.3 Spatial Transitions, p. 133; Chapter 2, Box 2.1, p. 69",
+  "framework_says": "Lists equitable labour market access, fair wages and worker protection for migrant and displaced workers; Box 2.1 shows US domestic workers paid below minimum wage and outside formal labour protection. Collective bargaining is not discussed.",
+  "framework_refs": [
+   "Burnham, Theodore, and Ehrenreich 2012, Home Economics: The Invisible and Unregulated World of Domestic Work"
+  ]
+ },
+ {
+  "lever_id": "LV-006",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 2, Box 2.1 Domestic Workers in the United States: Working in the Informal Economy, p. 69",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-007",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Appendix C, Table C.1 (Services: Health, Social protection), p. 269; Chapter 7, Cross-Cutting Approaches, p. 232",
+  "framework_says": "Lists subsidised health insurance (Ghana) and social and disability pensions as inclusion instruments, and reports social pensions raised dignity and self-esteem in Lesotho and Nepal. Contribution rules and enrolment of informal workers are not discussed.",
+  "framework_refs": [
+   "HelpAge International 2004, Age and Security. How Social Pensions Can Deliver Effective Aid to Poorer People and Their Families",
+   "World Bank 2011b, Social Safety Nets in Nepal"
+  ]
+ },
+ {
+  "lever_id": "LV-008",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Intervening for Social Inclusion through Services, p. 220",
+  "framework_says": "Cites the Americans with Disabilities Act and its enforcement, Braille and sign language for HIV messages, and accessible transport and sidewalks for people with vision or mobility impairment; accessibility protocols are best enforced in OECD countries.",
+  "framework_refs": [
+   "World Bank 2010a, Mainstreaming Gender in Transport: Operational Guidance for World Bank Staff"
+  ]
+ },
+ {
+  "lever_id": "LV-009",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Intervening for Social Inclusion through Spaces, p. 223",
+  "framework_says": "Making people visible in state records is a first step to inclusion: without birth registration children may miss school, and people without identification cannot access benefits; identity cards and databases such as Brazil's Cadastro Único help.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-010",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Cross-Cutting Approaches (Oportunidades), p. 232",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-011",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Cross-Cutting Approaches, p. 230, and Box 7.6 Electoral Quotas for Women in Sub-Saharan Africa, p. 231",
+  "framework_says": "Reserved local council seats for women in India weakened gender stereotypes and raised girls' aspirations; quotas lifted women's parliamentary representation in Rwanda, South Africa and Tanzania, though elite capture and resentment remain risks.",
+  "framework_refs": [
+   "Bhavnani 2009, Do Electoral Quotas Work after They Are Withdrawn? Evidence from a Natural Experiment in India",
+   "Beaman et al. 2012, Female Leadership Raises Aspirations and Educational Attainment for Girls: A Policy Experiment in India",
+   "Ward 2006, Real or Illusory Progress: Electoral Quotas and Women's Political Participation in Tanzania, Eritrea and Uganda"
+  ]
+ },
+ {
+  "lever_id": "LV-012",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Cross-Cutting Approaches Spanning Many Domains, p. 229; Box 7.2, p. 221",
+  "framework_says": "Discusses the tension between universal and targeted provision, geographic targeting versus naming groups, services tailored to the Maori, and symbolic recognition such as official apologies; preferential policies risk elite capture and resentment.",
+  "framework_refs": [
+   "Silver 2013, Framing Social Inclusion Policies",
+   "Ringold 2008, Accounting for Diversity: Policy Design and Maori Development in New Zealand"
+  ]
+ },
+ {
+  "lever_id": "LV-013",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 4, Table 4.1 Demographic Transitions, p. 121; Chapter 3, Markets, p. 93",
+  "framework_says": "For women, lists mechanisms to prevent violence, services for survivors, legal services and safe public places; land ownership is found to protect women from domestic violence. Shelters and case response are not detailed.",
+  "framework_refs": [
+   "Panda and Agarwal 2005, Marital Violence, Human Development and Women's Property Status in India"
+  ]
+ },
+ {
+  "lever_id": "LV-014",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Cross-Cutting Approaches (conditional transfers), p. 229",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-015",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 4, Complex Demographic Transitions, p. 129",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-016",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 4, Table 4.1 Demographic Transitions (orphans), p. 121",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-017",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 4, Table 4.3 Spatial Transitions, p. 133; Chapter 7, Intervening through Markets, p. 216",
+  "framework_says": "Calls for fair compensation when the state or private entities acquire land and protection of indigenous land rights, and for making women joint landholders in resettlement projects. Livelihood restoration and housing for the displaced are not detailed.",
+  "framework_refs": [
+   "Deininger, Goyal, and Nagarajan 2010, Inheritance Law Reform and Women's Access to Capital: Evidence from India's Hindu Succession Act"
+  ]
+ },
+ {
+  "lever_id": "LV-018",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 4, Climate Change, Disasters, and Excluded Groups, p. 137",
+  "framework_says": "Not discussed in Inclusion Matters 2013",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-019",
+  "framework_source": "Inclusion Matters (World Bank 2013)",
+  "framework_where": "Inclusion Matters, Chapter 7, Box 7.4 Inclusion of the Immigrant Population: The Way to Norway, p. 226",
+  "framework_says": "Norway pays refugees an introduction benefit during free language and social studies training, which improved immigrant men's labour prospects but not women's; a school programme on attitudes toward refugees had modest impact. Work permits are not discussed.",
+  "framework_refs": [
+   "Norwegian Ministry of Labour and Social Inclusion 2006, Action Plan for Integration and Social Inclusion of the Immigrant Population and Goals for Social Inclusion",
+   "Kavli, Hagelund, and Bråthen 2007, With the Right to Learn and the Duty to Participate",
+   "Turner and Brown 2008, Improving Children's Attitudes Toward Refugees: An Evaluation of a School-Based Multicultural Curriculum and an Anti-Racist Intervention"
+  ]
+ },
+ {
+  "lever_id": "LV-020",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 3, Sustained human development (Botswana), p. 48",
+  "framework_says": "After the 1982 drought Botswana ran a public works programme that replaced 37% of income lost to crop failure, plus supplementary feeding and agricultural and livestock relief, reaching over 70% of people at about 2% of GDP.",
+  "framework_refs": [
+   "Quinn and others 1988, Crisis-proofing the Economy: The Response of Botswana to Economic Recession and Drought",
+   "Stewart 1988, Monitoring and Statistics for Adjustment with a Human Face"
+  ]
+ },
+ {
+  "lever_id": "LV-021",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 3, box 3.1 Botswana's drought relief, p. 48",
+  "framework_says": "Botswana's decentralised early warning network monitors rainfall, food stocks and child nutrition monthly, letting an interministerial committee channel resources quickly; falling child weights in 1984 triggered nationwide supplementary feeding. The report calls the system replicable.",
+  "framework_refs": [
+   "Stewart 1988, Monitoring and Statistics for Adjustment with a Human Face"
+  ]
+ },
+ {
+  "lever_id": "LV-022",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Human Development Report 1994, chapter 2, annex 2 Successes in social integration (Mauritius), p. 45",
+  "framework_says": "Pensions get only brief mention: Mauritius provides an old-age pension plan alongside free education and health care, and the report says this social spending underpins strong economic performance. Chapter 2 also notes falling real pension benefits in industrial countries.",
+  "framework_refs": [
+   "Bheenick, Hanoomanjee and Nababsing 1993, Mauritius: A Case Study on Social Integration from a Human Development Perspective"
+  ]
+ },
+ {
+  "lever_id": "LV-023",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Financing human development, boxes 4.6 and 4.7, p. 73",
+  "framework_says": "Across-the-board user fees cut poor people's use of health services, so the report favours discriminatory fees: the poor pay only nominal fees. Singapore's Medisave and Korea's free care for indigents with 20% co-payments for low-income people are its examples.",
+  "framework_refs": [
+   "Phua 1986, Singapore's Family Savings Scheme",
+   "Moon 1986, Towards Equity in Health Care",
+   "WHO 1987b, Health Care: Who Pays?"
+  ]
+ },
+ {
+  "lever_id": "LV-024",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Implementing human development strategies, Targetting policy measures and social programmes, p. 82",
+  "framework_says": "Tight targeting works only where administrative capacity exists; otherwise looser targeting is better. Guidelines cover political feasibility, geographic and combined targeting, and moving people out of target groups. Sri Lanka's frozen food stamp eligibility shows the risks.",
+  "framework_refs": [
+   "Kanbur 1988, The Principles of Targetting",
+   "Pinstrup-Andersen 1988, Food Subsidies in Developing Countries: Costs, Benefits and Policy Options"
+  ]
+ },
+ {
+  "lever_id": "LV-025",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Policy measures for priority objectives, Meeting the needs of all, p. 63",
+  "framework_says": "Direct cash payments to households in extreme poverty are common in developed countries but less suitable in developing ones, where needy households are many and administration weaker. Some countries, such as Chile, have nevertheless targeted cash support successfully.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-026",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Policy measures for priority objectives, Encouraging more participatory development, p. 64",
+  "framework_says": "No graduation model as such. The report says welfare measures matter, but a long-term solution to poverty needs enabling measures such as vocational training, skill formation and credit for the poor, often delivered with NGOs, as in boxes 4.2 and 4.3.",
+  "framework_refs": [
+   "Ashe and Cosslett 1989, Credit for the Poor"
+  ]
+ },
+ {
+  "lever_id": "LV-027",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 4, Policy measures for priority objectives, Meeting the needs of all, p. 63 (free school lunches to encourage attendance)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-028",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, box 4.1 In defence of food subsidies, p. 63",
+  "framework_says": "Food subsidies stabilise prices, transfer income to the poor and provide a safety net at about 1-2% of GNP. They should be targeted to low-income households, for instance through foods the poor consume, without discouraging food production.",
+  "framework_refs": [
+   "Pinstrup-Andersen 1988, Food Subsidies in Developing Countries: Costs, Benefits and Policy Options"
+  ]
+ },
+ {
+  "lever_id": "LV-029",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Implementing human development strategies, Targetting policy measures and social programmes, p. 82",
+  "framework_says": "Tamil Nadu weighs all children aged six months to three years and gives the underweight 90 days of supplementary feeding, with referral if needed. The report also lists breast-feeding as a low-cost technology and urges nutrition support for young women.",
+  "framework_refs": [
+   "Berg 1987, Malnutrition: What Can be Done? Lessons from World Bank Experience",
+   "Kanbur 1988, The Principles of Targetting"
+  ]
+ },
+ {
+  "lever_id": "LV-030",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Food security, p. 27",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-031",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Food security and box 2.2 the Bengal famine of 1943, p. 27",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-032",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Policy measures for priority objectives, Meeting the needs of all, p. 63",
+  "framework_says": "Special nutrition programmes such as free primary school lunches also encourage attendance and concentration. Elsewhere the report says school lunches can cut high dropout rates and suits loose targeting, as in Brazil and Jamaica, open to all children.",
+  "framework_refs": [
+   "Berg 1987, Malnutrition: What Can be Done? Lessons from World Bank Experience"
+  ]
+ },
+ {
+  "lever_id": "LV-033",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 2, De-formation of human development, Development and crime, p. 37",
+  "framework_says": "The report discusses policing only as a cost: the usual response to rising crime has been a large increase in police forces, which diverts resources that could otherwise go to development.",
+  "framework_refs": [
+   "Newman 1989, Report on Crime and the Human Condition",
+   "Findlay and Zvekic 1988, Analysing (In)formal Mechanisms of Crime Control",
+   "United Nations 1985, New Dimensions of Criminality and Crime Prevention in the Context of Development: Challenges for the Future"
+  ]
+ },
+ {
+  "lever_id": "LV-034",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Human Development Report 1994, chapter 2, box 2.5 The international narcotics trade, p. 37",
+  "framework_says": "Cutting drug consumption is hard because many heavy users are poor and desperate. The report concludes the only lasting answer is to remove the social distress behind addiction and give young people more productive outlets.",
+  "framework_refs": [
+   "Tullis 1993, Illicit Drugs: Socioeconomic and Political Impacts in Nine Countries"
+  ]
+ },
+ {
+  "lever_id": "LV-035",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Personal security, p. 30",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-036",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 2, De-formation of human development, The drug trade, p. 37 (government costs of prevention, rehabilitation and enforcement)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-037",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Human Development Report 1994, chapter 2, box 2.5 The international narcotics trade, p. 37",
+  "framework_says": "Efforts to stifle drug production have had limited benefits: eradication in one place shifts production elsewhere, and alternative crops cannot match drug prices. The report floats decriminalisation, which might cut crime and violence but risks higher consumption.",
+  "framework_refs": [
+   "Tullis 1993, Illicit Drugs: Socioeconomic and Political Impacts in Nine Countries"
+  ]
+ },
+ {
+  "lever_id": "LV-038",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 5, Managing the cities, Enabling strategies for shelter and infrastructure, p. 93",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-039",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 5, Improving the urban environment, box 5.7 Community-based sanitation in Karachi, p. 94",
+  "framework_says": "In Karachi's Orangi settlement an NGO organised residents lane by lane to build low-cost sewerage at about a twentieth of the official cost. The report says universal safe water is attainable but needs funding for maintenance and recurrent costs.",
+  "framework_refs": [
+   "Khan 1983, Orangi Project: A Task Bigger Than Colombo"
+  ]
+ },
+ {
+  "lever_id": "LV-040",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Implementing human development strategies, Selecting cost-effective technology, p. 83",
+  "framework_says": "Mentioned only in passing: improved wood-saving stoves are an example of low-cost energy technology that is often both cheaper and better.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-041",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 5, Managing the cities, Enabling strategies for shelter and infrastructure, box 5.5, p. 93",
+  "framework_says": "Governments should enable rather than build housing: release land, adapt rules to informal practice, improve services in existing settlements and guarantee tenure. Jakarta's Kampung Improvement Programme upgraded about 500 kampungs, with 3.8 million people.",
+  "framework_refs": [
+   "Taylor 1987, Evaluation of the Jakarta Kampung Improvement Program",
+   "Angel and Pornchokchai 1989, Bangkok Slum Lands: Policy Implications of Recent Findings",
+   "United Nations Centre for Human Settlements 1988, Global Shelter Strategy for the Year 2000"
+  ]
+ },
+ {
+  "lever_id": "LV-042",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 3, Sustained human development (Costa Rica), p. 50",
+  "framework_says": "Costa Rica extended mainly preventive primary care through rural (1973) and community (1976) health programmes and shifted from hospitals to outpatient care: outpatient installations rose from 348 to 1,150, with special attention to lagging regions.",
+  "framework_refs": [
+   "Rosero-Bixby 1985, Infant Mortality Decline in Costa Rica"
+  ]
+ },
+ {
+  "lever_id": "LV-043",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 2, Expanding human capabilities, Health services, p. 24",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-044",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 3, box 3.3 China's health care system, p. 53",
+  "framework_says": "China extended basic services to remote areas with a mass cadre of barefoot doctors; it had 4.5 times as many village health workers per person as India. The report also urges shifting resources from doctors to paramedics, especially nurses.",
+  "framework_refs": [
+   "Jamison 1985, China's Health Care System: Policies, Organization, Inputs and Finance",
+   "Chen 1988, Health Policy Responses: An Approach Derived from the China and India Experiences",
+   "World Bank 1987, Financing Health Services in Developing Countries: An Agenda for Reform"
+  ]
+ },
+ {
+  "lever_id": "LV-045",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, box 4.12 A cost-effective strategy for essential drugs, p. 83",
+  "framework_says": "Few countries enforce their drug legislation or have proper procurement and distribution, which wastes money. Basic drugs could be procured for all at 2-7% of current spending, and local production can lower costs further.",
+  "framework_refs": [
+   "WHO 1988a, The Use of Essential Drugs: Third Report of the WHO Expert Committee",
+   "Patel 1989, Eliminating Social Distance Between North and South: Cost-Effective Goals for the 1990s"
+  ]
+ },
+ {
+  "lever_id": "LV-046",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Setting global targets for human development, Immunisation, p. 68",
+  "framework_says": "Child immunisation coverage rose from 30% in 1981 to nearly 70% in 1988, and full coverage by 2000 is feasible for most countries. The report also says every country should provide health care for women during pregnancy and birth.",
+  "framework_refs": [
+   "Patel 1989, Eliminating Social Distance Between North and South: Cost-Effective Goals for the 1990s"
+  ]
+ },
+ {
+  "lever_id": "LV-047",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Health security, p. 27",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-048",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 3, box 3.3 China's health care system, p. 53",
+  "framework_says": "China mobilised the masses for sanitation campaigns against the four pests, vaccination and treatment of infectious diseases, and vector control for malaria and schistosomiasis. The report calls for a decisive effort on tropical disease control and drug access.",
+  "framework_refs": [
+   "Jamison 1985, China's Health Care System: Policies, Organization, Inputs and Finance",
+   "Chen 1988, Health Policy Responses: An Approach Derived from the China and India Experiences",
+   "World Bank 1987, Financing Health Services in Developing Countries: An Agenda for Reform"
+  ]
+ },
+ {
+  "lever_id": "LV-049",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Financing human development, Raising additional resources, p. 73",
+  "framework_says": "Treated only as a revenue measure: extra taxes can be levied on luxury items and on goods detrimental to good health, such as cigarettes and alcohol, to raise resources for the social sectors.",
+  "framework_refs": [
+   "Anderson 1987, The Public Revenue and Economic Policy Reform in African Countries: An Overview of Issues and Policies"
+  ]
+ },
+ {
+  "lever_id": "LV-050",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 5, Managing the cities, box 5.6 Informal public transport in Africa, p. 94",
+  "framework_says": "Discussed only briefly. Nairobi's legalised matatus disregard passenger safety and are poorly maintained, and self-regulation could make them safer. HDR 1994 notes traffic accidents are the leading cause of death at ages 15-30 in industrial countries.",
+  "framework_refs": [
+   "Republic of Kenya 1987, Economic Survey"
+  ]
+ },
+ {
+  "lever_id": "LV-051",
+  "framework_source": "Human Development Report 1994 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Personal security, p. 30 (threats to self: suicide, drug use)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-052",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Financing human development, Reallocating budgetary resources within sectors, p. 74",
+  "framework_says": "Primary school dropout rates sometimes exceed 70%, so spending to keep children in school, through free school lunches or new drop-in schools as in India, could pay high dividends. Universal primary enrolment is called the most important target for 2000.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-053",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 2, Expanding human capabilities, Education, p. 25 (need to improve the quality and relevance of students' knowledge)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-054",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 4, Financing human development, Voluntary community contributions, p. 74 (teachers leaving as salaries fall)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-055",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 4, Implementing human development strategies, Targetting policy measures and social programmes, p. 82",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-056",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Financing human development, Discriminatory user fees, p. 73",
+  "framework_says": "Across-the-board school fees cut attendance by poor children, so the poor should pay only nominal fees for primary education. The report also suggests loan schemes for tertiary education so subsidies can shift to primary schooling.",
+  "framework_refs": [
+   "Gertler and Glewwe 1989, The Willingness to Pay for Education in Developing Countries: Evidence from Rural Peru"
+  ]
+ },
+ {
+  "lever_id": "LV-057",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, National plans for human development, p. 71",
+  "framework_says": "Programmes complement each other: a school feeding programme to improve children's nutrition could make a primary health care programme more effective. Nutrition programmes in clinics and school feeding should also draw low-income groups to services.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-058",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Financing human development, Reallocating budgetary resources within sectors, p. 74",
+  "framework_says": "Primary education often gets proportionately less public money than college and university education, which could in many cases be more self-financing. The report urges shifting subsidies from tertiary to primary and secondary education, with loan schemes for tertiary.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-059",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Human Development Report 1990, chapter 4, Financing human development, Reallocating budgetary resources within sectors, p. 74",
+  "framework_says": "Most developing countries invest too little in technical education, under 2% of secondary enrolment, and so produce generalists whose skills are not in demand. The report also names vocational training as a key enabling measure for the poor.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-060",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 4, Financing human development, Reallocating budgetary resources within sectors, p. 74 (technical education)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-061",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 4, Financing human development, Reallocating budgetary resources within sectors, p. 74 (mismatch between skill supply and demand)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-062",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 4, box 4.11 The new global services economy, p. 81",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-063",
+  "framework_source": "Human Development Report 1990 (UNDP)",
+  "framework_where": "Nearest: Human Development Report 1990, chapter 5, Cities and human development, p. 87 (unreliable electricity and telephone connections)",
+  "framework_says": "Not discussed in Human Development Report 1990 or 1994",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-064",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Section E.4.2, p. 46",
+  "framework_says": "Carbon pricing has incentivised low-cost emission reductions but, alone and at prevailing prices, has been less effective for higher-cost measures; distributional impacts can be addressed by using carbon tax or emissions trading revenue to support low-income households.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-065",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Section E.4.3, p. 46",
+  "framework_says": "Low-emission innovation is strengthened by combining technology-push policies and investment (training, R&D, demonstration) with demand-pull policies such as standards, feed-in tariffs and taxes; developing countries need more finance, innovation capacity and technology transfer to deploy these technologies.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-066",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Section E.4.1, p. 46",
+  "framework_says": "Sectoral regulatory instruments have proven effective in reducing emissions and complement economic instruments; scaling them up, including building codes, vehicle and energy efficiency and fuel standards, could improve outcomes, and flexibility mechanisms can reduce costs.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-067",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Sections C.4 and C.4.4, p. 28",
+  "framework_says": "Continued installation of unabated fossil fuel infrastructure will lock in GHG emissions; limiting warming to 2°C or below will leave much fossil fuel unburned and could strand infrastructure, with unburned fuels and stranded assets valued around USD1–4 trillion over 2015–2050.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-068",
+  "framework_source": "ILO Guidelines for a Just Transition (2015)",
+  "framework_where": "ILO Just Transition Guidelines, Part V, Industrial and sectoral policies, para. 20(e)–(g), p. 12",
+  "framework_says": "Governments should pay special attention to industries, regions, communities and workers facing the hardest transition impacts, and adopt accompanying social protection, unemployment insurance and benefits, skills training and upgrading, and workforce redeployment for negatively affected sectors.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-069",
+  "framework_source": "IPCC AR6 WGII Technical Summary (2022)",
+  "framework_where": "IPCC AR6 WGII TS, Section TS.D.7.3, p. 94",
+  "framework_says": "Coastal risk options include avoidance, such as disincentivising development in high-risk areas, hard and soft protection, accommodation, advance, and staged managed retreat of people and development; a mix of infrastructure, nature-based, institutional and sociocultural interventions best addresses the risks.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-070",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section C.4.1, p. 27",
+  "framework_says": "Seawalls reduce impacts on people and assets in the short term but can create lock-ins and raise long-term exposure unless integrated into a long-term adaptive plan; adaptation integrated with development, such as infrastructure upgrading, reduces lock-ins.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-071",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section C.2.5, p. 24",
+  "framework_says": "Effective Ecosystem-based Adaptation reduces climate risks with co-benefits: natural rivers, wetlands and upstream forests reduce flood risk, and coastal wetlands protect against erosion and storm flooding until sea level rise outpaces their capacity; effectiveness declines with further warming.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-072",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section C.2.2, p. 21",
+  "framework_says": "Effective food-system adaptation includes cultivar improvements, agroforestry, community-based adaptation, farm and landscape diversification and urban agriculture; agroecological practices support food security and ecosystem services, though costs, inputs, markets, knowledge and institutional support shape their effectiveness.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-073",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section C.2.9, p. 25",
+  "framework_says": "Integrating adaptation into social protection, including cash transfers and public works, is highly feasible and increases resilience, especially with basic services and infrastructure; adaptive safety nets have strong co-benefits for poverty alleviation, education, gender inclusion and food security.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-074",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section C.2.3, p. 21",
+  "framework_says": "Cooperation and inclusive decision making with local communities and Indigenous Peoples, and recognition of Indigenous Peoples' inherent rights, are integral to successful forest adaptation alongside conservation, restoration and sustainable forest management.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-075",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 6, Blue Natural Capital, fisheries wealth and subsidies, p. 135",
+  "framework_says": "Fisheries asset values fell 83 percent over 1995–2018, largely from poor management; spending to monitor stocks and set sustainable catch limits is a beneficial subsidy, while capacity-enhancing subsidies such as fuel drive overfishing, so fisheries reform is needed.",
+  "framework_refs": [
+   "Sumaila et al. 2010, A Bottom-Up Re-estimation of Global Fisheries Subsidies",
+   "Sakai, Yagi, and Sumaila 2019, Fishery Subsidies: The Interaction between Science and Policy",
+   "Schuhbauer et al. 2020, The Global Fisheries Subsidies Divide between Small- and Large-Scale Fisheries"
+  ]
+ },
+ {
+  "lever_id": "LV-076",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section D.4, p. 32",
+  "framework_says": "Maintaining the resilience of biodiversity and ecosystem services at global scale depends on effective and equitable conservation of approximately 30 to 50 percent of Earth's land, freshwater and ocean areas, including currently near-natural ecosystems.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-077",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Section C.9.5, p. 34",
+  "framework_says": "Land-based mitigation can draw on experience with regulations, economic incentives and payments, including for conservation, forest carbon, ecosystem services and rural livelihoods; scaling successful measures relies on integrated land-use planning and governance involving Indigenous Peoples and local communities.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-078",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Sections C.9.3–C.9.4, pp. 33–34",
+  "framework_says": "Barriers to forest and land mitigation include weak governance, insecure land ownership, low incomes and reversal risk; enhanced monitoring, reporting and verification capacity and the rule of law are crucial. Concessions and traceability are not specifically addressed.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-079",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 5, Box 5.1 (sediment retention services in Nepal), p. 114",
+  "framework_says": "Watershed management through green infrastructure in Nepal's Kali Gandaki basin reduces soil loss and sedimentation, benefiting agriculture, hydropower and water; a US$500,000 portfolio yields US$4.38 per dollar, and even US$50 million keeps benefit-cost above one.",
+  "framework_refs": [
+   "World Bank 2019, Valuing Green Infrastructure: Case Study of Kali Gandaki Watershed, Nepal"
+  ]
+ },
+ {
+  "lever_id": "LV-080",
+  "framework_source": "IPCC AR6 WGII Technical Summary (2022)",
+  "framework_where": "IPCC AR6 WGII TS, Section TS.D.4.2 (reducing additional stresses on ecosystems), p. 87",
+  "framework_says": "Not discussed in IPCC AR6 WGII Technical Summary",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-081",
+  "framework_source": "IPCC AR6 WGII Technical Summary (2022)",
+  "framework_where": "IPCC AR6 WGII TS, Section TS.D.5.1, p. 90",
+  "framework_says": "Frequently documented water and food adaptation options include rainwater harvesting, soil moisture conservation and climate services; about a third of assessed water-related adaptations reported maladaptive outcomes. Water pricing and allocation rules are not addressed.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-082",
+  "framework_source": "IPCC AR6 WGII Technical Summary (2022)",
+  "framework_where": "IPCC AR6 WGII TS, Section TS.D.5.5, pp. 90–91",
+  "framework_says": "Irrigation is effective for yield stability but brings high water demand, groundwater depletion, altered local climates, soil salinity and, with weak governance, widening inequalities; groundwater regulation and pumping controls are not specifically discussed.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-083",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section C.2.1, p. 21",
+  "framework_says": "On-farm water management, water storage, soil moisture conservation and irrigation are among the most common adaptations and reduce vulnerability; irrigation reduces drought risk but needs appropriate management to avoid groundwater depletion and soil salinisation.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-084",
+  "framework_source": "IPCC AR6 WGII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGII SPM, Section B.5.3, p. 19",
+  "framework_says": "Transboundary risks across water, energy and food are rising; shifting fish stocks increase the need for climate-informed transboundary management and cooperation, and changing water availability threatens planned infrastructure such as hydropower in countries sharing river basins.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-085",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Executive Summary, Box ES.1 (strengths and limitations of wealth accounting), p. 3",
+  "framework_says": "Costs of fossil fuels and polluting factories omit external costs, leaving carbon and local pollution damages unconstrained; governments can correct externalities through environmental fiscal reforms, direct regulations, payments for ecosystem services and signalling future policy.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-086",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 8, Conclusion, pp. 186–187",
+  "framework_says": "Premature deaths from air pollution cut per capita human capital by about 0.3 percent globally in 2018, more in lower-middle-income countries, highlighting the importance of improving air quality management in developing countries.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-087",
+  "framework_source": "IPCC AR6 WGIII Summary for Policymakers (2022)",
+  "framework_where": "IPCC AR6 WGIII SPM, Sections C.5 and C.5.1, p. 29",
+  "framework_says": "Cutting industry emissions requires coordinated value-chain action on demand management, energy and materials efficiency, circular material flows and new production processes; these options could be used more in industrial practice and need more attention from industrial policy.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-088",
+  "framework_source": "IPCC AR6 WGIII Technical Summary (2022)",
+  "framework_where": "IPCC AR6 WGIII TS, Box TS.12 (Circular Economy), p. 120",
+  "framework_says": "The circular economy shifts from make-and-dispose models to product longevity, reuse, refurbishment and recycling, cutting embodied emissions and creating jobs; recycling policies are many, but policies for efficient material use with higher value retention are far fewer.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-089",
+  "framework_source": "IPCC AR6 WGIII Technical Summary (2022)",
+  "framework_where": "IPCC AR6 WGIII TS, Section TS.5.8 (Demand-side Aspects of Mitigation), p. 121",
+  "framework_says": "Behavioural interventions such as choice architecture work synergistically with price signals; nudges alone give small to medium reductions, green defaults are highly effective, and judicious labelling, framing and social-norm communication can increase the effect of mandates, subsidies or taxes.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-090",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 12, How to Mitigate the Dutch Disease, p. 328",
+  "framework_says": "Accumulating resource revenues as foreign assets or in a sovereign wealth fund, as the IMF recommends, sidesteps Dutch disease but is not optimal for capital-scarce resource-rich countries, which should invest windfalls domestically and reduce foreign debt.",
+  "framework_refs": [
+   "van der Ploeg and Venables 2011, Harnessing Windfall Revenues: Optimal Policies for Resource-Rich Developing Economies",
+   "Barnett and Ossowski 2003, Operational Aspects of Fiscal Policy in Oil-Producing Countries"
+  ]
+ },
+ {
+  "lever_id": "LV-091",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 12, How to Mitigate the Dutch Disease, pp. 328–329",
+  "framework_says": "Governments may need to manage real exchange rate appreciation from resource revenues; in capital-scarce countries, windfalls should fund domestic public investment and foreign debt reduction, using 'investing in investing' to raise absorptive capacity and mitigate Dutch disease.",
+  "framework_refs": [
+   "van der Ploeg and Venables 2011, Harnessing Windfall Revenues: Optimal Policies for Resource-Rich Developing Economies"
+  ]
+ },
+ {
+  "lever_id": "LV-092",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 11, Institutional Capital, p. 299",
+  "framework_says": "Good-quality institutions help resource-dependent countries stabilise public finances and ensure resource rents benefit the population; transparency, accountability and corruption ratings fell in countries with declining wealth per capita, and parliamentary oversight can improve accountability over resource wealth.",
+  "framework_refs": [
+   "Gill et al. 2014, Diversified Development: Making the Most of Natural Resources in Eurasia",
+   "Boschini, Pettersson, and Roine 2007, Resource Curse or Not: A Question of Appropriability",
+   "de la Brière et al. 2017, From Mines and Wells to Well-Built Minds: Turning Sub-Saharan Africa's Natural Resource Wealth into Human Capital"
+  ]
+ },
+ {
+  "lever_id": "LV-093",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 11, Macroeconomic and Fiscal Management, pp. 292–295",
+  "framework_says": "Strong public balance sheets, with more assets than debt, reduce borrowing costs and shorten recessions; oil producers that borrowed during the commodity boom saw primary balances worsen afterwards, and budget fiscal rules help ensure debt sustainability.",
+  "framework_refs": [
+   "IMF 2018, Fiscal Monitor October 2018: Managing Public Wealth",
+   "Detter and Fölster 2015, Lessons for Future National Wealth Funds"
+  ]
+ },
+ {
+  "lever_id": "LV-094",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 11, Macroeconomic and Fiscal Management, pp. 292–294",
+  "framework_says": "Fiscal rules limit pressures to overspend in good times and ensure debt sustainability; debt rules set GDP-based floors and ceilings and, with expenditure rules, save windfalls as buffers, while structural balance rules suit natural-capital-rich countries. Fiscal councils are not discussed.",
+  "framework_refs": [
+   "Schaechter et al. 2012, Fiscal Rules in Response to the Crisis—Toward the 'Next-Generation' Rules: A New Dataset",
+   "Bandaogo 2020, Fiscal Rules in Times of Crisis"
+  ]
+ },
+ {
+  "lever_id": "LV-095",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 1, closing discussion of post-COVID public debt and comprehensive balance sheets, pp. 38–39",
+  "framework_says": "Not discussed in CWON 2021",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-096",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Summary for Policy Makers, wealth per capita and future generations, p. xxxi",
+  "framework_says": "Not discussed in CWON 2021",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-097",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 7, Estimates of Human Capital, p. 152",
+  "framework_says": "Mauritania illustrates a potential demographic dividend not achieved because investment in human capital did not keep pace with rapid population growth. Family planning, reproductive health and fertility policy are not discussed.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-098",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 11, Macroeconomic and Fiscal Management (building national savings in good times), p. 293",
+  "framework_says": "Not discussed in CWON 2021",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-099",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 7, Data and Methodology (working life assumed to end at 65), p. 147",
+  "framework_says": "Not discussed in CWON 2021",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-100",
+  "framework_source": "World Bank, The Changing Wealth of Nations 2021",
+  "framework_where": "CWON 2021, Chapter 7, Data and Methodology (human capital as lifetime earnings), p. 147",
+  "framework_says": "Not discussed in CWON 2021",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-101",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Strengthen institutions for contracts, intellectual property protection, and standards: Standards, p. 174",
+  "framework_says": "Certification of standards helps developing-country suppliers overcome information asymmetries and signal quality; governments should support standards institutions, build domestic inspection, testing and certification capacity, and seek mutual recognition, as with Mali's cotton certification and Pakistan's quality regime.",
+  "framework_refs": [
+   "Auriol, Balineau, and Bonneton Forthcoming, The Economics of Quality in Developing Countries",
+   "Balineau 2013, Disentangling the Effects of Fair Trade on the Quality of Malian Cotton",
+   "Henn et al. 2017, Export Quality in Advanced and Developing Economies: Evidence from a New Data Set"
+  ]
+ },
+ {
+  "lever_id": "LV-102",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Enhance connectivity to lower trade costs, p. 170",
+  "framework_says": "Supply chains go where logistics are smooth; countries can rebalance trade infrastructure built for extractives toward multimodal links, improve port infrastructure and governance to cut dwell times, and open logistics and express delivery services to providers.",
+  "framework_refs": [
+   "Pieterse et al. 2016, Supporting Export Competitiveness through Port and Rail Network Reforms: A Case Study of South Africa",
+   "Raballand et al. 2012, Why Does Cargo Spend Weeks in Sub-Saharan African Ports? Lessons from Six Countries",
+   "Londoňo-Kent and Kent 2003, A Tale of Two Ports: The Cost of Inefficiency"
+  ]
+ },
+ {
+  "lever_id": "LV-103",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Enhance connectivity to lower trade costs, p. 171",
+  "framework_says": "Border delays act like tariffs; unilateral customs modernization, risk management, electronic documents, trade portals and single windows, plus Trade Facilitation Agreement implementation and transit cooperation between landlocked and transit countries, can significantly raise GVC competitiveness.",
+  "framework_refs": [
+   "Fernandes, Hillberry, and Mendoza-Alcántara 2019, Trade Effects of Customs Reform: Evidence from Albania",
+   "Arvis et al. 2011, Connecting Landlocked Developing Countries to Markets: Trade Corridors in the 21st Century",
+   "World Bank 2012, Developing a Trade Information Portal"
+  ]
+ },
+ {
+  "lever_id": "LV-104",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 9 Cooperation on trade, Deepening trade cooperation (services), p. 225",
+  "framework_says": "Air transport is vital for connectivity and GVC participation, but restrictive bilateral air service agreements split markets into route-specific duopolies; liberalizing routes needs partner consent and air traffic rights sit outside the WTO. Business travel itself is not discussed.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-105",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 9 Cooperation on trade, Deep integration agreements and GVCs: Deep trade agreements boost GVC participation, p. 230",
+  "framework_says": "Deep preferential trade agreements are strongly associated with GVC trade: each added provision raises forward and backward GVC linkages, and deep agreements also shape vertical FDI; Box 2.5 adds that duty-free preferences such as EBA can catalyze export entry.",
+  "framework_refs": [
+   "Laget et al. 2018, Deep Trade Agreements and Global Value Chains",
+   "Mattoo, Mulabdic, and Ruta 2017, Trade Creation and Trade Diversion in Deep Agreements",
+   "Osnago, Rocha, and Ruta 2017, Do Deep Trade Agreements Boost Vertical FDI?"
+  ]
+ },
+ {
+  "lever_id": "LV-106",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Liberalize trade to expand markets: Tariffs, p. 166",
+  "framework_says": "Countries with low tariffs are more likely to join GVCs; over half of the fall in MFN tariffs in 2001-13 was unilateral, scope for further unilateral liberalization remains substantial, and tariff escalation locks developing countries into low-value processing.",
+  "framework_refs": [
+   "Bureau, Guimbard, and Jean 2016, Competing Liberalizations: Tariffs and Trade in the 21st Century"
+  ]
+ },
+ {
+  "lever_id": "LV-107",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Liberalize trade to expand markets: Trade in services, p. 168 (nearest related: tourism named as a services GVC opportunity)",
+  "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-108",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 8 Policies for inclusion and sustainability, Environmental sustainability, p. 204 (nearest related: pricing and regulation of environmental impacts of GVCs)",
+  "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-109",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 4 Macroeconomic implications, Propagating shocks and Box 4.1, p. 105 (nearest related: shock transmission and diversifying suppliers)",
+  "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-110",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Invest in sector-specific skills, management, and innovation capabilities: Developing management and firm capabilities, p. 181",
+  "framework_says": "Uncertain demand makes firms underinvest in finding buyers; helping firms discover markets and build client relationships raises quality and productivity, as when Egyptian carpet makers given access to high-income buyers gained 16-26 percent in profits, and Chile's CORFO supplier programme.",
+  "framework_refs": [
+   "Atkin, Khandelwal, and Osman 2017, Exporting and Firm Performance: Evidence from a Randomized Experiment",
+   "Foster, Haltiwanger, and Syverson 2016, The Slow Growth of New Plants: Learning about Demand?",
+   "Arráiz, Henríquez, and Stucchi 2011, Impact of the Chilean Supplier Development Program on the Performance of SMEs and Their Large Firm Customers"
+  ]
+ },
+ {
+  "lever_id": "LV-111",
+  "framework_source": "The Growth Report: Strategies for Sustained Growth and Inclusive Development",
+  "framework_where": "Growth Report 2008, Part 2 The Policy Ingredients of Growth Strategies, Competition and Structural Change, pp. 43-44",
+  "framework_says": "Structural change under competitive pressure propels productivity growth; governments can hasten it by encouraging entry of new firms and industries, should not cling to stagnating industries, and should protect people rather than jobs through insurance and retraining.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-112",
+  "framework_source": "The Growth Report: Strategies for Sustained Growth and Inclusive Development",
+  "framework_where": "Growth Report 2008, Part 2 The Policy Ingredients of Growth Strategies, Export Promotion and Industrial Policy, pp. 48-49",
+  "framework_says": "Governments should try to jump-start export diversification, but such support should be temporary, critically evaluated and quickly abandoned if it fails, as neutral as possible about which exports, and no substitute for education, infrastructure and responsive regulation.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-113",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Policies for upgrading: Transitioning to innovative activities, p. 189",
+  "framework_says": "Innovation and advanced services GVCs, such as software, call centers and Nollywood, need technical and managerial skills, markets open to foreign providers and temporary movement of people, support for born-global start-ups, IP protection and advanced ICT.",
+  "framework_refs": [
+   "Kommerskollegium 2012, Everybody Is in Services: The Impact of Servicification in Manufacturing on Trade and Trade Policy",
+   "Knight and Cavusgil 2004, Innovation, Organizational Capabilities, and the Born-Global Firm"
+  ]
+ },
+ {
+  "lever_id": "LV-114",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Strengthening innovation systems, p. 182",
+  "framework_says": "National innovation systems must expand for complex GVCs; the German example combines publicly funded basic research institutes, mixed-funded universities and applied contract research, and the report calls for R&D policy that incentivizes collaborative research.",
+  "framework_refs": [
+   "Fagerberg and Srholec 2008, National Innovation Systems, Capabilities, and Economic Development",
+   "Koschatzky and Stahlecker 2010, The Emergence of New Modes of R&D Services in Germany"
+  ]
+ },
+ {
+  "lever_id": "LV-115",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Developing management and firm capabilities, p. 181",
+  "framework_says": "Firms underinvest in management because of information gaps and uncertain returns; financial incentives or direct support to improve managerial practices are cost-effective, raising productivity, quality and the likelihood of exporting and joining GVCs.",
+  "framework_refs": [
+   "Bloom et al. 2013, Does Management Matter? Evidence from India",
+   "Cirera and Maloney 2017, The Innovation Paradox: Developing-Country Capabilities and the Unrealized Promise of Technological Catch-Up",
+   "Bloom, Dressel, and Yam 2018, Management Delivers: Why Firms Should Invest in Better Business Practices"
+  ]
+ },
+ {
+  "lever_id": "LV-116",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Strengthen institutions for contracts, intellectual property protection, and standards: Intellectual property rights protection, p. 173",
+  "framework_says": "Countries with stronger IP protection attract more FDI and technology flows through licensing and royalties; weak IPR protection and contract enforcement limit GVC access and upgrading, and IPR provisions in PTAs vary in strength.",
+  "framework_refs": [
+   "Smith 2001, How Do Foreign Patent Rights Affect U.S. Exports, Affiliate Sales, and Licenses?",
+   "Fink 2011, Intellectual Property Rights",
+   "Antràs and Yeaple 2013, Multinational Firms and the Structure of International Trade"
+  ]
+ },
+ {
+  "lever_id": "LV-117",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Strengthening innovation systems, p. 182",
+  "framework_says": "Knowledge must flow among firms, government and universities; institutions such as Germany's Fraunhofer Society bridge basic research and industrial demand, new forms of university-industry collaboration have proliferated, and governments can establish innovation parks.",
+  "framework_refs": [
+   "Fagerberg and Srholec 2008, National Innovation Systems, Capabilities, and Economic Development",
+   "Koschatzky and Stahlecker 2010, The Emergence of New Modes of R&D Services in Germany"
+  ]
+ },
+ {
+  "lever_id": "LV-118",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Strengthening innovation systems, p. 182 (nearest related: national innovation systems and research institutes)",
+  "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-119",
+  "framework_source": "The Growth Report: Strategies for Sustained Growth and Inclusive Development",
+  "framework_where": "Growth Report 2008, Part 2 The Policy Ingredients of Growth Strategies, Urbanization and Rural Investment, p. 60",
+  "framework_says": "Agricultural research and extension yield returns of around 35 percent in Sub-Saharan Africa and 50 percent in Asia; governments should invest in agriculture on its own merits, not as a way to slow urban growth.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-120",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Facilitating participation: Foreign capital, pp. 164-165",
+  "framework_says": "Attracting FDI needs coordinated investment, trade and regulatory policy; investment promotion agencies overcome information and coordination failures through image building, targeting and facilitation, and can be highly cost-effective, as in Costa Rica, Malaysia and Morocco.",
+  "framework_refs": [
+   "Harding and Javorcik 2011, Roll Out the Red Carpet and They Will Come: Investment Promotion and FDI Inflows",
+   "Morisset and Andrews-Johnson 2004, The Effectiveness of Promotion Agencies at Attracting Foreign Direct Investment",
+   "Charlton and Davis 2007, Does Investment Promotion Work?"
+  ]
+ },
+ {
+  "lever_id": "LV-121",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Promote domestic supply chain linkages and FDI spillovers and Box 7.4, pp. 177-178",
+  "framework_says": "Linkages between lead firms and domestic SME suppliers are the starting point for spillovers; governments can run supplier linkage programmes, support supplier associations and technology licensing, while local content rules and forced technology transfer can backfire.",
+  "framework_refs": [
+   "Farole and Winkler 2014, Making Foreign Direct Investment Work for Sub-Saharan Africa: Local Spillovers and Competitiveness in Global Value Chains",
+   "World Bank 2015, A Practical Guide to Increasing Mining Local Procurement in West Africa",
+   "Malinska and Martin 2000-2002, Czech Supplier Development Programme in Electronics and Automotive"
+  ]
+ },
+ {
+  "lever_id": "LV-122",
+  "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+  "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Policies for upgrading and Figure 7.13, pp. 186-187",
+  "framework_says": "Policy priorities shift with each GVC stage: FDI, ports, basic trade facilitation and PTAs to enter limited manufacturing; then skills, services liberalization, logistics, linkages, contract enforcement, IP protection and innovation systems for advanced manufacturing and services.",
+  "framework_refs": [
+   "Bamber and Gereffi 2013, Costa Rica in the Medical Devices Global Value Chain: Opportunities for Upgrading"
+  ]
+ },
+ {
+  "lever_id": "LV-123",
+  "framework_source": "The Growth Report: Strategies for Sustained Growth and Inclusive Development",
+  "framework_where": "Growth Report 2008, Part 4 New Global Trends, Demographics, Aging, and Migration, p. 101",
+  "framework_says": "Countries can win back highly educated citizens who emigrated; fast-growing economies attract substantial return migration, and skilled returnees can contribute substantially to growth. Diaspora engagement for trade and investment is not otherwise discussed.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-124",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, The framework in action, Institutions and infrastructure to connect lagging and leading areas, p. 252",
+  "framework_says": "Interregional transport links can widen market access for lagging areas, as Bangladesh's Jamuna bridge did, but roads run both ways and often concentrate activity further in leading areas; using infrastructure to spread out manufacturing can slow national growth.",
+  "framework_refs": [
+   "Bayes 2007, Impact Assessment of Jamuna Multipurpose Bridge Project (JMBP) on Poverty",
+   "Faini 1983, Cumulative Process of Deindustrialization in an Open Region: the Case of Southern Italy",
+   "Combes and Lafourcade 2001, Transport Cost Decline and Regional Inequalities: Evidence from France"
+  ]
+ },
+ {
+  "lever_id": "LV-125",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, The framework in action, Institutions and infrastructure to connect lagging and leading areas, p. 252",
+  "framework_says": "Extensive rural road networks in Nepal brought significant gains to the poor, though benefits of road extension may be greater for the rich; local roads are listed as a targeted priority where lagging areas are densely populated and divided.",
+  "framework_refs": [
+   "Jacoby 2000, Access to Markets and the Benefits of Rural Roads"
+  ]
+ },
+ {
+  "lever_id": "LV-126",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, The framework in action, Information and communication technologies, p. 251",
+  "framework_says": "Better information flows let producers in lagging areas learn the prices they can get; in Kerala mobile phones narrowed market price dispersion until prices differed only by transport cost between markets.",
+  "framework_refs": [
+   "Jensen 2007, The Digital Provide: Information (Technology), Market Performance, and Welfare in the South Indian Fisheries Sector"
+  ]
+ },
+ {
+  "lever_id": "LV-127",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, The framework in action, Information and communication technologies, p. 251",
+  "framework_says": "Information and communication services are core connective infrastructure; telecommunication infrastructure was strongly associated with subnational GDP growth in China, and because returns diminish, lagging areas can gain the most from such investments.",
+  "framework_refs": [
+   "Lei and Haynes 2004, The Role of Telecommunications Infrastructure in Regional Economic Growth of China"
+  ]
+ },
+ {
+  "lever_id": "LV-128",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, Box 8.9 Exporting by mail in Peru, p. 251",
+  "framework_says": "Peru's Easy Export programme uses the postal service and online export declarations so small producers in poor areas can ship goods worth up to $2,000 without customs or logistics agents; over 300 firms exported within six months.",
+  "framework_refs": [
+   "Guasch 2008, Exporting by Mail: An Innovative Trade Facilitation Tool"
+  ]
+ },
+ {
+  "lever_id": "LV-129",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, Institutions, infrastructure, and incentives to overcome the 3-D challenge, p. 253",
+  "framework_says": "Utilities are part of spatially connective infrastructure; in Uganda returns to highways and power supply are highest where skilled labour and diverse industry already exist, along the Kampala-Jinja corridor, and spreading infrastructure to disperse manufacturing can slow growth.",
+  "framework_refs": [
+   "Lall, Schroeder, and Schmidt 2008, Geographically Prioritizing Infrastructure Improvements to Accelerate Growth in Uganda"
+  ]
+ },
+ {
+  "lever_id": "LV-130",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 6, Box 6.1 Biggest in the world: size and social obligations of Indian Railways, p. 175",
+  "framework_says": "Not discussed in World Development Report 2009",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-131",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 6, What to do: transport policies in the developing world, Regulating transport to get the benefits of scale economies, p. 186",
+  "framework_says": "Transport markets are rarely competitive because of scale and network economies; without effective regulation, limited competition raises costs, encourages rent-seeking and corruption, and leads to underinvestment in new infrastructure and maintenance.",
+  "framework_refs": [
+   "Winston 1993, Economic Deregulation: Days of Reckoning for the Microeconomists",
+   "Nikomborirak 2007, Liberalization of Air Transport and Competition Concerns in ASEAN",
+   "Canning and Bennathan 2007, The Rate of Return to Transportation Infrastructure"
+  ]
+ },
+ {
+  "lever_id": "LV-132",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 9, Building integrated neighborhoods: a framework, p. 270",
+  "framework_says": "A power grid is treated as a regional club good; regional agreements such as the Southern Africa Power Pool and the Central American Electricity Connection System exploit the distribution of power sources, though overlapping agreements can weaken coordination.",
+  "framework_refs": [
+   "Sandler 2002, Demand and Institutions for Regional Public Goods"
+  ]
+ },
+ {
+  "lever_id": "LV-133",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, Institutions, infrastructure, and incentives to overcome the 3-D challenge, p. 253",
+  "framework_says": "Incentives that strengthen market links and agro-processing can suit lagging areas with good natural geography, as Malaysia's cold-chain facilities and food-processing tax exemptions show; targeting anchor firms for local multiplier effects has generally failed.",
+  "framework_refs": [
+   "Government of Malaysia 2001, Eight Malaysia Plan: 2001-2005",
+   "Donoso Clark and Leninhan 2008, A Space-Based Development Framework: A Bottom-Up Approach to Economic Integration"
+  ]
+ },
+ {
+  "lever_id": "LV-134",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, Institutions, infrastructure, and incentives to overcome the 3-D challenge, Table 8.2, p. 255",
+  "framework_says": "European regional policy has shifted from attracting individual firms to soft measures that encourage clusters of interrelated firms, research institutes and science and technology parks through public-private partnerships; rigorous evaluations of these programmes are scarce.",
+  "framework_refs": [
+   "Donoso Clark and Leninhan 2008, A Space-Based Development Framework: A Bottom-Up Approach to Economic Integration"
+  ]
+ },
+ {
+  "lever_id": "LV-135",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, Box 8.10 Special economic zones bring growth if they exploit advantages in natural and economic geographies, p. 254",
+  "framework_says": "Special economic zones succeed when they exploit geographic advantages rather than offset them; China's coastal zones accessed external markets, many Indian zones were poorly located, and location matters more than who owns or operates a zone.",
+  "framework_refs": [
+   "Gauthier 2007, Special Economic Zones: Performance, Lessons Learned, and Implications for Zone Development",
+   "Huang and Luo forthcoming, Reshaping Economic Geography in China"
+  ]
+ },
+ {
+  "lever_id": "LV-136",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 7, A framework for integration, Demand management and public transport, p. 210",
+  "framework_says": "Demand management is the most cost-effective way to raise mobility; congestion charging, car-purchase permits and vehicle restrictions curb car use, while busways, light rail and subways connect the city and guide land use toward higher density.",
+  "framework_refs": [
+   "Santos and Shaffer 2004, Preliminary Results of the London Congestion Charging Scheme",
+   "Victoria Transport Policy Institute 2007, Online TDM Encyclopedia",
+   "Pucher and others 2005, Urban Transport Crisis in India"
+  ]
+ },
+ {
+  "lever_id": "LV-137",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 7, A framework for integration, Land use and building regulations, and Box 7.3, p. 204",
+  "framework_says": "Land use and building regulation matters as urbanization advances, but overzealous rules distort housing markets; Mumbai's height and floor space limits raised land prices and spread slums, and stringent plot and construction standards exclude most households from formal ownership.",
+  "framework_refs": [
+   "Bertaud 2003, Order without Design",
+   "Buckley, Bertaud, and Phatak 2005, Property Rights and Interlocking Policy Constraints Urban Land Markets: Reforming Mumbai's Real Estate Raj",
+   "Brueckner 2007, Government Land-Use Interventions: An Economic Analysis"
+  ]
+ },
+ {
+  "lever_id": "LV-138",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 7, The framework in action, Invest in transport connectivity while continuing institutional reform, p. 222",
+  "framework_says": "Rapidly urbanizing areas should pair land use planning with connective infrastructure; the Changsha-Zhuzhou-Xiangtan area plan sets a regulatory land use framework and transport links, and Singapore plans land and housing every 10 years, then lets markets work.",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-139",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 8, Institutions, infrastructure, and incentives to overcome the 3-D challenge, p. 252",
+  "framework_says": "Spatially targeted incentives for lagging areas have produced modest results and large costs; they work best when they reinforce market signals and geographic advantages, complementing rather than replacing institutions and infrastructure: let markets pick the place, governments push the pace.",
+  "framework_refs": [
+   "Carvalho, Lall, and Timmins 2006, Regional Subsidies and Industrial Prospects of Lagging Regions",
+   "Chakravorty and Lall 2005, Industrial Location and Spatial Inequality: Theory and Evidence from India",
+   "Donoso Clark and Leninhan 2008, A Space-Based Development Framework: A Bottom-Up Approach to Economic Integration"
+  ]
+ },
+ {
+  "lever_id": "LV-140",
+  "framework_source": "World Development Report 2009: Reshaping Economic Geography",
+  "framework_where": "WDR 2009, chapter 7, Box 7.1 Are the policy messages of this Report antirural? No., p. 200",
+  "framework_says": "Spatially blind policies on land, services and the business climate promote rural development in farming and the nonfarm economy, which provides 30 to 50 percent of rural employment; nonfarm growth also stimulates agriculture.",
+  "framework_refs": [
+   "Feder and Lanjouw 2001, Rural Non-farm Activities and Rural Development: From Experience towards Strategy"
+  ]
+ },
+ {
+  "lever_id": "LV-141",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, focus G (Education and skills for rural development), Skills training and Business education for the entrepreneurs of the new agriculture, p. 222-223",
+  "framework_says": "Training programs for firms in niche markets with good growth prospects have raised enterprise productivity and income by upgrading technology and managerial skills; entrepreneurs in the new agriculture also need business skills, market information and understanding of costs and value chains.",
+  "framework_refs": [
+   "Johanson and Adams 2004, Skills Development in Sub-Saharan Africa"
+  ]
+ },
+ {
+  "lever_id": "LV-142",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 4, Government Interventions in the Market, A canonical example of direct intervention: the credit guarantee scheme, p. 168-171",
+  "framework_says": "Government-backed partial credit guarantees are now the main SME credit intervention, with over 2,000 schemes, but there is little evidence they work well; their subsidy costs are hard to estimate at inception and they must show welfare gains exceeding those costs.",
+  "framework_refs": [
+   "Green 2003, Credit Guarantee Schemes for Small Enterprises: An Effective Instrument to Promote Private Sector-Led Growth?",
+   "Dorn 2005, Practices and Policies in Credit Guarantee Programs in the EU"
+  ]
+ },
+ {
+  "lever_id": "LV-143",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 2, What Aspects of Financial Sector Development Matter for Access?, Access to External Equity, p. 86-89",
+  "framework_says": "Start-up firms need equity; venture capital and private equity, including for near start-ups, have become an increasingly important but cyclical and poorly documented source of finance in developing countries, and venture capital works better where legal protections exist.",
+  "framework_refs": [
+   "Cumming, Schmidt, and Walz 2006, Legality and Venture Governance around the World"
+  ]
+ },
+ {
+  "lever_id": "LV-144",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 2, The Channels of Impact: Micro and Macro Evidence, p. 60-61",
+  "framework_says": "Cross-firm evidence links lower firm entry and slower growth partly to higher firm registration costs, making a case for avoiding unnecessarily burdensome entry regulation, while regulations that support finance, such as accounting standards and property rights, help entry.",
+  "framework_refs": [
+   "Klapper, Laeven, and Rajan 2006, Entry Regulation as a Barrier to Entrepreneurship"
+  ]
+ },
+ {
+  "lever_id": "LV-145",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 4, Policies to Promote Competition and Stability, including box 4.1 (Basel II and access), p. 156-159",
+  "framework_says": "Prudential regulation and supervision reduce crisis risks that hurt the poor, but advanced-country models should not be transplanted unthinkingly; heavy discretionary supervisory power is linked to lending corruption, while private monitoring and disclosure can strengthen stability and reach.",
+  "framework_refs": [
+   "Barth, Caprio, and Levine 2006, Rethinking Bank Regulation: Till Angels Govern",
+   "Beck, Demirgüç-Kunt, and Levine 2006, Bank Supervision and Corruption in Lending",
+   "Demirgüç-Kunt and Kane 2002, Deposit Insurance around the Globe? Where Does It Work?"
+  ]
+ },
+ {
+  "lever_id": "LV-146",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 3, Providing Financial Access to Households and Microentrepreneurs: How and by Whom?, p. 113-116",
+  "framework_says": "Microfinance institutions have reached millions of clients with good repayment, but evidence shows microcredit demand is interest-elastic and moral hazard, rather than adverse selection, is the main barrier to lending to poor borrowers.",
+  "framework_refs": [
+   "Robinson 2001, The Microfinance Revolution: Sustainable Banking for the Poor",
+   "Karlan and Zinman 2006b, Observing Unobservables: Identifying Information Asymmetries with a Consumer Credit Field Experiment"
+  ]
+ },
+ {
+  "lever_id": "LV-147",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 3, Providing Financial Access to Households and Microentrepreneurs (savings), p. 127-129; chapter 4, Specific Policies to Facilitate Financial Access, p. 153",
+  "framework_says": "Nearby savings outlets, commitment savings products and door-to-door deposit collection raised savings in field studies, though some effects faded; low-cost financial literacy may help people use services and avoid pitfalls.",
+  "framework_refs": [
+   "Aportela 1999, Effects of Financial Access on Savings by Low-Income People",
+   "Ashraf, Karlan, and Yin 2006c, Tying Odysseus to the Mast: Evidence from a Savings Commitment Product in the Philippines",
+   "Ashraf, Karlan, and Yin 2006a, Deposit Collectors"
+  ]
+ },
+ {
+  "lever_id": "LV-148",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 4, Specific Policies to Facilitate Financial Access, p. 155-156 (also chapter 3, p. 131)",
+  "framework_says": "Internet and mobile phone finance can be powerful engines of access with low marginal costs, but uptake has been slow; governments must keep legislation clear and up to date and avoid regulatory barriers that block non-bank providers.",
+  "framework_refs": [
+   "Porteous 2006, The Enabling Environment for Mobile Banking in Africa"
+  ]
+ },
+ {
+  "lever_id": "LV-149",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 6, Developing efficient input markets, Promoting seed and fertilizer use in Africa and box 6.7, p. 151-152",
+  "framework_says": "Government input distribution raised use but at high, erratic cost, and fertilizer subsidies are costly and often favor larger farmers; subsidies can be justified only if market smart: targeted, temporary, competition-promoting and supportive of private input markets, for example through vouchers.",
+  "framework_refs": [
+   "Crawford, Jayne, and Kelly 2006, Alternative Approaches for Promoting Fertilizer Use in Africa",
+   "Morris and others 2007, Promoting Increased Fertilizer Use in Africa",
+   "Borlaug and Dowswell 2007, In Search of an African Green Revolution: Looking Beyond Asia"
+  ]
+ },
+ {
+  "lever_id": "LV-150",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 7, Using available technology better: extension and ICT innovations, New demand-led approaches to extension, p. 172-174",
+  "framework_says": "Information and skills gaps limit technology adoption; public extension suffered weak accountability and fiscal sustainability, as with Training and Visit, so extension is shifting to decentralized, farmer-governed, mixed public-private and demand-led models, such as India's ATMA.",
+  "framework_refs": [
+   "Anderson, Feder, and Ganguly 2006, The Rise and Fall of Training and Visit Extension: An Asian Mini-drama with an African Epilogue",
+   "Singh 2007, Public-private Partnership in Extension: The ATMA Experience",
+   "Anderson 2007, Agricultural Advisory Services"
+  ]
+ },
+ {
+  "lever_id": "LV-151",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 8, Improving agricultural water management, p. 182-185",
+  "framework_says": "Irrigated land, about 18 percent of cultivated area, yields about 40 percent of output, but water scarcity limits expansion outside Sub-Saharan Africa; future gains must come from water productivity through integrated basin management, better technology and institutional reform.",
+  "framework_refs": [
+   "Comprehensive Assessment of Water Management in Agriculture 2007, Water for Food, Water for Life: A Comprehensive Assessment of Water Management in Agriculture",
+   "Shah and others 2003, Sustaining Asia's Groundwater Boom: An Overview of Issues and Evidence",
+   "Rockström and Barron 2007, Water Productivity in Rainfed Systems: Overview of Challenges and Analysis of Opportunities in Water Scarcity Prone Savannahs"
+  ]
+ },
+ {
+  "lever_id": "LV-152",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 3, Smallholder challenges to compete, and box 3.7 (Are farms becoming too small?), p. 91-92",
+  "framework_says": "State promotion of large-scale farming gave unimpressive or disastrous results, while smallholder-based strategies drove the green revolution; consolidation and mechanization may raise labor productivity, best through land rental markets, as policy-led consolidation can leave households landless.",
+  "framework_refs": [
+   "Anríquez and Bonomi 2007, Long-Term Farming and Rural Demographic Trends",
+   "Deininger and Jin 2003, Land Sales and Rental Markets in Transition: Evidence from Rural Vietnam",
+   "Otsuka 2007, The Asian Farm Size Dilemma"
+  ]
+ },
+ {
+  "lever_id": "LV-153",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 8, Greening the green revolution and Managing intensive livestock systems, boxes 8.3 and 8.4, p. 188-190",
+  "framework_says": "Integrated pest management can raise yields and cut environmental damage but is knowledge intensive and slowed by input subsidies; dense livestock systems raise disease risks such as avian flu, which Thailand contained through zoning, movement control and high biosecurity.",
+  "framework_refs": [
+   "Pingali and Rosengrant 1994, Confronting the Environmental Consequences of the Rice Green Revolution in Asia",
+   "Pingali, Hossain, and Gerpacio 1997, Asian Rice Bowls: The Returning Crisis",
+   "Gilbert and others 2006, Free-grazing Ducks and Highly Pathogenic Avian Influenza, Thailand"
+  ]
+ },
+ {
+  "lever_id": "LV-154",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 5, Food staples: improving commodity trading and risk management, Poor road connections and box 5.1, p. 118-120",
+  "framework_says": "Poor rural roads push up marketing costs, with transport 50 to 60 percent of marketing costs in some African countries; better roads, market information systems and commodity exchanges can cut transaction costs, though road benefits depend on complementary investments and context.",
+  "framework_refs": [
+   "Fafchamps, Minten, and Gabre-Madhin 2005, Increasing Returns and Market Efficiency in Agricultural Trade",
+   "Limao and Venables 2001, Infrastructure, Geographical Disadvantage, Transport Costs, and Trade"
+  ]
+ },
+ {
+  "lever_id": "LV-155",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 6, Producer organizations in a context of value chains and globalization, p. 153-155",
+  "framework_says": "Producer organizations, now with about 250 million farmer members, help smallholders access markets, inputs and policy voice; government-controlled cooperatives often failed through political interference and elite capture, and success requires performance-oriented rules and fair representation of smallholders.",
+  "framework_refs": [
+   "Mercoiret, Pesche, and Bosc 2006, Rural Producer Organizations (RPOs) for Pro-poor Sustainable Development",
+   "Banerjee and others 2001, Inequality, Control Rights, and Rent Seeking: Sugar Cooperatives in Maharashtra",
+   "Berdegué 2001, Cooperating to Compete. Peasant Associative Business Firms in Chile"
+  ]
+ },
+ {
+  "lever_id": "LV-156",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 5, Higher-value urban markets: linking producers to modern supply chains, Impact on smallholders and Helping smallholders keep up with the requirements, p. 127-128",
+  "framework_says": "Contract farmers earn significantly higher incomes; production contracts supplying inputs, credit and extension are often small farmers' only route to inputs and services and share risks, though modern buyers tend to exclude asset-poor farmers.",
+  "framework_refs": [
+   "Warning and Key 2002, The Social Performance and Distributional Consequences of Contract Farming: An Equilibrium Analysis of the Arachide de Bouche Program in Senegal",
+   "Minten, Randrianarison, and Swinnen 2006, Global Retail Chains and Poor Farmers: Evidence from Madagascar",
+   "Swinnen and Maertens 2005, Globalization, Privatization and Vertical Coordination in Food Value Chains in Developing and Transition Countries"
+  ]
+ },
+ {
+  "lever_id": "LV-157",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 9, Schooling, training, and transition to the labor market, Rural labor market outcomes can be improved by active labor market programs, p. 218",
+  "framework_says": "Active labor market programs can help rural households find better jobs; a Chinese job-matching program placed about 200,000 upland laborers off-farm, and an Andhra Pradesh program linking training to placement created over 15,000 jobs.",
+  "framework_refs": [
+   "World Bank 2005e, Implementation Completion Report for the Qinba Mountains Poverty Reduction Project"
+  ]
+ },
+ {
+  "lever_id": "LV-158",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 9, Agricultural wage employment, p. 208",
+  "framework_says": "Binding minimum wages, set too high relative to the earnings distribution, depress formal employment of unskilled and young workers and push them into informality, with rural and agricultural labor particularly affected, as in Nicaragua.",
+  "framework_refs": [
+   "Valdés and Foster 2006, Making the Labor Market a Way Out of Rural Poverty. Rural and Agricultural Labor Markets in Latin America and the Caribbean",
+   "Ureta 2002, Rural Labor Markets in Nicaragua"
+  ]
+ },
+ {
+  "lever_id": "LV-159",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 4, Transitional support, p. 112-113",
+  "framework_says": "Rapid liberalization of a protected sector can cause short-term unemployment and hardship for the poor, so transitional support for vulnerable groups is imperative, covering income support and help moving to competitive activities, with any safeguards rule-based and temporary.",
+  "framework_refs": [
+   "Winters 2006, International Trade and Poverty: Cause or Cure?",
+   "FAO 2006b, State of Agricultural Commodity Markets",
+   "Foster and Valdés 2005, The Merits of a Special Safeguard: Price Floor Mechanism under Doha for Developing Countries"
+  ]
+ },
+ {
+  "lever_id": "LV-160",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "Nearest related: WDR 2008, chapter 9, Schooling, training, and transition to the labor market, Rural labor market outcomes can be improved by active labor market programs, p. 218",
+  "framework_says": "Not discussed in WDR 2008: Agriculture for Development",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-161",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 3, Providing Financial Access to Households and Microentrepreneurs (payments and remittances), and box 3.7, p. 129-131",
+  "framework_says": "Formal remittances are costly because of weak bank competition and financial underdevelopment, which drives senders to informal channels; lower costs raise remittance volumes, and channeling remittances through banks can give recipients access to savings and credit.",
+  "framework_refs": [
+   "Yang 2007, International Migration, Remittances, and Household Investment: Evidence from Philippine Migrants' Exchange Rate Shocks",
+   "Gibson, McKenzie, and Rohorua 2006, How Cost-Elastic Are Remittances? Estimates from Tongan Migrants in New Zealand",
+   "Hernández-Coss 2005, The U.S.-Mexico Remittance Corridor: Lessons on Shifting from Informal to Formal Remittance Systems"
+  ]
+ },
+ {
+  "lever_id": "LV-162",
+  "framework_source": "Inclusive Growth Analytics (Ianchovichina and Lundstrom 2009)",
+  "framework_where": "Inclusive Growth Analytics, section 4.3.3.4 Human capital, p. 29",
+  "framework_says": "Brain drain can sharply harm growth where human capital is scarce, but Zambia's emigration rates are low, about 10 percent at tertiary level, so skilled emigration is not treated as a binding constraint; no retention or return policies are proposed.",
+  "framework_refs": [
+   "Mattoo and Payton 2007, Services Trade and Development: The Experience of Zambia"
+  ]
+ },
+ {
+  "lever_id": "LV-163",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "Nearest related: WDR 2008, chapter 9, Labor supply: migration and the urban economy, p. 214-216",
+  "framework_says": "Not discussed in WDR 2008: Agriculture for Development",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-164",
+  "framework_source": "Inclusive Growth Analytics (Ianchovichina and Lundstrom 2009)",
+  "framework_where": "Inclusive Growth Analytics, section 4.3.4.2 Is the tax code a binding constraint to inclusive growth?, p. 31",
+  "framework_says": "Zambia's tax system disadvantages small enterprises and discourages formality, for example through a very high VAT registration threshold, and distorts competition by letting well-resourced firms negotiate special deals; competition law itself is not discussed.",
+  "framework_refs": [
+   "Mattoo and Payton 2007, Services Trade and Development: The Experience of Zambia"
+  ]
+ },
+ {
+  "lever_id": "LV-165",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 4, Government Interventions in the Market, p. 163-166",
+  "framework_says": "Government-owned banks have a poor record in broadening access and tend to lend to cronies, especially around elections, which explains why many countries sold them; state savings and payment services and some development finance institutions have a better record.",
+  "framework_refs": [
+   "Cole 2004, Fixing Market Failures or Fixing Elections? Agricultural Credit in India",
+   "Dinç 2005, Politicians and Banks: Political Influences on Government-Owned Banks in Emerging Countries",
+   "Khwaja and Mian 2005, Do Lenders Favor Politically Connected Firms? Rent Provision in an Emerging Financial Market"
+  ]
+ },
+ {
+  "lever_id": "LV-166",
+  "framework_source": "Finance for All? (World Bank 2008)",
+  "framework_where": "Finance for All?, chapter 4, Expanding Access: Importance of Long-Term Institution Building, p. 147-149",
+  "framework_says": "Government is the natural provider of efficient, speedy and fair courts and clear contract law; adaptable legal systems that keep contract enforcement in step with financial innovation ease firms' access, though property-rights protection from the state matters most.",
+  "framework_refs": [
+   "La Porta and others 1997, Legal Determinants of External Finance",
+   "Beck, Demirgüç-Kunt, and Levine 2005, Law and Firms' Access to Finance",
+   "Acemoglu and Johnson 2005, Unbundling Institutions"
+  ]
+ },
+ {
+  "lever_id": "LV-167",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 6, Land policies for secure rights and reallocating resources, Enhancing tenure security and box 6.1, p. 139-140",
+  "framework_says": "Security against eviction encourages land investment; individual titling can miss communal, secondary and women's rights and enable elite land grabs, so it should be complemented by legal recognition of customary tenure and low-cost community-driven certification, as in Ethiopia.",
+  "framework_refs": [
+   "Alden-Wily 2003, Governance and Land Relations. A Review of Decentralization of Land Administration and Management in Africa",
+   "Deininger, Ayalew, and Yamano 2006, Legal Knowledge and Economic Development: The Case of Land Rights in Uganda",
+   "Deininger and others 2007, Rural Land Certification in Ethiopia: Process, Initial Impact, and Implications for Other African Countries"
+  ]
+ },
+ {
+  "lever_id": "LV-168",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 6, Land policies for secure rights and reallocating resources, Modernizing land administration, Enabling land rental markets and Strengthening land sales markets, boxes 6.2 and 6.3, p. 141-142",
+  "framework_says": "Land administration is often corrupt, and computerized, financially self-sustaining registries cut costs, as in Georgia; tenure insecurity and rental restrictions stifle productive rentals, which should be facilitated, while restricting land sales is rarely justified.",
+  "framework_refs": [
+   "Dabrundashvili 2006, Rights Registration System Reform in Georgia",
+   "Swinnen and Vranken 2006, Patterns of Land Market Development in Transition",
+   "Deininger and Jin 2003, Land Sales and Rental Markets in Transition: Evidence from Rural Vietnam"
+  ]
+ },
+ {
+  "lever_id": "LV-169",
+  "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
+  "framework_where": "WDR 2008, chapter 6, Land policies for secure rights and reallocating resources, Making land reform more effective, p. 142-143",
+  "framework_says": "Where landownership is highly unequal, redistribution such as land reform is needed and worked in Japan, Korea and Taiwan, but often failed; beneficiaries need complementary support, and land taxes can curb speculation and fund local government.",
+  "framework_refs": [
+   "Banerjee and Iyer 2005, History, Institutions, and Economic Performance: The Legacy of Colonial Land Tenure Systems in India",
+   "Banerjee, Gertler, and Ghatak 2002, Empowerment and Efficiency: Tenancy Reform in West Bengal",
+   "Bird and Slack 2004, International Handbook of Land and Property Taxation"
+  ]
+ },
+ {
+  "lever_id": "LV-170",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-171",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-172",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-173",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-174",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-175",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-176",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-177",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-178",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-179",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-180",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-181",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-182",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-183",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-184",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-185",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-186",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-187",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-188",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-189",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-190",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-191",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-192",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-193",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-194",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-195",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-196",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-197",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-198",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-199",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-200",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-201",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-202",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-203",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-204",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-205",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-206",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-207",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-208",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-209",
+  "framework_source": "",
+  "framework_where": "",
+  "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-210",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 8 Citizens as agents of change, section Bringing change through the ballot box, p. 226",
+  "framework_says": "Elections can improve services by selecting and sanctioning leaders on performance, but manipulation, fraud and vote buying undermine them. Credible information, such as publicized audits, helps voters punish corrupt incumbents, and easier voting can enfranchise poor voters.",
+  "framework_refs": [
+   "Ferraz and Finan 2008, Exposing Corrupt Politicians: The Effect of Brazil's Publicly Released Audits on Electoral Outcomes",
+   "Fujiwara 2015, Voting Technology, Political Responsiveness, and Infant Health: Evidence from Brazil",
+   "Khemani and others 2016, Making Politics Work for Development: Harnessing Transparency and Citizen Engagement"
+  ]
+ },
+ {
+  "lever_id": "LV-211",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 8 Citizens as agents of change, section Bringing change through political organization: The role of political parties, p. 230",
+  "framework_says": "Programmatic parties that keep credible policy commitments deliver better public services than clientelist ones. Public funding rules for parties aim to level the playing field, but dominant-party systems are less likely to adopt them.",
+  "framework_refs": [
+   "Kitschelt and Wilkinson 2007, Citizen-Politician Linkages: An Introduction",
+   "Keefer 2011, Collective Action, Political Parties and Pro-development Public Policy",
+   "Van Biezen and Kopecky 2007, The State and the Parties: Public Funding, Public Regulation, and Rent-Seeking in Contemporary Democracies"
+  ]
+ },
+ {
+  "lever_id": "LV-212",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Spotlight 12 The media, p. 252",
+  "framework_says": "Independent media act as watchdogs that publicize reliable information, raise the cost of rent-seeking and make governments more responsive. Media competition, independence from government ownership, advertising revenue and donor support can counter media capture by elites.",
+  "framework_refs": [
+   "Reinikka and Svensson 2005, Fighting Corruption to Improve Schooling: Evidence from a Newspaper Campaign in Uganda",
+   "Petrova 2011, Newspapers and Parties: How Advertising Revenue Created an Independent Press",
+   "Tripp 2012, Donor Assistance and Political Reform in Tanzania"
+  ]
+ },
+ {
+  "lever_id": "LV-213",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Spotlight 12 The media, section Changing contestability: The political economy of media capture and competition, p. 254",
+  "framework_says": "Not discussed in World Development Report 2017: Governance and the Law",
+  "framework_refs": []
+ },
+ {
+  "lever_id": "LV-214",
+  "framework_source": "Fox 2015: Social Accountability: What Does the Evidence Really Say?",
+  "framework_where": "Fox 2015, Section 3 Rereading the SAcc Evaluation Evidence, cases 1 and 2 (Uganda spending information campaign; participatory budgeting in Brazil), p. 21",
+  "framework_says": "Publicly disseminating school funding data in Uganda sharply cut diversion of grants. Brazilian municipalities with participatory budgeting shifted spending to sanitation and health and reduced infant mortality, with frequent citizen checks on promised government actions.",
+  "framework_refs": [
+   "Reinikka and Svensson 2004, The Power of Information: Evidence from a Newspaper Campaign to Reduce Capture",
+   "Gonçalves 2014, The Effects of Participatory Budgeting on Municipal Expenditures and Infant Mortality in Brazil",
+   "Touchton and Wampler 2014, Improving Social Well-Being Through New Democratic Institutions"
+  ]
+ },
+ {
+  "lever_id": "LV-215",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 7 Elite bargaining and adaptation, section When binding rules for accountability serve as political insurance, subsection Horizontal accountability as political insurance, p. 207",
+  "framework_says": "Competitive systems facing political uncertainty are more likely to adopt independent judiciaries and judicial review as insurance for likely electoral losers. Such binding rules stay credible only while competition continues; when power imbalances grow, rules may fail to bind.",
+  "framework_refs": [
+   "Finkel 2004, Judicial Reform in Argentina in the 1990s: How Electoral Incentives Shape Institutional Change",
+   "Ginsburg 2003, Judicial Review in New Democracies: Constitutional Courts in Asian Cases",
+   "Ginsburg and Versteeg 2014, Why Do Countries Adopt Constitutional Review?"
+  ]
+ },
+ {
+  "lever_id": "LV-216",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 5 Governance for growth, section How the design of public agencies mediates the influence of powerful groups, subsection Accountability through horizontal checks and balances, p. 148",
+  "framework_says": "Horizontal checks, including legislative bodies, reduce opportunistic behavior by state actors; even in authoritarian regimes legislatures raise the cost of expropriation. Formal checks are weak in low- and middle-income countries and strengthening them is a long-term project.",
+  "framework_refs": [
+   "Wright 2008, Do Authoritarian Institutions Constrain? How Legislatures Affect Economic Growth and Investment",
+   "Jensen and others 2012, Politics and Foreign Direct Investment"
+  ]
+ },
+ {
+  "lever_id": "LV-217",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Spotlight 1 Corruption, section What can be done?, p. 78",
+  "framework_says": "Transplanted top-down anticorruption strategies deliver modest results where power does not support rule enforcement. Reform coalitions should target feasible, high-impact points, increase elite accountability, and engage civil society and media.",
+  "framework_refs": [
+   "Mungiu-Pippidi 2015, The Quest for Good Governance: How Societies Develop Control of Corruption",
+   "Khan 2016, Background note on corruption, WDR 2017",
+   "Rose-Ackerman 2016, Corruption and Government"
+  ]
+ },
+ {
+  "lever_id": "LV-218",
+  "framework_source": "DLP 2018: Inside the Black Box of Political Will",
+  "framework_where": "DLP 2018, Section 3.2 Effective coalitions, p. 14",
+  "framework_says": "Individual leaders rarely achieve sustained change alone; challenging institutions requires formal or informal coalitions. Coalition formation is a political process of negotiation, bargaining and trust-building that must overcome collective action problems, aided by shared values, traded assurances and pre-existing networks.",
+  "framework_refs": [
+   "Lyne de Ver 2009, Conceptions of Leadership",
+   "Leftwich and Hogg 2007, The case for leadership and the primacy of politics in building effective states, institutions and governance for sustainable growth and social development",
+   "Booth 2012, Development as a collective action problem: Addressing the real challenges of African governance"
+  ]
+ },
+ {
+  "lever_id": "LV-219",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 5 Governance for growth, Box 5.2 Participatory mechanisms in policy design: The Bulldozer Initiative in Bosnia and Herzegovina, p. 152",
+  "framework_says": "Public-private dialogues can serve as an intermediate design for vertical accountability without strong advocacy groups. Bosnia and Herzegovina's Bulldozer Initiative mobilized business communities to propose and monitor reforms while limiting narrow interest groups' influence.",
+  "framework_refs": [
+   "Herzberg 2007, Monitoring and Evaluation during the Bulldozer Initiative: 50 Investment Climate Reforms in 150 Days"
+  ]
+ },
+ {
+  "lever_id": "LV-220",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 3 The role of law, section Ordering contestation: The role of law in change, p. 95",
+  "framework_says": "International labor standards and transnational advocacy helped workers unionize and gave governments a commitment device. Legal standards were converted into collective bargaining arrangements and a tripartite labor arbitration council that made the bargaining arena more contestable.",
+  "framework_refs": [
+   "Adler and Woolcock 2009, Justice without the Rule of Law? The Challenge of Rights-Based Industrial Relations in Contemporary Cambodia",
+   "Rodríguez Garavito 2005, Global Governance and Labor Rights: Codes of Conduct and Anti-Sweatshop Struggles in Global Apparel Factories in Mexico and Guatemala"
+  ]
+ },
+ {
+  "lever_id": "LV-221",
+  "framework_source": "Fox 2015: Social Accountability: What Does the Evidence Really Say?",
+  "framework_where": "Fox 2015, Section 3 Rereading the SAcc Evaluation Evidence, case 3 (Uganda community-based health clinic monitoring plus deliberative local compact), p. 22",
+  "framework_says": "Uganda's community monitoring of health clinics, with interface meetings and negotiated community contracts, cut infant mortality by a third. Not all report cards are the same: impact depended on provider focus, information and elected oversight.",
+  "framework_refs": [
+   "Björkman and Svensson 2009, Power to the People: Evidence from a Randomized Field Experiment on Community-Based Monitoring in Uganda",
+   "Björkman Nyqvist, de Walque and Svensson 2014, Information is Power: Experimental Evidence of the Long Run Impact of Community Based Monitoring",
+   "Banerjee et al. 2010, The Pitfalls of Participatory Programs: Evidence from a Randomized Evaluation in Education in India"
+  ]
+ },
+ {
+  "lever_id": "LV-222",
+  "framework_source": "World Development Report 2004: Making Services Work for Poor People",
+  "framework_where": "World Development Report 2004, Spotlight on the Kecamatan Development Program, p. 92",
+  "framework_says": "Indonesia's KDP gives subdistrict block grants that villages allocate to small public works or economic activities, built on simplicity, participation, self-reliance, transparency and trust. It scaled to 15,000 villages, though elite capture and targeting the poorest remain concerns.",
+  "framework_refs": [
+   "Evers 2003, Village Governments and Their Communities",
+   "Wetterberg and Guggenheim forthcoming, Capitalizing on Local Capacity: Institutional Change in the Kecamatan Development Program"
+  ]
+ },
+ {
+  "lever_id": "LV-223",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 8 Citizens as agents of change, section Bringing change through social organization, p. 234",
+  "framework_says": "Social organizations can change elite incentives, reshape preferences and enhance contestability, often by forming coalitions with reforming elites. Laws enabling autonomous civil society widened civic space, but many governments now restrict NGO financing and associational rights.",
+  "framework_refs": [
+   "Carothers and Brechenmacher 2014, Closing Space: Democracy and Human Rights Support under Fire",
+   "Fox 2015, Social Accountability: What Does the Evidence Really Say?",
+   "Bari, Chand, and Singh 2015, Empowerment through Information: The Evolution of Transparency Regimes in South Asia"
+  ]
+ },
+ {
+  "lever_id": "LV-224",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 7 Elite bargaining and adaptation, section Common ground: Reducing polarization by maximizing shared elite interests, p. 209",
+  "framework_says": "Polarization of elite preferences raises the cost of losing power and the risk of violence. Polarization can fall through common threats, shared ideology and shared schooling, though education can also increase polarization.",
+  "framework_refs": [
+   "Slater 2010, Ordering Power: Contentious Politics and Authoritarian Leviathans in Southeast Asia",
+   "Kremer and Sarychev 2000, Why Do Governments Operate Schools?",
+   "Phillips 2013, Political Settlements and State Formation: The Case of Somaliland"
+  ]
+ },
+ {
+  "lever_id": "LV-225",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 7 Elite bargaining and adaptation, section Effective leadership: Shaping elite preferences and incentives, p. 211",
+  "framework_says": "Transformational leaders' ideological nation-building can create stability and an identity that fosters trust, cooperation and ethnically neutral policies. Tanzania's ujamaa, mass education and Swahili, and Indonesia's Pancasila helped overcome cleavages.",
+  "framework_refs": [
+   "Gellner 1983, Nations and Nationalism",
+   "Fukuyama 2014, Political Order and Political Decay: From the Industrial Revolution to the Globalization of Democracy"
+  ]
+ },
+ {
+  "lever_id": "LV-226",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 4 Governance for security, section Restitution and compensation also reduce incentives to engage in violence, p. 122",
+  "framework_says": "Institutions that recognize and redress grievances, such as truth and reconciliation commissions, victim compensation and symbolic measures restoring dignity, reduce incentives for violence by righting past wrongs and may help avoid repeated conflict.",
+  "framework_refs": [
+   "Walter 2015, Why Bad Governance Leads to Repeat Civil War",
+   "Brownlee, Masoud, and Reynolds 2013, Why the Modest Harvest?"
+  ]
+ },
+ {
+  "lever_id": "LV-227",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 4 Governance for security, section Redistribution can buy peace by co-opting elites, p. 120",
+  "framework_says": "Governments use public employment and transfers to keep potentially violent groups loyal, as in Timor-Leste's post-2006 hiring and transfers to veterans. This can solve the first-order problem of violence but harms budgets, efficiency and integrity.",
+  "framework_refs": [
+   "Srivastava and Blum 2016, Civil Service Reform in Fragile Contexts",
+   "Brownlee, Masoud, and Reynolds 2013, Why the Modest Harvest?",
+   "North and others 2013, In the Shadow of Violence: Politics, Economics, and the Problems of Development"
+  ]
+ },
+ {
+  "lever_id": "LV-228",
+  "framework_source": "World Development Report 2017: Governance and the Law",
+  "framework_where": "World Development Report 2017, Chapter 4 Governance for security, section Redistribution can reduce violence by increasing trust in government and interpersonal trust, p. 121",
+  "framework_says": "Sustained social spending signals commitment to the social contract and, with demonstrated delivery, can increase trust in government and reduce violence. Spending on public services helped reduce insurgent violence in Afghanistan and India.",
+  "framework_refs": [
+   "Acemoglu and Robinson 2006, Economic Origins of Dictatorship and Democracy",
+   "Justino and Martorano 2016, Welfare Spending and Political Conflict",
+   "Beath, Christia, and Enikolopov 2012, Winning Hearts and Minds through Development: Evidence from a Field Experiment in Afghanistan"
+  ]
+ },
+ {
+  "lever_id": "LV-229",
+  "framework_source": "DLP 2018: Inside the Black Box of Political Will",
+  "framework_where": "DLP 2018, Section 3.2 Effective coalitions, Box 7 Higher education and development leadership: The case of Ghana, p. 14",
+  "framework_says": "In Ghana, boarding schools and universities brought young people from different ethnic and social backgrounds to study and live together, forming shared values and networks that later underpinned reform coalitions and a unified national identity.",
+  "framework_refs": [
+   "Jones, Jones and Ndaruhutse 2014, Higher Education and Developmental Leadership: The Case of Ghana"
+  ]
+ }
+]
