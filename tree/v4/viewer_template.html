@@ -1,0 +1,867 @@
+<title>The Mother Tree v4</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a radial canopy (economy left, people middle, governance right) with storm clouds above and a reading panel beside; full outline below. */
+:root {
+  --bg: #edf1eb; --surface: #f8faf6; --ink: #1c2a21; --muted: #5a685f; --line: #cdd6cb;
+  --people: #3d7a4c; --economy: #9b5a2c; --gov: #366b7a;
+  --gold: #b88a12; --gold-soft: #f3e6bf; --storm: #4b5079; --storm-soft: #dfe1ee; --bark: #6a5140;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111914; --surface: #18221c; --ink: #e2e9de; --muted: #98a69c; --line: #2c3a31;
+  --people: #72b884; --economy: #d38c56; --gov: #6eaabb;
+  --gold: #e2b84a; --gold-soft: #3a3016; --storm: #a7acdc; --storm-soft: #262a40; --bark: #8b705c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #111914; --surface: #18221c; --ink: #e2e9de; --muted: #98a69c; --line: #2c3a31;
+  --people: #72b884; --economy: #d38c56; --gov: #6eaabb;
+  --gold: #e2b84a; --gold-soft: #3a3016; --storm: #a7acdc; --storm-soft: #262a40; --bark: #8b705c; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 14px/1.5 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px }
+.wrap { max-width: 1440px; margin: 0 auto; display: grid; gap: 18px }
+h1, h2, h3 { font-family: var(--display); font-weight: 650; text-wrap: balance; margin: 0 }
+h1 { font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.01em }
+h2 { font-size: 21px }
+h3 { font-size: 17px; font-weight: 500 }
+.eyebrow { font: 500 11px/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted) }
+header { display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: end; justify-content: space-between }
+header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
+.counts { display: flex; gap: 22px; font-variant-numeric: tabular-nums }
+.counts div { display: grid }
+.counts b { font: 650 24px/1 var(--display) }
+.counts span { font-size: 12px; color: var(--muted) }
+
+/* storms */
+.storms { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.storms .eyebrow { margin-right: 4px }
+.cloud { font: 500 12.5px var(--body); color: var(--storm); background: var(--storm-soft); border: 1px solid transparent;
+  border-radius: 999px; padding: 5px 12px 5px 10px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center }
+.cloud svg { width: 16px; height: 12px; fill: currentColor }
+.cloud[aria-pressed="true"] { background: var(--storm); color: var(--surface) }
+.cloud:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px }
+.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+#q { font: 14px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; width: min(320px, 100%) }
+.clear { font: 500 12px var(--body); background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer }
+
+/* main */
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; align-items: start }
+@media (max-width: 980px) { .main { grid-template-columns: minmax(0, 1fr) } }
+.canvas { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
+.canvas svg { display: block; width: 100%; min-width: 820px; height: auto }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 14px; min-width: 0;
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto }
+@media (max-width: 980px) { .panel { position: static; max-height: none } }
+.panel p { margin: 0 }
+.crumb { font: 12px var(--mono); color: var(--muted) }
+.crumb a { color: inherit; cursor: pointer; text-decoration: underline dotted }
+.def { color: var(--ink) }
+.muted { color: var(--muted) }
+.chips { display: flex; flex-wrap: wrap; gap: 5px }
+.chip { font: 12px var(--body); border-radius: 4px; padding: 1px 7px; background: var(--bg); border: 1px solid var(--line); color: var(--muted) }
+.chip.risk { background: var(--storm-soft); color: var(--storm); border-color: transparent }
+.chip.risk.cond { background: transparent; border: 1px dashed var(--storm) }
+.chip.sdg { font-family: var(--mono); font-size: 11px }
+.sect { display: grid; gap: 6px }
+.list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none }
+.list a { cursor: pointer; color: var(--ink); text-decoration: none; display: flex; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--line) }
+.list a:hover { color: var(--gold) }
+.list .n { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px }
+.fruit { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); flex: none; margin-top: 6px }
+.pw { border-bottom: 1px solid var(--line) }
+.pw summary { cursor: pointer; display: flex; gap: 8px; padding: 6px 0; list-style: none }
+.pw summary::-webkit-details-marker { display: none }
+.pw .id { font: 11px var(--mono); color: var(--muted); margin-left: auto; white-space: nowrap; padding-top: 2px }
+.pw .body { padding: 0 0 10px 17px; display: grid; gap: 6px; font-size: 13px }
+.chain { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px }
+.chain dt { font: 11px var(--mono); color: var(--muted); padding-top: 2px }
+.chain dd { margin: 0 }
+.tag { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px; padding: 0 4px; margin-left: 4px }
+.legend { display: grid; gap: 6px; font-size: 13px }
+.legend div { display: flex; gap: 8px; align-items: center }
+.sw { width: 14px; height: 9px; border-radius: 50%; flex: none }
+
+/* svg */
+.br { fill: none; stroke-linecap: round }
+.leaf { cursor: pointer; transition: opacity .2s }
+.leaf ellipse { stroke-width: 1.2 }
+.leaf text, .lbl { font: 11.5px var(--body); fill: var(--ink) }
+.leaf:hover text { fill: var(--gold) }
+.node { cursor: pointer }
+.splbl { font: 600 11px var(--mono); letter-spacing: 0.06em; fill: var(--muted); paint-order: stroke; stroke: var(--surface); stroke-width: 4px }
+.leaf:focus, .node:focus { outline: none }
+.leaf:focus-visible ellipse, .node:focus-visible circle { stroke: var(--gold); stroke-width: 3 }
+.plbl, .plsub { paint-order: stroke; stroke: var(--surface); stroke-width: 6px; stroke-linejoin: round }
+.plbl { font: 650 20px var(--display) }
+.plsub { font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; fill: var(--muted) }
+.dim { opacity: 0.16 }
+.sel ellipse { stroke: var(--gold) !important; stroke-width: 3 }
+.sel text { fill: var(--gold); font-weight: 600 }
+.rain line { stroke: var(--storm); stroke-width: 1.3; stroke-linecap: round }
+.rain.cond line { stroke-dasharray: 2 3 }
+
+/* outline */
+.outline { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px }
+.outline > p { margin: 0; color: var(--muted); max-width: 70ch }
+.ol-pillar { display: grid; gap: 4px }
+.ol-pillar > h3 { padding-top: 10px }
+.outline details { margin-left: 14px }
+.outline details > summary { cursor: pointer; padding: 3px 0 }
+.outline .famrow { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
+.ol-pws { margin: 2px 0 8px 30px; padding: 0; list-style: none; color: var(--muted); font-size: 13px }
+.ol-pws li { display: flex; gap: 8px }
+.ol-pws .fruit { width: 7px; height: 7px; margin-top: 7px }
+footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
+
+/* country */
+.ctry { display: grid; gap: 12px }
+.modes { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; padding: 3px; background: var(--surface); width: max-content; max-width: 100% }
+.mode { font: 500 13.5px var(--body); color: var(--muted); background: none; border: 0; border-radius: 6px; padding: 6px 14px; cursor: pointer }
+.mode[aria-selected="true"] { background: var(--ink); color: var(--surface) }
+.tl { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; gap: 8px }
+.tl-head { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center }
+.tl-btns { display: flex; gap: 12px }
+.tl-scroll { overflow-x: auto }
+#tlsvg { display: block; width: 100%; min-width: 640px; height: auto }
+.tlbar { cursor: pointer }
+.tlbar rect.bar { fill: var(--line) }
+.tlbar.on rect.bar { fill: var(--gold) }
+.tlbar text { font: 12px var(--body); fill: var(--ink) }
+.tlbar .n { font: 11px var(--mono); fill: var(--muted) }
+.tlbar:hover rect.bar { fill: var(--gold-soft) }
+.tlbar.on:hover rect.bar { fill: var(--gold) }
+.tlbar:focus { outline: none }
+.tlbar:focus-visible rect.bar { stroke: var(--gold); stroke-width: 2 }
+.tlax { font: 11px var(--mono); fill: var(--muted) }
+.tlgrid { stroke: var(--line); stroke-width: 1 }
+.fr { fill: var(--gold); stroke: var(--surface); stroke-width: 1.2 }
+.pbars { display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) 2.5rem; gap: 3px 8px; align-items: center; font-size: 12.5px }
+.pbars .lab { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--muted) }
+.pbars .trk { height: 9px; background: var(--bg); border-radius: 2px; overflow: hidden; display: flex }
+.pbars .trk i { display: block; height: 100% }
+.pbars .num { text-align: right; font: 11.5px var(--mono); font-variant-numeric: tabular-nums }
+.strat { display: grid; gap: 1px; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13px }
+.strat .meta { font: 11px var(--mono); color: var(--muted) }
+.strat .meta b { color: var(--gold); font-weight: 500 }
+.lvls { display: grid; gap: 4px }
+.lvls div { display: flex; gap: 8px; align-items: center; font-size: 13px }
+.lvls .num { margin-left: auto; font: 12px var(--mono); font-variant-numeric: tabular-nums }
+.ct-scroll { overflow-x: auto }
+#ct { border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums }
+#ct th, #ct td { padding: 3px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
+#ct th:first-child, #ct td:first-child { text-align: left; white-space: normal; min-width: 15rem; max-width: 22rem; position: sticky; left: 0; background: var(--surface) }
+#ct thead th { font: 500 11px var(--mono); color: var(--muted); vertical-align: bottom }
+#ct thead th.on { color: var(--gold) }
+#ct tr.sp td { font: 600 11px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); padding-top: 12px }
+#ct td.fam { cursor: pointer }
+#ct td.fam:hover { color: var(--gold) }
+#ct tr.tot td { font: 12px var(--mono) }
+#ct tr.tot td.g { color: var(--gold) }
+@media (prefers-reduced-motion: reduce) { .leaf { transition: none } }
+
+/* v4: levers */
+.banner { background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 10px; padding: 10px 16px; font-size: 13.5px; display: grid; gap: 2px }
+.banner b { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink) }
+.bud { cursor: pointer }
+.bud circle { stroke-width: 1 }
+.bud:hover circle { stroke: var(--gold); stroke-width: 2 }
+.bud:focus { outline: none }
+.bud:focus-visible circle { stroke: var(--gold); stroke-width: 2.5 }
+.bud.on circle { stroke: var(--gold); stroke-width: 2.5 }
+.budpw { fill: var(--gold) }
+.lv { border-bottom: 1px solid var(--line) }
+.lv > summary { cursor: pointer; display: flex; gap: 8px; padding: 6px 0; list-style: none; align-items: baseline }
+.lv > summary::-webkit-details-marker { display: none }
+.lv > summary::before { content: "▸"; color: var(--muted); font-size: 11px; width: 9px; flex: none }
+.lv[open] > summary::before { content: "▾" }
+.lv .id { font: 11px var(--mono); color: var(--muted); margin-left: auto; white-space: nowrap }
+.lv .cnt { font: 11.5px var(--mono); color: var(--gold); white-space: nowrap }
+.lv .body { padding: 0 0 10px 17px; display: grid; gap: 6px; font-size: 13px }
+.lv .open { font: 500 12px var(--body); color: var(--muted); text-decoration: underline; cursor: pointer; justify-self: start }
+.thru { color: var(--muted); font-size: 12.5px }
+.thru i { font-style: normal; color: var(--ink) }
+.jl { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 2px }
+.ol-lvs { margin: 2px 0 8px 30px; padding: 0; list-style: none; font-size: 13px; display: grid; gap: 4px }
+.ol-lvs li { display: grid; grid-template-columns: 9px minmax(0, 1fr); gap: 0 8px }
+.ol-lvs .dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; border: 1.5px solid currentColor }
+.ol-lvs .lvname { cursor: pointer }
+.ol-lvs .lvname:hover { color: var(--gold) }
+.ol-lvs .thru { grid-column: 2 }
+#ct tr.frow td { font-weight: 600 }
+#ct tr.frow td:first-child::before { content: "▸ "; color: var(--muted); font-weight: 400 }
+#ct tr.frow.open td:first-child::before { content: "▾ " }
+#ct tr.lvrow td:first-child { padding-left: 26px; color: var(--ink) }
+#ct tr.lvrow td { font-size: 12px }
+#ct tr.lvrow td.lvc { cursor: pointer }
+#ct tr.lvrow td.lvc:hover { color: var(--gold) }
+#ct td.all { font: 12px var(--mono) }
+#ct td.pws { font: 12px var(--mono); color: var(--gold) }
+.ct-tools { display: flex; gap: 14px; flex-wrap: wrap }
+</style>
+
+<div class="wrap">
+  <div class="banner" id="banner" hidden></div>
+  <header>
+    <div>
+      <div class="eyebrow">PV II · Golden Strategy Tree</div>
+      <h1>The Mother Tree, version 4</h1>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families; the buds along each twig are the levers, what a government does, where every strategy is placed. The pathways under a lever are the literature it works through.</p>
+    </div>
+    <div class="counts" id="counts"></div>
+  </header>
+
+  <div class="storms" id="storms" aria-label="Risks"><span class="eyebrow">Storms</span></div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search families, levers and pathways" aria-label="Search families, levers and pathways">
+    <button class="clear" id="clear" type="button">Clear selection</button>
+  </div>
+
+  <section class="ctry" id="ctry" hidden>
+    <div class="modes" role="tablist" aria-label="View">
+      <button type="button" class="mode" id="m-tree" role="tab" aria-selected="true">Mother tree</button>
+      <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false"></button>
+    </div>
+    <div class="tl" id="tl" hidden>
+      <div class="tl-head"><span class="eyebrow">Plans by period: pick one to see its tree</span>
+        <span class="tl-btns"><button type="button" class="clear" id="tl-all">All plans</button><button type="button" class="clear" id="tl-nat">National plans only</button></span></div>
+      <div class="tl-scroll"><svg id="tlsvg" role="img" aria-label="Plans on a timeline"></svg></div>
+      <p class="muted" id="tl-note" style="margin:0;font-size:12.5px"></p>
+    </div>
+  </section>
+
+  <div class="main">
+    <div class="canvas"><svg id="tree" viewBox="0 0 1400 1030" role="img" aria-label="Mother tree v4 canopy"></svg></div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <section class="outline" id="ctable" hidden>
+    <h2 id="ct-h"></h2>
+    <p>Each column is one plan, oldest first; national plans, then the long-term strategy, then sector plans. A family row is the share of that plan's strategies placed on the family or one of its levers; open it to see its levers. <b>All</b> counts strategies across every plan and <span style="color:var(--gold)">with pathway</span> is the share of them on a lever with a pathway recorded. Hover a cell for counts.</p>
+    <div class="ct-tools"><button type="button" class="clear" id="ct-open">Show every lever</button><button type="button" class="clear" id="ct-close">Families only</button></div>
+    <div class="ct-scroll"><table id="ct"></table></div>
+  </section>
+
+  <section class="outline" id="outline">
+    <h2>The whole tree</h2>
+    <p>Every group, family and lever, in the order of the canopy, with the pathways each lever works through. Open a group to see its families; select a family or lever to read it in the panel.</p>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const D = /*TREE_DATA*/null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NS = "http://www.w3.org/2000/svg";
+
+// index
+const G = Object.fromEntries(D.groups.map(g => [g.group_id, g]));
+const F = Object.fromEntries(D.families.map(f => [f.family_id, f]));
+const V = Object.fromEntries(D.levers.map(v => [v.lever_id, v]));
+const P = Object.fromEntries(D.pathways.map(p => [p.pathway_id, p]));
+const SP = Object.fromEntries(D.subpillars.map(s => [s.code, s]));
+const PL = Object.fromEntries(D.pillars.map(p => [p.code, p]));
+const ORDER = [["SMG", ["EXP", "DOM", "GTI"]], ["PFA", ["TSE", "CAP", "FUT"]], ["MCH", ["ANT", "ADA", "AGI", "REF"]]];
+const PCOL = { SMG: "var(--economy)", PFA: "var(--people)", MCH: "var(--gov)" };
+const PROLE = { SMG: "economy", PFA: "people", MCH: "governance" };
+const HOLD = { SMG: "H-SEC", PFA: "H-SPE", MCH: "H-SGO" };
+const nLv = f => f.lever_ids.length;
+const famCol = fid => PCOL[SP[F[fid].subpillar_code].pillar];
+const pwOf = id => P[id] || P[D.merged[id]];
+
+document.getElementById("counts").innerHTML = [
+  [D.groups.length, "groups"], [D.families.length, "families"], [D.levers.length, "levers"], [D.pathways.length, "pathways"], [D.risks.length, "storms"]
+].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
+
+// ---------- layout ----------
+const CX = 700, CY = 700, R_P = 120, R_S = 210, R_G = 290, R_L = 392;
+const A0 = 197, A1 = -17;
+const slots = []; let u = 0;
+ORDER.forEach(([pc, sps], pi) => {
+  if (pi) u += 2.6;
+  sps.forEach((sc, si) => {
+    if (si) u += 1.3;
+    D.groups.filter(g => g.subpillar_code === sc).forEach((g, gi) => {
+      if (gi) u += 0.45;
+      g.family_ids.forEach(fid => { slots.push({ fid, u }); u += 1; });
+    });
+  });
+});
+const span = u - 1;
+const ang = {};
+slots.forEach(s => ang[s.fid] = A0 + (A1 - A0) * s.u / span);
+const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+const gAng = {}, sAng = {}, pAng = {};
+D.groups.forEach(g => gAng[g.group_id] = mean(g.family_ids.map(f => ang[f])));
+D.subpillars.forEach(s => sAng[s.code] = mean(D.groups.filter(g => g.subpillar_code === s.code).map(g => gAng[g.group_id])));
+ORDER.forEach(([pc, sps]) => pAng[pc] = mean(sps.map(s => sAng[s])));
+const rad = d => d * Math.PI / 180;
+const pol = (r, a) => [CX + r * Math.cos(rad(a)), CY - r * Math.sin(rad(a))];
+const lvOfSub = sc => D.families.filter(f => f.subpillar_code === sc).reduce((n, f) => n + nLv(f), 0);
+const lvOfGroup = g => g.family_ids.reduce((n, f) => n + nLv(F[f]), 0);
+
+const svg = $("#tree");
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  (parent || svg).appendChild(e); return e;
+}
+function geom(r0, a0, r1, a1) {
+  const p0 = r0 === 0 ? [CX, CY] : pol(r0, a0);
+  const p3 = pol(r1, a1);
+  const m = r0 + (r1 - r0) * 0.55;
+  const p1 = r0 === 0 ? [CX, CY - 70] : pol(m, a0);
+  const p2 = pol(m, a1);
+  return [p0, p1, p2, p3];
+}
+function branch(r0, a0, r1, a1, w, col, parent) {
+  const [p0, p1, p2, p3] = geom(r0, a0, r1, a1);
+  return el("path", { d: `M${p0} C${p1} ${p2} ${p3}`, class: "br", stroke: col, "stroke-width": w }, parent);
+}
+function bez(P4, t) {
+  const s = 1 - t, k = [s * s * s, 3 * s * s * t, 3 * s * t * t, t * t * t];
+  const d = [-3 * s * s, 3 * s * s - 6 * s * t, 6 * s * t - 3 * t * t, 3 * t * t];
+  const pt = [0, 1].map(j => P4.reduce((a, p, i) => a + k[i] * p[j], 0));
+  const tg = [0, 1].map(j => P4.reduce((a, p, i) => a + d[i] * p[j], 0));
+  const L = Math.hypot(tg[0], tg[1]) || 1;
+  return { x: pt[0], y: pt[1], nx: -tg[1] / L, ny: tg[0] / L };
+}
+
+// ground and trunk
+el("path", { d: `M${CX - 330},962 Q${CX},944 ${CX + 330},962`, fill: "none", stroke: "var(--line)", "stroke-width": 2 });
+el("path", { d: `M${CX - 34},962 C${CX - 18},880 ${CX - 14},780 ${CX - 8},${CY} L${CX + 8},${CY} C${CX + 14},780 ${CX + 18},880 ${CX + 34},962 Z`, fill: "var(--bark)" });
+[[-1, 70], [1, 70], [-1, 120], [1, 120]].forEach(([s, d]) => el("path", { d: `M${CX + s * 20},955 Q${CX + s * d * 0.6},968 ${CX + s * d},975`, fill: "none", stroke: "var(--bark)", "stroke-width": 3, "stroke-linecap": "round" }));
+
+const gBranches = el("g", {});
+const gNodes = el("g", {});
+const gLeaves = el("g", {});
+const gBuds = el("g", {});
+const gRain = el("g", {});
+const twig = {};
+
+ORDER.forEach(([pc, sps]) => {
+  const col = PCOL[pc];
+  const nl = sps.reduce((n, s) => n + lvOfSub(s), 0);
+  branch(0, 90, R_P, pAng[pc], 2 + Math.sqrt(nl) * 1.1, col, gBranches).setAttribute("stroke", "var(--bark)");
+  sps.forEach(sc => {
+    branch(R_P, pAng[pc], R_S, sAng[sc], 1.5 + Math.sqrt(lvOfSub(sc)) * 0.95, col, gBranches);
+    D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
+      branch(R_S, sAng[sc], R_G, gAng[g.group_id], 1 + Math.sqrt(lvOfGroup(g)) * 0.65, col, gBranches);
+      g.family_ids.forEach(fid => {
+        branch(R_G, gAng[g.group_id], R_L, ang[fid], 0.8 + Math.sqrt(nLv(F[fid])) * 0.42, col, gBranches);
+        twig[fid] = geom(R_G, gAng[g.group_id], R_L, ang[fid]);
+      });
+      const [gx, gy] = pol(R_G, gAng[g.group_id]);
+      const n = el("circle", { cx: gx, cy: gy, r: 4.5, fill: "var(--surface)", stroke: col, "stroke-width": 2, class: "node", tabindex: 0, "data-g": g.group_id }, gNodes);
+      el("title", {}, n).textContent = `${g.group}: ${g.family_ids.length} families, ${lvOfGroup(g)} levers`;
+      n.addEventListener("click", () => show({ g: g.group_id }));
+      n.addEventListener("keydown", e => { if (e.key === "Enter") show({ g: g.group_id }); });
+    });
+    const [sx, sy] = pol(R_S, sAng[sc]);
+    const sn = el("g", { class: "node", tabindex: 0 }, gNodes);
+    el("circle", { cx: sx, cy: sy, r: 7, fill: col }, sn);
+    const [lx, ly] = pol(R_S - 26, sAng[sc]);
+    const t = el("text", { x: lx, y: ly + 4, "text-anchor": "middle", class: "splbl" }, sn); t.textContent = sc;
+    el("title", {}, sn).textContent = SP[sc].name;
+    sn.addEventListener("click", () => show({ s: sc }));
+    sn.addEventListener("keydown", e => { if (e.key === "Enter") show({ s: sc }); });
+  });
+  const lxp = pc === "PFA" ? CX : pc === "SMG" ? CX - 310 : CX + 310;
+  const lyp = 1000;
+  const pg = el("g", { class: "node", tabindex: 0 }, gNodes);
+  const t1 = el("text", { x: lxp, y: lyp, "text-anchor": "middle", class: "plbl", fill: col }, pg); t1.textContent = PL[pc].name;
+  const t2 = el("text", { x: lxp, y: lyp + 18, "text-anchor": "middle", class: "plsub" }, pg); t2.textContent = PROLE[pc] + " · " + nl + " levers";
+  pg.addEventListener("click", () => show({ p: pc }));
+  pg.addEventListener("keydown", e => { if (e.key === "Enter") show({ p: pc }); });
+});
+
+// leaves (families)
+const leafEl = {};
+D.families.forEach(f => {
+  const a = ang[f.family_id], n = nLv(f);
+  const col = famCol(f.family_id);
+  const rx = 6 + Math.sqrt(n) * 3.1, ry = rx * 0.5;
+  const [x, y] = pol(R_L + rx, a);
+  const g = el("g", { class: "leaf", tabindex: 0, "data-f": f.family_id }, gLeaves);
+  const e = el("ellipse", { cx: x, cy: y, rx, ry, transform: `rotate(${-a} ${x} ${y})`, fill: col, "fill-opacity": 0.82, stroke: col }, g);
+  const flip = a > 90 || a < -90;
+  const [tx, ty] = pol(R_L + 2 * rx + 7, a);
+  const name = f.family.length > 44 ? f.family.slice(0, 42) + "…" : f.family;
+  const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
+  t.textContent = name;
+  el("title", {}, g).textContent = `${f.family} · ${n} levers`;
+  g.addEventListener("click", () => show({ f: f.family_id }));
+  g.addEventListener("keydown", e => { if (e.key === "Enter") show({ f: f.family_id }); });
+  leafEl[f.family_id] = { g, x, y, a, rx, rx0: rx, e, t, name, flip, n };
+});
+
+// buds (levers) along each family twig
+const budEl = {};
+function thruText(v) {
+  return v.pathway_ids.map(id => { const p = pwOf(id); return p ? `${p.pathway} (${p.evidence})` : id; }).join("; ");
+}
+D.families.forEach(f => {
+  const col = famCol(f.family_id), ids = f.lever_ids, n = ids.length;
+  ids.forEach((lid, k) => {
+    const v = V[lid];
+    const b = bez(twig[f.family_id], 0.5 + 0.42 * (k + 0.5) / n);
+    const off = n === 1 ? 0 : (k % 2 ? 3.4 : -3.4);
+    const g = el("g", { class: "bud", tabindex: 0, "data-v": lid }, gBuds);
+    const c = el("circle", { cx: b.x + b.nx * off, cy: b.y + b.ny * off, r: 2.4, fill: col, stroke: "var(--surface)" }, g);
+    el("title", {}, g).textContent = `${v.lever} (${lid})\nJoins when: ${v.joins_when}\nJoins not: ${v.joins_not}\nWorks through: ${thruText(v)}`;
+    g.addEventListener("click", ev => { ev.stopPropagation(); show({ v: lid }); });
+    g.addEventListener("keydown", e => { if (e.key === "Enter") show({ v: lid }); });
+    budEl[lid] = { g, c, col, x: b.x + b.nx * off, y: b.y + b.ny * off };
+  });
+});
+const gFruit = el("g", { "pointer-events": "none" });
+function sizeLeaf(L, rx, label, hollow) {
+  const [x, y] = pol(R_L + rx, L.a);
+  L.e.setAttribute("cx", x); L.e.setAttribute("cy", y); L.e.setAttribute("rx", rx); L.e.setAttribute("ry", rx * 0.5);
+  L.e.setAttribute("transform", `rotate(${-L.a} ${x} ${y})`);
+  L.e.setAttribute("fill-opacity", hollow ? 0 : 0.82);
+  L.e.setAttribute("stroke-dasharray", hollow ? "2 2" : "");
+  const [tx, ty] = pol(R_L + 2 * rx + 7, L.a);
+  L.t.setAttribute("x", tx); L.t.setAttribute("y", ty);
+  L.t.setAttribute("transform", `rotate(${L.flip ? 180 - L.a : -L.a} ${tx} ${ty})`);
+  L.t.textContent = label;
+  L.t.style.opacity = hollow ? 0.45 : 1;
+  L.rx = rx; L.x = x; L.y = y;
+}
+function sizeBud(B, r, fill, hollow) {
+  B.c.setAttribute("r", r);
+  B.c.setAttribute("fill", fill);
+  B.c.setAttribute("fill-opacity", hollow ? 0 : 0.9);
+  B.c.setAttribute("stroke", hollow ? B.col : "var(--surface)");
+  B.c.setAttribute("stroke-dasharray", hollow ? "1.5 1.5" : "");
+}
+
+// ---------- storms ----------
+const cloudSvg = '<svg viewBox="0 0 24 16" aria-hidden="true"><path d="M6 15a5 5 0 0 1-.6-10A6.5 6.5 0 0 1 18 5.5 4.8 4.8 0 0 1 18.5 15z"/></svg>';
+const storms = $("#storms");
+D.risks.forEach(r => {
+  const b = document.createElement("button");
+  b.className = "cloud"; b.type = "button"; b.setAttribute("aria-pressed", "false"); b.dataset.r = r;
+  b.innerHTML = cloudSvg + esc(r);
+  b.addEventListener("click", () => setRisk(state.risk === r ? null : r));
+  storms.appendChild(b);
+});
+
+const state = { risk: null, q: "", sel: null, lv: null };
+const rName = r => typeof r === "string" ? r : r.risk;
+function riskKind(f, r) {
+  if ((f.risks || []).includes(r)) return "direct";
+  if ((f.conditional_risks || []).some(c => rName(c) === r)) return "cond";
+  if (f.pathway_ids.some(id => P[id] && (P[id].conditional_risks || []).some(c => rName(c) === r))) return "cond";
+  return null;
+}
+function setRisk(r) {
+  state.risk = r;
+  storms.querySelectorAll(".cloud").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === r ? "true" : "false"));
+  paint();
+  if (r) show({ r }); else if (!state.sel && !state.lv) show({});
+}
+const lvHay = v => [v.lever, v.lever_full, ...v.pathway_ids.map(id => pwOf(id)?.pathway || "")].join(" ").toLowerCase();
+function matches(f, q) {
+  if (!q) return true;
+  const hay = [f.family, f.definition, f.examples, G[f.group_id].group, ...f.lever_ids.map(id => lvHay(V[id]))].join(" ").toLowerCase();
+  return hay.includes(q);
+}
+function paint() {
+  gRain.innerHTML = "";
+  D.families.forEach(f => {
+    const L = leafEl[f.family_id];
+    let on = matches(f, state.q);
+    let kind = null;
+    if (state.risk) { kind = riskKind(f, state.risk); on = on && !!kind; }
+    const selF = state.sel === f.family_id || (state.lv && V[state.lv].family_id === f.family_id);
+    L.g.classList.toggle("dim", !on && !selF);
+    L.g.classList.toggle("sel", state.sel === f.family_id);
+    f.lever_ids.forEach(lid => {
+      const B = budEl[lid];
+      const lon = on && (!state.q || lvHay(V[lid]).includes(state.q) || f.family.toLowerCase().includes(state.q));
+      B.g.classList.toggle("dim", !lon && !selF);
+      B.g.classList.toggle("on", state.lv === lid);
+    });
+    if (kind) {
+      const rg = el("g", { class: "rain" + (kind === "cond" ? " cond" : "") }, gRain);
+      for (let i = -1; i <= 1; i++) {
+        const [x0, y0] = pol(R_L + L.rx + i * 6, L.a + i * 0.6);
+        el("line", { x1: x0 - 3, y1: y0 - 26, x2: x0 + 1, y2: y0 - 12 }, rg);
+      }
+    }
+  });
+  gBranches.style.opacity = (state.risk || state.q) ? 0.45 : 1;
+}
+
+// ---------- panel ----------
+const panel = $("#panel");
+const riskChips = (rs, cond) => (rs || []).map(r => `<span class="chip risk${cond ? " cond" : ""}"${typeof r === "object" ? ` title="${esc(r.applies_when)}"` : ""}>${esc(rName(r))}${cond ? " · if" : ""}</span>`).join("");
+const sdgChips = ts => (ts || []).map(t => `<span class="chip sdg">${esc(t)}</span>`).join("");
+const O = o => `data-o='${esc(JSON.stringify(o))}'`;
+function crumb(parts) { return `<div class="crumb">${parts.map(([l, o]) => o ? `<a ${O(o)}>${esc(l)}</a>` : esc(l)).join(" › ")}</div>`; }
+// joins tests name pathways (L3-xxx) and families (F-xx): link them to their lever or family
+function linkIds(s) {
+  return esc(s).replace(/\b(L3-\d{3})\b/g, (m, id) => { const p = pwOf(id); return p ? `<a class="jl" ${O({ v: p.lever_id })} title="${esc(V[p.lever_id].lever)}">${m}</a>` : m; })
+    .replace(/\b(F-\d{2})\b/g, (m, id) => F[id] ? `<a class="jl" ${O({ f: id })} title="${esc(F[id].family)}">${m}</a>` : m);
+}
+function pathwayHtml(p, open) {
+  const tags = [p.added_in === "v3" ? "new in v3" : "", p.revised ? "revised" : ""].filter(Boolean).map(t => `<span class="tag">${t}</span>`).join("");
+  return `<details class="pw"${open ? " open" : ""}><summary><span class="fruit"></span><span>${esc(p.pathway)}${tags}</span><span class="id">${p.pathway_id}</span></summary>
+  <div class="body"><dl class="chain">
+    <dt>input</dt><dd>${esc(p.causal_input)}</dd><dt>channel</dt><dd>${esc(p.transmission)}</dd>
+    <dt>outcome</dt><dd>${esc(p.outcome)}</dd><dt>works if</dt><dd>${esc(p.conditions)}</dd>
+    ${p.distinction ? `<dt>not to confuse</dt><dd>${esc(p.distinction)}</dd>` : ""}
+    <dt>evidence</dt><dd>${esc(p.evidence)}</dd></dl>
+    ${(p.risks || []).length || (p.conditional_risks || []).length ? `<div class="chips">${riskChips(p.risks)}${riskChips(p.conditional_risks, true)}</div>` : ""}
+    ${(p.conditional_risks || []).map(c => `<p class="muted">${esc(rName(c))}, only if: ${esc(c.applies_when)}</p>`).join("")}
+  </div></details>`;
+}
+const thruHtml = v => `<div class="thru">Works through: ${v.pathway_ids.map(id => { const p = pwOf(id); return p ? `<i>${esc(p.pathway)}</i> (${esc(p.evidence)})` : esc(id); }).join("; ")}</div>`;
+function leverRow(lid, cnt) {
+  const v = V[lid];
+  return `<details class="lv"><summary><span>${esc(v.lever)}</span>${cnt ? `<span class="cnt">${cnt}</span>` : ""}<span class="id">${lid}</span></summary>
+    <div class="body"><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl>
+    ${thruHtml(v)}<a class="open" ${O({ v: lid })}>Open lever</a></div></details>`;
+}
+function familyList(fids) {
+  return `<ul class="list">${fids.map(id => `<li><a ${O({ f: id })}><span>${esc(F[id].family)}</span><span class="n">${nLv(F[id])}</span></a></li>`).join("")}</ul>`;
+}
+function leverList(lids, num) {
+  return `<ul class="list">${lids.map(id => `<li><a ${O({ v: id })}><span>${esc(V[id].lever)}</span><span class="n">${num ? num(id) : V[id].pathway_ids.length}</span></a></li>`).join("")}</ul>`;
+}
+function show(o) {
+  state.sel = o.f || null;
+  state.lv = o.v || null;
+  let h = "";
+  if (o.v) {
+    const v = V[o.v], f = F[v.family_id], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar;
+    h = crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: f.family_id }]]) +
+      `<div class="sect"><div class="eyebrow">Lever ${v.lever_id}</div><h2>${esc(v.lever)}</h2></div>
+      ${v.lever_full && v.lever_full !== v.lever ? `<p class="def">${esc(v.lever_full)}</p>` : ""}
+      <!--CTRY-->
+      <div class="sect"><div class="eyebrow">Placement tests</div><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl></div>
+      <div class="sect"><div class="eyebrow">Works through (${v.pathway_ids.length} pathway${v.pathway_ids.length > 1 ? "s" : ""}): the literature</div>${v.pathway_ids.map(id => pwOf(id)).filter(Boolean).map(p => pathwayHtml(p, v.pathway_ids.length === 1)).join("")}</div>
+      ${(v.risks || []).length ? `<div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(v.risks)}</div></div>` : ""}
+      ${(v.entry_points || []).length ? `<div class="sect"><div class="eyebrow">Thai entry points</div><div class="chips">${v.entry_points.map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>` : ""}
+      <div class="sect"><div class="eyebrow">Sibling levers in ${esc(f.family_id)}</div>${leverList(f.lever_ids.filter(x => x !== v.lever_id))}</div>`;
+  } else if (o.f) {
+    const f = F[o.f], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar;
+    const lc = CM ? cCount(rowsOn()).lev : null;
+    h = crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }]]) +
+      `<div class="sect"><div class="eyebrow">Family ${f.family_id}</div><h2>${esc(f.family)}</h2></div>
+      <!--CTRY-->
+      <p class="def">${esc(f.definition)}</p>
+      <div class="sect"><div class="eyebrow">Levers (${nLv(f)})${lc ? " · strategies in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
+      ${f.examples ? `<div class="sect"><div class="eyebrow">How plans say it</div><p class="muted">${esc(f.examples)}</p></div>` : ""}
+      <div class="sect"><div class="eyebrow">Storms it shelters from</div><div class="chips">${riskChips(f.risks) || '<span class="muted">none tagged</span>'}${riskChips(f.conditional_risks, true)}</div></div>
+      <div class="sect"><div class="eyebrow">SDG targets</div><div class="chips">${sdgChips(f.sdg_targets)}</div></div>
+      ${(f.assets || []).length ? `<div class="sect"><div class="eyebrow">Assets</div><div class="chips">${f.assets.map(a => `<span class="chip">${esc(D.assets[a] || a)}</span>`).join("")}</div></div>` : ""}`;
+  } else if (o.g) {
+    const g = G[o.g], s = SP[g.subpillar_code];
+    h = crumb([[PL[s.pillar].name, { p: s.pillar }], [s.name, { s: s.code }]]) +
+      `<div class="sect"><div class="eyebrow">Group ${g.group_id}</div><h2>${esc(g.group)}</h2></div>
+      <p class="def">${esc(g.definition)}</p>
+      <div class="sect"><div class="eyebrow">Basis</div><p class="muted">${esc(g.basis)}</p></div>
+      <div class="sect"><div class="eyebrow">Families · levers</div>${familyList(g.family_ids)}</div>
+      <div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(g.risks)}</div></div>`;
+  } else if (o.s) {
+    const s = SP[o.s];
+    const gs = D.groups.filter(g => g.subpillar_code === s.code);
+    h = crumb([[PL[s.pillar].name, { p: s.pillar }]]) +
+      `<div class="sect"><div class="eyebrow">Subpillar ${s.code}</div><h2>${esc(s.name)}</h2></div>
+      <p class="def">${esc(s.definition)}</p>
+      ${gs.map(g => `<div class="sect"><div class="eyebrow"><a class="crumb" style="cursor:pointer" ${O({ g: g.group_id })}>${esc(g.group)}</a> · ${esc(g.basis)}</div>${familyList(g.family_ids)}</div>`).join("")}`;
+  } else if (o.p) {
+    const sps = ORDER.find(x => x[0] === o.p)[1];
+    const hold = D.holding.find(x => x.id === HOLD[o.p]);
+    h = `<div class="sect"><div class="eyebrow">Pillar · ${PROLE[o.p]}</div><h2>${esc(PL[o.p].name)}</h2></div>
+      <ul class="list">${sps.map(sc => `<li><a ${O({ s: sc })}><span>${esc(SP[sc].name)}</span><span class="n">${lvOfSub(sc)}</span></a></li>`).join("")}</ul>
+      <p class="muted">Numbers are levers. Standing functions of the state with no family go to the ${esc(hold.name)} branch (${hold.id}).</p>`;
+  } else if (o.r) {
+    const r = o.r;
+    const direct = D.families.filter(f => riskKind(f, r) === "direct"), cond = D.families.filter(f => riskKind(f, r) === "cond");
+    const lvs = D.levers.filter(v => (v.risks || []).includes(r)).map(v => v.lever_id);
+    h = `<div class="sect"><div class="eyebrow">Storm</div><h2>${esc(r)}</h2></div>
+      <p class="muted">Leaves with rain are the families whose pathways the literature links to this risk. Dashed rain: the link holds only under conditions.</p>
+      <div class="sect"><div class="eyebrow">Families tagged (${direct.length})</div>${familyList(direct.map(f => f.family_id))}</div>
+      ${cond.length ? `<div class="sect"><div class="eyebrow">Conditional (${cond.length})</div>${familyList(cond.map(f => f.family_id))}</div>` : ""}
+      <div class="sect"><div class="eyebrow">Levers whose pathways carry it (${lvs.length})</div>${leverList(lvs)}</div>`;
+  } else if (o.q) {
+    const hits = D.families.filter(f => matches(f, o.q));
+    const vhits = D.levers.filter(v => lvHay(v).includes(o.q) || [v.joins_when].join(" ").toLowerCase().includes(o.q));
+    const phits = D.pathways.filter(p => [p.pathway, p.causal_input, p.outcome, p.transmission].join(" ").toLowerCase().includes(o.q));
+    h = `<div class="sect"><div class="eyebrow">Search</div><h2>“${esc(o.q)}”</h2></div>
+      <div class="sect"><div class="eyebrow">Levers (${vhits.length})</div>${leverList(vhits.slice(0, 60).map(v => v.lever_id))}</div>
+      <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>
+      <div class="sect"><div class="eyebrow">Pathways (${phits.length})</div>${phits.slice(0, 40).map(p => pathwayHtml(p, false)).join("")}</div>`;
+  } else {
+    h = `<div class="sect"><div class="eyebrow">How to read it</div><h2>Ten branches, sixty leaves, ${D.levers.length} buds</h2></div>
+      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a group, and each leaf a family. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
+      <div class="legend">
+        <div><span class="sw" style="background:var(--economy)"></span>Smarter Growth: the economy</div>
+        <div><span class="sw" style="background:var(--people)"></span>People-first Approach: people</div>
+        <div><span class="sw" style="background:var(--gov)"></span>Making Change Happen: governance, the 12 Future-Ready Governance dimensions grouped in four subpillars</div>
+        <div><span class="sw" style="background:var(--muted);width:7px;height:7px"></span>A lever: hover a bud for its joins-when and joins-not tests and the pathways it works through</div>
+        <div><span class="fruit" style="margin:0"></span>A pathway: the literature under a lever, recorded on a strategy only when the lever has one or the wording names the channel</div>
+      </div>
+      <p class="muted">Select a storm to see where its rain falls. Select a leaf to read the family and its levers; select a bud to read the lever, its tests and its evidence.</p>
+      <div class="sect"><div class="eyebrow">General branches</div><p class="muted">${D.holding.map(x => esc(x.name)).join(" · ")}</p></div>`;
+  }
+  if (CM && o.v) h = h.replace("<!--CTRY-->", countryLever(o.v));
+  else if (CM && o.f) h = h.replace("<!--CTRY-->", countryFamily(o.f));
+  else if (CM && !Object.keys(o).length) h = countryOverview();
+  panel.innerHTML = h;
+  panel.scrollTop = 0;
+  paint();
+}
+panel.addEventListener("click", e => { const a = e.target.closest("[data-o]"); if (a) { e.preventDefault(); show(JSON.parse(a.dataset.o)); } });
+
+$("#q").addEventListener("input", e => {
+  state.q = e.target.value.trim().toLowerCase();
+  if (state.q.length >= 2) show({ q: state.q }); else { paint(); if (!state.q) show(state.risk ? { r: state.risk } : {}); }
+});
+$("#clear").addEventListener("click", () => { $("#q").value = ""; state.q = ""; state.risk = null; setRisk(null); show({}); });
+
+// ---------- outline ----------
+const out = $("#outline");
+ORDER.forEach(([pc, sps]) => {
+  const d = document.createElement("div"); d.className = "ol-pillar";
+  d.innerHTML = `<h3 style="color:${PCOL[pc]}">${esc(PL[pc].name)} <span class="eyebrow">${PROLE[pc]}</span></h3>` +
+    sps.map(sc => `<details><summary><b>${esc(SP[sc].name)}</b> <span class="muted">${sc} · ${lvOfSub(sc)} levers</span></summary>` +
+      D.groups.filter(g => g.subpillar_code === sc).map(g => `<details><summary>${esc(g.group)} <span class="muted">· ${esc(g.basis)}</span></summary>` +
+        g.family_ids.map(fid => { const f = F[fid]; return `<details><summary><span class="famrow" ${O({ f: fid })}>${esc(f.family)}</span> <span class="muted">${fid} · ${nLv(f)} levers</span></summary>
+          <ul class="ol-lvs" style="color:${PCOL[pc]}">${f.lever_ids.map(id => `<li><span class="dot"></span><span class="lvname" style="color:var(--ink)" ${O({ v: id })}>${esc(V[id].lever)} <span class="muted">${id}</span></span>${thruHtml(V[id])}</li>`).join("")}</ul></details>`; }).join("") +
+        `</details>`).join("") + `</details>`).join("");
+  out.appendChild(d);
+});
+out.addEventListener("click", e => {
+  const a = e.target.closest("[data-o]"); if (!a) return;
+  e.preventDefault();
+  show(JSON.parse(a.dataset.o));
+  $(".main").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+});
+
+$("#foot").textContent = `Tree v4, built ${D.built}: v3's groups and families with a lever under each family, made from the bridge face of 3 November; ` +
+  `31 levers merge sibling pathways that a plan writes as one action. Lever names are cut from the bridge phrase and are for the reviewers to rename. ` +
+  `Pathway citations are listed but not yet independently verified; risk tags come from the review notes. Category names follow the RHDR framework.`;
+
+// ---------- country on the tree ----------
+// row: [plan, name, objective, level, family, lever, pathway, group, sector, orientation, risks, reason]
+const C = D.country;
+let CM = false;
+const sel = new Set();
+const OVL = { LV: "Placed on a lever", L2: "On a family, no lever", GRP: "On a group only", STD: "On a general branch", GOAL: "Goal outside the tree", NEW: "Not placed" };
+function planLabel(p) {
+  if (p.doc_type === "ndp") return (p.edition ? p.edition + " Plan" : p.title);
+  if (p.doc_type === "vision") return p.edition === "NS" ? "National Strategy" : p.title;
+  return p.title.replace(/\s*\(.*?\)\s*/g, " ").trim();
+}
+const short = (t, n) => t.length > n ? t.slice(0, n - 1) + "…" : t;
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+function rowsOn() { return C.rows.filter(r => sel.has(r[0])); }
+function cCount(rows) {
+  const fam = {}, lev = {};
+  rows.forEach(r => {
+    if (r[4]) { const x = fam[r[4]] || (fam[r[4]] = { n: 0, lv: 0, pw: 0 }); x.n++; if (r[5]) { x.lv++; if (r[6]) x.pw++; } }
+    if (r[5]) { const y = lev[r[5]] || (lev[r[5]] = { n: 0, pw: 0 }); y.n++; if (r[6]) y.pw++; }
+  });
+  return { fam, lev };
+}
+const cntLabel = x => x && x.n ? `${x.n} · ${pct(x.pw, x.n)}% pathway` : "";
+function paintCountry() {
+  gFruit.innerHTML = "";
+  if (!CM) {
+    D.families.forEach(f => { const L = leafEl[f.family_id]; sizeLeaf(L, L.rx0, L.name, false); });
+    D.levers.forEach(v => { const B = budEl[v.lever_id]; sizeBud(B, 2.4, B.col, false); });
+    return;
+  }
+  const { fam, lev } = cCount(rowsOn());
+  const max = Math.max(1, ...Object.values(fam).map(x => x.n));
+  const vmax = Math.max(1, ...Object.values(lev).map(x => x.n));
+  D.families.forEach(f => {
+    const L = leafEl[f.family_id], x = fam[f.family_id];
+    const n = x ? x.n : 0;
+    const rx = n ? 5 + 17 * Math.sqrt(n / max) : 4;
+    sizeLeaf(L, rx, short(L.name, n ? 38 : 44) + (n ? `  ${n}` : ""), !n);
+  });
+  D.levers.forEach(v => {
+    const B = budEl[v.lever_id], x = lev[v.lever_id];
+    if (!x) { sizeBud(B, 1.8, B.col, true); return; }
+    sizeBud(B, 2.2 + 4.3 * Math.sqrt(x.n / vmax), "var(--gold)", false);
+  });
+}
+function drawTimeline() {
+  const svg2 = $("#tlsvg");
+  svg2.innerHTML = "";
+  const y0 = Math.min(...C.plans.map(p => p.start)), y1 = Math.max(...C.plans.map(p => p.end)) + 1;
+  const W = 1000, LW = 250, RH = 24, H = 26 + C.plans.length * RH;
+  svg2.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const X = y => LW + (W - LW - 40) * (y - y0) / (y1 - y0);
+  const mk = (tag, a, par) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); (par || svg2).appendChild(e); return e; };
+  for (let y = y0; y <= y1; y++) {
+    if ((y - y0) % (y1 - y0 > 16 ? 5 : 2) && y !== y1) continue;
+    mk("line", { x1: X(y), x2: X(y), y1: 14, y2: H, class: "tlgrid" });
+    mk("text", { x: X(y), y: 10, "text-anchor": "middle", class: "tlax" }).textContent = y;
+  }
+  const counts = {}, onLv = {};
+  C.rows.forEach(r => { counts[r[0]] = (counts[r[0]] || 0) + 1; if (r[5]) onLv[r[0]] = (onLv[r[0]] || 0) + 1; });
+  C.plans.forEach((p, i) => {
+    const y = 20 + i * RH;
+    const g = mk("g", { class: "tlbar" + (sel.has(i) ? " on" : ""), tabindex: 0, role: "button", "aria-pressed": sel.has(i) });
+    mk("rect", { x: 0, y, width: W, height: RH, fill: "transparent" }, g);
+    mk("text", { x: 0, y: y + 13 }, g).textContent = short(planLabel(p), 38);
+    mk("rect", { class: "bar", x: X(p.start), y: y + 3, width: Math.max(4, X(p.end + 1) - X(p.start)), height: RH - 8, rx: 3 }, g);
+    mk("text", { x: X(p.end + 1) + 6, y: y + 13, class: "n" }, g).textContent = counts[i] || 0;
+    mk("title", {}, g).textContent = `${p.title}, ${p.start}–${p.end}${p.published ? ", published " + p.published : ""}: ${counts[i] || 0} strategies, ${onLv[i] || 0} on a lever`;
+    const pick = () => { if (sel.size === 1 && sel.has(i)) allPlans(); else { sel.clear(); sel.add(i); refresh(); } };
+    g.addEventListener("click", pick);
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
+  });
+}
+function allPlans() { sel.clear(); C.plans.forEach((p, i) => sel.add(i)); refresh(); }
+function selLabel() {
+  if (sel.size === C.plans.length) return "all plans";
+  if (sel.size === 1) { const p = C.plans[[...sel][0]]; return `${planLabel(p)}, ${p.start}–${p.end}`; }
+  return `${sel.size} plans`;
+}
+function countryOverview() {
+  const rows = rowsOn(), n = rows.length || 1;
+  const lv = {}; rows.forEach(r => lv[r[3]] = (lv[r[3]] || 0) + 1);
+  const npw = rows.filter(r => r[5] && r[6]).length;
+  const { fam, lev } = cCount(rows);
+  const topF = Object.entries(fam).sort((a, b) => b[1].n - a[1].n).slice(0, 8).map(([k]) => k);
+  const topV = Object.entries(lev).sort((a, b) => b[1].n - a[1].n).slice(0, 10).map(([k]) => k);
+  const used = Object.keys(lev).length;
+  const P_ = k => pct(lv[k] || 0, n);
+  return `<div class="sect"><div class="eyebrow">${esc(C.name)} on tree v4 · ${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} strategies</h2></div>
+    <p class="muted">Leaf size is the number of strategies on each family, on the family itself or one of its levers. Gold buds are levers with strategies, sized by count; dashed buds get none. ${used} of ${D.levers.length} levers are used.</p>
+    <div class="lvls">${["LV", "L2", "GRP", "STD", "GOAL", "NEW"].map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${P_(k)}%</span></div>`).join("")}
+      <div style="padding-left:22px" class="muted">with a pathway recorded<span class="num">${npw.toLocaleString()} · ${pct(npw, lv.LV || 0)}%</span></div></div>
+    <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
+    <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
+    <p class="muted">Pick a plan on the timeline to see that plan's tree; the table below the tree shows every family and lever across all plans.</p>`;
+}
+function stratList(rows, showLever) {
+  rows.sort((a, b) => (a[5] ? 0 : 1) - (b[5] ? 0 : 1) || a[0] - b[0]);
+  return rows.slice(0, 120).map(r => {
+    const bits = [esc(short(planLabel(C.plans[r[0]]), 30))];
+    if (showLever && r[5]) bits.push(`<b>${esc(short(V[r[5]].lever, 50))}</b>`);
+    if (r[6] && pwOf(r[6])) bits.push(`via ${esc(pwOf(r[6]).pathway)}`);
+    if (!r[5] && r[11]) bits.push(`<span title="${esc(r[11])}">${esc(short(r[11], 70))}</span>`);
+    if (r[8]) bits.push(esc(r[8]));
+    return `<div class="strat"><span title="${esc(r[2])}">${esc(r[1])}</span><span class="meta">${bits.join(" · ")}</span></div>`;
+  }).join("") + (rows.length > 120 ? `<p class="muted">and ${rows.length - 120} more</p>` : "");
+}
+function countryFamily(fid) {
+  const all = C.rows.filter(r => r[4] === fid);
+  const per = C.plans.map((p, i) => { const rs = all.filter(r => r[0] === i); return { i, p, n: rs.length, lv: rs.filter(r => r[5]).length }; });
+  const max = Math.max(1, ...per.map(x => x.n));
+  const rows = all.filter(r => sel.has(r[0]));
+  const col = famCol(fid);
+  return `<div class="sect"><div class="eyebrow">${esc(C.name)}: strategies on this family, plan by plan · <span style="color:var(--gold)">on a lever</span></div>
+    <div class="pbars">${per.map(x => `<span class="lab" title="${esc(x.p.title)}">${esc(short(planLabel(x.p), 24))}</span>
+      <span class="trk" title="${x.n} strategies, ${x.lv} on a lever"><i style="width:${100 * x.lv / max}%;background:var(--gold)"></i><i style="width:${100 * (x.n - x.lv) / max}%;background:${col}"></i></span>
+      <span class="num">${x.n}</span>`).join("")}</div></div>
+    <details class="lv"><summary><span>${rows.length} strategies · ${esc(selLabel())}</span></summary><div>${stratList(rows, true)}</div></details>`;
+}
+function countryLever(lid) {
+  const all = C.rows.filter(r => r[5] === lid);
+  const per = C.plans.map((p, i) => { const rs = all.filter(r => r[0] === i); return { i, p, n: rs.length, pw: rs.filter(r => r[6]).length }; });
+  const max = Math.max(1, ...per.map(x => x.n));
+  const rows = all.filter(r => sel.has(r[0]));
+  const col = famCol(V[lid].family_id);
+  const npw = rows.filter(r => r[6]).length;
+  return `<div class="sect"><div class="eyebrow">${esc(C.name)}: ${rows.length} strategies on this lever · ${pct(npw, rows.length)}% with a pathway recorded</div>
+    <div class="pbars">${per.map(x => `<span class="lab" title="${esc(x.p.title)}">${esc(short(planLabel(x.p), 24))}</span>
+      <span class="trk" title="${x.n} strategies, ${x.pw} with a pathway"><i style="width:${100 * x.pw / max}%;background:var(--gold)"></i><i style="width:${100 * (x.n - x.pw) / max}%;background:${col}"></i></span>
+      <span class="num">${x.n}</span>`).join("")}</div></div>
+    ${rows.length ? `<details class="lv"><summary><span>The strategies · ${esc(selLabel())}</span></summary><div>${stratList(rows, false)}</div></details>` : ""}`;
+}
+const openFam = new Set();
+function drawTable() {
+  const tot = C.plans.map((p, i) => C.rows.filter(r => r[0] === i));
+  const cnt = tot.map(rs => cCount(rs));
+  const allc = cCount(C.rows);
+  const NC = C.plans.length + 3;
+  const head = `<thead><tr><th>Family / lever</th><th>All</th><th style="color:var(--gold)">with pathway</th>${C.plans.map((p, i) => `<th class="${sel.has(i) && sel.size < C.plans.length ? "on" : ""}" title="${esc(p.title)}">${esc(short(planLabel(p), 18))}<br>${p.start}–${p.end}</th>`).join("")}</tr></thead>`;
+  const n0 = C.rows.length;
+  let body = `<tr class="tot"><td>Strategies</td><td class="all">${n0}</td><td></td>${tot.map(rs => `<td>${rs.length}</td>`).join("")}</tr>
+    <tr class="tot"><td>Placed on a family or deeper</td><td class="all">${pct(C.rows.filter(r => r[4]).length, n0)}%</td><td></td>${tot.map(rs => `<td>${pct(rs.filter(r => r[4]).length, rs.length)}%</td>`).join("")}</tr>
+    <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(C.rows.filter(r => r[5]).length, n0)}%</td><td></td>${tot.map(rs => `<td class="g">${pct(rs.filter(r => r[5]).length, rs.length)}%</td>`).join("")}</tr>
+    <tr class="tot"><td>On a lever with a pathway recorded</td><td class="all g">${pct(C.rows.filter(r => r[6]).length, n0)}%</td><td></td>${tot.map(rs => `<td class="g">${pct(rs.filter(r => r[6]).length, rs.length)}%</td>`).join("")}</tr>`;
+  const cell = (n, of, col, tip) => {
+    const sh = of ? n / of : 0;
+    return `<td title="${tip}" style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
+  };
+  ORDER.forEach(([pc0, sps]) => sps.forEach(sc => {
+    body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
+    const col = PCOL[pc0];
+    D.families.filter(f => f.subpillar_code === sc).forEach(f => {
+      const fid = f.family_id, a = allc.fam[fid] || { n: 0, lv: 0, pw: 0 }, op = openFam.has(fid);
+      body += `<tr class="frow${op ? " open" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever, ${a.pw} with a pathway">${a.lv ? pct(a.lv, a.n) + "% lever" : ""}</td>${cnt.map((c, i) => {
+        const x = c.fam[fid] || { n: 0, lv: 0 };
+        return cell(x.n, tot[i].length, col, `${x.n} strategies, ${x.lv} on a lever`);
+      }).join("")}</tr>`;
+      f.lever_ids.forEach(lid => {
+        const b = allc.lev[lid] || { n: 0, pw: 0 };
+        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${b.n || ""}</td><td class="pws">${b.n ? pct(b.pw, b.n) + "%" : ""}</td>${cnt.map((c, i) => {
+          const x = c.lev[lid] || { n: 0, pw: 0 };
+          return cell(x.n, tot[i].length, col, `${x.n} strategies, ${x.pw} with a pathway`);
+        }).join("")}</tr>`;
+      });
+    });
+  }));
+  $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
+}
+function toggleFam(fid, on) {
+  if (on) openFam.add(fid); else openFam.delete(fid);
+  const tr = $(`#ct tr.frow[data-fam="${fid}"]`); if (tr) tr.classList.toggle("open", on);
+  document.querySelectorAll(`#ct tr.lvrow[data-of="${fid}"]`).forEach(r => r.hidden = !on);
+}
+function refresh() {
+  drawTimeline(); drawTable(); paintCountry();
+  if (CM) show(state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : {});
+}
+function setMode(on) {
+  CM = on;
+  $("#m-tree").setAttribute("aria-selected", !on); $("#m-ctry").setAttribute("aria-selected", on);
+  $("#tl").hidden = !on; $("#ctable").hidden = !on;
+  try { history.replaceState(null, "", on ? "#" + C.name.toLowerCase() : "#tree"); } catch (e) {}
+  paintCountry();
+  show(state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : {});
+}
+if (C && C.rows.length) {
+  if (C.provisional) {
+    const b = $("#banner"); b.hidden = false;
+    b.innerHTML = `<b>Provisional: v3 placements lifted onto v4 levers</b><span>The ${esc(C.name)} strategies here are the v3 run, not a v4 run. A strategy v3 placed on a pathway sits on that pathway's lever, with the pathway recorded; a strategy v3 placed on a family stays on the family. The lever share is therefore v3's pathway share; the v4 run places by the levers' own tests and will replace this.</span>`;
+  }
+  $("#ctry").hidden = false;
+  $("#m-ctry").textContent = `${C.name} on the tree`;
+  $("#ct-h").textContent = `${C.name} over time: families and levers by plan`;
+  $("#m-tree").addEventListener("click", () => setMode(false));
+  $("#m-ctry").addEventListener("click", () => setMode(true));
+  $("#tl-all").addEventListener("click", allPlans);
+  $("#tl-nat").addEventListener("click", () => { sel.clear(); C.plans.forEach((p, i) => { if (p.doc_type !== "sector") sel.add(i); }); refresh(); });
+  $("#ct-open").addEventListener("click", () => D.families.forEach(f => toggleFam(f.family_id, true)));
+  $("#ct-close").addEventListener("click", () => D.families.forEach(f => toggleFam(f.family_id, false)));
+  $("#ct").addEventListener("click", e => {
+    const fr = e.target.closest("tr.frow");
+    if (fr) { const fid = fr.dataset.fam; toggleFam(fid, !openFam.has(fid)); show({ f: fid }); return; }
+    const a = e.target.closest("[data-o]"); if (a) { show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); }
+  });
+  C.plans.forEach((p, i) => sel.add(i));
+  drawTimeline(); drawTable();
+  if (C.skipped && C.skipped.length) $("#tl-note").textContent = "Not run: " + C.skipped.map(x => `${x.title} (${x.status})`).join("; ") + ".";
+  setMode(location.hash !== "#tree");
+}
+
+if (!(C && C.rows.length)) show({});
+const cv = $(".canvas"); cv.scrollLeft = (cv.scrollWidth - cv.clientWidth) / 2;
+</script>
