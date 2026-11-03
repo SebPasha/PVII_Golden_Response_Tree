@@ -17,6 +17,17 @@ Depth rule: every strategy that names an action is placed on a lever, judged by 
 
 Each v3 pathway got a bridge face on 3 November (`../v3/bridge.py`): a lever phrase, a joins-when test, a joins-not test. v4 turns those into nodes. `LEVER_MERGES` in `build.py` lists the 31 places where several sibling pathways are one action for a government (for example contributory insurance, income replacement in shocks and unemployment insurance, which a plan writes as one social-insurance line); the lever then carries all its pathways and a joins-when test written for the merged lever. Everything else is one lever per pathway. Lever ids are LV-001 to LV-229 in family order; the short lever names are cut from the bridge phrase and are for the reviewers to rename.
 
+## Intervention-level evidence on the levers (scan of 3 November 2026)
+
+The pathways carry the mechanism literature (why a lever works). Each lever also carries one or two sources on the intervention itself: a systematic review or meta-analysis where one exists (3ie, Campbell, Cochrane, J-PAL, World Bank, IEG, OECD, ILO, IFPRI), otherwise a flagship evaluation or landmark empirical paper, with evidence from developing and middle-income countries preferred. Columns on `levers_v4.csv` and in `tree_v4.json`:
+
+- `intervention_evidence`: "Author Year, Title, Outlet", one or two sources.
+- `evidence_finding`: one sentence on what the evidence finds, with the main condition under which the lever works or fails.
+- `evidence_strength`: strong (consistent evidence from reviews or several rigorous studies), mixed (effects depend on design or context), thin (few rigorous studies), none found.
+- `evidence_verified`: yes when the source was confirmed online by title and author at the scan; `evidence_url` is where. A source that could not be confirmed is not kept: the lever reads "No suitable intervention-level source confirmed".
+
+The scan was drafted and checked with web search by model workers and is a first pass for the economists' review, not a settled evidence base: findings are paraphrased from the sources, not quoted, and the strength rating is a judgement. Source: `inputs/lever_evidence.json`; the build reads it when present.
+
 ## Rebuild
 
 ```bash

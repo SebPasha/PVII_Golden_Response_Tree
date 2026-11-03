@@ -113,7 +113,26 @@ def short_name(lever_text):
     return s[:1].upper() + s[1:]
 
 
+# Intervention-level evidence per lever (inputs/lever_evidence.json, scan of 3 November 2026): a
+# systematic review or flagship evaluation of the action itself, beside the mechanism citations.
+EVIDENCE_FILE = os.path.join(HERE, "inputs", "lever_evidence.json")
+EVIDENCE_KEYS = ("intervention_evidence", "evidence_finding", "evidence_strength", "evidence_verified", "evidence_url")
+EMPTY_EVIDENCE = {k: "" for k in EVIDENCE_KEYS}
+
+
+def load_lever_evidence():
+    if not os.path.exists(EVIDENCE_FILE):
+        return {}
+    out = {}
+    for e in json.load(open(EVIDENCE_FILE, encoding="utf-8")):
+        out[e["lever_id"]] = {"intervention_evidence": e.get("intervention_evidence", ""),
+                              "evidence_finding": e.get("finding", ""), "evidence_strength": e.get("strength", ""),
+                              "evidence_verified": e.get("verified", ""), "evidence_url": e.get("url", "")}
+    return out
+
+
 def main():
+    lever_evidence = load_lever_evidence()
     v3 = json.load(open(V3, encoding="utf-8"))
     groups = {g["group_id"]: dict(g) for g in v3["groups"]}
     families = {f["family_id"]: dict(f) for f in v3["families"]}
@@ -164,6 +183,7 @@ def main():
                      "pathways": "; ".join("%s %s" % (m, paths[m]["pathway"]) for m in members),
                      "text_cues": "|".join(cues), "risks": risks, "entry_points": entry[:8],
                      "evidence": "; ".join("%s: %s" % (paths[m]["pathway"], paths[m].get("evidence", "")) for m in members)}
+            lever.update(lever_evidence.get(lid, EMPTY_EVIDENCE))
             levers[lid] = lever
             fam["lever_ids"].append(lid)
             for m in members:
@@ -191,6 +211,7 @@ def main():
     write_csv(os.path.join(HERE, "levers_v4.csv"), levers.values(),
               ["lever_id", "lever", "level", "family_id", "family", "group_id", "group", "subpillar", "pillar",
                "lever_full", "joins_when", "joins_not", "n_pathways", "pathway_ids", "pathways", "evidence",
+               "intervention_evidence", "evidence_finding", "evidence_strength", "evidence_verified", "evidence_url",
                "risks", "entry_points", "text_cues"])
     write_csv(os.path.join(HERE, "pathways_v4.csv"), paths.values(),
               ["pathway_id", "pathway", "lever_id", "lever", "family_id", "family", "group_id", "group",

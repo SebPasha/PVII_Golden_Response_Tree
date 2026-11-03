@@ -1,0 +1,1834 @@
+[
+ {
+  "lever_id": "LV-001",
+  "intervention_evidence": "Neumark and Stock 2006, The Labor Market Effects of Sex and Race Discrimination Laws, Economic Inquiry",
+  "finding": "US state anti-discrimination laws raised Black employment, but sex-equal-pay laws cut female employment; effects depend on whether enforcement raises hiring costs, and rigorous developing-country evidence is scarce.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:ecinqu:v:44:y:2006:i:3:p:385-419"
+ },
+ {
+  "lever_id": "LV-002",
+  "intervention_evidence": "Halim, Perova and Reynolds 2023, Childcare and Mothers' Labor Market Outcomes in Lower- and Middle-Income Countries, World Bank Research Observer",
+  "finding": "Most studies find subsidised or public childcare raises mothers' employment in low- and middle-income countries, with larger effects where care is affordable, full-day and matched to working hours.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:wbrobs:v:38:y:2023:i:1:p:73-114."
+ },
+ {
+  "lever_id": "LV-003",
+  "intervention_evidence": "Betcherman 2015, Labor Market Regulations: What Do We Know about Their Impacts in Developing Countries?, World Bank Research Observer",
+  "finding": "Stricter hiring and dismissal rules have modest effects on total employment in developing countries but shift jobs toward insiders and informality; effects are largest where rules are strictly enforced.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:wbrobs:v:30:y:2015:i:1:p:124-153."
+ },
+ {
+  "lever_id": "LV-004",
+  "intervention_evidence": "Jessen and Kluve 2021, The effectiveness of interventions to reduce informality in low- and middle-income countries, World Development",
+  "finding": "Lower registration costs and simplified procedures alone rarely move firms into formality; combined incentives, information and stronger enforcement or inspection produce larger, though still modest, formalisation effects.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econbiz.de/Record/the-effectiveness-of-interventions-to-reduce-informality-in-low-and-middle-income-countries-jessen-jonas/10013454149"
+ },
+ {
+  "lever_id": "LV-005",
+  "intervention_evidence": "OECD 2019, Negotiating Our Way Up: Collective Bargaining in a Changing World of Work, OECD Publishing",
+  "finding": "Coordinated collective bargaining is associated with higher employment, lower wage inequality and better job quality; benefits depend on coordination across bargaining levels and on coverage reaching non-standard workers.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.oecd-ilibrary.org/employment/negotiating-our-way-up_c0bde291-en"
+ },
+ {
+  "lever_id": "LV-006",
+  "intervention_evidence": "Mischke et al. 2013, Occupational safety and health enforcement tools for preventing occupational diseases and injuries, Cochrane Database of Systematic Reviews",
+  "finding": "Inspections may reduce injuries over the longer term, but the evidence is low quality, mostly from high-income countries, and effects are unclear for one-off or warning-only inspections.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD010183.pub2/information"
+ },
+ {
+  "lever_id": "LV-007",
+  "intervention_evidence": "Banerjee, Finkelstein, Hanna, Olken, Ornaghi and Sumarto 2021, The Challenges of Universal Health Insurance in Developing Countries: Experimental Evidence from Indonesia's National Health Insurance, American Economic Review",
+  "finding": "Temporary premium subsidies sharply raised enrolment of informal workers in Indonesia's national health insurance, but enrolment fell when subsidies ended and attracted sicker members; information and assisted registration did little.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20200523"
+ },
+ {
+  "lever_id": "LV-008",
+  "intervention_evidence": "Saran, White and Kuper 2020, Evidence and gap map of studies assessing the effectiveness of interventions for people with disabilities in low- and middle-income countries, Campbell Systematic Reviews",
+  "finding": "Rigorous evaluations of accessibility measures for people with disabilities in low- and middle-income countries are rare; most studies concern health and rehabilitation, leaving built-environment and information access largely unevaluated.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8356326/"
+ },
+ {
+  "lever_id": "LV-009",
+  "intervention_evidence": "Muralidharan, Niehaus and Sukhtankar 2016, Building State Capacity: Evidence from Biometric Smartcards in India, American Economic Review | Muralidharan, Niehaus and Sukhtankar 2025, Identity Verification Standards in Welfare Programs: Experimental Evidence from India, Review of Economics and Statistics",
+  "finding": "Biometric identity cut leakage and payment delays in Indian welfare payments, but making biometric verification mandatory for food rations excluded some genuine beneficiaries without reducing leakage much.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aecrev:v:106:y:2016:i:10:p:2895-2929"
+ },
+ {
+  "lever_id": "LV-010",
+  "intervention_evidence": "Field, Pande, Rigol, Schaner and Troyer Moore 2021, On Her Own Account: How Strengthening Women's Financial Control Impacts Labor Supply and Gender Norms, American Economic Review",
+  "finding": "Paying women's public works wages into their own bank accounts, with training, raised their work and loosened restrictive gender norms in India; effects were largest where husbands had opposed women working.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://zendy.io/title/10.1257/aer.20200705"
+ },
+ {
+  "lever_id": "LV-011",
+  "intervention_evidence": "Beaman, Chattopadhyay, Duflo, Pande and Topalova 2009, Powerful Women: Does Exposure Reduce Bias?, Quarterly Journal of Economics | Beaman, Duflo, Pande and Topalova 2012, Female leadership raises aspirations and educational attainment for girls: a policy experiment in India, Science",
+  "finding": "Randomly reserved village council seats for women in India reduced voter bias against female leaders and raised girls' aspirations and schooling, but only after repeated exposure across two election cycles.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:124:y:2009:i:4:p:1497-1540."
+ },
+ {
+  "lever_id": "LV-012",
+  "intervention_evidence": "Bagde, Epple and Taylor 2016, Does Affirmative Action Work? Caste, Gender, College Quality, and Academic Success in India, American Economic Review",
+  "finding": "Caste reservations in Indian engineering colleges raised attendance of disadvantaged groups at better colleges without harming their academic performance; evidence on other group-targeted gap-closing policies remains limited.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aecrev:v:106:y:2016:i:6:p:1495-1521"
+ },
+ {
+  "lever_id": "LV-013",
+  "intervention_evidence": "Ellsberg et al. 2015, Prevention of violence against women and girls: what does the evidence say?, The Lancet | Buller et al. 2018, A Mixed-Method Review of Cash Transfers and Intimate Partner Violence in Low- and Middle-Income Countries, World Bank Research Observer",
+  "finding": "Cash transfers reduced partner violence in most studies, and community mobilisation and combined economic-plus-gender programmes show promise; stand-alone response services and awareness campaigns have weak evidence of preventing violence.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:wbrobs:v:33:y:2018:i:2:p:218-258."
+ },
+ {
+  "lever_id": "LV-014",
+  "intervention_evidence": "Dammert, de Hoop, Mvukiyehe and Rosati 2018, Effects of public policy on child labor: Current knowledge, gaps, and implications for program design, World Development",
+  "finding": "Cash transfers usually reduce child labour, especially when tied to schooling, but credit, asset and productive transfers can increase it by raising returns to children's work on family enterprises.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:wdevel:v:110:y:2018:i:c:p:104-123"
+ },
+ {
+  "lever_id": "LV-015",
+  "intervention_evidence": "Malhotra and Elnakib 2021, 20 Years of the Evidence Base on What Works to Prevent Child Marriage: A Systematic Review, Journal of Adolescent Health | Buchmann, Field, Glennerster, Nazneen and Wang 2023, A Signal to End Child Marriage: Theory and Experimental Evidence from Bangladesh, American Economic Review",
+  "finding": "Schooling support and conditional incentives delay marriage most consistently; a small incentive to delay marriage cut child marriage in Bangladesh, while girls' empowerment training alone did not.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aecrev:v:113:y:2023:i:10:p:2645-88"
+ },
+ {
+  "lever_id": "LV-016",
+  "intervention_evidence": "Cluver et al. 2018, Parenting for Lifelong Health: a pragmatic cluster randomised controlled trial of a non-commercialised parenting programme for adolescents and their families in South Africa, BMJ Global Health",
+  "finding": "A low-cost group parenting programme reduced abuse and harsh parenting of adolescents in South Africa; evidence on child protection services and case management in low- and middle-income countries remains scarce.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://gh.bmj.com/content/3/1/e000539.info"
+ },
+ {
+  "lever_id": "LV-017",
+  "intervention_evidence": "Cernea and Guggenheim 1994, Resettlement and Development: The Bankwide Review of Projects Involving Involuntary Resettlement 1986-1993, World Bank Environment Department Papers",
+  "finding": "Review of World Bank projects found resettlers' incomes were more often not restored than restored; restoration succeeded where people were moved onto land or jobs, shared project benefits and governments were committed.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.academia.edu/7947636/Resettlement_and_Development_The_Bankwide_Review_of_Projects_Involving_Involuntary_Resettlement_1986_1993"
+ },
+ {
+  "lever_id": "LV-018",
+  "intervention_evidence": "Bryan, Chowdhury and Mobarak 2014, Underinvestment in a Profitable Technology: The Case of Seasonal Migration in Bangladesh, Econometrica",
+  "finding": "A small travel subsidy raised seasonal migration and household consumption during the lean season in Bangladesh; later scale-ups found smaller effects, so impacts depend on destination labour demand.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wly:emetrp:v:82:y:2014:i::p:1671-1748"
+ },
+ {
+  "lever_id": "LV-019",
+  "intervention_evidence": "Marbach, Hainmueller and Hangartner 2018, The long-term impact of employment bans on the economic integration of refugees, Science Advances | Clemens, Huang and Graham 2018, The Economic and Fiscal Effects of Granting Refugees Formal Labor Market Access, Center for Global Development Working Paper",
+  "finding": "Longer employment bans in Germany lowered refugees' employment for years afterwards; granting formal work rights tends to raise refugees' earnings and tax contributions with small effects on host workers.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6155022"
+ },
+ {
+  "lever_id": "LV-020",
+  "intervention_evidence": "Carter, de Janvry, Sadoulet and Sarris 2017, Index Insurance for Developing Country Agriculture: A Reassessment, Annual Review of Resource Economics | Janzen and Carter 2019, After the Drought: The Impact of Microinsurance on Consumption Smoothing and Asset Protection, American Journal of Agricultural Economics",
+  "finding": "Index insurance helped Kenyan herders protect assets and consumption after drought and can encourage investment, but demand at market prices is low and basis risk undermines value.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:anr:reseco:v:9:y:2017:p:421-438"
+ },
+ {
+  "lever_id": "LV-021",
+  "intervention_evidence": "Pople, Hill, Dercon and Brunckhorst 2021, Anticipatory Cash Transfers in Climate Disaster Response, CSAE Working Paper",
+  "finding": "Flood-forecast-triggered cash paid before peak flooding in Bangladesh improved food consumption and wellbeing more than later payments; evidence depends on accurate triggers and ready payment channels, and remains limited.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:csa:wpaper:2021-07"
+ },
+ {
+  "lever_id": "LV-022",
+  "intervention_evidence": "Galiani, Gertler and Bando 2016, Non-contributory pensions, Labour Economics | Duflo 2003, Grandmothers and Granddaughters: Old-Age Pensions and Intrahousehold Allocation in South Africa, World Bank Economic Review",
+  "finding": "Non-contributory pensions raise elderly consumption and mental health and reduce work at older ages; in South Africa pensions to women improved granddaughters' nutrition, so effects depend on who receives them.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:labeco:v:38:y:2016:i:c:p:47-58"
+ },
+ {
+  "lever_id": "LV-023",
+  "intervention_evidence": "Erlangga, Suhrcke, Ali and Bloor 2019, The impact of public health insurance on health care utilisation, financial protection and health status in low- and middle-income countries: A systematic review, PLoS ONE",
+  "finding": "Public health insurance consistently raises use of care, but effects on out-of-pocket spending and health status are mixed, depending on benefit package depth and supply-side quality.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:plo:pone00:0219731"
+ },
+ {
+  "lever_id": "LV-024",
+  "intervention_evidence": "Hanna and Olken 2018, Universal Basic Incomes versus Targeted Transfers: Anti-Poverty Programs in Developing Countries, Journal of Economic Perspectives | Alatas et al. 2016, Self-Targeting: Evidence from a Field Experiment in Indonesia, Journal of Political Economy",
+  "finding": "Proxy-means targeting excludes many poor households but still delivers more welfare per budget than universal transfers; small application costs improved self-selection of the poor in Indonesia.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:jecper:v:32:y:2018:i:4:p:201-26"
+ },
+ {
+  "lever_id": "LV-025",
+  "intervention_evidence": "Bastagli et al. 2016, Cash transfers: what does the evidence say? A rigorous review of programme impact and of the role of design and implementation features, ODI | Pega et al. 2022, Unconditional cash transfers for reducing poverty and vulnerabilities: effect on use of health services and health outcomes in low- and middle-income countries, Cochrane Database of Systematic Reviews",
+  "finding": "Unconditional transfers consistently raise consumption and reduce poverty and probably food insecurity and illness; effect size depends on transfer value, regularity and timely payment.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD011135.pub3/information"
+ },
+ {
+  "lever_id": "LV-026",
+  "intervention_evidence": "Banerjee, Duflo and Sharma 2021, Long-Term Effects of the Targeting the Ultra Poor Program, American Economic Review: Insights | Bossuroy et al. 2022, Tackling psychosocial and capital constraints to alleviate poverty, Nature",
+  "finding": "Graduation programmes produced lasting gains in consumption and assets for ten years in India; in Niger, adding cash to psychosocial support raised impacts, while cheaper versions gave smaller gains.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aeri.20200667"
+ },
+ {
+  "lever_id": "LV-027",
+  "intervention_evidence": "Baird, Ferreira, Ozler and Woolcock 2014, Conditional, unconditional and everything in between: a systematic review of the effects of cash transfer programmes on schooling outcomes, Journal of Development Effectiveness",
+  "finding": "Both conditional and unconditional transfers raise enrolment and attendance; explicitly monitored and enforced conditions produce larger schooling gains, while learning effects are small.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:taf:jdevef:v:6:y:2014:i:1:p:1-43"
+ },
+ {
+  "lever_id": "LV-028",
+  "intervention_evidence": "Hidrobo, Hoddinott, Kumar and Olivier 2018, Social Protection, Food Security, and Asset Formation, World Development | Jensen and Miller 2011, Do Consumer Price Subsidies Really Improve Nutrition?, Review of Economics and Statistics",
+  "finding": "Transfers raise food consumption and dietary quality across many programmes, whereas staple price subsidies in China mostly shifted spending to other foods and did not improve calorie intake.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:wdevel:v:101:y:2018:i:c:p:88-103"
+ },
+ {
+  "lever_id": "LV-029",
+  "intervention_evidence": "Bhutta et al. 2013, Evidence-based interventions for improvement of maternal and child nutrition: what can be done and at what cost?, The Lancet | Sinha et al. 2015, Interventions to improve breastfeeding outcomes: a systematic review and meta-analysis, Acta Paediatrica",
+  "finding": "Scaling ten proven nutrition interventions to 90 percent coverage would avert about 15 percent of child deaths; breastfeeding promotion works best when combining facility, home and community counselling.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://ecommons.aku.edu/pakistan_fhs_mc_women_childhealth_paediatr/662"
+ },
+ {
+  "lever_id": "LV-030",
+  "intervention_evidence": "Hoffmann, Moser and Saak 2019, Food safety in low and middle-income countries: The evidence through an economic lens, World Development",
+  "finding": "Few rigorous evaluations show food safety regulation reducing illness in low- and middle-income countries; formal standards mainly reach export chains, while informal domestic markets need training and incentive-based approaches.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:wdevel:v:123:y:2019:i:c:7"
+ },
+ {
+  "lever_id": "LV-031",
+  "intervention_evidence": "Omotilewa, Ricker-Gilbert, Ainembabazi and Shively 2018, Does improved storage technology promote modern input use and food security? Evidence from a randomized trial in Uganda, Journal of Development Economics | Burke, Bergquist and Miguel 2019, Sell Low and Buy High: Arbitrage and Local Price Effects in Kenyan Markets, Quarterly Journal of Economics",
+  "finding": "Hermetic storage bags cut losses and lean-season food insecurity in Uganda, and harvest-time credit let Kenyan farmers store and sell later at higher prices, though gains shrink when many farmers store.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:135:y:2018:i:c:p:176-198"
+ },
+ {
+  "lever_id": "LV-032",
+  "intervention_evidence": "Wang, Shinde, Young and Fawzi 2021, Impacts of school feeding on educational and health outcomes of school-age children and adolescents in low- and middle-income countries: a systematic review and meta-analysis, Journal of Global Health",
+  "finding": "School feeding modestly raises enrolment, attendance and some learning and anthropometric outcomes, with stronger effects in food-insecure settings and where meals are regular and of adequate quality.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/34552720/"
+ },
+ {
+  "lever_id": "LV-033",
+  "intervention_evidence": "Braga, Turchan, Papachristos and Hureau 2019, Hot spots policing and crime reduction: an update of an ongoing systematic review and meta-analysis, Journal of Experimental Criminology | Blair et al. 2021, Community policing does not build citizen trust in police or reduce crime in the Global South, Science",
+  "finding": "Policing focused on crime hot spots reduces crime with little displacement, but multi-country trials of community policing in the Global South found no gains in crime or trust.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://krimdok.uni-tuebingen.de/Record/1748384015 | https://mitgovlab.org/research/community-policing-does-not-build-citizen-trust-in-police-or-reduce-crime-in-the-global-south/"
+ },
+ {
+  "lever_id": "LV-034",
+  "intervention_evidence": "Blattman, Chaskel, Jamison and Sheridan 2023, Cognitive Behavior Therapy Reduces Crime and Violence over Ten Years: Experimental Evidence, American Economic Review: Insights | Abt and Winship 2016, What Works in Reducing Community Violence: A Meta-Review and Field Study for the Northern Triangle, USAID",
+  "finding": "Short cognitive behavioural therapy for high-risk men in Liberia cut crime and violence for a decade, and focused deterrence and therapy-based programmes outperform broad, untargeted prevention.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.nber.org/system/files/working_papers/w30049/w30049.pdf | https://cwinship.scholars.harvard.edu/publications/what-works-reducing-community-violence-meta-review-and-field-study-northern"
+ },
+ {
+  "lever_id": "LV-035",
+  "intervention_evidence": "Chemin 2009, The impact of the judiciary on entrepreneurship: Evaluation of Pakistan's Access to Justice Programme, Journal of Public Economics",
+  "finding": "A judicial reform that sped up case resolution in Pakistan raised contract enforcement and small-firm investment; rigorous evidence on legal aid and alternative dispute resolution for the poor remains scarce.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:pubeco:v:93:y:2009:i:1-2:p:114-125"
+ },
+ {
+  "lever_id": "LV-036",
+  "intervention_evidence": "Di Tella and Schargrodsky 2013, Criminal Recidivism after Prison and Electronic Monitoring, Journal of Political Economy | Lipsey, Landenberger and Wilson 2007, Effects of cognitive-behavioral programs for criminal offenders, Campbell Systematic Reviews",
+  "finding": "Electronic monitoring instead of prison cut reoffending in Argentina, and cognitive behavioural programmes reduce recidivism by about a quarter, especially for higher-risk offenders and well-implemented programmes.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://dash.harvard.edu/bitstream/1/28548029/1/ditella,schargrodsky_JPE-electronic-monitoring.pdf | https://ideas.repec.org/a/wly/camsys/v3y2007i1p1-27a.html"
+ },
+ {
+  "lever_id": "LV-037",
+  "intervention_evidence": "Werb et al. 2011, Effect of drug law enforcement on drug market violence: A systematic review, International Journal of Drug Policy | Castillo, Mejia and Restrepo 2020, Scarcity without Leviathan: The Violent Effects of Cocaine Supply Shortages in the Mexican Drug War, Review of Economics and Statistics",
+  "finding": "Most studies find intensified drug enforcement increases market violence, and supply shortages raised homicides in Mexico; crackdowns reduce violence only when paired with institutions able to absorb displaced trade.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/21392957/ | https://econpapers.repec.org/RePEc:tpr:restat:v:102:y:2020:i:2:p:269-286"
+ },
+ {
+  "lever_id": "LV-038",
+  "intervention_evidence": "Independent Evaluation Group 2008, The Welfare Impact of Rural Electrification: A Reassessment of the Costs and Benefits, World Bank | Jeuland et al. 2021, Is energy the golden thread? A systematic review of the impacts of modern and traditional energy use in low- and middle-income countries, Renewable and Sustainable Energy Reviews",
+  "finding": "Grid connections bring gains in lighting, study time and home business, but effects on incomes are often small where consumption is low and complementary inputs or reliable supply are lacking.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wbk:wbpubs:6519 | https://energyaccess.duke.edu/publication/is-energy-the-golden-thread-a-systematic-review-of-the-impacts-of-modern-and-traditional-energy-use-in-low-and-middle-income-countries/"
+ },
+ {
+  "lever_id": "LV-039",
+  "intervention_evidence": "Wolf et al. 2022, Effectiveness of interventions to improve drinking water, sanitation, and handwashing with soap on risk of diarrhoeal disease in children in low-income and middle-income settings: a systematic review and meta-analysis, The Lancet | Kremer et al. 2023, Water Treatment and Child Mortality: A Meta-Analysis and Cost-effectiveness Analysis, NBER Working Paper",
+  "finding": "Water treatment and piped water reduce child diarrhoea and mortality substantially, while basic sanitation shows weaker effects; gains depend on sustained use and high community-wide coverage.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9251635/ | https://www.nber.org/papers/w30835"
+ },
+ {
+  "lever_id": "LV-040",
+  "intervention_evidence": "Clasen et al. 2022, Liquefied Petroleum Gas or Biomass for Cooking and Effects on Birth Weight, New England Journal of Medicine | Berkouwer and Dean 2022, Credit, Attention, and Externalities in the Adoption of Energy Efficient Technologies by Low-Income Households, American Economic Review",
+  "finding": "Free LPG stoves and fuel did not improve birth weight in a four-country trial, while efficient charcoal stoves in Kenya cut fuel spending; health gains require near-exclusive clean fuel use.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/36214599/ | https://econpapers.repec.org/RePEc:aea:aecrev:v:112:y:2022:i:10:p:3291-3330"
+ },
+ {
+  "lever_id": "LV-041",
+  "intervention_evidence": "Turley et al. 2013, Slum upgrading strategies involving physical environment and infrastructure interventions and their effects on health and socio-economic outcomes, Cochrane Database of Systematic Reviews | Barnhardt, Field and Pande 2017, Moving to Opportunity or Isolation? Network Effects of a Randomized Housing Lottery in Urban India, American Economic Journal: Applied Economics",
+  "finding": "Slum upgrading evidence is limited but suggests health gains from water and floor improvements; relocation to formal housing in India broke social networks and many winners moved back.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD010067/abstract | https://econpapers.repec.org/RePEc:aea:aejapp:v:9:y:2017:i:1:p:1-32"
+ },
+ {
+  "lever_id": "LV-042",
+  "intervention_evidence": "Rocha and Soares 2010, Evaluating the impact of community-based health interventions: evidence from Brazil's Family Health Program, Health Economics | Gruber, Hendren and Townsend 2014, The Great Equalizer: Health Care Access and Infant Mortality in Thailand, American Economic Journal: Applied Economics",
+  "finding": "Expanding primary care teams in Brazil and access to local providers in Thailand reduced infant mortality, with gains concentrated in poorer areas where facilities were added and staffed.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wly:hlthec:v:19:y:2010:i:s1:p:126-158 | https://econpapers.repec.org/RePEc:aea:aejapp:v:6:y:2014:i:1:p:91-107"
+ },
+ {
+  "lever_id": "LV-043",
+  "intervention_evidence": "Rowe et al. 2018, Effectiveness of strategies to improve health-care provider practices in low-income and middle-income countries: a systematic review, The Lancet Global Health | Basinga et al. 2011, Effect on maternal and child health services in Rwanda of payment to primary health-care providers for performance: an impact evaluation, The Lancet",
+  "finding": "Combining training with supervision or group problem solving improves provider practice more than training or guidelines alone; performance pay in Rwanda raised institutional deliveries and service quality.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.ids.ac.uk/publications/effectiveness-of-strategies-to-improve-health-care-provider-practices-in-low-income-and-middle-income-countries-a-systematic-review/ | https://pubmed.ncbi.nlm.nih.gov/21515164/"
+ },
+ {
+  "lever_id": "LV-044",
+  "intervention_evidence": "Lewin et al. 2010, Lay health workers in primary and community health care for maternal and child health and the management of infectious diseases, Cochrane Database of Systematic Reviews | Grobler et al. 2015, Interventions for increasing the proportion of health professionals practising in rural and other underserved areas, Cochrane Database of Systematic Reviews",
+  "finding": "Lay health workers raise immunisation, breastfeeding and tuberculosis cure rates; evidence that incentives, rural training or compulsory service retain professionals in underserved areas is very weak.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://read.qxmd.com/read/20238326/lay-health-workers-in-primary-and-community-health-care-for-maternal-and-child-health-and-the-management-of-infectious-diseases | https://www.cochrane.org/evidence/CD005314_interventions-increasing-proportion-health-professionals-practicing-rural-and-underserved-areas"
+ },
+ {
+  "lever_id": "LV-045",
+  "intervention_evidence": "Acosta et al. 2014, Pharmaceutical policies: effects of reference pricing, other pricing, and purchasing policies, Cochrane Database of Systematic Reviews | Bjorkman Nyqvist, Svensson and Yanagizawa-Drott 2022, Can Good Products Drive Out Bad? A Randomized Intervention in the Antimalarial Medicine Market in Uganda, Journal of the European Economic Association",
+  "finding": "Reference pricing can lower drug spending without harming health, though evidence is mostly from rich countries; introducing quality-assured antimalarials in Uganda drove fake drugs from local markets.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005979.pub2/information | https://econpapers.repec.org/RePEc:oup:jeurec:v:20:y:2022:i:3:p:957-1000."
+ },
+ {
+  "lever_id": "LV-046",
+  "intervention_evidence": "Lassi and Bhutta 2015, Community-based intervention packages for reducing maternal and neonatal morbidity and mortality and improving neonatal outcomes, Cochrane Database of Systematic Reviews | Banerjee, Duflo, Glennerster and Kothari 2010, Improving immunisation coverage in rural India: clustered randomised controlled evaluation of immunisation campaigns with and without incentives, BMJ",
+  "finding": "Community-based newborn care packages cut neonatal mortality, and reliable immunisation camps plus small incentives raised full immunisation sixfold in India; success depends on dependable supply and demand-side support.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007754.pub3/information | https://doi.org/10.1136%2Fbmj.c2220"
+ },
+ {
+  "lever_id": "LV-047",
+  "intervention_evidence": "Teng et al. 2019, Impact of sugar-sweetened beverage taxes on purchases and dietary intake: Systematic review and meta-analysis, Obesity Reviews | Colchero et al. 2016, Beverage purchases from stores in Mexico under the excise tax on sugar sweetened beverages: observational study, BMJ",
+  "finding": "Sugary drink taxes reduce purchases roughly in proportion to price rises, including in Mexico, while information-only health promotion and education campaigns show smaller and less consistent behaviour change.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/31218808/ | https://www.bmj.com/content/352/bmj.h6704"
+ },
+ {
+  "lever_id": "LV-048",
+  "intervention_evidence": "Pryce, Richardson and Lengeler 2018, Insecticide-treated nets for preventing malaria, Cochrane Database of Systematic Reviews | Cohen and Dupas 2010, Free Distribution or Cost-Sharing? Evidence from a Randomized Malaria Prevention Experiment, Quarterly Journal of Economics",
+  "finding": "Insecticide-treated nets reduce child mortality and malaria episodes, and free distribution in Kenya raised coverage without lowering use, so cost-sharing undermines public disease control.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.cochrane.org/CD000363/INFECTN_insecticide-treated-nets-preventing-malaria | https://www.nber.org/papers/w14406"
+ },
+ {
+  "lever_id": "LV-049",
+  "intervention_evidence": "Chaloupka, Yurekli and Fong 2012, Tobacco taxes as a tobacco control strategy, Tobacco Control | Wagenaar, Salois and Komro 2009, Effects of beverage alcohol price and tax levels on drinking: a meta-analysis of 1003 estimates from 112 studies, Addiction",
+  "finding": "Higher tobacco and alcohol taxes consistently reduce consumption, with larger responses among young and poor users; effects weaken where smuggling and untaxed informal supply are widespread.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/22345242/ | https://pmc.ncbi.nlm.nih.gov/articles/PMC2951962"
+ },
+ {
+  "lever_id": "LV-050",
+  "intervention_evidence": "Staton et al. 2016, Road Traffic Injury Prevention Initiatives: A Systematic Review and Metasummary of Effectiveness in Low and Middle Income Countries, PLoS ONE | Liu et al. 2008, Helmets for preventing injury in motorcycle riders, Cochrane Database of Systematic Reviews",
+  "finding": "Helmets cut motorcycle deaths by about two-fifths, and enforced helmet, speed and drink-driving laws reduce road injuries in low- and middle-income countries; laws without enforcement achieve little.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4703343 | https://pubmed.ncbi.nlm.nih.gov/18254047/"
+ },
+ {
+  "lever_id": "LV-051",
+  "intervention_evidence": "Barbui et al. 2020, Efficacy of psychosocial interventions for mental health outcomes in low-income and middle-income countries: an umbrella review, The Lancet Psychiatry | Singla et al. 2017, Psychological Treatments for the World: Lessons from Low- and Middle-Income Countries, Annual Review of Clinical Psychology",
+  "finding": "Psychological treatments delivered by trained lay counsellors reduce depression and anxiety in low- and middle-income countries, with effects depending on supervision, training quality and fit to local context.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://research.vu.nl/en/publications/efficacy-of-psychosocial-interventions-for-mental-health-outcomes/ | https://pmc.ncbi.nlm.nih.gov/articles/PMC5506549"
+ },
+ {
+  "lever_id": "LV-052",
+  "intervention_evidence": "Burde and Linden 2013, Bringing Education to Afghan Girls: A Randomized Controlled Trial of Village-Based Schools, American Economic Journal: Applied Economics | Petrosino et al. 2012, Interventions in Developing Nations for Improving Primary and Secondary School Enrollment of Children: A Systematic Review, Campbell Systematic Reviews",
+  "finding": "Building schools close to home sharply raises enrolment, especially for girls, as village schools in Afghanistan showed; enrolment gains do not translate into learning without improved teaching.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aejapp:v:5:y:2013:i:3:p:27-40 | https://econpapers.repec.org/RePEc:wly:camsys:v:8:y:2012:i:1:p:i-192"
+ },
+ {
+  "lever_id": "LV-053",
+  "intervention_evidence": "Evans and Popova 2016, What Really Works to Improve Learning in Developing Countries? An Analysis of Divergent Findings in Systematic Reviews, World Bank Research Observer | Banerjee et al. 2017, From Proof of Concept to Scalable Policies: Challenges and Solutions, with an Application, Journal of Economic Perspectives",
+  "finding": "Pedagogy that targets teaching to children's actual learning level, and structured lesson guides with teacher support, produce the largest learning gains; curriculum changes without classroom support rarely work.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:wbrobs:v:31:y:2016:i:2:p:242-270. | https://econpapers.repec.org/RePEc:aea:jecper:v:31:y:2017:i:4:p:73-102"
+ },
+ {
+  "lever_id": "LV-054",
+  "intervention_evidence": "Popova, Evans, Breeding and Arancibia 2022, Teacher Professional Development around the World: The Gap between Evidence and Practice, World Bank Research Observer | de Ree, Muralidharan, Pradhan and Rogers 2018, Double for Nothing? Experimental Evidence on an Unconditional Teacher Salary Increase in Indonesia, Quarterly Journal of Economics",
+  "finding": "Training linked to specific subjects, with follow-up coaching and career incentives, improves learning, but doubling teacher pay unconditionally in Indonesia raised satisfaction without improving student learning.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://zendy.io/title/10.1093/wbro/lkab006 | https://econpapers.repec.org/RePEc:oup:qjecon:v:133:y:2018:i:2:p:993-1039."
+ },
+ {
+  "lever_id": "LV-055",
+  "intervention_evidence": "Britto et al. 2017, Nurturing care: promoting early childhood development, The Lancet | Gertler et al. 2014, Labor market returns to an early childhood stimulation intervention in Jamaica, Science",
+  "finding": "Home-visit stimulation and quality pre-school improve child development, and Jamaican toddler stimulation raised adult earnings by about a quarter; benefits depend on programme quality and frequent contact.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://scholars.aku.edu/en/publications/nurturing-care-promoting-early-childhood-development-3/ | https://heckmanequation.org/resource/labor-market-returns-to-an-early-childhood-stimulation-intervention-in-jamaica/"
+ },
+ {
+  "lever_id": "LV-056",
+  "intervention_evidence": "Lucas and Mbiti 2012, Access, Sorting, and Achievement: The Short-Run Effects of Free Primary Education in Kenya, American Economic Journal: Applied Economics | Kremer, Miguel and Thornton 2009, Incentives to Learn, Review of Economics and Statistics",
+  "finding": "Fee abolition raises enrolment, especially for poorer children, but can crowd classrooms; merit scholarships for girls in Kenya raised test scores, including among girls unlikely to win.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aejapp:v:4:y:2012:i:4:p:226-53 | https://econpapers.repec.org/RePEc:tpr:restat:v:91:y:2009:i:3:p:437-456"
+ },
+ {
+  "lever_id": "LV-057",
+  "intervention_evidence": "Taylor-Robinson et al. 2019, Public health deworming programmes for soil-transmitted helminths in children living in endemic areas, Cochrane Database of Systematic Reviews | Freeman et al. 2012, Assessing the impact of a school-based water treatment, hygiene and sanitation programme on pupil absence in Nyanza Province, Kenya: a cluster-randomized trial, Tropical Medicine and International Health",
+  "finding": "Mass school deworming shows little effect on weight, cognition or attendance in this review, contested by economists; school water and sanitation reduced girls' absence in Kenya where sanitation was added.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://livrepository.liverpool.ac.uk/3064438/ | https://researchonline.lshtm.ac.uk/id/eprint/20535"
+ },
+ {
+  "lever_id": "LV-058",
+  "intervention_evidence": "Ferreyra, Avitabile, Botero Alvarez, Haimovich Paz and Urzua 2017, At a Crossroads: Higher Education in Latin America and the Caribbean, World Bank | Hastings, Neilson and Zimmerman 2013, Are Some Degrees Worth More than Others? Evidence from College Admission Cutoffs in Chile, NBER Working Paper",
+  "finding": "Rapid tertiary expansion in Latin America widened access but brought high dropout and uneven quality; returns in Chile vary greatly by degree and institution, so quality assurance and information matter.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://openknowledge.worldbank.org/handle/10986/26489 | https://ideas.repec.org/p/nbr/nberwo/19241.html"
+ },
+ {
+  "lever_id": "LV-059",
+  "intervention_evidence": "McKenzie 2017, How Effective Are Active Labor Market Policies in Developing Countries? A Critical Review of Recent Evidence, World Bank Research Observer",
+  "finding": "Vocational training programmes in developing countries raise employment only modestly, a few percentage points, and are often not cost-effective; they do better when courses are tied to employer demand.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.peiglobal.org/sites/pei/themes/pei/kc_files/McKenzie 2017.pdf"
+ },
+ {
+  "lever_id": "LV-060",
+  "intervention_evidence": "Alfonsi, Bandiera, Bassi, Burgess, Rasul, Sulaiman and Vitali 2020, Tackling Youth Unemployment: Evidence from a Labor Market Experiment in Uganda, Econometrica",
+  "finding": "Both firm-provided and certified institutional training raised youth employment and earnings in Uganda, but firm-based training gains were smaller and less portable because skills were less visible to other employers.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wly:emetrp:v:88:y:2020:i:6:p:2369-2414"
+ },
+ {
+  "lever_id": "LV-061",
+  "intervention_evidence": "Carranza, Garlick, Orkin and Rankin 2022, Job Search and Hiring with Limited Information about Workseekers' Skills, American Economic Review",
+  "finding": "Giving South African jobseekers credible skill assessment reports raised employment and earnings, mainly when the reports could be shown to employers, so certification works by making skills visible.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20200961"
+ },
+ {
+  "lever_id": "LV-062",
+  "intervention_evidence": "Novella, Freund and Rosas-Shady 2026, Digital skills for better jobs: Experimental evidence from a bootcamp training program in Peru, Journal of Development Economics",
+  "finding": "An online digital skills bootcamp for Peruvian youth raised entry into tech jobs after two years, but average effects were null because gains held only in tracks matching local demand for skills.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/deveco/v182y2026ics0304387826001215.html"
+ },
+ {
+  "lever_id": "LV-063",
+  "intervention_evidence": "Hjort and Poulsen 2019, The Arrival of Fast Internet and Employment in Africa, American Economic Review | Cristia, Ibarraran, Cueto, Santiago and Severin 2017, Technology and Child Development: Evidence from the One Laptop per Child Program, AEJ: Applied Economics",
+  "finding": "Fast internet arrival raised employment, especially skilled jobs, across African countries; but giving laptops to Peruvian children improved computer skills without raising maths or reading, so devices alone do little.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20161385"
+ },
+ {
+  "lever_id": "LV-064",
+  "intervention_evidence": "Dobbeling-Hildebrandt et al. 2024, Systematic review and meta-analysis of ex-post evaluations on the effectiveness of carbon pricing, Nature Communications",
+  "finding": "Across 21 carbon pricing schemes, introduction cut emissions by roughly 5 to 21 percent, about 10 percent on average, even at modest prices; evidence from developing countries is mostly China's pilot markets.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.nature.com/articles/s41467-024-48512-w.pdf"
+ },
+ {
+  "lever_id": "LV-065",
+  "intervention_evidence": "Stechemesser et al. 2024, Climate policies that achieved major emission reductions: Global evidence from two decades, Science",
+  "finding": "Of about 1,500 climate policies, few produced large emission breaks; successes mostly came from mixes where subsidies and regulation were combined with pricing, while subsidies alone rarely delivered big cuts.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.inet.ox.ac.uk/publications/climate-policies-that-achieved-major-emission-reductions-global-evidence-from-two-decades"
+ },
+ {
+  "lever_id": "LV-066",
+  "intervention_evidence": "Davis, Fuchs and Gertler 2014, Cash for Coolers: Evaluating a Large-Scale Appliance Replacement Program in Mexico, AEJ: Economic Policy | Fowlie, Greenstone and Wolfram 2018, Do Energy Efficiency Investments Deliver? Evidence from the Weatherization Assistance Program, QJE",
+  "finding": "Efficiency subsidies saved far less energy than engineering estimates: Mexican fridge replacement saved modestly and air-conditioner replacement raised use through rebound; US weatherisation delivered about 40 percent of projected savings.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://openknowledge.worldbank.org/entities/publication/9a7a619d-c408-51c7-a20c-929bac64ab28/full"
+ },
+ {
+  "lever_id": "LV-067",
+  "intervention_evidence": "Fisch-Romito, Guivarch, Creutzig, Minx and Callaghan 2021, Systematic map of the literature on carbon lock-in induced by long-lived capital, Environmental Research Letters",
+  "finding": "The literature on carbon lock-in is large but mostly modelling and focused on power plants; ex-post evidence on which planning or investment rules actually avoid high-carbon infrastructure is scarce.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://depositonce.tu-berlin.de/items/2471e9c2-4724-48f9-8e38-8703616bf1b5/full"
+ },
+ {
+  "lever_id": "LV-068",
+  "intervention_evidence": "Rud, Simmons, Toews and Aragon 2024, Job displacement costs of phasing out coal, Journal of Public Economics | Hyman 2022, Can Displaced Labor Be Retrained? Evidence from Quasi-Random Assignment to Trade Adjustment Assistance, US Census Bureau CES Working Paper",
+  "finding": "UK coal pit closures left miners with large, lasting earnings losses; US trade adjustment retraining raised displaced workers' earnings, mainly when they retrained into growing occupations and places.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.iza.org/publications/dp/15581/imprint"
+ },
+ {
+  "lever_id": "LV-069",
+  "intervention_evidence": "Hino, Field and Orosco 2017, Managed retreat as a response to natural hazard risk, Nature Climate Change",
+  "finding": "Across 27 cases, relocation out of hazard zones happened and held only where residents and the implementing agency both saw benefits and costs were shared; top-down relocations often met resistance.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/nat/natcli/v7y2017i5d10.1038_nclimate3252.html"
+ },
+ {
+  "lever_id": "LV-070",
+  "intervention_evidence": "Simmons, Czajkowski and Done 2018, Economic Effectiveness of Implementing a Statewide Building Code: The Case of Florida, Land Economics",
+  "finding": "Homes built under Florida's statewide building code suffered markedly lower hurricane losses, with benefits exceeding costs, but codes only work where they are enforced and apply to new construction.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://le.uwpress.org/content/94/2/155"
+ },
+ {
+  "lever_id": "LV-071",
+  "intervention_evidence": "Narayan et al. 2016, The Effectiveness, Costs and Coastal Protection Benefits of Natural and Nature-Based Defences, PLoS ONE",
+  "finding": "Meta-analysis finds reefs, marshes and mangroves substantially reduce wave heights and can be cheaper than built breakwaters, mainly for low to moderate wave conditions; cost evidence remains limited.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852949/"
+ },
+ {
+  "lever_id": "LV-072",
+  "intervention_evidence": "Pittelkow et al. 2015, Productivity limits and potentials of the principles of conservation agriculture, Nature",
+  "finding": "No-till farming lowers yields on average, but matches conventional yields in dry climates when combined with residue retention and crop rotation, so adapted practices pay only under matching conditions.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/nat/nature/v517y2015i7534d10.1038_nature13809.html"
+ },
+ {
+  "lever_id": "LV-073",
+  "intervention_evidence": "Doocy and Tappis 2017, Cash-based approaches in humanitarian emergencies: a systematic review, Campbell Systematic Reviews | Pople, Hill, Dercon and Brunckhorst 2021, Anticipatory Cash Transfers in Climate Disaster Response, CSAE Working Paper",
+  "finding": "Emergency cash improves food security and costs less to deliver than in-kind aid; cash paid before Bangladesh floods, rather than after, protected consumption and reduced distress borrowing and asset sales.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/wly/camsys/v13y2017i1p1-200.html"
+ },
+ {
+  "lever_id": "LV-074",
+  "intervention_evidence": "Samii, Lisiecki, Kulkarni, Paler and Chavis 2014, Effects of decentralized forest management (DFM) on deforestation and poverty in low and middle income countries: a systematic review, Campbell Systematic Reviews",
+  "finding": "Community and decentralised forest management may modestly reduce deforestation, but rigorous studies are few and effects on poverty are unclear; results depend on local rights and enforcement.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/wly/camsys/v10y2014i1p1-88.html"
+ },
+ {
+  "lever_id": "LV-075",
+  "intervention_evidence": "Birkenbach, Kaczan and Smith 2017, Catch shares slow the race to fish, Nature",
+  "finding": "In US fisheries, catch shares lengthened fishing seasons and slowed the race to fish; evidence from developing-country small-scale fisheries, where monitoring is weak, is limited.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://scholars.duke.edu/publication/1244030"
+ },
+ {
+  "lever_id": "LV-076",
+  "intervention_evidence": "Geldmann et al. 2013, Effectiveness of terrestrial protected areas in reducing habitat loss and population declines, Biological Conservation",
+  "finding": "Protected areas generally slow habitat loss, but evidence that they halt species population declines is weaker; effectiveness depends on management capacity and on how much pressure the site faces.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://researchonline.jcu.edu.au/28748"
+ },
+ {
+  "lever_id": "LV-077",
+  "intervention_evidence": "Snilstveit et al. 2019, Incentives for climate mitigation in the land use sector: the effects of payment for environmental services on environmental and socioeconomic outcomes in low- and middle-income countries: a mixed-methods systematic review, Campbell Systematic Reviews",
+  "finding": "Payments for environmental services produce small reductions in deforestation and little or no income gain; impacts are larger when payments target land at real risk of clearing.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8356506/"
+ },
+ {
+  "lever_id": "LV-078",
+  "intervention_evidence": "Assuncao, Gandour and Rocha 2023, DETERring Deforestation in the Amazon: Environmental Monitoring and Law Enforcement, AEJ: Applied Economics",
+  "finding": "Brazil's satellite-based deforestation alerts, used to target field enforcement, substantially reduced Amazon clearing; the effect depends on monitoring being tied to actual sanctions.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/app.20200196"
+ },
+ {
+  "lever_id": "LV-079",
+  "intervention_evidence": "Crouzeilles et al. 2016, A global meta-analysis on the ecological drivers of forest restoration success, Nature Communications",
+  "finding": "Forest restoration recovers biodiversity and structure more fully where natural regeneration is possible and surrounding forest cover is high; active planting does not always outperform natural regeneration.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4874030"
+ },
+ {
+  "lever_id": "LV-080",
+  "intervention_evidence": "Jones et al. 2016, Invasive mammal eradication on islands results in substantial conservation gains, PNAS",
+  "finding": "Eradicating invasive mammals from islands produced recovery for hundreds of native species populations; success relies on islands where reinvasion can be prevented by biosecurity.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://escholarship.org/uc/item/4ng1h0d6"
+ },
+ {
+  "lever_id": "LV-081",
+  "intervention_evidence": "Olmstead and Stavins 2009, Comparing price and nonprice approaches to urban water conservation, Water Resources Research | Grafton et al. 2018, The paradox of irrigation efficiency, Science",
+  "finding": "Water pricing cuts urban demand more cost-effectively than use mandates, but subsidised irrigation efficiency often raises total water consumption unless allocations or caps are enforced alongside it.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://heep.hks.harvard.edu/publications/comparing-price-and-non-price-approaches-urban-water-conservation"
+ },
+ {
+  "lever_id": "LV-082",
+  "intervention_evidence": "Badiani-Magnusson and Jessoe 2019, Electricity Prices, Groundwater, and Agriculture: The Environmental and Agricultural Impacts of Electricity Subsidies in India, NBER chapter in Agricultural Productivity and Producer Behavior",
+  "finding": "Cheap farm electricity in India raises groundwater pumping, and higher power prices reduce extraction; pricing or rationing power is a workable control where direct metering of wells is not feasible.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nber.org/chapters/c13948"
+ },
+ {
+  "lever_id": "LV-083",
+  "intervention_evidence": "Jones, Kondylis, Loeser and Magruder 2022, Factor Market Failures and the Adoption of Irrigation in Rwanda, American Economic Review | Duflo and Pande 2007, Dams, QJE",
+  "finding": "Irrigation schemes raise farm output and cash cropping, but adoption is held back by labour market frictions; Indian large dams raised downstream output while increasing poverty in the dam's own district.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20210059"
+ },
+ {
+  "lever_id": "LV-084",
+  "intervention_evidence": "Dinar, Katz, De Stefano and Blankespoor 2015, Do treaties matter? Climate change, water variability, and cooperation along transboundary river basins, Political Geography | Sigman 2002, International Spillovers and Water Quality in Rivers: Do Countries Free Ride?, American Economic Review",
+  "finding": "Upstream countries free ride, leaving rivers more polluted at borders; treaties with allocation, enforcement and dispute mechanisms sustain cooperation better under water variability than bare agreements.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://cris.haifa.ac.il/en/publications/do-treaties-matter-climate-change-water-variability-and-cooperati/"
+ },
+ {
+  "lever_id": "LV-085",
+  "intervention_evidence": "Duflo, Greenstone, Pande and Ryan 2013, Truth-telling by Third-party Auditors and the Response of Polluting Firms: Experimental Evidence from India, QJE",
+  "finding": "Reforming Gujarat's pollution audits, with random auditor assignment, central payment and back-checks, made audits truthful and led plants to cut emissions; regulation works only when monitoring is credible.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w19259"
+ },
+ {
+  "lever_id": "LV-086",
+  "intervention_evidence": "Hanna, Duflo and Greenstone 2016, Up in Smoke: The Influence of Household Behavior on the Long-Run Impact of Improved Cooking Stoves, AEJ: Economic Policy | Kremer, Luby, Maertens, Tan and Wiecek 2023, Water Treatment and Child Mortality: A Meta-Analysis and Cost-effectiveness Analysis, NBER Working Paper",
+  "finding": "Water chlorination cuts child mortality by roughly a quarter to a third at low cost, but improved cookstoves in India brought no lasting smoke or health gains because households stopped using and maintaining them.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w30835"
+ },
+ {
+  "lever_id": "LV-087",
+  "intervention_evidence": "Blackman 2010, Alternative Pollution Control Policy Instruments in Developing Countries, Review of Environmental Economics and Policy",
+  "finding": "Voluntary, informational and cleaner production programmes in developing countries can reduce pollution, but rigorous evidence is limited and they work mainly when backed by a credible regulatory threat.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:renvpo:v:4:y:2010:i:2:p:234-253"
+ },
+ {
+  "lever_id": "LV-088",
+  "intervention_evidence": "Bel and Gradus 2016, Effects of unit-based pricing on household waste collection demand: A meta-regression analysis, Resource and Energy Economics",
+  "finding": "Charging households per unit of waste reduces unsorted waste and raises recycling, with weight-based charges most effective; evidence comes almost entirely from high-income countries with formal collection.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:resene:v:44:y:2016:i:c:p:169-182"
+ },
+ {
+  "lever_id": "LV-089",
+  "intervention_evidence": "Andor and Fels 2018, Behavioral economics and energy conservation: a systematic review of non-price interventions and their causal effects, Ecological Economics",
+  "finding": "Social comparisons, commitment devices, goal setting and labels reduce household energy use, but effects are usually small and vary widely by design and context.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:ecolec:v:148:y:2018:i:c:p:178-210"
+ },
+ {
+  "lever_id": "LV-090",
+  "intervention_evidence": "Sugawara 2014, From Volatility to Stability in Expenditure: Stabilization Funds in Resource-Rich Countries, IMF Working Paper",
+  "finding": "Resource-rich countries with stabilisation funds show lower volatility of government spending, but the cross-country evidence is correlational and funds help only with clear deposit and withdrawal rules.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.imf.org/external/pubs/cat/longres.aspx?sk=41417.0"
+ },
+ {
+  "lever_id": "LV-091",
+  "intervention_evidence": "Magud and Sosa 2013, When and Why Worry About Real Exchange Rate Appreciation? The Missing Link between Dutch Disease and Growth, Journal of International Commerce, Economics and Policy",
+  "finding": "Resource booms do appreciate the real exchange rate and shrink manufacturing, but evidence that this lowers overall growth, or that exchange-rate management prevents it, is weak.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/wsi/jicepx/v04y2013i02ns1793993313500099.html"
+ },
+ {
+  "lever_id": "LV-092",
+  "intervention_evidence": "Rustad, Le Billon and Lujala 2017, Has the Extractive Industries Transparency Initiative been a success? Identifying and evaluating EITI goals, Resources Policy",
+  "finding": "EITI has improved disclosure of resource revenues and public debate, but evidence that it reduces corruption or improves development outcomes is weak; disclosure works only with active civil society and follow-up.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:jrpoli:v:51:y:2017:i:c:p:151-162"
+ },
+ {
+  "lever_id": "LV-093",
+  "intervention_evidence": "Reinhart and Trebesch 2016, Sovereign Debt Relief and Its Aftermath, Journal of the European Economic Association",
+  "finding": "Debt relief that cut the face value of debt was followed by faster growth and lower debt ratios, while softer relief through maturity extensions or rescheduling brought no lasting improvement.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:jeurec:v:14:y:2016:i:1:p:215-251."
+ },
+ {
+  "lever_id": "LV-094",
+  "intervention_evidence": "Heinemann, Moessinger and Yeter 2018, Do fiscal rules constrain fiscal policy? A meta-regression-analysis, European Journal of Political Economy",
+  "finding": "Across 30 studies, fiscal rules are associated with lower deficits, but the effect shrinks once studies account for rules being adopted by already disciplined governments.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:poleco:v:51:y:2018:i:c:p:69-92"
+ },
+ {
+  "lever_id": "LV-095",
+  "intervention_evidence": "Independent Evaluation Group 2014, World Bank Group Support to Public-Private Partnerships: Lessons from Experience in Client Countries, FY02-12, World Bank",
+  "finding": "Supported PPPs mostly delivered services, but client governments rarely assessed or disclosed the fiscal risks and contingent liabilities they took on; frameworks for managing these liabilities were the weak point.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econbiz.de/Record/world-bank-group-support-to-public-private-partnerships-lessons-from-experience-in-client-countries-fy02-12/10012565665"
+ },
+ {
+  "lever_id": "LV-096",
+  "intervention_evidence": "No suitable intervention-level source confirmed",
+  "finding": "",
+  "strength": "none found",
+  "verified": "no",
+  "url": ""
+ },
+ {
+  "lever_id": "LV-097",
+  "intervention_evidence": "Joshi and Schultz 2013, Family Planning and Women's and Children's Health: Long-Term Consequences of an Outreach Program in Matlab, Bangladesh, Demography | Miller and Babiarz 2016, Family Planning Program Effects: Evidence from Microdata, Population and Development Review",
+  "finding": "Family planning programmes reduce fertility and, in Matlab, improved women's health and earnings and children's health; but they explain a modest share of fertility decline, more where unmet demand is high.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/spr/demogr/v50y2013i1p149-180.html"
+ },
+ {
+  "lever_id": "LV-098",
+  "intervention_evidence": "Karlan, Ratan and Zinman 2014, Savings by and for the Poor: A Research Review and Agenda, Review of Income and Wealth",
+  "finding": "Access to formal and commitment savings products can raise saving and investment among the poor, but take-up and active use are often low, so product design and transaction costs decide effects.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:bla:revinw:v:60:y:2014:i:1:p:36-78"
+ },
+ {
+  "lever_id": "LV-099",
+  "intervention_evidence": "Staubli and Zweimuller 2013, Does raising the early retirement age increase employment of older workers?, Journal of Public Economics",
+  "finding": "Raising Austria's early retirement age increased employment of older men and women, but also pushed some into unemployment or disability benefits, so gains depend on labour demand for older workers.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/pubeco/v108y2013icp17-32.html"
+ },
+ {
+  "lever_id": "LV-100",
+  "intervention_evidence": "Fu, Noguchi, Kawamura, Takahashi and Tamiya 2017, Spillover effect of Japanese long-term care insurance as an employment promotion policy for family caregivers, Journal of Health Economics",
+  "finding": "Japan's public long-term care insurance raised the employment of family caregivers by substituting formal care for family time; evidence from middle-income settings is lacking.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/jhecon/v56y2017icp103-112.html"
+ },
+ {
+  "lever_id": "LV-101",
+  "intervention_evidence": "Lederman, Olarreaga and Payton 2010, Export promotion agencies: Do they work?, Journal of Development Economics",
+  "finding": "Export promotion agencies are associated with higher exports on average, with diminishing returns to budget; they work better when focused on non-traditional exports and run with private-sector involvement.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:91:y:2010:i:2:p:257-265"
+ },
+ {
+  "lever_id": "LV-102",
+  "intervention_evidence": "Donaldson 2018, Railroads of the Raj: Estimating the Impact of Transportation Infrastructure, American Economic Review | Cosar and Demir 2016, Domestic road infrastructure and international trade: Evidence from Turkey, Journal of Development Economics",
+  "finding": "Transport links that cut trade costs raised trade and real incomes in colonial India, and Turkish road upgrades to ports raised exports, especially in time-sensitive goods from interior regions.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20101199"
+ },
+ {
+  "lever_id": "LV-103",
+  "intervention_evidence": "Fernandes, Hillberry and Mendoza Alcantara 2021, Trade Effects of Customs Reform: Evidence from Albania, World Bank Economic Review",
+  "finding": "Albania's risk-based customs inspections reduced physical inspections and raised imports, with larger effects for goods previously most delayed; gains depend on credible risk targeting.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://openknowledge.worldbank.org/entities/publication/ffe210c2-2bad-4287-bae2-e3dfdf01a309/full"
+ },
+ {
+  "lever_id": "LV-104",
+  "intervention_evidence": "Giroud 2013, Proximity and Investment: Evidence from Plant-Level Data, QJE",
+  "finding": "New direct airline routes that cut travel time between headquarters and plants raised plant investment and productivity, showing air links ease monitoring; evidence is from the United States.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/oup/qjecon/v128y2013i2p861-915.html"
+ },
+ {
+  "lever_id": "LV-105",
+  "intervention_evidence": "Cipollina and Salvatici 2010, Reciprocal Trade Agreements in Gravity Models: A Meta-Analysis, Review of International Economics",
+  "finding": "Across many gravity studies, reciprocal trade agreements raise trade among members on average, though estimated effects vary widely with method and agreement depth.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:bla:reviec:v:18:y:2010:i:1:p:63-80"
+ },
+ {
+  "lever_id": "LV-106",
+  "intervention_evidence": "Winters, McCulloch and McKay 2004, Trade Liberalization and Poverty: The Evidence So Far, Journal of Economic Literature | Goldberg and Pavcnik 2016, The Effects of Trade Policy, Handbook of Commercial Policy",
+  "finding": "Cutting own tariffs raises firm productivity and access to inputs, but gains are unevenly shared: regions and workers exposed to import competition can lose when labour cannot move.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:jeclit:v:42:y:2004:i:1:p:72-115"
+ },
+ {
+  "lever_id": "LV-107",
+  "intervention_evidence": "Pablo-Romero and Molina 2013, Tourism and economic growth: A review of empirical literature, Tourism Management Perspectives",
+  "finding": "Most studies find tourism growth raises economic growth, but effects vary by country and rigorous evaluations of destination development programmes that spread spending locally are scarce.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econbiz.de/Record/tourism-and-economic-growth-a-review-of-empirical-literature-pablo-romero-mar%C3%ADa-del-p%C3%B3pulo/10010225343"
+ },
+ {
+  "lever_id": "LV-108",
+  "intervention_evidence": "No suitable intervention-level source confirmed",
+  "finding": "",
+  "strength": "none found",
+  "verified": "no",
+  "url": ""
+ },
+ {
+  "lever_id": "LV-109",
+  "intervention_evidence": "No suitable intervention-level source confirmed",
+  "finding": "",
+  "strength": "none found",
+  "verified": "no",
+  "url": ""
+ },
+ {
+  "lever_id": "LV-110",
+  "intervention_evidence": "Alfaro-Urena, Manelici and Vasquez 2022, The Effects of Joining Multinational Supply Chains: New Evidence from Firm-to-Firm Linkages, QJE",
+  "finding": "Costa Rican firms that began supplying multinationals saw large, lasting gains in sales, employment and productivity, including with other buyers, showing learning from demanding buyers.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:137:y:2022:i:3:p:1495-1552."
+ },
+ {
+  "lever_id": "LV-111",
+  "intervention_evidence": "Harrison and Rodriguez-Clare 2010, Trade, Foreign Investment, and Industrial Policy for Developing Countries, Handbook of Development Economics",
+  "finding": "Evidence that traditional protection-based diversification policies raise productivity is weak; softer policies addressing coordination failures and supporting new activities are more promising but less tested.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/h/eee/devchp/v5y2010icp4039-4214.html"
+ },
+ {
+  "lever_id": "LV-112",
+  "intervention_evidence": "Lane 2025, Manufacturing Revolutions: Industrial Policy and Industrialization in South Korea, QJE",
+  "finding": "Korea's 1970s heavy and chemical industry drive raised output, productivity and exports in targeted industries and their downstream users, with gains persisting after support was withdrawn.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:140:y:2025:i:3:p:1683-1741."
+ },
+ {
+  "lever_id": "LV-113",
+  "intervention_evidence": "No suitable intervention-level source confirmed",
+  "finding": "",
+  "strength": "none found",
+  "verified": "no",
+  "url": ""
+ },
+ {
+  "lever_id": "LV-114",
+  "intervention_evidence": "Dimos and Pugh 2016, The effectiveness of R&D subsidies: A meta-regression analysis of the evaluation literature, Research Policy",
+  "finding": "R&D subsidies generally do not crowd out private R&D, but evidence of substantial extra spending is weak; studies come mostly from high-income countries.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:respol:v:45:y:2016:i:4:p:797-815"
+ },
+ {
+  "lever_id": "LV-115",
+  "intervention_evidence": "Bloom, Eifert, Mahajan, McKenzie and Roberts 2013, Does Management Matter? Evidence from India, QJE",
+  "finding": "Free management consulting for Indian textile firms raised productivity by about 17 percent within a year; firms had not adopted the practices because of information barriers, not cost.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:128:y:2013:i:1:p:1-51"
+ },
+ {
+  "lever_id": "LV-116",
+  "intervention_evidence": "Branstetter, Fisman and Foley 2006, Do Stronger Intellectual Property Rights Increase International Technology Transfer? Empirical Evidence from U.S. Firm-Level Panel Data, QJE",
+  "finding": "After countries strengthened patent rights, US multinationals increased technology transfer to affiliates there, most for patent-intensive firms; effects on domestic innovation in developing countries are less clear.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/oup/qjecon/v121y2006i1p321-349..html"
+ },
+ {
+  "lever_id": "LV-117",
+  "intervention_evidence": "Hvide and Jones 2018, University Innovation and the Professor's Privilege, American Economic Review | Cirera and Maloney 2017, The Innovation Paradox: Developing-Country Capabilities and the Unrealized Promise of Technological Catch-Up, World Bank",
+  "finding": "Moving invention rights from Norwegian professors to universities roughly halved university start-ups and patenting; in developing countries, weak firm capabilities limit what research-industry linkage programmes can deliver.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20160284"
+ },
+ {
+  "lever_id": "LV-118",
+  "intervention_evidence": "Kantor and Whalley 2025, Moonshot: Public R&D and Growth, American Economic Review",
+  "finding": "The US space race raised local manufacturing value added and employment, with gains concentrated in industries technologically related to the mission; rigorous evidence on frontier missions in developing countries is lacking.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w31471"
+ },
+ {
+  "lever_id": "LV-119",
+  "intervention_evidence": "Alston, Chan-Kang, Marra, Pardey and Wyatt 2000, A Meta-Analysis of Rates of Return to Agricultural R&D: Ex Pede Herculem?, IFPRI Research Report 113 | Renkow and Byerlee 2010, The impacts of CGIAR research: A review of recent evidence, Food Policy",
+  "finding": "Across hundreds of estimates, agricultural research earns high median returns, and CGIAR crop improvement shows large gains, though estimates vary widely and depend on local adaptation and farmer uptake.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://ageconsearch.umn.edu/record/16535"
+ },
+ {
+  "lever_id": "LV-120",
+  "intervention_evidence": "Crescenzi, Di Cataldo and Giua 2021, FDI inflows in Europe: Does investment promotion work?, Journal of International Economics | Klemm and Van Parys 2012, Empirical evidence on the effects of tax incentives, International Tax and Public Finance",
+  "finding": "Investment promotion agencies raise FDI inflows, most in less developed regions and through aftercare services; tax holidays attract some FDI but show no clear effect on total investment or growth.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://researchonline.lse.ac.uk/id/eprint/110728"
+ },
+ {
+  "lever_id": "LV-121",
+  "intervention_evidence": "Havranek and Irsova 2011, Estimating vertical spillovers from FDI: Why results vary and what the true effect is, Journal of International Economics",
+  "finding": "A meta-analysis finds economically meaningful productivity spillovers from foreign firms to local suppliers through backward linkages, while forward effects are small and estimates vary with study design and local absorptive capacity.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:inecon:v:85:y:2011:i:2:p:234-244"
+ },
+ {
+  "lever_id": "LV-122",
+  "intervention_evidence": "Atkin, Khandelwal and Osman 2017, Exporting and Firm Performance: Evidence from a Randomized Experiment, Quarterly Journal of Economics | Pahl and Timmer 2020, Do Global Value Chains Enhance Economic Upgrading? A Long View, Journal of Development Studies",
+  "finding": "Linking Egyptian rug makers to foreign buyers raised quality and profits through learning; across countries, value chain participation raises productivity growth but not necessarily domestic employment.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://dspace.mit.edu/handle/1721.1/113690"
+ },
+ {
+  "lever_id": "LV-123",
+  "intervention_evidence": "Parsons and Vezina 2018, Migrant Networks and Trade: The Vietnamese Boat People as a Natural Experiment, Economic Journal",
+  "finding": "Quasi-random settlement of Vietnamese refugees in US states later raised US exports to Vietnam, showing diaspora networks cut trade frictions; government diaspora engagement programmes themselves are rarely rigorously evaluated.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wly:econjl:v:128:y:2018:i:612:p:f210-f234"
+ },
+ {
+  "lever_id": "LV-124",
+  "intervention_evidence": "Ghani, Goswami and Kerr 2016, Highway to Success: The Impact of the Golden Quadrilateral Project for the Location and Performance of Indian Manufacturing, Economic Journal | Banerjee, Duflo and Qian 2020, On the road: Access to transportation infrastructure and economic growth in China, Journal of Development Economics",
+  "finding": "India's Golden Quadrilateral raised manufacturing entry and output in districts near the highway; in China, network access raised GDP levels modestly but not growth, with gains concentrated near nodes.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w18524"
+ },
+ {
+  "lever_id": "LV-125",
+  "intervention_evidence": "Aggarwal 2018, Do rural roads create pathways out of poverty? Evidence from India, Journal of Development Economics | Shamdasani 2021, Rural road infrastructure and agricultural production: Evidence from India, Journal of Development Economics",
+  "finding": "Indian village roads lowered prices and raised input adoption, schooling and crop diversification, but consumption gains are modest and depend on complementary market access and farm inputs.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/deveco/v133y2018icp375-395.html"
+ },
+ {
+  "lever_id": "LV-126",
+  "intervention_evidence": "Fafchamps and Minten 2012, Impact of SMS-Based Agricultural Information on Indian Farmers, World Bank Economic Review | Nakasone, Torero and Minten 2014, The Power of Information: The ICT Revolution in Agricultural Development, Annual Review of Resource Economics",
+  "finding": "Price information services often fail to raise farm-gate prices, as with a large SMS service in India; gains appear mainly where price dispersion is high and farmers can switch buyers.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/oup/wbecrv/v26y2012i3p383-414.html"
+ },
+ {
+  "lever_id": "LV-127",
+  "intervention_evidence": "Akerman, Gaarder and Mogstad 2015, The Skill Complementarity of Broadband Internet, Quarterly Journal of Economics | Bahia et al. 2024, The welfare effects of mobile broadband internet: Evidence from Nigeria, Journal of Development Economics",
+  "finding": "Broadband raises productivity and wages of skilled workers but not unskilled ones; in Nigeria, mobile broadband coverage raised household consumption and cut poverty, mainly through more wage employment.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/20826"
+ },
+ {
+  "lever_id": "LV-128",
+  "intervention_evidence": "Fan, Tang, Zhu and Zou 2018, The Alibaba effect: Spatial consumption inequality and the welfare gains from e-commerce, Journal of International Economics",
+  "finding": "E-commerce narrowed spatial consumption inequality in China, with gains largest for buyers in small remote cities; evidence that e-commerce programmes raise rural producers' sales and incomes remains limited.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:inecon:v:114:y:2018:i:c:p:203-220"
+ },
+ {
+  "lever_id": "LV-129",
+  "intervention_evidence": "Rud 2012, Electricity provision and industrial development: Evidence from India, Journal of Development Economics | Lee, Miguel and Wolfram 2020, Experimental Evidence on the Economics of Rural Electrification, Journal of Political Economy",
+  "finding": "Electrification expansion raised manufacturing output across Indian states, but subsidised grid connections in rural Kenya brought no measurable medium-run economic gains, so returns depend on productive demand for power.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/deveco/v97y2012i2p352-367.html"
+ },
+ {
+  "lever_id": "LV-130",
+  "intervention_evidence": "McRae 2015, Infrastructure Quality and the Subsidy Trap, American Economic Review | Jack and Smith 2020, Charging Ahead: Prepaid Metering, Electricity Use, and Utility Revenue, American Economic Journal: Applied Economics",
+  "finding": "Below-cost tariffs in Colombia trapped poor areas in low-quality supply; prepaid metering in South Africa reduced use, most among poorer households, while raising utility revenue net of costs.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/app.20180155"
+ },
+ {
+  "lever_id": "LV-131",
+  "intervention_evidence": "Zhang, Parker and Kirkpatrick 2008, Electricity sector reform in developing countries: an econometric assessment of the effects of privatization, competition and regulation, Journal of Regulatory Economics | Gassner, Popov and Pushak 2009, Does Private Sector Participation Improve Performance in Electricity and Water Distribution?, World Bank",
+  "finding": "Competition and independent regulation raise electricity output and capacity more than privatisation alone; private participation improves labour productivity and service quality but not reliably coverage or prices.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:kap:regeco:v:33:y:2008:i:2:p:159-178"
+ },
+ {
+  "lever_id": "LV-132",
+  "intervention_evidence": "Ryan 2021, The Competitive Effects of Transmission Infrastructure in the Indian Electricity Market, American Economic Journal: Microeconomics",
+  "finding": "Expanding transmission links in India's electricity market increases competition between generators and lowers prices, with gains depending on removing congestion; few other rigorous evaluations of interconnection exist.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/mic.20180191"
+ },
+ {
+  "lever_id": "LV-133",
+  "intervention_evidence": "Hufbauer, Schott, Cimino, Vieiro and Wada 2013, Local Content Requirements: A Global Problem, Peterson Institute for International Economics",
+  "finding": "Local content requirements generally raise input costs and reduce trade and output in using sectors, with few documented cases of lasting domestic capability gains.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:iie:ppress:6802"
+ },
+ {
+  "lever_id": "LV-134",
+  "intervention_evidence": "Martin, Mayer and Mayneris 2011, Public support to clusters: A firm level study of French Local Productive Systems, Regional Science and Urban Economics | Falck, Heblich and Kipar 2010, Industrial innovation: Direct evidence from a cluster-oriented policy, Regional Science and Urban Economics",
+  "finding": "French cluster subsidies went to declining firms and did not raise productivity, whereas Bavaria's cluster policy raised innovation; outcomes hinge on targeting and on firms with real growth potential.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:regeco:v:41:y:2011:i:2:p:108-123"
+ },
+ {
+  "lever_id": "LV-135",
+  "intervention_evidence": "Frick, Rodriguez-Pose and Wong 2019, Toward Economically Dynamic Special Economic Zones in Emerging Countries, Economic Geography | Lu, Wang and Zhu 2019, Place-Based Policies, Creation, and Agglomeration Economies: Evidence from China's Economic Zone Program, American Economic Journal: Economic Policy",
+  "finding": "Zone performance in emerging countries depends more on national context and proximity to markets than on incentives; China's zones raised investment, employment and output mainly by attracting new firms.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://researchonline.lse.ac.uk/id/eprint/87585"
+ },
+ {
+  "lever_id": "LV-136",
+  "intervention_evidence": "Kreindler 2024, Peak-Hour Road Congestion Pricing: Experimental Evidence and Equilibrium Implications, Econometrica",
+  "finding": "A Bangalore field experiment shows peak-hour charges shift commuters' departure times, but welfare gains from optimal congestion pricing are small because delay rises only gently with traffic volume.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w30903"
+ },
+ {
+  "lever_id": "LV-137",
+  "intervention_evidence": "Brueckner and Sridhar 2012, Measuring welfare gains from relaxation of land-use restrictions: The case of India's building-height limits, Regional Science and Urban Economics | Hsieh and Moretti 2019, Housing Constraints and Spatial Misallocation, American Economic Journal: Macroeconomics",
+  "finding": "Relaxing building-height limits in Indian cities would yield sizeable welfare gains, and housing constraints in productive US cities cut aggregate growth, provided added supply is allowed where jobs are.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/regeco/v42y2012i6p1061-1067.html"
+ },
+ {
+  "lever_id": "LV-138",
+  "intervention_evidence": "Michaels, Nigmatulina, Rauch, Regan, Baruah and Dahlstrand 2021, Planning Ahead for Better Neighborhoods: Long-Run Evidence from Tanzania, Journal of Political Economy",
+  "finding": "Tanzanian sites-and-services areas laid out before settlement became better-quality, higher-value neighbourhoods decades later, showing cheap early road grids pay off where planning precedes settlement.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://researchonline.lse.ac.uk/id/eprint/107479"
+ },
+ {
+  "lever_id": "LV-139",
+  "intervention_evidence": "Becker, Egger and von Ehrlich 2010, Going NUTS: The effect of EU Structural Funds on regional performance, Journal of Public Economics",
+  "finding": "EU Objective 1 transfers raised GDP per capita growth in eligible lagging regions but not employment, and returns depend on regional capacity to absorb funds.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:pubeco:v:94:y:2010:i:9-10:p:578-590"
+ },
+ {
+  "lever_id": "LV-140",
+  "intervention_evidence": "Banerjee, Duflo, Goldberg, Karlan, Osei, Pariente, Shapiro, Thuysbaert and Udry 2015, A multifaceted program causes lasting progress for the very poor: Evidence from six countries, Science | Blattman, Fiala and Martinez 2014, Generating Skilled Self-Employment in Developing Countries: Experimental Evidence from Uganda, Quarterly Journal of Economics",
+  "finding": "Graduation programmes combining an asset, training and support raised rural self-employment and consumption in six countries; cash grants for skilled trades in Uganda raised earnings where credit constraints bound.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.peiglobal.org/multifaceted-program-causes-lasting-progress-very-poor-evidence-six-countries | https://econpapers.repec.org/RePEc:oup:qjecon:v:129:y:2014:i:2:p:697-752"
+ },
+ {
+  "lever_id": "LV-141",
+  "intervention_evidence": "McKenzie 2021, Small business training to improve management practices in developing countries: re-assessing the evidence for training doesn't work, Oxford Review of Economic Policy | Campos, Frese, Goldstein et al. 2017, Teaching personal initiative beats traditional training in boosting small business in West Africa, Science",
+  "finding": "Business training improves management practices but average profit and sales effects are small and imprecise; personal-initiative training raised Togolese firm profits about 30 percent, outperforming conventional curricula.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:oxford:v:37:y:2021:i:2:p:276-301. | https://openknowledge.worldbank.org/entities/publication/f57d60bc-1e92-528f-be1a-ff833e42548a/full"
+ },
+ {
+  "lever_id": "LV-142",
+  "intervention_evidence": "Banerjee and Duflo 2014, Do Firms Want to Borrow More? Testing Credit Constraints Using a Directed Lending Program, Review of Economic Studies",
+  "finding": "Expanding directed credit to mid-sized Indian firms raised sales and profits, showing binding constraints; credit lines and guarantees pay where firms are constrained rather than substituting for other borrowing.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:restud:v:81:y:2014:i:2:p:572-607"
+ },
+ {
+  "lever_id": "LV-143",
+  "intervention_evidence": "Gonzalez-Uribe and Leatherbee 2018, The Effects of Business Accelerators on Venture Performance: Evidence from Start-Up Chile, Review of Financial Studies",
+  "finding": "Start-Up Chile's cash and co-working space alone did not improve ventures, but adding its entrepreneurship school raised fundraising and scale, so mentoring rather than money drove gains.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:rfinst:v:31:y:2018:i:4:p:1566-1603."
+ },
+ {
+  "lever_id": "LV-144",
+  "intervention_evidence": "Bruhn and McKenzie 2014, Entry Regulation and the Formalization of Microenterprises in Developing Countries, World Bank Research Observer",
+  "finding": "Simplifying registration modestly raises new formal firm entry, but few existing informal firms formalise because most see little benefit unless tax, enforcement or service incentives also change.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:wbrobs:v:29:y:2014:i:2:p:186-201."
+ },
+ {
+  "lever_id": "LV-145",
+  "intervention_evidence": "Burgess and Pande 2005, Do Rural Banks Matter? Evidence from the Indian Social Banking Experiment, American Economic Review | Barth, Caprio and Levine 2004, Bank regulation and supervision: what works best?, Journal of Financial Intermediation",
+  "finding": "India's rural branch expansion reduced rural poverty but carried high default costs; across countries, rules promoting disclosure and private monitoring support bank development more than strong official supervisory powers.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://sticerd.lse.ac.uk/_NEW/PUBLICATIONS/abstract/?index=1913 | https://ideas.repec.Org/a/eee/jfinin/v13y2004i2p205-248.html"
+ },
+ {
+  "lever_id": "LV-146",
+  "intervention_evidence": "Meager 2019, Understanding the Average Impact of Microcredit Expansions: A Bayesian Hierarchical Analysis of Seven Randomized Experiments, American Economic Journal: Applied Economics",
+  "finding": "Across seven randomised expansions, microcredit has small, likely positive effects on business outcomes and no transformative effect on household consumption; gains concentrate among households with existing businesses.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/app.20170299"
+ },
+ {
+  "lever_id": "LV-147",
+  "intervention_evidence": "Kaiser, Lusardi, Menkhoff and Urban 2022, Financial education affects financial knowledge and downstream behaviors, Journal of Financial Economics | Steinert et al. 2018, Do saving promotion interventions increase household savings, consumption, and investments in Sub-Saharan Africa? A systematic review and meta-analysis, World Development",
+  "finding": "Financial education has small positive effects on knowledge and behaviour; savings promotion raises savings in Africa, but effects on consumption and investment are weak and vary by design.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://papers.ssrn.com/abstract%3D3584941 | https://econpapers.repec.org/RePEc:eee:wdevel:v:104:y:2018:i:c:p:238-256"
+ },
+ {
+  "lever_id": "LV-148",
+  "intervention_evidence": "Aron 2018, Mobile Money and the Economy: A Review of the Evidence, World Bank Research Observer | Riley 2018, Mobile money and risk sharing against village shocks, Journal of Development Economics",
+  "finding": "Mobile money helps households smooth consumption after shocks by speeding remittances, as in Tanzania; benefits depend on dense agent networks, and long-run poverty effects remain debated.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:wbrobs:v:33:y:2018:i:2:p:135-188. | https://econpapers.repec.org/RePEc:eee:deveco:v:135:y:2018:i:c:p:43-58"
+ },
+ {
+  "lever_id": "LV-149",
+  "intervention_evidence": "Carter, Laajaj and Yang 2021, Subsidies and the African Green Revolution: Direct Effects and Social Network Spillovers of Randomized Input Subsidies in Mozambique, American Economic Journal: Applied Economics",
+  "finding": "Temporary fertiliser and seed vouchers in Mozambique raised adoption and yields that persisted after subsidies ended and spread through social networks; large national programmes often crowd out commercial sales.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/app.20190396"
+ },
+ {
+  "lever_id": "LV-150",
+  "intervention_evidence": "Waddington et al. 2014, Farmer Field Schools for Improving Farming Practices and Farmer Outcomes: A Systematic Review, Campbell Systematic Reviews | Takahashi, Muraoka and Otsuka 2020, Technology adoption, impact, and extension in developing countries' agriculture: A review of the recent literature, Agricultural Economics",
+  "finding": "Farmer field schools improve knowledge, yields and income for participants in pilots, but effects fade at scale and diffuse little to neighbours; extension works when the promoted technology is profitable locally.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://doaj.org/article/a33580c3698f439f9d274458a7bfc771 | https://econpapers.repec.org/RePEc:bla:agecon:v:51:y:2020:i:1:p:31-45"
+ },
+ {
+  "lever_id": "LV-151",
+  "intervention_evidence": "Duflo and Pande 2007, Dams, Quarterly Journal of Economics",
+  "finding": "Large Indian irrigation dams raised agricultural output and reduced poverty downstream but increased poverty in the dam's own district, so gains depend on who gains water access and compensation.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:122:y:2007:i:2:p:601-646."
+ },
+ {
+  "lever_id": "LV-152",
+  "intervention_evidence": "Daum and Birner 2020, Agricultural mechanization in Africa: Myths, realities and an emerging research agenda, Global Food Security",
+  "finding": "Mechanisation in Africa spreads mainly through private hire services where wages rise and farming commercialises; state tractor schemes often failed, and rigorous evaluations of consolidation programmes are few.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ui.adsabs.harvard.edu/abs/2020GlFS...2600393D"
+ },
+ {
+  "lever_id": "LV-153",
+  "intervention_evidence": "Pretty and Bharucha 2015, Integrated Pest Management for Sustainable Intensification of Agriculture in Asia and Africa, Insects",
+  "finding": "Across dozens of integrated pest management projects in Asia and Africa, yields rose and pesticide use fell on average, but evidence comes from project reports rather than rigorous impact evaluations.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4553536"
+ },
+ {
+  "lever_id": "LV-154",
+  "intervention_evidence": "Casaburi, Glennerster and Suri 2013, Rural Roads and Intermediated Trade: Regression Discontinuity Evidence from Sierra Leone, IGC Working Paper",
+  "finding": "Rehabilitating feeder roads to markets in Sierra Leone lowered local crop prices as trader competition rose, shifting gains towards consumers; rigorous evidence on collection centres and rural markets is limited.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.theigc.org/publications/rural-roads-and-intermediated-trade-working-paper"
+ },
+ {
+  "lever_id": "LV-155",
+  "intervention_evidence": "Fischer and Qaim 2012, Linking Smallholders to Markets: Determinants and Impacts of Farmer Collective Action in Kenya, World Development",
+  "finding": "Group membership raised Kenyan banana farmers' incomes through better prices and technology adoption, but the poorest are often excluded and benefits depend on group governance and market access.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/wdevel/v40y2012i6p1255-1268.html"
+ },
+ {
+  "lever_id": "LV-156",
+  "intervention_evidence": "Ton et al. 2018, Contract farming for improving smallholder incomes: What can we learn from effectiveness studies?, World Development | Meemken and Bellemare 2020, Smallholder farmers and contract farming in developing countries, Proceedings of the National Academy of Sciences",
+  "finding": "Contract farming raises participants' incomes on average, but estimates are inflated by selection and publication bias, the smallest farms participate less, and gains vary with crop and contract terms.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.ids.ac.uk/publications/contract-farming-for-improving-smallholder-incomes-what-can-we-learn-from-effectiveness-studies/ | https://pmc.ncbi.nlm.nih.gov/articles/PMC6955373"
+ },
+ {
+  "lever_id": "LV-157",
+  "intervention_evidence": "Kluve et al. 2019, Do youth employment programs improve labor market outcomes? A quantitative review, World Development | Crepon and van den Berg 2016, Active Labor Market Policies, Annual Review of Economics",
+  "finding": "Labour-market programmes have small average effects, larger in developing countries for skills training and entrepreneurship support with good design; job-search assistance helps mainly in the short run.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/eee/wdevel/v114y2019icp237-253.html | https://research.vu.nl/en/publications/active-labor-market-policies/"
+ },
+ {
+  "lever_id": "LV-158",
+  "intervention_evidence": "Neumark and Munguia Corella 2021, Do minimum wages reduce employment in developing countries? A survey and exploration of conflicting evidence, World Development | Engbom and Moser 2022, Earnings Inequality and the Minimum Wage: Evidence from Brazil, American Economic Review",
+  "finding": "Minimum wages in developing countries reduce formal employment more where they bind and are enforced; Brazil's large increases compressed earnings inequality with only modest employment losses.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w26462"
+ },
+ {
+  "lever_id": "LV-159",
+  "intervention_evidence": "D'Amico and Schochet 2012, The Evaluation of the Trade Adjustment Assistance Program: A Synthesis of Major Findings, Mathematica Policy Research",
+  "finding": "US Trade Adjustment Assistance participants earned less than comparison workers for several years, partly because long training delayed re-employment; gains depend on training linked to local labour demand.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://mathematica.org/publications/the-evaluation-of-the-trade-adjustment-assistance-program-a-synthesis-of-major-findings"
+ },
+ {
+  "lever_id": "LV-160",
+  "intervention_evidence": "Jacobson, LaLonde and Sullivan 2005, Estimating the returns to community college schooling for displaced workers, Journal of Econometrics",
+  "finding": "Displaced US workers gained earnings from community college, mainly from technical and quantitative courses; evaluations of programmes for automation-displaced workers in developing countries are lacking.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:econom:v:125:y:2005:i:1-2:p:271-304"
+ },
+ {
+  "lever_id": "LV-161",
+  "intervention_evidence": "Ambler, Aycinena and Yang 2015, Channeling Remittances to Education: A Field Experiment among Migrants from El Salvador, American Economic Journal: Applied Economics",
+  "finding": "Letting migrants earmark remittances for education raised recipients' school spending and enrolment; evidence that cheaper channels steer remittances into productive investment is thin.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w20262"
+ },
+ {
+  "lever_id": "LV-162",
+  "intervention_evidence": "Gibson and McKenzie 2012, The Economic Consequences of Brain Drain of the Best and Brightest: Microeconomic Evidence from Five Countries, Economic Journal",
+  "finding": "Top students who emigrate from small developing countries gain large incomes and send remittances and knowledge home; return and retention programmes themselves have little rigorous evaluation.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:ecj:econjl:v:122:y:2012:i:560:p:339-375"
+ },
+ {
+  "lever_id": "LV-163",
+  "intervention_evidence": "Gibson and McKenzie 2014, The Development Impact of a Best Practice Seasonal Worker Policy, Review of Economics and Statistics | Clemens and Tiongson 2017, Split Decisions: Household Finance When a Policy Discontinuity Allocates Overseas Work, Review of Economics and Statistics",
+  "finding": "New Zealand's seasonal worker scheme substantially raised Pacific households' income and consumption, and Philippine overseas work raised savings and investment, where recruitment costs and abuses are regulated.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:tpr:restat:v:96:y:2014:i:2:p:229-243"
+ },
+ {
+  "lever_id": "LV-164",
+  "intervention_evidence": "Buccirossi, Ciari, Duso, Spagnolo and Vitale 2013, Competition Policy and Productivity Growth: An Empirical Assessment, Review of Economics and Statistics",
+  "finding": "Stronger competition policy institutions and enforcement raised total factor productivity growth across industries in OECD countries; evidence from developing countries is sparse and depends on agency independence.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:tpr:restat:v:95:y:2013:i:4:p:1324-1336"
+ },
+ {
+  "lever_id": "LV-165",
+  "intervention_evidence": "Estrin, Hanousek, Kocenda and Svejnar 2009, The Effects of Privatization and Ownership in Transition Economies, Journal of Economic Literature | Brown, Earle and Telegdy 2006, The Productivity Effects of Privatization: Longitudinal Estimates from Hungary, Romania, Russia, and Ukraine, Journal of Political Economy",
+  "finding": "Privatisation to foreign owners raised productivity in transition economies, but domestic privatisation had small or negative effects where governance, hard budget constraints and competition were weak.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://docs.iza.org/dp3688.pdf"
+ },
+ {
+  "lever_id": "LV-166",
+  "intervention_evidence": "Ponticelli and Alencar 2016, Court Enforcement, Bank Loans, and Firm Investment: Evidence from a Bankruptcy Reform in Brazil, Quarterly Journal of Economics",
+  "finding": "Brazil's bankruptcy reform raised secured lending and firm investment far more in districts with less congested courts, so legal reform pays only where courts can enforce it.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:131:y:2016:i:3:p:1365-1413."
+ },
+ {
+  "lever_id": "LV-167",
+  "intervention_evidence": "Lawry et al. 2017, The impact of land property rights interventions on investment and agricultural productivity in developing countries: a systematic review, Journal of Development Effectiveness | Higgins et al. 2018, Investigating the impacts of increased rural land tenure security: A systematic review of the evidence, Journal of Rural Studies",
+  "finding": "Land titling raises investment and productivity in Latin America and Asia but has weaker effects in Africa, where customary tenure is often already secure; benefits depend on credit markets and enforcement.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.gov.uk/dfid-research-outputs/the-impact-of-land-property-rights-interventions-on-investment-and-agricultural-productivity-in-developing-countries-a-systematic-review"
+ },
+ {
+  "lever_id": "LV-168",
+  "intervention_evidence": "Chari, Liu, Wang and Wang 2021, Property Rights, Land Misallocation, and Agricultural Efficiency in China, Review of Economic Studies | Ali, Deininger and Goldstein 2014, Environmental and gender impacts of land tenure regularization in Africa: Pilot evidence from Rwanda, Journal of Development Economics",
+  "finding": "Strengthening transfer rights in China expanded land rental and raised farm productivity by reallocating land to able farmers; low-cost registration in Rwanda raised soil investment and women's tenure security.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://academic.oup.com/restud/article-abstract/88/4/1831/5956729"
+ },
+ {
+  "lever_id": "LV-169",
+  "intervention_evidence": "Keswell and Carter 2014, Poverty and land redistribution, Journal of Development Economics",
+  "finding": "South African land redistribution raised beneficiaries' living standards after an initial dip, with gains depending on post-transfer support; rigorous evidence on land taxation for equity is lacking.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:110:y:2014:i:c:p:250-261"
+ },
+ {
+  "lever_id": "LV-170",
+  "intervention_evidence": "Burlig, Jina, Kelley, Lane and Sahai 2024, Long-Range Forecasts as Climate Adaptation: Experimental Evidence from Developing-Country Agriculture, NBER Working Paper",
+  "finding": "Indian farmers given accurate monsoon forecasts adjusted planting and input decisions to expected rainfall; warning systems pay off where forecasts are skilful, trusted and reach users in time.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nber.org/system/files/working_papers/w32173/w32173.pdf"
+ },
+ {
+  "lever_id": "LV-171",
+  "intervention_evidence": "Phalkey, Yamamoto, Awate, Marx and Sauerborn 2015, Challenges with the implementation of an Integrated Disease Surveillance and Response (IDSR) system: systematic review of the lessons learned, Global Health Action",
+  "finding": "Integrated surveillance in Africa improved reporting and outbreak detection in places, but weak laboratories, staffing, data feedback and funding limited response; rigorous impact evaluations are rare.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://nottingham-repository.worktribe.com/output/1113279/challenges-with-the-implementation-of-an-integrated-disease-surveillance-and-response-idsr-system-systematic-review-of-the-lessons-learned"
+ },
+ {
+  "lever_id": "LV-172",
+  "intervention_evidence": "Baum, Machalaba, Daszak, Salerno and Karesh 2017, Evaluating one health: Are we demonstrating effectiveness?, One Health",
+  "finding": "Few One Health programmes report quantitative outcome evaluations; available studies suggest cost savings from joint animal-human action, such as dog vaccination against rabies, but evidence remains thin.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://rcastoragev2.blob.core.windows.net/4e0f14543cfe8d4e1e9a83a4a6f0128e/PMC5458598.pdf"
+ },
+ {
+  "lever_id": "LV-173",
+  "intervention_evidence": "Volpe Martincus and Carballo 2008, Is export promotion effective in developing countries? Firm-level evidence on the intensive and the extensive margins of exports, Journal of International Economics | Lederman, Olarreaga and Payton 2010, Export promotion agencies: Do they work?, Journal of Development Economics",
+  "finding": "Export promotion in Peru raised exports mainly by adding new markets and products, a diversification effect; direct evidence that policy reduces supply or commodity concentration is thin.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:91:y:2010:i:2:p:257-265"
+ },
+ {
+  "lever_id": "LV-174",
+  "intervention_evidence": "Cerutti, Claessens and Laeven 2017, The use and effectiveness of macroprudential policies: New evidence, Journal of Financial Stability | Gourinchas and Obstfeld 2012, Stories of the Twentieth Century for the Twenty-First, American Economic Journal: Macroeconomics",
+  "finding": "Macroprudential tools curb credit growth, more in emerging economies and less in open ones; higher reserves and avoiding domestic credit booms predict fewer crises in emerging markets.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:finsta:v:28:y:2017:i:c:p:203-224"
+ },
+ {
+  "lever_id": "LV-175",
+  "intervention_evidence": "Rashid and Lemma 2011, Strategic Grain Reserves in Ethiopia: Institutional Design and Operational Performance, IFPRI Discussion Paper 01054",
+  "finding": "Ethiopia's grain reserve smoothed food-aid pipeline breaks and emergency supply when run as a rotating, rules-based reserve, but costs and loss rise when release rules are unclear or politicised.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://agris.fao.org/search/en/records/6748caac7625988a3720c73e"
+ },
+ {
+  "lever_id": "LV-176",
+  "intervention_evidence": "Carter, de Janvry, Sadoulet and Sarris 2017, Index Insurance for Developing Country Agriculture: A Reassessment, Annual Review of Resource Economics",
+  "finding": "Index insurance raises investment and protects assets after shocks, but only where basis risk is low and products are well designed; take-up at market prices remains low without subsidy.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/anr/reseco/v9y2017p421-438.html"
+ },
+ {
+  "lever_id": "LV-177",
+  "intervention_evidence": "Phadnis, Caplice, Sheffi and Singh 2015, Effect of Scenario Planning on Field Experts' Judgment of Long-Range Investment Decisions, Strategic Management Journal",
+  "finding": "Experiments with experts show scenario exercises shift judgments toward more flexible long-range investment choices, but there is little rigorous evidence that government foresight units improve policy outcomes.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://dspace.mit.edu/handle/1721.1/96020"
+ },
+ {
+  "lever_id": "LV-178",
+  "intervention_evidence": "Lane 2025, Manufacturing Revolutions: Industrial Policy and Industrialization in South Korea, Quarterly Journal of Economics",
+  "finding": "Korea's coordinated heavy-industry plan raised output and productivity in targeted sectors and their downstream users, with gains lasting after support ended, under strong export discipline and state capacity.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ora.ox.ac.uk/objects/uuid:f046f14b-5647-4e3e-8251-c1ed7c015f67"
+ },
+ {
+  "lever_id": "LV-179",
+  "intervention_evidence": "Hjort, Moreira, Rao and Santini 2021, How Research Affects Policy: Experimental Evidence from 2,150 Brazilian Municipalities, American Economic Review",
+  "finding": "Giving mayors accessible research findings raised their adoption of the recommended policy, showing that evidence changes decisions when it is timely, simple and reaches the decision maker directly.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.povertyactionlab.org/media/file-research-paper/how-research-affects-policy-experimental-evidence-2150-brazilian-0"
+ },
+ {
+  "lever_id": "LV-180",
+  "intervention_evidence": "Leite, George, Sun, Jinnah and Benedetti 2017, Social Registries for Social Assistance and Beyond: A Guidance Note and Assessment Tool, World Bank Social Protection Discussion Paper 1704",
+  "finding": "Country reviews find integrated registries linked across agencies cut duplication and speed enrolment, but gains depend on unique identifiers, regular updating and data-sharing rules; rigorous impact studies are scarce.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://openknowledge.worldbank.org/entities/publication/fa0d1270-2511-5f30-80fd-90b3feb5b03d"
+ },
+ {
+  "lever_id": "LV-181",
+  "intervention_evidence": "Deininger and Goyal 2012, Going Digital: Credit Effects of Land Registry Computerization in India, Journal of Development Economics",
+  "finding": "Computerising land registries in Andhra Pradesh increased credit access, mainly for larger landholders in urban areas, showing digitised records pay off where users can act on them.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:99:y:2012:i:2:p:236-243"
+ },
+ {
+  "lever_id": "LV-182",
+  "intervention_evidence": "Callen, Gulzar, Hasanain, Khan and Rezaee 2020, Data and Policy Decisions: Experimental Evidence from Pakistan, Journal of Development Economics",
+  "finding": "A monitoring dashboard on clinic staff absence raised doctor attendance in Punjab, but only where senior officials actually used the data and followed up on flagged facilities.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/p/nbr/nberwo/27678.html"
+ },
+ {
+  "lever_id": "LV-183",
+  "intervention_evidence": "Booth and Unsworth 2014, Politically Smart, Locally Led Development, ODI Discussion Paper",
+  "finding": "Case studies of seven programmes find iterative, locally led reform succeeded where staff had flexibility and political insight, but no rigorous counterfactual evaluation of problem-driven methods yet exists.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://odi.org/en/publications/politically-smart-locally-led-development/"
+ },
+ {
+  "lever_id": "LV-184",
+  "intervention_evidence": "Bold, Kimenyi, Mwabu, Ng'ang'a and Sandefur 2018, Experimental Evidence on Scaling Up Education Reforms in Kenya, Journal of Public Economics",
+  "finding": "A contract-teacher programme that raised learning when run by an NGO had no effect when scaled up by government, so pilots predict scale effects poorly when implementers and politics change.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:pubeco:v:168:y:2018:i:c:p:1-20"
+ },
+ {
+  "lever_id": "LV-185",
+  "intervention_evidence": "Johnson 2022, Economic Research on Privacy Regulation: Lessons from the GDPR and Beyond, NBER Working Paper 30705",
+  "finding": "GDPR reduced data collection and tracking, but also cut app and website numbers, raised market concentration and burdened small firms, so privacy gains come with competition and innovation costs.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.nber.org/papers/w30705"
+ },
+ {
+  "lever_id": "LV-186",
+  "intervention_evidence": "Creese, Dutton, Esteve-Gonzalez and Shillair 2021, Cybersecurity Capacity-Building: Cross-National Benefits and International Divides, Journal of Cyber Policy",
+  "finding": "Cross-country data link stronger national cybersecurity capacity to fewer infected and compromised systems, with larger benefits where internet use is high; causal evaluations of specific agencies are lacking.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/taf/rcybxx/v6y2021i2p214-235.html"
+ },
+ {
+  "lever_id": "LV-187",
+  "intervention_evidence": "No suitable intervention-level source confirmed",
+  "finding": "",
+  "strength": "none found",
+  "verified": "no",
+  "url": ""
+ },
+ {
+  "lever_id": "LV-188",
+  "intervention_evidence": "Kreitmeir and Raschky 2023, The Unintended Consequences of Censoring Digital Technology: Evidence from Italy's ChatGPT Ban, arXiv working paper",
+  "finding": "Italy's temporary ChatGPT ban cut developer output in the short run, illustrating that blunt AI restrictions carry productivity costs; evaluations of broader AI rules and incentives are not yet available.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://arxiv.org/abs/2304.09339v1"
+ },
+ {
+  "lever_id": "LV-189",
+  "intervention_evidence": "Goncalves 2014, The Effects of Participatory Budgeting on Municipal Expenditures and Infant Mortality in Brazil, World Development",
+  "finding": "Brazilian municipalities adopting participatory budgeting shifted spending toward sanitation and health and saw lower infant mortality, with effects strongest where the process was sustained over several years.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:wdevel:v:53:y:2014:i:c:p:94-110"
+ },
+ {
+  "lever_id": "LV-190",
+  "intervention_evidence": "Alessandro, Lafuente and Santiso 2014, Governing to Deliver: Reinventing the Center of Government in Latin America and the Caribbean, Inter-American Development Bank",
+  "finding": "Comparative cases find centre-of-government coordination units improve priority delivery when backed by the head of government and clear mandates, but rigorous impact evaluations of coordination bodies are lacking.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://publications.iadb.org/en/governing-deliver-reinventing-center-government-latin-america-and-caribbean"
+ },
+ {
+  "lever_id": "LV-191",
+  "intervention_evidence": "Hasnain, Manning and Pierskalla 2014, The Promise of Performance Pay? Reasons for Caution in Policy Prescriptions in the Core Civil Service, World Bank Research Observer",
+  "finding": "Performance pay raises output where tasks are simple and measurable, but in the core civil service evidence is weak and incentives can distort effort toward measured tasks.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ideas.repec.org/a/oup/wbrobs/v29y2014i2p235-264..html"
+ },
+ {
+  "lever_id": "LV-192",
+  "intervention_evidence": "Ashraf, Bandiera, Davenport and Lee 2020, Losing Prosociality in the Quest for Talent? Sorting, Selection, and Productivity in the Delivery of Public Services, American Economic Review | de Ree, Muralidharan, Pradhan and Rogers 2018, Double for Nothing? Experimental Evidence on an Unconditional Teacher Salary Increase in Indonesia, Quarterly Journal of Economics",
+  "finding": "Career-focused recruitment drew more able health workers who performed better without losing prosociality, whereas unconditional pay rises for incumbents did not improve effort or learning.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20180326"
+ },
+ {
+  "lever_id": "LV-193",
+  "intervention_evidence": "Channa and Faguet 2016, Decentralization of Health and Education in Developing Countries: A Quality-Adjusted Review of the Empirical Literature, World Bank Research Observer",
+  "finding": "Higher-quality studies find decentralisation tends to improve service delivery and responsiveness, but results vary and depend on local capacity, accountability and protection against elite capture.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://researchonline.lse.ac.uk/id/eprint/68719"
+ },
+ {
+  "lever_id": "LV-194",
+  "intervention_evidence": "Litschig and Morrison 2013, The Impact of Intergovernmental Transfers on Education Outcomes and Poverty Reduction, AEJ Applied Economics | Balan, Bergeron, Tourek and Weigel 2022, Local Elites as State Capacity: How City Chiefs Use Local Information to Increase Tax Compliance in the DRC, American Economic Review",
+  "finding": "Extra transfers to Brazilian municipalities raised schooling and cut poverty, and in Congo using local chiefs as tax collectors raised property tax compliance, because they know who can pay.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aejapp:v:5:y:2013:i:4:p:206-40"
+ },
+ {
+  "lever_id": "LV-195",
+  "intervention_evidence": "Almeida and Carneiro 2012, Enforcement of Labor Regulation and Informality, AEJ Applied Economics",
+  "finding": "Stronger labour inspection in Brazilian cities increased formal employment and compliance, but also lowered wages at the top of the formal distribution, so enforcement shifts costs as well as raising compliance.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aejapp:v:4:y:2012:i:3:p:64-89"
+ },
+ {
+  "lever_id": "LV-196",
+  "intervention_evidence": "Bruhn and McKenzie 2014, Entry Regulation and the Formalization of Microenterprises in Developing Countries, World Bank Research Observer",
+  "finding": "Simplifying business registration modestly raises new formal firm entry, but most informal firms do not formalise from simplification alone, because formality's benefits are small for them.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://openknowledge.worldbank.org/entities/publication/dc5fc0ea-3de3-57a3-bc91-9114e6d360e8"
+ },
+ {
+  "lever_id": "LV-197",
+  "intervention_evidence": "Haider et al. 2020, The Global Health Security Index and Joint External Evaluation Score for Health Preparedness Are Not Correlated with Countries' COVID-19 Detection Response Time and Mortality Outcome, Epidemiology and Infection",
+  "finding": "Countries' measured preparedness capacity did not predict faster COVID-19 detection or lower mortality, suggesting stockpiles and plans matter only when leadership activates and uses them.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7506172"
+ },
+ {
+  "lever_id": "LV-198",
+  "intervention_evidence": "Lichand, Doria, Leal-Neto and Fernandes 2022, The Impacts of Remote Learning in Secondary Education during the Pandemic in Brazil, Nature Human Behaviour",
+  "finding": "Remote learning in Sao Paulo kept some schooling going but students learned far less and dropout risk rose sharply, so backup delivery only partly replaces in-person services.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.nature.com/articles/s41562-022-01350-6.pdf"
+ },
+ {
+  "lever_id": "LV-199",
+  "intervention_evidence": "Hidrobo, Hoddinott, Peterman, Margolies and Moreira 2014, Cash, Food, or Vouchers? Evidence from a Randomized Experiment in Northern Ecuador, Journal of Development Economics",
+  "finding": "Cash, food and vouchers all improved food consumption of displaced households, with cash cheapest to deliver, while food raised calories most; modality choice depends on markets and cost.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:107:y:2014:i:c:p:144-156"
+ },
+ {
+  "lever_id": "LV-200",
+  "intervention_evidence": "Kennedy, Ashmore, Babister and Kelman 2008, The Meaning of Build Back Better: Evidence from Post-Tsunami Aceh and Sri Lanka, Journal of Contingencies and Crisis Management",
+  "finding": "After the 2004 tsunami, rebuilding to higher standards often clashed with speed, and safety gains were lost where communities were not consulted or relocation separated people from livelihoods.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://migrationresearch.com/item/the-meaning-of-build-back-better-evidence-from-posttsunami-aceh-and-sri-lanka/744243"
+ },
+ {
+  "lever_id": "LV-201",
+  "intervention_evidence": "Naritomi 2019, Consumers as Tax Auditors, American Economic Review | Carrillo, Pomeranz and Singhal 2017, Dodging the Taxman: Firm Misreporting and Limits to Tax Enforcement, AEJ Applied Economics",
+  "finding": "Third-party receipts raised reported retail revenue in Sao Paulo, but in Ecuador firms offset revenue matched by authorities with inflated unverified costs, so enforcement must cover all margins.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20160658"
+ },
+ {
+  "lever_id": "LV-202",
+  "intervention_evidence": "Keen and Lockwood 2010, The Value Added Tax: Its Causes and Consequences, Journal of Development Economics | Bachas, Gadenne and Jensen 2024, Informality, Consumption Taxes, and Redistribution, Review of Economic Studies",
+  "finding": "Adopting VAT raised revenue capacity in most countries, and because the poor buy more from informal sellers, consumption taxes in poor countries are less regressive than assumed.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:deveco:v:92:y:2010:i:2:p:138-151"
+ },
+ {
+  "lever_id": "LV-203",
+  "intervention_evidence": "Bosio, Djankov, Glaeser and Shleifer 2022, Public Procurement in Law and Practice, American Economic Review",
+  "finding": "Across 187 countries, stricter procurement rules improve outcomes where public sector capacity is high, but in low-capacity settings discretion performs better than rigid regulation.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/doi/10.1257/aer.20200738"
+ },
+ {
+  "lever_id": "LV-204",
+  "intervention_evidence": "IMF 2015, Making Public Investment More Efficient, IMF Policy Paper | Williams 2017, The Political Economy of Unfinished Development Projects: Corruption, Clientelism, or Collective Choice?, American Political Science Review",
+  "finding": "About 30 percent of public investment value is lost to inefficiency, with stronger management institutions closing much of the gap; in Ghana a third of local projects stall from fragmented political allocation.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.imf.org/external/np/pp/eng/2015/061115.pdf"
+ },
+ {
+  "lever_id": "LV-205",
+  "intervention_evidence": "Vlaicu, Verhoeven, Grigoli and Mills 2014, Multiyear Budgets and Fiscal Performance: Panel Data Evidence, Journal of Public Economics",
+  "finding": "Medium-term expenditure frameworks improve fiscal discipline and allocation, with effects rising as they move from fiscal to budget and performance frameworks, but only where budgets are actually binding.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:eee:pubeco:v:111:y:2014:i:c:p:79-95"
+ },
+ {
+  "lever_id": "LV-206",
+  "intervention_evidence": "Gassner, Popov and Pushak 2009, Does Private Sector Participation Improve Performance in Electricity and Water Distribution?, World Bank PPIAF",
+  "finding": "Private participation in utilities raised labour productivity, connections and service quality, but did not increase investment or lower prices, so gains depend on contract design and regulation.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://ppiaf.org/documents/1931"
+ },
+ {
+  "lever_id": "LV-207",
+  "intervention_evidence": "Wood et al. 2011, The Evaluation of the Paris Declaration, Phase 2: Final Report, Danish Institute for International Studies",
+  "finding": "Using country systems and coordinating donors improved ownership and partnership in some countries, but progress was slow and uneven, and links to development results were weakly evidenced.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://research.diis.dk/en/publications/the-evaluation-of-the-paris-declaration-phase-2-final-report/"
+ },
+ {
+  "lever_id": "LV-208",
+  "intervention_evidence": "Muralidharan, Niehaus and Sukhtankar 2025, Identity Verification Standards in Welfare Programs: Experimental Evidence from India, Review of Economics and Statistics | Aker, Boumnijel, McClelland and Tierney 2016, Payment Mechanisms and Antipoverty Programs: Evidence from a Mobile Money Cash Transfer Experiment in Niger, Economic Development and Cultural Change",
+  "finding": "Mobile money transfers cut recipients' costs and improved diets in Niger, but biometric authentication for rations in Jharkhand did not reduce leakage and excluded some genuine beneficiaries.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:tpr:restat:v:107:y:2025:i:2:p:372-392"
+ },
+ {
+  "lever_id": "LV-209",
+  "intervention_evidence": "Gilmore et al. 2020, Community Engagement for COVID-19 Prevention and Control: A Rapid Evidence Synthesis, BMJ Global Health",
+  "finding": "Evidence from past epidemics shows community engagement improves uptake of protective behaviours when trusted local actors are involved early and two-way, while top-down messaging alone builds little trust.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://doaj.org/article/e2d94ceb544740a7bd82b3d5f92d9204"
+ },
+ {
+  "lever_id": "LV-210",
+  "intervention_evidence": "Dunning et al. 2019, Voter Information Campaigns and Political Accountability: Cumulative Findings from a Preregistered Meta-Analysis of Coordinated Trials, Science Advances | Callen and Long 2015, Institutional Corruption and Election Fraud: Evidence from a Field Experiment in Afghanistan, American Economic Review",
+  "finding": "Coordinated trials found informing voters about incumbent performance did not change votes, while announcing photo checks of vote tallies sharply reduced fraud in Afghanistan.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6609214/"
+ },
+ {
+  "lever_id": "LV-211",
+  "intervention_evidence": "Avis, Ferraz, Finan and Varjao 2022, Money and Politics: The Effects of Campaign Spending Limits on Political Entry and Competition, AEJ Applied Economics",
+  "finding": "Campaign spending limits in Brazilian municipalities increased political competition and lowered incumbents' advantage, drawing in less wealthy candidates without reducing their quality.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:aea:aejapp:v:14:y:2022:i:4:p:167-99"
+ },
+ {
+  "lever_id": "LV-212",
+  "intervention_evidence": "Larreguy, Marshall and Snyder 2020, Publicising Malfeasance: When the Local Media Structure Facilitates Electoral Accountability in Mexico, Economic Journal",
+  "finding": "Voters punished parties exposed by audits for corruption only where local radio and television stations covered the results, showing independent local media are what make information bite.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:oup:econjl:v:130:y:2020:i:631:p:2291-2327."
+ },
+ {
+  "lever_id": "LV-213",
+  "intervention_evidence": "Guess et al. 2020, A Digital Media Literacy Intervention Increases Discernment between Mainstream and False News in the United States and India, PNAS",
+  "finding": "A brief digital media literacy intervention improved discernment of false news in the United States and India, but effects were modest, faded over time and were weaker in the rural Indian sample.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7355018"
+ },
+ {
+  "lever_id": "LV-214",
+  "intervention_evidence": "Kosack and Fung 2014, Does Transparency Improve Governance?, Annual Review of Political Science",
+  "finding": "Transparency improves governance mainly when information is actionable, reaches users who can act, and providers face incentives to respond; disclosure alone often has no effect.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.hks.harvard.edu/publications/does-transparency-improve-governance"
+ },
+ {
+  "lever_id": "LV-215",
+  "intervention_evidence": "Melton and Ginsburg 2014, Does De Jure Judicial Independence Really Matter? A Reevaluation of Explanations for Judicial Independence, Journal of Law and Courts",
+  "finding": "Cross-country analysis finds constitutional rules on judicial selection and removal raise de facto judicial independence, while most other formal protections have little effect.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://chicagounbound.uchicago.edu/journal_articles/7487"
+ },
+ {
+  "lever_id": "LV-216",
+  "intervention_evidence": "Malesky, Schuler and Tran 2012, The Adverse Effects of Sunshine: A Field Experiment on Legislative Transparency in an Authoritarian Assembly, American Political Science Review",
+  "finding": "Publicising Vietnamese delegates' performance online did not improve oversight and led exposed delegates to avoid critical questioning, so transparency backfires where legislators answer to the party rather than voters.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:cup:apsrev:v:106:y:2012:i:04:p:762-786_00"
+ },
+ {
+  "lever_id": "LV-217",
+  "intervention_evidence": "Avis, Ferraz and Finan 2018, Do Government Audits Reduce Corruption? Estimating the Impacts of Exposing Corrupt Politicians, Journal of Political Economy",
+  "finding": "Random federal audits of Brazilian municipalities reduced later corruption by about 8 percent, through both electoral and legal penalties, where audit findings were made public and prosecuted.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:ucp:jpolec:doi:10.1086/699209"
+ },
+ {
+  "lever_id": "LV-218",
+  "intervention_evidence": "Dollar and Svensson 2000, What Explains the Success or Failure of Structural Adjustment Programmes?, Economic Journal",
+  "finding": "Reform programme success was predicted by domestic political economy factors such as government stability and democratic origin, not by donor effort or conditions.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:ecj:econjl:v:110:y:2000:i:466:p:894-917"
+ },
+ {
+  "lever_id": "LV-219",
+  "intervention_evidence": "Sen and te Velde 2009, State Business Relations and Economic Growth in Sub-Saharan Africa, Journal of Development Studies",
+  "finding": "Countries with more effective, structured state-business relations grew faster, but the evidence is correlational and depends on dialogue not being captured by incumbent firms.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:taf:jdevst:v:45:y:2009:i:8:p:1267-1283"
+ },
+ {
+  "lever_id": "LV-220",
+  "intervention_evidence": "Aidt and Tzannatos 2002, Unions and Collective Bargaining: Economic Effects in a Global Environment, World Bank | OECD 2019, Negotiating Our Way Up: Collective Bargaining in a Changing World of Work, OECD",
+  "finding": "Coordinated bargaining tends to lower wage inequality and supports employment adjustment, but effects on growth vary with coordination level and whether agreements allow firm flexibility.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wbk:wbpubs:15241"
+ },
+ {
+  "lever_id": "LV-221",
+  "intervention_evidence": "Waddington et al. 2019, Citizen Engagement in Public Services in Low- and Middle-Income Countries: A Mixed-Methods Systematic Review of Participation, Inclusion, Transparency and Accountability Initiatives, Campbell Systematic Reviews",
+  "finding": "Community monitoring improves service access and some outcomes on average, but effects are small and vary, and work best when combined with provider incentives and responsive authorities.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8356537/"
+ },
+ {
+  "lever_id": "LV-222",
+  "intervention_evidence": "White, Menon and Waddington 2018, Community-Driven Development: Does It Build Social Cohesion or Infrastructure? A Mixed-Method Evidence Synthesis, 3ie Working Paper 30",
+  "finding": "Community-driven development reliably builds local infrastructure but has no measurable effect on social cohesion or governance, and elite capture persists where facilitation is weak.",
+  "strength": "strong",
+  "verified": "yes",
+  "url": "https://3ieimpact.org/evidence-hub/publications/working-papers/community-driven-development-does-it-build-social-cohesion"
+ },
+ {
+  "lever_id": "LV-223",
+  "intervention_evidence": "Gugerty and Kremer 2008, Outside Funding and the Dynamics of Participation in Community Associations, American Journal of Political Science",
+  "finding": "External funding to Kenyan women's groups did not strengthen them; it drew in younger, better-educated and male members who displaced the poorest, showing support can crowd out grassroots voice.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:wly:amposc:v:52:y:2008:i:3:p:585-602"
+ },
+ {
+  "lever_id": "LV-224",
+  "intervention_evidence": "Voelkel et al. 2024, Megastudy Testing 25 Treatments to Reduce Antidemocratic Attitudes and Partisan Animosity, Science",
+  "finding": "Many short interventions reduced partisan animosity, but most did not reduce antidemocratic attitudes and effects faded within weeks, so lasting depolarisation needs sustained exposure.",
+  "strength": "thin",
+  "verified": "yes",
+  "url": "https://www.hks.harvard.edu/publications/megastudy-testing-25-treatments-reduce-antidemocratic-attitudes-and-partisan-animosity"
+ },
+ {
+  "lever_id": "LV-225",
+  "intervention_evidence": "Cantoni, Chen, Yang, Yuchtman and Zhang 2017, Curriculum and Ideology, Journal of Political Economy | Bazzi, Gaduh, Rothenberg and Wong 2019, Unity in Diversity? How Intergroup Contact Can Foster Nation Building, American Economic Review",
+  "finding": "A new Chinese school curriculum shifted students' political views, and mixed resettlement in Indonesia fostered national identity, but only where no single group dominated locally.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:ucp:jpolec:doi:10.1086/690951"
+ },
+ {
+  "lever_id": "LV-226",
+  "intervention_evidence": "Olsen, Payne and Reiter 2010, Transitional Justice in Balance: Comparing Processes, Weighing Efficacy, United States Institute of Peace Press | Hartzell and Hoddie 2003, Institutionalizing Peace: Power Sharing and Post-Civil War Conflict Management, American Journal of Political Science",
+  "finding": "Trials combined with amnesties improve human rights and democracy more than truth commissions alone, and peace settlements with several power-sharing provisions are more durable.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-5907.00022"
+ },
+ {
+  "lever_id": "LV-227",
+  "intervention_evidence": "Blattman and Annan 2016, Can Employment Reduce Lawlessness and Rebellion? A Field Experiment with High-Risk Men in a Fragile State, American Political Science Review | Blattman and Ralston 2015, Generating Employment in Poor and Fragile States: Evidence from Labor Market and Entrepreneurship Programs, SSRN Working Paper",
+  "finding": "Agricultural training and capital for Liberian ex-fighters reduced illicit work and interest in mercenary recruitment, mainly through expected future cash; training alone rarely raises incomes.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:cup:apsrev:v:110:y:2016:i:01:p:1-17_00"
+ },
+ {
+  "lever_id": "LV-228",
+  "intervention_evidence": "Berman, Shapiro and Felter 2011, Can Hearts and Minds Be Bought? The Economics of Counterinsurgency in Iraq, Journal of Political Economy | Crost, Felter and Johnston 2014, Aid Under Fire: Development Projects and Civil Conflict, American Economic Review",
+  "finding": "Small, responsive service projects reduced violence in Iraq where security was present, but a large Philippine community programme increased insurgent attacks as rebels sought to sabotage it.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://www.aeaweb.org/articles?id=10.1257%2Faer.104.6.1833"
+ },
+ {
+  "lever_id": "LV-229",
+  "intervention_evidence": "Paluck, Green and Green 2019, The Contact Hypothesis Re-evaluated, Behavioural Public Policy | Scacco and Warren 2018, Can Social Contact Reduce Prejudice and Discrimination? Evidence from a Field Experiment in Nigeria, American Political Science Review",
+  "finding": "Contact reduces prejudice on average, but effects are weaker for ethnic and racial divides; in Nigeria mixed classes reduced discrimination in behaviour without changing stated prejudice.",
+  "strength": "mixed",
+  "verified": "yes",
+  "url": "https://econpapers.repec.org/RePEc:cup:apsrev:v:112:y:2018:i:03:p:654-677_00"
+ }
+]
