@@ -8,11 +8,15 @@ uses thailand/strategies*.csv here if present, else lifts the v3 Thai stack (../
 onto the v4 levers through each pathway's lever_id and marks the page provisional. A CSV without a
 lever_id column is always lifted that way. Plans come from plans.csv beside the CSV when there is one,
 else from the plan columns of the strategy rows. No model calls.
+
+The page shows the tree down to the levers only: no pathways. Pathway ids that the lever tests name are written
+as the id of the lever that holds the pathway, and strategy rows carry no pathway id.
 """
 import csv
 import glob
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -24,6 +28,39 @@ PW_LEVER = {p["pathway_id"]: p["lever_id"] for p in tree["pathways"]}
 LEVER_FAM = {lv["lever_id"]: lv["family_id"] for lv in tree["levers"]}
 FAM_GROUP = {f["family_id"]: f["group_id"] for f in tree["families"]}
 
+
+def lever_ids(text):
+    """A test that names pathways (L3-xxx) names the levers that hold them instead, each lever once in a run."""
+    def sub(m):
+        pid = MERGED.get(m.group(0), m.group(0))
+        return PW_LEVER.get(pid, m.group(0))
+    out = re.sub(r"\bL3-\d{3}\b", sub, text or "")
+    prev = None
+    while prev != out:  # "LV-005, LV-005" -> "LV-005"
+        prev = out
+        out = re.sub(r"\b(LV-\d{3})((?:,\s*|\s+and\s+|\s+or\s+))\1\b", r"\1", out)
+    return out
+
+
+def lever_row(lv):
+    row = {k: lv.get(k) for k in ("lever_id", "lever", "lever_full", "family_id", "joins_when", "joins_not",
+                                  "risks", "entry_points", "intervention_evidence",
+                                  "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
+                                  "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
+                                  "framework_source", "framework_where", "framework_says", "framework_refs",
+                                  "thesis_refs", "framework_status", "theory_anchor_ids", "theory_n",
+                                  "thai_strategies", "backing_score", "backing_grade", "lever_draft", "check_verdict",
+                                  "check_source", "check_note")}
+    own = re.escape(lv["lever_id"])
+    for k in ("joins_when", "joins_not"):
+        t = lever_ids(row[k])
+        # a pathway of this lever itself named in its own test: drop the self-reference
+        t = re.sub(r"\s*\(%s\)" % own, "", t)
+        t = re.sub(r",\s*%s\b|\b%s,\s*" % (own, own), "", t)
+        row[k] = t
+    return row
+
+
 data = {
     "built": tree["meta"].get("built", ""),
     "pillars": tree["pillars"],
@@ -34,21 +71,11 @@ data = {
     "groups": [{k: g[k] for k in ("group_id", "group", "subpillar_code", "basis", "definition",
                                    "family_ids", "sdg_targets", "risks")} for g in tree["groups"]],
     "families": [{k: f.get(k) for k in ("family_id", "family", "group_id", "subpillar_code", "definition",
-                                         "examples", "lever_ids", "pathway_ids", "sdg_targets", "risks",
-                                         "conditional_risks", "assets", "theory_anchors")} for f in tree["families"]],
-    "levers": [{k: lv.get(k) for k in ("lever_id", "lever", "lever_full", "family_id", "joins_when", "joins_not",
-                                        "pathway_ids", "risks", "entry_points", "intervention_evidence",
-                                        "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
-                                        "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
-                                        "framework_source", "framework_where", "framework_says", "framework_refs",
-                                        "thesis_refs", "framework_status", "theory_anchor_ids", "theory_n",
-                                        "thai_strategies", "backing_score", "backing_grade", "lever_draft", "check_verdict", "check_source", "check_note")}
-               for lv in tree["levers"]],
-    "pathways": [{k: p.get(k, "") for k in ("pathway_id", "pathway", "family_id", "lever_id", "causal_input",
-                                             "transmission", "outcome", "conditions", "distinction", "evidence",
-                                             "risks", "conditional_risks", "added_in", "revised")}
-                 for p in tree["pathways"]],
-    "merged": MERGED,
+                                         "examples", "lever_ids", "sdg_targets", "risks",
+                                         "assets", "theory_anchors")} | {
+        "conditional_risks": [{k: c[k] for k in c if k != "pathway_id"} if isinstance(c, dict) else c
+                              for c in f.get("conditional_risks") or []]} for f in tree["families"]],
+    "levers": [lever_row(lv) for lv in tree["levers"]],
 }
 
 
@@ -125,7 +152,8 @@ def country(paths):
             risks = []
         code, fam, lev, pw, grp = placement(r, r["_lifted"])
         reason = "" if r["_lifted"] else (r.get("reason") or "")[:200]
-        out.append([idx[r["plan_id"]], r.get("name", ""), (r.get("objective") or "")[:200], code, fam, lev, pw, grp,
+        # [plan, name, objective, level, family, lever, group, sector, orientation, risks, reason]: no pathway
+        out.append([idx[r["plan_id"]], r.get("name", ""), (r.get("objective") or "")[:200], code, fam, lev, grp,
                     r.get("sector_canonical") or r.get("sector", ""), r.get("response_orientation", ""), risks, reason])
     first = rows[0]
     return {
@@ -161,5 +189,5 @@ blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</",
 out = template.replace("/*TREE_DATA*/null", blob)
 with open(os.path.join(HERE, "tree_v4_viewer.html"), "w", encoding="utf-8") as f:
     f.write(out)
-print("wrote tree_v4_viewer.html (%d groups, %d families, %d levers, %d pathways, %.0f KB)" % (
-    len(data["groups"]), len(data["families"]), len(data["levers"]), len(data["pathways"]), len(out) / 1024))
+print("wrote tree_v4_viewer.html (%d groups, %d families, %d levers, %.0f KB)" % (
+    len(data["groups"]), len(data["families"]), len(data["levers"]), len(out) / 1024))

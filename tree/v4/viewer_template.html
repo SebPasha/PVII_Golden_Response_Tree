@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>The Mother Tree v4</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,11 +74,6 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
 .list a:hover { color: var(--gold) }
 .list .n { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px }
 .fruit { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); flex: none; margin-top: 6px }
-.pw { border-bottom: 1px solid var(--line) }
-.pw summary { cursor: pointer; display: flex; gap: 8px; padding: 6px 0; list-style: none }
-.pw summary::-webkit-details-marker { display: none }
-.pw .id { font: 11px var(--mono); color: var(--muted); margin-left: auto; white-space: nowrap; padding-top: 2px }
-.pw .body { padding: 0 0 10px 17px; display: grid; gap: 6px; font-size: 13px }
 .chain { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px }
 .chain dt { font: 11px var(--mono); color: var(--muted); padding-top: 2px }
 .chain dd { margin: 0 }
@@ -113,9 +109,6 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
 .outline details { margin-left: 14px }
 .outline details > summary { cursor: pointer; padding: 3px 0 }
 .outline .famrow { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
-.ol-pws { margin: 2px 0 8px 30px; padding: 0; list-style: none; color: var(--muted); font-size: 13px }
-.ol-pws li { display: flex; gap: 8px }
-.ol-pws .fruit { width: 7px; height: 7px; margin-top: 7px }
 footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
 /* country */
@@ -173,7 +166,6 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .bud:focus { outline: none }
 .bud:focus-visible circle { stroke: var(--gold); stroke-width: 2.5 }
 .bud.on circle { stroke: var(--gold); stroke-width: 2.5 }
-.budpw { fill: var(--gold) }
 .lv { border-bottom: 1px solid var(--line) }
 .lv > summary { cursor: pointer; display: flex; gap: 8px; padding: 6px 0; list-style: none; align-items: baseline }
 .lv > summary::-webkit-details-marker { display: none }
@@ -183,15 +175,12 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .lv .cnt { font: 11.5px var(--mono); color: var(--gold); white-space: nowrap }
 .lv .body { padding: 0 0 10px 17px; display: grid; gap: 6px; font-size: 13px }
 .lv .open { font: 500 12px var(--body); color: var(--muted); text-decoration: underline; cursor: pointer; justify-self: start }
-.thru { color: var(--muted); font-size: 12.5px }
-.thru i { font-style: normal; color: var(--ink) }
 .jl { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 2px }
 .ol-lvs { margin: 2px 0 8px 30px; padding: 0; list-style: none; font-size: 13px; display: grid; gap: 4px }
 .ol-lvs li { display: grid; grid-template-columns: 9px minmax(0, 1fr); gap: 0 8px }
 .ol-lvs .dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; border: 1.5px solid currentColor }
 .ol-lvs .lvname { cursor: pointer }
 .ol-lvs .lvname:hover { color: var(--gold) }
-.ol-lvs .thru { grid-column: 2 }
 #ct tr.frow td { font-weight: 600 }
 #ct tr.frow td:first-child::before { content: "▸ "; color: var(--muted); font-weight: 400 }
 #ct tr.frow.open td:first-child::before { content: "▾ " }
@@ -210,14 +199,14 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div>
       <div class="eyebrow">PV II · Golden Strategy Tree</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families; the buds along each twig are the levers, what a government does, where every strategy is placed. The pathways under a lever are the literature it works through.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families; the buds along each twig are the levers, what a government does, where every strategy is placed.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
 
   <div class="storms" id="storms" aria-label="Risks"><span class="eyebrow">Storms</span></div>
   <div class="tools">
-    <input id="q" type="search" placeholder="Search strategies, levers, families and pathways" aria-label="Search strategies, levers, families and pathways">
+    <input id="q" type="search" placeholder="Search strategies, levers and families" aria-label="Search strategies, levers and families">
     <button class="clear" id="clear" type="button">Clear selection</button>
   </div>
 
@@ -241,14 +230,14 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
   <section class="outline" id="ctable" hidden>
     <h2 id="ct-h"></h2>
-    <p>Each column is one plan, oldest first; national plans, then the long-term strategy, then sector plans. A family row is the share of that plan's strategies placed on the family or one of its levers; open it to see its levers. <b>All</b> counts strategies across every plan and <span style="color:var(--gold)">with pathway</span> is the share of them on a lever with a pathway recorded. Hover a cell for counts.</p>
+    <p>Each column is one plan, oldest first; national plans, then the long-term strategy, then sector plans. A family row is the share of that plan's strategies placed on the family or one of its levers; open it to see its levers. <b>All</b> counts strategies across every plan and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts.</p>
     <div class="ct-tools"><button type="button" class="clear" id="ct-open">Show every lever</button><button type="button" class="clear" id="ct-close">Families only</button></div>
     <div class="ct-scroll"><table id="ct"></table></div>
   </section>
 
   <section class="outline" id="outline">
     <h2>The whole tree</h2>
-    <p>Every group, family and lever, in the order of the canopy, with the pathways each lever works through. Open a group to see its families; select a family or lever to read it in the panel.</p>
+    <p>Every group, family and lever, in the order of the canopy. Open a group to see its families; select a family or lever to read it in the panel.</p>
   </section>
 
   <footer id="foot"></footer>
@@ -264,7 +253,6 @@ const NS = "http://www.w3.org/2000/svg";
 const G = Object.fromEntries(D.groups.map(g => [g.group_id, g]));
 const F = Object.fromEntries(D.families.map(f => [f.family_id, f]));
 const V = Object.fromEntries(D.levers.map(v => [v.lever_id, v]));
-const P = Object.fromEntries(D.pathways.map(p => [p.pathway_id, p]));
 const SP = Object.fromEntries(D.subpillars.map(s => [s.code, s]));
 const PL = Object.fromEntries(D.pillars.map(p => [p.code, p]));
 const ORDER = [["SMG", ["EXP", "DOM", "GTI"]], ["PFA", ["TSE", "CAP", "FUT"]], ["MCH", ["ANT", "ADA", "AGI", "REF"]]];
@@ -273,10 +261,9 @@ const PROLE = { SMG: "economy", PFA: "people", MCH: "governance" };
 const HOLD = { SMG: "H-SEC", PFA: "H-SPE", MCH: "H-SGO" };
 const nLv = f => f.lever_ids.length;
 const famCol = fid => PCOL[SP[F[fid].subpillar_code].pillar];
-const pwOf = id => P[id] || P[D.merged[id]];
 
 document.getElementById("counts").innerHTML = [
-  [D.groups.length, "groups"], [D.families.length, "families"], [D.levers.length, "levers"], [D.pathways.length, "pathways"], [D.risks.length, "storms"]
+  [D.groups.length, "groups"], [D.families.length, "families"], [D.levers.length, "levers"], [D.risks.length, "storms"]
 ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
 
 // ---------- layout ----------
@@ -403,9 +390,6 @@ D.families.forEach(f => {
 
 // buds (levers) along each family twig
 const budEl = {};
-function thruText(v) {
-  return v.pathway_ids.map(id => { const p = pwOf(id); return p ? `${p.pathway} (${p.evidence})` : id; }).join("; ");
-}
 D.families.forEach(f => {
   const col = famCol(f.family_id), ids = f.lever_ids, n = ids.length;
   ids.forEach((lid, k) => {
@@ -414,7 +398,7 @@ D.families.forEach(f => {
     const off = n === 1 ? 0 : (k % 2 ? 3.4 : -3.4);
     const g = el("g", { class: "bud", tabindex: 0, "data-v": lid }, gBuds);
     const c = el("circle", { cx: b.x + b.nx * off, cy: b.y + b.ny * off, r: 2.4, fill: col, stroke: "var(--surface)" }, g);
-    el("title", {}, g).textContent = `${v.lever} (${lid})\nJoins when: ${v.joins_when}\nJoins not: ${v.joins_not}\nWorks through: ${thruText(v)}`;
+    el("title", {}, g).textContent = `${v.lever} (${lid})\nJoins when: ${v.joins_when}\nJoins not: ${v.joins_not}`;
     g.addEventListener("click", ev => { ev.stopPropagation(); show({ v: lid }); });
     g.addEventListener("keydown", e => { if (e.key === "Enter") show({ v: lid }); });
     budEl[lid] = { g, c, col, x: b.x + b.nx * off, y: b.y + b.ny * off };
@@ -458,7 +442,6 @@ const rName = r => typeof r === "string" ? r : r.risk;
 function riskKind(f, r) {
   if ((f.risks || []).includes(r)) return "direct";
   if ((f.conditional_risks || []).some(c => rName(c) === r)) return "cond";
-  if (f.pathway_ids.some(id => P[id] && (P[id].conditional_risks || []).some(c => rName(c) === r))) return "cond";
   return null;
 }
 function setRisk(r) {
@@ -467,9 +450,9 @@ function setRisk(r) {
   paint();
   if (r) show({ r }); else if (!state.sel && !state.lv) show({});
 }
-const lvHay = v => [v.lever, v.lever_full, ...v.pathway_ids.map(id => pwOf(id)?.pathway || "")].join(" ").toLowerCase();
+const lvHay = v => [v.lever, v.lever_full].join(" ").toLowerCase();
 // strategies whose name, objective or reason holds the query; the levers and families they sit on
-function stratHits(q) { return (typeof C !== "undefined" && C) ? C.rows.filter(r => (r[1] + " " + r[2] + " " + (r[11] || "")).toLowerCase().includes(q)) : []; }
+function stratHits(q) { return (typeof C !== "undefined" && C) ? C.rows.filter(r => (r[1] + " " + r[2] + " " + (r[10] || "")).toLowerCase().includes(q)) : []; }
 let qLev = new Set(), qFam = new Set();
 function indexHits(q) {
   qLev = new Set(); qFam = new Set();
@@ -515,35 +498,22 @@ const riskChips = (rs, cond) => (rs || []).map(r => `<span class="chip risk${con
 const sdgChips = ts => (ts || []).map(t => `<span class="chip sdg">${esc(t)}</span>`).join("");
 const O = o => `data-o='${esc(JSON.stringify(o))}'`;
 function crumb(parts) { return `<div class="crumb">${parts.map(([l, o]) => o ? `<a ${O(o)}>${esc(l)}</a>` : esc(l)).join(" › ")}</div>`; }
-// joins tests name pathways (L3-xxx) and families (F-xx): link them to their lever or family
+// joins tests name levers (LV-xxx) and families (F-xx): link them
 function linkIds(s) {
-  return esc(s).replace(/\b(L3-\d{3})\b/g, (m, id) => { const p = pwOf(id); return p ? `<a class="jl" ${O({ v: p.lever_id })} title="${esc(V[p.lever_id].lever)}">${m}</a>` : m; })
+  return esc(s).replace(/\b(LV-\d{3})\b/g, (m, id) => V[id] ? `<a class="jl" ${O({ v: id })} title="${esc(V[id].lever)}">${m}</a>` : m)
     .replace(/\b(F-\d{2})\b/g, (m, id) => F[id] ? `<a class="jl" ${O({ f: id })} title="${esc(F[id].family)}">${m}</a>` : m);
 }
-function pathwayHtml(p, open) {
-  const tags = [p.added_in === "v3" ? "new in v3" : "", p.revised ? "revised" : ""].filter(Boolean).map(t => `<span class="tag">${t}</span>`).join("");
-  return `<details class="pw"${open ? " open" : ""}><summary><span class="fruit"></span><span>${esc(p.pathway)}${tags}</span><span class="id">${p.pathway_id}</span></summary>
-  <div class="body"><dl class="chain">
-    <dt>input</dt><dd>${esc(p.causal_input)}</dd><dt>channel</dt><dd>${esc(p.transmission)}</dd>
-    <dt>outcome</dt><dd>${esc(p.outcome)}</dd><dt>works if</dt><dd>${esc(p.conditions)}</dd>
-    ${p.distinction ? `<dt>not to confuse</dt><dd>${esc(p.distinction)}</dd>` : ""}
-    <dt>evidence</dt><dd>${esc(p.evidence)}</dd></dl>
-    ${(p.risks || []).length || (p.conditional_risks || []).length ? `<div class="chips">${riskChips(p.risks)}${riskChips(p.conditional_risks, true)}</div>` : ""}
-    ${(p.conditional_risks || []).map(c => `<p class="muted">${esc(rName(c))}, only if: ${esc(c.applies_when)}</p>`).join("")}
-  </div></details>`;
-}
-const thruHtml = v => `<div class="thru">Works through: ${v.pathway_ids.map(id => { const p = pwOf(id); return p ? `<i>${esc(p.pathway)}</i> (${esc(p.evidence)})` : esc(id); }).join("; ")}</div>`;
 function leverRow(lid, cnt) {
   const v = V[lid];
   return `<details class="lv"><summary><span>${esc(v.lever)}</span>${cnt ? `<span class="cnt">${cnt}</span>` : ""}<span class="id">${lid}</span></summary>
     <div class="body"><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl>
-    ${thruHtml(v)}<a class="open" ${O({ v: lid })}>Open lever</a></div></details>`;
+    <a class="open" ${O({ v: lid })}>Open lever</a></div></details>`;
 }
 function familyList(fids) {
   return `<ul class="list">${fids.map(id => `<li><a ${O({ f: id })}><span>${esc(F[id].family)}</span><span class="n">${nLv(F[id])}</span></a></li>`).join("")}</ul>`;
 }
 function leverList(lids, num) {
-  return `<ul class="list">${lids.map(id => `<li><a ${O({ v: id })}><span>${esc(V[id].lever)}</span><span class="n">${num ? num(id) : V[id].pathway_ids.length}</span></a></li>`).join("")}</ul>`;
+  return `<ul class="list">${lids.map(id => `<li><a ${O({ v: id })}><span>${esc(V[id].lever)}</span>${num ? `<span class="n">${num(id)}</span>` : ""}</a></li>`).join("")}</ul>`;
 }
 function show(o) {
   state.sel = o.f || null;
@@ -561,7 +531,6 @@ function show(o) {
       ${v.intervention_evidence ? `<div class="sect"><div class="eyebrow">What the evidence says (${esc(v.evidence_strength || "")}${v.evidence_design ? ", " + esc(v.evidence_design) : ""}${v.evidence_fit ? ", fit " + esc(v.evidence_fit) : ""}${v.evidence_checked && v.evidence_checked !== "not reached" ? ", read: " + esc(v.evidence_checked) : v.evidence_verified === "yes" ? ", source verified" : ", source not verified"})</div><p class="def">${esc(v.evidence_finding || "")}</p>${v.evidence_basis ? `<p class="muted">Basis: ${esc(v.evidence_basis)}</p>` : ""}<p class="muted">${v.evidence_url ? `<a href="${esc(v.evidence_url)}" target="_blank" rel="noopener">${esc(v.intervention_evidence)}</a>` : esc(v.intervention_evidence)}</p></div>` : ""}
       ${v.framework_says ? `<div class="sect"><div class="eyebrow">In the framework${v.framework_source ? ": " + esc(v.framework_source) : ""}${v.framework_where ? " (" + esc(v.framework_where) + ")" : ""}</div><p class="def">${esc(v.framework_says)}</p>${(v.framework_refs || []).length ? `<p class="muted">Cites: ${v.framework_refs.map(esc).join("; ")}</p>` : ""}</div>` : ""}
       ${(v.thesis_refs || []).length ? `<div class="sect"><div class="eyebrow">In the thesis literature (${v.thesis_refs.length} paper${v.thesis_refs.length === 1 ? "" : "s"})</div>${v.thesis_refs.map(r => `<p class="def">${esc(r.citation || "")}${r.ident || r.setting ? ` <span class="muted">(${[r.ident, r.setting].filter(Boolean).map(esc).join(", ")}${r.fit ? "; fit " + esc(r.fit) : ""})</span>` : ""}${r.finding ? `<br><span class="muted">${esc(r.finding)}</span>` : ""}</p>`).join("")}</div>` : ""}
-      <div class="sect"><div class="eyebrow">Works through (${v.pathway_ids.length} pathway${v.pathway_ids.length > 1 ? "s" : ""}): the literature</div>${v.pathway_ids.map(id => pwOf(id)).filter(Boolean).map(p => pathwayHtml(p, v.pathway_ids.length === 1)).join("")}</div>
       ${(v.risks || []).length ? `<div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(v.risks)}</div></div>` : ""}
       ${(v.entry_points || []).length ? `<div class="sect"><div class="eyebrow">Thai entry points</div><div class="chips">${v.entry_points.map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>` : ""}
       <div class="sect"><div class="eyebrow">Sibling levers in ${esc(f.family_id)}</div>${leverList(f.lever_ids.filter(x => x !== v.lever_id))}</div>`;
@@ -604,21 +573,19 @@ function show(o) {
     const direct = D.families.filter(f => riskKind(f, r) === "direct"), cond = D.families.filter(f => riskKind(f, r) === "cond");
     const lvs = D.levers.filter(v => (v.risks || []).includes(r)).map(v => v.lever_id);
     h = `<div class="sect"><div class="eyebrow">Storm</div><h2>${esc(r)}</h2></div>
-      <p class="muted">Leaves with rain are the families whose pathways the literature links to this risk. Dashed rain: the link holds only under conditions.</p>
+      <p class="muted">Leaves with rain are the families the literature links to this risk. Dashed rain: the link holds only under conditions.</p>
       <div class="sect"><div class="eyebrow">Families tagged (${direct.length})</div>${familyList(direct.map(f => f.family_id))}</div>
       ${cond.length ? `<div class="sect"><div class="eyebrow">Conditional (${cond.length})</div>${familyList(cond.map(f => f.family_id))}</div>` : ""}
-      <div class="sect"><div class="eyebrow">Levers whose pathways carry it (${lvs.length})</div>${leverList(lvs)}</div>`;
+      <div class="sect"><div class="eyebrow">Levers it is tagged on (${lvs.length})</div>${leverList(lvs)}</div>`;
   } else if (o.q) {
     indexHits(o.q);
     const shits = stratHits(o.q);
     const hits = D.families.filter(f => matches(f, o.q));
     const vhits = D.levers.filter(v => lvHay(v).includes(o.q) || [v.joins_when].join(" ").toLowerCase().includes(o.q));
-    const phits = D.pathways.filter(p => [p.pathway, p.causal_input, p.outcome, p.transmission].join(" ").toLowerCase().includes(o.q));
     h = `<div class="sect"><div class="eyebrow">Search</div><h2>“${esc(o.q)}”</h2></div>
       ${(typeof C !== "undefined" && C) ? `<div class="sect"><div class="eyebrow">${esc(C.name)} strategies (${shits.length}${shits.length > 120 ? ", first 120 shown" : ""}) · select one to open its lever or family</div>${stratSearchList(shits)}</div>` : ""}
       <div class="sect"><div class="eyebrow">Levers (${vhits.length})</div>${leverList(vhits.slice(0, 60).map(v => v.lever_id))}</div>
-      <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>
-      <div class="sect"><div class="eyebrow">Pathways (${phits.length})</div>${phits.slice(0, 40).map(p => pathwayHtml(p, false)).join("")}</div>`;
+      <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>`;
   } else {
     h = `<div class="sect"><div class="eyebrow">How to read it</div><h2>Ten branches, sixty leaves, ${D.levers.length} buds</h2></div>
       <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a group, and each leaf a family. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
@@ -626,8 +593,7 @@ function show(o) {
         <div><span class="sw" style="background:var(--economy)"></span>Smarter Growth: the economy</div>
         <div><span class="sw" style="background:var(--people)"></span>People-first Approach: people</div>
         <div><span class="sw" style="background:var(--gov)"></span>Making Change Happen: governance, the 12 Future-Ready Governance dimensions grouped in four subpillars</div>
-        <div><span class="sw" style="background:var(--muted);width:7px;height:7px"></span>A lever: hover a bud for its joins-when and joins-not tests and the pathways it works through</div>
-        <div><span class="fruit" style="margin:0"></span>A pathway: the literature under a lever, recorded on a strategy only when the lever has one or the wording names the channel</div>
+        <div><span class="sw" style="background:var(--muted);width:7px;height:7px"></span>A lever: hover a bud for its joins-when and joins-not tests</div>
       </div>
       <p class="muted">Select a storm to see where its rain falls. Select a leaf to read the family and its levers; select a bud to read the lever, its tests and its evidence.</p>
       <div class="sect"><div class="eyebrow">General branches</div><p class="muted">${D.holding.map(x => esc(x.name)).join(" · ")}</p></div>`;
@@ -656,7 +622,7 @@ ORDER.forEach(([pc, sps]) => {
     sps.map(sc => `<details><summary><b>${esc(SP[sc].name)}</b> <span class="muted">${sc} · ${lvOfSub(sc)} levers</span></summary>` +
       D.groups.filter(g => g.subpillar_code === sc).map(g => `<details><summary>${esc(g.group)} <span class="muted">· ${esc(g.basis)}</span></summary>` +
         g.family_ids.map(fid => { const f = F[fid]; return `<details><summary><span class="famrow" ${O({ f: fid })}>${esc(f.family)}</span> <span class="muted">${fid} · ${nLv(f)} levers</span></summary>
-          <ul class="ol-lvs" style="color:${PCOL[pc]}">${f.lever_ids.map(id => `<li><span class="dot"></span><span class="lvname" style="color:var(--ink)" ${O({ v: id })}>${esc(V[id].lever)} <span class="muted">${id}</span></span>${thruHtml(V[id])}</li>`).join("")}</ul></details>`; }).join("") +
+          <ul class="ol-lvs" style="color:${PCOL[pc]}">${f.lever_ids.map(id => `<li><span class="dot"></span><span class="lvname" style="color:var(--ink)" ${O({ v: id })}>${esc(V[id].lever)} <span class="muted">${id}</span></span></li>`).join("")}</ul></details>`; }).join("") +
         `</details>`).join("") + `</details>`).join("");
   out.appendChild(d);
 });
@@ -668,11 +634,11 @@ out.addEventListener("click", e => {
 });
 
 $("#foot").textContent = `Tree v4, built ${D.built}: v3's groups and families with a lever under each family, made from the bridge face of 3 November; ` +
-  `31 levers merge sibling pathways that a plan writes as one action. Lever names are cut from the bridge phrase and are for the reviewers to rename. ` +
-  `Pathway citations are listed but not yet independently verified; risk tags come from the review notes. Category names follow the RHDR framework.`;
+  `Lever names are cut from the bridge phrase and are for the reviewers to rename. ` +
+  `The tree is shown down to the levers; risk tags come from the review notes. Category names follow the RHDR framework.`;
 
 // ---------- country on the tree ----------
-// row: [plan, name, objective, level, family, lever, pathway, group, sector, orientation, risks, reason]
+// row: [plan, name, objective, level, family, lever, group, sector, orientation, risks, reason]
 const C = D.country;
 let CM = false;
 const sel = new Set();
@@ -688,12 +654,12 @@ function rowsOn() { return C.rows.filter(r => sel.has(r[0])); }
 function cCount(rows) {
   const fam = {}, lev = {};
   rows.forEach(r => {
-    if (r[4]) { const x = fam[r[4]] || (fam[r[4]] = { n: 0, lv: 0, pw: 0 }); x.n++; if (r[5]) { x.lv++; if (r[6]) x.pw++; } }
-    if (r[5]) { const y = lev[r[5]] || (lev[r[5]] = { n: 0, pw: 0 }); y.n++; if (r[6]) y.pw++; }
+    if (r[4]) { const x = fam[r[4]] || (fam[r[4]] = { n: 0, lv: 0 }); x.n++; if (r[5]) x.lv++; }
+    if (r[5]) { const y = lev[r[5]] || (lev[r[5]] = { n: 0 }); y.n++; }
   });
   return { fam, lev };
 }
-const cntLabel = x => x && x.n ? `${x.n} · ${pct(x.pw, x.n)}% pathway` : "";
+const cntLabel = x => x && x.n ? `${x.n}` : "";
 function paintCountry() {
   gFruit.innerHTML = "";
   if (!CM) {
@@ -753,7 +719,6 @@ function selLabel() {
 function countryOverview() {
   const rows = rowsOn(), n = rows.length || 1;
   const lv = {}; rows.forEach(r => lv[r[3]] = (lv[r[3]] || 0) + 1);
-  const npw = rows.filter(r => r[5] && r[6]).length;
   const { fam, lev } = cCount(rows);
   const topF = Object.entries(fam).sort((a, b) => b[1].n - a[1].n).slice(0, 8).map(([k]) => k);
   const topV = Object.entries(lev).sort((a, b) => b[1].n - a[1].n).slice(0, 10).map(([k]) => k);
@@ -761,8 +726,7 @@ function countryOverview() {
   const P_ = k => pct(lv[k] || 0, n);
   return `<div class="sect"><div class="eyebrow">${esc(C.name)} on tree v4 · ${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} strategies</h2></div>
     <p class="muted">Leaf size is the number of strategies on each family, on the family itself or one of its levers. Gold buds are levers with strategies, sized by count; dashed buds get none. ${used} of ${D.levers.length} levers are used.</p>
-    <div class="lvls">${["LV", "L2", "GRP", "STD", "GOAL", "NEW"].map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${P_(k)}%</span></div>`).join("")}
-      <div style="padding-left:22px" class="muted">with a pathway recorded<span class="num">${npw.toLocaleString()} · ${pct(npw, lv.LV || 0)}%</span></div></div>
+    <div class="lvls">${["LV", "L2", "GRP", "STD", "GOAL", "NEW"].map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${P_(k)}%</span></div>`).join("")}</div>
     <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
     <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
     <p class="muted">Pick a plan on the timeline to see that plan's tree; the table below the tree shows every family and lever across all plans.</p>`;
@@ -774,8 +738,7 @@ function stratSearchList(rows) {
     const where = r[5] ? `<b>${esc(short(V[r[5]].lever, 50))}</b> <span class="muted">${esc(F[V[r[5]].family_id].family)}</span>` : r[4] && F[r[4]] ? `<b>${esc(F[r[4]].family)}</b> <span class="muted">family only</span>` : `<span class="muted">${esc(r[3])}</span>`;
     const o = r[5] ? { v: r[5] } : r[4] ? { f: r[4] } : null;
     const bits = [esc(short(planLabel(C.plans[r[0]]), 30)), where];
-    if (r[6] && pwOf(r[6])) bits.push(`via ${esc(pwOf(r[6]).pathway)}`);
-    if (r[11]) bits.push(`<span title="${esc(r[11])}">${esc(short(r[11], 70))}</span>`);
+    if (r[10]) bits.push(`<span title="${esc(r[10])}">${esc(short(r[10], 70))}</span>`);
     return `<div class="strat"${o ? ` ${O(o)} style="cursor:pointer"` : ""}><span title="${esc(r[2])}">${esc(r[1])}</span><span class="meta">${bits.join(" · ")}</span></div>`;
   }).join("");
 }
@@ -784,9 +747,8 @@ function stratList(rows, showLever) {
   return rows.slice(0, 120).map(r => {
     const bits = [esc(short(planLabel(C.plans[r[0]]), 30))];
     if (showLever && r[5]) bits.push(`<b>${esc(short(V[r[5]].lever, 50))}</b>`);
-    if (r[6] && pwOf(r[6])) bits.push(`via ${esc(pwOf(r[6]).pathway)}`);
-    if (!r[5] && r[11]) bits.push(`<span title="${esc(r[11])}">${esc(short(r[11], 70))}</span>`);
-    if (r[8]) bits.push(esc(r[8]));
+    if (!r[5] && r[10]) bits.push(`<span title="${esc(r[10])}">${esc(short(r[10], 70))}</span>`);
+    if (r[7]) bits.push(esc(r[7]));
     return `<div class="strat"><span title="${esc(r[2])}">${esc(r[1])}</span><span class="meta">${bits.join(" · ")}</span></div>`;
   }).join("") + (rows.length > 120 ? `<p class="muted">and ${rows.length - 120} more</p>` : "");
 }
@@ -804,14 +766,13 @@ function countryFamily(fid) {
 }
 function countryLever(lid) {
   const all = C.rows.filter(r => r[5] === lid);
-  const per = C.plans.map((p, i) => { const rs = all.filter(r => r[0] === i); return { i, p, n: rs.length, pw: rs.filter(r => r[6]).length }; });
+  const per = C.plans.map((p, i) => ({ i, p, n: all.filter(r => r[0] === i).length }));
   const max = Math.max(1, ...per.map(x => x.n));
   const rows = all.filter(r => sel.has(r[0]));
   const col = famCol(V[lid].family_id);
-  const npw = rows.filter(r => r[6]).length;
-  return `<div class="sect"><div class="eyebrow">${esc(C.name)}: ${rows.length} strategies on this lever · ${pct(npw, rows.length)}% with a pathway recorded</div>
+  return `<div class="sect"><div class="eyebrow">${esc(C.name)}: ${rows.length} strategies on this lever, plan by plan</div>
     <div class="pbars">${per.map(x => `<span class="lab" title="${esc(x.p.title)}">${esc(short(planLabel(x.p), 24))}</span>
-      <span class="trk" title="${x.n} strategies, ${x.pw} with a pathway"><i style="width:${100 * x.pw / max}%;background:var(--gold)"></i><i style="width:${100 * (x.n - x.pw) / max}%;background:${col}"></i></span>
+      <span class="trk" title="${x.n} strategies"><i style="width:${100 * x.n / max}%;background:${col}"></i></span>
       <span class="num">${x.n}</span>`).join("")}</div></div>
     ${rows.length ? `<details class="lv"><summary><span>The strategies · ${esc(selLabel())}</span></summary><div>${stratList(rows, false)}</div></details>` : ""}`;
 }
@@ -821,12 +782,11 @@ function drawTable() {
   const cnt = tot.map(rs => cCount(rs));
   const allc = cCount(C.rows);
   const NC = C.plans.length + 3;
-  const head = `<thead><tr><th>Family / lever</th><th>All</th><th style="color:var(--gold)">with pathway</th>${C.plans.map((p, i) => `<th class="${sel.has(i) && sel.size < C.plans.length ? "on" : ""}" title="${esc(p.title)}">${esc(short(planLabel(p), 18))}<br>${p.start}–${p.end}</th>`).join("")}</tr></thead>`;
+  const head = `<thead><tr><th>Family / lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${C.plans.map((p, i) => `<th class="${sel.has(i) && sel.size < C.plans.length ? "on" : ""}" title="${esc(p.title)}">${esc(short(planLabel(p), 18))}<br>${p.start}–${p.end}</th>`).join("")}</tr></thead>`;
   const n0 = C.rows.length;
   let body = `<tr class="tot"><td>Strategies</td><td class="all">${n0}</td><td></td>${tot.map(rs => `<td>${rs.length}</td>`).join("")}</tr>
     <tr class="tot"><td>Placed on a family or deeper</td><td class="all">${pct(C.rows.filter(r => r[4]).length, n0)}%</td><td></td>${tot.map(rs => `<td>${pct(rs.filter(r => r[4]).length, rs.length)}%</td>`).join("")}</tr>
-    <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(C.rows.filter(r => r[5]).length, n0)}%</td><td></td>${tot.map(rs => `<td class="g">${pct(rs.filter(r => r[5]).length, rs.length)}%</td>`).join("")}</tr>
-    <tr class="tot"><td>On a lever with a pathway recorded</td><td class="all g">${pct(C.rows.filter(r => r[6]).length, n0)}%</td><td></td>${tot.map(rs => `<td class="g">${pct(rs.filter(r => r[6]).length, rs.length)}%</td>`).join("")}</tr>`;
+    <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(C.rows.filter(r => r[5]).length, n0)}%</td><td></td>${tot.map(rs => `<td class="g">${pct(rs.filter(r => r[5]).length, rs.length)}%</td>`).join("")}</tr>`;
   const cell = (n, of, col, tip) => {
     const sh = of ? n / of : 0;
     return `<td title="${tip}" style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
@@ -835,16 +795,16 @@ function drawTable() {
     body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
     const col = PCOL[pc0];
     D.families.filter(f => f.subpillar_code === sc).forEach(f => {
-      const fid = f.family_id, a = allc.fam[fid] || { n: 0, lv: 0, pw: 0 }, op = openFam.has(fid);
-      body += `<tr class="frow${op ? " open" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever, ${a.pw} with a pathway">${a.lv ? pct(a.lv, a.n) + "% lever" : ""}</td>${cnt.map((c, i) => {
+      const fid = f.family_id, a = allc.fam[fid] || { n: 0, lv: 0 }, op = openFam.has(fid);
+      body += `<tr class="frow${op ? " open" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cnt.map((c, i) => {
         const x = c.fam[fid] || { n: 0, lv: 0 };
         return cell(x.n, tot[i].length, col, `${x.n} strategies, ${x.lv} on a lever`);
       }).join("")}</tr>`;
       f.lever_ids.forEach(lid => {
-        const b = allc.lev[lid] || { n: 0, pw: 0 };
-        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${b.n || ""}</td><td class="pws">${b.n ? pct(b.pw, b.n) + "%" : ""}</td>${cnt.map((c, i) => {
-          const x = c.lev[lid] || { n: 0, pw: 0 };
-          return cell(x.n, tot[i].length, col, `${x.n} strategies, ${x.pw} with a pathway`);
+        const b = allc.lev[lid] || { n: 0 };
+        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${b.n || ""}</td><td></td>${cnt.map((c, i) => {
+          const x = c.lev[lid] || { n: 0 };
+          return cell(x.n, tot[i].length, col, `${x.n} strategies`);
         }).join("")}</tr>`;
       });
     });
@@ -871,11 +831,11 @@ function setMode(on) {
 if (C && C.rows.length) {
   if (C.provisional) {
     const b = $("#banner"); b.hidden = false;
-    b.innerHTML = `<b>Provisional: v3 placements lifted onto v4 levers</b><span>The ${esc(C.name)} strategies here are the v3 run, not a v4 run. A strategy v3 placed on a pathway sits on that pathway's lever, with the pathway recorded; a strategy v3 placed on a family stays on the family. The lever share is therefore v3's pathway share; the v4 run places by the levers' own tests and will replace this.</span>`;
+    b.innerHTML = `<b>Provisional: v3 placements lifted onto v4 levers</b><span>The ${esc(C.name)} strategies here are the v3 run, not a v4 run. A strategy v3 placed below a family sits on the v4 lever that took over that placement; a strategy v3 placed on a family stays on the family. The lever share is therefore v3's share below the family; the v4 run places by the levers' own tests and will replace this.</span>`;
   }
   if (!C.provisional && C.lifted_plans && C.lifted_plans.length) {
     const b = $("#banner"); b.hidden = false;
-    b.innerHTML = `<b>Mixed: ${C.lifted_plans.length} earlier plans lifted from v3</b><span>The 13th Plan rows are the v4 run (placed by the levers' own tests). The other plans were mapped on v3: a strategy placed on a pathway there sits on that pathway's lever, one placed on a family stays on the family. Lifted plans: ${esc(C.lifted_plans.join(", "))}.</span>`;
+    b.innerHTML = `<b>Mixed: ${C.lifted_plans.length} earlier plans lifted from v3</b><span>The 13th Plan rows are the v4 run (placed by the levers' own tests). The other plans were mapped on v3: a strategy placed below a family there sits on the v4 lever that took over that placement, one placed on a family stays on the family. Lifted plans: ${esc(C.lifted_plans.join(", "))}.</span>`;
   }
   $("#ctry").hidden = false;
   $("#m-ctry").textContent = `${C.name} on the tree`;

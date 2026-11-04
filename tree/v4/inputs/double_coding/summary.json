@@ -2,20 +2,20 @@
  "n": 119,
  "pairs": {
   "run vs coder1": {
-   "family_agreement": 0.622,
-   "family_kappa": 0.608,
-   "lever_agreement": 0.555,
-   "lever_kappa": 0.539,
+   "family_agreement": 0.672,
+   "family_kappa": 0.66,
+   "lever_agreement": 0.588,
+   "lever_kappa": 0.573,
    "both_on_lever": 93,
-   "lever_agreement_when_both": 0.613
+   "lever_agreement_when_both": 0.645
   },
   "run vs coder2": {
-   "family_agreement": 0.588,
-   "family_kappa": 0.573,
-   "lever_agreement": 0.521,
-   "lever_kappa": 0.503,
+   "family_agreement": 0.622,
+   "family_kappa": 0.608,
+   "lever_agreement": 0.538,
+   "lever_kappa": 0.519,
    "both_on_lever": 89,
-   "lever_agreement_when_both": 0.596
+   "lever_agreement_when_both": 0.607
   },
   "coder1 vs coder2": {
    "family_agreement": 0.908,
@@ -26,43 +26,41 @@
    "lever_agreement_when_both": 0.902
   }
  },
- "family_all_three": 68,
- "lever_all_three": 58,
+ "family_all_three": 73,
+ "lever_all_three": 61,
  "on_lever": {
-  "run": 104,
+  "run": 103,
   "coder1": 99,
   "coder2": 95
  },
  "run_lever_not_matched_by_either_coder": {
-  "LV-196": 5,
+  "LV-196": 4,
   "LV-222": 3,
   "LV-190": 3,
-  "LV-117": 2,
-  "LV-184": 2,
   "LV-205": 2,
+  "LV-100": 2,
   "LV-203": 2,
-  "LV-208": 2,
-  "LV-055": 2,
+  "LV-128": 2,
+  "LV-077": 2,
+  "LV-101": 2,
   "LV-041": 1,
+  "LV-121": 1,
+  "LV-117": 1,
   "LV-114": 1,
   "LV-209": 1,
   "LV-139": 1,
-  "LV-143": 1,
-  "LV-100": 1,
   "LV-129": 1,
   "LV-131": 1,
-  "LV-107": 1,
   "LV-059": 1,
-  "LV-134": 1,
+  "LV-055": 1,
   "LV-065": 1,
+  "LV-184": 1,
   "LV-027": 1,
   "LV-069": 1,
   "LV-181": 1,
-  "LV-101": 1,
-  "LV-062": 1,
   "LV-132": 1,
-  "LV-035": 1,
-  "LV-128": 1,
-  "LV-175": 1
+  "LV-056": 1,
+  "LV-175": 1,
+  "LV-208": 1
  }
 }
