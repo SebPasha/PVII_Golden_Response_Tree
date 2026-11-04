@@ -118,6 +118,41 @@ def short_name(lever_text):
     return s[:1].upper() + s[1:]
 
 
+
+# Literature-driven check of the levers (inputs/lever_check.json, 4 November 2026): each lever's name
+# and tests read against the literature attached to it. A "fix" replaces the name or a test, the
+# draft wording is kept in *_draft columns; a "flag" is left for the economists to decide.
+CHECK_FILE = os.path.join(HERE, "inputs", "lever_check.json")
+CHECK_KEYS = ("check_verdict", "check_name_ok", "check_tests_ok", "check_literature_ok", "check_source", "check_note")
+
+
+def load_lever_check():
+    if not os.path.exists(CHECK_FILE):
+        return {}
+    data = json.load(open(CHECK_FILE, encoding="utf-8"))
+    return {r["lever_id"]: r for r in data}
+
+
+def apply_check(lever, chk):
+    lever["lever_draft"], lever["joins_when_draft"], lever["joins_not_draft"] = lever["lever"], lever["joins_when"], lever["joins_not"]
+    if not chk:
+        lever.update({k: "" for k in CHECK_KEYS})
+        return
+    if chk.get("verdict") == "fix":
+        if chk.get("new_lever"):
+            lever["lever"] = chk["new_lever"].strip()
+        if chk.get("new_joins_when"):
+            lever["joins_when"] = chk["new_joins_when"].strip().rstrip(".")
+        if chk.get("new_joins_not"):
+            lever["joins_not"] = chk["new_joins_not"].strip().rstrip(".")
+    lever["check_verdict"] = chk.get("verdict", "")
+    lever["check_name_ok"] = chk.get("name_ok", "")
+    lever["check_tests_ok"] = chk.get("tests_ok", "")
+    lever["check_literature_ok"] = chk.get("literature_ok", "")
+    lever["check_source"] = chk.get("source", "")
+    lever["check_note"] = chk.get("note", "")
+
+
 # Intervention-level evidence per lever (inputs/lever_evidence.json, scan of 3 November 2026): a
 # systematic review or flagship evaluation of the action itself, beside the mechanism citations.
 EVIDENCE_FILE = os.path.join(HERE, "inputs", "lever_evidence.json")
@@ -275,6 +310,7 @@ def main():
     thesis_refs = load_thesis_refs()
     anchors = load_theory_anchors()
     thai = load_thai_counts()
+    checks = load_lever_check()
     v3 = json.load(open(V3, encoding="utf-8"))
     groups = {g["group_id"]: dict(g) for g in v3["groups"]}
     families = {f["family_id"]: dict(f) for f in v3["families"]}
@@ -335,6 +371,7 @@ def main():
             lever["theory_anchor_ids"], lever["theory_n"] = fam["theory_anchor_ids"], fam["theory_n"]
             lever["thai_strategies"] = thai.get(lid, 0)
             lever["backing_score"], lever["backing_grade"] = backing(lever)
+            apply_check(lever, checks.get(lid))
             levers[lid] = lever
             fam["lever_ids"].append(lid)
             for m in members:
@@ -367,7 +404,8 @@ def main():
                "framework_source", "framework_where", "framework_says", "framework_refs",
                "thesis_n", "thesis_citations", "thesis_refs",
                "framework_status", "theory_anchor_ids", "theory_n", "thai_strategies", "backing_score", "backing_grade",
-               "risks", "entry_points", "text_cues"])
+               "lever_draft", "joins_when_draft", "joins_not_draft", "check_verdict", "check_name_ok", "check_tests_ok",
+               "check_literature_ok", "check_source", "check_note", "risks", "entry_points", "text_cues"])
     write_csv(os.path.join(HERE, "pathways_v4.csv"), paths.values(),
               ["pathway_id", "pathway", "lever_id", "lever", "family_id", "family", "group_id", "group",
                "subpillar", "pillar", "causal_input", "transmission", "outcome", "conditions", "distinction",
@@ -395,6 +433,8 @@ def main():
     print("v4: %d groups, %d families, %d levers over %d pathways (%d levers carry more than one); levers per family %s" % (
         len(groups), len(families), len(levers), len(paths), sum(1 for l in levers.values() if l["n_pathways"] > 1),
         dict(sorted(per_fam.items()))))
+    if checks:
+        print("literature check: %s" % dict(collections.Counter(l["check_verdict"] for l in levers.values())))
     print("backing: %s; families with no theory anchor: %d" % (
         dict(collections.Counter(l["backing_grade"] for l in levers.values())),
         sum(1 for f in families.values() if not f["theory_n"])))

@@ -81,6 +81,10 @@ lines = [
  ('Backing summary: levers by backing grade, for each subpillar and in all.', None),
  ('Theory anchors: the independent reviewer\'s 27 references (review of 4 November 2026), with the families that carry each one and the reviewer levers it was linked to. A family carries a reference as core or complementary when the reviewer linked it to a lever that maps onto the family, and as secondary when the family is only a secondary match; the family\'s levers inherit its anchors.', None),
  ('Reviewer crosswalk: the independent reviewer\'s 18 levers mapped onto our subpillars, groups and families, with a note on where the cut differs.', None),
+ ('Lever check: the literature-driven check of 4 November 2026, one row per lever, flags and fixes first. Each lever\'s name and its two tests were read against the literature attached to it (pathway mechanism and conditions, intervention evidence, framework text, thesis papers, theory anchors). "fix" means the name or a test was changed, with the draft wording beside it and the literature item that justified the change; "flag" is left for the economists: a split, a merge or a contradiction.', None),
+ ('Double coding: 119 strategies of Thailand\'s 13th Plan (a stratified random sample of the 519) coded three times from the same codebook: by the run (the mapping step) and by two independent blind coders who saw only the strategy and the codebook. Disagreements first. Double coding summary: agreement and Cohen\'s kappa for each pair at family and lever level, and the run\'s levers that neither coder chose.', None),
+ ('Literature: every reference the tree carries, one row each (theory anchors, framework references, intervention evidence, thesis papers, mechanism citations), with its status and the nodes it is attached to.', None),
+ ('Instruments by lever: the Thai 13th Plan\'s instrument classes (money, authority, information, organisation) crossed with the levers the strategies landed on. An instrument is the tool; a lever is the action on a purpose; one instrument serves many levers and most levers take several instruments.', None),
  ('Families: one row per family (60), with definition, examples, plan words and its lever ids.', None),
  ('Groups: one row per group (33), with the published framework it draws on (basis) and its definition.', None),
 ]
@@ -103,10 +107,10 @@ for p in Ps:
                   p['causal_input'], p['transmission'], p['outcome'], p['conditions'], p['distinction'], p['evidence'], p['evidence_status'], p['risks'], ''])
 sheet(wb, 'Tree', th, trows, tk, 'J2', band_key=8)
 
-lh = ['lever_id','pillar','subpillar','group_id','group','family_id','family','lever','lever full phrase','joins when','joins not','intervention evidence','evidence finding','evidence strength','design','fit to lever','basis','read','source verified','source url','framework source','framework where','framework says','framework references','thesis literature','thesis findings','backing grade','theory anchors','n_pathways','pathways','mechanism evidence','risks','text_cues','entry_points','Reviewer comment']
-lk = ['id','name','name','id','name','id','name','name','long','long','long','long','long','name','name','name','long','name','name','long','name','name','long','long','long','long','name','long','num','long','long','name','long','long','long']
+lh = ['lever_id','pillar','subpillar','group_id','group','family_id','family','lever','lever full phrase','draft name (3 Nov)','literature check','check source','joins when','joins not','intervention evidence','evidence finding','evidence strength','design','fit to lever','basis','read','source verified','source url','framework source','framework where','framework says','framework references','thesis literature','thesis findings','backing grade','theory anchors','n_pathways','pathways','mechanism evidence','risks','text_cues','entry_points','Reviewer comment']
+lk = ['id','name','name','id','name','id','name','name','long','name','short','long','long','long','long','long','name','name','name','long','name','name','long','name','name','long','long','long','long','name','long','num','long','long','name','long','long','long']
 lrows = [[l['lever_id'], l['pillar'], l['subpillar'], l['group_id'], l['group'], l['family_id'], l['family'], l['lever'], l['lever_full'],
-          l['joins_when'], l['joins_not'], l.get('intervention_evidence',''), l.get('evidence_finding',''), l.get('evidence_strength',''), l.get('evidence_design',''), l.get('evidence_fit',''), l.get('evidence_basis',''), l.get('evidence_checked',''), l.get('evidence_verified',''), l.get('evidence_url',''),
+          l.get('lever_draft','') if l.get('lever_draft','') != l['lever'] else '', l.get('check_verdict',''), l.get('check_source',''), l['joins_when'], l['joins_not'], l.get('intervention_evidence',''), l.get('evidence_finding',''), l.get('evidence_strength',''), l.get('evidence_design',''), l.get('evidence_fit',''), l.get('evidence_basis',''), l.get('evidence_checked',''), l.get('evidence_verified',''), l.get('evidence_url',''),
           l.get('framework_source',''), l.get('framework_where',''), l.get('framework_says',''), '; '.join(l.get('framework_refs') or []),
           l.get('thesis_citations',''), ' | '.join(r.get('finding','') for r in (l.get('thesis_refs') or []) if r.get('finding')),
           l.get('backing_grade',''), l.get('theory_anchor_ids',''), l['n_pathways'], l['pathways'], l['evidence'], l['risks'], l['text_cues'], l['entry_points'], ''] for l in L]
@@ -194,6 +198,78 @@ xk = ['id','name','id','long','long','long','long','long']
 xrows = [[r['code'], r['name'], r.get('our_subpillar',''), r.get('groups') or [], r.get('families') or [], r.get('secondary_families') or [], r.get('note',''), ''] for r in cw['reviewer_levers']]
 sheet(wb, 'Reviewer crosswalk', xh, xrows, xk, 'B2')
 
+# Lever check: the literature-driven check of 4 November, one row per lever
+kh = ['lever_id','family','lever (now)','draft name (3 Nov)','verdict','name ok','tests ok','literature ok','joins when (now)','joins when (draft)','joins not (now)','joins not (draft)','source in the literature','note','Reviewer comment']
+kk = ['id','name','name','name','short','short','short','short','long','long','long','long','long','long','long']
+VERD = {'flag': 0, 'fix': 1, 'keep': 2, '': 3}
+krows = [[l['lever_id'], l['family'], l['lever'], l.get('lever_draft',''), l.get('check_verdict',''), l.get('check_name_ok',''), l.get('check_tests_ok',''), l.get('check_literature_ok',''),
+          l['joins_when'], l.get('joins_when_draft',''), l['joins_not'], l.get('joins_not_draft',''), l.get('check_source',''), l.get('check_note',''), '']
+         for l in sorted(L, key=lambda l: (VERD.get(l.get('check_verdict',''), 3), l['lever_id']))]
+if any(l.get('check_verdict') for l in L):
+    sheet(wb, 'Lever check', kh, krows, kk, 'C2', band_key=4)
+
+# Double coding: the run's placement against two blind codings of 119 Thai 13th Plan strategies
+DC = os.path.join(HERE, 'thailand', 'plan_13th', 'double_coding.csv')
+DS = os.path.join(HERE, 'inputs', 'double_coding', 'summary.json')
+if os.path.exists(DC) and os.path.exists(DS):
+    import csv as _csv
+    drows_in = list(_csv.DictReader(open(DC, encoding='utf-8')))
+    summ = json.load(open(DS, encoding='utf-8'))
+    dh = ['strategy_id','strategy','objective','quote (en)','run family','run lever','run reason','coder 1 family','coder 1 lever','coder 1 reason','coder 2 family','coder 2 lever','coder 2 reason','family agreement','lever agreement','Reviewer comment']
+    dk = ['id','name','long','long','id','name','long','id','name','long','id','name','long','short','short','long']
+    AGR = {'none': 0, 'two of three': 1, 'all three': 2}
+    drows = [[r['strategy_id'], r['name'], r['objective'], r['quote_en'], r['run_family_id'], (r['run_lever_id'] + ' ' + r['run_lever']).strip(), r['run_reason'],
+              r['coder1_family_id'], (r['coder1_lever_id'] + ' ' + r['coder1_lever']).strip(), r['coder1_reason'],
+              r['coder2_family_id'], (r['coder2_lever_id'] + ' ' + r['coder2_lever']).strip(), r['coder2_reason'], r['family_agreement'], r['lever_agreement'], '']
+             for r in sorted(drows_in, key=lambda r: (AGR[r['lever_agreement']], AGR[r['family_agreement']], r['strategy_id']))]
+    sheet(wb, 'Double coding', dh, drows, dk, 'C2', band_key=14)
+    sh2 = ['pair','family agreement','family kappa','lever agreement','lever kappa','both on a lever (n)','lever agreement when both on a lever']
+    sk2 = ['name','num','num','num','num','num','num']
+    srows2 = [[k, v['family_agreement'], v['family_kappa'], v['lever_agreement'], v['lever_kappa'], v['both_on_lever'], v['lever_agreement_when_both']] for k, v in summ['pairs'].items()]
+    srows2.append(['all three agree (of %d)' % summ['n'], summ['family_all_three'], '', summ['lever_all_three'], '', '', ''])
+    for c, n in summ['on_lever'].items(): srows2.append(['%s: strategies put on a lever' % c, '', '', n, '', '', ''])
+    for lid, n in summ.get('run_lever_not_matched_by_either_coder', {}).items():
+        srows2.append(['run lever matched by neither coder: %s %s' % (lid, lby[lid]['lever'] if lid in lby else ''), '', '', n, '', '', ''])
+    sheet(wb, 'Double coding summary', sh2, srows2, sk2, 'B2')
+
+# Literature: every reference the tree carries, one row each, with where it sits
+lit = collections.OrderedDict()
+def add(ref, layer, status, where, node):
+    ref = (ref or '').strip()
+    if not ref: return
+    k = (layer, ref)
+    if k not in lit: lit[k] = {'ref': ref, 'layer': layer, 'status': status, 'where': where, 'nodes': []}
+    if node not in lit[k]['nodes']: lit[k]['nodes'].append(node)
+for p in P:
+    for c in re.split(r';\s*', p.get('evidence','') or ''):
+        add(c, 'mechanism citation (pathway)', p.get('evidence_status',''), 'pathway', '%s %s (%s)' % (p['pathway_id'], p['pathway'], p['lever_id']))
+for l in L:
+    if l.get('intervention_evidence'):
+        add(l['intervention_evidence'], 'intervention evidence (lever)', 'read %s; %s; fit %s; %s' % (l.get('evidence_checked',''), l.get('evidence_strength',''), l.get('evidence_fit',''), 'verified online' if l.get('evidence_verified')=='yes' else 'not verified'), 'lever', '%s %s' % (l['lever_id'], l['lever']))
+    for r in l.get('framework_refs') or []:
+        add(r if isinstance(r, str) else json.dumps(r, ensure_ascii=False), 'framework reference (lever)', 'cited by %s' % l.get('framework_source',''), 'lever', '%s %s' % (l['lever_id'], l['lever']))
+    for r in l.get('thesis_refs') or []:
+        add(r.get('citation',''), 'thesis paper (lever)', r.get('ident',''), 'lever', '%s %s' % (l['lever_id'], l['lever']))
+for r in cw['references']:
+    cite = '%s %s, %s, %s' % (r.get('author',''), r.get('year',''), r.get('title',''), r.get('venue',''))
+    add(cite, 'theory anchor (family)', 'independent review, %s' % r.get('kind',''), 'family', '; '.join(fam_of[r['ref_id']]))
+LAYERS = ['theory anchor (family)', 'framework reference (lever)', 'intervention evidence (lever)', 'thesis paper (lever)', 'mechanism citation (pathway)']
+lih = ['reference','layer','status','attached to','nodes (ids and names)','n nodes','Reviewer comment']
+lik = ['long','name','long','short','long','num','long']
+lirows = [[v['ref'], v['layer'], v['status'], v['where'], v['nodes'], len(v['nodes']), ''] for v in sorted(lit.values(), key=lambda v: (LAYERS.index(v['layer']), v['ref'].lower()))]
+sheet(wb, 'Literature', lih, lirows, lik, 'B2', band_key=1)
+
+# Instruments by lever: the Thai 13th Plan's instrument classes crossed with the levers they landed on
+TS = os.path.join(HERE, 'thailand', 'plan_13th', 'strategies.csv')
+if os.path.exists(TS):
+    import csv as _csv
+    srows_in = list(_csv.DictReader(open(TS, encoding='utf-8')))
+    xtab = collections.Counter((r['lever_id'], r['instrument_label']) for r in srows_in if r.get('lever_id') and r.get('instrument_label'))
+    ih = ['lever_id','lever','family','instrument class','strategies (n)','Reviewer comment']
+    ik = ['id','name','name','name','num','long']
+    irows = [[lid, lby[lid]['lever'], lby[lid]['family'], inst, n, ''] for (lid, inst), n in sorted(xtab.items(), key=lambda kv: (kv[0][0], -kv[1]))]
+    sheet(wb, 'Instruments by lever', ih, irows, ik, 'B2', band_key=0)
+
 fh = ['family_id','family','group_id','group','subpillar','pillar','definition','examples','plan_words','n_levers','lever_ids','n_pathways','pathway_ids','risks','Reviewer comment']
 fk = ['id','name','id','name','name','name','long','long','long','num','long','num','long','name','long']
 frows = [[f['family_id'], f['family'], f['group_id'], f['group'], f['subpillar'], f['pillar'], f.get('definition',''), f.get('examples',''), f.get('plan_words',''),
@@ -207,7 +283,7 @@ sheet(wb, 'Groups', gh, grows, gk, 'C2')
 
 # checks
 assert len(crows)==229 and len(brows)==229 and len(arows)==27 and len(xrows)==18
-assert len(ch)==len(ck) and len(bh)==len(bk) and len(ah)==len(ak) and len(xh)==len(xk) and len(sh)==len(sk) and len(lh)==len(lk)
+assert len(kh)==len(kk) and len(lih)==len(lik) and len(ch)==len(ck) and len(bh)==len(bk) and len(ah)==len(ak) and len(xh)==len(xk) and len(sh)==len(sk) and len(lh)==len(lk)
 if missing_ids: print('joins_not names L3 ids that no longer exist:', missing_ids)
 assert len(trows)==263 and len(lrows)==229 and len(frows)==60 and len(grows)==33
 assert all(r[8] for r in trows)

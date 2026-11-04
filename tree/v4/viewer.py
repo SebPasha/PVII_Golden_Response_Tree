@@ -42,7 +42,7 @@ data = {
                                         "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
                                         "framework_source", "framework_where", "framework_says", "framework_refs",
                                         "thesis_refs", "framework_status", "theory_anchor_ids", "theory_n",
-                                        "thai_strategies", "backing_score", "backing_grade")}
+                                        "thai_strategies", "backing_score", "backing_grade", "lever_draft", "check_verdict", "check_source", "check_note")}
                for lv in tree["levers"]],
     "pathways": [{k: p.get(k, "") for k in ("pathway_id", "pathway", "family_id", "lever_id", "causal_input",
                                              "transmission", "outcome", "conditions", "distinction", "evidence",

@@ -1,0 +1,835 @@
+[
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s505",
+  "family_id": "F-50",
+  "lever_id": "LV-196",
+  "confidence": "medium",
+  "reason": "redesigning work processes, eliminating paperwork and procedures"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s471",
+  "family_id": "F-19",
+  "lever_id": "LV-099",
+  "confidence": "medium",
+  "reason": "allowing older persons to work according to their capacities"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s459",
+  "family_id": "F-11",
+  "lever_id": "LV-058",
+  "confidence": "high",
+  "reason": "reform higher education programmes, standards, quality assurance"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s275",
+  "family_id": "F-30",
+  "lever_id": "LV-142",
+  "confidence": "medium",
+  "reason": "digital trade data as collateral for SME credit"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s350",
+  "family_id": "F-11",
+  "lever_id": "LV-056",
+  "confidence": "medium",
+  "reason": "subsidizing educational expenses of poor children"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s348",
+  "family_id": "F-06",
+  "lever_id": "LV-024",
+  "confidence": "low",
+  "reason": "databases to identify poor households and their needs"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s314",
+  "family_id": "F-28",
+  "lever_id": "LV-138",
+  "confidence": "medium",
+  "reason": "sustainable city framework, land-use planning for TOD, curb sprawl"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s64",
+  "family_id": "F-07",
+  "lever_id": "LV-028",
+  "confidence": "low",
+  "reason": "community food reserve to secure food access"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s345",
+  "family_id": "F-06",
+  "lever_id": "",
+  "confidence": "medium",
+  "reason": "targeted aid to poor households, no specific instrument named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s236",
+  "family_id": "F-22",
+  "lever_id": "LV-111",
+  "confidence": "low",
+  "reason": "own brands to upgrade into higher-value electronics exports"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s297",
+  "family_id": "F-25",
+  "lever_id": "LV-128",
+  "confidence": "medium",
+  "reason": "digital technology to circulate products of SMEs and collectives"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s258",
+  "family_id": "F-30",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "SME support coordination via budgeting; no F-30 lever for budgeting"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s307",
+  "family_id": "F-48",
+  "lever_id": "LV-190",
+  "confidence": "low",
+  "reason": "revise regulations to improve collaboration with partners"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s219",
+  "family_id": "F-52",
+  "lever_id": "LV-206",
+  "confidence": "high",
+  "reason": "private sector investment in infrastructure and service provision"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s302",
+  "family_id": "F-28",
+  "lever_id": "LV-138",
+  "confidence": "low",
+  "reason": "urban development charters and companies for area development"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s271",
+  "family_id": "F-30",
+  "lever_id": "LV-144",
+  "confidence": "medium",
+  "reason": "one ID system easing business operation for SMEs"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s309",
+  "family_id": "F-47",
+  "lever_id": "LV-189",
+  "confidence": "medium",
+  "reason": "townhall mechanisms for collective planning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s230",
+  "family_id": "F-22",
+  "lever_id": "LV-113",
+  "confidence": "medium",
+  "reason": "grow service transactions on Thai digital platforms"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s268",
+  "family_id": "F-30",
+  "lever_id": "LV-141",
+  "confidence": "medium",
+  "reason": "business support centers advising entrepreneurs"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s259",
+  "family_id": "F-30",
+  "lever_id": "",
+  "confidence": "medium",
+  "reason": "SME promotion system improved in general, no action named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s288",
+  "family_id": "F-30",
+  "lever_id": "LV-143",
+  "confidence": "high",
+  "reason": "incubation programmes for startups"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s360",
+  "family_id": "F-18",
+  "lever_id": "LV-093",
+  "confidence": "low",
+  "reason": "cut low-impact measures, co-payments for fiscal sustainability"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s154",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "low",
+  "reason": "installation and battery standards supporting EV conversion industry"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s467",
+  "family_id": "F-12",
+  "lever_id": "LV-059",
+  "confidence": "medium",
+  "reason": "reskilling and upskilling short courses, credits for future skills"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s490",
+  "family_id": "F-11",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "private CSR educational innovation; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s393",
+  "family_id": "F-15",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "resolve natural resource conflicts; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s142",
+  "family_id": "F-13",
+  "lever_id": "LV-065",
+  "confidence": "low",
+  "reason": "deploy smart grid technology for EV charging"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s223",
+  "family_id": "F-12",
+  "lever_id": "LV-059",
+  "confidence": "medium",
+  "reason": "revise personnel development curricula, raise labour skills"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s53",
+  "family_id": "F-33",
+  "lever_id": "",
+  "confidence": "medium",
+  "reason": "lower farmers' fees for standard accreditation; no F-33 lever on certification"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s367",
+  "family_id": "F-17",
+  "lever_id": "LV-088",
+  "confidence": "medium",
+  "reason": "extended producer responsibility for material flows"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s11",
+  "family_id": "F-13",
+  "lever_id": "LV-067",
+  "confidence": "medium",
+  "reason": "prepare infrastructure for renewables and EVs"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s354",
+  "family_id": "F-06",
+  "lever_id": "LV-022",
+  "confidence": "medium",
+  "reason": "revise retirement saving conditions and benefits"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s384",
+  "family_id": "F-15",
+  "lever_id": "LV-079",
+  "confidence": "high",
+  "reason": "plant new forests in degraded or abandoned areas"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s369",
+  "family_id": "F-13",
+  "lever_id": "LV-065",
+  "confidence": "medium",
+  "reason": "stimulate green energy use in production"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s86",
+  "family_id": "F-21",
+  "lever_id": "LV-107",
+  "confidence": "high",
+  "reason": "community-based and secondary city tourism"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s445",
+  "family_id": "F-11",
+  "lever_id": "LV-055",
+  "confidence": "high",
+  "reason": "upgrade early childhood development facilities"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s343",
+  "family_id": "F-11",
+  "lever_id": "LV-055",
+  "confidence": "high",
+  "reason": "expand early childhood development centers"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s198",
+  "family_id": "F-06",
+  "lever_id": "LV-023",
+  "confidence": "medium",
+  "reason": "regulate medical fees, health security payments"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s436",
+  "family_id": "F-39",
+  "lever_id": "LV-170",
+  "confidence": "low",
+  "reason": "catastrophe model data for hazard risk assessment"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s420",
+  "family_id": "F-14",
+  "lever_id": "LV-069",
+  "confidence": "medium",
+  "reason": "land-use allocation, disaster safety zones, urban planning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s233",
+  "family_id": "F-56",
+  "lever_id": "LV-213",
+  "confidence": "high",
+  "reason": "build immunity to fake news"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s416",
+  "family_id": "F-13",
+  "lever_id": "",
+  "confidence": "high",
+  "reason": "low-carbon society goal, no action named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s391",
+  "family_id": "F-15",
+  "lever_id": "",
+  "confidence": "medium",
+  "reason": "summary line, no action named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s423",
+  "family_id": "F-51",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "disaster preparedness collaboration; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s133",
+  "family_id": "F-24",
+  "lever_id": "LV-121",
+  "confidence": "high",
+  "reason": "joint ventures with foreign EV makers for technology transfer"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s356",
+  "family_id": "F-31",
+  "lever_id": "LV-147",
+  "confidence": "medium",
+  "reason": "help people plan retirement savings"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s300",
+  "family_id": "F-06",
+  "lever_id": "",
+  "confidence": "medium",
+  "reason": "inclusive welfare, no instrument named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s433",
+  "family_id": "F-40",
+  "lever_id": "LV-176",
+  "confidence": "medium",
+  "reason": "insurance systems and funds for disasters"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s276",
+  "family_id": "F-30",
+  "lever_id": "LV-142",
+  "confidence": "high",
+  "reason": "loans and guarantees for SMEs"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s383",
+  "family_id": "F-17",
+  "lever_id": "LV-089",
+  "confidence": "low",
+  "reason": "model communities transferring circular economy knowledge"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s349",
+  "family_id": "F-06",
+  "lever_id": "LV-024",
+  "confidence": "medium",
+  "reason": "address exclusion errors, revise eligibility criteria"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s244",
+  "family_id": "F-22",
+  "lever_id": "LV-113",
+  "confidence": "medium",
+  "reason": "elevate local digital industry and services"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s341",
+  "family_id": "F-01",
+  "lever_id": "LV-005",
+  "confidence": "high",
+  "reason": "labour law protection for workers in all forms of employment"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s400",
+  "family_id": "F-17",
+  "lever_id": "LV-088",
+  "confidence": "medium",
+  "reason": "circular use of resources and upcycling of waste"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s488",
+  "family_id": "F-12",
+  "lever_id": "LV-061",
+  "confidence": "medium",
+  "reason": "learning credit banks make learning comparable across levels"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s206",
+  "family_id": "F-51",
+  "lever_id": "LV-197",
+  "confidence": "medium",
+  "reason": "preparedness plan, workforce plan, essential supplies"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s316",
+  "family_id": "F-25",
+  "lever_id": "LV-124",
+  "confidence": "medium",
+  "reason": "transport and freight infrastructure"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s174",
+  "family_id": "F-21",
+  "lever_id": "LV-107",
+  "confidence": "low",
+  "reason": "raise wellness tourism service standards"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s410",
+  "family_id": "F-17",
+  "lever_id": "LV-088",
+  "confidence": "medium",
+  "reason": "sharing economy and secondhand markets as circular economy"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s379",
+  "family_id": "F-17",
+  "lever_id": "LV-088",
+  "confidence": "high",
+  "reason": "community garbage management through the chain"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s485",
+  "family_id": "F-11",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "lifelong learning spaces; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s378",
+  "family_id": "F-13",
+  "lever_id": "LV-064",
+  "confidence": "high",
+  "reason": "carbon market trade and certification"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s134",
+  "family_id": "F-13",
+  "lever_id": "LV-068",
+  "confidence": "high",
+  "reason": "support combustion-engine enterprises to transition"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s150",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "low",
+  "reason": "EV standards and testing for new industry"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s237",
+  "family_id": "F-23",
+  "lever_id": "LV-114",
+  "confidence": "high",
+  "reason": "investment in R&D of advanced technologies"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s123",
+  "family_id": "F-24",
+  "lever_id": "LV-122",
+  "confidence": "low",
+  "reason": "connect ZEV producers to raw-material supply chains abroad"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s169",
+  "family_id": "F-21",
+  "lever_id": "LV-107",
+  "confidence": "medium",
+  "reason": "wellness city and health tourism destination development"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s81",
+  "family_id": "F-21",
+  "lever_id": "LV-107",
+  "confidence": "low",
+  "reason": "laws revised to enable investment in tourist destinations"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s193",
+  "family_id": "F-10",
+  "lever_id": "LV-044",
+  "confidence": "medium",
+  "reason": "produce and upskill medical personnel"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s147",
+  "family_id": "F-13",
+  "lever_id": "LV-068",
+  "confidence": "medium",
+  "reason": "transition remedies for EV-shift human resources"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s94",
+  "family_id": "F-15",
+  "lever_id": "LV-077",
+  "confidence": "medium",
+  "reason": "income from natural conservation"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s46",
+  "family_id": "F-15",
+  "lever_id": "LV-079",
+  "confidence": "medium",
+  "reason": "expand watershed forests in areas unfit for farming"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s162",
+  "family_id": "F-27",
+  "lever_id": "LV-133",
+  "confidence": "low",
+  "reason": "link industry with medical tourism"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s90",
+  "family_id": "F-21",
+  "lever_id": "LV-107",
+  "confidence": "medium",
+  "reason": "add value to tourism through creative economy"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s160",
+  "family_id": "F-27",
+  "lever_id": "LV-133",
+  "confidence": "low",
+  "reason": "build associated industries around medical services"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s114",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "medium",
+  "reason": "create demand for EVs as new industry"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s96",
+  "family_id": "F-21",
+  "lever_id": "LV-108",
+  "confidence": "high",
+  "reason": "environmental management at tourist destinations"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s166",
+  "family_id": "F-22",
+  "lever_id": "LV-113",
+  "confidence": "low",
+  "reason": "revise laws for medical and wellness services hub"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s113",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "medium",
+  "reason": "support EV to become new leading industry"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s143",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "medium",
+  "reason": "revise regulations for EV industry growth"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s140",
+  "family_id": "F-13",
+  "lever_id": "LV-065",
+  "confidence": "medium",
+  "reason": "deploy EV charging stations"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s179",
+  "family_id": "F-19",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "residential and activity spaces for elderly; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s129",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "medium",
+  "reason": "financial and tax incentives for EV investment"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s76",
+  "family_id": "F-21",
+  "lever_id": "LV-107",
+  "confidence": "medium",
+  "reason": "tourism value added and service quality"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s222",
+  "family_id": "F-20",
+  "lever_id": "LV-103",
+  "confidence": "low",
+  "reason": "national trade platform and digital trade facilitation"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s95",
+  "family_id": "F-21",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "ecotourism knowledge, no action named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s79",
+  "family_id": "F-13",
+  "lever_id": "LV-065",
+  "confidence": "medium",
+  "reason": "electric vehicle adoption in tourism"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s238",
+  "family_id": "F-22",
+  "lever_id": "LV-112",
+  "confidence": "medium",
+  "reason": "incentives for new smart electronics manufacturers"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s185",
+  "family_id": "F-23",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "public procurement of Thai innovations; no F-23 lever for procurement"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s50",
+  "family_id": "F-33",
+  "lever_id": "LV-154",
+  "confidence": "medium",
+  "reason": "private investment in central, regional, community markets"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s293",
+  "family_id": "F-27",
+  "lever_id": "LV-135",
+  "confidence": "medium",
+  "reason": "regional economic corridor development"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s375",
+  "family_id": "F-15",
+  "lever_id": "LV-077",
+  "confidence": "low",
+  "reason": "community income tied to biodiversity"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s376",
+  "family_id": "F-21",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "ecotourism knowledge for locals; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s440",
+  "family_id": "F-14",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "international cooperation on disasters; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s48",
+  "family_id": "F-16",
+  "lever_id": "LV-083",
+  "confidence": "medium",
+  "reason": "sediment management to rehabilitate reservoir storage"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s111",
+  "family_id": "F-22",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "comprehensive EV system, summary line"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s430",
+  "family_id": "F-51",
+  "lever_id": "LV-197",
+  "confidence": "low",
+  "reason": "capacity-building for local disaster handling"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s366",
+  "family_id": "F-17",
+  "lever_id": "LV-087",
+  "confidence": "medium",
+  "reason": "efficiency in circular use of materials for industry"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s472",
+  "family_id": "F-19",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "supportive environment for elderly; no action named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s443",
+  "family_id": "F-10",
+  "lever_id": "LV-046",
+  "confidence": "low",
+  "reason": "quality services for pregnant women and young children"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s455",
+  "family_id": "F-11",
+  "lever_id": "LV-056",
+  "confidence": "low",
+  "reason": "scholarships for gifted learners"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s2",
+  "family_id": "F-06",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "summary line, no action named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s451",
+  "family_id": "F-11",
+  "lever_id": "LV-053",
+  "confidence": "high",
+  "reason": "improve learning evaluation system"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s496",
+  "family_id": "F-49",
+  "lever_id": "LV-191",
+  "confidence": "medium",
+  "reason": "shift to results-based working culture"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s189",
+  "family_id": "F-23",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "research personnel development; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s503",
+  "family_id": "F-56",
+  "lever_id": "LV-214",
+  "confidence": "high",
+  "reason": "disclosure of information, monitoring government performance"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s339",
+  "family_id": "F-60",
+  "lever_id": "LV-225",
+  "confidence": "low",
+  "reason": "incentives to preserve cultural heritage"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s7",
+  "family_id": "F-42",
+  "lever_id": "LV-178",
+  "confidence": "low",
+  "reason": "implement the national plan efficiently"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s16",
+  "family_id": "F-50",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "repeal outdated laws; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s27",
+  "family_id": "F-50",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "restructure public administration; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s495",
+  "family_id": "F-50",
+  "lever_id": "",
+  "confidence": "medium",
+  "reason": "general public sector capacity building"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s477",
+  "family_id": "F-12",
+  "lever_id": "LV-062",
+  "confidence": "medium",
+  "reason": "education programs in AI and data analysis"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s191",
+  "family_id": "F-23",
+  "lever_id": "",
+  "confidence": "low",
+  "reason": "international R&D networks; no lever describes it"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s504",
+  "family_id": "F-43",
+  "lever_id": "LV-181",
+  "confidence": "medium",
+  "reason": "digitizing government data on budgets and HR"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s224",
+  "family_id": "F-43",
+  "lever_id": "LV-179",
+  "confidence": "low",
+  "reason": "public dashboard tracking service transactions"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s329",
+  "family_id": "F-47",
+  "lever_id": "LV-189",
+  "confidence": "high",
+  "reason": "participation of local partners in strategy formulation"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s253",
+  "family_id": "F-27",
+  "lever_id": "LV-133",
+  "confidence": "medium",
+  "reason": "technology transfer condition in procurement for domestic components"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s414",
+  "family_id": "F-51",
+  "lever_id": "LV-197",
+  "confidence": "low",
+  "reason": "preparedness capacity-building for security issues"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s338",
+  "family_id": "F-17",
+  "lever_id": "LV-086",
+  "confidence": "low",
+  "reason": "fund environmental improvements for health benefits"
+ }
+]

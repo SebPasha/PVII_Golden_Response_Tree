@@ -1,0 +1,2149 @@
+{
+ "families": [
+  {
+   "family_id": "F-01",
+   "family": "Exclusion from markets: labour, informality and workers' rights",
+   "group": "Markets",
+   "subpillar": "Tackling Structural Exclusion",
+   "pillar": "People-first Approach",
+   "definition": "Barriers that keep group members out of, or unprotected in, labour and other markets: discrimination, care burdens, informality of work, labour contracts and rights. Holds the worker side of the formality split.",
+   "examples": "Protect worker rights and labour standards · Reform labour market regulation · Expand care services"
+  },
+  {
+   "family_id": "F-02",
+   "family": "Exclusion from services and entitlements",
+   "group": "Services",
+   "subpillar": "Tackling Structural Exclusion",
+   "pillar": "People-first Approach",
+   "definition": "Administrative, physical and informational barriers that keep group members from services and entitlements they are eligible for.",
+   "examples": "Promote social inclusion · Strengthen disability inclusion · Expand legal identity and civil registration"
+  },
+  {
+   "family_id": "F-03",
+   "family": "Exclusion from social and political spaces",
+   "group": "Spaces",
+   "subpillar": "Tackling Structural Exclusion",
+   "pillar": "People-first Approach",
+   "definition": "Norms, under-representation and between-group inequality that restrict voice and standing of excluded groups.",
+   "examples": "Advance gender equality · Preserve language and traditional knowledge"
+  },
+  {
+   "family_id": "F-04",
+   "family": "Violence, coercion and denial of dignity",
+   "group": "Spaces",
+   "subpillar": "Tackling Structural Exclusion",
+   "pillar": "People-first Approach",
+   "definition": "Violence and exploitation inside households and labour markets that strip rights and dignity from the most exposed groups.",
+   "examples": "Strengthen child protection · Prevent gender-based violence · Strengthen social services"
+  },
+  {
+   "family_id": "F-05",
+   "family": "Displaced and uprooted populations",
+   "group": "Spaces",
+   "subpillar": "Tackling Structural Exclusion",
+   "pillar": "People-first Approach",
+   "definition": "Displacement by conflict, disaster, climate or projects, and integration of displaced people in host communities.",
+   "examples": "Compensate and resettle affected communities · Support refugees, migrants and returnees"
+  },
+  {
+   "family_id": "F-06",
+   "family": "Economic security",
+   "group": "Decent standard of living",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "Transfers, insurance and asset building that hold household consumption steady and lift households past poverty thresholds.",
+   "examples": "Expand social protection coverage · Expand social assistance · Improve social protection delivery and targeting"
+  },
+  {
+   "family_id": "F-07",
+   "family": "Food security",
+   "group": "Decent standard of living",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "Household command over adequate, safe food and the nutrition that follows.",
+   "examples": "Improve food security · Improve nutrition · Strengthen food safety and quality"
+  },
+  {
+   "family_id": "F-08",
+   "family": "Personal security",
+   "group": "Decent standard of living",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "Crime and violence in public life and the deterrence, justice and rehabilitation channels that reduce them.",
+   "examples": "Reform the justice sector · Strengthen law enforcement and policing · Expand access to justice"
+  },
+  {
+   "family_id": "F-09",
+   "family": "Living environment and basic services",
+   "group": "Decent standard of living",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "First access to electricity, water, sanitation, clean cooking and adequate housing.",
+   "examples": "Expand affordable housing · Expand access to basic services · Expand water and sanitation services"
+  },
+  {
+   "family_id": "F-10",
+   "family": "Health security",
+   "group": "Long and healthy life",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "Health service coverage and quality, and prevention of disease and injury.",
+   "examples": "Improve transport safety · Expand access to health services · Build health workforce"
+  },
+  {
+   "family_id": "F-11",
+   "family": "Knowledge: schooling and higher education",
+   "group": "Knowledge",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "Knowledge and skills built through early childhood, school and university.",
+   "examples": "Improve education quality · Reform education governance and management · Expand inclusive education"
+  },
+  {
+   "family_id": "F-12",
+   "family": "Skills for work",
+   "group": "Knowledge",
+   "subpillar": "Enhancing Capabilities",
+   "pillar": "People-first Approach",
+   "definition": "Job-relevant skills formed after or alongside schooling, the signals that make them pay, and households' access to and use of digital connectivity.",
+   "examples": "Build workforce skills · Strengthen technical and vocational education · Build digital skills and literacy"
+  },
+  {
+   "family_id": "F-13",
+   "family": "Climate stabilisation and just transition",
+   "group": "Climate",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Reduction of greenhouse gas emissions, and the adjustment of workers and places to decarbonisation.",
+   "examples": "Expand renewable energy · Mobilise climate and environmental finance · Strengthen climate governance"
+  },
+  {
+   "family_id": "F-14",
+   "family": "Climate risk to assets and people",
+   "group": "Climate",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Losses from climate hazards, and the location, protection and practice changes that reduce them.",
+   "examples": "Build climate resilience and adaptation · Reduce disaster risk · Reduce flood risk"
+  },
+  {
+   "family_id": "F-15",
+   "family": "Living natural capital",
+   "group": "Natural capital",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Ecosystems, wild stocks and land as assets under common-pool and incentive problems.",
+   "examples": "Conserve biodiversity and wildlife · Manage fisheries sustainably · Manage natural resources sustainably"
+  },
+  {
+   "family_id": "F-16",
+   "family": "Water resources",
+   "group": "Natural capital",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Allocation of scarce, variable and shared water.",
+   "examples": "Manage water resources · Expand water storage and transfer · Improve water efficiency"
+  },
+  {
+   "family_id": "F-17",
+   "family": "Environmental quality",
+   "group": "Natural capital",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Local pollution and waste as drawdown of environmental sinks, with health and human-capital costs.",
+   "examples": "Improve waste management · Control pollution · Promote cleaner production and sustainable consumption"
+  },
+  {
+   "family_id": "F-18",
+   "family": "Public wealth: resource rents and the balance sheet",
+   "group": "Economic and human wealth",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Exhaustible resource rents and the public balance sheet: whether rents are reinvested and whether debt and fiscal policy shift burdens onto future taxpayers.",
+   "examples": "Strengthen mining and resource governance · Develop the mining sector · Expand fossil fuel exploration and production"
+  },
+  {
+   "family_id": "F-19",
+   "family": "Human and demographic capital",
+   "group": "Economic and human wealth",
+   "subpillar": "Future Generations",
+   "pillar": "People-first Approach",
+   "definition": "Fertility, ageing and lifecycle behaviour that change labour input, saving and care across generations.",
+   "examples": "Manage population and demographic change · Expand reproductive health services · Expand elderly care"
+  },
+  {
+   "family_id": "F-20",
+   "family": "Cost of reaching foreign markets",
+   "group": "Reaching foreign markets",
+   "subpillar": "Export-led",
+   "pillar": "Smarter Growth",
+   "definition": "Fixed, variable and time costs of trading and the terms of access to foreign markets.",
+   "examples": "Facilitate trade · Expand and modernise ports and shipping · Improve logistics and freight"
+  },
+  {
+   "family_id": "F-21",
+   "family": "Tourism export destinations",
+   "group": "Reaching foreign markets",
+   "subpillar": "Export-led",
+   "pillar": "Smarter Growth",
+   "definition": "Foreign visitor spending as a services export: spillovers, carrying capacity and shock exposure.",
+   "examples": "Develop tourism · Diversify tourism markets and products · Promote sustainable tourism"
+  },
+  {
+   "family_id": "F-22",
+   "family": "Self-discovery and export upgrading",
+   "group": "Upgrading and innovation",
+   "subpillar": "Export-led",
+   "pillar": "Smarter Growth",
+   "definition": "Learning, related diversification and reallocation toward new and upgraded traded products.",
+   "examples": "Expand and diversify exports · Develop manufacturing industries · Develop creative and cultural industries"
+  },
+  {
+   "family_id": "F-23",
+   "family": "Innovation system and appropriability",
+   "group": "Upgrading and innovation",
+   "subpillar": "Export-led",
+   "pillar": "Smarter Growth",
+   "definition": "Creation, appropriation and diffusion of knowledge, including university and sector research. Sector is a tag.",
+   "examples": "Strengthen research and innovation · Strengthen research capacity and infrastructure · Develop the digital economy"
+  },
+  {
+   "family_id": "F-24",
+   "family": "Foreign capital, knowledge and networks",
+   "group": "Foreign capital and networks",
+   "subpillar": "Export-led",
+   "pillar": "Smarter Growth",
+   "definition": "Inflows of foreign capital, know-how, value-chain links and diaspora networks.",
+   "examples": "Attract investment · Improve the investment climate · Engage the diaspora"
+  },
+  {
+   "family_id": "F-25",
+   "family": "Internal connectivity",
+   "group": "Infrastructure and connectivity",
+   "subpillar": "Domestic Integration",
+   "pillar": "Smarter Growth",
+   "definition": "Cost of moving goods, people and information within the country.",
+   "examples": "Expand digital connectivity · Improve transport connectivity · Expand and modernise railways"
+  },
+  {
+   "family_id": "F-26",
+   "family": "Infrastructure services",
+   "group": "Infrastructure and connectivity",
+   "subpillar": "Domestic Integration",
+   "pillar": "Smarter Growth",
+   "definition": "Reliability, pricing and market structure of power, water and other network utilities.",
+   "examples": "Strengthen electricity grid and infrastructure · Reform transport markets and regulation · Reform energy pricing and subsidies"
+  },
+  {
+   "family_id": "F-27",
+   "family": "Production linkages and clusters",
+   "group": "Linkages, clusters and cities",
+   "subpillar": "Domestic Integration",
+   "pillar": "Smarter Growth",
+   "definition": "Backward and forward links between firms and the clustering that lets them find each other.",
+   "examples": "Develop agricultural and food value chains · Strengthen value chains and supply chains · Raise value addition"
+  },
+  {
+   "family_id": "F-28",
+   "family": "Urban systems",
+   "group": "Linkages, clusters and cities",
+   "subpillar": "Domestic Integration",
+   "pillar": "Smarter Growth",
+   "definition": "Productivity of density and the congestion, land and housing costs that limit it.",
+   "examples": "Strengthen urban planning · Improve urban mobility · Upgrade urban infrastructure and services"
+  },
+  {
+   "family_id": "F-29",
+   "family": "Lagging regions and place-based development",
+   "group": "Linkages, clusters and cities",
+   "subpillar": "Domestic Integration",
+   "pillar": "Smarter Growth",
+   "definition": "Persistent spatial gaps between regions, and the place-based policies that try to close them.",
+   "examples": "Promote local and regional economic development · Reduce regional disparities · Promote rural development"
+  },
+  {
+   "family_id": "F-30",
+   "family": "Small-firm capability and business formalisation",
+   "group": "Enterprise and finance",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Management, capital and entry constraints of small firms, including registration and licensing (business side of the formality split).",
+   "examples": "Support enterprise development · Support entrepreneurs and startups · Promote entrepreneurship and business skills"
+  },
+  {
+   "family_id": "F-31",
+   "family": "Finance for small borrowers and savers",
+   "group": "Enterprise and finance",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Access to credit, savings and payments for households and small firms.",
+   "examples": "Expand financial inclusion · Develop the financial sector · Expand enterprise finance"
+  },
+  {
+   "family_id": "F-32",
+   "family": "Smallholder productivity",
+   "group": "Rural producers",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Adoption, learning and allocation frictions in farming, livestock and fisheries.",
+   "examples": "Develop fisheries and aquaculture · Expand and modernise irrigation · Modernise agriculture"
+  },
+  {
+   "family_id": "F-33",
+   "family": "Market participation of small producers",
+   "group": "Rural producers",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Transaction costs that keep smallholders and small firms out of markets, and collective arrangements that lower them.",
+   "examples": "Improve agricultural market access · Develop cooperatives and the social economy · Strengthen producer organisations and cooperatives"
+  },
+  {
+   "family_id": "F-34",
+   "family": "Jobs and job matching",
+   "group": "Jobs, places and mobility",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "How workers left out of growth find jobs, and the wage rules that shape their earnings.",
+   "examples": "Promote employment · Promote inclusive employment · Strengthen labour market institutions"
+  },
+  {
+   "family_id": "F-35",
+   "family": "Displaced workers and local adjustment",
+   "group": "Jobs, places and mobility",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Concentrated shocks to local labour markets from trade and technology, and how displaced workers and places adjust.",
+   "examples": "Promote local and regional economic development · Reduce regional disparities · Promote rural development"
+  },
+  {
+   "family_id": "F-36",
+   "family": "Labour mobility and remittances",
+   "group": "Jobs, places and mobility",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "International migration as access to higher-wage labour markets, and what it returns.",
+   "examples": "Govern labour migration · Govern migration"
+  },
+  {
+   "family_id": "F-37",
+   "family": "Competition, contracts and state ownership",
+   "group": "Market rules and property rights",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Competition, contract enforcement and state ownership rules that decide who captures returns, and the misallocation that follows when they favour some firms.",
+   "examples": "Improve the business environment · Reform state-owned enterprises · Secure land and property rights"
+  },
+  {
+   "family_id": "F-38",
+   "family": "Land rights and land markets",
+   "group": "Market rules and property rights",
+   "subpillar": "Growth through Inclusion",
+   "pillar": "Smarter Growth",
+   "definition": "Security, documentation and transferability of rights to land, and its redistribution.",
+   "examples": "Secure land and property rights · Reform land administration · Implement agrarian reform"
+  },
+  {
+   "family_id": "F-39",
+   "family": "Hazard and exposure sensing",
+   "group": "Risk sensing and early warning",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "pillar": "Making Change Happen",
+   "definition": "Detection of natural, biological and external economic hazards and exposures before they escalate.",
+   "examples": "Strengthen health emergency preparedness · Secure energy supply · Strengthen weather, climate and hydrological services"
+  },
+  {
+   "family_id": "F-40",
+   "family": "Contingency buffers and pre-arranged finance",
+   "group": "Risk sensing and early warning",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "pillar": "Making Change Happen",
+   "definition": "Buffers, reserves and pre-arranged finance put in place before shocks.",
+   "examples": "Strengthen disaster preparedness and response · Strengthen financial stability and supervision · Maintain macroeconomic stability"
+  },
+  {
+   "family_id": "F-41",
+   "family": "Scenario and futures work",
+   "group": "Foresight and futures",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "pillar": "Making Change Happen",
+   "definition": "Scenario and futures work that keeps strategic options open.",
+   "examples": "none yet"
+  },
+  {
+   "family_id": "F-42",
+   "family": "Development planning",
+   "group": "Long-term planning",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "pillar": "Making Change Happen",
+   "definition": "Development planning and coordination of complementary long-horizon investments.",
+   "examples": "Strengthen development planning · Mainstream SDGs in planning"
+  },
+  {
+   "family_id": "F-43",
+   "family": "Statistics and data sharing",
+   "group": "Data sharing",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "pillar": "Making Change Happen",
+   "definition": "Statistical capacity and data shared across agencies for decisions.",
+   "examples": "Strengthen data and statistical systems · Strengthen environmental monitoring and data · Develop geospatial information"
+  },
+  {
+   "family_id": "F-44",
+   "family": "Monitoring and corrective feedback",
+   "group": "Organisational learning and feedback",
+   "subpillar": "Adaptability and Course Correction",
+   "pillar": "Making Change Happen",
+   "definition": "Monitoring, evaluation and iterative problem-solving that trigger corrective action.",
+   "examples": "Strengthen monitoring and evaluation"
+  },
+  {
+   "family_id": "F-45",
+   "family": "Policy experimentation",
+   "group": "Safe-to-fail innovation",
+   "subpillar": "Adaptability and Course Correction",
+   "pillar": "Making Change Happen",
+   "definition": "Policy experimentation and diffusion of what works.",
+   "examples": "none yet"
+  },
+  {
+   "family_id": "F-46",
+   "family": "Regulatory adaptation to technology",
+   "group": "Safe-to-fail innovation",
+   "subpillar": "Adaptability and Course Correction",
+   "pillar": "Making Change Happen",
+   "definition": "Keeping rules for data, cyber risk, digital markets and AI in step with technology.",
+   "examples": "Strengthen cybersecurity and online safety · Strengthen digital governance and policy · Modernise legislation"
+  },
+  {
+   "family_id": "F-47",
+   "family": "Participatory decision-making",
+   "group": "Participatory governance and budgeting",
+   "subpillar": "Adaptability and Course Correction",
+   "pillar": "Making Change Happen",
+   "definition": "Citizen participation in policy and budget decisions as a feedback channel.",
+   "examples": "Strengthen citizen participation"
+  },
+  {
+   "family_id": "F-48",
+   "family": "Coordination across agencies and levels",
+   "group": "Cross-government coordination",
+   "subpillar": "Adaptability and Course Correction",
+   "pillar": "Making Change Happen",
+   "definition": "Coordination across agencies and levels of government.",
+   "examples": "Strengthen policy coordination · Strengthen intergovernmental coordination"
+  },
+  {
+   "family_id": "F-49",
+   "family": "Delegated management autonomy",
+   "group": "Authorised flexibility",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "definition": "Delegated autonomy that lets managers act without waiting for approval.",
+   "examples": "none yet"
+  },
+  {
+   "family_id": "F-50",
+   "family": "Administrative, local and regulatory capacity",
+   "group": "Authorised flexibility",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "definition": "The people, management, local tiers and regulators that decide whether policy is delivered.",
+   "examples": "Strengthen sector governance and regulation · Strengthen environmental governance and compliance · Strengthen public administration"
+  },
+  {
+   "family_id": "F-51",
+   "family": "Surge, continuity and relief",
+   "group": "Rapid resource mobilisation",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "definition": "Surge capacity, continuity and fast relief and reconstruction once a shock hits.",
+   "examples": "Provide emergency and humanitarian relief · Support disaster recovery"
+  },
+  {
+   "family_id": "F-52",
+   "family": "Revenue and spending systems",
+   "group": "Rapid resource mobilisation",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "definition": "Raising revenue and making public money buy what it is meant to.",
+   "examples": "Strengthen public financial management · Improve public investment management · Reform tax policy"
+  },
+  {
+   "family_id": "F-53",
+   "family": "Digital delivery and DPI",
+   "group": "Digitally-enabled delivery",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "definition": "Digital systems and DPI that speed delivery and cut leakage.",
+   "examples": "Digitise public services · Build digital public infrastructure"
+  },
+  {
+   "family_id": "F-54",
+   "family": "Crisis and risk communication",
+   "group": "Crisis communication and public engagement",
+   "subpillar": "Agility and Delivery Capability",
+   "pillar": "Making Change Happen",
+   "definition": "Risk and crisis communication that keeps the public informed and engaged.",
+   "examples": "Improve public communication and awareness"
+  },
+  {
+   "family_id": "F-55",
+   "family": "Electoral accountability",
+   "group": "Accountability",
+   "subpillar": "Reform Leadership, Coalitions and Civic Engagement",
+   "pillar": "Making Change Happen",
+   "definition": "Elections and parties as the channel through which citizens reward and punish government.",
+   "examples": "Strengthen electoral governance"
+  },
+  {
+   "family_id": "F-56",
+   "family": "Information and transparency",
+   "group": "Accountability",
+   "subpillar": "Reform Leadership, Coalitions and Civic Engagement",
+   "pillar": "Making Change Happen",
+   "definition": "Independent media, disclosure and the information environment.",
+   "examples": "Develop the media sector · Protect media freedom · Expand public access to information"
+  },
+  {
+   "family_id": "F-57",
+   "family": "Horizontal accountability",
+   "group": "Accountability",
+   "subpillar": "Reform Leadership, Coalitions and Civic Engagement",
+   "pillar": "Making Change Happen",
+   "definition": "Constraints on the executive by courts, legislatures and audit bodies.",
+   "examples": "Combat corruption · Strengthen accountability and transparency · Protect human rights"
+  },
+  {
+   "family_id": "F-58",
+   "family": "Reform commitment and coalitions",
+   "group": "Coalitions and commitment",
+   "subpillar": "Reform Leadership, Coalitions and Civic Engagement",
+   "pillar": "Making Change Happen",
+   "definition": "Coalitions and dialogue among state, business and labour that build and sustain reform.",
+   "examples": "Engage the private sector"
+  },
+  {
+   "family_id": "F-59",
+   "family": "Client power and community voice",
+   "group": "Citizen voice and social trust",
+   "subpillar": "Reform Leadership, Coalitions and Civic Engagement",
+   "pillar": "Making Change Happen",
+   "definition": "Community monitoring of providers, community-driven development and civil society.",
+   "examples": "Support youth development · Strengthen civil society · Strengthen community development"
+  },
+  {
+   "family_id": "F-60",
+   "family": "Social cohesion and trust",
+   "group": "Citizen voice and social trust",
+   "subpillar": "Reform Leadership, Coalitions and Civic Engagement",
+   "pillar": "Making Change Happen",
+   "definition": "Polarisation, shared identity, reconciliation and trust that make cooperation possible.",
+   "examples": "Promote social cohesion · Support peacebuilding and reconciliation · Prevent violence and conflict"
+  }
+ ],
+ "levers": [
+  {
+   "lever_id": "LV-001",
+   "lever": "Non-discrimination rules and their enforcement in hiring",
+   "family_id": "F-01",
+   "joins_when": "it stops a group being treated worse by employers, lenders or providers because of who they are",
+   "joins_not": "the barrier is physical or administrative (goes to L3-004, L3-006) or inside the household (L3-002)"
+  },
+  {
+   "lever_id": "LV-002",
+   "lever": "Childcare, elder care and care leave that free women's time",
+   "family_id": "F-01",
+   "joins_when": "it provides or pays for care so that carers, mostly women, can take paid work",
+   "joins_not": "it is about women's rights or representation in general (L3-003) or household bargaining (L3-002)"
+  },
+  {
+   "lever_id": "LV-003",
+   "lever": "Rules on hiring, dismissal and contract types",
+   "family_id": "F-01",
+   "joins_when": "it changes how costly it is to hire or dismiss workers, or what contracts are allowed",
+   "joins_not": "it sets wages (L3-179) or lowers the cost of being formal (L3-180)"
+  },
+  {
+   "lever_id": "LV-004",
+   "lever": "Lower taxes, simpler registration and visible benefits for formal work",
+   "family_id": "F-01",
+   "joins_when": "it makes formal employment or formal self-employment cheaper or more attractive",
+   "joins_not": "it registers firms rather than workers (L3-168) or extends insurance to informal workers (L3-260)"
+  },
+  {
+   "lever_id": "LV-005",
+   "lever": "Collective bargaining rights, labour standards and their enforcement",
+   "family_id": "F-01",
+   "joins_when": "it strengthens workers' representation, rights or standards at work",
+   "joins_not": "it is only about safety inspection (L3-182) or wages (L3-179)"
+  },
+  {
+   "lever_id": "LV-006",
+   "lever": "Workplace safety rules and inspection",
+   "family_id": "F-01",
+   "joins_when": "it inspects or regulates safety and health at work",
+   "joins_not": "it is about labour rights in general (L3-181)"
+  },
+  {
+   "lever_id": "LV-007",
+   "lever": "Contribution rules, subsidies and enrolment channels",
+   "family_id": "F-01",
+   "joins_when": "it extends social insurance, pensions or health cover to workers outside formal employment",
+   "joins_not": "it covers the poor through assistance rather than insurance (F-06) or formalises work (L3-180)"
+  },
+  {
+   "lever_id": "LV-008",
+   "lever": "Accessible buildings, transport, information and services",
+   "family_id": "F-02",
+   "joins_when": "it removes physical, information or attitudinal barriers for people with disabilities or reduced mobility",
+   "joins_not": "it is a general service expansion with no access barrier named (the family) or anti-discrimination law (L3-001)"
+  },
+  {
+   "lever_id": "LV-009",
+   "lever": "Civil registration, identity documents and one-stop registration",
+   "family_id": "F-02",
+   "joins_when": "it registers people or issues the documents they need to claim services, rights or finance",
+   "joins_not": "it registers firms (L3-168) or builds a data system for the state (F-43)"
+  },
+  {
+   "lever_id": "LV-010",
+   "lever": "Family support, parenting and household programmes",
+   "family_id": "F-03",
+   "joins_when": "it works on relations and decisions inside the household: women's control of resources, family functioning",
+   "joins_not": "it is about care services (L3-005) or violence (L3-007)"
+  },
+  {
+   "lever_id": "LV-011",
+   "lever": "Quotas, reserved seats and leadership programmes",
+   "family_id": "F-03",
+   "joins_when": "it puts excluded groups into decision-making bodies or leadership",
+   "joins_not": "it is about attitudes in general with no decision-making role named (L3-013 or the family)"
+  },
+  {
+   "lever_id": "LV-012",
+   "lever": "Policies that close gaps between identity groups",
+   "family_id": "F-03",
+   "joins_when": "it names a gap between ethnic, religious or regional groups and acts to close it",
+   "joins_not": "it is about national identity (L3-014) or contact (L3-013)"
+  },
+  {
+   "lever_id": "LV-013",
+   "lever": "Protection services, shelters, legal response and economic options",
+   "family_id": "F-04",
+   "joins_when": "it prevents or responds to violence against women by partners",
+   "joins_not": "it concerns children (L3-008, L3-009, L3-010) or crime in general (F-08)"
+  },
+  {
+   "lever_id": "LV-014",
+   "lever": "Income support and schooling that take children out of work",
+   "family_id": "F-04",
+   "joins_when": "it reduces child labour or keeps children of poor households in school instead of work",
+   "joins_not": "it is general child protection (L3-010) or school access (L3-036)"
+  },
+  {
+   "lever_id": "LV-015",
+   "lever": "Laws, incentives and schooling that delay marriage",
+   "family_id": "F-04",
+   "joins_when": "it raises the age of marriage or keeps girls in school to that end",
+   "joins_not": "it is reproductive health in general (L3-100)"
+  },
+  {
+   "lever_id": "LV-016",
+   "lever": "Child protection services, case management",
+   "family_id": "F-04",
+   "joins_when": "it protects children from abuse, neglect or exploitation, or treats its effects",
+   "joins_not": "it is early-childhood education (L3-039) or child labour (L3-008)"
+  },
+  {
+   "lever_id": "LV-017",
+   "lever": "Resettlement with livelihood restoration, compensation and housing",
+   "family_id": "F-05",
+   "joins_when": "it resettles or compensates people displaced by projects, disasters or conflict",
+   "joins_not": "it supports voluntary migrants (L3-019) or refugees' work rights (L3-020)"
+  },
+  {
+   "lever_id": "LV-018",
+   "lever": "Support for households to move or diversify when their place cannot",
+   "family_id": "F-05",
+   "joins_when": "it helps people move away from environmental pressure or supports seasonal mobility",
+   "joins_not": "it moves assets out of hazard zones in place (L3-086) or resettles involuntarily (L3-018)"
+  },
+  {
+   "lever_id": "LV-019",
+   "lever": "Work permits, services and integration programmes",
+   "family_id": "F-05",
+   "joins_when": "it gives refugees or displaced foreigners access to work, services or integration",
+   "joins_not": "it is labour migration for earnings (F-36)"
+  },
+  {
+   "lever_id": "LV-020",
+   "lever": "Insurance and income replacement in shocks",
+   "family_id": "F-06",
+   "joins_when": "it pays out, insures or transfers when income falls, whether to hold consumption, stop distress sales or let households take productive risks",
+   "joins_not": "it is a standing pension (L3-025), health cover (L3-026) or the delivery system (L3-024) (L3-021); it is income replacement in general (L3-021) (L3-022); it only smooths consumption after the event (L3-021) (L3-023)"
+  },
+  {
+   "lever_id": "LV-021",
+   "lever": "Registries, triggers and payment rails",
+   "family_id": "F-06",
+   "joins_when": "it builds the system (registry, trigger, payment channel) that expands benefits fast in a crisis",
+   "joins_not": "it is emergency relief delivery itself (L3-244) or a transfer with no scaling mechanism (L3-021)"
+  },
+  {
+   "lever_id": "LV-022",
+   "lever": "Pensions and old-age allowances",
+   "family_id": "F-06",
+   "joins_when": "it provides, extends or reforms income in old age",
+   "joins_not": "it keeps older people working (L3-103) or provides care (L3-104)"
+  },
+  {
+   "lever_id": "LV-023",
+   "lever": "Health insurance, fee exemptions and benefit packages",
+   "family_id": "F-06",
+   "joins_when": "it covers or caps the cost of care to the patient",
+   "joins_not": "it expands the services themselves (L3-043) or insurance for informal workers specifically (L3-260)"
+  },
+  {
+   "lever_id": "LV-024",
+   "lever": "Targeting systems, poverty registries and eligibility rules",
+   "family_id": "F-06",
+   "joins_when": "it decides or improves who receives benefits: targeting, registries, eligibility",
+   "joins_not": "it is the scaling mechanism in a shock (L3-024) or the data system in general (F-43)"
+  },
+  {
+   "lever_id": "LV-025",
+   "lever": "Unconditional cash transfers and allowances",
+   "family_id": "F-06",
+   "joins_when": "it gives cash to poor households with no condition attached",
+   "joins_not": "it attaches schooling or health conditions (L3-030) or bundles assets and training (L3-029)"
+  },
+  {
+   "lever_id": "LV-026",
+   "lever": "Graduation programmes",
+   "family_id": "F-06",
+   "joins_when": "it hands over productive assets with support to move households out of poverty",
+   "joins_not": "it is cash alone (L3-028) or microcredit (L3-173)"
+  },
+  {
+   "lever_id": "LV-027",
+   "lever": "Cash transfers conditioned on school attendance or health visits",
+   "family_id": "F-06",
+   "joins_when": "it ties a transfer to schooling, health checks or nutrition of children",
+   "joins_not": "it is unconditional (L3-028) or a scholarship paid by the education system (L3-040)"
+  },
+  {
+   "lever_id": "LV-028",
+   "lever": "Food access and food price measures",
+   "family_id": "F-07",
+   "joins_when": "it secures households' access to food through income support, consumer prices, distribution or price stabilisation",
+   "joins_not": "it is about nutrition quality (L3-054), price stabilisation on its own (L3-055) or production (F-32) (L3-053); it holds strategic food stocks (L3-205) or supports farm prices (F-33) (L3-055)"
+  },
+  {
+   "lever_id": "LV-029",
+   "lever": "Maternal and infant nutrition programmes, breastfeeding",
+   "family_id": "F-07",
+   "joins_when": "it improves nutrition of mothers, infants and young children",
+   "joins_not": "it is school-age feeding (L3-058) or food safety (L3-056)"
+  },
+  {
+   "lever_id": "LV-030",
+   "lever": "Food safety standards, inspection, certification and traceability",
+   "family_id": "F-07",
+   "joins_when": "it controls the safety or standards of food along the chain",
+   "joins_not": "it is product quality for export in general (L3-114) or animal disease (L3-163)"
+  },
+  {
+   "lever_id": "LV-031",
+   "lever": "Storage, cold chains and post-harvest handling",
+   "family_id": "F-07",
+   "joins_when": "it cuts losses between harvest and market: storage, handling, cold chain",
+   "joins_not": "it is transport to market (L3-155) or processing industry (L3-151)"
+  },
+  {
+   "lever_id": "LV-032",
+   "lever": "School meals",
+   "family_id": "F-07",
+   "joins_when": "it feeds children at school",
+   "joins_not": "it is school health services (L3-042) or early nutrition (L3-054)"
+  },
+  {
+   "lever_id": "LV-033",
+   "lever": "Policing, sanctions and their certainty",
+   "family_id": "F-08",
+   "joins_when": "it raises the chance or cost of being caught: policing, courts, penalties",
+   "joins_not": "it changes offenders' choices through programmes (L3-064) or rehabilitation (L3-066)"
+  },
+  {
+   "lever_id": "LV-034",
+   "lever": "Prevention programmes for at-risk people",
+   "family_id": "F-08",
+   "joins_when": "it prevents violence or crime by changing the decisions and opportunities of people at risk",
+   "joins_not": "it is enforcement (L3-063) or health treatment of addiction (L3-050)"
+  },
+  {
+   "lever_id": "LV-035",
+   "lever": "Legal aid, alternative dispute resolution, access to justice",
+   "family_id": "F-08",
+   "joins_when": "it helps people resolve disputes or get legal help",
+   "joins_not": "it is commercial contract enforcement (L3-171) or court independence (L3-213)"
+  },
+  {
+   "lever_id": "LV-036",
+   "lever": "Prisons, parole, rehabilitation and reintegration",
+   "family_id": "F-08",
+   "joins_when": "it concerns custody, sentencing alternatives or reintegration of offenders",
+   "joins_not": "it is prevention before offending (L3-064)"
+  },
+  {
+   "lever_id": "LV-037",
+   "lever": "Enforcement against trafficking, drug markets and organised crime",
+   "family_id": "F-08",
+   "joins_when": "it targets organised or illicit markets: trafficking, smuggling, drug supply",
+   "joins_not": "it treats drug demand (L3-050, L3-064)"
+  },
+  {
+   "lever_id": "LV-038",
+   "lever": "Household electrification and affordable connections",
+   "family_id": "F-09",
+   "joins_when": "it connects or keeps households on electricity",
+   "joins_not": "it is supply reliability for firms (L3-146) or renewable generation (F-13)"
+  },
+  {
+   "lever_id": "LV-039",
+   "lever": "Water supply and sanitation for households",
+   "family_id": "F-09",
+   "joins_when": "it provides safe drinking water or sanitation to households or communities",
+   "joins_not": "it manages water resources (F-16) or monitors water quality for the environment (F-17)"
+  },
+  {
+   "lever_id": "LV-040",
+   "lever": "Clean cooking fuels and stoves",
+   "family_id": "F-09",
+   "joins_when": "it replaces polluting household cooking fuels or stoves",
+   "joins_not": "it is ambient air pollution (L3-081)"
+  },
+  {
+   "lever_id": "LV-041",
+   "lever": "Housing upgrades, slum improvement, building standards for dwellings",
+   "family_id": "F-09",
+   "joins_when": "it improves the quality or supply of homes for poor households",
+   "joins_not": "it is land-use rules (L3-144) or hazard-proofing (L3-087)"
+  },
+  {
+   "lever_id": "LV-042",
+   "lever": "Build, staff and run facilities and services so",
+   "family_id": "F-10",
+   "joins_when": "it adds or extends a health service, facility, clinic, referral line, outreach or package of care for a population or place",
+   "joins_not": "it is about who pays (L3-026), staff numbers (L3-045), medicines (L3-046), maternal care (L3-047) or one disease's control (L3-049)"
+  },
+  {
+   "lever_id": "LV-043",
+   "lever": "Clinical guidelines, accreditation, supervision",
+   "family_id": "F-10",
+   "joins_when": "it raises the quality of care given: standards, guidelines, accreditation, patient safety, provider effort",
+   "joins_not": "it expands reach (L3-043) or trains new staff (L3-045)"
+  },
+  {
+   "lever_id": "LV-044",
+   "lever": "Train, recruit, deploy and retain health workers",
+   "family_id": "F-10",
+   "joins_when": "it increases or redistributes doctors, nurses, health workers or volunteers",
+   "joins_not": "it is their clinical quality (L3-044)"
+  },
+  {
+   "lever_id": "LV-045",
+   "lever": "Procurement, pricing, regulation and supply of medicines",
+   "family_id": "F-10",
+   "joins_when": "it secures the supply, quality or affordability of medicines, vaccines or medical products",
+   "joins_not": "it is research into new medicines (L3-133) or emergency stockpiles (L3-205, L3-242)"
+  },
+  {
+   "lever_id": "LV-046",
+   "lever": "Antenatal, delivery, newborn and child health programmes including",
+   "family_id": "F-10",
+   "joins_when": "it is a maternal, newborn or child health package, including routine immunisation",
+   "joins_not": "it is disease control for the whole population (L3-049)"
+  },
+  {
+   "lever_id": "LV-047",
+   "lever": "Health promotion, nutrition and exercise programmes, health literacy",
+   "family_id": "F-10",
+   "joins_when": "it changes diet, activity or other non-addictive health behaviours, or promotes health",
+   "joins_not": "it targets tobacco, alcohol or drugs (L3-050) or mental health (L3-052)"
+  },
+  {
+   "lever_id": "LV-048",
+   "lever": "Control of infectious diseases",
+   "family_id": "F-10",
+   "joins_when": "it controls a communicable disease or antimicrobial resistance",
+   "joins_not": "it is surveillance and detection (L3-207) or routine child immunisation (L3-047)"
+  },
+  {
+   "lever_id": "LV-049",
+   "lever": "Taxes, limits, treatment and control of tobacco, alcohol and drugs",
+   "family_id": "F-10",
+   "joins_when": "it reduces use or harm from tobacco, alcohol or drugs",
+   "joins_not": "it is drug trafficking enforcement (L3-067)"
+  },
+  {
+   "lever_id": "LV-050",
+   "lever": "Road and transport safety, injury prevention, emergency medical response",
+   "family_id": "F-10",
+   "joins_when": "it prevents injuries, especially road accidents, or treats them",
+   "joins_not": "it builds transport infrastructure for its own sake (F-25)"
+  },
+  {
+   "lever_id": "LV-051",
+   "lever": "Mental health services, counselling, suicide prevention",
+   "family_id": "F-10",
+   "joins_when": "it provides or improves mental health care or psychosocial support",
+   "joins_not": "it is addiction (L3-050)"
+  },
+  {
+   "lever_id": "LV-052",
+   "lever": "Build schools and places, keep children enrolled, prevent dropout",
+   "family_id": "F-11",
+   "joins_when": "it adds school places or keeps children enrolled and in school",
+   "joins_not": "it lowers fees or pays stipends (L3-040) or changes what is learned (L3-037)"
+  },
+  {
+   "lever_id": "LV-053",
+   "lever": "Curriculum, pedagogy, assessment and learning standards",
+   "family_id": "F-11",
+   "joins_when": "it changes what or how children learn: curriculum, teaching methods, assessment",
+   "joins_not": "it is teachers' recruitment or pay (L3-038) or vocational content (F-12)"
+  },
+  {
+   "lever_id": "LV-054",
+   "lever": "Teacher recruitment, training, pay, incentives and accountability",
+   "family_id": "F-11",
+   "joins_when": "it concerns teachers: their training, supply, pay, incentives or accountability",
+   "joins_not": "it is the curriculum they teach (L3-037)"
+  },
+  {
+   "lever_id": "LV-055",
+   "lever": "Early childhood development centres, pre-school, parenting support",
+   "family_id": "F-11",
+   "joins_when": "it serves children before school age: centres, pre-school, caregivers",
+   "joins_not": "it is childcare to free parents' time (L3-005) or infant nutrition (L3-054)"
+  },
+  {
+   "lever_id": "LV-056",
+   "lever": "Scholarships, fee abolition, stipends and student loans",
+   "family_id": "F-11",
+   "joins_when": "it lowers the cost of schooling to the household",
+   "joins_not": "it is a conditional cash transfer run by welfare (L3-030)"
+  },
+  {
+   "lever_id": "LV-057",
+   "lever": "School health, sanitation and nutrition services",
+   "family_id": "F-11",
+   "joins_when": "it provides health, sanitation or nutrition at school",
+   "joins_not": "it is school meals alone (L3-058)"
+  },
+  {
+   "lever_id": "LV-058",
+   "lever": "Universities, tertiary quality, research skills and institutional",
+   "family_id": "F-11",
+   "joins_when": "it expands or improves higher education or research training",
+   "joins_not": "it is university-industry transfer (L3-132) or vocational training (L3-032)"
+  },
+  {
+   "lever_id": "LV-059",
+   "lever": "Vocational and technical training institutions and programmes",
+   "family_id": "F-12",
+   "joins_when": "it trains people for work in institutions or courses",
+   "joins_not": "it places learners with employers (L3-033) or certifies skills (L3-034)"
+  },
+  {
+   "lever_id": "LV-060",
+   "lever": "Apprenticeships, dual systems, internships, cooperative education",
+   "family_id": "F-12",
+   "joins_when": "it puts learners in workplaces as part of training or eases the move from school to work",
+   "joins_not": "it is classroom training (L3-032)"
+  },
+  {
+   "lever_id": "LV-061",
+   "lever": "Qualification frameworks, skills certification, occupational standards",
+   "family_id": "F-12",
+   "joins_when": "it makes skills visible or comparable: standards, certification, workforce information systems",
+   "joins_not": "it builds the skills themselves (L3-032)"
+  },
+  {
+   "lever_id": "LV-062",
+   "lever": "Digital skills training for workers, students and firms",
+   "family_id": "F-12",
+   "joins_when": "it teaches digital skills",
+   "joins_not": "it provides connectivity or devices (L3-261)"
+  },
+  {
+   "lever_id": "LV-063",
+   "lever": "Affordable connectivity, devices and public access points for households",
+   "family_id": "F-12",
+   "joins_when": "it gives households or citizens internet access, devices or affordable connectivity",
+   "joins_not": "it serves firms (L3-140), delivers government services digitally (L3-227) or teaches skills (L3-035)"
+  },
+  {
+   "lever_id": "LV-064",
+   "lever": "Carbon pricing, emissions trading, carbon credits and offsets",
+   "family_id": "F-13",
+   "joins_when": "it puts a price on emissions or builds a carbon market or credit scheme",
+   "joins_not": "it funds clean technology (L3-069) or sets efficiency standards (L3-071)"
+  },
+  {
+   "lever_id": "LV-065",
+   "lever": "Clean technology support and deployment",
+   "family_id": "F-13",
+   "joins_when": "it supports developing, adopting or deploying clean and low-carbon technology, from research incentives to building capacity at scale",
+   "joins_not": "it prices emissions (L3-068) or deploys at scale to bring costs down (L3-070) (L3-069); it funds research rather than deployment (L3-069) (L3-070)"
+  },
+  {
+   "lever_id": "LV-066",
+   "lever": "Efficiency standards, labels, audits and conservation incentives",
+   "family_id": "F-13",
+   "joins_when": "it cuts energy use through standards, labelling, audits, building codes or conservation campaigns",
+   "joins_not": "it prices energy or emissions (L3-068, L3-148)"
+  },
+  {
+   "lever_id": "LV-067",
+   "lever": "Planning and investment rules that avoid new high-carbon infrastructure",
+   "family_id": "F-13",
+   "joins_when": "it steers long-lived infrastructure or capital away from high-carbon forms, or retires it",
+   "joins_not": "it is efficiency of existing use (L3-071)"
+  },
+  {
+   "lever_id": "LV-068",
+   "lever": "Transition support for workers, firms and places hit by decarbonisation",
+   "family_id": "F-13",
+   "joins_when": "it supports workers, enterprises or regions that lose from the move away from fossil fuels or combustion engines",
+   "joins_not": "it supports the new industry itself (L3-069) or workers hit by trade or automation (F-35)"
+  },
+  {
+   "lever_id": "LV-069",
+   "lever": "Hazard mapping, land-use zoning and relocation out of exposed areas",
+   "family_id": "F-14",
+   "joins_when": "it keeps people and assets out of harm's way: zoning, hazard maps, relocation, coastal setbacks",
+   "joins_not": "it protects assets in place (L3-087) or uses ecosystems (L3-088)"
+  },
+  {
+   "lever_id": "LV-070",
+   "lever": "Resilient building codes, protective works and hardened infrastructure",
+   "family_id": "F-14",
+   "joins_when": "it strengthens buildings or infrastructure against hazards: standards, flood defences, resilient design",
+   "joins_not": "it relocates (L3-086) or restores ecosystems (L3-088)"
+  },
+  {
+   "lever_id": "LV-071",
+   "lever": "Mangroves, wetlands, forests and other nature-based protection",
+   "family_id": "F-14",
+   "joins_when": "it protects or restores ecosystems as a buffer against hazards",
+   "joins_not": "it conserves habitat for its own sake (L3-075, L3-078)"
+  },
+  {
+   "lever_id": "LV-072",
+   "lever": "Climate-resilient farming practices, zoning of crops to suitability",
+   "family_id": "F-14",
+   "joins_when": "it changes what or how producers grow or make to suit the climate",
+   "joins_not": "it is irrigation (L3-160) or general productivity (F-32)"
+  },
+  {
+   "lever_id": "LV-073",
+   "lever": "Protection and recovery support aimed at poor households' assets",
+   "family_id": "F-14",
+   "joins_when": "it names the poor's assets or recovery after disasters as the target",
+   "joins_not": "it is general relief (L3-244) or insurance (L3-021)"
+  },
+  {
+   "lever_id": "LV-074",
+   "lever": "Community or co-management rules for shared resources",
+   "family_id": "F-15",
+   "joins_when": "it sets rules or community institutions for a shared resource: fisheries, forests, pasture",
+   "joins_not": "it allocates individual harvest rights (L3-074) or declares protected areas (L3-075)"
+  },
+  {
+   "lever_id": "LV-075",
+   "lever": "Catch shares, quotas and harvest limits",
+   "family_id": "F-15",
+   "joins_when": "it sets harvest limits or rights to a share of a stock",
+   "joins_not": "it is community management (L3-073)"
+  },
+  {
+   "lever_id": "LV-076",
+   "lever": "Protected areas, conservation zoning and enforcement against",
+   "family_id": "F-15",
+   "joins_when": "it designates or enforces protected areas or land-use controls to conserve habitat",
+   "joins_not": "it pays for conservation (L3-076) or restores degraded land (L3-078)"
+  },
+  {
+   "lever_id": "LV-077",
+   "lever": "Payments for ecosystem services, conservation-linked livelihoods",
+   "family_id": "F-15",
+   "joins_when": "it ties income or payments to conserving nature",
+   "joins_not": "it regulates (L3-075)"
+  },
+  {
+   "lever_id": "LV-078",
+   "lever": "Governance of forest rents",
+   "family_id": "F-15",
+   "joins_when": "it changes the incentives of officials or politicians over forests and land conversion",
+   "joins_not": "it is protection on the ground (L3-075)"
+  },
+  {
+   "lever_id": "LV-079",
+   "lever": "Reforestation, land and watershed restoration",
+   "family_id": "F-15",
+   "joins_when": "it restores degraded forest, land, soil or water",
+   "joins_not": "it protects what exists (L3-075) or is a buffer against hazards (L3-088)"
+  },
+  {
+   "lever_id": "LV-080",
+   "lever": "Biosecurity and invasive species control",
+   "family_id": "F-15",
+   "joins_when": "it controls invasive species or plant and animal biosecurity at borders",
+   "joins_not": "it is animal disease in farming (L3-163)"
+  },
+  {
+   "lever_id": "LV-081",
+   "lever": "Water pricing, allocation rules, conservation and efficiency measures",
+   "family_id": "F-16",
+   "joins_when": "it allocates water among users or raises the efficiency of its use",
+   "joins_not": "it stores water (L3-107) or supplies households (L3-060)"
+  },
+  {
+   "lever_id": "LV-082",
+   "lever": "Groundwater regulation and pumping controls",
+   "family_id": "F-16",
+   "joins_when": "it controls groundwater extraction",
+   "joins_not": "it is surface-water allocation (L3-105)"
+  },
+  {
+   "lever_id": "LV-083",
+   "lever": "Reservoirs, irrigation storage, small water sources and distribution",
+   "family_id": "F-16",
+   "joins_when": "it builds or rehabilitates water storage and distribution",
+   "joins_not": "it is on-farm irrigation returns (L3-160) or household supply (L3-060)"
+  },
+  {
+   "lever_id": "LV-084",
+   "lever": "River basin institutions and cross-border water cooperation",
+   "family_id": "F-16",
+   "joins_when": "it sets up basin-level or transboundary water management",
+   "joins_not": "it is domestic allocation (L3-105)"
+  },
+  {
+   "lever_id": "LV-085",
+   "lever": "Pollution standards, permits, levies and toxic substance control",
+   "family_id": "F-17",
+   "joins_when": "it regulates or prices pollution or controls hazardous substances: standards, permits, levies, chemical and pesticide rules",
+   "joins_not": "it monitors or enforces an existing rule (L3-241), promotes cleaner production (L3-082) or manages waste (L3-083) (L3-080); it is general pollution regulation (L3-080) (L3-084)"
+  },
+  {
+   "lever_id": "LV-086",
+   "lever": "Measures that cut people's exposure to polluted air and water",
+   "family_id": "F-17",
+   "joins_when": "it names protecting health from air or water pollution: clean-air zones, exposure reduction",
+   "joins_not": "it regulates emitters (L3-080)"
+  },
+  {
+   "lever_id": "LV-087",
+   "lever": "Cleaner production, resource efficiency and green industry programmes",
+   "family_id": "F-17",
+   "joins_when": "it helps firms produce with less pollution or material per unit",
+   "joins_not": "it regulates them (L3-080) or manages waste after the fact (L3-083)"
+  },
+  {
+   "lever_id": "LV-088",
+   "lever": "Waste collection, recycling, treatment, disposal and circular economy",
+   "family_id": "F-17",
+   "joins_when": "it manages waste or material flows: collection, sorting, recycling, waste-to-energy, circular economy",
+   "joins_not": "it is production efficiency (L3-082)"
+  },
+  {
+   "lever_id": "LV-089",
+   "lever": "Campaigns, environmental education, labels and feedback",
+   "family_id": "F-17",
+   "joins_when": "it informs, educates or nudges households and firms towards environmental behaviour",
+   "joins_not": "it regulates or prices (L3-080)"
+  },
+  {
+   "lever_id": "LV-090",
+   "lever": "Resource revenue funds and stabilisation rules",
+   "family_id": "F-18",
+   "joins_when": "it saves, invests or smooths resource revenues: sovereign or stabilisation funds, counter-cyclical rules for commodity income",
+   "joins_not": "it stabilises spending against volatility (L3-094, L3-097) (L3-091); it is fiscal rules in general (L3-097) (L3-094)"
+  },
+  {
+   "lever_id": "LV-091",
+   "lever": "Exchange-rate and absorption management during resource booms",
+   "family_id": "F-18",
+   "joins_when": "it names protecting other tradable sectors from a resource boom",
+   "joins_not": "it is diversification policy in general (F-22)"
+  },
+  {
+   "lever_id": "LV-092",
+   "lever": "Transparency and governance of resource revenues",
+   "family_id": "F-18",
+   "joins_when": "it concerns who captures resource rents: contracts, transparency, revenue governance",
+   "joins_not": "it is corruption in general (L3-215)"
+  },
+  {
+   "lever_id": "LV-093",
+   "lever": "Debt management and fiscal sustainability",
+   "family_id": "F-18",
+   "joins_when": "it manages public debt or the fiscal balance to keep debt sustainable or to lift its drag on investment",
+   "joins_not": "it is budget procedure (L3-237) (L3-095); it is routine debt management (L3-095) (L3-096)"
+  },
+  {
+   "lever_id": "LV-094",
+   "lever": "Fiscal rules, debt ceilings and fiscal councils",
+   "family_id": "F-18",
+   "joins_when": "it sets rules or institutions over aggregate fiscal policy",
+   "joins_not": "it is budget execution (L3-237)"
+  },
+  {
+   "lever_id": "LV-095",
+   "lever": "Disclosure and management of guarantees, SOE and PPP liabilities",
+   "family_id": "F-18",
+   "joins_when": "it assesses or controls fiscal risks and contingent liabilities",
+   "joins_not": "it is the PPP contract itself (L3-238)"
+  },
+  {
+   "lever_id": "LV-096",
+   "lever": "Long-term fiscal planning for ageing and future generations",
+   "family_id": "F-18",
+   "joins_when": "it names future generations or long-run fiscal burdens as the reason",
+   "joins_not": "it is pension design (L3-025)"
+  },
+  {
+   "lever_id": "LV-097",
+   "lever": "Family planning, reproductive health and fertility policy",
+   "family_id": "F-19",
+   "joins_when": "it provides family planning or reproductive health, or aims to change fertility or investment per child",
+   "joins_not": "it is maternal care (L3-047) (L3-100); it is schooling policy itself (F-11) (L3-101)"
+  },
+  {
+   "lever_id": "LV-098",
+   "lever": "Savings and financial institutions for a working-age population",
+   "family_id": "F-19",
+   "joins_when": "it builds savings for the demographic dividend",
+   "joins_not": "it is general financial deepening (L3-172)"
+  },
+  {
+   "lever_id": "LV-099",
+   "lever": "Retirement age, incentives and support for older workers",
+   "family_id": "F-19",
+   "joins_when": "it keeps or brings older people into work",
+   "joins_not": "it provides pensions (L3-025) or care (L3-104)"
+  },
+  {
+   "lever_id": "LV-100",
+   "lever": "Long-term care systems, financing and family caregiver support",
+   "family_id": "F-19",
+   "joins_when": "it provides, finances or organises long-term care for older or dependent people",
+   "joins_not": "it is income in old age (L3-025)"
+  },
+  {
+   "lever_id": "LV-101",
+   "lever": "Export promotion, standards certification and market information",
+   "family_id": "F-20",
+   "joins_when": "it helps firms start exporting: certification, trade platforms, market information",
+   "joins_not": "it cuts per-unit freight or port costs (L3-115) or border times (L3-116)"
+  },
+  {
+   "lever_id": "LV-102",
+   "lever": "Ports, logistics corridors and freight services",
+   "family_id": "F-20",
+   "joins_when": "it lowers the cost of moving goods to foreign markets",
+   "joins_not": "it is border procedure and time (L3-116) or domestic connectivity (F-25)"
+  },
+  {
+   "lever_id": "LV-103",
+   "lever": "Customs, border procedures and transit agreements",
+   "family_id": "F-20",
+   "joins_when": "it shortens or simplifies border crossing and customs",
+   "joins_not": "it is freight infrastructure (L3-115)"
+  },
+  {
+   "lever_id": "LV-104",
+   "lever": "Air routes and connectivity for business travel",
+   "family_id": "F-20",
+   "joins_when": "it builds direct air links for business and investment",
+   "joins_not": "it is tourism arrivals (F-21)"
+  },
+  {
+   "lever_id": "LV-105",
+   "lever": "Trade agreements, blocs and preferences",
+   "family_id": "F-20",
+   "joins_when": "it negotiates, joins, uses or defends trade agreements, regional integration or tariff preferences",
+   "joins_not": "it is unilateral preferences (L3-119) (L3-118); it is a reciprocal agreement (L3-118) (L3-119)"
+  },
+  {
+   "lever_id": "LV-106",
+   "lever": "Own tariff and import liberalisation",
+   "family_id": "F-20",
+   "joins_when": "it lowers the country's own tariffs or import barriers",
+   "joins_not": "it is market access abroad (L3-118)"
+  },
+  {
+   "lever_id": "LV-107",
+   "lever": "Destination development, secondary destinations",
+   "family_id": "F-21",
+   "joins_when": "it develops tourism destinations, routes or quality so that spending spreads locally",
+   "joins_not": "it manages visitor numbers against capacity (L3-126) or shock exposure (L3-127)"
+  },
+  {
+   "lever_id": "LV-108",
+   "lever": "Carrying-capacity rules, sustainable tourism management and site",
+   "family_id": "F-21",
+   "joins_when": "it limits or manages tourism to protect the destination",
+   "joins_not": "it grows tourism (L3-125)"
+  },
+  {
+   "lever_id": "LV-109",
+   "lever": "Diversification of source markets and tourism crisis measures",
+   "family_id": "F-21",
+   "joins_when": "it reduces tourism's exposure to shocks or spreads its source markets",
+   "joins_not": "it is destination development (L3-125)"
+  },
+  {
+   "lever_id": "LV-110",
+   "lever": "Linking firms to demanding foreign buyers",
+   "family_id": "F-22",
+   "joins_when": "it exposes firms to foreign buyers so that they learn and upgrade",
+   "joins_not": "it is export cost reduction (F-20)"
+  },
+  {
+   "lever_id": "LV-111",
+   "lever": "Diversification into higher-value products and sectors",
+   "family_id": "F-22",
+   "joins_when": "it moves the economy into new, related or higher-productivity products and sectors",
+   "joins_not": "it protects an infant sector (L3-112) (L3-110); it is one sector's support (L3-112) (L3-111)"
+  },
+  {
+   "lever_id": "LV-112",
+   "lever": "Time-bound protection or support for a new industry",
+   "family_id": "F-22",
+   "joins_when": "it supports a named new industry until it can compete: EV, electronics, bio-industry",
+   "joins_not": "it is innovation policy in general (F-23)"
+  },
+  {
+   "lever_id": "LV-113",
+   "lever": "Modern and digital services as an export and growth sector",
+   "family_id": "F-22",
+   "joins_when": "it develops tradable or digital services as a growth sector",
+   "joins_not": "it is domestic digital infrastructure (F-25)"
+  },
+  {
+   "lever_id": "LV-114",
+   "lever": "R&D funding, public and private",
+   "family_id": "F-23",
+   "joins_when": "it raises R&D investment or funds research in public institutions",
+   "joins_not": "it spreads existing technology (L3-129), transfers it from universities (L3-132) or funds basic science (L3-133) (L3-128); it is a directed mission programme (L3-134) (L3-133)"
+  },
+  {
+   "lever_id": "LV-115",
+   "lever": "Technology adoption and absorptive capacity of firms",
+   "family_id": "F-23",
+   "joins_when": "it helps firms adopt existing technology or builds their capability to use it",
+   "joins_not": "it creates new technology (L3-128) (L3-129); it is adoption support (L3-129) (L3-130)"
+  },
+  {
+   "lever_id": "LV-116",
+   "lever": "Intellectual property systems and enforcement",
+   "family_id": "F-23",
+   "joins_when": "it concerns patents, IP rights, their system or enforcement",
+   "joins_not": "it is R&D funding (L3-128)"
+  },
+  {
+   "lever_id": "LV-117",
+   "lever": "University-industry collaboration, commercialisation, spin-offs",
+   "family_id": "F-23",
+   "joins_when": "it links research institutions to firms or commercialises research",
+   "joins_not": "it is higher education itself (L3-041)"
+  },
+  {
+   "lever_id": "LV-118",
+   "lever": "Mission-oriented programmes in frontier fields",
+   "family_id": "F-23",
+   "joins_when": "it is a large directed programme in a frontier field",
+   "joins_not": "it is general R&D support (L3-128)"
+  },
+  {
+   "lever_id": "LV-119",
+   "lever": "Agricultural research, breeding and farm technology development",
+   "family_id": "F-23",
+   "joins_when": "it researches or develops agricultural technology, varieties or practices",
+   "joins_not": "it extends known practices to farmers (L3-159)"
+  },
+  {
+   "lever_id": "LV-120",
+   "lever": "Investment attraction, promotion and facilitation",
+   "family_id": "F-24",
+   "joins_when": "it attracts, promotes, facilitates or deregulates foreign and private investment",
+   "joins_not": "it names knowledge transfer from foreign firms (L3-122) or investor facilitation (L3-123) (L3-121); it is the capital's effect once in (L3-121) (L3-123)"
+  },
+  {
+   "lever_id": "LV-121",
+   "lever": "Supplier linkages, joint ventures and technology transfer",
+   "family_id": "F-24",
+   "joins_when": "it names learning, technology or supplier links from foreign firms",
+   "joins_not": "it is capital alone (L3-121)"
+  },
+  {
+   "lever_id": "LV-122",
+   "lever": "Global and regional value chain participation and upgrading",
+   "family_id": "F-24",
+   "joins_when": "it links firms into regional or global value chains",
+   "joins_not": "it is export cost reduction (F-20)"
+  },
+  {
+   "lever_id": "LV-123",
+   "lever": "Diaspora engagement for trade, investment and knowledge",
+   "family_id": "F-24",
+   "joins_when": "it mobilises nationals abroad for trade, investment or expertise",
+   "joins_not": "it brings migrants home (L3-191)"
+  },
+  {
+   "lever_id": "LV-124",
+   "lever": "National road, rail and inland transport networks",
+   "family_id": "F-25",
+   "joins_when": "it builds or upgrades transport between domestic markets and regions, including links from peripheral regions to centres",
+   "joins_not": "it reaches villages (L3-136) or serves one city (F-28) (L3-135); it is place-based subsidy (L3-185) (L3-137)"
+  },
+  {
+   "lever_id": "LV-125",
+   "lever": "Rural roads and last-mile access",
+   "family_id": "F-25",
+   "joins_when": "it connects villages or rural areas to markets and services",
+   "joins_not": "it is national trunk infrastructure (L3-135)"
+  },
+  {
+   "lever_id": "LV-126",
+   "lever": "Market information systems and price data",
+   "family_id": "F-25",
+   "joins_when": "it provides price or market information to producers and traders",
+   "joins_not": "it is physical transport (L3-135) or statistics for the state (L3-210)"
+  },
+  {
+   "lever_id": "LV-127",
+   "lever": "Broadband and digital infrastructure for firms and places",
+   "family_id": "F-25",
+   "joins_when": "it extends broadband or digital infrastructure",
+   "joins_not": "it is household access (L3-261) or e-commerce (L3-141)"
+  },
+  {
+   "lever_id": "LV-128",
+   "lever": "E-commerce platforms, digital trade skills and delivery",
+   "family_id": "F-25",
+   "joins_when": "it brings producers or firms onto online markets",
+   "joins_not": "it is the network itself (L3-140)"
+  },
+  {
+   "lever_id": "LV-129",
+   "lever": "Reliable electricity, gas and network supply for production",
+   "family_id": "F-26",
+   "joins_when": "it improves the reliability or adequacy of utility supply to firms",
+   "joins_not": "it is household connection (L3-059) or clean generation (F-13)"
+  },
+  {
+   "lever_id": "LV-130",
+   "lever": "Utility tariffs, subsidies and cost recovery",
+   "family_id": "F-26",
+   "joins_when": "it reforms utility tariffs, fee collection, subsidies or price structures for energy, water or waste services",
+   "joins_not": "it removes consumer subsidies (L3-148) (L3-147); it is the utility's own cost recovery (L3-147) (L3-148)"
+  },
+  {
+   "lever_id": "LV-131",
+   "lever": "Regulation, unbundling and competition in network industries",
+   "family_id": "F-26",
+   "joins_when": "it regulates or restructures a network industry: regulator, unbundling, SOE supervision in utilities",
+   "joins_not": "it is general competition law (L3-169)"
+  },
+  {
+   "lever_id": "LV-132",
+   "lever": "Grid interconnection, pooling and regional energy links",
+   "family_id": "F-26",
+   "joins_when": "it connects grids or pools supply across regions or borders",
+   "joins_not": "it is domestic capacity (L3-146)"
+  },
+  {
+   "lever_id": "LV-133",
+   "lever": "Supply-chain linkages, local processing and local content",
+   "family_id": "F-27",
+   "joins_when": "it builds links between stages of a chain: processing, supplier development, local procurement, local content around primary industries",
+   "joins_not": "it clusters firms in one place (L3-152, L3-153) (L3-151); it is supply chains in general (L3-151) (L3-154)"
+  },
+  {
+   "lever_id": "LV-134",
+   "lever": "Cluster development and shared facilities for a sector",
+   "family_id": "F-27",
+   "joins_when": "it develops a sector cluster, shared facility or network of firms",
+   "joins_not": "it is a zone with its own rules and infrastructure (L3-153)"
+  },
+  {
+   "lever_id": "LV-135",
+   "lever": "Special economic zones, industrial estates, corridors",
+   "family_id": "F-27",
+   "joins_when": "it sets up or develops a zone, estate, corridor or border economic area",
+   "joins_not": "it is a cluster without a defined zone (L3-152) or a lagging-region policy (L3-185)"
+  },
+  {
+   "lever_id": "LV-136",
+   "lever": "Urban public transport, demand management and congestion pricing",
+   "family_id": "F-28",
+   "joins_when": "it manages urban traffic: public transport, modal shift, pricing",
+   "joins_not": "it is intercity transport (L3-135)"
+  },
+  {
+   "lever_id": "LV-137",
+   "lever": "Land-use and building regulation affecting housing supply",
+   "family_id": "F-28",
+   "joins_when": "it changes land-use or building rules in existing urban areas",
+   "joins_not": "it plans new land at the edge (L3-145)"
+  },
+  {
+   "lever_id": "LV-138",
+   "lever": "Urban planning and serviced expansion",
+   "family_id": "F-28",
+   "joins_when": "it plans and services urban land, whole city plans, or acts to make cities more productive through density and scale",
+   "joins_not": "it regulates existing land (L3-144) (L3-145); it is transport within cities (L3-143) or housing rules (L3-144) (L3-142)"
+  },
+  {
+   "lever_id": "LV-139",
+   "lever": "Place-based support for lagging regions",
+   "family_id": "F-29",
+   "joins_when": "it directs investment, incentives or zones to a lagging region or province, or acts on the conditions that keep it poor",
+   "joins_not": "it is a zone for its own sake (L3-153) or household diversification (L3-188) (L3-185); it is the policy instrument itself (L3-185) (L3-186)"
+  },
+  {
+   "lever_id": "LV-140",
+   "lever": "Rural non-farm enterprise and job creation",
+   "family_id": "F-29",
+   "joins_when": "it creates non-farm income in rural areas: rural enterprise, village industry, rural services",
+   "joins_not": "it is farm productivity (F-32)"
+  },
+  {
+   "lever_id": "LV-141",
+   "lever": "Management training, business development services, consulting for firms",
+   "family_id": "F-30",
+   "joins_when": "it improves how firms are managed: training, advisory, business development services",
+   "joins_not": "it lends (L3-165) or helps start-ups (L3-167)"
+  },
+  {
+   "lever_id": "LV-142",
+   "lever": "Loans, guarantees and credit lines for small firms",
+   "family_id": "F-30",
+   "joins_when": "it lends to or guarantees credit for existing small firms",
+   "joins_not": "it finances new ventures (L3-167) or households and microenterprises (L3-173)"
+  },
+  {
+   "lever_id": "LV-143",
+   "lever": "Start-up funding, incubation and venture support",
+   "family_id": "F-30",
+   "joins_when": "it funds or incubates new ventures and entrepreneurs",
+   "joins_not": "it is credit for existing firms (L3-165)"
+  },
+  {
+   "lever_id": "LV-144",
+   "lever": "Business registration, licensing and permit simplification",
+   "family_id": "F-30",
+   "joins_when": "it makes it easier or cheaper to register, license or operate a business",
+   "joins_not": "it registers workers (L3-180) or enforces competition (L3-169)"
+  },
+  {
+   "lever_id": "LV-145",
+   "lever": "Financial sector development, capital markets, supervision",
+   "family_id": "F-31",
+   "joins_when": "it deepens or supervises the financial system as a whole",
+   "joins_not": "it targets excluded borrowers (L3-173)"
+  },
+  {
+   "lever_id": "LV-146",
+   "lever": "Microcredit, credit scoring and access",
+   "family_id": "F-31",
+   "joins_when": "it gives credit access to households, farmers or microenterprises",
+   "joins_not": "it is SME lending (L3-165) or savings (L3-174)"
+  },
+  {
+   "lever_id": "LV-147",
+   "lever": "Savings products and financial literacy",
+   "family_id": "F-31",
+   "joins_when": "it promotes saving or financial literacy",
+   "joins_not": "it lends (L3-173) or is a pension (L3-025)"
+  },
+  {
+   "lever_id": "LV-148",
+   "lever": "Mobile money and digital payments",
+   "family_id": "F-31",
+   "joins_when": "it extends digital payments or mobile money",
+   "joins_not": "it digitises government payments (L3-227)"
+  },
+  {
+   "lever_id": "LV-149",
+   "lever": "Input subsidies, credit and supply of seed and fertiliser",
+   "family_id": "F-32",
+   "joins_when": "it supplies or subsidises farm inputs or finance for them",
+   "joins_not": "it teaches practices (L3-159) or supplies water (L3-160)"
+  },
+  {
+   "lever_id": "LV-150",
+   "lever": "Agricultural extension, farmer training and technology transfer",
+   "family_id": "F-32",
+   "joins_when": "it transfers knowledge or practices to farmers: extension, demonstration, farmer networks",
+   "joins_not": "it develops the technology (L3-161) or supplies inputs (L3-158)"
+  },
+  {
+   "lever_id": "LV-151",
+   "lever": "Irrigation and on-farm water management",
+   "family_id": "F-32",
+   "joins_when": "it brings irrigation or water control to farms",
+   "joins_not": "it stores water at basin level (L3-107)"
+  },
+  {
+   "lever_id": "LV-152",
+   "lever": "Land consolidation, large-scale farming and mechanisation",
+   "family_id": "F-32",
+   "joins_when": "it enlarges farms, consolidates plots or mechanises",
+   "joins_not": "it reforms land rights (F-38)"
+  },
+  {
+   "lever_id": "LV-153",
+   "lever": "Plant and animal pest and disease control, biosecurity on farms",
+   "family_id": "F-32",
+   "joins_when": "it controls pests or diseases of crops or livestock",
+   "joins_not": "it is food safety for consumers (L3-056) or human disease (L3-049)"
+  },
+  {
+   "lever_id": "LV-154",
+   "lever": "Collection points, rural market infrastructure and transport to market",
+   "family_id": "F-33",
+   "joins_when": "it lowers producers' cost of reaching buyers: collection centres, rural markets, transport",
+   "joins_not": "it organises producers (L3-156) or contracts them (L3-157)"
+  },
+  {
+   "lever_id": "LV-155",
+   "lever": "Cooperatives, producer groups and collective marketing",
+   "family_id": "F-33",
+   "joins_when": "it organises producers into groups, cooperatives or institutions",
+   "joins_not": "it is a buyer contract (L3-157)"
+  },
+  {
+   "lever_id": "LV-156",
+   "lever": "Contract farming and buyer-producer arrangements",
+   "family_id": "F-33",
+   "joins_when": "it links producers to processors or buyers by contract",
+   "joins_not": "it is a producer group (L3-156) or supply-chain industry policy (L3-151)"
+  },
+  {
+   "lever_id": "LV-157",
+   "lever": "Employment services and active labour-market programmes",
+   "family_id": "F-34",
+   "joins_when": "it matches workers to jobs or runs programmes for job seekers: employment services, job portals, job-search assistance, wage subsidies, training for the unemployed",
+   "joins_not": "it trains (L3-177) or certifies skills (L3-034) (L3-176); it is vocational education (F-12) (L3-177)"
+  },
+  {
+   "lever_id": "LV-158",
+   "lever": "Minimum wages",
+   "family_id": "F-34",
+   "joins_when": "it sets or raises wage floors",
+   "joins_not": "it is dismissal rules (L3-178)"
+  },
+  {
+   "lever_id": "LV-159",
+   "lever": "Adjustment assistance for workers and places hit by import competition",
+   "family_id": "F-35",
+   "joins_when": "it supports workers or regions losing to trade",
+   "joins_not": "it is decarbonisation (L3-262) or automation (L3-184)"
+  },
+  {
+   "lever_id": "LV-160",
+   "lever": "Reskilling and support for workers displaced by automation",
+   "family_id": "F-35",
+   "joins_when": "it supports workers displaced by technology or steers automation towards new tasks",
+   "joins_not": "it is digital skills in general (L3-035)"
+  },
+  {
+   "lever_id": "LV-161",
+   "lever": "Lower remittance costs and channels to productive use",
+   "family_id": "F-36",
+   "joins_when": "it concerns remittances: cost, channels, use",
+   "joins_not": "it is migrants' own earnings (L3-192)"
+  },
+  {
+   "lever_id": "LV-162",
+   "lever": "Skilled emigration, return and retention",
+   "family_id": "F-36",
+   "joins_when": "it addresses emigration of skilled people, their retention, or their return and reintegration",
+   "joins_not": "it brings them back (L3-191) (L3-190); it engages them abroad (L3-193) (L3-191)"
+  },
+  {
+   "lever_id": "LV-163",
+   "lever": "Legal migration pathways and recruitment regulation",
+   "family_id": "F-36",
+   "joins_when": "it opens or regulates work abroad for nationals, or foreign workers at home",
+   "joins_not": "it is refugees (L3-020)"
+  },
+  {
+   "lever_id": "LV-164",
+   "lever": "Competition law and removal of firm-specific distortions",
+   "family_id": "F-37",
+   "joins_when": "it strengthens competition or removes rules and subsidies that favour some firms over more productive ones",
+   "joins_not": "it is entry registration (L3-168) or utility regulation (L3-149) (L3-169); it is competition enforcement (L3-169) (L3-166)"
+  },
+  {
+   "lever_id": "LV-165",
+   "lever": "SOE reform, hard budget constraints, privatisation",
+   "family_id": "F-37",
+   "joins_when": "it reforms, restructures or disciplines state-owned enterprises",
+   "joins_not": "it is utility regulation (L3-149)"
+  },
+  {
+   "lever_id": "LV-166",
+   "lever": "Commercial courts, contract enforcement, dispute settlement",
+   "family_id": "F-37",
+   "joins_when": "it enforces contracts or settles commercial and investment disputes",
+   "joins_not": "it is access to justice for people (L3-065)"
+  },
+  {
+   "lever_id": "LV-167",
+   "lever": "Tenure security and land titling",
+   "family_id": "F-38",
+   "joins_when": "it secures rights to land or issues and registers titles: community titles, tenure recognition, titling programmes",
+   "joins_not": "it issues formal titles (L3-195) or redistributes land (L3-197) (L3-194); it is tenure security without a title (L3-194) (L3-195)"
+  },
+  {
+   "lever_id": "LV-168",
+   "lever": "Land registries, rental markets and transaction rules",
+   "family_id": "F-38",
+   "joins_when": "it makes land easier to transfer, rent or record",
+   "joins_not": "it is titling (L3-195)"
+  },
+  {
+   "lever_id": "LV-169",
+   "lever": "Land redistribution, agrarian reform and land taxation for equity",
+   "family_id": "F-38",
+   "joins_when": "it redistributes land or taxes holdings to spread ownership",
+   "joins_not": "it is land market efficiency (L3-196)"
+  },
+  {
+   "lever_id": "LV-170",
+   "lever": "Forecasting, early-warning systems and hazard monitoring",
+   "family_id": "F-39",
+   "joins_when": "it forecasts, monitors or warns of natural hazards",
+   "joins_not": "it tells the public how to act (L3-264), detects disease (L3-207) or finances response (L3-209)"
+  },
+  {
+   "lever_id": "LV-171",
+   "lever": "Disease surveillance, laboratories and outbreak response",
+   "family_id": "F-39",
+   "joins_when": "it detects or contains disease outbreaks: surveillance, testing, laboratories, response teams",
+   "joins_not": "it controls an endemic disease (L3-049) or the animal-human source (L3-208)"
+  },
+  {
+   "lever_id": "LV-172",
+   "lever": "One Health programmes at the animal-human-environment interface",
+   "family_id": "F-39",
+   "joins_when": "it works on zoonotic disease at its source: animal health, wildlife, One Health coordination",
+   "joins_not": "it is human surveillance (L3-207)"
+  },
+  {
+   "lever_id": "LV-173",
+   "lever": "Reducing concentration and dependence in trade and supply",
+   "family_id": "F-39",
+   "joins_when": "it reduces dependence on few suppliers, commodities, markets or chokepoints: energy security, supply-chain resilience, export diversification",
+   "joins_not": "it builds domestic capacity (L3-204) or stocks (L3-205) (L3-202); it holds reserves against the swings (L3-198) (L3-199); it is accidental disruption (L3-202) (L3-203)"
+  },
+  {
+   "lever_id": "LV-174",
+   "lever": "Macro-financial buffers: reserves, debt composition, bank supervision",
+   "family_id": "F-40",
+   "joins_when": "it builds reserves, manages the exchange rate, limits foreign-currency or short-term debt, or supervises banks for stability",
+   "joins_not": "it is debt composition (L3-200) (L3-198); it is public debt sustainability (L3-095) (L3-200); it deepens finance (L3-172) (L3-201)"
+  },
+  {
+   "lever_id": "LV-175",
+   "lever": "Strategic capacity and stocks of critical goods",
+   "family_id": "F-40",
+   "joins_when": "it builds domestic production or physical reserves of critical goods: food, fuel, medicines, vaccines",
+   "joins_not": "it diversifies suppliers (L3-202) (L3-204); it is surge capacity of services (L3-242) (L3-205)"
+  },
+  {
+   "lever_id": "LV-176",
+   "lever": "Disaster insurance, contingent credit and emergency financing frameworks",
+   "family_id": "F-40",
+   "joins_when": "it arranges finance in advance for disasters or emergencies",
+   "joins_not": "it is household insurance (L3-021) or the warning (L3-206)"
+  },
+  {
+   "lever_id": "LV-177",
+   "lever": "Foresight, scenarios and long-term strategy units",
+   "family_id": "F-41",
+   "joins_when": "it builds or uses foresight, scenarios or futures analysis",
+   "joins_not": "it is statistics on the present (L3-210) or a development plan (L3-212)"
+  },
+  {
+   "lever_id": "LV-178",
+   "lever": "National, sector and investment plans that coordinate investment",
+   "family_id": "F-42",
+   "joins_when": "it formulates or implements a plan that coordinates investments or sectors",
+   "joins_not": "it monitors the plan (L3-217) or coordinates agencies day to day (L3-220)"
+  },
+  {
+   "lever_id": "LV-179",
+   "lever": "Statistical systems, surveys, censuses and analysis for decisions",
+   "family_id": "F-43",
+   "joins_when": "it produces, analyses or publishes data for planning or decisions: statistics, surveys, dashboards for analysis",
+   "joins_not": "it links data across bodies (L3-263), builds the records a programme runs on (L3-265) or monitors a programme (L3-217)"
+  },
+  {
+   "lever_id": "LV-180",
+   "lever": "Shared registries, data standards",
+   "family_id": "F-43",
+   "joins_when": "it links records or systems held by separate bodies, or sets the standards and rules for sharing them",
+   "joins_not": "it is one body's own system (L3-265) or data protection rights (L3-221)"
+  },
+  {
+   "lever_id": "LV-181",
+   "lever": "Build, digitise and maintain the registries",
+   "family_id": "F-43",
+   "joins_when": "it builds, digitises, upgrades or maintains the data a service or programme runs on, within one body",
+   "joins_not": "it links systems across bodies (L3-263), publishes statistics (L3-210) or delivers the service online (L3-227)"
+  },
+  {
+   "lever_id": "LV-182",
+   "lever": "Monitoring and evaluation systems and their use",
+   "family_id": "F-44",
+   "joins_when": "it monitors or evaluates programmes or plans and feeds results back",
+   "joins_not": "it is the statistics base (L3-210) or iterative reform (L3-218)"
+  },
+  {
+   "lever_id": "LV-183",
+   "lever": "Iterative, problem-driven reform methods",
+   "family_id": "F-44",
+   "joins_when": "it adopts an iterative or experimental way of working inside government, or sequences reform to what the administration can do",
+   "joins_not": "it is a territorial pilot (L3-219) (L3-218); it is monitoring (L3-217) (L3-228)"
+  },
+  {
+   "lever_id": "LV-184",
+   "lever": "Pilots, sandboxes and scaling of what works",
+   "family_id": "F-45",
+   "joins_when": "it pilots a policy in a place or sector before scaling, or replicates a model",
+   "joins_not": "it is a method inside one agency (L3-218)"
+  },
+  {
+   "lever_id": "LV-185",
+   "lever": "Data protection law and rights",
+   "family_id": "F-46",
+   "joins_when": "it protects personal data or sets rights over it",
+   "joins_not": "it is cybersecurity (L3-222) or data sharing for the state (L3-263)"
+  },
+  {
+   "lever_id": "LV-186",
+   "lever": "Cybersecurity standards, agencies and incident response",
+   "family_id": "F-46",
+   "joins_when": "it secures systems against cyber attack",
+   "joins_not": "it is privacy rights (L3-221)"
+  },
+  {
+   "lever_id": "LV-187",
+   "lever": "Platform competition and digital market rules",
+   "family_id": "F-46",
+   "joins_when": "it regulates digital platforms' market power",
+   "joins_not": "it is general competition (L3-169)"
+  },
+  {
+   "lever_id": "LV-188",
+   "lever": "Rules and incentives steering AI and automation",
+   "family_id": "F-46",
+   "joins_when": "it regulates or steers AI and automation",
+   "joins_not": "it reskills displaced workers (L3-184)"
+  },
+  {
+   "lever_id": "LV-189",
+   "lever": "Participatory planning and budgeting",
+   "family_id": "F-47",
+   "joins_when": "it gives citizens or communities a say in plans or budgets",
+   "joins_not": "it hands them the funds (L3-248) or has them monitor providers (L3-246)"
+  },
+  {
+   "lever_id": "LV-190",
+   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+   "family_id": "F-48",
+   "joins_when": "it sets up or strengthens coordination among agencies, sectors or levels of government",
+   "joins_not": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)"
+  },
+  {
+   "lever_id": "LV-191",
+   "lever": "Performance management, autonomy and incentives",
+   "family_id": "F-49",
+   "joins_when": "it changes the authority, incentives or performance management of a delivery unit or its managers",
+   "joins_not": "it is who is hired and paid (L3-225)"
+  },
+  {
+   "lever_id": "LV-192",
+   "lever": "Civil service recruitment, pay, careers and HR reform",
+   "family_id": "F-50",
+   "joins_when": "it changes who joins the public service, how they are paid or motivated",
+   "joins_not": "it changes how units are managed (L3-226) or how a service is delivered (L3-266)"
+  },
+  {
+   "lever_id": "LV-193",
+   "lever": "Decentralisation and local accountability",
+   "family_id": "F-50",
+   "joins_when": "it devolves functions, decisions or revenue powers to local government, or guards local spending against capture",
+   "joins_not": "it is local finance formulas (L3-231) or local capture (L3-230) (L3-229); it is decentralisation itself (L3-229) (L3-230)"
+  },
+  {
+   "lever_id": "LV-194",
+   "lever": "Intergovernmental transfers and local revenue",
+   "family_id": "F-50",
+   "joins_when": "it changes transfers to or revenue of local governments",
+   "joins_not": "it devolves functions (L3-229)"
+  },
+  {
+   "lever_id": "LV-195",
+   "lever": "Regulatory and enforcement capacity",
+   "family_id": "F-50",
+   "joins_when": "it builds or empowers a regulator, or monitors and enforces compliance with existing rules",
+   "joins_not": "it inspects in the field (L3-241) (L3-240); it sets the standard (L3-080, L3-240) (L3-241)"
+  },
+  {
+   "lever_id": "LV-196",
+   "lever": "Simplify procedures, cut steps and time",
+   "family_id": "F-50",
+   "joins_when": "it changes how an existing service is delivered: fewer steps, less time, one-stop, process redesign, service standards",
+   "joins_not": "it changes staff (L3-225), unit management (L3-226) or digital rails (L3-227)"
+  },
+  {
+   "lever_id": "LV-197",
+   "lever": "Emergency operations centres, surge staff, beds and stockpiles",
+   "family_id": "F-51",
+   "joins_when": "it builds capacity that can expand in an emergency: operations centres, reserves, preparedness training",
+   "joins_not": "it keeps routine services running (L3-243) or relieves households (L3-244)"
+  },
+  {
+   "lever_id": "LV-198",
+   "lever": "Continuity plans and backup delivery",
+   "family_id": "F-51",
+   "joins_when": "it keeps services running through disruption",
+   "joins_not": "it scales up (L3-242)"
+  },
+  {
+   "lever_id": "LV-199",
+   "lever": "Relief delivery and victim assistance",
+   "family_id": "F-51",
+   "joins_when": "it delivers relief or assistance to affected people",
+   "joins_not": "it is the registry that scales benefits (L3-024)"
+  },
+  {
+   "lever_id": "LV-200",
+   "lever": "Build-back-better reconstruction",
+   "family_id": "F-51",
+   "joins_when": "it rebuilds after disasters to higher standards",
+   "joins_not": "it hardens assets before the event (L3-087)"
+  },
+  {
+   "lever_id": "LV-201",
+   "lever": "Third-party reporting, data matching and tax enforcement",
+   "family_id": "F-52",
+   "joins_when": "it enforces tax through information and audit",
+   "joins_not": "it changes rates and bases (L3-233)"
+  },
+  {
+   "lever_id": "LV-202",
+   "lever": "Tax reform: rates, bases, equity and the fiscal contract",
+   "family_id": "F-52",
+   "joins_when": "it reforms the tax system's rates, bases or fairness, or links taxes visibly to services",
+   "joins_not": "it is collection enforcement (L3-232) (L3-233); it is enforcement (L3-232) (L3-234)"
+  },
+  {
+   "lever_id": "LV-203",
+   "lever": "Procurement reform and transparency",
+   "family_id": "F-52",
+   "joins_when": "it reforms public procurement or purchasing",
+   "joins_not": "it is project appraisal (L3-236)"
+  },
+  {
+   "lever_id": "LV-204",
+   "lever": "Public investment management",
+   "family_id": "F-52",
+   "joins_when": "it improves how public investment projects are chosen and delivered",
+   "joins_not": "it is procurement (L3-235) or the budget cycle (L3-237)"
+  },
+  {
+   "lever_id": "LV-205",
+   "lever": "Budget preparation, execution and results-based budgeting",
+   "family_id": "F-52",
+   "joins_when": "it reforms budgeting: preparation, allocation, execution, results-based or area-based budgeting",
+   "joins_not": "it is a fiscal rule (L3-097)"
+  },
+  {
+   "lever_id": "LV-206",
+   "lever": "Public-private partnerships and private infrastructure investment",
+   "family_id": "F-52",
+   "joins_when": "it uses private finance or partnerships for public assets or services",
+   "joins_not": "it manages the fiscal risk of them (L3-098)"
+  },
+  {
+   "lever_id": "LV-207",
+   "lever": "Aid coordination and use of country systems",
+   "family_id": "F-52",
+   "joins_when": "it coordinates donors or aligns aid with national systems",
+   "joins_not": "it is budget institutions (L3-237)"
+  },
+  {
+   "lever_id": "LV-208",
+   "lever": "Digital identity, digital payments and online service delivery",
+   "family_id": "F-53",
+   "joins_when": "it delivers public services or payments digitally, or builds the identity and payment rails",
+   "joins_not": "it links data across agencies (L3-263), connects households (L3-261) or redesigns the process itself (L3-266)"
+  },
+  {
+   "lever_id": "LV-209",
+   "lever": "Public risk communication, warning dissemination and community",
+   "family_id": "F-54",
+   "joins_when": "it informs the public in a crisis or health emergency and engages communities",
+   "joins_not": "it is the forecast (L3-206) or routine health promotion (L3-048)"
+  },
+  {
+   "lever_id": "LV-210",
+   "lever": "Electoral competition and integrity",
+   "family_id": "F-55",
+   "joins_when": "it strengthens electoral competition, voters' information, or the running and safeguarding of elections",
+   "joins_not": "it is electoral administration (L3-254) (L3-253); it is parties (L3-255) (L3-254)"
+  },
+  {
+   "lever_id": "LV-211",
+   "lever": "Party institutions and finance rules",
+   "family_id": "F-55",
+   "joins_when": "it regulates or builds political parties",
+   "joins_not": "it is elections (L3-254)"
+  },
+  {
+   "lever_id": "LV-212",
+   "lever": "Independent media support and press freedom",
+   "family_id": "F-56",
+   "joins_when": "it supports independent media or press freedom",
+   "joins_not": "it counters disinformation (L3-251)"
+  },
+  {
+   "lever_id": "LV-213",
+   "lever": "Countering disinformation and media literacy",
+   "family_id": "F-56",
+   "joins_when": "it counters false information or builds media literacy",
+   "joins_not": "it is government disclosure (L3-252)"
+  },
+  {
+   "lever_id": "LV-214",
+   "lever": "Open government, disclosure and citizen monitoring of budgets",
+   "family_id": "F-56",
+   "joins_when": "it publishes government information or enables citizens to monitor spending",
+   "joins_not": "it is independent media (L3-250)"
+  },
+  {
+   "lever_id": "LV-215",
+   "lever": "Judicial independence and safeguards of checks and balances",
+   "family_id": "F-57",
+   "joins_when": "it strengthens courts' independence or review of government, or protects checks and balances from executive capture",
+   "joins_not": "it is legislative oversight (L3-214) (L3-213); it is one institution's capacity (L3-213, L3-214) (L3-216)"
+  },
+  {
+   "lever_id": "LV-216",
+   "lever": "Legislative oversight",
+   "family_id": "F-57",
+   "joins_when": "it strengthens parliament's oversight",
+   "joins_not": "it is audit (L3-215)"
+  },
+  {
+   "lever_id": "LV-217",
+   "lever": "Audit institutions, anti-corruption bodies and integrity systems",
+   "family_id": "F-57",
+   "joins_when": "it audits, detects or prevents corruption",
+   "joins_not": "it is procurement transparency as a purchasing reform (L3-235)"
+  },
+  {
+   "lever_id": "LV-218",
+   "lever": "Building coalitions and settlements for reform",
+   "family_id": "F-58",
+   "joins_when": "it builds political coalitions or settlements behind reform",
+   "joins_not": "it is dialogue with business (L3-257)"
+  },
+  {
+   "lever_id": "LV-219",
+   "lever": "Public-private dialogue and joint committees",
+   "family_id": "F-58",
+   "joins_when": "it creates structured dialogue between government and business",
+   "joins_not": "it is a labour tripartite body (L3-258)"
+  },
+  {
+   "lever_id": "LV-220",
+   "lever": "Tripartite social dialogue and wage bargaining",
+   "family_id": "F-58",
+   "joins_when": "it organises dialogue among government, employers and workers",
+   "joins_not": "it is business dialogue (L3-257)"
+  },
+  {
+   "lever_id": "LV-221",
+   "lever": "Community scorecards and monitoring of providers",
+   "family_id": "F-59",
+   "joins_when": "it has communities monitor service providers",
+   "joins_not": "it has them decide (L3-247) or manage funds (L3-248)"
+  },
+  {
+   "lever_id": "LV-222",
+   "lever": "Community-driven development and community enterprise funds",
+   "family_id": "F-59",
+   "joins_when": "it gives communities control of funds or projects, including community enterprises",
+   "joins_not": "it is participation in planning only (L3-247)"
+  },
+  {
+   "lever_id": "LV-223",
+   "lever": "Support for civil society and volunteer networks",
+   "family_id": "F-59",
+   "joins_when": "it strengthens civil society organisations or volunteer networks as watchdogs",
+   "joins_not": "it is community management of funds (L3-248)"
+  },
+  {
+   "lever_id": "LV-224",
+   "lever": "Reducing polarisation between groups and parties",
+   "family_id": "F-60",
+   "joins_when": "it names polarisation between social groups or political sides and acts to lower it",
+   "joins_not": "it is identity-building (L3-014) or contact (L3-013) (L3-012); it is group grievance (L3-011) (L3-017)"
+  },
+  {
+   "lever_id": "LV-225",
+   "lever": "National identity, shared values, culture and civic education",
+   "family_id": "F-60",
+   "joins_when": "it builds shared identity, values or culture",
+   "joins_not": "it is intergroup contact (L3-013)"
+  },
+  {
+   "lever_id": "LV-226",
+   "lever": "Reconciliation, peace processes and transitional justice",
+   "family_id": "F-60",
+   "joins_when": "it deals with past conflict or builds peace",
+   "joins_not": "it is crime (F-08)"
+  },
+  {
+   "lever_id": "LV-227",
+   "lever": "Jobs and income for potential combatants",
+   "family_id": "F-60",
+   "joins_when": "it offers livelihoods to people at risk of joining violence",
+   "joins_not": "it is general employment (F-34)"
+  },
+  {
+   "lever_id": "LV-228",
+   "lever": "Visible service delivery and economic security to restore trust",
+   "family_id": "F-60",
+   "joins_when": "it names restoring trust in institutions as the aim",
+   "joins_not": "it is a service expansion with no trust aim stated (its own family)"
+  },
+  {
+   "lever_id": "LV-229",
+   "lever": "Structured contact and cooperation across groups",
+   "family_id": "F-60",
+   "joins_when": "it brings groups together in cooperation or shared activity",
+   "joins_not": "it is national identity (L3-014)"
+  }
+ ]
+}
