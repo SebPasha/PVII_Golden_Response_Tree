@@ -23,13 +23,20 @@ Input
 
 Task, for each strategy
 
-1. node_id: where the strategy sits.
-   - The lever (LV-xxx) whose action the strategy is. This is the usual answer: every strategy
-     that names an action, programme, investment, rule or service sits on a lever. Read each
-     lever's "joins when" and "not when" tests and judge by meaning, not by shared words: a
-     strategy that builds clinics is the lever that builds and runs services, whatever words it
-     uses. Where two levers of one family both fit, take the one whose test names the
-     strategy's main action.
+1. node_id: where the strategy sits. Decide in two steps, in this order.
+   - First the family (F-xx): the development purpose the strategy serves, read from what it
+     is for, not from the words it uses. A sector programme that mentions a plan, a pilot, a
+     platform, data, a fund or coordination serves its sector's purpose; it sits in a
+     governance family only when the state's own capacity, process or institutions are the
+     purpose. A programme of incentives for a new industry is industrial policy, whatever the
+     incentive is called.
+   - Then the lever (LV-xxx) in that family whose action the strategy is. This is the usual
+     answer: every strategy that names an action, programme, investment, rule or service sits
+     on a lever. Read the lever's "joins when" test and then its "not when" test, and judge by
+     meaning, not by shared words: a strategy that builds clinics is the lever that builds and
+     runs services, whatever words it uses; a "pilot programme" for digital skills is the
+     digital-skills lever, not the pilots-and-scaling lever. Where two levers of one family
+     both fit, take the one whose test names the strategy's main action most specifically.
    - The family (F-xx) only when the strategy is a summary line that names a purpose and no
      action ("promote education for all ages"), or an action that none of the family's levers
      describes. Do not force a lever that does not exist: say in `reason` what lever the
