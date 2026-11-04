@@ -35,13 +35,14 @@ data = {
                                    "family_ids", "sdg_targets", "risks")} for g in tree["groups"]],
     "families": [{k: f.get(k) for k in ("family_id", "family", "group_id", "subpillar_code", "definition",
                                          "examples", "lever_ids", "pathway_ids", "sdg_targets", "risks",
-                                         "conditional_risks", "assets")} for f in tree["families"]],
+                                         "conditional_risks", "assets", "theory_anchors")} for f in tree["families"]],
     "levers": [{k: lv.get(k) for k in ("lever_id", "lever", "lever_full", "family_id", "joins_when", "joins_not",
                                         "pathway_ids", "risks", "entry_points", "intervention_evidence",
                                         "evidence_finding", "evidence_strength", "evidence_design", "evidence_fit",
                                         "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
                                         "framework_source", "framework_where", "framework_says", "framework_refs",
-                                        "thesis_refs")}
+                                        "thesis_refs", "framework_status", "theory_anchor_ids", "theory_n",
+                                        "thai_strategies", "backing_score", "backing_grade")}
                for lv in tree["levers"]],
     "pathways": [{k: p.get(k, "") for k in ("pathway_id", "pathway", "family_id", "lever_id", "causal_input",
                                              "transmission", "outcome", "conditions", "distinction", "evidence",

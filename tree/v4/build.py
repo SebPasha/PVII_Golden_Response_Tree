@@ -29,6 +29,11 @@ import re
 HERE = os.path.dirname(os.path.abspath(__file__))
 V3 = os.path.join(os.path.dirname(HERE), "v3", "tree_v3.json")
 BUILT = "2026-11-03"
+# Framework anchors the readers flagged as weak on 3 November 2026 (discussed, but thinly).
+WEAK_ANCHORS = {"LV-005", "LV-007", "LV-013", "LV-017", "LV-019", "LV-022", "LV-026", "LV-040", "LV-049", "LV-050",
+                "LV-064", "LV-078", "LV-079", "LV-081", "LV-082", "LV-085", "LV-094", "LV-097", "LV-104", "LV-111",
+                "LV-123", "LV-127", "LV-131", "LV-132", "LV-133", "LV-141", "LV-162", "LV-164", "LV-216", "LV-220",
+                "LV-224", "LV-227", "LV-229"}
 
 # ---------------------------------------------------------------- the decisions
 # Pathways that are one action for a government, merged into one lever. Key: the pathway whose
@@ -126,6 +131,81 @@ EMPTY_EVIDENCE = {k: "" for k in EVIDENCE_KEYS}
 FRAMEWORK_FILE = os.path.join(HERE, "inputs", "framework_refs.json")
 FRAMEWORK_KEYS = ("framework_source", "framework_where", "framework_says", "framework_refs")
 
+# Theory anchors and backing grade (4 November 2026). An independent reviewer reviewed an older 18-lever
+# table and supplied 27 references and 72 reference-to-lever links; inputs/reviewer_crosswalk.json maps
+# their levers onto our families. Each family carries the references linked to it as theory anchors
+# (core, complementary, or secondary when the family is only a secondary match), and its levers inherit
+# them. Each lever then gets a backing grade from four sources: the framework document (framework_status),
+# the intervention evidence (strength, less a penalty for a partial or loose fit), the thesis literature,
+# and, for information only, the number of Thai strategies placed on it.
+CROSSWALK_FILE = os.path.join(HERE, "inputs", "reviewer_crosswalk.json")
+STRATEGIES_FILE = os.path.join(HERE, "thailand", "strategies.csv")
+NOT_DISCUSSED = re.compile(
+    r"not (discussed|covered|mentioned|addressed|treated|taken up|raised)|does not (discuss|cover|mention|address|treat"
+    r"|take up|deal|engage|consider|name|examine|touch)|do not (discuss|cover|mention|address)|no (discussion|mention"
+    r"|treatment|coverage) of|is silent|says nothing|nothing on|absent from|not in the (report|document|chapter)"
+    r"|not part of|outside the report", re.I)
+ROLE_RANK = {"core": 0, "complementary": 1, "secondary": 2}
+
+
+def short_cite(ref):
+    """'World Bank 2017', 'Rodrik 2010', 'Ansell and Gash 2008' from a reference's author and year."""
+    names = [a.replace("(eds.)", "").strip() for a in ref.get("author", "").split(";") if a.strip()]
+    names = [a.split(",")[0].strip() if "," in a else a for a in names]
+    who = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1] if names else ""
+    return ("%s %s" % (who, ref.get("year", ""))).strip()
+
+
+def load_theory_anchors():
+    """family_id -> list of anchors {ref_id, citation, title, role, via, url}, core first."""
+    if not os.path.exists(CROSSWALK_FILE):
+        return {}
+    cw = json.load(open(CROSSWALK_FILE, encoding="utf-8"))
+    refs = {r["ref_id"]: r for r in cw["references"]}
+    rlev = {r["code"]: r for r in cw["reviewer_levers"]}
+    out = {}
+    for ln in cw["links"]:
+        ref = refs[ln["ref_id"]]
+        via = "%s %s" % (ln["reviewer_lever"], rlev[ln["reviewer_lever"]]["name"])
+        for fids, role in ((ln.get("our_families") or [], ln["role"]), (ln.get("our_secondary_families") or [], "secondary")):
+            for fid in fids:
+                fam = out.setdefault(fid, {})
+                a = fam.get(ln["ref_id"])
+                if a is None:
+                    fam[ln["ref_id"]] = {"ref_id": ln["ref_id"], "citation": short_cite(ref), "title": ref.get("title", ""),
+                                         "role": role, "via": via, "url": ref.get("url", "")}
+                    continue
+                if ROLE_RANK[role] < ROLE_RANK[a["role"]]:
+                    a["role"] = role
+                if via not in a["via"].split("; "):
+                    a["via"] += "; " + via
+    return {fid: sorted(fam.values(), key=lambda a: (ROLE_RANK[a["role"]], a["ref_id"])) for fid, fam in out.items()}
+
+
+def load_thai_counts():
+    if not os.path.exists(STRATEGIES_FILE):
+        return {}
+    csv.field_size_limit(10 ** 9)
+    return collections.Counter((r.get("lever_id") or "").strip() for r in csv.DictReader(open(STRATEGIES_FILE, encoding="utf-8")))
+
+
+def framework_status(lv):
+    if not lv.get("framework_source"):
+        return "none"
+    if NOT_DISCUSSED.search(lv.get("framework_says") or ""):
+        return "not discussed"
+    return "weak" if lv["lever_id"] in WEAK_ANCHORS else "discussed"
+
+
+def backing(lv):
+    """(score, grade): framework 2/1/0, evidence strength 3/2/1/0, fit -0.5/-1, a thesis paper +1."""
+    score = {"discussed": 2, "weak": 1}.get(lv["framework_status"], 0)
+    score += {"strong": 3, "mixed": 2, "thin": 1}.get(lv.get("evidence_strength") or "", 0)
+    score += {"partial": -0.5, "loose": -1}.get(lv.get("evidence_fit") or "", 0)
+    score += 1 if (lv.get("thesis_n") or 0) >= 1 else 0
+    grade = "well backed" if score >= 4.5 else "backed" if score >= 3 else "thin" if score >= 1.5 else "unbacked"
+    return round(score, 1), grade
+
 
 def load_framework_refs():
     if not os.path.exists(FRAMEWORK_FILE):
@@ -147,7 +227,7 @@ EMPTY_THESIS = {"thesis_refs": [], "thesis_n": 0, "thesis_citations": ""}
 def _thesis_ref(r):
     if isinstance(r, str):
         return {"citation": r, "ident": "", "setting": "", "finding": "", "fit": "", "key": ""}
-    cit = r.get("citation") or r.get("ref") or ""
+    cit = r.get("citation") or r.get("cite") or r.get("ref") or ""
     if not cit:
         head = ", ".join(x for x in (r.get("authors") or r.get("author") or "", str(r.get("year") or "")) if x)
         cit = ". ".join(x for x in (head, r.get("title") or "", r.get("outlet") or r.get("journal") or "") if x)
@@ -193,6 +273,8 @@ def main():
     lever_evidence = load_lever_evidence()
     framework_refs = load_framework_refs()
     thesis_refs = load_thesis_refs()
+    anchors = load_theory_anchors()
+    thai = load_thai_counts()
     v3 = json.load(open(V3, encoding="utf-8"))
     groups = {g["group_id"]: dict(g) for g in v3["groups"]}
     families = {f["family_id"]: dict(f) for f in v3["families"]}
@@ -212,6 +294,9 @@ def main():
     n = 0
     for fid, fam in families.items():
         fam["lever_ids"] = []
+        fam["theory_anchors"] = anchors.get(fid, [])
+        fam["theory_anchor_ids"] = "; ".join("%s (%s)" % (a["ref_id"], a["role"]) for a in fam["theory_anchors"])
+        fam["theory_n"] = len(fam["theory_anchors"])
         for pid in fam["pathway_ids"]:
             if pid not in paths or pid in lead_of:
                 continue
@@ -246,6 +331,10 @@ def main():
             lever.update(lever_evidence.get(lid, EMPTY_EVIDENCE))
             lever.update(framework_refs.get(lid, {k: ([] if k == "framework_refs" else "") for k in FRAMEWORK_KEYS}))
             lever.update(thesis_refs.get(lid, dict(EMPTY_THESIS)))
+            lever["framework_status"] = framework_status(lever)
+            lever["theory_anchor_ids"], lever["theory_n"] = fam["theory_anchor_ids"], fam["theory_n"]
+            lever["thai_strategies"] = thai.get(lid, 0)
+            lever["backing_score"], lever["backing_grade"] = backing(lever)
             levers[lid] = lever
             fam["lever_ids"].append(lid)
             for m in members:
@@ -269,7 +358,7 @@ def main():
     write_csv(os.path.join(HERE, "families_v4.csv"), families.values(),
               ["family_id", "family", "level", "group_id", "group", "pillar", "subpillar", "subpillar_code",
                "definition", "examples", "plan_words", "n_levers", "lever_ids", "n_pathways", "pathway_ids",
-               "sdg_targets", "risks"])
+               "sdg_targets", "risks", "theory_anchors", "theory_anchor_ids", "theory_n"])
     write_csv(os.path.join(HERE, "levers_v4.csv"), levers.values(),
               ["lever_id", "lever", "level", "family_id", "family", "group_id", "group", "subpillar", "pillar",
                "lever_full", "joins_when", "joins_not", "n_pathways", "pathway_ids", "pathways", "evidence",
@@ -277,6 +366,7 @@ def main():
                "evidence_basis", "evidence_checked", "evidence_verified", "evidence_url",
                "framework_source", "framework_where", "framework_says", "framework_refs",
                "thesis_n", "thesis_citations", "thesis_refs",
+               "framework_status", "theory_anchor_ids", "theory_n", "thai_strategies", "backing_score", "backing_grade",
                "risks", "entry_points", "text_cues"])
     write_csv(os.path.join(HERE, "pathways_v4.csv"), paths.values(),
               ["pathway_id", "pathway", "lever_id", "lever", "family_id", "family", "group_id", "group",
@@ -305,6 +395,9 @@ def main():
     print("v4: %d groups, %d families, %d levers over %d pathways (%d levers carry more than one); levers per family %s" % (
         len(groups), len(families), len(levers), len(paths), sum(1 for l in levers.values() if l["n_pathways"] > 1),
         dict(sorted(per_fam.items()))))
+    print("backing: %s; families with no theory anchor: %d" % (
+        dict(collections.Counter(l["backing_grade"] for l in levers.values())),
+        sum(1 for f in families.values() if not f["theory_n"])))
 
 
 if __name__ == "__main__":

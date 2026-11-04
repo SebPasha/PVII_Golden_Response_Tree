@@ -1,5 +1,5 @@
 """Write the reviewers' workbook of tree v4: python3 tree_xlsx.py [out.xlsx]"""
-import json, os, sys, collections
+import json, os, re, sys, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -11,6 +11,10 @@ gby = {g['group_id']: g for g in G}
 fby = {f['family_id']: f for f in F}
 lby = {l['lever_id']: l for l in L}
 forder = {f['family_id']: i for i, f in enumerate(F)}
+pby = {p['pathway_id']: p for p in P}
+MERGED = d['meta'].get('merged_pathways', {})
+cw = json.load(open(os.path.join(HERE, 'inputs', 'reviewer_crosswalk.json'), encoding='utf-8'))
+GRADES = ['unbacked', 'thin', 'backed', 'well backed']
 
 def j(v):
     if v is None: return ''
@@ -72,6 +76,11 @@ lines = [
  ('Sheets', 'bold'),
  ('Tree: one row per pathway (263), grouped by group, family and lever; a grey line and shading mark each new lever block.', None),
  ('Levers: one row per lever (229), the placement level, with its tests, pathways, evidence, risks, text cues and Thai entry points.', None),
+ ('Codebook: one row per lever (229) in tree order, in the structure the independent reviewer used: definition, framework anchor, causal mechanism and scope conditions (from the pathways), include and exclude tests, competing levers, plan-language examples, intervention evidence, thesis papers, theory anchors, framework references, Thai strategies on the lever, threats to validity and backing grade. The observable indicators column is empty: reviewers write the indicators.', None),
+ ('Backing: one row per lever (229), the gaps first (unbacked, thin, backed, well backed), with the four sources behind the grade. Score: framework discussed 2, weak 1, not discussed or no document 0; evidence strong 3, mixed 2, thin 1, none found 0; fit partial -0.5, loose -1; at least one thesis paper +1. Grade: 4.5 or more well backed, 3 or more backed, 1.5 or more thin, below 1.5 unbacked. Thai strategies are shown for information and do not count.', None),
+ ('Backing summary: levers by backing grade, for each subpillar and in all.', None),
+ ('Theory anchors: the independent reviewer\'s 27 references (review of 4 November 2026), with the families that carry each one and the reviewer levers it was linked to. A family carries a reference as core or complementary when the reviewer linked it to a lever that maps onto the family, and as secondary when the family is only a secondary match; the family\'s levers inherit its anchors.', None),
+ ('Reviewer crosswalk: the independent reviewer\'s 18 levers mapped onto our subpillars, groups and families, with a note on where the cut differs.', None),
  ('Families: one row per family (60), with definition, examples, plan words and its lever ids.', None),
  ('Groups: one row per group (33), with the published framework it draws on (basis) and its definition.', None),
 ]
@@ -94,14 +103,96 @@ for p in Ps:
                   p['causal_input'], p['transmission'], p['outcome'], p['conditions'], p['distinction'], p['evidence'], p['evidence_status'], p['risks'], ''])
 sheet(wb, 'Tree', th, trows, tk, 'J2', band_key=8)
 
-lh = ['lever_id','pillar','subpillar','group_id','group','family_id','family','lever','lever full phrase','joins when','joins not','intervention evidence','evidence finding','evidence strength','design','fit to lever','basis','read','source verified','source url','framework source','framework where','framework says','framework references','thesis literature','thesis findings','n_pathways','pathways','mechanism evidence','risks','text_cues','entry_points','Reviewer comment']
-lk = ['id','name','name','id','name','id','name','name','long','long','long','long','long','name','name','name','long','name','name','long','name','name','long','long','long','long','num','long','long','name','long','long','long']
+lh = ['lever_id','pillar','subpillar','group_id','group','family_id','family','lever','lever full phrase','joins when','joins not','intervention evidence','evidence finding','evidence strength','design','fit to lever','basis','read','source verified','source url','framework source','framework where','framework says','framework references','thesis literature','thesis findings','backing grade','theory anchors','n_pathways','pathways','mechanism evidence','risks','text_cues','entry_points','Reviewer comment']
+lk = ['id','name','name','id','name','id','name','name','long','long','long','long','long','name','name','name','long','name','name','long','name','name','long','long','long','long','name','long','num','long','long','name','long','long','long']
 lrows = [[l['lever_id'], l['pillar'], l['subpillar'], l['group_id'], l['group'], l['family_id'], l['family'], l['lever'], l['lever_full'],
           l['joins_when'], l['joins_not'], l.get('intervention_evidence',''), l.get('evidence_finding',''), l.get('evidence_strength',''), l.get('evidence_design',''), l.get('evidence_fit',''), l.get('evidence_basis',''), l.get('evidence_checked',''), l.get('evidence_verified',''), l.get('evidence_url',''),
           l.get('framework_source',''), l.get('framework_where',''), l.get('framework_says',''), '; '.join(l.get('framework_refs') or []),
           l.get('thesis_citations',''), ' | '.join(r.get('finding','') for r in (l.get('thesis_refs') or []) if r.get('finding')),
-          l['n_pathways'], l['pathways'], l['evidence'], l['risks'], l['text_cues'], l['entry_points'], ''] for l in L]
+          l.get('backing_grade',''), l.get('theory_anchor_ids',''), l['n_pathways'], l['pathways'], l['evidence'], l['risks'], l['text_cues'], l['entry_points'], ''] for l in L]
 sheet(wb, 'Levers', lh, lrows, lk, 'B2')
+
+# Codebook: the independent reviewer's structure, filled from the tree
+def lever_of(pid):
+    pid = MERGED.get(pid, pid)
+    return pby[pid]['lever_id'] if pid in pby else None
+
+missing_ids = []
+def competing(l):
+    out = []
+    for pid in re.findall(r'L3-\d{3}', l['joins_not'] or ''):
+        lid = lever_of(pid)
+        if lid is None:
+            missing_ids.append((l['lever_id'], pid)); continue
+        if lid != l['lever_id'] and lid not in out: out.append(lid)
+    return '; '.join('%s %s' % (x, lby[x]['lever']) for x in out)
+
+def threats(l):
+    t = []
+    fs = l.get('framework_status', '')
+    if fs == 'weak': t.append('framework anchor weak')
+    if fs == 'not discussed': t.append('framework document does not discuss this lever')
+    if fs == 'none': t.append('no framework document yet')
+    if l.get('evidence_fit') in ('partial', 'loose'): t.append('evidence fit ' + l['evidence_fit'])
+    if l.get('evidence_strength') == 'thin': t.append('evidence thin')
+    if l.get('evidence_strength') in ('none found', ''): t.append('no intervention-level source found')
+    if l.get('evidence_checked') == 'abstract': t.append('source read in abstract only')
+    return '; '.join(t)
+
+CB_STATUS = 'draft codebook 4 November 2026: definitions, tests, mechanisms and literature filled from the tree; indicators to be written by reviewers'
+ch = ['lever_id','pillar','subpillar','group','family','lever','operational definition','framework anchor','what the framework says','causal mechanism','scope conditions','include when','exclude when','competing levers','plan-language examples','intervention evidence','evidence finding','thesis papers','theory anchors','framework references','Thai strategies on this lever','observable indicators','threats to validity','backing grade','status','Reviewer comment']
+ck = ['id','name','name','name','name','name','long','long','long','long','long','long','long','long','long','long','long','long','long','long','num','long','long','name','long','long']
+crows = []
+for l in L:
+    pws = [pby[x] for x in l['pathway_ids'] if x in pby]
+    anchor = ', '.join(x for x in (l.get('framework_source',''), l.get('framework_where','')) if x) or 'No framework document published yet'
+    ev = l.get('intervention_evidence','')
+    tags = ', '.join(x for x in (l.get('evidence_strength',''), l.get('evidence_design',''), 'fit ' + l['evidence_fit'] if l.get('evidence_fit') else '') if x)
+    crows.append([l['lever_id'], l['pillar'], l['subpillar'], l['group'], l['family'], l['lever'], l['lever_full'], anchor, l.get('framework_says',''),
+                  ' | '.join('%s: %s -> %s -> %s' % (p['pathway'], p['causal_input'], p['transmission'], p['outcome']) for p in pws),
+                  ' | '.join(p['conditions'] for p in pws if p['conditions']), l['joins_when'], l['joins_not'], competing(l),
+                  '; '.join(l.get('entry_points') or []), ev + (' [%s]' % tags if ev and tags else ''), l.get('evidence_finding',''),
+                  l.get('thesis_citations',''), l.get('theory_anchor_ids',''), '; '.join(l.get('framework_refs') or []), l.get('thai_strategies', 0),
+                  '', threats(l), l.get('backing_grade',''), CB_STATUS, ''])
+sheet(wb, 'Codebook', ch, crows, ck, 'G2')
+
+# Backing: the gaps first
+bh = ['lever_id','lever','family_id','family','subpillar','framework status','evidence strength','evidence fit','thesis papers (n)','theory anchors (n)','Thai strategies','backing score','backing grade','Reviewer comment']
+bk = ['id','name','id','name','name','name','name','name','num','num','num','num','name','long']
+bL = sorted(L, key=lambda l: (GRADES.index(l['backing_grade']), l['lever_id']))
+brows = [[l['lever_id'], l['lever'], l['family_id'], l['family'], l['subpillar_code'], l['framework_status'], l.get('evidence_strength',''), l.get('evidence_fit',''),
+          l.get('thesis_n', 0), l.get('theory_n', 0), l.get('thai_strategies', 0), l['backing_score'], l['backing_grade'], ''] for l in bL]
+sheet(wb, 'Backing', bh, brows, bk, 'C2', band_key=12)
+
+# Backing summary (a separate sheet: the sheet() helper writes its header on the first row)
+sh = ['subpillar','name','well backed','backed','thin','unbacked','levers']
+sk = ['id','name','num','num','num','num','num']
+srows = []
+for sp in d['subpillars']:
+    ls = [l for l in L if l['subpillar_code'] == sp['code']]
+    c = collections.Counter(l['backing_grade'] for l in ls)
+    srows.append([sp['code'], sp['name'], c['well backed'], c['backed'], c['thin'], c['unbacked'], len(ls)])
+c = collections.Counter(l['backing_grade'] for l in L)
+srows.append(['All', 'All levers', c['well backed'], c['backed'], c['thin'], c['unbacked'], len(L)])
+sheet(wb, 'Backing summary', sh, srows, sk, 'C2')
+
+# Theory anchors: the independent reviewer's references
+fam_of = collections.defaultdict(list)
+for f in F:
+    for a in f.get('theory_anchors') or []: fam_of[a['ref_id']].append(f['family_id'])
+lev_of = collections.defaultdict(list)
+for ln in cw['links']:
+    if ln['reviewer_lever'] not in lev_of[ln['ref_id']]: lev_of[ln['ref_id']].append(ln['reviewer_lever'])
+ah = ['ref_id','author','year','title','venue','strand','kind','contribution','in framework pass','our families','reviewer levers','url','Reviewer comment']
+ak = ['id','name','num','long','name','name','name','long','long','long','name','long','long']
+arows = [[r['ref_id'], r.get('author',''), r.get('year',''), r.get('title',''), r.get('venue',''), r.get('strand',''), r.get('kind',''), r.get('contribution',''),
+          r.get('in_framework_pass',''), fam_of[r['ref_id']], lev_of[r['ref_id']], r.get('url',''), ''] for r in cw['references']]
+sheet(wb, 'Theory anchors', ah, arows, ak, 'B2')
+
+xh = ['code','name','our subpillar','our groups','our families','secondary families','note','Reviewer comment']
+xk = ['id','name','id','long','long','long','long','long']
+xrows = [[r['code'], r['name'], r.get('our_subpillar',''), r.get('groups') or [], r.get('families') or [], r.get('secondary_families') or [], r.get('note',''), ''] for r in cw['reviewer_levers']]
+sheet(wb, 'Reviewer crosswalk', xh, xrows, xk, 'B2')
 
 fh = ['family_id','family','group_id','group','subpillar','pillar','definition','examples','plan_words','n_levers','lever_ids','n_pathways','pathway_ids','risks','Reviewer comment']
 fk = ['id','name','id','name','name','name','long','long','long','num','long','num','long','name','long']
@@ -115,6 +206,9 @@ grows = [[g['group_id'], g['group'], g['subpillar'], g['pillar'], g.get('basis',
 sheet(wb, 'Groups', gh, grows, gk, 'C2')
 
 # checks
+assert len(crows)==229 and len(brows)==229 and len(arows)==27 and len(xrows)==18
+assert len(ch)==len(ck) and len(bh)==len(bk) and len(ah)==len(ak) and len(xh)==len(xk) and len(sh)==len(sk) and len(lh)==len(lk)
+if missing_ids: print('joins_not names L3 ids that no longer exist:', missing_ids)
 assert len(trows)==263 and len(lrows)==229 and len(frows)==60 and len(grows)==33
 assert all(r[8] for r in trows)
 cnt = collections.Counter(r[8] for r in trows)
