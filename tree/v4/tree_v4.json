@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": "v4",
-  "built": "2026-11-03",
+  "built": "2026-11-10",
   "levels": [
    "pillar",
    "subpillar",
@@ -20,7 +20,415 @@
    "L3-031": "L3-034",
    "L3-139": "L3-135",
    "L3-187": "L3-183"
-  }
+  },
+  "dropped_levers": [
+   {
+    "lever_id": "LV-030",
+    "lever": "Food safety standards, inspection, certification and traceability",
+    "family_id": "F-07",
+    "family": "Food security",
+    "subpillar": "Enhancing Capabilities",
+    "pathway_ids": [
+     "L3-056"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-031",
+    "lever": "Storage, cold chains and post-harvest handling",
+    "family_id": "F-07",
+    "family": "Food security",
+    "subpillar": "Enhancing Capabilities",
+    "pathway_ids": [
+     "L3-057"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-035",
+    "lever": "Legal aid, alternative dispute resolution, access to justice",
+    "family_id": "F-08",
+    "family": "Personal security",
+    "subpillar": "Enhancing Capabilities",
+    "pathway_ids": [
+     "L3-065"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-062",
+    "lever": "Digital skills training for workers, students and firms",
+    "family_id": "F-12",
+    "family": "Skills for work",
+    "subpillar": "Enhancing Capabilities",
+    "pathway_ids": [
+     "L3-035"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 1,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-080",
+    "lever": "Biosecurity and invasive species control",
+    "family_id": "F-15",
+    "family": "Living natural capital",
+    "subpillar": "Future Generations",
+    "pathway_ids": [
+     "L3-079"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-095",
+    "lever": "Disclosure and management of guarantees, SOE and PPP liabilities",
+    "family_id": "F-18",
+    "family": "Public wealth: resource rents and the balance sheet",
+    "subpillar": "Future Generations",
+    "pathway_ids": [
+     "L3-098"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-096",
+    "lever": "Long-term fiscal planning for ageing and future generations",
+    "family_id": "F-18",
+    "family": "Public wealth: resource rents and the balance sheet",
+    "subpillar": "Future Generations",
+    "pathway_ids": [
+     "L3-099"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-099",
+    "lever": "Retirement age, incentives and support for older workers",
+    "family_id": "F-19",
+    "family": "Human and demographic capital",
+    "subpillar": "Future Generations",
+    "pathway_ids": [
+     "L3-103"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 1,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-100",
+    "lever": "Long-term care systems, financing and family caregiver support",
+    "family_id": "F-19",
+    "family": "Human and demographic capital",
+    "subpillar": "Future Generations",
+    "pathway_ids": [
+     "L3-104"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 3,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-104",
+    "lever": "Air routes and connectivity for business travel",
+    "family_id": "F-20",
+    "family": "Cost of reaching foreign markets",
+    "subpillar": "Export-led",
+    "pathway_ids": [
+     "L3-117"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked (unchanged)"
+   },
+   {
+    "lever_id": "LV-107",
+    "lever": "Destination development, secondary destinations",
+    "family_id": "F-21",
+    "family": "Tourism export destinations",
+    "subpillar": "Export-led",
+    "pathway_ids": [
+     "L3-125"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 12,
+    "backing_grade_review": "unbacked (0.5); unchanged with Brida 2016 and Lonn 2018, which are mechanism or case evidence"
+   },
+   {
+    "lever_id": "LV-108",
+    "lever": "Carrying-capacity rules, sustainable tourism management and site",
+    "family_id": "F-21",
+    "family": "Tourism export destinations",
+    "subpillar": "Export-led",
+    "pathway_ids": [
+     "L3-126"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 7,
+    "backing_grade_review": "unbacked (0.5); unchanged"
+   },
+   {
+    "lever_id": "LV-109",
+    "lever": "Diversification of source markets and tourism crisis measures",
+    "family_id": "F-21",
+    "family": "Tourism export destinations",
+    "subpillar": "Export-led",
+    "pathway_ids": [
+     "L3-127"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked (framework 0 + evidence thin 1 - 0.5 = 0.5); unchanged"
+   },
+   {
+    "lever_id": "LV-123",
+    "lever": "Diaspora engagement for trade, investment and knowledge",
+    "family_id": "F-24",
+    "family": "Foreign capital, knowledge and networks",
+    "subpillar": "Export-led",
+    "pathway_ids": [
+     "L3-193"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked (unchanged)"
+   },
+   {
+    "lever_id": "LV-160",
+    "lever": "Reskilling and support for workers displaced by automation",
+    "family_id": "F-35",
+    "family": "Displaced workers and local adjustment",
+    "subpillar": "Growth through Inclusion",
+    "pathway_ids": [
+     "L3-184"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-170",
+    "lever": "Forecasting, early-warning systems and hazard monitoring",
+    "family_id": "F-39",
+    "family": "Hazard and exposure sensing",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-206"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 3,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-171",
+    "lever": "Disease surveillance, laboratories and outbreak response",
+    "family_id": "F-39",
+    "family": "Hazard and exposure sensing",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-207"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 2,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-172",
+    "lever": "One Health programmes at the animal-human-environment interface",
+    "family_id": "F-39",
+    "family": "Hazard and exposure sensing",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-208"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-173",
+    "lever": "Reducing concentration and dependence in trade and supply",
+    "family_id": "F-39",
+    "family": "Hazard and exposure sensing",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-202",
+     "L3-199",
+     "L3-203"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-177",
+    "lever": "Foresight, scenarios and long-term strategy units",
+    "family_id": "F-41",
+    "family": "Scenario and futures work",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-211"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 1,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-178",
+    "lever": "National, sector and investment plans that coordinate investment",
+    "family_id": "F-42",
+    "family": "Development planning",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-212"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 4,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-179",
+    "lever": "Statistical systems, surveys, censuses and analysis for decisions",
+    "family_id": "F-43",
+    "family": "Statistics and data sharing",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-210"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 3,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-180",
+    "lever": "Shared registries, data standards",
+    "family_id": "F-43",
+    "family": "Statistics and data sharing",
+    "subpillar": "Anticipation and Strategic Foresight",
+    "pathway_ids": [
+     "L3-263"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 7,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-183",
+    "lever": "Iterative, problem-driven reform methods",
+    "family_id": "F-44",
+    "family": "Monitoring and corrective feedback",
+    "subpillar": "Adaptability and Course Correction",
+    "pathway_ids": [
+     "L3-218",
+     "L3-228"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 2,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-186",
+    "lever": "Cybersecurity standards, agencies and incident response",
+    "family_id": "F-46",
+    "family": "Regulatory adaptation to technology",
+    "subpillar": "Adaptability and Course Correction",
+    "pathway_ids": [
+     "L3-222"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 1,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-187",
+    "lever": "Platform competition and digital market rules",
+    "family_id": "F-46",
+    "family": "Regulatory adaptation to technology",
+    "subpillar": "Adaptability and Course Correction",
+    "pathway_ids": [
+     "L3-223"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-188",
+    "lever": "Rules and incentives steering AI and automation",
+    "family_id": "F-46",
+    "family": "Regulatory adaptation to technology",
+    "subpillar": "Adaptability and Course Correction",
+    "pathway_ids": [
+     "L3-224"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 1,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-190",
+    "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+    "family_id": "F-48",
+    "family": "Coordination across agencies and levels",
+    "subpillar": "Adaptability and Course Correction",
+    "pathway_ids": [
+     "L3-220"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 17,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-197",
+    "lever": "Emergency operations centres, surge staff, beds and stockpiles",
+    "family_id": "F-51",
+    "family": "Surge, continuity and relief",
+    "subpillar": "Agility and Delivery Capability",
+    "pathway_ids": [
+     "L3-242"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 3,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-200",
+    "lever": "Build-back-better reconstruction",
+    "family_id": "F-51",
+    "family": "Surge, continuity and relief",
+    "subpillar": "Agility and Delivery Capability",
+    "pathway_ids": [
+     "L3-245"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 0,
+    "backing_grade_review": "unbacked"
+   },
+   {
+    "lever_id": "LV-205",
+    "lever": "Budget preparation, execution and results-based budgeting",
+    "family_id": "F-52",
+    "family": "Revenue and spending systems",
+    "subpillar": "Agility and Delivery Capability",
+    "pathway_ids": [
+     "L3-237"
+    ],
+    "backing_grade": "unbacked",
+    "thai_strategies": 5,
+    "backing_grade_review": "unbacked"
+   }
+  ]
  },
  "pillars": [
   {
@@ -292,7 +700,7 @@
    ],
    "n_families": 4,
    "n_pathways": 25,
-   "n_levers": 22
+   "n_levers": 19
   },
   {
    "group_id": "G-05",
@@ -372,7 +780,7 @@
    ],
    "n_families": 2,
    "n_pathways": 12,
-   "n_levers": 12
+   "n_levers": 11
   },
   {
    "group_id": "G-07",
@@ -476,7 +884,7 @@
    ],
    "n_families": 3,
    "n_pathways": 17,
-   "n_levers": 16
+   "n_levers": 15
   },
   {
    "group_id": "G-09",
@@ -516,7 +924,7 @@
    ],
    "n_families": 2,
    "n_pathways": 14,
-   "n_levers": 11
+   "n_levers": 7
   },
   {
    "group_id": "G-10",
@@ -557,7 +965,7 @@
    ],
    "n_families": 2,
    "n_pathways": 10,
-   "n_levers": 9
+   "n_levers": 5
   },
   {
    "group_id": "G-11",
@@ -629,7 +1037,7 @@
    ],
    "n_families": 1,
    "n_pathways": 5,
-   "n_levers": 4
+   "n_levers": 3
   },
   {
    "group_id": "G-13",
@@ -834,7 +1242,7 @@
    ],
    "n_families": 3,
    "n_pathways": 9,
-   "n_levers": 7
+   "n_levers": 6
   },
   {
    "group_id": "G-18",
@@ -921,7 +1329,7 @@
    ],
    "n_families": 2,
    "n_pathways": 12,
-   "n_levers": 7
+   "n_levers": 3
   },
   {
    "group_id": "G-20",
@@ -946,7 +1354,7 @@
    "assets": [],
    "n_families": 1,
    "n_pathways": 1,
-   "n_levers": 1
+   "n_levers": 0
   },
   {
    "group_id": "G-21",
@@ -969,7 +1377,7 @@
    "assets": [],
    "n_families": 1,
    "n_pathways": 1,
-   "n_levers": 1
+   "n_levers": 0
   },
   {
    "group_id": "G-22",
@@ -997,7 +1405,7 @@
    "assets": [],
    "n_families": 1,
    "n_pathways": 3,
-   "n_levers": 3
+   "n_levers": 1
   },
   {
    "group_id": "G-23",
@@ -1025,7 +1433,7 @@
    ],
    "n_families": 1,
    "n_pathways": 3,
-   "n_levers": 2
+   "n_levers": 1
   },
   {
    "group_id": "G-24",
@@ -1056,7 +1464,7 @@
    ],
    "n_families": 2,
    "n_pathways": 5,
-   "n_levers": 5
+   "n_levers": 2
   },
   {
    "group_id": "G-25",
@@ -1107,7 +1515,7 @@
    ],
    "n_families": 1,
    "n_pathways": 1,
-   "n_levers": 1
+   "n_levers": 0
   },
   {
    "group_id": "G-27",
@@ -1190,7 +1598,7 @@
    ],
    "n_families": 2,
    "n_pathways": 12,
-   "n_levers": 11
+   "n_levers": 8
   },
   {
    "group_id": "G-29",
@@ -2079,8 +2487,6 @@
    "lever_ids": [
     "LV-028",
     "LV-029",
-    "LV-030",
-    "LV-031",
     "LV-032"
    ],
    "theory_anchors": [
@@ -2151,7 +2557,7 @@
    ],
    "theory_anchor_ids": "ILO2024 (core); UNDP1994 (core); UNEP2024 (core); WCED1987 (core); ANDREWS2017 (complementary); UNCTAD2026 (complementary); UNDP1990 (complementary); WDR2024 (complementary)",
    "theory_n": 8,
-   "n_levers": 5
+   "n_levers": 3
   },
   {
    "family_id": "F-08",
@@ -2208,7 +2614,6 @@
    "lever_ids": [
     "LV-033",
     "LV-034",
-    "LV-035",
     "LV-036",
     "LV-037"
    ],
@@ -2248,7 +2653,7 @@
    ],
    "theory_anchor_ids": "ILO2024 (core); UNDP1994 (core); ANDREWS2017 (complementary); UNDP1990 (complementary)",
    "theory_n": 4,
-   "n_levers": 5
+   "n_levers": 4
   },
   {
    "family_id": "F-09",
@@ -2654,7 +3059,6 @@
     "LV-059",
     "LV-060",
     "LV-061",
-    "LV-062",
     "LV-063"
    ],
    "theory_anchors": [
@@ -2693,7 +3097,7 @@
    ],
    "theory_anchor_ids": "UNDP1990 (core); WDR2024 (core); UNCTAD2026 (complementary); UNICEF2017 (complementary)",
    "theory_n": 4,
-   "n_levers": 5
+   "n_levers": 4
   },
   {
    "family_id": "F-13",
@@ -3060,8 +3464,7 @@
     "LV-076",
     "LV-077",
     "LV-078",
-    "LV-079",
-    "LV-080"
+    "LV-079"
    ],
    "theory_anchors": [
     {
@@ -3123,7 +3526,7 @@
    ],
    "theory_anchor_ids": "UNEP2024 (core); WCED1987 (core); OECD2024 (complementary); ROGGE2016 (complementary); UNDP1990 (secondary); UNICEF2017 (secondary); WDR2006 (secondary)",
    "theory_n": 7,
-   "n_levers": 7
+   "n_levers": 6
   },
   {
    "family_id": "F-16",
@@ -3428,9 +3831,7 @@
     "LV-091",
     "LV-092",
     "LV-093",
-    "LV-094",
-    "LV-095",
-    "LV-096"
+    "LV-094"
    ],
    "theory_anchors": [
     {
@@ -3516,7 +3917,7 @@
    ],
    "theory_anchor_ids": "IMF2018 (core); UNEP2024 (core); UNICEF2017 (core); WCED1987 (core); WDR2017 (core); HOOD1983 (complementary); UNCTAD2026 (complementary); UNDP1990 (complementary); WDR2006 (complementary); WDR2024 (complementary)",
    "theory_n": 10,
-   "n_levers": 7
+   "n_levers": 5
   },
   {
    "family_id": "F-19",
@@ -3565,9 +3966,7 @@
    },
    "lever_ids": [
     "LV-097",
-    "LV-098",
-    "LV-099",
-    "LV-100"
+    "LV-098"
    ],
    "theory_anchors": [
     {
@@ -3605,7 +4004,7 @@
    ],
    "theory_anchor_ids": "UNICEF2017 (core); WCED1987 (core); UNDP1990 (complementary); WDR2006 (complementary)",
    "theory_n": 4,
-   "n_levers": 4
+   "n_levers": 2
   },
   {
    "family_id": "F-20",
@@ -3668,7 +4067,6 @@
     "LV-101",
     "LV-102",
     "LV-103",
-    "LV-104",
     "LV-105",
     "LV-106"
    ],
@@ -3732,7 +4130,7 @@
    ],
    "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary); OECD2024 (secondary); WDR2009 (secondary); WDR2017 (secondary)",
    "theory_n": 7,
-   "n_levers": 6
+   "n_levers": 5
   },
   {
    "family_id": "F-21",
@@ -3790,11 +4188,7 @@
      "L3-127"
     ]
    },
-   "lever_ids": [
-    "LV-107",
-    "LV-108",
-    "LV-109"
-   ],
+   "lever_ids": [],
    "theory_anchors": [
     {
      "ref_id": "WDR2020",
@@ -3831,7 +4225,7 @@
    ],
    "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary)",
    "theory_n": 4,
-   "n_levers": 3
+   "n_levers": 0
   },
   {
    "family_id": "F-22",
@@ -4121,8 +4515,7 @@
    "lever_ids": [
     "LV-120",
     "LV-121",
-    "LV-122",
-    "LV-123"
+    "LV-122"
    ],
    "theory_anchors": [
     {
@@ -4184,7 +4577,7 @@
    ],
    "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary); OECD2024 (secondary); WDR2009 (secondary); WDR2017 (secondary)",
    "theory_n": 7,
-   "n_levers": 4
+   "n_levers": 3
   },
   {
    "family_id": "F-25",
@@ -5261,8 +5654,7 @@
     ]
    },
    "lever_ids": [
-    "LV-159",
-    "LV-160"
+    "LV-159"
    ],
    "theory_anchors": [
     {
@@ -5300,7 +5692,7 @@
    ],
    "theory_anchor_ids": "WDR2006 (core); WDR2024 (core); RODRIK2004 (complementary); UNCTAD2026 (complementary)",
    "theory_n": 4,
-   "n_levers": 2
+   "n_levers": 1
   },
   {
    "family_id": "F-36",
@@ -5676,12 +6068,7 @@
      "L3-202"
     ]
    },
-   "lever_ids": [
-    "LV-170",
-    "LV-171",
-    "LV-172",
-    "LV-173"
-   ],
+   "lever_ids": [],
    "theory_anchors": [
     {
      "ref_id": "ANDREWS2017",
@@ -5742,7 +6129,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary); WDR2009 (secondary); WDR2017 (secondary); WDR2020 (secondary)",
    "theory_n": 7,
-   "n_levers": 4
+   "n_levers": 0
   },
   {
    "family_id": "F-40",
@@ -5971,9 +6358,7 @@
      "L3-211"
     ]
    },
-   "lever_ids": [
-    "LV-177"
-   ],
+   "lever_ids": [],
    "theory_anchors": [
     {
      "ref_id": "ANDREWS2017",
@@ -6010,7 +6395,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
    "theory_n": 4,
-   "n_levers": 1
+   "n_levers": 0
   },
   {
    "family_id": "F-42",
@@ -6044,9 +6429,7 @@
    ],
    "n_pathways": 1,
    "risk_sources": {},
-   "lever_ids": [
-    "LV-178"
-   ],
+   "lever_ids": [],
    "theory_anchors": [
     {
      "ref_id": "ANDREWS2017",
@@ -6083,7 +6466,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
    "theory_n": 4,
-   "n_levers": 1
+   "n_levers": 0
   },
   {
    "family_id": "F-43",
@@ -6129,8 +6512,6 @@
     ]
    },
    "lever_ids": [
-    "LV-179",
-    "LV-180",
     "LV-181"
    ],
    "theory_anchors": [
@@ -6169,7 +6550,7 @@
    ],
    "theory_anchor_ids": "OECD2019 (core); OECD2024 (core); ANDREWS2017 (complementary); IMF2018 (complementary)",
    "theory_n": 4,
-   "n_levers": 3
+   "n_levers": 1
   },
   {
    "family_id": "F-44",
@@ -6217,8 +6598,7 @@
     ]
    },
    "lever_ids": [
-    "LV-182",
-    "LV-183"
+    "LV-182"
    ],
    "theory_anchors": [
     {
@@ -6272,7 +6652,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (core); OECD2019 (core); OECD2024 (core); ROGGE2016 (core); IMF2018 (complementary); RODRIK2010 (complementary)",
    "theory_n": 6,
-   "n_levers": 2
+   "n_levers": 1
   },
   {
    "family_id": "F-45",
@@ -6391,10 +6771,7 @@
     ]
    },
    "lever_ids": [
-    "LV-185",
-    "LV-186",
-    "LV-187",
-    "LV-188"
+    "LV-185"
    ],
    "theory_anchors": [
     {
@@ -6432,7 +6809,7 @@
    ],
    "theory_anchor_ids": "FLANAGAN2011 (secondary); OSLO2018 (secondary); UNCTAD2026 (secondary); WDR2024 (secondary)",
    "theory_n": 4,
-   "n_levers": 4
+   "n_levers": 1
   },
   {
    "family_id": "F-47",
@@ -6554,13 +6931,11 @@
    ],
    "n_pathways": 1,
    "risk_sources": {},
-   "lever_ids": [
-    "LV-190"
-   ],
+   "lever_ids": [],
    "theory_anchors": [],
    "theory_anchor_ids": "",
    "theory_n": 0,
-   "n_levers": 1
+   "n_levers": 0
   },
   {
    "family_id": "F-49",
@@ -6826,10 +7201,8 @@
     ]
    },
    "lever_ids": [
-    "LV-197",
     "LV-198",
-    "LV-199",
-    "LV-200"
+    "LV-199"
    ],
    "theory_anchors": [
     {
@@ -6867,7 +7240,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (secondary); ILO2024 (secondary); UNDP1990 (secondary); UNDP1994 (secondary)",
    "theory_n": 4,
-   "n_levers": 4
+   "n_levers": 2
   },
   {
    "family_id": "F-52",
@@ -6946,7 +7319,6 @@
     "LV-202",
     "LV-203",
     "LV-204",
-    "LV-205",
     "LV-206",
     "LV-207"
    ],
@@ -7034,7 +7406,7 @@
    ],
    "theory_anchor_ids": "IMF2018 (core); WDR2017 (core); HOOD1983 (complementary); WDR2024 (complementary); ANDREWS2017 (secondary); ILO2024 (secondary); LASCOUMES2007 (secondary); NORTH1990 (secondary); UNDP1990 (secondary); WDR2006 (secondary)",
    "theory_n": 10,
-   "n_levers": 7
+   "n_levers": 6
   },
   {
    "family_id": "F-53",
@@ -9579,127 +9951,6 @@
    "check_note": ""
   },
   {
-   "lever_id": "LV-030",
-   "level": "L3",
-   "lever": "Food safety standards, inspection, certification and traceability",
-   "lever_full": "Food safety standards, inspection, certification and traceability",
-   "family_id": "F-07",
-   "family": "Food security",
-   "group_id": "G-04",
-   "group": "Decent standard of living",
-   "subpillar": "Enhancing Capabilities",
-   "subpillar_code": "CAP",
-   "pillar": "People-first Approach",
-   "joins_when": "it controls the safety or standards of food along the chain",
-   "joins_not": "it is product quality for export in general (L3-114) or animal disease (L3-163)",
-   "pathway_ids": [
-    "L3-056"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-056 Foodborne disease and food safety",
-   "text_cues": "food safety|traceab|hygien|contaminat|halal|food (quality|standard|control|inspection)",
-   "risks": [
-    "Environmental Degradation and Pollution",
-    "Shifts in Globalisation"
-   ],
-   "entry_points": [
-    "Food Production Quality and Safety Certification Support",
-    "Food Standards Control System Strengthening",
-    "Safe Farming and Organic Certification Programme",
-    "Food Chain Safety Monitoring and Control",
-    "National emergency alert and food safety traceability systems"
-   ],
-   "evidence": "Foodborne disease and food safety: Havelaar et al. 2015; Jaffee et al. 2019",
-   "intervention_evidence": "Hoffmann, Moser and Saak 2019, Food safety in low and middle-income countries: The evidence through an economic lens, World Development",
-   "evidence_finding": "A review of evidence from low- and middle-income countries traces unsafe food to limited consumer awareness and ability to pay, weak incentives for firms and farmers, and weak public enforcement; co-regulation with mid-size and large firms and rewards for safety investment look promising.",
-   "evidence_strength": "thin",
-   "evidence_design": "meta-analysis or systematic review",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstract (narrative review): three contributors to food safety problems; co-regulation and rewarding safety investment named as promising; no impact estimates.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:eee:wdevel:v:123:y:2019:i:c:7",
-   "framework_source": "Human Development Report 1994 (UNDP)",
-   "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Food security, p. 27",
-   "framework_says": "Not discussed in Human Development Report 1990 or 1994",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "ILO2024 (core); UNDP1994 (core); UNEP2024 (core); WCED1987 (core); ANDREWS2017 (complementary); UNCTAD2026 (complementary); UNDP1990 (complementary); WDR2024 (complementary)",
-   "theory_n": 8,
-   "thai_strategies": 0,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Food safety standards, inspection, certification and traceability",
-   "joins_when_draft": "it controls the safety or standards of food along the chain",
-   "joins_not_draft": "it is product quality for export in general (L3-114) or animal disease (L3-163)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence Hoffmann, Moser and Saak 2019 on food safety",
-   "check_note": ""
-  },
-  {
-   "lever_id": "LV-031",
-   "level": "L3",
-   "lever": "Storage, cold chains and post-harvest handling",
-   "lever_full": "Storage, cold chains and post-harvest handling",
-   "family_id": "F-07",
-   "family": "Food security",
-   "group_id": "G-04",
-   "group": "Decent standard of living",
-   "subpillar": "Enhancing Capabilities",
-   "subpillar_code": "CAP",
-   "pillar": "People-first Approach",
-   "joins_when": "it cuts losses between harvest and market: storage, handling, cold chain",
-   "joins_not": "it is transport to market (L3-155) or processing industry (L3-151)",
-   "pathway_ids": [
-    "L3-057"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-057 Food loss along supply chains",
-   "text_cues": "post-?harvest|(grain|food|crop|produce|cold) storage|storage (facilit|capacity|loss)|warehouse|cold chain|silo|food loss|food waste",
-   "risks": [
-    "Resource and Energy Pressures"
-   ],
-   "entry_points": [],
-   "evidence": "Food loss along supply chains: Affognon et al. 2015",
-   "intervention_evidence": "Omotilewa, Ricker-Gilbert, Ainembabazi and Shively 2018, Does improved storage technology promote modern input use and food security? Evidence from a randomized trial in Uganda, Journal of Development Economics | Burke, Bergquist and Miguel 2019, Sell Low and Buy High: Arbitrage and Local Price Effects in Kenyan Markets, Quarterly Journal of Economics",
-   "evidence_finding": "In a Ugandan trial, improved storage technology sharply cut storage losses, lengthened storage and raised hybrid maize planting; in Kenya, timely harvest loans let farmers store and sell later at high returns, with local price effects depending on loan density.",
-   "evidence_strength": "thin",
-   "evidence_design": "RCT",
-   "evidence_fit": "partial",
-   "evidence_basis": "Omotilewa abstract: RCT of 1,200 farmers, lower losses, longer storage, 10 points more hybrid planting; Burke abstract: loans gave 29% return, general-equilibrium price effects.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:eee:deveco:v:135:y:2018:i:c:p:176-198 | https://econpapers.repec.org/RePEc:oup:qjecon:v:134:y:2019:i:2:p:785-842.",
-   "framework_source": "Human Development Report 1994 (UNDP)",
-   "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Food security and box 2.2 the Bengal famine of 1943, p. 27",
-   "framework_says": "Not discussed in Human Development Report 1990 or 1994",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "ILO2024 (core); UNDP1994 (core); UNEP2024 (core); WCED1987 (core); ANDREWS2017 (complementary); UNCTAD2026 (complementary); UNDP1990 (complementary); WDR2024 (complementary)",
-   "theory_n": 8,
-   "thai_strategies": 0,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Storage, cold chains and post-harvest handling",
-   "joins_when_draft": "it cuts losses between harvest and market: storage, handling, cold chain",
-   "joins_not_draft": "it is transport to market (L3-155) or processing industry (L3-151)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence Omotilewa et al. 2018 on improved storage",
-   "check_note": ""
-  },
-  {
    "lever_id": "LV-032",
    "level": "L3",
    "lever": "School meals",
@@ -9876,69 +10127,6 @@
    "check_literature_ok": true,
    "check_source": "intervention_evidence Blattman et al. 2023 on CBT for high-risk men",
    "check_note": ""
-  },
-  {
-   "lever_id": "LV-035",
-   "level": "L3",
-   "lever": "Legal aid, alternative dispute resolution, access to justice",
-   "lever_full": "Legal aid, alternative dispute resolution, access to justice",
-   "family_id": "F-08",
-   "family": "Personal security",
-   "group_id": "G-04",
-   "group": "Decent standard of living",
-   "subpillar": "Enhancing Capabilities",
-   "subpillar_code": "CAP",
-   "pillar": "People-first Approach",
-   "joins_when": "it helps people resolve disputes or get legal help",
-   "joins_not": "it is commercial contract enforcement (L3-171) or court independence (L3-213)",
-   "pathway_ids": [
-    "L3-065"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-065 Legal empowerment and dispute resolution",
-   "text_cues": "legal aid|paralegal|access to justice|mediat|alternative dispute|customary justice|legal awareness|legal (assistance|empower)",
-   "risks": [
-    "Democratic Backsliding"
-   ],
-   "entry_points": [
-    "Alternative Judicial Proceedings and Judicial Assistance Promotion",
-    "Inclusive Legal Assistance for Judicial Process Participants",
-    "Legal Assistance and Access to Justice Expansion",
-    "Judicial complaint and remedy access improvement",
-    "Alternative and Community Justice Systems Promotion"
-   ],
-   "evidence": "Legal empowerment and dispute resolution: Blattman, Hartman and Blair 2014; Sandefur and Siddiqi 2013",
-   "intervention_evidence": "Anda, Hammaker, Khan, Sonnenfeld and Glandon 2022, Evidence Gap Map Practitioner Brief: Service-Level Rule of Law Interventions, 3ie | Chemin 2009, The impact of the judiciary on entrepreneurship: Evaluation of Pakistan's Access to Justice Programme, Journal of Public Economics",
-   "evidence_finding": "Few evaluations exist: in Liberia and Haiti free legal aid improved perceived outcomes and cut illegal pretrial detention, while paralegal programmes changed knowledge more than behaviour; a Pakistani judicial reform raised case disposal and new firm entry.",
-   "evidence_strength": "thin",
-   "evidence_design": "mixed",
-   "evidence_fit": "direct",
-   "evidence_basis": "3ie brief: about eight evaluations, legal aid effects in Kenya, Liberia, Haiti, paralegals mixed in Liberia and Tanzania; Chemin abstract: quarter more cases disposed, firm entry up.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://3ieimpact.org/sites/default/files/2022-12/ROL-service-level-EGM-PB.pdf_.pdf | https://econpapers.repec.org/RePEc:eee:pubeco:v:93:y:2009:i:1-2:p:114-125",
-   "framework_source": "Human Development Report 1994 (UNDP)",
-   "framework_where": "Nearest: Human Development Report 1994, chapter 2, Components of human security, Personal security, p. 30",
-   "framework_says": "Not discussed in Human Development Report 1990 or 1994",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "ILO2024 (core); UNDP1994 (core); ANDREWS2017 (complementary); UNDP1990 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 0,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Legal aid, alternative dispute resolution, access to justice",
-   "joins_when_draft": "it helps people resolve disputes or get legal help",
-   "joins_not_draft": "it is commercial contract enforcement (L3-171) or court independence (L3-213)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence Anda et al. 2022 on legal aid",
-   "check_note": "Chemin 2009 concerns judicial efficiency and firm entry, closer to commercial enforcement (L3-171) than to legal aid."
   },
   {
    "lever_id": "LV-036",
@@ -11628,68 +11816,6 @@
    "check_note": ""
   },
   {
-   "lever_id": "LV-062",
-   "level": "L3",
-   "lever": "Digital skills training for workers, students and firms",
-   "lever_full": "Digital skills training for workers, students and firms",
-   "family_id": "F-12",
-   "family": "Skills for work",
-   "group_id": "G-06",
-   "group": "Knowledge",
-   "subpillar": "Enhancing Capabilities",
-   "subpillar_code": "CAP",
-   "pillar": "People-first Approach",
-   "joins_when": "it teaches digital skills",
-   "joins_not": "it provides connectivity or devices (L3-261)",
-   "pathway_ids": [
-    "L3-035"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-035 Digital skill complementarity",
-   "text_cues": "digital (skill|literac)|ict skill|coding|computer literac|media literac",
-   "risks": [
-    "Technological Change"
-   ],
-   "entry_points": [
-    "Digital Infrastructure and Standard Systems Support for SMEs",
-    "Innovation and Digital Economy Knowledge Enhancement Project for New Graduates",
-    "English and Digital Skills Development",
-    "Learner English and digital skills development"
-   ],
-   "evidence": "Digital skill complementarity: Akerman, Gaarder and Mogstad 2015",
-   "intervention_evidence": "Novella, Freund and Rosas-Shady 2026, Digital skills for better jobs: Experimental evidence from a bootcamp training program in Peru, Journal of Development Economics",
-   "evidence_finding": "An online digital skills bootcamp for Peruvian youth raised entry into entry-level technology jobs two years on, but average effects on formal employment and income were null because only some course tracks paid off, possibly reflecting limited local demand.",
-   "evidence_strength": "thin",
-   "evidence_design": "RCT",
-   "evidence_fit": "direct",
-   "evidence_basis": "Abstract: randomized evaluation with administrative data; tech-job entry rises; some tracks positive, others null; selection and limited local demand suggested as reasons.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/a/eee/deveco/v182y2026ics0304387826001215.html",
-   "framework_source": "Human Development Report 1990 (UNDP)",
-   "framework_where": "Nearest: Human Development Report 1990, chapter 4, box 4.11 The new global services economy, p. 81",
-   "framework_says": "Not discussed in Human Development Report 1990 or 1994",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "UNDP1990 (core); WDR2024 (core); UNCTAD2026 (complementary); UNICEF2017 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 1,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Digital skills training for workers, students and firms",
-   "joins_when_draft": "it teaches digital skills",
-   "joins_not_draft": "it provides connectivity or devices (L3-261)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence Novella, Freund and Rosas-Shady 2026 on a digital skills bootcamp",
-   "check_note": ""
-  },
-  {
    "lever_id": "LV-063",
    "level": "L3",
    "lever": "Affordable connectivity, devices and public access points for households",
@@ -12755,63 +12881,6 @@
    "check_note": ""
   },
   {
-   "lever_id": "LV-080",
-   "level": "L3",
-   "lever": "Biosecurity and invasive species control",
-   "lever_full": "Biosecurity and invasive species control",
-   "family_id": "F-15",
-   "family": "Living natural capital",
-   "group_id": "G-08",
-   "group": "Natural capital",
-   "subpillar": "Future Generations",
-   "subpillar_code": "FUT",
-   "pillar": "People-first Approach",
-   "joins_when": "it controls invasive species or plant and animal biosecurity at borders",
-   "joins_not": "it is animal disease in farming (L3-163)",
-   "pathway_ids": [
-    "L3-079"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-079 Invasive species and biosecurity",
-   "text_cues": "invasive|alien species",
-   "risks": [
-    "Biodiversity Loss"
-   ],
-   "entry_points": [],
-   "evidence": "Invasive species and biosecurity: Pimentel, Zuniga and Morrison 2005",
-   "intervention_evidence": "Jones et al. 2016, Invasive mammal eradication on islands results in substantial conservation gains, PNAS",
-   "evidence_finding": "Across 251 invasive mammal eradications on 181 islands, 236 native species benefited and few were harmed, and several threatened species moved to lower extinction-risk categories; the evidence concerns island eradication, not border biosecurity.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "partial",
-   "evidence_basis": "Abstract: literature, database review and expert interviews; 236 species benefited, 7 harmed; four threatened species downlisted; no counterfactual design.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://escholarship.org/uc/item/4ng1h0d6",
-   "framework_source": "IPCC AR6 WGII Technical Summary (2022)",
-   "framework_where": "IPCC AR6 WGII TS, Section TS.D.4.2 (reducing additional stresses on ecosystems), p. 87",
-   "framework_says": "Not discussed in IPCC AR6 WGII Technical Summary",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "UNEP2024 (core); WCED1987 (core); OECD2024 (complementary); ROGGE2016 (complementary); UNDP1990 (secondary); UNICEF2017 (secondary); WDR2006 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 0,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Biosecurity and invasive species control",
-   "joins_when_draft": "it controls invasive species or plant and animal biosecurity at borders",
-   "joins_not_draft": "it is animal disease in farming (L3-163)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "Jones et al. 2016 covers the 'controls invasive species' half of the test",
-   "check_note": "Evidence is island eradication, not border biosecurity; framework silent."
-  },
-  {
    "lever_id": "LV-081",
    "level": "L3",
    "lever": "Water pricing, allocation rules, conservation and efficiency measures",
@@ -13670,122 +13739,6 @@
    "check_note": "Effects fall below significance after correcting for endogeneity, so backing is weak; fiscal councils are not covered."
   },
   {
-   "lever_id": "LV-095",
-   "level": "L3",
-   "lever": "Disclosure and management of guarantees, SOE and PPP liabilities",
-   "lever_full": "Disclosure and management of guarantees, SOE and PPP liabilities",
-   "family_id": "F-18",
-   "family": "Public wealth: resource rents and the balance sheet",
-   "group_id": "G-09",
-   "group": "Economic and human wealth",
-   "subpillar": "Future Generations",
-   "subpillar_code": "FUT",
-   "pillar": "People-first Approach",
-   "joins_when": "it assesses or controls fiscal risks and contingent liabilities",
-   "joins_not": "it is the PPP contract itself (L3-238)",
-   "pathway_ids": [
-    "L3-098"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-098 Contingent liabilities and hidden debt",
-   "text_cues": "contingent liabilit|(government|sovereign|state|loan|credit) guarantee|fiscal risk|hidden debt|\\bsoe (debt|liabilit)",
-   "risks": [
-    "Shifts in Globalisation"
-   ],
-   "entry_points": [
-    "Fiscal Risk Prevention and Comprehensive Fiscal Position Assessment"
-   ],
-   "evidence": "Contingent liabilities and hidden debt: Bova et al. 2016",
-   "intervention_evidence": "Bova, Ruiz-Arranz, Toscani and Ture 2016, The Fiscal Costs of Contingent Liabilities: A New Dataset, IMF Working Paper",
-   "evidence_finding": "Realised contingent liabilities, averaging about 6 percent of GDP and up to about 40 percent for financial bailouts, are a major source of fiscal distress in advanced and emerging economies; countries with stronger institutions are less exposed.",
-   "evidence_strength": "thin",
-   "evidence_design": "observational",
-   "evidence_fit": "loose",
-   "evidence_basis": "Abstract: dataset 1990 to 2014; average cost 6 percent of GDP; realisations cluster in crises; stronger institutions less exposed. Measures risk, not disclosure policy.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/p/imf/imfwpa/2016-014.html",
-   "framework_source": "World Bank, The Changing Wealth of Nations 2021",
-   "framework_where": "CWON 2021, Chapter 1, closing discussion of post-COVID public debt and comprehensive balance sheets, pp. 38–39",
-   "framework_says": "Not discussed in CWON 2021",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "IMF2018 (core); UNEP2024 (core); UNICEF2017 (core); WCED1987 (core); WDR2017 (core); HOOD1983 (complementary); UNCTAD2026 (complementary); UNDP1990 (complementary); WDR2006 (complementary); WDR2024 (complementary)",
-   "theory_n": 10,
-   "thai_strategies": 0,
-   "backing_score": 0,
-   "backing_grade": "unbacked",
-   "lever_draft": "Disclosure and management of guarantees, SOE and PPP liabilities",
-   "joins_when_draft": "it assesses or controls fiscal risks and contingent liabilities",
-   "joins_not_draft": "it is the PPP contract itself (L3-238)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "Bova et al. 2016 contingent-liability dataset fits the mechanism",
-   "check_note": ""
-  },
-  {
-   "lever_id": "LV-096",
-   "level": "L3",
-   "lever": "Long-term fiscal planning for ageing and future generations",
-   "lever_full": "Long-term fiscal planning for ageing and future generations",
-   "family_id": "F-18",
-   "family": "Public wealth: resource rents and the balance sheet",
-   "group_id": "G-09",
-   "group": "Economic and human wealth",
-   "subpillar": "Future Generations",
-   "subpillar_code": "FUT",
-   "pillar": "People-first Approach",
-   "joins_when": "it names future generations or long-run fiscal burdens as the reason",
-   "joins_not": "it is pension design (L3-025)",
-   "pathway_ids": [
-    "L3-099"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-099 Intergenerational fiscal burden",
-   "text_cues": "generational accounting|intergenerational (fiscal|equity|burden|account|transfer)",
-   "risks": [
-    "Demographic Shifts"
-   ],
-   "entry_points": [],
-   "evidence": "Intergenerational fiscal burden: Auerbach, Gokhale and Kotlikoff 1991",
-   "intervention_evidence": "No suitable intervention-level source confirmed",
-   "evidence_finding": "",
-   "evidence_strength": "none found",
-   "evidence_design": "",
-   "evidence_fit": "",
-   "evidence_basis": "",
-   "evidence_checked": "not reached",
-   "evidence_verified": "no",
-   "evidence_url": "",
-   "framework_source": "World Bank, The Changing Wealth of Nations 2021",
-   "framework_where": "CWON 2021, Summary for Policy Makers, wealth per capita and future generations, p. xxxi",
-   "framework_says": "Not discussed in CWON 2021",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "IMF2018 (core); UNEP2024 (core); UNICEF2017 (core); WCED1987 (core); WDR2017 (core); HOOD1983 (complementary); UNCTAD2026 (complementary); UNDP1990 (complementary); WDR2006 (complementary); WDR2024 (complementary)",
-   "theory_n": 10,
-   "thai_strategies": 0,
-   "backing_score": 0,
-   "backing_grade": "unbacked",
-   "lever_draft": "Long-term fiscal planning for ageing and future generations",
-   "joins_when_draft": "it names future generations or long-run fiscal burdens as the reason",
-   "joins_not_draft": "it is pension design (L3-025)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-099 generational accounting fits",
-   "check_note": "No intervention evidence and framework silent."
-  },
-  {
    "lever_id": "LV-097",
    "level": "L3",
    "lever": "Family planning, reproductive health and fertility policy",
@@ -13903,131 +13856,6 @@
    "check_literature_ok": false,
    "check_source": "intervention_evidence Dupas, Karlan, Robinson and Ubfal 2018 and Karlan, Ratan and Zinman 2014 finding; pathway L3-102",
    "check_note": "The pathway is lifecycle saving by a larger prime-age cohort, but the evidence concerns poor households' access to accounts and finds no average effect on savings; the literature does not support the action as drafted, and joins_when names no concrete action."
-  },
-  {
-   "lever_id": "LV-099",
-   "level": "L3",
-   "lever": "Retirement age, incentives and support for older workers",
-   "lever_full": "Retirement age, incentives and support for older workers",
-   "family_id": "F-19",
-   "family": "Human and demographic capital",
-   "group_id": "G-09",
-   "group": "Economic and human wealth",
-   "subpillar": "Future Generations",
-   "subpillar_code": "FUT",
-   "pillar": "People-first Approach",
-   "joins_when": "it keeps or brings older people into work",
-   "joins_not": "it provides pensions (L3-025) or care (L3-104)",
-   "pathway_ids": [
-    "L3-103"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-103 Older-worker participation",
-   "text_cues": "older worker|retirement age|active ageing|silver (econom|industr|workforce)|senior employ|elderly employ|older persons.{0,30}(work|employ)",
-   "risks": [
-    "Demographic Shifts"
-   ],
-   "entry_points": [
-    "Elderly Social Participation and Lifelong Learning Programme",
-    "Monetary and fiscal incentives for elderly employment",
-    "Marketing, finance, and information support for elderly employment",
-    "Employment and Income Generation Support for Elderly People"
-   ],
-   "evidence": "Older-worker participation: Gruber and Wise 1999",
-   "intervention_evidence": "Staubli and Zweimuller 2013, Does raising the early retirement age increase employment of older workers?, Journal of Public Economics",
-   "evidence_finding": "Raising Austria's early retirement age raised employment of affected older workers, but also substantially raised unemployment claims; gains were largest for higher-wage, healthier workers, while others bridged through unemployment or disability benefits.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "direct",
-   "evidence_basis": "Abstract: ERA raised from 60 to 62 for men; employment up 9.75 points; large unemployment insurance spillovers; responses largest for high-wage, healthy workers.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/a/eee/pubeco/v108y2013icp17-32.html",
-   "framework_source": "World Bank, The Changing Wealth of Nations 2021",
-   "framework_where": "CWON 2021, Chapter 7, Data and Methodology (working life assumed to end at 65), p. 147",
-   "framework_says": "Not discussed in CWON 2021",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "UNICEF2017 (core); WCED1987 (core); UNDP1990 (complementary); WDR2006 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 1,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Retirement age, incentives and support for older workers",
-   "joins_when_draft": "it keeps or brings older people into work",
-   "joins_not_draft": "it provides pensions (L3-025) or care (L3-104)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "Staubli and Zweimuller 2013 retirement-age evaluation fits",
-   "check_note": "Health condition matches the finding that gains concentrate among healthier workers."
-  },
-  {
-   "lever_id": "LV-100",
-   "level": "L3",
-   "lever": "Long-term care systems, financing and family caregiver support",
-   "lever_full": "Long-term care systems, financing and family caregiver support",
-   "family_id": "F-19",
-   "family": "Human and demographic capital",
-   "group_id": "G-09",
-   "group": "Economic and human wealth",
-   "subpillar": "Future Generations",
-   "subpillar_code": "FUT",
-   "pillar": "People-first Approach",
-   "joins_when": "it provides, finances or organises long-term care for older or dependent people",
-   "joins_not": "it is income in old age (L3-025)",
-   "pathway_ids": [
-    "L3-104"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-104 Long-term care demand and family caregiving",
-   "text_cues": "long-term care|elderly care|aged care|older persons|age-friendly|nursing home|geriatric|ageing",
-   "risks": [
-    "Demographic Shifts"
-   ],
-   "entry_points": [
-    "Elderly Social Protection and Long-Term Care Support",
-    "Long-term Care Legislation and Sustainable Financing System",
-    "Medium-term aftercare and long-term care system development",
-    "Long-term Care Innovation for the Elderly",
-    "Long-term care law for older persons"
-   ],
-   "evidence": "Long-term care demand and family caregiving: Colombo et al. 2011",
-   "intervention_evidence": "Fu, Noguchi, Kawamura, Takahashi and Tamiya 2017, Spillover effect of Japanese long-term care insurance as an employment promotion policy for family caregivers, Journal of Health Economics",
-   "evidence_finding": "Introducing Japan's public long-term care insurance had significant positive spillover effects on family caregivers' labour force participation, varying by gender and age, while a later amendment had generally negative spillovers.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "direct",
-   "evidence_basis": "Abstract: difference-in-difference propensity score matching on 1995 to 2013 national data; introduction positive spillovers, amendment negative.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/a/eee/jhecon/v56y2017icp103-112.html",
-   "framework_source": "World Bank, The Changing Wealth of Nations 2021",
-   "framework_where": "CWON 2021, Chapter 7, Data and Methodology (human capital as lifetime earnings), p. 147",
-   "framework_says": "Not discussed in CWON 2021",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "UNICEF2017 (core); WCED1987 (core); UNDP1990 (complementary); WDR2006 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 3,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Long-term care systems, financing and family caregiver support",
-   "joins_when_draft": "it provides, finances or organises long-term care for older or dependent people",
-   "joins_not_draft": "it is income in old age (L3-025)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "Fu et al. 2017 long-term care insurance evaluation fits",
-   "check_note": ""
   },
   {
    "lever_id": "LV-101",
@@ -14222,64 +14050,6 @@
    "check_note": ""
   },
   {
-   "lever_id": "LV-104",
-   "level": "L3",
-   "lever": "Air routes and connectivity for business travel",
-   "lever_full": "Air routes and connectivity for business travel",
-   "family_id": "F-20",
-   "family": "Cost of reaching foreign markets",
-   "group_id": "G-10",
-   "group": "Reaching foreign markets",
-   "subpillar": "Export-led",
-   "subpillar_code": "EXP",
-   "pillar": "Smarter Growth",
-   "joins_when": "it builds direct air links for business and investment",
-   "joins_not": "it is tourism arrivals (F-21)",
-   "pathway_ids": [
-    "L3-117"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-117 Air-link knowledge and investment flows",
-   "text_cues": "air(port| connectiv| transport| link| route)|aviation|airline",
-   "risks": [
-    "Shifts in Globalisation",
-    "Pandemics"
-   ],
-   "entry_points": [],
-   "evidence": "Air-link knowledge and investment flows: Campante and Yanagizawa-Drott 2018",
-   "intervention_evidence": "Campante and Yanagizawa-Drott 2018, Long-Range Growth: Economic Development in the Global Network of Air Links, QJE | Giroud 2013, Proximity and Investment: Evidence from Plant-Level Data, QJE",
-   "evidence_finding": "Long-distance air links raised local economic activity and business links worldwide, with capital flowing mostly from high- to middle-income countries; in the US, new routes cutting headquarters-to-plant travel raised plant investment and productivity.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "direct",
-   "evidence_basis": "Campante abstract: 6,000-mile discontinuity, night lights and business links rise; Giroud abstract: new routes raise plant investment 8 to 9 percent and productivity.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:oup:qjecon:v:133:y:2018:i:3:p:1395-1458. | https://ideas.repec.org/a/oup/qjecon/v128y2013i2p861-915.html",
-   "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_where": "WDR 2020, Chapter 9 Cooperation on trade, Deepening trade cooperation (services), p. 225",
-   "framework_says": "Air transport is vital for connectivity and GVC participation, but restrictive bilateral air service agreements split markets into route-specific duopolies; liberalizing routes needs partner consent and air traffic rights sit outside the WTO. Business travel itself is not discussed.",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary); OECD2024 (secondary); WDR2009 (secondary); WDR2017 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 0,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Air routes and connectivity for business travel",
-   "joins_when_draft": "it builds direct air links for business and investment",
-   "joins_not_draft": "it is tourism arrivals (F-21)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "Campante and Yanagizawa-Drott 2018 and Giroud 2013 fit",
-   "check_note": ""
-  },
-  {
    "lever_id": "LV-105",
    "level": "L3",
    "lever": "Trade agreements, blocs and preferences",
@@ -14438,193 +14208,6 @@
    "check_literature_ok": true,
    "check_source": "pathway L3-120 and WDR 2020 tariff text fit",
    "check_note": "Winters et al. and Topalova report poverty effects, not the productivity outcome of the pathway."
-  },
-  {
-   "lever_id": "LV-107",
-   "level": "L3",
-   "lever": "Destination development, secondary destinations",
-   "lever_full": "Destination development, secondary destinations, quality tourism and local linkages",
-   "family_id": "F-21",
-   "family": "Tourism export destinations",
-   "group_id": "G-10",
-   "group": "Reaching foreign markets",
-   "subpillar": "Export-led",
-   "subpillar_code": "EXP",
-   "pillar": "Smarter Growth",
-   "joins_when": "it develops tourism destinations, routes or quality so that spending spreads locally",
-   "joins_not": "it manages visitor numbers against capacity (L3-126) or shock exposure (L3-127)",
-   "pathway_ids": [
-    "L3-125"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-125 Tourism-led local spillovers",
-   "text_cues": "local (economy|supplier|communit).*touris|touris.*(local|communit|linkage)|community[- ]based touris",
-   "risks": [
-    "Shifts in Globalisation"
-   ],
-   "entry_points": [
-    "Transform Thailand's tourism into high quality-oriented tourism",
-    "Happy Model Tourism Development Programme",
-    "Develop High-Potential Secondary Tourist Destinations and Diverse Tourist Routes",
-    "Develop Quality Tourist Attractions and Services at Secondary Destinations",
-    "Tourism Value-Addition and Community-Based OTOP Tourism Promotion"
-   ],
-   "evidence": "Tourism-led local spillovers: Faber and Gaubert 2019",
-   "intervention_evidence": "Faber and Gaubert 2019, Tourism and Economic Development: Evidence from Mexico's Coastline, American Economic Review",
-   "evidence_finding": "In Mexico, tourism caused large local economic gains, partly by boosting nearby manufacturing, but these were largely offset nationally by weaker agglomeration in less touristic regions; the study does not evaluate destination development programmes.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "partial",
-   "evidence_basis": "Abstract: large local gains relative to less touristic regions; spillovers largely offset by lost agglomeration elsewhere; national gains mainly from market integration.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://www.aeaweb.org/doi/10.1257/aer.20161434",
-   "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_where": "WDR 2020, Chapter 7 Policies to enhance participation, Liberalize trade to expand markets: Trade in services, p. 168 (nearest related: tourism named as a services GVC opportunity)",
-   "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 12,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Destination development, secondary destinations",
-   "joins_when_draft": "it develops tourism destinations, routes or quality so that spending spreads locally",
-   "joins_not_draft": "it manages visitor numbers against capacity (L3-126) or shock exposure (L3-127)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "Faber and Gaubert 2019 fits the spillover mechanism",
-   "check_note": "Does not evaluate destination programmes; national gains were largely offset."
-  },
-  {
-   "lever_id": "LV-108",
-   "level": "L3",
-   "lever": "Carrying-capacity rules, sustainable tourism management and site",
-   "lever_full": "Carrying-capacity rules, sustainable tourism management and site protection",
-   "family_id": "F-21",
-   "family": "Tourism export destinations",
-   "group_id": "G-10",
-   "group": "Reaching foreign markets",
-   "subpillar": "Export-led",
-   "subpillar_code": "EXP",
-   "pillar": "Smarter Growth",
-   "joins_when": "it limits or manages tourism to protect the destination",
-   "joins_not": "it grows tourism (L3-125)",
-   "pathway_ids": [
-    "L3-126"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-126 Destination life cycle and carrying capacity",
-   "text_cues": "sustainab.*touris|eco-?touris|carrying capacity|over-?touris|green touris|responsible touris",
-   "risks": [
-    "Biodiversity Loss",
-    "Environmental Degradation and Pollution",
-    "Climate Change"
-   ],
-   "entry_points": [
-    "Sustainable Tourism Area Management and Green Tourism Support",
-    "Sustainable Tourism Management under the BCG Economy",
-    "Tourism Law Amendment for Ecosystem Carrying Capacity",
-    "Creative Tourist Destination Development and Cluster Tourism Promotion",
-    "Top Tourist Attraction Development and Rehabilitation Scheme"
-   ],
-   "evidence": "Destination life cycle and carrying capacity: Butler 1980",
-   "intervention_evidence": "Ekin, Ekin, Akbulut and Celik 2026, Carrying Capacity and Adaptive Visitor Use Management for Sustainable Parks and Protected Recreation Areas: A Critical Narrative Review, Sustainability",
-   "evidence_finding": "A narrative review of carrying capacity in parks and protected recreation areas concludes that sustainable management depends more on implementing an indicator, standard, monitoring and action chain than on a numerical visitor limit; it presents no outcome evidence.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "partial",
-   "evidence_basis": "Abstract: carrying capacity is an adaptive process, not a visitor count; management depends on indicator-standard-monitoring-action chain; claims are conceptual, not tested.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://www.mdpi.com/2071-1050/18/16/8037",
-   "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_where": "WDR 2020, Chapter 8 Policies for inclusion and sustainability, Environmental sustainability, p. 204 (nearest related: pricing and regulation of environmental impacts of GVCs)",
-   "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 7,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Carrying-capacity rules, sustainable tourism management and site",
-   "joins_when_draft": "it limits or manages tourism to protect the destination",
-   "joins_not_draft": "it grows tourism (L3-125)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-126 carrying capacity fits",
-   "check_note": "Review offers no outcome evidence."
-  },
-  {
-   "lever_id": "LV-109",
-   "level": "L3",
-   "lever": "Diversification of source markets and tourism crisis measures",
-   "lever_full": "Diversification of source markets and tourism crisis measures",
-   "family_id": "F-21",
-   "family": "Tourism export destinations",
-   "group_id": "G-10",
-   "group": "Reaching foreign markets",
-   "subpillar": "Export-led",
-   "subpillar_code": "EXP",
-   "pillar": "Smarter Growth",
-   "joins_when": "it reduces tourism's exposure to shocks or spreads its source markets",
-   "joins_not": "it is destination development (L3-125)",
-   "pathway_ids": [
-    "L3-127"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-127 Tourism demand volatility and shock exposure",
-   "text_cues": "touris.{0,40}(recover|restart|reviv|reopen|resilien|diversif.{0,20}market|source market)|(recover|reviv|resilien).{0,40}touris",
-   "risks": [
-    "Pandemics",
-    "Climate Change",
-    "Shifts in Globalisation"
-   ],
-   "entry_points": [],
-   "evidence": "Tourism demand volatility and shock exposure: Gossling, Scott and Hall 2021",
-   "intervention_evidence": "No suitable intervention-level source confirmed",
-   "evidence_finding": "",
-   "evidence_strength": "none found",
-   "evidence_design": "",
-   "evidence_fit": "",
-   "evidence_basis": "",
-   "evidence_checked": "not reached",
-   "evidence_verified": "no",
-   "evidence_url": "",
-   "framework_source": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_where": "WDR 2020, Chapter 4 Macroeconomic implications, Propagating shocks and Box 4.1, p. 105 (nearest related: shock transmission and diversifying suppliers)",
-   "framework_says": "Not discussed in World Development Report 2020: Trading for Development in the Age of Global Value Chains",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 0,
-   "backing_score": 0,
-   "backing_grade": "unbacked",
-   "lever_draft": "Diversification of source markets and tourism crisis measures",
-   "joins_when_draft": "it reduces tourism's exposure to shocks or spreads its source markets",
-   "joins_not_draft": "it is destination development (L3-125)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-127 fits",
-   "check_note": "No intervention evidence."
   },
   {
    "lever_id": "LV-110",
@@ -15479,66 +15062,6 @@
    "check_literature_ok": true,
    "check_source": "pathway L3-124 distinction ('vs learning by exporting'); sibling LV-110 (L3-109)",
    "check_note": "The pathway distinguishes value-chain participation from learning by exporting, yet joins_not does not point to that sibling; Atkin et al. 2017 attached here is the LV-110 mechanism, while Pahl and Timmer 2020 fits."
-  },
-  {
-   "lever_id": "LV-123",
-   "level": "L3",
-   "lever": "Diaspora engagement for trade, investment and knowledge",
-   "lever_full": "Diaspora engagement for trade, investment and knowledge",
-   "family_id": "F-24",
-   "family": "Foreign capital, knowledge and networks",
-   "group_id": "G-12",
-   "group": "Foreign capital and networks",
-   "subpillar": "Export-led",
-   "subpillar_code": "EXP",
-   "pillar": "Smarter Growth",
-   "joins_when": "it mobilises nationals abroad for trade, investment or expertise",
-   "joins_not": "it brings migrants home (L3-191)",
-   "pathway_ids": [
-    "L3-193"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-193 Diaspora networks in trade and investment",
-   "text_cues": "diaspora (invest|bond|network)|diaspora",
-   "risks": [
-    "Shifts in Globalisation"
-   ],
-   "entry_points": [
-    "Establish overseas chambers and coordination centers",
-    "Incentivise expert foreigners and Thais abroad for technology and innovation development"
-   ],
-   "evidence": "Diaspora networks in trade and investment: Rauch and Trindade 2002; Kugler and Rapoport 2007",
-   "intervention_evidence": "Parsons and Vezina 2018, Migrant Networks and Trade: The Vietnamese Boat People as a Natural Experiment, Economic Journal",
-   "evidence_finding": "Vietnamese refugees were settled across US states during a trade embargo; after it lifted, US exports to Vietnam grew most in states with larger Vietnamese populations. This shows diaspora networks raise trade, not that government engagement programmes do.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "loose",
-   "evidence_basis": "Abstract: refugee allocation across states as natural experiment; post-1994 export growth larger where Vietnamese populations were bigger.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:wly:econjl:v:128:y:2018:i:612:p:f210-f234",
-   "framework_source": "The Growth Report: Strategies for Sustained Growth and Inclusive Development",
-   "framework_where": "Growth Report 2008, Part 4 New Global Trends, Demographics, Aging, and Migration, p. 101",
-   "framework_says": "Countries can win back highly educated citizens who emigrated; fast-growing economies attract substantial return migration, and skilled returnees can contribute substantially to growth. Diaspora engagement for trade and investment is not otherwise discussed.",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "weak",
-   "theory_anchor_ids": "WDR2020 (core); WDR2024 (core); RODRIK2004 (complementary); RODRIK2010 (complementary); OECD2024 (secondary); WDR2009 (secondary); WDR2017 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 0,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Diaspora engagement for trade, investment and knowledge",
-   "joins_when_draft": "it mobilises nationals abroad for trade, investment or expertise",
-   "joins_not_draft": "it brings migrants home (L3-191)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-193 and Parsons and Vezina 2018 fit the network mechanism",
-   "check_note": "Evidence shows networks raise trade, not that engagement programmes do; Growth Report text is on return migration."
   },
   {
    "lever_id": "LV-124",
@@ -17968,63 +17491,6 @@
    "check_note": ""
   },
   {
-   "lever_id": "LV-160",
-   "level": "L3",
-   "lever": "Reskilling and support for workers displaced by automation",
-   "lever_full": "Reskilling and support for workers displaced by automation",
-   "family_id": "F-35",
-   "family": "Displaced workers and local adjustment",
-   "group_id": "G-17",
-   "group": "Jobs, places and mobility",
-   "subpillar": "Growth through Inclusion",
-   "subpillar_code": "GTI",
-   "pillar": "Smarter Growth",
-   "joins_when": "it supports workers displaced by technology or steers automation towards new tasks",
-   "joins_not": "it is digital skills in general (L3-035)",
-   "pathway_ids": [
-    "L3-184"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-184 Task displacement and reinstatement",
-   "text_cues": "automat|robot|artificial intelligence|\\bai\\b|future of work|technolog.*(job|work)",
-   "risks": [
-    "Technological Change"
-   ],
-   "entry_points": [],
-   "evidence": "Task displacement and reinstatement: Acemoglu and Restrepo 2019",
-   "intervention_evidence": "Jacobson, LaLonde and Sullivan 2005, Estimating the returns to community college schooling for displaced workers, Journal of Econometrics",
-   "evidence_finding": "In Washington State, a year of community college credits raised displaced workers' long-run earnings, with large returns to technical vocational and math or science courses and very low returns to less technical ones; no automation-specific evidence.",
-   "evidence_strength": "thin",
-   "evidence_design": "observational",
-   "evidence_fit": "partial",
-   "evidence_basis": "Abstract: administrative earnings linked to transcripts; about 9 percent men, 13 percent women per year, higher for technical courses.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/a/eee/econom/v125y2005i1-2p271-304.html",
-   "framework_source": "WDR 2008: Agriculture for Development (World Bank 2007)",
-   "framework_where": "Nearest related: WDR 2008, chapter 9, Schooling, training, and transition to the labor market, Rural labor market outcomes can be improved by active labor market programs, p. 218",
-   "framework_says": "Not discussed in WDR 2008: Agriculture for Development",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "not discussed",
-   "theory_anchor_ids": "WDR2006 (core); WDR2024 (core); RODRIK2004 (complementary); UNCTAD2026 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 0,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Reskilling and support for workers displaced by automation",
-   "joins_when_draft": "it supports workers displaced by technology or steers automation towards new tasks",
-   "joins_not_draft": "it is digital skills in general (L3-035)",
-   "check_verdict": "flag",
-   "check_name_ok": true,
-   "check_tests_ok": false,
-   "check_literature_ok": false,
-   "check_source": "intervention_evidence Jacobson, LaLonde and Sullivan 2005 finding; pathway L3-184",
-   "check_note": "joins_when adds 'steers automation towards new tasks', which is technology-direction policy, not worker support, and nothing attached evaluates it. The only evidence is retraining for displaced workers in general, with no automation-specific evidence. An economist should decide whether to drop the steering clause and whether the lever is distinct from general displaced-worker retraining."
-  },
-  {
    "lever_id": "LV-161",
    "level": "L3",
    "lever": "Lower remittance costs and channels to productive use",
@@ -18620,259 +18086,6 @@
    "check_note": "Nothing attached evaluates the land-taxation half (Keswell and Carter state they do not cover it). WDR 2008 gives land taxes the purposes of curbing speculation and funding local government, not equity, yet two of the three Thai entries are tax measures. An economist should decide whether to split land taxation off or reword its purpose."
   },
   {
-   "lever_id": "LV-170",
-   "level": "L3",
-   "lever": "Forecasting, early-warning systems and hazard monitoring",
-   "lever_full": "Forecasting, early-warning systems and hazard monitoring",
-   "family_id": "F-39",
-   "family": "Hazard and exposure sensing",
-   "group_id": "G-19",
-   "group": "Risk sensing and early warning",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it forecasts, monitors or warns of natural hazards",
-   "joins_not": "it tells the public how to act (L3-264), detects disease (L3-207) or finances response (L3-209)",
-   "pathway_ids": [
-    "L3-206"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-206 Early-warning lead time and loss avoidance",
-   "text_cues": "early warning|forecast|meteorolog|hydro-?met|weather (service|radar)|warning system|tsunami|seismic monitor",
-   "risks": [
-    "Climate Change"
-   ],
-   "entry_points": [
-    "Integrated Disaster Prevention Planning and Coordination",
-    "Early Warning System Enhancement for Natural Disasters and Climate Change",
-    "Disaster Response and Warning System Development",
-    "National security monitoring and early warning system",
-    "Geo-informatics and Digital Surveillance Alert Systems"
-   ],
-   "evidence": "Early-warning lead time and loss avoidance: Hallegatte 2012",
-   "intervention_evidence": "Burlig, Jina, Kelley, Lane and Sahai 2024, The Value of Forecasts: Experimental Evidence from India (earlier titled Long-Range Forecasts as Climate Adaptation), NBER Working Paper 32173",
-   "evidence_finding": "In a 250-village RCT in Telangana, India, accurate monsoon-onset forecasts shifted farmers' beliefs, and they adjusted cultivated area, crops, input spending and off-farm work to the forecast, raising food consumption and a welfare index.",
-   "evidence_strength": "thin",
-   "evidence_design": "RCT",
-   "evidence_fit": "direct",
-   "evidence_basis": "Paper: villages randomised to forecast, insurance or control; responses depend on priors; food consumption up 7 percent pooled.",
-   "evidence_checked": "full text",
-   "evidence_verified": "yes",
-   "evidence_url": "https://www.nber.org/system/files/working_papers/w32173/w32173.pdf",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary); WDR2009 (secondary); WDR2017 (secondary); WDR2020 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 3,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Forecasting, early-warning systems and hazard monitoring",
-   "joins_when_draft": "it forecasts, monitors or warns of natural hazards",
-   "joins_not_draft": "it tells the public how to act (L3-264), detects disease (L3-207) or finances response (L3-209)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-206 and intervention_evidence finding (Burlig et al. RCT)",
-   "check_note": "Forecasts and warnings are the evaluated action; the pathway condition (last-mile communication) is correctly sent to risk communication via L3-264."
-  },
-  {
-   "lever_id": "LV-171",
-   "level": "L3",
-   "lever": "Disease surveillance, laboratories and outbreak response",
-   "lever_full": "Disease surveillance, laboratories and outbreak response",
-   "family_id": "F-39",
-   "family": "Hazard and exposure sensing",
-   "group_id": "G-19",
-   "group": "Risk sensing and early warning",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it detects or contains disease outbreaks: surveillance, testing, laboratories, response teams",
-   "joins_not": "it controls an endemic disease (L3-049) or the animal-human source (L3-208)",
-   "pathway_ids": [
-    "L3-207"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-207 Disease surveillance and outbreak containment",
-   "text_cues": "surveillance|laborator|outbreak|epidemic|\\bihr\\b|detect",
-   "risks": [
-    "Pandemics"
-   ],
-   "entry_points": [
-    "Reforming the system of epidemics and health threats surveillance and management",
-    "Integrated Health and Environmental Surveillance Mechanism",
-    "Disease Surveillance, Prevention and Control System",
-    "Capacity improvement and regional cooperation for epidemic prevention",
-    "Early health warning systems"
-   ],
-   "evidence": "Disease surveillance and outbreak containment: Oppenheim et al. 2019; Heymann and Rodier 2004",
-   "intervention_evidence": "Phalkey, Yamamoto, Awate and Marx 2015, Challenges with the implementation of an Integrated Disease Surveillance and Response (IDSR) system: systematic review of the lessons learned, Health Policy and Planning",
-   "evidence_finding": "Across 33 assessments, integrated disease surveillance in low- and middle-income countries, mostly African, performed unevenly, held back by unstable funding, weak laboratories, training, feedback, supervision and transport; it worked best where support functions were strong.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "direct",
-   "evidence_basis": "Abstract: systematic review of 33 assessment studies, mixed performance of core functions, challenges described as systemic.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://nottingham-repository.worktribe.com/output/1113279/challenges-with-the-implementation-of-an-integrated-disease-surveillance-and-response-idsr-system-systematic-review-of-the-lessons-learned",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary); WDR2009 (secondary); WDR2017 (secondary); WDR2020 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 2,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Disease surveillance, laboratories and outbreak response",
-   "joins_when_draft": "it detects or contains disease outbreaks: surveillance, testing, laboratories, response teams",
-   "joins_not_draft": "it controls an endemic disease (L3-049) or the animal-human source (L3-208)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-207 and intervention_evidence finding (Phalkey et al.)",
-   "check_note": "The review evaluates integrated surveillance and response, matching the lever; its finding that support functions matter mirrors the reporting-and-response condition."
-  },
-  {
-   "lever_id": "LV-172",
-   "level": "L3",
-   "lever": "One Health programmes at the animal-human-environment interface",
-   "lever_full": "One Health programmes at the animal-human-environment interface",
-   "family_id": "F-39",
-   "family": "Hazard and exposure sensing",
-   "group_id": "G-19",
-   "group": "Risk sensing and early warning",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it works on zoonotic disease at its source: animal health, wildlife, One Health coordination",
-   "joins_not": "it is human surveillance (L3-207)",
-   "pathway_ids": [
-    "L3-208"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-208 Zoonotic spillover at the animal-human interface",
-   "text_cues": "one health|zoono|animal-human|wildlife trade",
-   "risks": [
-    "Pandemics",
-    "Biodiversity Loss"
-   ],
-   "entry_points": [
-    "National Zoonotic Disease Management Capacity Enhancement",
-    "One Health capacity-building and coordination programme",
-    "Village Health Volunteer zoonotic disease surveillance network",
-    "Multi-sectoral zoonotic disease transmission minimization mechanism",
-    "One Health Zoonotic Disease Surveillance and Response Capacity Development"
-   ],
-   "evidence": "Zoonotic spillover at the animal-human interface: Jones et al. 2008",
-   "intervention_evidence": "Baum, Machalaba, Daszak, Salerno and Karesh 2017, Evaluating one health: Are we demonstrating effectiveness?, One Health",
-   "evidence_finding": "Of 1,839 One Health papers screened, only seven reported quantitative outcomes, with no common method; most claimed benefits of joint human-animal-environment action rest on modelled projections rather than measured results of implemented programmes.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "direct",
-   "evidence_basis": "Full text: literature review, 15 of 39 intervention papers evaluated, seven quantitative, two with costing data.",
-   "evidence_checked": "full text",
-   "evidence_verified": "yes",
-   "evidence_url": "https://rcastoragev2.blob.core.windows.net/4e0f14543cfe8d4e1e9a83a4a6f0128e/PMC5458598.pdf",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary); WDR2009 (secondary); WDR2017 (secondary); WDR2020 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 0,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "One Health programmes at the animal-human-environment interface",
-   "joins_when_draft": "it works on zoonotic disease at its source: animal health, wildlife, One Health coordination",
-   "joins_not_draft": "it is human surveillance (L3-207)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-208 and intervention_evidence finding (Baum et al.)",
-   "check_note": "Evidence is about One Health programmes as such; it is thin (few measured outcomes) but does not contradict the source-not-detection distinction."
-  },
-  {
-   "lever_id": "LV-173",
-   "level": "L3",
-   "lever": "Reducing concentration and dependence in trade and supply",
-   "lever_full": "Diversifying suppliers and securing critical inputs; Diversification away from concentrated commodity exposure; Measures against coercive use of trade, finance or technology chokepoints",
-   "family_id": "F-39",
-   "family": "Hazard and exposure sensing",
-   "group_id": "G-19",
-   "group": "Risk sensing and early warning",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it reduces dependence on few suppliers, commodities, markets or chokepoints: energy security, supply-chain resilience, export diversification",
-   "joins_not": "it builds domestic capacity (L3-204) or stocks (L3-205) (L3-202); it holds reserves against the swings (L3-198) (L3-199); it is accidental disruption (L3-202) (L3-203)",
-   "pathway_ids": [
-    "L3-202",
-    "L3-199",
-    "L3-203"
-   ],
-   "n_pathways": 3,
-   "pathways": "L3-202 Input-concentration risk; L3-199 Terms-of-trade exposure through concentration; L3-203 Weaponised-interdependence exposure",
-   "text_cues": "energy secur|security of supply|supply secur|self-?suffic|import dependen|diversif.{0,40}(suppl|source|import)|supply (disruption|chain resilien|chain risk)|import substitut|critical (input|supplies|material|mineral|good)|price stabili|commodity price|buffer stock|price (support|band)|terms of trade|sanction|chokepoint|geopolit|economic coercion",
-   "risks": [
-    "Shifts in Globalisation",
-    "Resource and Energy Pressures",
-    "Pandemics"
-   ],
-   "entry_points": [
-    "Fostering supply chain connections for ZEV production"
-   ],
-   "evidence": "Input-concentration risk: Baldwin and Freeman 2022; Terms-of-trade exposure through concentration: Deaton 1999; Cavalcanti, Mohaddes and Raissi 2015; Weaponised-interdependence exposure: Farrell and Newman 2019",
-   "intervention_evidence": "Volpe Martincus and Carballo 2008, Is export promotion effective in developing countries? Firm-level evidence on the intensive and the extensive margins of exports, Journal of International Economics | Lederman, Olarreaga and Payton 2010, Export promotion agencies: Do they work?, Journal of Development Economics",
-   "evidence_finding": "Export promotion in Peru raised firms' exports mainly by adding new markets and products; across 103 countries, export promotion agencies raise exports with strongly diminishing returns. Neither tests whether policy reduces supply or commodity concentration.",
-   "evidence_strength": "thin",
-   "evidence_design": "observational",
-   "evidence_fit": "partial",
-   "evidence_basis": "Volpe abstract: Peruvian firm data 2001-2005, extensive margin dominates; Lederman abstract: survey of 103 agencies, positive average effect, diminishing returns.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:eee:inecon:v:76:y:2008:i:1:p:89-106 | https://econpapers.repec.org/RePEc:eee:deveco:v:91:y:2010:i:2:p:257-265",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary); WDR2009 (secondary); WDR2017 (secondary); WDR2020 (secondary)",
-   "theory_n": 7,
-   "thai_strategies": 0,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Reducing concentration and dependence in trade and supply",
-   "joins_when_draft": "it reduces dependence on few suppliers, commodities, markets or chokepoints: energy security, supply-chain resilience, export diversification",
-   "joins_not_draft": "it builds domestic capacity (L3-204) or stocks (L3-205) (L3-202); it holds reserves against the swings (L3-198) (L3-199); it is accidental disruption (L3-202) (L3-203)",
-   "check_verdict": "flag",
-   "check_name_ok": false,
-   "check_tests_ok": false,
-   "check_literature_ok": false,
-   "check_source": "pathways L3-202, L3-199, L3-203 distinctions; intervention_evidence finding (Volpe Martincus and Carballo; Lederman et al.)",
-   "check_note": "lever_full bundles three actions on three distinct pathways (accidental input concentration, commodity terms-of-trade exposure, deliberate coercion), and the current joins_not excludes 'accidental disruption (L3-202)', which is this lever's own pathway. The attached evidence is on export promotion and by its own statement does not test whether policy reduces concentration; also, exposure reduction sits oddly in a sensing family, so a human should decide whether to split or rehome it."
-  },
-  {
    "lever_id": "LV-174",
    "level": "L3",
    "lever": "Macro-financial buffers: reserves, debt composition, bank supervision",
@@ -19059,250 +18272,6 @@
    "check_note": "The attached evidence evaluates index insurance sold to smallholder farmers, which is household insurance that this lever's joins_not sends to L3-021. It does not evaluate pre-arranged sovereign or agency disaster finance (pathway L3-209, Clarke and Dercon 2016), so the lever has no evidence on its own action."
   },
   {
-   "lever_id": "LV-177",
-   "level": "L3",
-   "lever": "Foresight, scenarios and long-term strategy units",
-   "lever_full": "Foresight, scenarios and long-term strategy units",
-   "family_id": "F-41",
-   "family": "Scenario and futures work",
-   "group_id": "G-20",
-   "group": "Foresight and futures",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it builds or uses foresight, scenarios or futures analysis",
-   "joins_not": "it is statistics on the present (L3-210) or a development plan (L3-212)",
-   "pathway_ids": [
-    "L3-211"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-211 Scenario planning and strategic option value",
-   "text_cues": "foresight|scenario|horizon scan|future(s)? (stud|think)|long-term vision|vision 20",
-   "risks": [
-    "Climate Change",
-    "Technological Change"
-   ],
-   "entry_points": [],
-   "evidence": "Scenario planning and strategic option value: Wack 1985; Schwartz 1991",
-   "intervention_evidence": "School of International Futures 2021, Features of Effective Systemic Foresight in Governments around the World, UK Government Office for Science | Phadnis, Caplice, Sheffi and Singh 2015, Effect of Scenario Planning on Field Experts' Judgment of Long-Range Investment Decisions, Strategic Management Journal",
-   "evidence_finding": "Case studies of eight governments find a limited evidence base on foresight's impact, with influence depending on culture, structures, people and processes together; in field experiments, scenario planning moved experts toward more flexible long-range investment options.",
-   "evidence_strength": "thin",
-   "evidence_design": "mixed",
-   "evidence_fit": "partial",
-   "evidence_basis": "SOIF summary: eight country cases, limited evidence on impact, no single unit sufficient; Phadnis abstract: three field experiments, judgments shift, flexible options preferred.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://assets.publishing.service.gov.uk/media/609a55638fa8f56a402b7ba1/effective-systemic-foresight-governments-executive-summary.pdf | https://dspace.mit.edu/handle/1721.1/96020",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 1,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Foresight, scenarios and long-term strategy units",
-   "joins_when_draft": "it builds or uses foresight, scenarios or futures analysis",
-   "joins_not_draft": "it is statistics on the present (L3-210) or a development plan (L3-212)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence finding (SOIF 2021; Phadnis et al. 2015) and pathway L3-211 condition",
-   "check_note": "The evidence evaluates government foresight and scenario planning; its finding that impact depends on integration into decisions matches the 'use in decisions' condition."
-  },
-  {
-   "lever_id": "LV-178",
-   "level": "L3",
-   "lever": "National, sector and investment plans that coordinate investment",
-   "lever_full": "National, sector and investment plans that coordinate investment",
-   "family_id": "F-42",
-   "family": "Development planning",
-   "group_id": "G-21",
-   "group": "Long-term planning",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it formulates or implements a plan that coordinates complementary investments across sectors or firms",
-   "joins_not": "it monitors the plan (L3-217), coordinates agencies day to day (L3-220) or plans emergency preparedness (L3-242)",
-   "pathway_ids": [
-    "L3-212"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-212 Coordination of complementary investments",
-   "text_cues": "big push|coordinat\\w* (of )?investment|complementar|development plan|national plan|planning (system|process|framework|commission|agency)|five[- ]year plan",
-   "risks": [],
-   "entry_points": [
-    "Formulate investment plans for growth",
-    "All-Hazards Emergency Health Crisis Management Planning and Preparedness",
-    "Integrated Renewable Energy and Energy Efficiency Research Planning"
-   ],
-   "evidence": "Coordination of complementary investments: Rosenstein-Rodan 1943; Murphy, Shleifer and Vishny 1989",
-   "intervention_evidence": "Lane 2025, Manufacturing Revolutions: Industrial Policy and Industrialization in South Korea, Quarterly Journal of Economics",
-   "evidence_finding": "South Korea's 1973-79 heavy and chemical industry drive expanded targeted industries and their comparative advantage, with gains spreading to downstream industries through input-output links and persisting after the policy ended.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstract: policy timing used for identification; targeted industries expanded, gained dynamic comparative advantage; downstream gains via linkages; persisted after policy ended.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ora.ox.ac.uk/objects/uuid:f046f14b-5647-4e3e-8251-c1ed7c015f67",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 4,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "National, sector and investment plans that coordinate investment",
-   "joins_when_draft": "it formulates or implements a plan that coordinates investments or sectors",
-   "joins_not_draft": "it monitors the plan (L3-217) or coordinates agencies day to day (L3-220)",
-   "check_verdict": "fix",
-   "check_name_ok": true,
-   "check_tests_ok": false,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-212 causal_input and transmission (complementary investments made profitable together)",
-   "check_note": "The mechanism is coordination of complementary investments (big push), and Lane 2025 evaluates exactly such a sectoral drive. The current 'coordinates investments or sectors' lets any sector plan in; an all-hazards health crisis plan is among the entry points."
-  },
-  {
-   "lever_id": "LV-179",
-   "level": "L3",
-   "lever": "Statistical systems, surveys, censuses and analysis for decisions",
-   "lever_full": "Statistical systems, surveys, censuses and analysis for decisions",
-   "family_id": "F-43",
-   "family": "Statistics and data sharing",
-   "group_id": "G-22",
-   "group": "Data sharing",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it produces, analyses or publishes data for planning or decisions: statistics, surveys, dashboards for analysis",
-   "joins_not": "it links data across bodies (L3-263), builds the records a programme runs on (L3-265) or monitors a programme (L3-217)",
-   "pathway_ids": [
-    "L3-210"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-210 Statistical capacity and decision quality",
-   "text_cues": "statistic|census|survey|data (system|platform|integration)|information system|monitoring network|geospatial|mapping",
-   "risks": [
-    "Demographic Shifts",
-    "Climate Change"
-   ],
-   "entry_points": [
-    "Harmonize Tourism Data Collection System",
-    "Integrated Labor Demand and Supply Database Development",
-    "Public Development Data Platform",
-    "Efficient Monitoring and Evaluation Database",
-    "Local-level databases for planning and evaluation"
-   ],
-   "evidence": "Statistical capacity and decision quality: Jerven 2013; Devarajan 2013",
-   "intervention_evidence": "Hjort, Moreira, Rao and Santini 2021, How Research Affects Policy: Experimental Evidence from 2,150 Brazilian Municipalities, American Economic Review",
-   "evidence_finding": "In experiments with Brazilian municipalities, mayors paid to learn evaluation results and updated their beliefs, and informing them about research on taxpayer reminder letters raised the probability they implemented the policy by 10 percentage points.",
-   "evidence_strength": "thin",
-   "evidence_design": "RCT",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstract: mayors willing to pay for evaluation results, update beliefs; informing about reminder-letter research raises implementation by 10 percentage points.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://www.aeaweb.org/doi/10.1257/aer.20190830",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "OECD2019 (core); OECD2024 (core); ANDREWS2017 (complementary); IMF2018 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 3,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Statistical systems, surveys, censuses and analysis for decisions",
-   "joins_when_draft": "it produces, analyses or publishes data for planning or decisions: statistics, surveys, dashboards for analysis",
-   "joins_not_draft": "it links data across bodies (L3-263), builds the records a programme runs on (L3-265) or monitors a programme (L3-217)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-210 condition (use of data) and intervention_evidence finding (Hjort et al. 2021)",
-   "check_note": "The evidence shows decision makers use and act on research information, consistent with the use-of-data condition; fit is partial, since it is research dissemination rather than statistical production."
-  },
-  {
-   "lever_id": "LV-180",
-   "level": "L3",
-   "lever": "Shared registries, data standards",
-   "lever_full": "Shared registries, data standards, exchange platforms and data governance across agencies",
-   "family_id": "F-43",
-   "family": "Statistics and data sharing",
-   "group_id": "G-22",
-   "group": "Data sharing",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "subpillar_code": "ANT",
-   "pillar": "Making Change Happen",
-   "joins_when": "it links records or systems held by separate bodies, or sets the standards and rules for sharing them",
-   "joins_not": "it is one body's own system (L3-265) or data protection rights (L3-221)",
-   "pathway_ids": [
-    "L3-263"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-263 Interoperability and data sharing across agencies",
-   "text_cues": "data (sharing|exchange|interoperab)|interoperab|shared (data|registr|database)|data governance|open data|integrated (database|data platform|information system)",
-   "risks": [
-    "Technological Change"
-   ],
-   "entry_points": [
-    "Upgrading tourism information systems to smart tourism systems",
-    "Large-Scale Tourism Database Development",
-    "National Health Database and Interoperable Health Data Platform",
-    "Public Sector Efficiency and Digital Transformation Reform",
-    "Government and private-sector data linkage for R&D big data"
-   ],
-   "evidence": "Interoperability and data sharing across agencies: OECD 2019, The Path to Becoming a Data-Driven Public Sector (source still to check)",
-   "intervention_evidence": "Leite, George, Sun, Jones and Lindert 2017, Social Registries for Social Assistance and Beyond: A Guidance Note and Assessment Tool, World Bank Social Protection and Labor Discussion Paper",
-   "evidence_finding": "A World Bank review of social registries in 20 countries describes their potential as integrated gateways for inclusion across programmes, resting on outreach, intake and interoperable information systems; it offers an assessment tool, not impact estimates.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstract: reviews registries in 20 countries, institutional arrangements and interoperability; checklist assessment tool; non-prescriptive; no effect estimates reported.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:wbk:hdnspu:117971",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "OECD2019 (core); OECD2024 (core); ANDREWS2017 (complementary); IMF2018 (complementary)",
-   "theory_n": 4,
-   "thai_strategies": 7,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Shared registries, data standards",
-   "joins_when_draft": "it links records or systems held by separate bodies, or sets the standards and rules for sharing them",
-   "joins_not_draft": "it is one body's own system (L3-265) or data protection rights (L3-221)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-263 and intervention_evidence finding (Leite et al. 2017)",
-   "check_note": "Social registries as interoperable gateways across programmes match the cross-agency sharing test; the evidence is descriptive and the pathway source is marked still to check."
-  },
-  {
    "lever_id": "LV-181",
    "level": "L3",
    "lever": "Build, digitise and maintain the registries",
@@ -19421,66 +18390,6 @@
    "check_literature_ok": true,
    "check_source": "intervention_evidence finding (Callen et al. 2020) and pathway L3-217",
    "check_note": "Data reporting to officials prompting inspections is monitoring that triggers correction, as the lever describes."
-  },
-  {
-   "lever_id": "LV-183",
-   "level": "L3",
-   "lever": "Iterative, problem-driven reform methods",
-   "lever_full": "Iterative, problem-driven reform methods: PDCA, design thinking, delivery units; Reforms sequenced to what the administration can do, judged on results",
-   "family_id": "F-44",
-   "family": "Monitoring and corrective feedback",
-   "group_id": "G-23",
-   "group": "Organisational learning and feedback",
-   "subpillar": "Adaptability and Course Correction",
-   "subpillar_code": "ADA",
-   "pillar": "Making Change Happen",
-   "joins_when": "it adopts an iterative or experimental way of working inside government, or sequences reform to what the administration can do",
-   "joins_not": "it is a territorial pilot (L3-219) (L3-218); it is monitoring (L3-217) (L3-228)",
-   "pathway_ids": [
-    "L3-218",
-    "L3-228"
-   ],
-   "n_pathways": 2,
-   "pathways": "L3-218 Problem-driven iterative adaptation; L3-228 Capability traps and isomorphic mimicry",
-   "text_cues": "iterat|adaptive (management|programm)|problem-driven|delivery unit|isomorphi|capability trap|form over function",
-   "risks": [],
-   "entry_points": [
-    "Adoption of PDCA Cycle for Plan Implementation",
-    "Design Thinking Support for Public Service Development",
-    "Review and update education measures and success targets"
-   ],
-   "evidence": "Problem-driven iterative adaptation: Andrews, Pritchett and Woolcock 2017; Capability traps and isomorphic mimicry: Pritchett, Woolcock and Andrews 2013",
-   "intervention_evidence": "Lafuente and Gonzalez 2018, Do Delivery Units Deliver? Assessing Government Innovations, Inter-American Development Bank Technical Note | Booth and Unsworth 2014, Politically Smart, Locally Led Development, ODI Discussion Paper",
-   "evidence_finding": "Reviews of delivery units in 14 Latin American and Caribbean governments and of seven aid-funded reforms report results where approaches were tailored to context, iterative and locally led, but the evidence rests on case studies.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "direct",
-   "evidence_basis": "IDB summary: 14 governments 2007-2018, units tailored to context, improved management and results under preconditions; ODI summary: seven cases, iterative problem-solving, local actors leading.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://thelivinglib.org/do-delivery-units-deliver-assessing-government-innovations/ | https://odi.org/en/publications/politically-smart-locally-led-development/",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (core); OECD2019 (core); OECD2024 (core); ROGGE2016 (core); IMF2018 (complementary); RODRIK2010 (complementary)",
-   "theory_n": 6,
-   "thai_strategies": 2,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Iterative, problem-driven reform methods",
-   "joins_when_draft": "it adopts an iterative or experimental way of working inside government, or sequences reform to what the administration can do",
-   "joins_not_draft": "it is a territorial pilot (L3-219) (L3-218); it is monitoring (L3-217) (L3-228)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-218 and L3-228 (Andrews, Pritchett and Woolcock) and intervention_evidence finding (Lafuente and Gonzalez; Booth and Unsworth)",
-   "check_note": "Both bundled parts come from the same PDIA literature, and the delivery-unit and locally led reform evidence fits the iterative-method test."
   },
   {
    "lever_id": "LV-184",
@@ -19607,183 +18516,6 @@
    "check_note": "GDPR is the data protection law the lever describes; mixed effects do not contradict the rights-and-trust mechanism."
   },
   {
-   "lever_id": "LV-186",
-   "level": "L3",
-   "lever": "Cybersecurity standards, agencies and incident response",
-   "lever_full": "Cybersecurity standards, agencies and incident response",
-   "family_id": "F-46",
-   "family": "Regulatory adaptation to technology",
-   "group_id": "G-24",
-   "group": "Safe-to-fail innovation",
-   "subpillar": "Adaptability and Course Correction",
-   "subpillar_code": "ADA",
-   "pillar": "Making Change Happen",
-   "joins_when": "it secures systems against cyber attack",
-   "joins_not": "it is privacy rights (L3-221)",
-   "pathway_ids": [
-    "L3-222"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-222 Cyber-risk externalities",
-   "text_cues": "cyber|cert\\b|csirt|online safety|cybercrime",
-   "risks": [
-    "Technological Change"
-   ],
-   "entry_points": [
-    "Cybersecurity Risk Management and Data Sovereignty Policy Framework",
-    "National cyber security bill",
-    "Cybersecurity Protection Measures for Digital Public Services",
-    "Secure government service platform and data protection",
-    "Government Computer Security Incident Co-ordination Center"
-   ],
-   "evidence": "Cyber-risk externalities: Anderson and Moore 2006",
-   "intervention_evidence": "Creese, Dutton, Esteve-Gonzalez and Shillair 2021, Cybersecurity Capacity-Building: Cross-National Benefits and International Divides, Journal of Cyber Policy",
-   "evidence_finding": "Across 73 countries, national cybersecurity capacity was generally low and still forming, and higher capacity maturity was associated with positive outcomes after controlling for context; the evidence is cross-national and correlational.",
-   "evidence_strength": "thin",
-   "evidence_design": "observational",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstract: field research in 73 nations; capacity low and forming; relatively higher maturity translates into positive outcomes, controlling for contextual variables.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/a/taf/rcybxx/v6y2021i2p214-235.html",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "FLANAGAN2011 (secondary); OSLO2018 (secondary); UNCTAD2026 (secondary); WDR2024 (secondary)",
-   "theory_n": 4,
-   "thai_strategies": 1,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Cybersecurity standards, agencies and incident response",
-   "joins_when_draft": "it secures systems against cyber attack",
-   "joins_not_draft": "it is privacy rights (L3-221)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-222 and intervention_evidence finding (Creese et al. 2021)",
-   "check_note": "National cybersecurity capacity is the lever's action; the evidence is correlational but on target."
-  },
-  {
-   "lever_id": "LV-187",
-   "level": "L3",
-   "lever": "Platform competition and digital market rules",
-   "lever_full": "Platform competition and digital market rules",
-   "family_id": "F-46",
-   "family": "Regulatory adaptation to technology",
-   "group_id": "G-24",
-   "group": "Safe-to-fail innovation",
-   "subpillar": "Adaptability and Course Correction",
-   "subpillar_code": "ADA",
-   "pillar": "Making Change Happen",
-   "joins_when": "it regulates digital platforms' market power",
-   "joins_not": "it is general competition (L3-169)",
-   "pathway_ids": [
-    "L3-223"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-223 Market power in digital platforms",
-   "text_cues": "digital platform|platform (econom|regulat|competition|market|worker)|online platform|big tech|digital (market|competition)|telecom (regulat|competition)|spectrum",
-   "risks": [
-    "Technological Change"
-   ],
-   "entry_points": [],
-   "evidence": "Market power in digital platforms: Cremer, de Montjoye and Schweitzer 2019",
-   "intervention_evidence": "Akesson, Amlani, Cepeda Suarez, Chissell, Hunt, Luca and Petrie 2026, Active Choice Interventions at Scale: Browser Defaults under the Digital Markets Act, NBER Working Paper 35112 | Pape and Rossi 2026, Is Competition Only One Click Away? The Digital Markets Act's Impact on Google Maps, Marketing Science",
-   "evidence_finding": "Under the EU Digital Markets Act, a mandated browser choice screen raised Firefox use by 91 percent on iOS and 13 percent on Android, but removing Google Maps links from search left rival map services without gains.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstracts: difference-in-differences; Firefox +91 percent iOS, +13 percent Android; map searches returned to Google Maps, rivals no comparable gain, weak competitive effects.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://ideas.repec.org/p/nbr/nberwo/35112.html | https://researchportal.ip-paris.fr/en/publications/is-competition-only-one-click-away-the-digital-markets-acts-impac/",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "FLANAGAN2011 (secondary); OSLO2018 (secondary); UNCTAD2026 (secondary); WDR2024 (secondary)",
-   "theory_n": 4,
-   "thai_strategies": 0,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Platform competition and digital market rules",
-   "joins_when_draft": "it regulates digital platforms' market power",
-   "joins_not_draft": "it is general competition (L3-169)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence finding (DMA studies) and pathway L3-223",
-   "check_note": "Digital Markets Act remedies are platform market-power rules, matching the lever and its split from general competition."
-  },
-  {
-   "lever_id": "LV-188",
-   "level": "L3",
-   "lever": "Rules and incentives steering AI and automation",
-   "lever_full": "Rules and incentives steering AI and automation",
-   "family_id": "F-46",
-   "family": "Regulatory adaptation to technology",
-   "group_id": "G-24",
-   "group": "Safe-to-fail innovation",
-   "subpillar": "Adaptability and Course Correction",
-   "subpillar_code": "ADA",
-   "pillar": "Making Change Happen",
-   "joins_when": "it regulates or steers AI and automation",
-   "joins_not": "it reskills displaced workers (L3-184)",
-   "pathway_ids": [
-    "L3-224"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-224 Direction of AI and automation",
-   "text_cues": "artificial intelligence|\\bai\\b|algorithm",
-   "risks": [
-    "Technological Change"
-   ],
-   "entry_points": [],
-   "evidence": "Direction of AI and automation: Acemoglu and Restrepo 2020",
-   "intervention_evidence": "Kreitmeir and Raschky 2023, The Unintended Consequences of Censoring Digital Technology: Evidence from Italy's ChatGPT Ban, arXiv working paper",
-   "evidence_finding": "Italy's temporary ChatGPT ban cut Italian developers' coding output by around 50 percent in the first two business days before it recovered, and raised use of censorship-circumvention tools.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "partial",
-   "evidence_basis": "abstract: over 8,000 GitHub users, difference-in-differences; output fell around 50 percent for two business days, then recovered; synthetic control shows circumvention rose.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://arxiv.org/abs/2304.09339v1",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "FLANAGAN2011 (secondary); OSLO2018 (secondary); UNCTAD2026 (secondary); WDR2024 (secondary)",
-   "theory_n": 4,
-   "thai_strategies": 1,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Rules and incentives steering AI and automation",
-   "joins_when_draft": "it regulates or steers AI and automation",
-   "joins_not_draft": "it reskills displaced workers (L3-184)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-224 and intervention_evidence finding (Kreitmeir and Raschky 2023)",
-   "check_note": "The evidence is a regulatory restriction on AI rather than steering its direction, so fit is partial, but it is AI regulation and the tests fit."
-  },
-  {
    "lever_id": "LV-189",
    "level": "L3",
    "lever": "Participatory planning and budgeting",
@@ -19846,67 +18578,6 @@
    "check_literature_ok": true,
    "check_source": "intervention_evidence finding (Goncalves 2014) and pathway L3-247",
    "check_note": "Participatory budgeting shifting allocations is the lever's action and mechanism."
-  },
-  {
-   "lever_id": "LV-190",
-   "level": "L3",
-   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
-   "lever_full": "Coordinating bodies, integrated mechanisms and whole-of-government arrangements",
-   "family_id": "F-48",
-   "family": "Coordination across agencies and levels",
-   "group_id": "G-26",
-   "group": "Cross-government coordination",
-   "subpillar": "Adaptability and Course Correction",
-   "subpillar_code": "ADA",
-   "pillar": "Making Change Happen",
-   "joins_when": "it sets up or strengthens coordination among agencies, sectors or levels of government",
-   "joins_not": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
-   "pathway_ids": [
-    "L3-220"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-220 Coordination across agencies and levels",
-   "text_cues": "coordinat|whole-of-government|inter-?ministerial|inter-?agency|alignment|coheren",
-   "risks": [],
-   "entry_points": [
-    "Integrated central-local governance system",
-    "Provincial Agricultural Collaboration Mechanisms",
-    "Develop monitoring systems for community development programmes",
-    "Cross-organizational Public Administration Integration",
-    "Outcome-Based Integration Mechanism"
-   ],
-   "evidence": "Coordination across agencies and levels: Hooghe and Marks 2003",
-   "intervention_evidence": "Alessandro, Lafuente and Santiso 2014, Governing to Deliver: Reinventing the Center of Government in Latin America and the Caribbean, Inter-American Development Bank",
-   "evidence_finding": "An IDB study of centre-of-government units in Latin America and the Caribbean, with cases from Chile and Pernambuco in Brazil, argues they give direction and coherence and help priorities reach citizens; it offers a diagnostic matrix, not impact estimates.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "partial",
-   "evidence_basis": "publisher summary: conceptual framework, regional trends, Chile and Pernambuco cases, Institutional Development Matrix; argues centre of government provides direction and coherence; no measured effects.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://publications.iadb.org/en/governing-deliver-reinventing-center-government-latin-america-and-caribbean",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "",
-   "theory_n": 0,
-   "thai_strategies": 17,
-   "backing_score": 0.5,
-   "backing_grade": "unbacked",
-   "lever_draft": "Coordinating bodies, integrated mechanisms and whole-of-government",
-   "joins_when_draft": "it sets up or strengthens coordination among agencies, sectors or levels of government",
-   "joins_not_draft": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-220 and intervention_evidence finding (Alessandro et al. 2014)",
-   "check_note": "Centre-of-government coordination units are the lever's action; the evidence is diagnostic, not impact estimates."
   },
   {
    "lever_id": "LV-191",
@@ -20270,69 +18941,6 @@
    "check_note": "Simplified business registration is a procedure-simplification reform; the modest effect it finds limits the size of gains but does not contradict the lever. The pathway citation is marked to verify."
   },
   {
-   "lever_id": "LV-197",
-   "level": "L3",
-   "lever": "Emergency operations centres, surge staff, beds and stockpiles",
-   "lever_full": "Emergency operations centres, surge staff, beds and stockpiles for services",
-   "family_id": "F-51",
-   "family": "Surge, continuity and relief",
-   "group_id": "G-28",
-   "group": "Rapid resource mobilisation",
-   "subpillar": "Agility and Delivery Capability",
-   "subpillar_code": "AGI",
-   "pillar": "Making Change Happen",
-   "joins_when": "it builds capacity that services can expand in an emergency: operations centres, reserve staff and beds, preparedness training",
-   "joins_not": "it keeps routine services running (L3-243), relieves households (L3-244) or holds national stocks of critical goods (L3-205)",
-   "pathway_ids": [
-    "L3-242"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-242 Surge capacity and stockpiles",
-   "text_cues": "surge|stockpil|isolation|oxygen|emergency (stock|reserve)|reserve staff|vaccine (production|manufactur)",
-   "risks": [
-    "Pandemics"
-   ],
-   "entry_points": [
-    "Chemical, Biological, Radiological, Nuclear, and Explosive Incident Preparedness Enhancement",
-    "Essential Medical Supplies Logistics Capacity Strengthening",
-    "Emergency Operations Center Capacity Strengthening",
-    "Public Health Emergency Management Knowledge Transfer and PHEOC Capacity Building",
-    "Secure Essential Materials for Public Health Emergency Response"
-   ],
-   "evidence": "Surge capacity and stockpiles: Castillo et al. 2021",
-   "intervention_evidence": "National Academies of Sciences, Engineering, and Medicine 2020, Mixed-Method Review of Activating a Public Health Emergency Operations Center (Appendix B2), Evidence-Based Practice for Public Health Emergency Preparedness and Response, National Academies Press",
-   "evidence_finding": "A mixed-method review found no research measuring the effectiveness of public health emergency operations centres; qualitative studies and after-action reports suggest activation makes responses more efficient and flexible, but activation alone is not a comprehensive solution.",
-   "evidence_strength": "thin",
-   "evidence_design": "meta-analysis or systematic review",
-   "evidence_fit": "direct",
-   "evidence_basis": "review text: no research on PHEOC effectiveness identified; qualitative studies and after-action reports suggest more efficient response; simply activating is not comprehensive.",
-   "evidence_checked": "full text",
-   "evidence_verified": "yes",
-   "evidence_url": "https://www.nationalacademies.org/read/25650/chapter/15",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (secondary); ILO2024 (secondary); UNDP1990 (secondary); UNDP1994 (secondary)",
-   "theory_n": 4,
-   "thai_strategies": 3,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Emergency operations centres, surge staff, beds and stockpiles",
-   "joins_when_draft": "it builds capacity that can expand in an emergency: operations centres, reserves, preparedness training",
-   "joins_not_draft": "it keeps routine services running (L3-243) or relieves households (L3-244)",
-   "check_verdict": "fix",
-   "check_name_ok": true,
-   "check_tests_ok": false,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-242 causal_input and condition (reserve beds and staff) vs pathway L3-205 (strategic stocks)",
-   "check_note": "The bare 'reserves' in joins_when overlaps with strategic stocks (L3-205), which LV-175 claims and which already sends surge capacity here. Naming reserve staff and beds and pointing to L3-205 removes the double claim; the EOC review evidence is on target."
-  },
-  {
    "lever_id": "LV-198",
    "level": "L3",
    "lever": "Continuity plans and backup delivery",
@@ -20457,65 +19065,6 @@
    "check_literature_ok": true,
    "check_source": "intervention_evidence finding (Doocy and Tappis 2017; Hidrobo et al. 2014)",
    "check_note": "Relief modality evidence matches the speed-and-modality pathway."
-  },
-  {
-   "lever_id": "LV-200",
-   "level": "L3",
-   "lever": "Build-back-better reconstruction",
-   "lever_full": "Build-back-better reconstruction",
-   "family_id": "F-51",
-   "family": "Surge, continuity and relief",
-   "group_id": "G-28",
-   "group": "Rapid resource mobilisation",
-   "subpillar": "Agility and Delivery Capability",
-   "subpillar_code": "AGI",
-   "pillar": "Making Change Happen",
-   "joins_when": "it rebuilds after disasters to higher standards",
-   "joins_not": "it hardens assets before the event (L3-087)",
-   "pathway_ids": [
-    "L3-245"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-245 Reconstruction quality and future losses",
-   "text_cues": "reconstruct|post-?disaster|rebuild|build back|disaster recover|recovery.{0,40}(disaster|flood|cyclone|earthquake|typhoon)",
-   "risks": [
-    "Climate Change"
-   ],
-   "entry_points": [
-    "Post-Disaster Inspection Standards"
-   ],
-   "evidence": "Reconstruction quality and future losses: Hallegatte, Rentschler and Walsh 2018",
-   "intervention_evidence": "Kennedy, Ashmore, Babister and Kelman 2008, The Meaning of Build Back Better: Evidence from Post-Tsunami Aceh and Sri Lanka, Journal of Contingencies and Crisis Management",
-   "evidence_finding": "Lessons from post-tsunami shelter and settlement in Aceh and Sri Lanka stress that community involvement is essential but need not mean community control, and that agencies must weigh their capacity and links to other sectors.",
-   "evidence_strength": "thin",
-   "evidence_design": "case studies or descriptive",
-   "evidence_fit": "direct",
-   "evidence_basis": "partial abstract: community involvement essential but not necessarily control; implementers consider capacity and links to other sectors; plan ahead.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://www.academia.edu/34728123",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "ANDREWS2017 (secondary); ILO2024 (secondary); UNDP1990 (secondary); UNDP1994 (secondary)",
-   "theory_n": 4,
-   "thai_strategies": 0,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Build-back-better reconstruction",
-   "joins_when_draft": "it rebuilds after disasters to higher standards",
-   "joins_not_draft": "it hardens assets before the event (L3-087)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "pathway L3-245 and intervention_evidence finding (Kennedy et al. 2008)",
-   "check_note": "Post-tsunami build-back-better lessons are on the lever's action; the evidence is thin and qualitative."
   },
   {
    "lever_id": "LV-201",
@@ -20756,67 +19305,6 @@
    "check_literature_ok": true,
    "check_source": "intervention_evidence finding (IMF 2015; Williams 2017) and pathway L3-236",
    "check_note": "Investment management efficiency and project completion match the project-cycle scope."
-  },
-  {
-   "lever_id": "LV-205",
-   "level": "L3",
-   "lever": "Budget preparation, execution and results-based budgeting",
-   "lever_full": "Budget preparation, execution and results-based budgeting",
-   "family_id": "F-52",
-   "family": "Revenue and spending systems",
-   "group_id": "G-28",
-   "group": "Rapid resource mobilisation",
-   "subpillar": "Agility and Delivery Capability",
-   "subpillar_code": "AGI",
-   "pillar": "Making Change Happen",
-   "joins_when": "it reforms budgeting: preparation, allocation, execution, results-based or area-based budgeting",
-   "joins_not": "it is a fiscal rule (L3-097)",
-   "pathway_ids": [
-    "L3-237"
-   ],
-   "n_pathways": 1,
-   "pathways": "L3-237 Budget institutions and execution",
-   "text_cues": "budget (reform|process|credib|execution|institution|classification|preparation|system|transparen)|programme budget|performance budget|\\bmtef\\b|medium-term (expenditure|budget|fiscal framework)|treasury single|\\bifmis\\b|cash management|public financial management|\\bpfm\\b|expenditure management",
-   "risks": [],
-   "entry_points": [
-    "Fiscal Budget Preparation Effectiveness Enhancement",
-    "Link Eleventh Plan implementation to annual budgeting",
-    "Priority-Based Budget Allocation and Expenditure Efficiency Reform",
-    "Results-Based Local Budgeting Reform",
-    "Integrate Eleventh Plan priorities into government policy and budgeting"
-   ],
-   "evidence": "Budget institutions and execution: von Hagen 1992; Alesina and Perotti 1996",
-   "intervention_evidence": "Vlaicu, Verhoeven, Grigoli and Mills 2014, Multiyear Budgets and Fiscal Performance: Panel Data Evidence, Journal of Public Economics",
-   "evidence_finding": "Across countries adopting medium-term budget frameworks in 1990-2008, multiyear budgeting improved budget balance by about 2 percentage points, with more advanced phases having larger effects and only the top phase improving health sector efficiency.",
-   "evidence_strength": "thin",
-   "evidence_design": "quasi-experimental",
-   "evidence_fit": "direct",
-   "evidence_basis": "abstract: within-country variation in adoption, dynamic panel; budget balance +2 points; larger for advanced phases; top phase alone affects health technical efficiency.",
-   "evidence_checked": "abstract",
-   "evidence_verified": "yes",
-   "evidence_url": "https://econpapers.repec.org/RePEc:eee:pubeco:v:111:y:2014:i:c:p:79-95",
-   "framework_source": "",
-   "framework_where": "",
-   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
-   "framework_refs": [],
-   "thesis_refs": [],
-   "thesis_n": 0,
-   "thesis_citations": "",
-   "framework_status": "none",
-   "theory_anchor_ids": "IMF2018 (core); WDR2017 (core); HOOD1983 (complementary); WDR2024 (complementary); ANDREWS2017 (secondary); ILO2024 (secondary); LASCOUMES2007 (secondary); NORTH1990 (secondary); UNDP1990 (secondary); WDR2006 (secondary)",
-   "theory_n": 10,
-   "thai_strategies": 5,
-   "backing_score": 1,
-   "backing_grade": "unbacked",
-   "lever_draft": "Budget preparation, execution and results-based budgeting",
-   "joins_when_draft": "it reforms budgeting: preparation, allocation, execution, results-based or area-based budgeting",
-   "joins_not_draft": "it is a fiscal rule (L3-097)",
-   "check_verdict": "keep",
-   "check_name_ok": true,
-   "check_tests_ok": true,
-   "check_literature_ok": true,
-   "check_source": "intervention_evidence finding (Vlaicu et al. 2014) and pathway L3-237",
-   "check_note": "Medium-term budget frameworks are budget preparation institutions, as the lever describes."
   },
   {
    "lever_id": "LV-206",
@@ -23741,7 +22229,7 @@
    "v2_family_id": "FAM-05",
    "v2_family": "Health and longevity",
    "revised": "cues",
-   "lever": "Food safety standards, inspection, certification and traceability",
+   "lever": "",
    "joins_when": "it controls the safety or standards of food along the chain",
    "joins_not": "it is product quality for export in general (L3-114) or animal disease (L3-163)",
    "entry_points": [
@@ -23751,7 +22239,8 @@
     "Food Chain Safety Monitoring and Control",
     "National emergency alert and food safety traceability systems"
    ],
-   "lever_id": "LV-030"
+   "lever_id": "",
+   "dropped_lever": "LV-030"
   },
   {
    "pathway_id": "L3-057",
@@ -23788,11 +22277,12 @@
    "v2_family_id": "FAM-17",
    "v2_family": "Cities, regions and spatial development",
    "revised": "cues",
-   "lever": "Storage, cold chains and post-harvest handling",
+   "lever": "",
    "joins_when": "it cuts losses between harvest and market: storage, handling, cold chain",
    "joins_not": "it is transport to market (L3-155) or processing industry (L3-151)",
    "entry_points": [],
-   "lever_id": "LV-031"
+   "lever_id": "",
+   "dropped_lever": "LV-031"
   },
   {
    "pathway_id": "L3-058",
@@ -23951,7 +22441,7 @@
    "v2_family_id": "FAM-02",
    "v2_family": "Safety from violence and exploitation",
    "revised": "",
-   "lever": "Legal aid, alternative dispute resolution, access to justice",
+   "lever": "",
    "joins_when": "it helps people resolve disputes or get legal help",
    "joins_not": "it is commercial contract enforcement (L3-171) or court independence (L3-213)",
    "entry_points": [
@@ -23961,7 +22451,8 @@
     "Judicial complaint and remedy access improvement",
     "Alternative and Community Justice Systems Promotion"
    ],
-   "lever_id": "LV-035"
+   "lever_id": "",
+   "dropped_lever": "LV-035"
   },
   {
    "pathway_id": "L3-066",
@@ -25157,7 +23648,7 @@
    "v2_family_id": "FAM-04",
    "v2_family": "Human capital formation",
    "revised": "",
-   "lever": "Digital skills training for workers, students and firms",
+   "lever": "",
    "joins_when": "it teaches digital skills",
    "joins_not": "it provides connectivity or devices (L3-261)",
    "entry_points": [
@@ -25166,7 +23657,8 @@
     "English and Digital Skills Development",
     "Learner English and digital skills development"
    ],
-   "lever_id": "LV-062"
+   "lever_id": "",
+   "dropped_lever": "LV-062"
   },
   {
    "pathway_id": "L3-261",
@@ -26033,11 +24525,12 @@
    "v2_family_id": "FAM-09",
    "v2_family": "Natural capital and ecosystems",
    "revised": "",
-   "lever": "Biosecurity and invasive species control",
+   "lever": "",
    "joins_when": "it controls invasive species or plant and animal biosecurity at borders",
    "joins_not": "it is animal disease in farming (L3-163)",
    "entry_points": [],
-   "lever_id": "LV-080"
+   "lever_id": "",
+   "dropped_lever": "LV-080"
   },
   {
    "pathway_id": "L3-105",
@@ -26813,13 +25306,14 @@
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
    "revised": "cues",
-   "lever": "Disclosure and management of guarantees, SOE and PPP liabilities",
+   "lever": "",
    "joins_when": "it assesses or controls fiscal risks and contingent liabilities",
    "joins_not": "it is the PPP contract itself (L3-238)",
    "entry_points": [
     "Fiscal Risk Prevention and Comprehensive Fiscal Position Assessment"
    ],
-   "lever_id": "LV-095"
+   "lever_id": "",
+   "dropped_lever": "LV-095"
   },
   {
    "pathway_id": "L3-099",
@@ -26856,11 +25350,12 @@
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
    "revised": "unmerged",
-   "lever": "Long-term fiscal planning for ageing and future generations",
+   "lever": "",
    "joins_when": "it names future generations or long-run fiscal burdens as the reason",
    "joins_not": "it is pension design (L3-025)",
    "entry_points": [],
-   "lever_id": "LV-096"
+   "lever_id": "",
+   "dropped_lever": "LV-096"
   },
   {
    "pathway_id": "L3-100",
@@ -27024,7 +25519,7 @@
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
    "revised": "cues",
-   "lever": "Retirement age, incentives and support for older workers",
+   "lever": "",
    "joins_when": "it keeps or brings older people into work",
    "joins_not": "it provides pensions (L3-025) or care (L3-104)",
    "entry_points": [
@@ -27033,7 +25528,8 @@
     "Marketing, finance, and information support for elderly employment",
     "Employment and Income Generation Support for Elderly People"
    ],
-   "lever_id": "LV-099"
+   "lever_id": "",
+   "dropped_lever": "LV-099"
   },
   {
    "pathway_id": "L3-104",
@@ -27070,7 +25566,7 @@
    "v2_family_id": "FAM-12",
    "v2_family": "Intergenerational balance",
    "revised": "",
-   "lever": "Long-term care systems, financing and family caregiver support",
+   "lever": "",
    "joins_when": "it provides, finances or organises long-term care for older or dependent people",
    "joins_not": "it is income in old age (L3-025)",
    "entry_points": [
@@ -27080,7 +25576,8 @@
     "Long-term Care Innovation for the Elderly",
     "Long-term care law for older persons"
    ],
-   "lever_id": "LV-100"
+   "lever_id": "",
+   "dropped_lever": "LV-100"
   },
   {
    "pathway_id": "L3-114",
@@ -27250,11 +25747,12 @@
    "v2_family_id": "FAM-14",
    "v2_family": "Integration into world markets",
    "revised": "",
-   "lever": "Air routes and connectivity for business travel",
+   "lever": "",
    "joins_when": "it builds direct air links for business and investment",
    "joins_not": "it is tourism arrivals (F-21)",
    "entry_points": [],
-   "lever_id": "LV-104"
+   "lever_id": "",
+   "dropped_lever": "LV-104"
   },
   {
    "pathway_id": "L3-118",
@@ -27422,7 +25920,7 @@
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
    "revised": "",
-   "lever": "Destination development, secondary destinations",
+   "lever": "",
    "joins_when": "it develops tourism destinations, routes or quality so that spending spreads locally",
    "joins_not": "it manages visitor numbers against capacity (L3-126) or shock exposure (L3-127)",
    "entry_points": [
@@ -27432,7 +25930,8 @@
     "Develop Quality Tourist Attractions and Services at Secondary Destinations",
     "Tourism Value-Addition and Community-Based OTOP Tourism Promotion"
    ],
-   "lever_id": "LV-107"
+   "lever_id": "",
+   "dropped_lever": "LV-107"
   },
   {
    "pathway_id": "L3-126",
@@ -27471,7 +25970,7 @@
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
    "revised": "",
-   "lever": "Carrying-capacity rules, sustainable tourism management and site",
+   "lever": "",
    "joins_when": "it limits or manages tourism to protect the destination",
    "joins_not": "it grows tourism (L3-125)",
    "entry_points": [
@@ -27481,7 +25980,8 @@
     "Creative Tourist Destination Development and Cluster Tourism Promotion",
     "Top Tourist Attraction Development and Rehabilitation Scheme"
    ],
-   "lever_id": "LV-108"
+   "lever_id": "",
+   "dropped_lever": "LV-108"
   },
   {
    "pathway_id": "L3-127",
@@ -27520,11 +26020,12 @@
    "v2_family_id": "FAM-13",
    "v2_family": "Productive transformation",
    "revised": "cues",
-   "lever": "Diversification of source markets and tourism crisis measures",
+   "lever": "",
    "joins_when": "it reduces tourism's exposure to shocks or spreads its source markets",
    "joins_not": "it is destination development (L3-125)",
    "entry_points": [],
-   "lever_id": "LV-109"
+   "lever_id": "",
+   "dropped_lever": "LV-109"
   },
   {
    "pathway_id": "L3-109",
@@ -28317,14 +26818,15 @@
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
    "revised": "",
-   "lever": "Diaspora engagement for trade, investment and knowledge",
+   "lever": "",
    "joins_when": "it mobilises nationals abroad for trade, investment or expertise",
    "joins_not": "it brings migrants home (L3-191)",
    "entry_points": [
     "Establish overseas chambers and coordination centers",
     "Incentivise expert foreigners and Thais abroad for technology and innovation development"
    ],
-   "lever_id": "LV-123"
+   "lever_id": "",
+   "dropped_lever": "LV-123"
   },
   {
    "pathway_id": "L3-135",
@@ -30202,11 +28704,12 @@
    "v2_family_id": "FAM-19",
    "v2_family": "Jobs and labour markets",
    "revised": "",
-   "lever": "Reskilling and support for workers displaced by automation",
+   "lever": "",
    "joins_when": "it supports workers displaced by technology or steers automation towards new tasks",
    "joins_not": "it is digital skills in general (L3-035)",
    "entry_points": [],
-   "lever_id": "LV-160"
+   "lever_id": "",
+   "dropped_lever": "LV-160"
   },
   {
    "pathway_id": "L3-189",
@@ -30760,7 +29263,7 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "",
-   "lever": "Forecasting, early-warning systems and hazard monitoring",
+   "lever": "",
    "joins_when": "it forecasts, monitors or warns of natural hazards",
    "joins_not": "it tells the public how to act (L3-264), detects disease (L3-207) or finances response (L3-209)",
    "entry_points": [
@@ -30770,7 +29273,8 @@
     "National security monitoring and early warning system",
     "Geo-informatics and Digital Surveillance Alert Systems"
    ],
-   "lever_id": "LV-170"
+   "lever_id": "",
+   "dropped_lever": "LV-170"
   },
   {
    "pathway_id": "L3-207",
@@ -30807,7 +29311,7 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "evidence",
-   "lever": "Disease surveillance, laboratories and outbreak response",
+   "lever": "",
    "joins_when": "it detects or contains disease outbreaks: surveillance, testing, laboratories, response teams",
    "joins_not": "it controls an endemic disease (L3-049) or the animal-human source (L3-208)",
    "entry_points": [
@@ -30817,7 +29321,8 @@
     "Capacity improvement and regional cooperation for epidemic prevention",
     "Early health warning systems"
    ],
-   "lever_id": "LV-171"
+   "lever_id": "",
+   "dropped_lever": "LV-171"
   },
   {
    "pathway_id": "L3-208",
@@ -30855,7 +29360,7 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "",
-   "lever": "One Health programmes at the animal-human-environment interface",
+   "lever": "",
    "joins_when": "it works on zoonotic disease at its source: animal health, wildlife, One Health coordination",
    "joins_not": "it is human surveillance (L3-207)",
    "entry_points": [
@@ -30865,7 +29370,8 @@
     "Multi-sectoral zoonotic disease transmission minimization mechanism",
     "One Health Zoonotic Disease Surveillance and Response Capacity Development"
    ],
-   "lever_id": "LV-172"
+   "lever_id": "",
+   "dropped_lever": "LV-172"
   },
   {
    "pathway_id": "L3-199",
@@ -30903,11 +29409,12 @@
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
    "revised": "evidence",
-   "lever": "Reducing concentration and dependence in trade and supply",
+   "lever": "",
    "joins_when": "it names reducing dependence on a few commodities or markets",
    "joins_not": "it holds reserves against the swings (L3-198)",
    "entry_points": [],
-   "lever_id": "LV-173"
+   "lever_id": "",
+   "dropped_lever": "LV-173"
   },
   {
    "pathway_id": "L3-202",
@@ -30946,13 +29453,14 @@
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
    "revised": "cues",
-   "lever": "Reducing concentration and dependence in trade and supply",
+   "lever": "",
    "joins_when": "it reduces dependence on few suppliers of essentials: energy security, supply-chain resilience",
    "joins_not": "it builds domestic capacity (L3-204) or stocks (L3-205)",
    "entry_points": [
     "Fostering supply chain connections for ZEV production"
    ],
-   "lever_id": "LV-173"
+   "lever_id": "",
+   "dropped_lever": "LV-173"
   },
   {
    "pathway_id": "L3-203",
@@ -30989,11 +29497,12 @@
    "v2_family_id": "FAM-22",
    "v2_family": "Economic resilience to external shocks",
    "revised": "",
-   "lever": "Reducing concentration and dependence in trade and supply",
+   "lever": "",
    "joins_when": "it names geopolitical or coercive leverage as the risk",
    "joins_not": "it is accidental disruption (L3-202)",
    "entry_points": [],
-   "lever_id": "LV-173"
+   "lever_id": "",
+   "dropped_lever": "LV-173"
   },
   {
    "pathway_id": "L3-198",
@@ -31289,11 +29798,12 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "",
-   "lever": "Foresight, scenarios and long-term strategy units",
+   "lever": "",
    "joins_when": "it builds or uses foresight, scenarios or futures analysis",
    "joins_not": "it is statistics on the present (L3-210) or a development plan (L3-212)",
    "entry_points": [],
-   "lever_id": "LV-177"
+   "lever_id": "",
+   "dropped_lever": "LV-177"
   },
   {
    "pathway_id": "L3-212",
@@ -31334,7 +29844,7 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "cues",
-   "lever": "National, sector and investment plans that coordinate investment",
+   "lever": "",
    "joins_when": "it formulates or implements a plan that coordinates investments or sectors",
    "joins_not": "it monitors the plan (L3-217) or coordinates agencies day to day (L3-220)",
    "entry_points": [
@@ -31342,7 +29852,8 @@
     "All-Hazards Emergency Health Crisis Management Planning and Preparedness",
     "Integrated Renewable Energy and Energy Efficiency Research Planning"
    ],
-   "lever_id": "LV-178"
+   "lever_id": "",
+   "dropped_lever": "LV-178"
   },
   {
    "pathway_id": "L3-210",
@@ -31380,7 +29891,7 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "",
-   "lever": "Statistical systems, surveys, censuses and analysis for decisions",
+   "lever": "",
    "joins_when": "it produces, analyses or publishes data for planning or decisions: statistics, surveys, dashboards for analysis",
    "joins_not": "it links data across bodies (L3-263), builds the records a programme runs on (L3-265) or monitors a programme (L3-217)",
    "entry_points": [
@@ -31390,7 +29901,8 @@
     "Efficient Monitoring and Evaluation Database",
     "Local-level databases for planning and evaluation"
    ],
-   "lever_id": "LV-179"
+   "lever_id": "",
+   "dropped_lever": "LV-179"
   },
   {
    "pathway_id": "L3-263",
@@ -31428,7 +29940,7 @@
    "v2_family": "",
    "added_in": "v3",
    "revised": "",
-   "lever": "Shared registries, data standards",
+   "lever": "",
    "joins_when": "it links records or systems held by separate bodies, or sets the standards and rules for sharing them",
    "joins_not": "it is one body's own system (L3-265) or data protection rights (L3-221)",
    "entry_points": [
@@ -31438,7 +29950,8 @@
     "Public Sector Efficiency and Digital Transformation Reform",
     "Government and private-sector data linkage for R&D big data"
    ],
-   "lever_id": "LV-180"
+   "lever_id": "",
+   "dropped_lever": "LV-180"
   },
   {
    "pathway_id": "L3-265",
@@ -31568,7 +30081,7 @@
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
    "revised": "",
-   "lever": "Iterative, problem-driven reform methods",
+   "lever": "",
    "joins_when": "it adopts an iterative or experimental way of working inside government",
    "joins_not": "it is a territorial pilot (L3-219)",
    "entry_points": [
@@ -31576,7 +30089,8 @@
     "Design Thinking Support for Public Service Development",
     "Review and update education measures and success targets"
    ],
-   "lever_id": "LV-183"
+   "lever_id": "",
+   "dropped_lever": "LV-183"
   },
   {
    "pathway_id": "L3-228",
@@ -31611,11 +30125,12 @@
    "v2_family_id": "FAM-25",
    "v2_family": "State capability and service delivery",
    "revised": "moved",
-   "lever": "Iterative, problem-driven reform methods",
+   "lever": "",
    "joins_when": "it names form-over-function reform or capability as the problem",
    "joins_not": "it is monitoring (L3-217)",
    "entry_points": [],
-   "lever_id": "LV-183"
+   "lever_id": "",
+   "dropped_lever": "LV-183"
   },
   {
    "pathway_id": "L3-219",
@@ -31750,7 +30265,7 @@
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
    "revised": "",
-   "lever": "Cybersecurity standards, agencies and incident response",
+   "lever": "",
    "joins_when": "it secures systems against cyber attack",
    "joins_not": "it is privacy rights (L3-221)",
    "entry_points": [
@@ -31760,7 +30275,8 @@
     "Secure government service platform and data protection",
     "Government Computer Security Incident Co-ordination Center"
    ],
-   "lever_id": "LV-186"
+   "lever_id": "",
+   "dropped_lever": "LV-186"
   },
   {
    "pathway_id": "L3-223",
@@ -31797,11 +30313,12 @@
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
    "revised": "cues",
-   "lever": "Platform competition and digital market rules",
+   "lever": "",
    "joins_when": "it regulates digital platforms' market power",
    "joins_not": "it is general competition (L3-169)",
    "entry_points": [],
-   "lever_id": "LV-187"
+   "lever_id": "",
+   "dropped_lever": "LV-187"
   },
   {
    "pathway_id": "L3-224",
@@ -31838,11 +30355,12 @@
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
    "revised": "",
-   "lever": "Rules and incentives steering AI and automation",
+   "lever": "",
    "joins_when": "it regulates or steers AI and automation",
    "joins_not": "it reskills displaced workers (L3-184)",
    "entry_points": [],
-   "lever_id": "LV-188"
+   "lever_id": "",
+   "dropped_lever": "LV-188"
   },
   {
    "pathway_id": "L3-247",
@@ -31931,7 +30449,7 @@
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
    "revised": "",
-   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+   "lever": "",
    "joins_when": "it sets up or strengthens coordination among agencies, sectors or levels of government",
    "joins_not": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
    "entry_points": [
@@ -31941,7 +30459,8 @@
     "Cross-organizational Public Administration Integration",
     "Outcome-Based Integration Mechanism"
    ],
-   "lever_id": "LV-190"
+   "lever_id": "",
+   "dropped_lever": "LV-190"
   },
   {
    "pathway_id": "L3-226",
@@ -32337,7 +30856,7 @@
    "v2_family_id": "FAM-27",
    "v2_family": "Emergency response and recovery",
    "revised": "",
-   "lever": "Emergency operations centres, surge staff, beds and stockpiles",
+   "lever": "",
    "joins_when": "it builds capacity that can expand in an emergency: operations centres, reserves, preparedness training",
    "joins_not": "it keeps routine services running (L3-243) or relieves households (L3-244)",
    "entry_points": [
@@ -32347,7 +30866,8 @@
     "Public Health Emergency Management Knowledge Transfer and PHEOC Capacity Building",
     "Secure Essential Materials for Public Health Emergency Response"
    ],
-   "lever_id": "LV-197"
+   "lever_id": "",
+   "dropped_lever": "LV-197"
   },
   {
    "pathway_id": "L3-243",
@@ -32478,13 +30998,14 @@
    "v2_family_id": "FAM-27",
    "v2_family": "Emergency response and recovery",
    "revised": "cues",
-   "lever": "Build-back-better reconstruction",
+   "lever": "",
    "joins_when": "it rebuilds after disasters to higher standards",
    "joins_not": "it hardens assets before the event (L3-087)",
    "entry_points": [
     "Post-Disaster Inspection Standards"
    ],
-   "lever_id": "LV-200"
+   "lever_id": "",
+   "dropped_lever": "LV-200"
   },
   {
    "pathway_id": "L3-232",
@@ -32739,7 +31260,7 @@
    "v2_family_id": "FAM-26",
    "v2_family": "Public finances",
    "revised": "cues",
-   "lever": "Budget preparation, execution and results-based budgeting",
+   "lever": "",
    "joins_when": "it reforms budgeting: preparation, allocation, execution, results-based or area-based budgeting",
    "joins_not": "it is a fiscal rule (L3-097)",
    "entry_points": [
@@ -32749,7 +31270,8 @@
     "Results-Based Local Budgeting Reform",
     "Integrate Eleventh Plan priorities into government policy and budgeting"
    ],
-   "lever_id": "LV-205"
+   "lever_id": "",
+   "dropped_lever": "LV-205"
   },
   {
    "pathway_id": "L3-238",

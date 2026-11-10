@@ -24,7 +24,10 @@ csv.field_size_limit(10 ** 9)
 
 tree = json.load(open(os.path.join(HERE, "tree_v4.json"), encoding="utf-8"))
 MERGED = tree["meta"].get("merged_pathways", {})
-PW_LEVER = {p["pathway_id"]: p["lever_id"] for p in tree["pathways"]}
+DROPPED = {d["lever_id"]: d for d in tree["meta"].get("dropped_levers", [])}
+# a pathway whose lever was dropped is named by that lever's id, marked dropped
+PW_LEVER = {p["pathway_id"]: p["lever_id"] or ("%s (dropped)" % p["dropped_lever"] if p.get("dropped_lever") else p["pathway_id"])
+            for p in tree["pathways"]}
 LEVER_FAM = {lv["lever_id"]: lv["family_id"] for lv in tree["levers"]}
 FAM_GROUP = {f["family_id"]: f["group_id"] for f in tree["families"]}
 
@@ -76,6 +79,8 @@ data = {
         "conditional_risks": [{k: c[k] for k in c if k != "pathway_id"} if isinstance(c, dict) else c
                               for c in f.get("conditional_risks") or []]} for f in tree["families"]],
     "levers": [lever_row(lv) for lv in tree["levers"]],
+    "dropped": [{k: d.get(k) for k in ("lever_id", "lever", "family_id", "backing_grade_review", "thai_strategies")}
+                for d in DROPPED.values()],
 }
 
 
@@ -152,6 +157,10 @@ def country(paths):
             risks = []
         code, fam, lev, pw, grp = placement(r, r["_lifted"])
         reason = "" if r["_lifted"] else (r.get("reason") or "")[:200]
+        was = (r.get("lever_id") or "").strip()
+        if was in DROPPED and not r["_lifted"]:
+            reason = "Was on %s %s, dropped as unbacked by the literature review; now on the family. %s" % (
+                was, DROPPED[was]["lever"], reason)
         # [plan, name, objective, level, family, lever, group, sector, orientation, risks, reason]: no pathway
         out.append([idx[r["plan_id"]], r.get("name", ""), (r.get("objective") or "")[:200], code, fam, lev, grp,
                     r.get("sector_canonical") or r.get("sector", ""), r.get("response_orientation", ""), risks, reason])
@@ -180,6 +189,8 @@ data["country"] = country(paths) if paths else None
 if data["country"]:
     c = data["country"]
     nlv = sum(1 for r in c["rows"] if r[3] == "LV")
+    nre = sum(1 for r in c["rows"] if r[10].startswith("Was on LV-"))
+    print("strategies moved from a dropped lever to its family: %d" % nre)
     print("country: %s, %d plans, %d strategies, %d on a lever%s" % (
         c["name"], len(c["plans"]), len(c["rows"]), nlv,
         " (provisional: v3 placements lifted onto v4 levers)" if c["provisional"] else ""))

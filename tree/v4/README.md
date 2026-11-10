@@ -82,3 +82,9 @@ Reads `../v3/tree_v3.json` (which carries the bridge face) and the inputs, appli
 ## Status
 
 The workflow maps onto v4 by default (`workflow/prompts/M_map_v4.txt`; `workflow/pvii/tree.py` reads the lever level and the pathways as literature). Output rows carry `lever_id`, `lever`, `pathway_id` (optional), `reason` and `depth_basis`. Not done: the economists' network review of the levers and their tests; the Thai re-run on v4; objectives under the levers, which step M proposes.
+
+## Unbacked levers dropped (10 November 2026)
+
+The literature review of the levers (`PVII_mother_tree_v4_levers_review.xlsx`, uploaded 10 November) re-grades every lever after checking its literature and proposing new sources (Codebook sheet, column "backing grade (review)"). `inputs/lever_drops.json` lists the 31 levers it grades unbacked as a whole: no framework support and at most thin evidence on the action itself, even after the proposed sources. `build.py` leaves them out of the tree: lever ids are not reused (198 levers remain, LV-001 to LV-229 with gaps), their pathways stay under the family as literature with `lever_id` empty and `dropped_lever` set, and `tree_v4.json` lists them under `meta.dropped_levers`. Kept although partly unbacked: LV-010, LV-195 and LV-222 (unbacked for one part only; the review proposes a split) and LV-223 (thin, "could fall").
+
+Five families are left with no lever: F-21 Tourism export destinations, F-39 Hazard and exposure sensing, F-41 Scenario and futures work, F-42 Development planning, F-48 Coordination across agencies and levels. The 73 Thai 13th Plan strategies that sat on a dropped lever now sit on the lever's family (the viewer says so in the strategy's reason); they are not re-mapped, so the 13th Plan's share on a lever falls from 451 of 519 to 378. The review's other recommendations (fix citation, move, drop for single literature rows; split verdicts) are not applied here.

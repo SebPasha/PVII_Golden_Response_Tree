@@ -28,7 +28,7 @@ import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 V3 = os.path.join(os.path.dirname(HERE), "v3", "tree_v3.json")
-BUILT = "2026-11-03"
+BUILT = "2026-11-10"
 # Framework anchors the readers flagged as weak on 3 November 2026 (discussed, but thinly).
 WEAK_ANCHORS = {"LV-005", "LV-007", "LV-013", "LV-017", "LV-019", "LV-022", "LV-026", "LV-040", "LV-049", "LV-050",
                 "LV-064", "LV-078", "LV-079", "LV-081", "LV-082", "LV-085", "LV-094", "LV-097", "LV-104", "LV-111",
@@ -304,7 +304,19 @@ def load_lever_evidence():
     return out
 
 
+DROPS_FILE = os.path.join(HERE, "inputs", "lever_drops.json")
+
+
+def load_lever_drops():
+    """Levers the literature review of 10 November 2026 grades unbacked: left out of the tree, ids not reused."""
+    if not os.path.exists(DROPS_FILE):
+        return {}
+    return {d["lever_id"]: d for d in json.load(open(DROPS_FILE, encoding="utf-8"))["dropped"]}
+
+
 def main():
+    drops = load_lever_drops()
+    dropped = []
     lever_evidence = load_lever_evidence()
     framework_refs = load_framework_refs()
     thesis_refs = load_thesis_refs()
@@ -372,6 +384,15 @@ def main():
             lever["thai_strategies"] = thai.get(lid, 0)
             lever["backing_score"], lever["backing_grade"] = backing(lever)
             apply_check(lever, checks.get(lid))
+            if lid in drops:
+                # the pathways stay as literature under the family, with no lever above them
+                for m in members:
+                    paths[m]["lever_id"], paths[m]["lever"] = "", ""
+                    paths[m]["dropped_lever"] = lid
+                dropped.append({k: lever[k] for k in ("lever_id", "lever", "family_id", "family", "subpillar",
+                                                      "pathway_ids", "backing_grade", "thai_strategies")}
+                               | {"backing_grade_review": drops[lid]["backing_grade_review"]})
+                continue
             levers[lid] = lever
             fam["lever_ids"].append(lid)
             for m in members:
@@ -410,7 +431,7 @@ def main():
               ["pathway_id", "pathway", "lever_id", "lever", "family_id", "family", "group_id", "group",
                "subpillar", "pillar", "causal_input", "transmission", "outcome", "conditions", "distinction",
                "evidence", "evidence_status", "risks", "conditional_risks", "text_cues", "joins_when",
-               "joins_not", "v2_mechanism_id", "v2_mechanism", "added_in", "revised"])
+               "joins_not", "v2_mechanism_id", "v2_mechanism", "added_in", "revised", "dropped_lever"])
     tree = {"meta": {"version": "v4", "built": BUILT,
                      "levels": ["pillar", "subpillar", "L1 group", "L2 family", "L3 lever",
                                 "L4 pathway (literature; optional depth)", "objective", "strategy"],
@@ -421,7 +442,8 @@ def main():
                                    "recorded only when the lever has one pathway or the strategy's wording names the "
                                    "channel. The pathways' text cues are an advisory flag, never a veto.",
                      "source": "tree v3 (the reviewer's framework over v2's pathways, deep check of 30 October) with "
-                               "the bridge face of 3 November; LEVER_MERGES in build.py", "merged_pathways": merged_away},
+                               "the bridge face of 3 November; LEVER_MERGES in build.py", "merged_pathways": merged_away,
+                     "dropped_levers": dropped},
             "pillars": v3["pillars"], "subpillars": v3["subpillars"], "holding": v3["holding"],
             "groups": list(groups.values()), "families": list(families.values()),
             "levers": list(levers.values()), "pathways": list(paths.values()),
@@ -433,6 +455,12 @@ def main():
     print("v4: %d groups, %d families, %d levers over %d pathways (%d levers carry more than one); levers per family %s" % (
         len(groups), len(families), len(levers), len(paths), sum(1 for l in levers.values() if l["n_pathways"] > 1),
         dict(sorted(per_fam.items()))))
+    if dropped:
+        print("dropped as unbacked by the review: %d levers (%s), %d Thai strategies on them" % (
+            len(dropped), ", ".join(d["lever_id"] for d in dropped), sum(d["thai_strategies"] for d in dropped)))
+        empty = [f["family_id"] for f in families.values() if not f["lever_ids"]]
+        if empty:
+            print("families left with no lever: %s" % ", ".join(empty))
     if checks:
         print("literature check: %s" % dict(collections.Counter(l["check_verdict"] for l in levers.values())))
     print("backing: %s; families with no theory anchor: %d" % (
