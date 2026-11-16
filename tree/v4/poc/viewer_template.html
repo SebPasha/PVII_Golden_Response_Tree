@@ -221,6 +221,19 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .strat .oti b { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em }
 #ct th.colh { cursor: pointer }
 #ct th.colh:hover { color: var(--gold) }
+/* dropped parts and general branches */
+.leaf.dead ellipse { fill: var(--muted); stroke: var(--muted); fill-opacity: .35 }
+.leaf.dead text { fill: var(--muted); font-style: italic }
+.leaf.gen ellipse { stroke-width: 2 }
+.leaf.gen text { font-weight: 600 }
+.bud.drop circle { fill: var(--muted); stroke: var(--surface); fill-opacity: .85 }
+.bud.drop:hover circle, .bud.drop.on circle { stroke: var(--gold) }
+#ct tr.dead td, #ct tr.lvrow.drop td:first-child { color: var(--muted); font-style: italic; font-weight: 400 }
+#ct tr.hrow td { font-weight: 600 }
+#ct tr.hrow td:first-child { cursor: pointer }
+#ct tr.hrow td:first-child:hover { color: var(--gold) }
+.lvls a { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
+.lvls a:hover { color: var(--gold) }
 </style>
 
 <div class="wrap">
@@ -229,7 +242,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div>
       <div class="eyebrow">PV II · Golden Strategy Tree · 45 countries</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
@@ -299,7 +312,7 @@ const nLv = f => f.lever_ids.length;
 const famCol = fid => PCOL[SP[F[fid].subpillar_code].pillar];
 
 document.getElementById("counts").innerHTML = [
-  [D.groups.length, "groups"], [D.families.length, "families"], [D.levers.length, "levers"], [D.risks.length, "storms"]
+  [D.groups.length, "groups"], [D.families.length, "families"], [D.levers.length, "levers"], [D.dropped.length, "dropped"], [D.risks.length, "storms"]
 ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
 
 // ---------- layout ----------
@@ -315,6 +328,7 @@ ORDER.forEach(([pc, sps], pi) => {
       g.family_ids.forEach(fid => { slots.push({ fid, u }); u += 1; });
     });
   });
+  u += 0.9; slots.push({ fid: HOLD[pc], u }); u += 1;
 });
 const span = u - 1;
 const ang = {};
@@ -375,13 +389,13 @@ ORDER.forEach(([pc, sps]) => {
   sps.forEach(sc => {
     branch(R_P, pAng[pc], R_S, sAng[sc], 1.5 + Math.sqrt(lvOfSub(sc)) * 0.95, col, gBranches);
     D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
-      branch(R_S, sAng[sc], R_G, gAng[g.group_id], 1 + Math.sqrt(lvOfGroup(g)) * 0.65, col, gBranches);
+      branch(R_S, sAng[sc], R_G, gAng[g.group_id], 1 + Math.sqrt(lvOfGroup(g)) * 0.65, lvOfGroup(g) ? col : "var(--muted)", gBranches);
       g.family_ids.forEach(fid => {
-        branch(R_G, gAng[g.group_id], R_L, ang[fid], 0.8 + Math.sqrt(nLv(F[fid])) * 0.42, col, gBranches);
+        branch(R_G, gAng[g.group_id], R_L, ang[fid], 0.8 + Math.sqrt(nLv(F[fid])) * 0.42, nLv(F[fid]) ? col : "var(--muted)", gBranches);
         twig[fid] = geom(R_G, gAng[g.group_id], R_L, ang[fid]);
       });
       const [gx, gy] = pol(R_G, gAng[g.group_id]);
-      const n = el("circle", { cx: gx, cy: gy, r: 4.5, fill: "var(--surface)", stroke: col, "stroke-width": 2, class: "node", tabindex: 0, "data-g": g.group_id }, gNodes);
+      const n = el("circle", { cx: gx, cy: gy, r: 4.5, fill: "var(--surface)", stroke: lvOfGroup(g) ? col : "var(--muted)", "stroke-width": 2, class: "node", tabindex: 0, "data-g": g.group_id }, gNodes);
       el("title", {}, n).textContent = `${g.group}: ${g.family_ids.length} families, ${lvOfGroup(g)} levers`;
       n.addEventListener("click", () => show({ g: g.group_id }));
       n.addEventListener("keydown", e => { if (e.key === "Enter") show({ g: g.group_id }); });
@@ -395,6 +409,7 @@ ORDER.forEach(([pc, sps]) => {
     sn.addEventListener("click", () => show({ s: sc }));
     sn.addEventListener("keydown", e => { if (e.key === "Enter") show({ s: sc }); });
   });
+  branch(R_P, pAng[pc], R_L, ang[HOLD[pc]], 1.6, col, gBranches).setAttribute("stroke-dasharray", "5 4");
   const lxp = pc === "PFA" ? CX : pc === "SMG" ? CX - 310 : CX + 310;
   const lyp = 1000;
   const pg = el("g", { class: "node", tabindex: 0 }, gNodes);
@@ -411,23 +426,32 @@ D.families.forEach(f => {
   const col = famCol(f.family_id);
   const rx = 6 + Math.sqrt(n) * 3.1, ry = rx * 0.5;
   const [x, y] = pol(R_L + rx, a);
-  const g = el("g", { class: "leaf", tabindex: 0, "data-f": f.family_id }, gLeaves);
+  const g = el("g", { class: "leaf" + (n ? "" : " dead"), tabindex: 0, "data-f": f.family_id }, gLeaves);
   const e = el("ellipse", { cx: x, cy: y, rx, ry, transform: `rotate(${-a} ${x} ${y})`, fill: col, "fill-opacity": 0.82, stroke: col }, g);
   const flip = a > 90 || a < -90;
   const [tx, ty] = pol(R_L + 2 * rx + 7, a);
   const name = f.family.length > 44 ? f.family.slice(0, 42) + "…" : f.family;
   const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
   t.textContent = name;
-  el("title", {}, g).textContent = `${f.family} · ${n} levers`;
+  el("title", {}, g).textContent = n ? `${f.family} · ${n} levers` : `${f.family} · dropped: no lever left after the literature review, takes no strategies`;
   g.addEventListener("click", () => show({ f: f.family_id }));
   g.addEventListener("keydown", e => { if (e.key === "Enter") show({ f: f.family_id }); });
   leafEl[f.family_id] = { g, x, y, a, rx, rx0: rx, e, t, name, flip, n };
 });
 
 // buds (levers) along each family twig
-const budEl = {};
+const budEl = {}, dropEl = {};
 D.families.forEach(f => {
-  const col = famCol(f.family_id), ids = f.lever_ids, n = ids.length;
+  const col = famCol(f.family_id), ids = f.lever_ids, dr = D.dropped.filter(d => d.family_id === f.family_id), n = ids.length + dr.length;
+  dr.forEach((d, j) => {
+    const k = ids.length + j, b = bez(twig[f.family_id], 0.5 + 0.42 * (k + 0.5) / n), off = n === 1 ? 0 : (k % 2 ? 3.4 : -3.4);
+    const g = el("g", { class: "bud drop", tabindex: 0, "data-d": d.lever_id }, gBuds);
+    el("circle", { cx: b.x + b.nx * off, cy: b.y + b.ny * off, r: 2.3 }, g);
+    el("title", {}, g).textContent = `${d.lever} (${d.lever_id})\nDropped: graded unbacked by the literature review. No strategies are placed on it.`;
+    g.addEventListener("click", ev => { ev.stopPropagation(); show({ d: d.lever_id }); });
+    g.addEventListener("keydown", e => { if (e.key === "Enter") show({ d: d.lever_id }); });
+    dropEl[d.lever_id] = g;
+  });
   ids.forEach((lid, k) => {
     const v = V[lid];
     const b = bez(twig[f.family_id], 0.5 + 0.42 * (k + 0.5) / n);
@@ -439,6 +463,24 @@ D.families.forEach(f => {
     g.addEventListener("keydown", e => { if (e.key === "Enter") show({ v: lid }); });
     budEl[lid] = { g, c, col, x: b.x + b.nx * off, y: b.y + b.ny * off };
   });
+});
+// general branches: one leaf per pillar for the strategies that fit no live family
+const HNAME = Object.fromEntries(D.holding.map(x => [x.id, x.name]));
+const HPC = Object.fromEntries(Object.entries(HOLD).map(([p, h]) => [h, p]));
+const genEl = {};
+ORDER.forEach(([pc]) => {
+  const id = HOLD[pc], a = ang[id], col = PCOL[pc], rx = 8;
+  const [x, y] = pol(R_L + rx, a);
+  const g = el("g", { class: "leaf gen", tabindex: 0, "data-h": id }, gLeaves);
+  const e = el("ellipse", { cx: x, cy: y, rx, ry: rx * 0.5, transform: `rotate(${-a} ${x} ${y})`, fill: col, "fill-opacity": 0.82, stroke: col }, g);
+  const flip = a > 90 || a < -90;
+  const [tx, ty] = pol(R_L + 2 * rx + 7, a);
+  const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
+  t.textContent = HNAME[id];
+  el("title", {}, g).textContent = `${HNAME[id]}: strategies of this pillar that fit no live family`;
+  g.addEventListener("click", () => show({ h: id }));
+  g.addEventListener("keydown", e => { if (e.key === "Enter") show({ h: id }); });
+  genEl[id] = { g, x, y, a, rx, rx0: rx, e, t, name: HNAME[id], flip, n: 0 };
 });
 const gFruit = el("g", { "pointer-events": "none" });
 function sizeLeaf(L, rx, label, hollow) {
@@ -473,7 +515,7 @@ D.risks.forEach(r => {
   storms.appendChild(b);
 });
 
-const state = { risk: null, q: "", sel: null, lv: null };
+const state = { risk: null, q: "", sel: null, lv: null, h: null, d: null };
 const rName = r => typeof r === "string" ? r : r.risk;
 function riskKind(f, r) {
   if ((f.risks || []).includes(r)) return "direct";
@@ -493,7 +535,7 @@ let qLev = new Set(), qFam = new Set();
 function indexHits(q) {
   qLev = new Set(); qFam = new Set();
   if (!q) return;
-  stratHits(q).forEach(r => { if (r[5]) qLev.add(r[5]); if (r[4]) qFam.add(r[4]); });
+  stratHits(q).forEach(r => { if (r[5]) qLev.add(r[5]); if (r[4]) qFam.add(r[4]); if (r[3] === "STD") qFam.add(r[6]); });
 }
 function matches(f, q) {
   if (!q) return true;
@@ -525,6 +567,16 @@ function paint() {
       }
     }
   });
+  Object.keys(genEl).forEach(id => {
+    const L = genEl[id];
+    L.g.classList.toggle("dim", state.h !== id && (!!state.risk || (!!state.q && !qFam.has(id))));
+    L.g.classList.toggle("sel", state.h === id);
+  });
+  D.dropped.forEach(d => {
+    const g = dropEl[d.lever_id];
+    g.classList.toggle("on", state.d === d.lever_id);
+    g.classList.toggle("dim", state.d !== d.lever_id && state.sel !== d.family_id && !!(state.risk || state.q));
+  });
   gBranches.style.opacity = (state.risk || state.q) ? 0.45 : 1;
 }
 
@@ -554,8 +606,11 @@ function leverList(lids, num) {
 function show(o) {
   state.sel = o.f || null;
   state.lv = o.v || null;
+  state.h = o.h || null; state.d = o.d || null;
   let h = "";
-  if (o.v) {
+  if (o.h || o.d) {
+    h = extraPanel(o);
+  } else if (o.v) {
     const v = V[o.v], f = F[v.family_id], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar;
     h = crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: f.family_id }]]) +
       `<div class="sect"><div class="eyebrow">Lever ${v.lever_id}</div><h2>${esc(v.lever)}</h2></div>
@@ -577,8 +632,8 @@ function show(o) {
       `<div class="sect"><div class="eyebrow">Family ${f.family_id}</div><h2>${esc(f.family)}</h2></div>
       <!--CTRY-->
       <p class="def">${esc(f.definition)}</p>
-      <div class="sect"><div class="eyebrow">Levers (${nLv(f)})${lc ? " · strategies in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
-      ${(D.dropped || []).some(d => d.family_id === f.family_id) ? `<div class="sect"><div class="eyebrow">Dropped as unbacked by the literature review</div>${D.dropped.filter(d => d.family_id === f.family_id).map(d => `<p class="muted">${esc(d.lever_id)} ${esc(d.lever)}</p>`).join("")}</div>` : ""}
+      <div class="sect"${nLv(f) ? "" : " hidden"}><div class="eyebrow">Levers (${nLv(f)})${lc ? " · strategies in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
+      ${(D.dropped || []).some(d => d.family_id === f.family_id) ? `<div class="sect"><div class="eyebrow">Dropped as unbacked by the literature review · grey on the tree, no strategies placed</div>${D.dropped.filter(d => d.family_id === f.family_id).map(d => `<p class="muted"><a class="jl" ${O({ d: d.lever_id })}>${esc(d.lever_id)}</a> ${esc(d.lever)}</p>`).join("")}</div>` : ""}
       ${f.examples ? `<div class="sect"><div class="eyebrow">How plans say it</div><p class="muted">${esc(f.examples)}</p></div>` : ""}
       ${(f.theory_anchors || []).length ? `<div class="sect"><div class="eyebrow">Theory anchors (independent review)</div>${f.theory_anchors.map(a => `<p class="def">${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.citation)}, ${esc(a.title)}</a>` : `${esc(a.citation)}, ${esc(a.title)}`} <span class="muted">(${esc(a.role)}; via ${esc(a.via)})</span></p>`).join("")}</div>` : ""}
       <div class="sect"><div class="eyebrow">Storms it shelters from</div><div class="chips">${riskChips(f.risks) || '<span class="muted">none tagged</span>'}${riskChips(f.conditional_risks, true)}</div></div>
@@ -658,7 +713,7 @@ ORDER.forEach(([pc, sps]) => {
   d.innerHTML = `<h3 style="color:${PCOL[pc]}">${esc(PL[pc].name)} <span class="eyebrow">${PROLE[pc]}</span></h3>` +
     sps.map(sc => `<details><summary><b>${esc(SP[sc].name)}</b> <span class="muted">${sc} · ${lvOfSub(sc)} levers</span></summary>` +
       D.groups.filter(g => g.subpillar_code === sc).map(g => `<details><summary>${esc(g.group)} <span class="muted">· ${esc(g.basis)}</span></summary>` +
-        g.family_ids.map(fid => { const f = F[fid]; return `<details><summary><span class="famrow" ${O({ f: fid })}>${esc(f.family)}</span> <span class="muted">${fid} · ${nLv(f)} levers</span></summary>
+        g.family_ids.map(fid => { const f = F[fid]; return `<details><summary><span class="famrow" ${O({ f: fid })}>${esc(f.family)}</span> <span class="muted">${fid} · ${nLv(f) ? nLv(f) + " levers" : "dropped, no lever left"}</span></summary>
           <ul class="ol-lvs" style="color:${PCOL[pc]}">${f.lever_ids.map(id => `<li><span class="dot"></span><span class="lvname" style="color:var(--ink)" ${O({ v: id })}>${esc(V[id].lever)} <span class="muted">${id}</span></span></li>`).join("")}</ul></details>`; }).join("") +
         `</details>`).join("") + `</details>`).join("");
   out.appendChild(d);
@@ -666,7 +721,7 @@ ORDER.forEach(([pc, sps]) => {
 if ((D.dropped || []).length) {
   const d = document.createElement("div"); d.className = "ol-pillar";
   d.innerHTML = `<details><summary><b>Dropped levers</b> <span class="muted">${D.dropped.length} levers the literature review of November 2026 grades unbacked</span></summary>
-    <ul class="ol-lvs">${D.dropped.map(x => `<li><span class="dot"></span><span class="lvname famrow" style="color:var(--ink)" ${O({ f: x.family_id })}>${esc(x.lever_id)} ${esc(x.lever)} <span class="muted">· ${esc(x.family_id)} ${esc(F[x.family_id].family)}</span></span></li>`).join("")}</ul></details>`;
+    <ul class="ol-lvs">${D.dropped.map(x => `<li><span class="dot"></span><span class="lvname famrow" style="color:var(--ink)" ${O({ d: x.lever_id })}>${esc(x.lever_id)} ${esc(x.lever)} <span class="muted">· ${esc(x.family_id)} ${esc(F[x.family_id].family)}</span></span></li>`).join("")}</ul></details>`;
   out.appendChild(d);
 }
 out.addEventListener("click", e => {
@@ -725,21 +780,27 @@ function scope() {
 }
 function rowsOn() { return C.rows; }
 function cCount(rows) {
-  const fam = {}, lev = {};
+  const fam = {}, lev = {}, gen = {};
   rows.forEach(r => {
+    if (r[3] === "STD") gen[r[6]] = (gen[r[6]] || 0) + 1;
     if (r[4]) { const x = fam[r[4]] || (fam[r[4]] = { n: 0, lv: 0 }); x.n++; if (r[5]) x.lv++; }
     if (r[5]) { const y = lev[r[5]] || (lev[r[5]] = { n: 0 }); y.n++; }
   });
-  return { fam, lev };
+  return { fam, lev, gen };
 }
 const cntLabel = x => x && x.n ? `${x.n}` : "";
 function paintCountry() {
-  const { fam, lev } = cCount(C.rows);
-  const max = Math.max(1, ...Object.values(fam).map(x => x.n));
+  const { fam, lev, gen } = cCount(C.rows);
+  const max = Math.max(1, ...Object.values(fam).map(x => x.n), ...Object.values(gen));
   const vmax = Math.max(1, ...Object.values(lev).map(x => x.n));
   D.families.forEach(f => {
     const L = leafEl[f.family_id], x = fam[f.family_id], n = x ? x.n : 0;
+    if (!nLv(f)) { sizeLeaf(L, 5, short(L.name, 34) + " · dropped", false); return; }
     sizeLeaf(L, n ? 5 + 17 * Math.sqrt(n / max) : 4, short(L.name, n ? 38 : 44) + (n ? `  ${n.toLocaleString()}` : ""), !n);
+  });
+  Object.keys(genEl).forEach(id => {
+    const L = genEl[id], n = gen[id] || 0;
+    sizeLeaf(L, n ? 5 + 17 * Math.sqrt(n / max) : 4, L.name + (n ? `  ${n.toLocaleString()}` : ""), !n);
   });
   D.levers.forEach(v => {
     const B = budEl[v.lever_id], x = lev[v.lever_id];
@@ -859,7 +920,7 @@ function sizeBars() {
 function countryOverview() {
   const rows = C.rows, n = rows.length || 1;
   const lv = {}; rows.forEach(r => lv[r[3]] = (lv[r[3]] || 0) + 1);
-  const { fam, lev } = cCount(rows);
+  const { fam, lev, gen } = cCount(rows);
   const topF = Object.entries(fam).sort((a, b) => b[1].n - a[1].n).slice(0, 8).map(([k]) => k);
   const topV = Object.entries(lev).sort((a, b) => b[1].n - a[1].n).slice(0, 10).map(([k]) => k);
   const used = Object.keys(lev).length;
@@ -871,18 +932,19 @@ function countryOverview() {
     : `${nPl} plan editions in ${nCt} countries; ${nSrc.toLocaleString()} distinct strategies, each counted once in every plan edition it appears in.`;
   return `<div class="sect"><div class="eyebrow">${mode === "country" ? esc(C.name) + " · " : ""}${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} strategies</h2></div>
     <p class="muted">${sub}</p>
-    <div class="lvls">${["LV", "L2", "GRP", "STD", "GOAL", "NEW"].filter(k => lv[k] || k === "LV").map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${pct(lv[k] || 0, n)}%</span></div>`).join("")}</div>
+    <div class="lvls">${["LV", "L2", "GRP", "GOAL", "NEW"].filter(k => lv[k] || k === "LV" || k === "L2").map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${pct(lv[k] || 0, n)}%</span></div>`).join("")}
+      ${ORDER.map(([pc]) => { const id = HOLD[pc], k = gen[id] || 0; return `<div><span class="sw" style="margin:0;background:${PCOL[pc]}"></span><a ${O({ h: id })}>${esc(HNAME[id])}</a><span class="num">${k.toLocaleString()} · ${pct(k, n)}%</span></div>`; }).join("")}</div>
     <div class="sect"><div class="eyebrow">${mode === "country" ? "Plan by plan" : region === null ? "Region by region · select one to open it" : "Country by country · select one to open it"} · <span style="color:var(--gold)">on a lever</span></div>${sizeBars()}</div>
     <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
     <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
-    <p class="muted">Leaf size is the number of strategies on each family. Gold buds are levers with strategies, sized by count; dashed buds get none. ${used} of ${D.levers.length} levers are used.</p>`;
+    <p class="muted">Leaf size is the number of strategies on each family. Gold buds are levers with strategies, sized by count; dashed buds get none. Grey buds are the ${D.dropped.length} dropped levers and grey leaves the ${D.families.filter(f => !nLv(f)).length} families left without a lever: nothing is placed on them. Strategies that fit no live family sit on the general economy, people or governance branch. ${used} of ${D.levers.length} levers are used.</p>`;
 }
 const oti = r => [r[2] && `<b>Objective</b> ${esc(r[2])}`, r[11] && `<b>Target</b> ${esc(r[11])}`, r[12] && `<b>Instrument</b> ${esc(r[12])}`].filter(Boolean).join(" · ");
 function stratMeta(r, showLever) {
   const p = PLN[r[0]], bits = [];
   if (mode !== "country") bits.push(esc(CTY[r[15]].name));
   bits.push(esc(short(planLabel(p), 26)) + ` ${p.start}–${String(p.end).slice(2)}`);
-  if (showLever) bits.push(r[5] ? `<b>${esc(short(V[r[5]].lever, 48))}</b>` : r[4] && F[r[4]] ? "family only" : esc(OVL[r[3]] || ""));
+  if (showLever) bits.push(r[5] ? `<b>${esc(short(V[r[5]].lever, 48))}</b>` : r[4] && F[r[4]] ? "family only" : r[3] === "STD" ? esc(HNAME[r[6]] || OVL.STD) : esc(OVL[r[3]] || ""));
   if (mode === "country" && r[16] >= 0) bits.push(`since ${esc(planLabel(PLN[r[16]]))}`);
   if (r[7]) bits.push(esc(r[7]));
   return bits.join(" · ");
@@ -891,7 +953,7 @@ const order = (a, b) => (a[5] ? 0 : 1) - (b[5] ? 0 : 1) || a[15] - b[15] || a[0]
 function stratSearchList(rows) {
   if (!rows.length) return `<p class="muted">No strategy matches.</p>`;
   return rows.slice().sort(order).slice(0, 120).map(r => {
-    const o = r[5] ? { v: r[5] } : r[4] ? { f: r[4] } : null;
+    const o = r[5] ? { v: r[5] } : r[4] ? { f: r[4] } : r[3] === "STD" ? { h: r[6] } : null;
     return `<div class="strat"${o ? ` ${O(o)} style="cursor:pointer"` : ""}><span>${esc(r[1])}</span><span class="meta">${stratMeta(r, true)}</span><span class="oti">${oti(r)}</span></div>`;
   }).join("");
 }
@@ -907,7 +969,28 @@ function nodeBlock(test, col, what) {
     ${mode === "country" ? "" : `<div class="sect"><div class="eyebrow">Over time · plans by the year they start${region ? ", " + esc(region) : ""}</div>${binBars(test, col)}</div>`}
     ${rows.length ? `<details class="lv"><summary><span>The strategies${rows.length > 150 ? ", first 150" : ""}</span></summary><div>${stratList(rows, what === "family")}</div></details>` : ""}`;
 }
-const countryFamily = fid => nodeBlock(r => r[4] === fid, famCol(fid), "family");
+const HWHAT = { SMG: "the economy", PFA: "people", MCH: "governance" };
+const famPillar = fid => SP[F[fid].subpillar_code].pillar;
+const countryFamily = fid => nLv(F[fid]) ? nodeBlock(r => r[4] === fid, famCol(fid), "family")
+  : `<p class="def" style="color:var(--muted)">Every lever of this family was dropped as unbacked by the literature review, so the family is drawn in grey and takes no strategies. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[famPillar(fid)]])}.</p>`;
+function extraPanel(o) {
+  if (o.h) {
+    const pc = HPC[o.h], test = r => r[3] === "STD" && r[6] === o.h;
+    const lab = {}; C.rows.filter(test).forEach(r => lab[r[10]] = (lab[r[10]] || 0) + 1);
+    const top = Object.entries(lab).sort((a, b) => b[1] - a[1]).slice(0, 14);
+    return crumb([[PL[pc].name, { p: pc }]]) +
+      `<div class="sect"><div class="eyebrow">General branch · ${PROLE[pc]}</div><h2>${esc(HNAME[o.h])}</h2></div>
+      <p class="def">Strategies about ${HWHAT[pc]} that fit no live family on the tree are held here, rather than forced onto a family or placed on a part of the tree that was dropped.</p>
+      ${nodeBlock(test, PCOL[pc], "general branch")}
+      ${top.length ? `<div class="sect"><div class="eyebrow">What is held here · objective label and strategies</div><div class="lvls">${top.map(([k, n]) => `<div>${esc(k || "No objective label")}<span class="num">${n}</span></div>`).join("")}</div></div>` : ""}`;
+  }
+  const d = D.dropped.find(x => x.lever_id === o.d), f = F[d.family_id], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar, dead = !nLv(f);
+  return crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: f.family_id }]]) +
+    `<div class="sect"><div class="eyebrow">Dropped lever ${d.lever_id}</div><h2 style="color:var(--muted)">${esc(d.lever)}</h2></div>
+    <p class="def">The literature review of November 2026 grades this lever unbacked: no framework support and at most thin evidence on the action itself. It is out of the tree, drawn in grey, and no strategy is placed on it.</p>
+    <p class="muted">${dead ? `It was the last lever of ${esc(f.family)}, so that family is grey too. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[pl]])}.` : `Strategies on this theme sit on ${esc(f.family)} or on one of its remaining levers.`}</p>
+    ${dead ? "" : `<div class="sect"><div class="eyebrow">Live levers in ${f.family_id}</div>${leverList(f.lever_ids)}</div>`}`;
+}
 const countryLever = lid => nodeBlock(r => r[5] === lid, famCol(V[lid].family_id), "lever");
 
 // ---------- table: families and levers by column ----------
@@ -915,40 +998,49 @@ const openFam = new Set();
 function drawTable() {
   const cols = C.cols, idx = {}; cols.forEach((c, i) => idx[String(c.key)] = i);
   const z = () => cols.map(() => 0), tot = z(), totF = z(), totL = z();
-  const fam = cols.map(() => ({})), lev = cols.map(() => ({})), af = {}, al = {};
-  let n0 = 0, nF = 0, nL = 0;
+  const fam = cols.map(() => ({})), lev = cols.map(() => ({})), gen = cols.map(() => ({})), af = {}, al = {}, ag = {}, totG = z();
+  let n0 = 0, nF = 0, nL = 0, nG = 0;
   C.base.forEach(r => {
     const i = idx[String(C.colOf(r))]; if (i === undefined) return;
     n0++; tot[i]++;
+    if (r[3] === "STD") { nG++; totG[i]++; gen[i][r[6]] = (gen[i][r[6]] || 0) + 1; ag[r[6]] = (ag[r[6]] || 0) + 1; }
     if (r[4]) { nF++; totF[i]++; const x = fam[i][r[4]] || (fam[i][r[4]] = { n: 0, lv: 0 }), a = af[r[4]] || (af[r[4]] = { n: 0, lv: 0 }); x.n++; a.n++; if (r[5]) { x.lv++; a.lv++; } }
     if (r[5]) { nL++; totL[i]++; lev[i][r[5]] = (lev[i][r[5]] || 0) + 1; al[r[5]] = (al[r[5]] || 0) + 1; }
   });
   const NC = cols.length + 3;
   const head = `<thead><tr><th>Family / lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${cols.map(c => `<th class="colh${c.on ? " on" : ""}" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 20))}<br>${esc(c.sub)}</th>`).join("")}</tr></thead>`;
   let body = `<tr class="tot"><td>Strategies</td><td class="all">${n0.toLocaleString()}</td><td></td>${tot.map(n => `<td>${n.toLocaleString()}</td>`).join("")}</tr>
-    <tr class="tot"><td>Placed on a family or deeper</td><td class="all">${pct(nF, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totF[i], n) + "%" : ""}</td>`).join("")}</tr>
-    <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(nL, n0)}%</td><td></td>${tot.map((n, i) => `<td class="g">${n ? pct(totL[i], n) + "%" : ""}</td>`).join("")}</tr>`;
+    <tr class="tot"><td>On a live family or one of its levers</td><td class="all">${pct(nF, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totF[i], n) + "%" : ""}</td>`).join("")}</tr>
+    <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(nL, n0)}%</td><td></td>${tot.map((n, i) => `<td class="g">${n ? pct(totL[i], n) + "%" : ""}</td>`).join("")}</tr>
+    <tr class="tot"><td>On a general branch</td><td class="all">${pct(nG, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totG[i], n) + "%" : ""}</td>`).join("")}</tr>`;
   const cell = (n, of, col, tip) => {
     const sh = of ? n / of : 0;
     return `<td title="${tip}" style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
   };
-  ORDER.forEach(([pc0, sps]) => sps.forEach(sc => {
+  ORDER.forEach(([pc0, sps]) => { sps.forEach(sc => {
     body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
     const col = PCOL[pc0];
     D.families.filter(f => f.subpillar_code === sc).forEach(f => {
-      const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid);
-      body += `<tr class="frow${op ? " open" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
+      const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid), dead = !nLv(f);
+      body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}${dead ? " · dropped" : ""}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
         const x = fam[i][fid] || { n: 0, lv: 0 };
         return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} strategies, ${x.lv} on a lever`);
       }).join("")}</tr>`;
       f.lever_ids.forEach(lid => {
         body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${al[lid] || ""}</td><td></td>${cols.map((c, i) => cell(lev[i][lid] || 0, tot[i], col, `${esc(c.label)}: ${lev[i][lid] || 0} strategies`)).join("")}</tr>`;
       });
+      D.dropped.filter(d => d.family_id === fid).forEach(d => {
+        body += `<tr class="lvrow drop" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ d: d.lever_id })} title="Dropped as unbacked by the literature review: no strategies are placed on it">${esc(d.lever)} · dropped</td><td class="all"></td><td></td>${cols.map(() => "<td></td>").join("")}</tr>`;
+      });
     });
-  }));
+  });
+    const hid = HOLD[pc0];
+    body += `<tr class="sp"><td colspan="${NC}">General branch · ${PROLE[pc0]}</td></tr>
+      <tr class="hrow"><td ${O({ h: hid })} title="Strategies that fit no live family">${esc(HNAME[hid])}</td><td class="all">${ag[hid] || ""}</td><td></td>${cols.map((c, i) => cell(gen[i][hid] || 0, tot[i], PCOL[pc0], `${esc(c.label)}: ${gen[i][hid] || 0} strategies`)).join("")}</tr>`;
+  });
   $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
   $("#ct-h").textContent = mode === "country" ? `${C.name} over time: families and levers by plan` : region === null ? "Regions side by side: families and levers" : `${region}: countries side by side`;
-  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. A family row is the share of that ${C.unit}'s strategies placed on the family or one of its levers; open it to see its levers. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a column heading to open that ${C.unit}.`;
+  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. A family row is the share of that ${C.unit}'s strategies placed on the family or one of its levers; open it to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a column heading to open that ${C.unit}.`;
 }
 function toggleFam(fid, on) {
   if (on) openFam.add(fid); else openFam.delete(fid);
@@ -965,7 +1057,7 @@ function refresh() {
   if (w) { drawRegions(); drawYears(); } else { drawCountries(); drawTimeline(); }
   drawTable(); paintCountry();
   indexHits(state.q);
-  show(state.q.length >= 2 ? { q: state.q } : state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : state.risk ? { r: state.risk } : {});
+  show(state.q.length >= 2 ? { q: state.q } : state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : state.h ? { h: state.h } : state.d ? { d: state.d } : state.risk ? { r: state.risk } : {});
   try { history.replaceState(null, "", "#" + (w ? (region ? "region-" + hslug(region) : "world") : hslug(CTY[ci].slug))); } catch (e) {}
 }
 function openCountry(i) { mode = "country"; ci = i; sel.clear(); plansOf(i).forEach(p => sel.add(p)); refresh(); }
@@ -994,7 +1086,7 @@ $("#ct").addEventListener("click", e => {
 {
   const nL = ROWS.filter(r => r[5]).length;
   $("#banner").hidden = false;
-  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever, the rest sit on a family, a group or a general branch. ${D.dropped.length} levers the literature review grades unbacked are out of the tree.</span>`;
+  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever, ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
   if (c >= 0) openCountry(c);

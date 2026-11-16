@@ -93,8 +93,9 @@ out = []
 for r in rows:
     code = CODE.get(r["level"], "NEW")
     # [plan, name, objective, level, family, lever, group, sector, orientation, risks, objective label, target,
-    #  instrument, passages, source strategy]
-    out.append([pidx[r["plan_id"]], r["name"], r["objective"], code, r["family_id"], r["lever_id"], r["group_id"],
+    #  instrument, passages, source strategy]; a strategy on a general branch carries the branch id as its group
+    out.append([pidx[r["plan_id"]], r["name"], r["objective"], code, r["family_id"], r["lever_id"],
+                r["node_id"] if code == "STD" else r["group_id"],
                 sectors(r["sector"]), r["response_orientation"],
                 [RISK[x] for x in json.loads(r["related_risks"] or "[]") if x in RISK],
                 objs(r["tree_objective"]), targets(r["target_label"] or r["target_group"]),

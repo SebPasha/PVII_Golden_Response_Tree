@@ -210,6 +210,10 @@ SUB = {x["code"]: x for x in tree["subpillars"]}
 PIL = {x["code"]: x["name"] for x in tree["pillars"]}
 HOLD = {x["id"]: x["name"] for x in tree["holding"]}
 XW = {r["objective_id"]: r["node_id"] for r in csv.DictReader(open(os.path.join(HERE, "objective_crosswalk.csv")))}
+# strategies go only to a live family (one that still has a lever), one of its levers, or a general branch
+LIVE = {f["family_id"] for f in tree["families"] if f["lever_ids"]}
+for _o, _n in XW.items():
+    assert _n in LV or _n in LIVE or _n in ("H-SEC", "H-SPE", "H-SGO"), "%s -> %s is not a live node" % (_o, _n)
 DEC = {r["strategy_key"]: r for r in csv.DictReader(open(os.path.join(HERE, "..", "..", "inputs", "strategy_decomposition.csv"), encoding="utf-8"))}
 union = list(csv.DictReader(open(os.path.join(SRC, "union", "strategies.csv"), encoding="utf-8")))
 docs = collections.defaultdict(dict)
@@ -377,12 +381,13 @@ with open(os.path.join(OUT, "plans.csv"), "w", newline="", encoding="utf-8") as 
 with open(os.path.join(OUT, "placement_summary.csv"), "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     w.writerow(["country", "region", "plan editions", "strategies (earlier run)", "strategy x edition rows", "on a lever",
-                "on a family", "on a group", "general branch or goal", "share on a lever"])
+                "on a family", "general economy", "general people", "general governance", "share on a lever"])
     for slug in sorted(by_slug):
         rs = [r for r in out_rows if r["slug"] == slug]
         c = collections.Counter(r["level"] for r in rs)
+        g = collections.Counter(r["node_id"] for r in rs if r["level"] == "STD")
         w.writerow([rs[0]["country"] if rs else slug, REGION[slug], len({r["plan_id"] for r in rs}), len(by_slug[slug]),
-                    len(rs), c["L3"], c["L2"], c["L1"], c["STD"] + c["GOAL"], "%.0f%%" % (100 * c["L3"] / max(1, len(rs)))])
+                    len(rs), c["L3"], c["L2"], g["H-SEC"], g["H-SPE"], g["H-SGO"], "%.0f%%" % (100 * c["L3"] / max(1, len(rs)))])
 
 lv = sum(1 for r in out_rows if r["lever_id"])
 print("strategies in: %d; with a dated passage: %d; rows out (strategy x edition): %d; plan editions: %d; countries: %d" % (
