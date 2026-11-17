@@ -59,6 +59,11 @@ class TreeV2:
             self.pathways = {l["lever_id"]: l for l in d["levers"]}       # the L3 nodes
             self.literature = {p["pathway_id"]: p for p in d["pathways"]}
             self.gate_advisory = True
+            # Only live parts take strategies: a family whose levers were all dropped by the
+            # literature review (meta.dropped_levers) is closed, and a group is an area, not a
+            # placement. What fits no live family goes to its pillar's General branch.
+            self.closed = {fid for fid, f in self.mid.items() if not f.get("lever_ids")} | set(self.top)
+            self.dropped = {x["lever_id"]: x for x in meta.get("dropped_levers") or []}
         elif "groups" in d:                                 # v3
             self.level_names = ("group", "family", "pathway")
             self.top = {g["group_id"]: g for g in d["groups"]}
@@ -73,6 +78,8 @@ class TreeV2:
             self.required_level = ""
             self.test_mid_cues = True                       # a mechanism needs its plan words
             self.pathways = {p["pathway_id"]: p for p in d["pathways"]}
+        if "levers" not in d:
+            self.closed, self.dropped = set(), {}
         self.families, self.mechanisms = self.top, self.mid     # the v2 names, kept for callers
         self.holding = {h["id"]: h for h in d["holding"]}
         self.objectives = {}
@@ -87,6 +94,14 @@ class TreeV2:
                     self._cues[nid] = re.compile(cue, re.I)
                 except re.error:
                     pass
+
+    GENERAL = {"SMG": "H-SEC", "PFA": "H-SPE", "MCH": "H-SGO"}
+
+    def general_of(self, node_id):
+        """The General branch of the pillar a group or family sits in."""
+        g = self.top.get(self.family_of(node_id))
+        sp = self.subpillars.get((g or {}).get("subpillar_code", ""))
+        return self.GENERAL.get((sp or {}).get("pillar", ""), "")
 
     def lever_of(self, pathway_id):
         """v4: the lever a literature pathway sits under; "" elsewhere."""
@@ -206,13 +221,19 @@ class TreeV2:
     def _menu_v4(self):
         """v4: groups, families, levers with their join tests and the pathways they work through."""
         lines = ["GROUPS (L1), THEIR FAMILIES (L2) AND LEVERS (L3, WHERE STRATEGIES SIT)",
-                 "A group names a broad area; a family names the development purpose; a lever names what a "
-                 "government does. Under each lever: joins when / not when, then the pathways it works through "
-                 "(L4, the literature; a placement only when the strategy's wording names the channel).", ""]
+                 "A group names a broad area (a heading, not a placement); a family names the development purpose; "
+                 "a lever names what a government does. Under each lever: joins when / not when, then the pathways "
+                 "it works through (L4, the literature; a placement only when the strategy's wording names the "
+                 "channel). Only live families and levers are listed: those the literature review dropped take no "
+                 "strategies.", ""]
         for gid, g in sorted(self.top.items()):
+            if not any(f not in self.closed for f in g.get("family_ids") or []):
+                continue
             lines.append("%s %s [%s] - %s" % (gid, g["group"], g.get("subpillar_code", ""),
                                                _short(g.get("definition"), 200)))
             for fid in g.get("family_ids") or []:
+                if fid in self.closed:
+                    continue
                 f = self.mid[fid]
                 lines.append("  %s %s: %s" % (fid, f["family"], _short(f.get("definition"), 160)))
                 for lid in f.get("lever_ids") or []:
@@ -229,9 +250,9 @@ class TreeV2:
                                                                      _short(p.get("causal_input"), 50),
                                                                      _short(p.get("outcome"), 50)))
             lines.append("")
-        lines.append("GENERAL BRANCHES (no family; standing functions of the state, or goals)")
-        for hid, h in sorted(self.holding.items()):
-            lines.append("%s %s" % (hid, h["name"]))
+        lines.append("GENERAL BRANCHES (no live family fits)")
+        for hid in ("H-SEC", "H-SPE", "H-SGO"):
+            lines.append("%s %s" % (hid, self.holding[hid]["name"]))
         lines += ["", "TARGET GROUPS"]
         lines += ["%s %s" % (k, v["label"]) for k, v in sorted(self.targets.items())]
         lines += ["", "INSTRUMENTS"]

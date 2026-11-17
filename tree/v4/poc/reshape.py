@@ -2,6 +2,7 @@
 strategy format and joined to mother tree v4. No model calls.
 
     cd tree/v4/poc && python3 reshape.py <earlier run's data folder> [out folder]
+    python3 reshape.py <data folder> <out folder> --mapping=<out folder>/mapping.csv   # after map_run.py
 
 Reads, from the earlier run's data folder (read only):
   union/strategies.csv                  the 9,918 strategies (45 countries)
@@ -32,8 +33,10 @@ import sys
 import openpyxl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("PVII_SOURCES_ROOT", "")
-OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "out")
+ARGS = [x for x in sys.argv[1:] if not x.startswith("--mapping")]
+MAPPING = next((x.split("=", 1)[1] for x in sys.argv[1:] if x.startswith("--mapping=")), "")
+SRC = ARGS[0] if ARGS else os.environ.get("PVII_SOURCES_ROOT", "")
+OUT = ARGS[1] if len(ARGS) > 1 else os.path.join(HERE, "out")
 csv.field_size_limit(10 ** 9)
 
 REGIONS = {
@@ -215,6 +218,8 @@ XW = {r["objective_id"]: r["node_id"] for r in csv.DictReader(open(os.path.join(
 LIVE = {f["family_id"] for f in tree["families"] if f["lever_ids"]}
 for _o, _n in XW.items():
     assert _n in LV or _n in LIVE or _n in ("H-SEC", "H-SPE", "H-SGO"), "%s -> %s is not a live node" % (_o, _n)
+# the real mapping (map_run.py), where it has been run: node by strategy, in place of the crosswalk
+MAP = {r["source_strategy_key"]: r for r in csv.DictReader(open(MAPPING, encoding="utf-8"))} if MAPPING else {}
 DEC = {r["strategy_key"]: r for r in csv.DictReader(open(os.path.join(HERE, "..", "..", "inputs", "strategy_decomposition.csv"), encoding="utf-8"))}
 union = list(csv.DictReader(open(os.path.join(SRC, "union", "strategies.csv"), encoding="utf-8")))
 docs = collections.defaultdict(dict)
@@ -291,7 +296,10 @@ for slug in sorted(by_slug):
     seq = collections.Counter()
     for u in by_slug[slug]:
         d = DEC.get(u["strategy_key"], {})
-        node = XW.get(d.get("objective_id", ""), "")
+        m = MAP.get(u["strategy_key"])
+        node = m["node_id"] if MAPPING else XW.get(d.get("objective_id", ""), "")
+        if MAPPING and m is None:
+            raise SystemExit("no mapping for %s: run map_run.py over this out folder first" % u["strategy_key"])
         tr = place(node)
         mine = comp.get(u["strategy"].strip().lower(), set())
         risks_u = jl(u["related_risks"])
@@ -362,6 +370,12 @@ for slug in sorted(by_slug):
                        reason="objective '%s' sits on %s" % (d.get("objective", ""), node),
                        source_strategy_key=u["strategy_key"], n_editions=len(eds), first_edition=first)
             row.update(tr)
+            if m:
+                row.update(relation=m["relation"], depth_basis="mapping prompt M_map_v4", confidence=m["confidence"],
+                           reason="; ".join(x for x in (m["reason"], m["map_note"], m["proposal"]) if x))
+                for k in ("target", "instrument"):
+                    if m[k + "_id"]:
+                        row.update({k + "_id": m[k + "_id"], k + "_label": m[k + "_label"]})
             made.append(row)
             pass_rows.extend(dict(x, strategy_id=row["strategy_id"], plan_id=pid, country=country) for x in ps)
             pl["n_strategies"] += 1

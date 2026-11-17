@@ -582,6 +582,16 @@ def _resolve_v2(s, a, tree, node, text, notes):
     final = tree.canonical(node) if tree.level_of(node) else ""
     if node and not final:
         notes.append("node %s is not in the tree" % node)
+    if final in tree.closed:
+        # v4: a group, or a family the literature review left without a lever, takes no
+        # strategies; the strategy goes to its pillar's General branch
+        gen = tree.general_of(final)
+        notes.append("%s takes no strategies (%s); moved to %s" % (
+            final, "a group is an area" if final in tree.top else "its levers were dropped", gen))
+        final = gen
+    elif tree.closed and final == "H-GOAL":
+        notes.append("H-GOAL is not a placement on this tree; left unmapped")
+        final = ""
     while final in tree.pathways or (final in tree.mid and tree.test_mid_cues):
         cue = tree.cue_matches(final, text)
         if cue:

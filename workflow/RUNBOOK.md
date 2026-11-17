@@ -75,7 +75,7 @@ Each plan writes `data/plans/<plan_id>/`:
 | `risks.csv` | E | Risks the plan frames as risks, each with its quote and quote check |
 | `strategy_rows.csv` | E | Strategies kept by the commitment test, one row per paragraph mention |
 | `strategy_rows_dropped.csv` | E | Completed and background statements, kept for review |
-| `strategies.csv` | F, M | Strategies folded within the plan and placed on the mother tree (v3: `group_id`, `family_id`, `pathway_id`; `node_id` is the deepest). `subpillar` and `pillar_rhdr` are the RHDR category and pillar |
+| `strategies.csv` | F, M | Strategies folded within the plan and placed on the mother tree (v4: `group_id`, `family_id`, `lever_id`, and `pathway_id` where the wording names the channel; `node_id` is the deepest, a lever, a live family or a General branch, or empty when unmapped). `subpillar` and `pillar_rhdr` are the RHDR category and pillar |
 | `proposals.csv` | M | Strategies the tree doesn't fit yet, proposed for its next release |
 | `run.json`, `cost_report.md` | | Counts, every guard that fired, errors and cost |
 

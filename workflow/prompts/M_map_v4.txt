@@ -41,12 +41,15 @@ Task, for each strategy
      action ("promote education for all ages"), or an action that none of the family's levers
      describes. Do not force a lever that does not exist: say in `reason` what lever the
      family lacks.
-   - A General branch (H-SPE, H-SEC, H-SGO) for a standing function of the state that serves no
-     family: defence, diplomacy, heritage, routine administration. H-GOAL for a goal that names
-     an end result and no policy area.
-   - A group (G-xx) only when the strategy names the broad area and no family of it fits. That
-     is a weak placement and is counted; prefer a family.
-   - Where nothing in the tree fits, node_id is "" and the strategy is a proposal for the tree.
+   - Only the families and levers listed take strategies. A group (G-xx) is a heading, never a
+     placement. Some families and levers were dropped by the literature review and are not
+     listed: do not name them.
+   - A General branch (H-SEC economy, H-SPE people, H-SGO governance) when no listed family
+     serves the strategy's purpose: a standing function of the state (defence, diplomacy,
+     heritage, routine administration), a broad goal with a policy area but no family, or a
+     theme whose family the tree no longer holds. Take the branch of the pillar it belongs to.
+   - Where the strategy is not a policy at all, or nothing in the tree fits, node_id is "" and
+     the strategy is a proposal for the tree.
 
 2. pathway_id: the causal pathway (L3-xxx) under the chosen lever, ONLY when the strategy's own
    wording names that channel and the lever lists more than one pathway. Otherwise "". A lever
@@ -61,7 +64,7 @@ Task, for each strategy
    for every strategy.
 
 5. relation, exactly one of:
-   placed  - a lever, family, group or General branch fits;
+   placed  - a lever, family or General branch fits;
    new     - nothing in the tree fits; say in `proposal` what node the tree would need.
 
 6. target_id: the target group from the list that matches the strategy's target group, or ""
