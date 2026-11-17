@@ -19,5 +19,10 @@ placed on mother tree v4 (198 levers). No model calls.
 - **Dropped parts.** The 31 levers dropped as unbacked, and the 5 families left without a lever, are
   drawn in grey and take no strategies: `reshape.py` stops if the crosswalk points at one.
 
-`plans.csv` and `placement_summary.csv` here are the outputs of the last build; `strategies.csv` (25 MB)
-and the page are kept out of the repo.
+- **Details table.** Under the tree, the page lists the strategies behind whatever is selected, sortable
+  and filterable; a row opens the strategy's full record and the passages of the plan under it.
+  `reshape.py` writes those passages to `passages.csv`; `viewer.py` splits them into `detail/<plan_id>.js`
+  beside the page, which the page reads when a strategy is opened (publish the folder with the page).
+
+`plans.csv` and `placement_summary.csv` here are the outputs of the last build; `strategies.csv` (25 MB),
+`passages.csv` (43 MB), `detail/` and the page are kept out of the repo.

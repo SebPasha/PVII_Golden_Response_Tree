@@ -15,7 +15,8 @@ and from this repo:
   objective_crosswalk.csv                  objective label -> lever, family, group or general branch
 
 Writes strategies.csv (one row per strategy per plan edition, the columns of the current
-workflow's strategies.csv), plans.csv and placement_summary.csv.
+workflow's strategies.csv), passages.csv (the passage-level rows under each strategy: document, page,
+paragraph, the intervention read there and its evidence quote), plans.csv and placement_summary.csv.
 
 The earlier run pooled every edition of a country's plan. Here a strategy is split back by the
 plan editions its passages come from: a strategy found in three editions gives three rows that
@@ -272,7 +273,7 @@ by_slug = collections.defaultdict(list)
 for u in union:
     by_slug[u["slug"]].append(u)
 
-out_rows, plans, undated = [], {}, collections.Counter()
+out_rows, pass_rows, plans, undated = [], [], {}, collections.Counter()
 for slug in sorted(by_slug):
     country = NAMES.get(slug, slug.replace("_", " ").title())
     ref, at = {}, collections.defaultdict(list)
@@ -318,7 +319,7 @@ for slug in sorted(by_slug):
                                             period_source=src, source_documents=set(), n_strategies=0,
                                             n_on_lever=0, tree_version="v4"))
             first = first or pid
-            members, refs, agencies, risks_e, quote = [], [], [], set(), ""
+            members, refs, agencies, risks_e, quote, ps = [], [], [], set(), "", []
             for k in per[ed]:
                 pl["source_documents"].add(ref[k].split(" · ")[0])
                 if len(refs) < 5:
@@ -329,6 +330,10 @@ for slug in sorted(by_slug):
                         continue
                     if nm and nm not in members:
                         members.append(nm)
+                    doc, page, para = (ref[k].split(" · ") + ["", ""])[:3]
+                    ps.append(dict(document=doc, page=page.replace("p.", ""), paragraph=para.replace("§", ""),
+                                   intervention=nm, evidence=str(r.get("intervention_evidence") or "").strip(),
+                                   agencies=" | ".join(jl(r.get("ministries"))), primary_risk=r.get("primary_risk") or ""))
                     for m in jl(r.get("ministries")):
                         if m not in agencies:
                             agencies.append(m)
@@ -358,6 +363,7 @@ for slug in sorted(by_slug):
                        source_strategy_key=u["strategy_key"], n_editions=len(eds), first_edition=first)
             row.update(tr)
             made.append(row)
+            pass_rows.extend(dict(x, strategy_id=row["strategy_id"], plan_id=pid, country=country) for x in ps)
             pl["n_strategies"] += 1
             pl["n_on_lever"] += 1 if tr["lever_id"] else 0
         # a strategy keeps its risks in every edition when no single edition's passages name them
@@ -372,6 +378,11 @@ with open(os.path.join(OUT, "strategies.csv"), "w", newline="", encoding="utf-8"
     w.writeheader()
     for r in out_rows:
         w.writerow({k: json.dumps(v, ensure_ascii=False) if isinstance(v, list) else v for k, v in r.items()})
+with open(os.path.join(OUT, "passages.csv"), "w", newline="", encoding="utf-8") as f:
+    w = csv.DictWriter(f, ["strategy_id", "country", "plan_id", "document", "page", "paragraph", "intervention", "evidence",
+                           "agencies", "primary_risk"])
+    w.writeheader()
+    w.writerows(pass_rows)
 pl_list = sorted(plans.values(), key=lambda p: (p["country"], p["doc_type"] != "ndp", p["period_start"], p["period_end"]))
 with open(os.path.join(OUT, "plans.csv"), "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, list(pl_list[0].keys()))
@@ -392,6 +403,7 @@ with open(os.path.join(OUT, "placement_summary.csv"), "w", newline="", encoding=
 lv = sum(1 for r in out_rows if r["lever_id"])
 print("strategies in: %d; with a dated passage: %d; rows out (strategy x edition): %d; plan editions: %d; countries: %d" % (
     len(union), len({r["source_strategy_key"] for r in out_rows}), len(out_rows), len(plans), len(by_slug)))
+print("passage rows under the strategies: %d" % len(pass_rows))
 print("on a lever: %d (%.0f%%); levers used: %d of %d" % (lv, 100 * lv / len(out_rows), len({r["lever_id"] for r in out_rows if r["lever_id"]}), len(LV)))
 if undated:
     print("passages left out (document without a period):", dict(undated))

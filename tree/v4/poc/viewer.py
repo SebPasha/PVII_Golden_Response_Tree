@@ -2,8 +2,11 @@
 
     cd tree/v4/poc && python3 viewer.py <folder with strategies.csv and plans.csv from reshape.py> [out.html]
 
-Tab 1 is the mother tree for all countries or one region; tab 2 is one country, plan by plan.
-Reads ../tree_v4.json and viewer_template.html here. No model calls.
+Tab 1 is the mother tree for all countries or one region; tab 2 is one country, plan by plan. A details
+table under the tree lists the strategies behind whatever is selected, sortable, each opening to its
+underlying data. The passage text under a strategy is too large for the page, so it goes in a folder
+detail/ beside the page (one file per plan edition, from passages.csv), which the page reads when a
+strategy is opened. Reads ../tree_v4.json and viewer_template.html here. No model calls.
 """
 import csv
 import json
@@ -87,6 +90,7 @@ class Dict:
 
 
 sectors, objs, targets, instruments, sids = Dict(), Dict(), Dict(), Dict(), Dict()
+chapters, agencies, leads, sdgs, urg, status, legal = Dict(), Dict(), Dict(), Dict(), Dict(), Dict(), Dict()
 RISK = {r: i for i, r in enumerate(tree["risks"])}
 CODE = {"L3": "LV", "L2": "L2", "L1": "GRP", "STD": "STD", "GOAL": "GOAL"}
 out = []
@@ -100,7 +104,16 @@ for r in rows:
                 [RISK[x] for x in json.loads(r["related_risks"] or "[]") if x in RISK],
                 objs(r["tree_objective"]), targets(r["target_label"] or r["target_group"]),
                 instruments(r["instrument_label"] or r["instrument"]), int(r["n_mentions"] or 0),
-                sids(r["source_strategy_key"])])
+                sids(r["source_strategy_key"]),
+                # the rest of the row, shown when a strategy is opened in the details table:
+                # [number in its plan, quote, plan chapter, urgency, status, legal basis,
+                #  timeline + 2 * quantified target + 4 * monitoring, SDG targets, agencies, lead, plan editions it is in]
+                [int(r["strategy_id"].split("#s")[1]), r["quote"], chapters(r["pillar"]), urg(r["stated_urgency"]),
+                 status(r["implementation_status"]), legal(r["legal_or_plan_basis"]),
+                 (r["has_timeline"] == "Y") + 2 * (r["has_quantified_target"] == "Y") + 4 * (r["has_monitoring"] == "Y"),
+                 [sdgs(x) for x in json.loads(r["sdg_targets"] or "[]")],
+                 [agencies(x) for x in json.loads(r["named_agencies"] or "[]")], leads(r["institutional_lead"]),
+                 int(r["n_editions"] or 1)]])
 data["set"] = {
     "regions": [x for x in REG_ORDER if any(c["region"] == x for c in countries)],
     "countries": countries,
@@ -108,6 +121,8 @@ data["set"] = {
                "title": p["plan_title"], "start": int(p["period_start"]), "end": int(p["period_end"]),
                "src": p["period_source"]} for p in plans],
     "sectors": sectors.items, "objs": objs.items, "targets": targets.items, "instruments": instruments.items,
+    "chapters": chapters.items, "agencies": agencies.items, "leads": leads.items, "sdgs": sdgs.items,
+    "urg": urg.items, "status": status.items, "legal": legal.items,
     "rows": out, "n_source": len(sids.items) - 1,
 }
 
@@ -118,3 +133,21 @@ with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 print("wrote %s: %d countries, %d plans, %d rows, %d on a lever, %.0f KB" % (
     os.path.basename(OUT), len(countries), len(plans), len(out), sum(1 for r in out if r[5]), len(html) / 1024))
+
+# the passages under each strategy, one file per plan edition, read by the page on demand
+pp = os.path.join(SRC, "passages.csv")
+if os.path.exists(pp):
+    det = os.path.join(os.path.dirname(os.path.abspath(OUT)), "detail")
+    os.makedirs(det, exist_ok=True)
+    by = {}
+    for r in csv.DictReader(open(pp, encoding="utf-8")):
+        d = by.setdefault(r["plan_id"], {"docs": Dict(), "s": {}})
+        d["s"].setdefault(r["strategy_id"].split("#s")[1], []).append(
+            [d["docs"](r["document"]), r["page"], r["paragraph"], r["intervention"], r["evidence"], r["agencies"]])
+    size = 0
+    for pid, d in by.items():
+        js = "PVD(%s,%s);" % (json.dumps(pid), json.dumps({"docs": d["docs"].items, "s": d["s"]}, ensure_ascii=False, separators=(",", ":")))
+        size += len(js)
+        with open(os.path.join(det, pid + ".js"), "w", encoding="utf-8") as f:
+            f.write(js)
+    print("wrote detail/: %d files, %.1f MB" % (len(by), size / 1e6))

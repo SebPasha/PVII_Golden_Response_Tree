@@ -234,6 +234,48 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 #ct tr.hrow td:first-child:hover { color: var(--gold) }
 .lvls a { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
 .lvls a:hover { color: var(--gold) }
+/* details table */
+.dt-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.dt-tools select, #dt-q, .dt-pager select { font: 13px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px }
+#dt-q { width: min(280px, 100%) }
+#dt-chips .chip { color: var(--ink) }
+#dt-chips .x { cursor: pointer; color: var(--muted); padding: 0 2px; font-weight: 600 }
+#dt-chips .x:hover { color: var(--gold) }
+#dt { border-collapse: collapse; font-size: 12.5px; width: 100% }
+#dt th, #dt td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top }
+#dt thead th { white-space: nowrap; vertical-align: bottom }
+#dt thead button { font: 500 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: none; border: 0; padding: 2px 0; cursor: pointer }
+#dt thead button:hover { color: var(--gold) }
+#dt thead th[aria-sort] button { color: var(--gold) }
+#dt thead th[aria-sort="ascending"] button::after { content: " ▲" }
+#dt thead th[aria-sort="descending"] button::after { content: " ▼" }
+#dt td.num, #dt th.num, .psgt td.num { text-align: right; font-variant-numeric: tabular-nums }
+#dt td.nw { white-space: nowrap; font-variant-numeric: tabular-nums }
+#dt td.nm { min-width: 15rem; max-width: 24rem; font-weight: 500 }
+#dt td.w { min-width: 9rem; max-width: 15rem }
+#dt td.w0 { min-width: 7rem; max-width: 12rem }
+#dt td .sw { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px }
+#dt tr.dr { cursor: pointer }
+#dt tr.dr:hover td, #dt tr.dr.open td { background: color-mix(in srgb, var(--gold-soft) 55%, transparent) }
+#dt tr.dr:focus { outline: none }
+#dt tr.dr:focus-visible td { box-shadow: inset 0 2px var(--gold), inset 0 -2px var(--gold) }
+#dt tr.dr td.nm::before { content: "▸ "; color: var(--muted); font-weight: 400 }
+#dt tr.dr.open td.nm::before { content: "▾ " }
+#dt tr.dx > td { background: var(--bg); padding: 14px 18px 16px }
+.dgrid { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 5px 14px; margin: 0; max-width: 72rem; font-size: 13px }
+.dgrid dt { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: 3px }
+.dgrid dd { margin: 0 }
+@media (max-width: 700px) { .dgrid { grid-template-columns: minmax(0, 1fr) } }
+.psgt { border-collapse: collapse; font-size: 12.5px; margin-top: 6px; width: 100% }
+.psgt th { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line) }
+.psgt td { padding: 4px 8px; border-bottom: 1px solid var(--line); vertical-align: top; background: none }
+.psgt td.ev { min-width: 22rem }
+.dt-pager { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; font: 12px var(--mono); color: var(--muted) }
+.dt-pager button:disabled { opacity: .4; cursor: default; text-decoration: none }
+.dt-pager select { padding: 3px 6px; font-size: 12px }
+#ct td[data-ck] { cursor: pointer }
+#ct td[data-ck]:hover { outline: 1px solid var(--gold); outline-offset: -1px }
+.todt { font: 500 12.5px var(--body); color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start }
 </style>
 
 <div class="wrap">
@@ -282,6 +324,22 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <p id="ct-p"></p>
     <div class="ct-tools"><button type="button" class="clear" id="ct-open">Show every lever</button><button type="button" class="clear" id="ct-close">Families only</button></div>
     <div class="ct-scroll"><table id="ct"></table></div>
+  </section>
+
+  <section class="outline" id="details">
+    <h2 id="dt-h">Strategy details</h2>
+    <p>The strategies behind whatever is selected above: a region, year, country or plan, and a leaf, bud, storm, search or table cell. Select a column heading to sort; select a row to open the strategy's full record and the passages of the plan under it.</p>
+    <div class="chips" id="dt-chips"></div>
+    <div class="dt-tools">
+      <input id="dt-q" type="search" placeholder="Filter these strategies" aria-label="Filter these strategies">
+      <select id="dt-lvl" aria-label="Placement"></select>
+      <select id="dt-ori" aria-label="Orientation"></select>
+      <select id="dt-urg" aria-label="Urgency"></select>
+      <select id="dt-st" aria-label="Status"></select>
+      <button type="button" class="clear" id="dt-reset">Clear table filters</button>
+    </div>
+    <div class="ct-scroll"><table id="dt"></table></div>
+    <div class="dt-pager" id="dt-pager"></div>
   </section>
 
   <section class="outline" id="outline">
@@ -607,6 +665,9 @@ function show(o) {
   state.sel = o.f || null;
   state.lv = o.v || null;
   state.h = o.h || null; state.d = o.d || null;
+  state.o = o; DT.page = 0; DT.open.clear();
+  if (!DT.keepCol) DT.col = null;
+  DT.keepCol = false;
   let h = "";
   if (o.h || o.d) {
     h = extraPanel(o);
@@ -696,6 +757,7 @@ function show(o) {
   panel.innerHTML = h;
   panel.scrollTop = 0;
   paint();
+  drawDetails();
 }
 panel.addEventListener("click", e => { const a = e.target.closest("[data-o]"); if (a) { e.preventDefault(); show(JSON.parse(a.dataset.o)); } });
 
@@ -739,8 +801,9 @@ $("#foot").textContent = `Tree v4, built ${D.built}: groups and families with a 
 const X = D.set, PLN = X.plans, CTY = X.countries, REG = X.regions, ROWS = X.rows;
 ROWS.forEach(r => {
   r[7] = X.sectors[r[7]]; r[9] = r[9].map(i => D.risks[i]); r[10] = X.objs[r[10]];
-  r[11] = X.targets[r[11]]; r[12] = X.instruments[r[12]]; r[15] = PLN[r[0]].c;
+  r[11] = X.targets[r[11]]; r[12] = X.instruments[r[12]]; r[17] = r[15]; r[15] = PLN[r[0]].c;
 });
+ROWS.forEach((r, i) => { r[18] = i; });
 const firstOf = {};
 ROWS.forEach(r => { const f = firstOf[r[14]]; if (f === undefined || PLN[r[0]].start < PLN[f].start) firstOf[r[14]] = r[0]; });
 ROWS.forEach(r => { r[16] = PLN[firstOf[r[14]]].start < PLN[r[0]].start ? firstOf[r[14]] : -1; });
@@ -932,6 +995,7 @@ function countryOverview() {
     : `${nPl} plan editions in ${nCt} countries; ${nSrc.toLocaleString()} distinct strategies, each counted once in every plan edition it appears in.`;
   return `<div class="sect"><div class="eyebrow">${mode === "country" ? esc(C.name) + " · " : ""}${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} strategies</h2></div>
     <p class="muted">${sub}</p>
+    <a class="todt" data-dt>See them in the details table ↓</a>
     <div class="lvls">${["LV", "L2", "GRP", "GOAL", "NEW"].filter(k => lv[k] || k === "LV" || k === "L2").map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${pct(lv[k] || 0, n)}%</span></div>`).join("")}
       ${ORDER.map(([pc]) => { const id = HOLD[pc], k = gen[id] || 0; return `<div><span class="sw" style="margin:0;background:${PCOL[pc]}"></span><a ${O({ h: id })}>${esc(HNAME[id])}</a><span class="num">${k.toLocaleString()} · ${pct(k, n)}%</span></div>`; }).join("")}</div>
     <div class="sect"><div class="eyebrow">${mode === "country" ? "Plan by plan" : region === null ? "Region by region · select one to open it" : "Country by country · select one to open it"} · <span style="color:var(--gold)">on a lever</span></div>${sizeBars()}</div>
@@ -967,7 +1031,8 @@ function nodeBlock(test, col, what) {
   return `<div class="sect"><div class="eyebrow">${esc(selLabel())}: ${rows.length.toLocaleString()} strategies on this ${what}</div></div>
     <div class="sect"><div class="eyebrow">${by} · count and share of each ${C.unit}'s strategies</div>${colBars(test, col)}</div>
     ${mode === "country" ? "" : `<div class="sect"><div class="eyebrow">Over time · plans by the year they start${region ? ", " + esc(region) : ""}</div>${binBars(test, col)}</div>`}
-    ${rows.length ? `<details class="lv"><summary><span>The strategies${rows.length > 150 ? ", first 150" : ""}</span></summary><div>${stratList(rows, what === "family")}</div></details>` : ""}`;
+    ${rows.length ? `<a class="todt" data-dt>See ${rows.length === 1 ? "this strategy" : "these " + rows.length.toLocaleString() + " strategies"} in the details table ↓</a>
+    <details class="lv"><summary><span>The strategies${rows.length > 150 ? ", first 150" : ""}</span></summary><div>${stratList(rows, what === "family")}</div></details>` : ""}`;
 }
 const HWHAT = { SMG: "the economy", PFA: "people", MCH: "governance" };
 const famPillar = fid => SP[F[fid].subpillar_code].pillar;
@@ -1013,9 +1078,9 @@ function drawTable() {
     <tr class="tot"><td>On a live family or one of its levers</td><td class="all">${pct(nF, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totF[i], n) + "%" : ""}</td>`).join("")}</tr>
     <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(nL, n0)}%</td><td></td>${tot.map((n, i) => `<td class="g">${n ? pct(totL[i], n) + "%" : ""}</td>`).join("")}</tr>
     <tr class="tot"><td>On a general branch</td><td class="all">${pct(nG, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totG[i], n) + "%" : ""}</td>`).join("")}</tr>`;
-  const cell = (n, of, col, tip) => {
+  const cell = (n, of, col, tip, i) => {
     const sh = of ? n / of : 0;
-    return `<td title="${tip}" style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
+    return `<td title="${tip}"${n ? ` data-ck="${i}"` : ""} style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
   };
   ORDER.forEach(([pc0, sps]) => { sps.forEach(sc => {
     body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
@@ -1024,10 +1089,10 @@ function drawTable() {
       const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid), dead = !nLv(f);
       body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}${dead ? " · dropped" : ""}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
         const x = fam[i][fid] || { n: 0, lv: 0 };
-        return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} strategies, ${x.lv} on a lever`);
+        return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} strategies, ${x.lv} on a lever`, i);
       }).join("")}</tr>`;
       f.lever_ids.forEach(lid => {
-        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${al[lid] || ""}</td><td></td>${cols.map((c, i) => cell(lev[i][lid] || 0, tot[i], col, `${esc(c.label)}: ${lev[i][lid] || 0} strategies`)).join("")}</tr>`;
+        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${al[lid] || ""}</td><td></td>${cols.map((c, i) => cell(lev[i][lid] || 0, tot[i], col, `${esc(c.label)}: ${lev[i][lid] || 0} strategies`, i)).join("")}</tr>`;
       });
       D.dropped.filter(d => d.family_id === fid).forEach(d => {
         body += `<tr class="lvrow drop" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ d: d.lever_id })} title="Dropped as unbacked by the literature review: no strategies are placed on it">${esc(d.lever)} · dropped</td><td class="all"></td><td></td>${cols.map(() => "<td></td>").join("")}</tr>`;
@@ -1036,11 +1101,11 @@ function drawTable() {
   });
     const hid = HOLD[pc0];
     body += `<tr class="sp"><td colspan="${NC}">General branch · ${PROLE[pc0]}</td></tr>
-      <tr class="hrow"><td ${O({ h: hid })} title="Strategies that fit no live family">${esc(HNAME[hid])}</td><td class="all">${ag[hid] || ""}</td><td></td>${cols.map((c, i) => cell(gen[i][hid] || 0, tot[i], PCOL[pc0], `${esc(c.label)}: ${gen[i][hid] || 0} strategies`)).join("")}</tr>`;
+      <tr class="hrow"><td ${O({ h: hid })} title="Strategies that fit no live family">${esc(HNAME[hid])}</td><td class="all">${ag[hid] || ""}</td><td></td>${cols.map((c, i) => cell(gen[i][hid] || 0, tot[i], PCOL[pc0], `${esc(c.label)}: ${gen[i][hid] || 0} strategies`, i)).join("")}</tr>`;
   });
   $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
   $("#ct-h").textContent = mode === "country" ? `${C.name} over time: families and levers by plan` : region === null ? "Regions side by side: families and levers" : `${region}: countries side by side`;
-  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. A family row is the share of that ${C.unit}'s strategies placed on the family or one of its levers; open it to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a column heading to open that ${C.unit}.`;
+  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. A family row is the share of that ${C.unit}'s strategies placed on the family or one of its levers; open it to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
 }
 function toggleFam(fid, on) {
   if (on) openFam.add(fid); else openFam.delete(fid);
@@ -1048,9 +1113,176 @@ function toggleFam(fid, on) {
   document.querySelectorAll(`#ct tr.lvrow[data-of="${fid}"]`).forEach(r => r.hidden = !on);
 }
 
+// ---------- details table: the strategies behind whatever is selected ----------
+// r[17] holds the rest of a strategy's row: [number in its plan, quote, plan chapter, urgency, status, legal basis,
+// flags, SDG targets, agencies, lead, plan editions it is in]
+const DT = { col: null, text: "", lvl: "", ori: "", urg: "", st: "", sort: "n", dir: -1, page: 0, size: 50, open: new Set() };
+const rUrg = r => X.urg[r[17][3]], rSt = r => X.status[r[17][4]];
+const famOf = r => r[4] ? F[r[4]].family : (HNAME[r[6]] || "");
+const pillarOf = r => r[4] ? famPillar(r[4]) : HPC[r[6]];
+const RANK = { high: 0, medium: 1, low: 2, aspiration: 0, planned: 1, operational: 2 };
+const DCOLS = [
+  { k: "country", h: "Country", v: r => CTY[r[15]].name, hide: () => mode === "country" },
+  { k: "plan", h: "Plan", v: r => planLabel(PLN[r[0]]), cls: "w0" },
+  { k: "years", h: "Years", v: r => PLN[r[0]].start * 10000 + PLN[r[0]].end, t: r => `${PLN[r[0]].start}–${PLN[r[0]].end}`, cls: "nw" },
+  { k: "name", h: "Strategy", v: r => r[1], cls: "nm" },
+  { k: "obj", h: "Objective", v: r => r[2], cls: "w" },
+  { k: "tgt", h: "Target", v: r => r[11], cls: "w" },
+  { k: "ins", h: "Instrument", v: r => r[12], cls: "w" },
+  { k: "sector", h: "Sector", v: r => r[7] },
+  { k: "fam", h: "Family or branch", v: famOf, cls: "w", t: r => `<span class="sw" style="background:${PCOL[pillarOf(r)]}"></span>${esc(famOf(r))}` },
+  { k: "lev", h: "Lever", v: r => r[5] ? V[r[5]].lever : "", cls: "w" },
+  { k: "ori", h: "Orientation", v: r => r[8] },
+  { k: "urg", h: "Urgency", v: r => RANK[rUrg(r)], t: r => esc(rUrg(r)) },
+  { k: "st", h: "Status", v: r => RANK[rSt(r)], t: r => esc(rSt(r)) },
+  { k: "n", h: "Passages", v: r => r[13], cls: "num", title: "Passages of the plan that state this strategy" },
+];
+function nodeTest(o) {
+  if (o.v) return [r => r[5] === o.v, "Lever: " + V[o.v].lever];
+  if (o.f) return [r => r[4] === o.f, "Family: " + F[o.f].family];
+  if (o.h) return [r => r[3] === "STD" && r[6] === o.h, HNAME[o.h]];
+  if (o.d) return [() => false, "Dropped lever: no strategies are placed on it"];
+  if (o.g) return [r => r[4] && F[r[4]].group_id === o.g, "Group: " + G[o.g].group];
+  if (o.s) return [r => r[4] && F[r[4]].subpillar_code === o.s, "Subpillar: " + SP[o.s].name];
+  if (o.p) return [r => pillarOf(r) === o.p, "Pillar: " + PL[o.p].name];
+  if (o.r) return [r => r[9].includes(o.r), "Storm: " + o.r];
+  return null;
+}
+function dtBase() {
+  const o = state.o || {};
+  let rows = o.q ? stratHits(o.q) : C.rows, chips = [[selLabel() === "all plans" ? C.name + ", all plans" : (mode === "country" ? C.name + ", " : "") + selLabel(), null]];
+  if (o.q) chips.push([`Search: “${o.q}”`, "q"]);
+  const nt = nodeTest(o);
+  if (nt) { rows = rows.filter(nt[0]); chips.push([nt[1], "o"]); }
+  if (DT.col !== null) {
+    const c = C.cols.find(c => String(c.key) === String(DT.col));
+    if (c) { rows = rows.filter(r => String(C.colOf(r)) === String(DT.col)); chips.push([c.title || c.label, "col"]); } else DT.col = null;
+  }
+  return { rows, chips };
+}
+function dtOwn(rows) {
+  const q = DT.text;
+  return rows.filter(r => (!DT.lvl || r[3] === DT.lvl) && (!DT.ori || r[8] === DT.ori) && (!DT.urg || rUrg(r) === DT.urg) && (!DT.st || rSt(r) === DT.st) &&
+    (!q || [r[1], r[2], r[10], r[11], r[12], r[7], r[17][1], CTY[r[15]].name, famOf(r), r[5] ? V[r[5]].lever : "", X.chapters[r[17][2]]].join(" ").toLowerCase().includes(q)));
+}
+const blank = v => v === "" || v === undefined || v === null;
+function dtSort(rows) {
+  const c = DCOLS.find(c => c.k === DT.sort) || DCOLS[0], d = DT.dir;
+  return rows.map(r => [c.v(r), r]).sort((a, b) => {
+    const x = a[0], y = b[0];
+    if (blank(x) || blank(y)) return blank(x) - blank(y) || a[1][18] - b[1][18];
+    return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * d || a[1][18] - b[1][18];
+  }).map(x => x[1]);
+}
+// the passage text sits in a file per plan edition beside the page, read when a strategy is opened
+const PSG = {};
+window.PVD = (id, d) => { PSG[id] = d; };
+function loadPsg(pid) {
+  if (PSG[pid]) return;
+  PSG[pid] = { wait: true };
+  const s = document.createElement("script");
+  s.src = "detail/" + pid + ".js";
+  s.onload = () => { if (PSG[pid].wait) PSG[pid] = { err: true }; fillPsg(); };
+  s.onerror = () => { PSG[pid] = { err: true }; fillPsg(); };
+  document.head.appendChild(s);
+}
+function psgHtml(r) {
+  const pid = PLN[r[0]].id, d = PSG[pid];
+  if (!d) { loadPsg(pid); return `<p class="muted">Loading the passages…</p>`; }
+  if (d.wait) return `<p class="muted">Loading the passages…</p>`;
+  if (d.err) return `<p class="muted">The text of the ${r[13]} passage${r[13] === 1 ? "" : "s"} is kept in the folder “detail” beside this page and could not be read here. The quote above is the first of them; every passage is also in the passages CSV.</p>`;
+  const ps = d.s[r[17][0]] || [];
+  if (!ps.length) return `<p class="muted">No passage rows are held for this strategy.</p>`;
+  return `<div class="ct-scroll"><table class="psgt"><thead><tr><th>Document</th><th>Page</th><th>§</th><th>Read there as</th><th>Evidence in the plan</th><th>Agencies</th></tr></thead><tbody>${ps.map(p =>
+    `<tr><td>${esc(d.docs[p[0]])}</td><td class="num">${esc(p[1])}</td><td class="num">${esc(p[2])}</td><td>${esc(p[3])}</td><td class="ev">${esc(p[4])}</td><td>${esc(p[5].replace(/ \| /g, "; "))}</td></tr>`).join("")}</tbody></table></div>`;
+}
+function fillPsg() { document.querySelectorAll("#dt .psg").forEach(el => { el.innerHTML = psgHtml(ROWS[+el.dataset.i]); }); }
+function dtDetail(r) {
+  const p = PLN[r[0]], x = r[17], fl = x[6];
+  const yn = b => b ? "yes" : "no";
+  const path = r[4] ? (() => { const f = F[r[4]], g = G[f.group_id], s = SP[f.subpillar_code];
+      return [[PL[s.pillar].name, { p: s.pillar }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: r[4] }]].concat(r[5] ? [[V[r[5]].lever, { v: r[5] }]] : []); })()
+    : [[PL[HPC[r[6]]].name, { p: HPC[r[6]] }], [HNAME[r[6]], { h: r[6] }]];
+  const row = (k, v) => blank(v) ? "" : `<dt>${k}</dt><dd>${v}</dd>`;
+  return `<dl class="dgrid">
+    ${row("Strategy", `<b>${esc(r[1])}</b> <span class="muted">${esc(p.id)}#s${x[0]}</span>`)}
+    ${row("Plan", `${esc(CTY[r[15]].name)} · ${esc(p.title)}, ${p.start}–${p.end}${p.src.includes("confirm") ? ` <span class="muted">(period to confirm)</span>` : ""}`)}
+    ${row("Plan chapter", esc(X.chapters[x[2]]))}
+    ${row("Objective", esc(r[2]))}
+    ${row("Target", esc(r[11]))}
+    ${row("Instrument", esc(r[12]))}
+    ${row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, through the objective label “${esc(r[10])}”</span>`)}
+    ${row("Storms", r[9].length ? `<span class="chips">${riskChips(r[9])}</span>` : "")}
+    ${row("Sector", esc(r[7]))}
+    ${row("Orientation", esc(r[8]))}
+    ${row("Urgency · status", `${esc(rUrg(r))} · ${esc(rSt(r))} · basis: ${esc(X.legal[x[5]])}`)}
+    ${row("Stated in the plan", `timeline ${yn(fl & 1)} · quantified target ${yn(fl & 2)} · monitoring ${yn(fl & 4)}`)}
+    ${row("Lead", esc(X.leads[x[9]]))}
+    ${row("Agencies named", esc(x[8].map(i => X.agencies[i]).join("; ")))}
+    ${row("SDG targets", x[7].length ? `<span class="chips">${sdgChips(x[7].map(i => X.sdgs[i]))}</span>` : "")}
+    ${row("Across plans", x[10] > 1 ? `In ${x[10]} plan editions of ${esc(CTY[r[15]].name)}${r[16] >= 0 ? `, first in ${esc(planLabel(PLN[r[16]]))} (${PLN[r[16]].start}–${PLN[r[16]].end})` : ", this is the first"}` : "In this plan edition only")}
+    ${row("Quote", x[1] ? `“${esc(x[1])}”` : "")}
+  </dl>
+  <div class="eyebrow" style="margin-top:10px">Underlying passages (${r[13]}) · where the plan states it</div>
+  <div class="psg" data-i="${r[18]}">${psgHtml(r)}</div>`;
+}
+function drawDetails() {
+  const { rows: base, chips } = dtBase();
+  const rows = dtSort(dtOwn(base));
+  const pages = Math.max(1, Math.ceil(rows.length / DT.size));
+  DT.page = Math.min(DT.page, pages - 1);
+  const cols = DCOLS.filter(c => !(c.hide && c.hide()));
+  const view = rows.slice(DT.page * DT.size, (DT.page + 1) * DT.size);
+  $("#dt-h").textContent = `Strategy details: ${rows.length.toLocaleString()} strateg${rows.length === 1 ? "y" : "ies"}`;
+  $("#dt-chips").innerHTML = chips.map(([l, k]) => `<span class="chip">${esc(short(l, 70))}${k ? ` <a class="x" data-x="${k}" role="button" tabindex="0" aria-label="Remove ${esc(l)}">×</a>` : ""}</span>`).join("") +
+    (rows.length !== base.length ? `<span class="chip">table filters: ${rows.length.toLocaleString()} of ${base.length.toLocaleString()}</span>` : "");
+  $("#dt").innerHTML = `<thead><tr>${cols.map(c => `<th${c.k === DT.sort ? ` aria-sort="${DT.dir > 0 ? "ascending" : "descending"}"` : ""}${c.cls === "num" ? ' class="num"' : ""}><button type="button" data-sort="${c.k}"${c.title ? ` title="${c.title}"` : ""}>${c.h}</button></th>`).join("")}</tr></thead><tbody>${
+    view.length ? view.map(r => {
+      const op = DT.open.has(r[18]);
+      return `<tr class="dr${op ? " open" : ""}" data-i="${r[18]}" tabindex="0" aria-expanded="${op}">${cols.map(c => `<td${c.cls ? ` class="${c.cls}"` : ""}>${c.t ? c.t(r) : esc(c.v(r))}</td>`).join("")}</tr>` +
+        (op ? `<tr class="dx"><td colspan="${cols.length}">${dtDetail(r)}</td></tr>` : "");
+    }).join("") : `<tr><td colspan="${cols.length}" class="muted">${(state.o || {}).d ? "Nothing is placed on a dropped lever." : "No strategy matches."}</td></tr>`}</tbody>`;
+  $("#dt-pager").innerHTML = `<span>${rows.length ? (DT.page * DT.size + 1).toLocaleString() : 0}–${Math.min(rows.length, (DT.page + 1) * DT.size).toLocaleString()} of ${rows.length.toLocaleString()}</span>
+    <button type="button" class="clear" data-pg="-1"${DT.page ? "" : " disabled"}>Previous</button><button type="button" class="clear" data-pg="1"${DT.page < pages - 1 ? "" : " disabled"}>Next</button>
+    <label>Rows <select id="dt-size">${[50, 100, 250].map(n => `<option${n === DT.size ? " selected" : ""}>${n}</option>`).join("")}</select></label>`;
+}
+function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
+{
+  const opt = (id, first, vals) => { $(id).innerHTML = `<option value="">${first}</option>` + vals.map(([v, l]) => `<option value="${v}">${l}</option>`).join(""); };
+  opt("#dt-lvl", "Any placement", [["LV", "On a lever"], ["L2", "On a family, no lever"], ["STD", "On a general branch"]]);
+  opt("#dt-ori", "Any orientation", ["BAU", "proactive", "transformative"].map(v => [v, v]));
+  opt("#dt-urg", "Any urgency", ["high", "medium", "low"].map(v => [v, v + " urgency"]));
+  opt("#dt-st", "Any status", ["aspiration", "planned", "operational"].map(v => [v, v]));
+  const reset = () => { DT.page = 0; DT.open.clear(); drawDetails(); };
+  $("#dt-q").addEventListener("input", e => { DT.text = e.target.value.trim().toLowerCase(); reset(); });
+  [["#dt-lvl", "lvl"], ["#dt-ori", "ori"], ["#dt-urg", "urg"], ["#dt-st", "st"]].forEach(([id, k]) => $(id).addEventListener("change", e => { DT[k] = e.target.value; reset(); }));
+  $("#dt-reset").addEventListener("click", () => { DT.text = DT.lvl = DT.ori = DT.urg = DT.st = ""; ["#dt-q", "#dt-lvl", "#dt-ori", "#dt-urg", "#dt-st"].forEach(id => $(id).value = ""); reset(); });
+  const unchip = k => {
+    if (k === "col") { DT.col = null; reset(); }
+    else if (k === "q") { $("#q").value = ""; state.q = ""; indexHits(""); show({}); }
+    else show({});
+  };
+  $("#dt-chips").addEventListener("click", e => { const a = e.target.closest("[data-x]"); if (a) unchip(a.dataset.x); });
+  $("#dt-chips").addEventListener("keydown", e => { const a = e.target.closest("[data-x]"); if (a && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); unchip(a.dataset.x); } });
+  const toggle = tr => { const i = +tr.dataset.i; if (DT.open.has(i)) DT.open.delete(i); else DT.open.add(i); drawDetails(); };
+  $("#dt").addEventListener("click", e => {
+    const s = e.target.closest("[data-sort]");
+    if (s) { const k = s.dataset.sort; if (DT.sort === k) DT.dir = -DT.dir; else { DT.sort = k; DT.dir = k === "n" ? -1 : 1; } DT.page = 0; drawDetails(); return; }
+    const a = e.target.closest("[data-o]");
+    if (a) { e.preventDefault(); show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); return; }
+    if (e.target.closest("tr.dx")) return;
+    const tr = e.target.closest("tr.dr"); if (tr) toggle(tr);
+  });
+  $("#dt").addEventListener("keydown", e => { const tr = e.target.closest("tr.dr"); if (tr && e.target === tr && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(tr); } });
+  $("#dt-pager").addEventListener("click", e => { const b = e.target.closest("[data-pg]"); if (b) { DT.page += +b.dataset.pg; drawDetails(); $("#details").scrollIntoView({ block: "start" }); } });
+  $("#dt-pager").addEventListener("change", e => { if (e.target.id === "dt-size") { DT.size = +e.target.value; DT.page = 0; drawDetails(); } });
+  panel.addEventListener("click", e => { if (e.target.closest("[data-dt]")) { e.preventDefault(); toDetails(); } });
+}
+
 // ---------- state ----------
 function refresh() {
   scope();
+  if (DT.col !== null && !C.cols.some(c => String(c.key) === String(DT.col))) DT.col = null;
   const w = mode !== "country";
   $("#m-world").setAttribute("aria-selected", w); $("#m-ctry").setAttribute("aria-selected", !w);
   $("#worldbar").hidden = !w; $("#ctrybar").hidden = w;
@@ -1079,6 +1311,12 @@ $("#ct-close").addEventListener("click", () => D.families.forEach(f => toggleFam
 panel.addEventListener("click", e => { const a = e.target.closest("[data-col]"); if (a) { e.preventDefault(); colClick(a.dataset.col); } });
 $("#ct").addEventListener("click", e => {
   const h = e.target.closest("th[data-col]"); if (h) { colClick(h.dataset.col); return; }
+  const ck = e.target.closest("td[data-ck]");
+  if (ck) {
+    const tr = ck.parentElement, a = tr.querySelector("[data-o]");
+    const o = tr.dataset.fam ? { f: tr.dataset.fam } : a ? JSON.parse(a.dataset.o) : null;
+    if (o) { DT.col = C.cols[+ck.dataset.ck].key; DT.keepCol = true; show(o); toDetails(); return; }
+  }
   const fr = e.target.closest("tr.frow");
   if (fr) { const fid = fr.dataset.fam; toggleFam(fid, !openFam.has(fid)); show({ f: fid }); return; }
   const a = e.target.closest("[data-o]"); if (a) { show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); }
