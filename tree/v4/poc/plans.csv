@@ -1,111 +1,111 @@
 plan_id,country,slug,region,doc_type,edition,plan_title,period_start,period_end,published,language,status,period_source,source_documents,n_strategies,n_on_lever,tree_version
-afghanistan_ndp_2008-2013,Afghanistan,afghanistan,South Asia,ndp,ANDS,Afghanistan National Development Strategy,2008,2013,,,reshaped from the earlier run,document,AFG NDS 2008 2013,193,96,v4
-afghanistan_ndp_2017-2021,Afghanistan,afghanistan,South Asia,ndp,ANPDF I,National Peace and Development Framework,2017,2021,,,reshaped from the earlier run,document,AFG ANPDF 2017 2021 | Afghanistan Vision Doc,59,28,v4
-afghanistan_ndp_2021-2025,Afghanistan,afghanistan,South Asia,ndp,ANPDF II,National Peace and Development Framework II,2021,2025,,,reshaped from the earlier run,document,AFG ANPDF 2021 2025,71,33,v4
-afghanistan_ndp_2026-2030,Afghanistan,afghanistan,South Asia,ndp,NDS,National Development Strategy,2026,2030,,,reshaped from the earlier run,document,AFG NDS 2025 2030,48,22,v4
-bangladesh_ndp_2011-2015,Bangladesh,bangladesh,South Asia,ndp,6th,Sixth Five Year Plan,2011,2015,,,reshaped from the earlier run,document,BGD NDP 2011 2015 Part 1 | BGD NDP 2011 2015 Part 2 Sectoral Strategies | Sixth_Five_Year_Plan _Accelerating_Growth_and_Reducing_Poverty,356,215,v4
-bangladesh_ndp_2016-2020,Bangladesh,bangladesh,South Asia,ndp,7th,Seventh Five Year Plan,2016,2020,,,reshaped from the earlier run,document,BGD NDP 2016 2020,332,191,v4
-bangladesh_ndp_2020-2025,Bangladesh,bangladesh,South Asia,ndp,8th,Eighth Five Year Plan,2020,2025,,,reshaped from the earlier run,document,BGD NDP 2020 25,333,192,v4
-bangladesh_ndp_2026-2031,Bangladesh,bangladesh,South Asia,ndp,2026-31,National Development Plan 2026-31,2026,2031,,,reshaped from the earlier run,document,BGD NDP 2026 31 Vol 1 | BGD NDP 2026 31 Vol 2 Strategic Action Matrix,554,342,v4
-bangladesh_vision_2021-2041,Bangladesh,bangladesh,South Asia,vision,Vision 2041,Perspective Plan 2021-2041,2021,2041,,,reshaped from the earlier run,document,Bangladesh Vision Doc 2041,103,69,v4
-bhutan_ndp_2013-2018,Bhutan,bhutan,South Asia,ndp,11th,Eleventh Five Year Plan,2013,2018,,,reshaped from the earlier run,document,BHU NDP 2013 18,72,43,v4
-bhutan_ndp_2018-2023,Bhutan,bhutan,South Asia,ndp,12th,Twelfth Five Year Plan,2018,2023,,,reshaped from the earlier run,document,BHU NDP 2018 23 Vol 1 | BHU NDP 2018 23 Vol 2,104,60,v4
-bhutan_ndp_2024-2029,Bhutan,bhutan,South Asia,ndp,13th,Thirteenth Five Year Plan,2024,2029,,,reshaped from the earlier run,document,BHU NDP 2024 29,63,28,v4
-bhutan_vision_2019-2030,Bhutan,bhutan,South Asia,vision,2030,Comprehensive national development plan to 2030 (file 12340592_01),2019,2030,,,reshaped from the earlier run,inferred from the text; confirm,12340592_01,26,20,v4
-brazil_ndp_2024-2027,Brazil,brazil,Latin America and the Caribbean,ndp,PPA,Plano Plurianual 2024-2027,2024,2027,,,reshaped from the earlier run,document,ndp_2024 2027_ppa_anexo1_dimensao_estrategica | ndp_2024 2027_ppa_anexo3_programas_finalisticos,121,60,v4
-brunei_ndp_2012-2017,Brunei Darussalam,brunei,South-East Asia,ndp,RKN 10,Tenth National Development Plan,2012,2017,,,reshaped from the earlier run,document,BRU NDP 2012 2017,61,35,v4
-brunei_ndp_2018-2023,Brunei Darussalam,brunei,South-East Asia,ndp,RKN 11,Eleventh National Development Plan,2018,2023,,,reshaped from the earlier run,document,BRU NDP 2018 2023,34,22,v4
-brunei_ndp_2024-2029,Brunei Darussalam,brunei,South-East Asia,ndp,RKN 12,Twelfth National Development Plan,2024,2029,,,reshaped from the earlier run,document,BRU NDP 2024 2029,32,19,v4
-cambodia_ndp_2009-2013,Cambodia,cambodia,South-East Asia,ndp,NSDP 2009-13,National Strategic Development Plan Update 2009-2013,2009,2013,,,reshaped from the earlier run,document,CMB NDP 2009 2013,128,84,v4
-cambodia_ndp_2014-2018,Cambodia,cambodia,South-East Asia,ndp,NSDP 2014-18,National Strategic Development Plan 2014-2018,2014,2018,,,reshaped from the earlier run,document,CMB NDP 2014 2018,201,121,v4
-cambodia_ndp_2019-2023,Cambodia,cambodia,South-East Asia,ndp,NSDP 2019-23,National Strategic Development Plan 2019-2023,2019,2023,,,reshaped from the earlier run,document,CMB NDP 2019 2023,207,117,v4
-cambodia_ndp_2024-2028,Cambodia,cambodia,South-East Asia,ndp,NSDP 2024-28,National Strategic Development Plan 2024-2028,2024,2028,,,reshaped from the earlier run,document,CMB NDP 2024 2028 unofficial translation,152,86,v4
-cambodia_vision_2023-2028,Cambodia,cambodia,South-East Asia,vision,Pentagonal I,Pentagonal Strategy Phase I (Cambodia Vision 2050),2023,2028,,,reshaped from the earlier run,title,Cambodia Vision 2050 Pentagonal Strategy Phase 1,57,31,v4
-china_ndp_2011-2015,China,china,East Asia,ndp,12th,12th Five-Year Plan,2011,2015,,,reshaped from the earlier run,filename,CN NDP 2011 15,114,73,v4
+afghanistan_ndp_2008-2013,Afghanistan,afghanistan,South Asia,ndp,ANDS,Afghanistan National Development Strategy,2008,2013,,,reshaped from the earlier run,document,AFG NDS 2008 2013,193,119,v4
+afghanistan_ndp_2017-2021,Afghanistan,afghanistan,South Asia,ndp,ANPDF I,National Peace and Development Framework,2017,2021,,,reshaped from the earlier run,document,AFG ANPDF 2017 2021 | Afghanistan Vision Doc,59,39,v4
+afghanistan_ndp_2021-2025,Afghanistan,afghanistan,South Asia,ndp,ANPDF II,National Peace and Development Framework II,2021,2025,,,reshaped from the earlier run,document,AFG ANPDF 2021 2025,71,50,v4
+afghanistan_ndp_2026-2030,Afghanistan,afghanistan,South Asia,ndp,NDS,National Development Strategy,2026,2030,,,reshaped from the earlier run,document,AFG NDS 2025 2030,48,28,v4
+bangladesh_ndp_2011-2015,Bangladesh,bangladesh,South Asia,ndp,6th,Sixth Five Year Plan,2011,2015,,,reshaped from the earlier run,document,BGD NDP 2011 2015 Part 1 | BGD NDP 2011 2015 Part 2 Sectoral Strategies | Sixth_Five_Year_Plan _Accelerating_Growth_and_Reducing_Poverty,356,257,v4
+bangladesh_ndp_2016-2020,Bangladesh,bangladesh,South Asia,ndp,7th,Seventh Five Year Plan,2016,2020,,,reshaped from the earlier run,document,BGD NDP 2016 2020,332,215,v4
+bangladesh_ndp_2020-2025,Bangladesh,bangladesh,South Asia,ndp,8th,Eighth Five Year Plan,2020,2025,,,reshaped from the earlier run,document,BGD NDP 2020 25,333,216,v4
+bangladesh_ndp_2026-2031,Bangladesh,bangladesh,South Asia,ndp,2026-31,National Development Plan 2026-31,2026,2031,,,reshaped from the earlier run,document,BGD NDP 2026 31 Vol 1 | BGD NDP 2026 31 Vol 2 Strategic Action Matrix,554,405,v4
+bangladesh_vision_2021-2041,Bangladesh,bangladesh,South Asia,vision,Vision 2041,Perspective Plan 2021-2041,2021,2041,,,reshaped from the earlier run,document,Bangladesh Vision Doc 2041,103,67,v4
+bhutan_ndp_2013-2018,Bhutan,bhutan,South Asia,ndp,11th,Eleventh Five Year Plan,2013,2018,,,reshaped from the earlier run,document,BHU NDP 2013 18,72,46,v4
+bhutan_ndp_2018-2023,Bhutan,bhutan,South Asia,ndp,12th,Twelfth Five Year Plan,2018,2023,,,reshaped from the earlier run,document,BHU NDP 2018 23 Vol 1 | BHU NDP 2018 23 Vol 2,104,70,v4
+bhutan_ndp_2024-2029,Bhutan,bhutan,South Asia,ndp,13th,Thirteenth Five Year Plan,2024,2029,,,reshaped from the earlier run,document,BHU NDP 2024 29,63,33,v4
+bhutan_vision_2019-2030,Bhutan,bhutan,South Asia,vision,2030,Comprehensive national development plan to 2030 (file 12340592_01),2019,2030,,,reshaped from the earlier run,inferred from the text; confirm,12340592_01,26,18,v4
+brazil_ndp_2024-2027,Brazil,brazil,Latin America and the Caribbean,ndp,PPA,Plano Plurianual 2024-2027,2024,2027,,,reshaped from the earlier run,document,ndp_2024 2027_ppa_anexo1_dimensao_estrategica | ndp_2024 2027_ppa_anexo3_programas_finalisticos,121,47,v4
+brunei_ndp_2012-2017,Brunei Darussalam,brunei,South-East Asia,ndp,RKN 10,Tenth National Development Plan,2012,2017,,,reshaped from the earlier run,document,BRU NDP 2012 2017,61,32,v4
+brunei_ndp_2018-2023,Brunei Darussalam,brunei,South-East Asia,ndp,RKN 11,Eleventh National Development Plan,2018,2023,,,reshaped from the earlier run,document,BRU NDP 2018 2023,34,17,v4
+brunei_ndp_2024-2029,Brunei Darussalam,brunei,South-East Asia,ndp,RKN 12,Twelfth National Development Plan,2024,2029,,,reshaped from the earlier run,document,BRU NDP 2024 2029,32,14,v4
+cambodia_ndp_2009-2013,Cambodia,cambodia,South-East Asia,ndp,NSDP 2009-13,National Strategic Development Plan Update 2009-2013,2009,2013,,,reshaped from the earlier run,document,CMB NDP 2009 2013,128,77,v4
+cambodia_ndp_2014-2018,Cambodia,cambodia,South-East Asia,ndp,NSDP 2014-18,National Strategic Development Plan 2014-2018,2014,2018,,,reshaped from the earlier run,document,CMB NDP 2014 2018,201,123,v4
+cambodia_ndp_2019-2023,Cambodia,cambodia,South-East Asia,ndp,NSDP 2019-23,National Strategic Development Plan 2019-2023,2019,2023,,,reshaped from the earlier run,document,CMB NDP 2019 2023,207,118,v4
+cambodia_ndp_2024-2028,Cambodia,cambodia,South-East Asia,ndp,NSDP 2024-28,National Strategic Development Plan 2024-2028,2024,2028,,,reshaped from the earlier run,document,CMB NDP 2024 2028 unofficial translation,152,82,v4
+cambodia_vision_2023-2028,Cambodia,cambodia,South-East Asia,vision,Pentagonal I,Pentagonal Strategy Phase I (Cambodia Vision 2050),2023,2028,,,reshaped from the earlier run,title,Cambodia Vision 2050 Pentagonal Strategy Phase 1,57,29,v4
+china_ndp_2011-2015,China,china,East Asia,ndp,12th,12th Five-Year Plan,2011,2015,,,reshaped from the earlier run,filename,CN NDP 2011 15,114,68,v4
 china_ndp_2016-2020,China,china,East Asia,ndp,13th,13th Five-Year Plan,2016,2020,,,reshaped from the earlier run,document,CN NDP 2016 20,197,125,v4
-china_ndp_2021-2025,China,china,East Asia,ndp,14th,14th Five-Year Plan,2021,2025,,,reshaped from the earlier run,document,CN NDP 2021 2025 | CN NDP 2021 2025 Chinese,246,135,v4
-china_ndp_2026-2030,China,china,East Asia,ndp,15th,15th Five-Year Plan,2026,2030,,,reshaped from the earlier run,document,CN NDP 2026 2030 | CN NDP 2026 2030 Chinese,265,162,v4
-china_vision_2013-2030,China,china,East Asia,vision,China 2030,China 2030,2013,2030,,,reshaped from the earlier run,inferred from the title; confirm,china2030,135,86,v4
-colombia_ndp_2022-2026,Colombia,colombia,Latin America and the Caribbean,ndp,PND,Plan Nacional de Desarrollo 2022-2026,2022,2026,,,reshaped from the earlier run,document,CO PND 2022 2026 texto articulado Senado,153,98,v4
-egypt_vision_2016-2030,Egypt,egypt,Arab States,vision,Vision 2030,Egypt Vision 2030,2016,2030,,,reshaped from the earlier run,config,EG Vision 2030,97,54,v4
-ethiopia_vision_2021-2030,Ethiopia,ethiopia,Africa,vision,TYDP,Ten Year Development Plan 2021-2030,2021,2030,,,reshaped from the earlier run,document,ET Ten Year Development Plan 2021 2030,30,15,v4
-fiji_ndp_2017-2021,Fiji,fiji,Pacific,ndp,NDP 2017-21,National Development Plan 2017-2021,2017,2021,,,reshaped from the earlier run,document,FIJI NDP 2017 21,149,86,v4
-fiji_ndp_2025-2029,Fiji,fiji,Pacific,ndp,NDP 2025-29,National Development Plan 2025-2029,2025,2029,,,reshaped from the earlier run,document,FIJI NDP 2025 29 | fij232617,296,164,v4
-ghana_ndp_2022-2025,Ghana,ghana,Africa,ndp,Agenda for Jobs II,"Agenda for Jobs II, Medium-Term National Development Policy Framework 2022-2025",2022,2025,,,reshaped from the earlier run,document,ndp_2022 2025_agenda_for_jobs_ii,267,156,v4
-india_ndp_2012-2017,India,india,South Asia,ndp,12th,Twelfth Five Year Plan,2012,2017,,,reshaped from the earlier run,document,IND NDP 2012 17,151,103,v4
-india_ndp_2018-2022,India,india,South Asia,ndp,New India,Strategy for New India @ 75,2018,2022,,,reshaped from the earlier run,filename,IND Strategy for New India 2018 22,162,102,v4
-india_vision_2024-2047,India,india,South Asia,vision,Vision,Long-term vision paper (file yYo8lCuXK7n13xxElnay),2024,2047,,,reshaped from the earlier run,inferred from the text; confirm,yYo8lCuXK7n13xxElnay,54,32,v4
-indonesia_ndp_2015-2019,Indonesia,indonesia,South-East Asia,ndp,RPJMN 2015-19,National Medium-Term Development Plan 2015-2019,2015,2019,,,reshaped from the earlier run,document,INDO NDP 2015 2019 Bahasa,187,113,v4
-indonesia_ndp_2020-2024,Indonesia,indonesia,South-East Asia,ndp,RPJMN 2020-24,National Medium-Term Development Plan 2020-2024,2020,2024,,,reshaped from the earlier run,document,INDO NDP 2020 2024 | INDO NDP 2020 24 Bahasa,202,114,v4
-indonesia_ndp_2025-2029,Indonesia,indonesia,South-East Asia,ndp,RPJMN 2025-29,National Medium-Term Development Plan 2025-2029,2025,2029,,,reshaped from the earlier run,document,INDO NDP 2025 29 Bahasa 1,159,84,v4
-iran_ndp_2011-2015,Iran,iran,South Asia,ndp,5th,Fifth Five-Year Development Plan,2011,2015,,,reshaped from the earlier run,filename,IR NDP 2011 15 Farsi,287,166,v4
-iran_ndp_2017-2021,Iran,iran,South Asia,ndp,6th,Sixth Five-Year Development Plan,2017,2021,,,reshaped from the earlier run,filename,IR NDP 2017 21 Farsi,200,111,v4
-iran_ndp_2023-2027,Iran,iran,South Asia,ndp,7th,Seventh Five-Year Development Plan,2023,2027,,,reshaped from the earlier run,filename,IR NDP 2023 27 Farsi,125,68,v4
-jamaica_ndp_2024-2027,Jamaica,jamaica,Latin America and the Caribbean,ndp,MTF,Medium Term Socio-Economic Policy Framework 2024-2027,2024,2027,,,reshaped from the earlier run,document,ndp_2024 2027_mtf,118,67,v4
-kazakhstan_ndp_2024-2029,Kazakhstan,kazakhstan,Europe and Central Asia,ndp,NDP 2029,National Development Plan to 2029,2024,2029,,,reshaped from the earlier run,title; the document table says 2018-2023,KZ National Development Plan 2029 RU,152,104,v4
-kenya_ndp_2023-2027,Kenya,kenya,Africa,ndp,MTP IV,Fourth Medium Term Plan 2023-2027,2023,2027,,,reshaped from the earlier run,document,ndp_2023 2027_mtp4,343,215,v4
-kiribati_ndp_2012-2015,Kiribati,kiribati,Pacific,ndp,KDP 2012-15,Kiribati Development Plan 2012-2015,2012,2015,,,reshaped from the earlier run,document,KIR NDP 2012 2015,34,18,v4
-kiribati_ndp_2016-2019,Kiribati,kiribati,Pacific,ndp,KDP 2016-19,Kiribati Development Plan 2016-2019,2016,2019,,,reshaped from the earlier run,document,KIR NDP 2016 2019,52,34,v4
-kiribati_ndp_2020-2023,Kiribati,kiribati,Pacific,ndp,KDP 2020-23,Kiribati Development Plan 2020-2023,2020,2023,,,reshaped from the earlier run,document,Kiribati_Development_Plan_2020 2023,44,25,v4
-kiribati_ndp_2024-2027,Kiribati,kiribati,Pacific,ndp,KDP 2024-27,Kiribati Development Plan 2024-2027,2024,2027,,,reshaped from the earlier run,document,KIR NDP 2024 2027,47,30,v4
-kiribati_vision_2016-2036,Kiribati,kiribati,Pacific,vision,KV20,Kiribati 20-Year Vision 2016-2036,2016,2036,,,reshaped from the earlier run,document,KIRIBATI_20 YEAR_VISION_2016 2036_,29,15,v4
-malaysia_ndp_2011-2015,Malaysia,malaysia,South-East Asia,ndp,10th,Tenth Malaysia Plan,2011,2015,,,reshaped from the earlier run,document,Malaysia NDP 2011 15,227,145,v4
-malaysia_ndp_2016-2020,Malaysia,malaysia,South-East Asia,ndp,11th,Eleventh Malaysia Plan,2016,2020,,,reshaped from the earlier run,document,Malaysia NDP 2016 20,162,105,v4
-malaysia_ndp_2021-2025,Malaysia,malaysia,South-East Asia,ndp,12th,Twelfth Malaysia Plan,2021,2025,,,reshaped from the earlier run,document,Malaysia NDP 2021 25 | Malaysia NDP 2021 25 1,440,228,v4
-malaysia_ndp_2026-2030,Malaysia,malaysia,South-East Asia,ndp,13th,Thirteenth Malaysia Plan,2026,2030,,,reshaped from the earlier run,document,Malaysia NDP 2026 30,202,110,v4
-maldives_ndp_2019-2023,Maldives,maldives,South Asia,ndp,SAP,Strategic Action Plan 2019-2023,2019,2023,,,reshaped from the earlier run,document,Maldives SAP 2019 23,186,98,v4
-marshall_islands_ndp_2015-2017,Marshall Islands,marshall_islands,Pacific,ndp,NSP 2015-17,National Strategic Plan 2015-2017,2015,2017,,,reshaped from the earlier run,document,MARSH NSP 2015 17,57,29,v4
-marshall_islands_vision_2020-2030,Marshall Islands,marshall_islands,Pacific,vision,NSP 2020-30,National Strategic Plan 2020-2030,2020,2030,,,reshaped from the earlier run,document,MARSH NSP 2020 30,31,15,v4
-mongolia_ndp_2016-2020,Mongolia,mongolia,East Asia,ndp,GAP 2016-20,Government Action Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,MON Government Action Plan 2016 20 Mongolian,120,69,v4
-mongolia_ndp_2020-2024,Mongolia,mongolia,East Asia,ndp,GAP 2020-24,Government Action Plan 2020-2024,2020,2024,,,reshaped from the earlier run,document,MON Government Action Plan 2020 24 Mongolian,105,63,v4
-mongolia_ndp_2021-2025,Mongolia,mongolia,East Asia,ndp,Guidelines 2021-25,Five-Year Development Guidelines 2021-2025,2021,2025,,,reshaped from the earlier run,document,MON Development Guidelines 2021 25 Mongolian,84,50,v4
-mongolia_ndp_2024-2028,Mongolia,mongolia,East Asia,ndp,GAP 2024-28,Government Action Plan 2024-2028,2024,2028,,,reshaped from the earlier run,document,MON Government Action Plan 2024 28 Mongolian,138,88,v4
+china_ndp_2021-2025,China,china,East Asia,ndp,14th,14th Five-Year Plan,2021,2025,,,reshaped from the earlier run,document,CN NDP 2021 2025 | CN NDP 2021 2025 Chinese,246,129,v4
+china_ndp_2026-2030,China,china,East Asia,ndp,15th,15th Five-Year Plan,2026,2030,,,reshaped from the earlier run,document,CN NDP 2026 2030 | CN NDP 2026 2030 Chinese,265,153,v4
+china_vision_2013-2030,China,china,East Asia,vision,China 2030,China 2030,2013,2030,,,reshaped from the earlier run,inferred from the title; confirm,china2030,135,84,v4
+colombia_ndp_2022-2026,Colombia,colombia,Latin America and the Caribbean,ndp,PND,Plan Nacional de Desarrollo 2022-2026,2022,2026,,,reshaped from the earlier run,document,CO PND 2022 2026 texto articulado Senado,153,96,v4
+egypt_vision_2016-2030,Egypt,egypt,Arab States,vision,Vision 2030,Egypt Vision 2030,2016,2030,,,reshaped from the earlier run,config,EG Vision 2030,97,57,v4
+ethiopia_vision_2021-2030,Ethiopia,ethiopia,Africa,vision,TYDP,Ten Year Development Plan 2021-2030,2021,2030,,,reshaped from the earlier run,document,ET Ten Year Development Plan 2021 2030,30,17,v4
+fiji_ndp_2017-2021,Fiji,fiji,Pacific,ndp,NDP 2017-21,National Development Plan 2017-2021,2017,2021,,,reshaped from the earlier run,document,FIJI NDP 2017 21,149,96,v4
+fiji_ndp_2025-2029,Fiji,fiji,Pacific,ndp,NDP 2025-29,National Development Plan 2025-2029,2025,2029,,,reshaped from the earlier run,document,FIJI NDP 2025 29 | fij232617,296,173,v4
+ghana_ndp_2022-2025,Ghana,ghana,Africa,ndp,Agenda for Jobs II,"Agenda for Jobs II, Medium-Term National Development Policy Framework 2022-2025",2022,2025,,,reshaped from the earlier run,document,ndp_2022 2025_agenda_for_jobs_ii,267,186,v4
+india_ndp_2012-2017,India,india,South Asia,ndp,12th,Twelfth Five Year Plan,2012,2017,,,reshaped from the earlier run,document,IND NDP 2012 17,151,107,v4
+india_ndp_2018-2022,India,india,South Asia,ndp,New India,Strategy for New India @ 75,2018,2022,,,reshaped from the earlier run,filename,IND Strategy for New India 2018 22,162,128,v4
+india_vision_2024-2047,India,india,South Asia,vision,Vision,Long-term vision paper (file yYo8lCuXK7n13xxElnay),2024,2047,,,reshaped from the earlier run,inferred from the text; confirm,yYo8lCuXK7n13xxElnay,54,34,v4
+indonesia_ndp_2015-2019,Indonesia,indonesia,South-East Asia,ndp,RPJMN 2015-19,National Medium-Term Development Plan 2015-2019,2015,2019,,,reshaped from the earlier run,document,INDO NDP 2015 2019 Bahasa,187,129,v4
+indonesia_ndp_2020-2024,Indonesia,indonesia,South-East Asia,ndp,RPJMN 2020-24,National Medium-Term Development Plan 2020-2024,2020,2024,,,reshaped from the earlier run,document,INDO NDP 2020 2024 | INDO NDP 2020 24 Bahasa,202,135,v4
+indonesia_ndp_2025-2029,Indonesia,indonesia,South-East Asia,ndp,RPJMN 2025-29,National Medium-Term Development Plan 2025-2029,2025,2029,,,reshaped from the earlier run,document,INDO NDP 2025 29 Bahasa 1,159,99,v4
+iran_ndp_2011-2015,Iran,iran,South Asia,ndp,5th,Fifth Five-Year Development Plan,2011,2015,,,reshaped from the earlier run,filename,IR NDP 2011 15 Farsi,287,173,v4
+iran_ndp_2017-2021,Iran,iran,South Asia,ndp,6th,Sixth Five-Year Development Plan,2017,2021,,,reshaped from the earlier run,filename,IR NDP 2017 21 Farsi,200,131,v4
+iran_ndp_2023-2027,Iran,iran,South Asia,ndp,7th,Seventh Five-Year Development Plan,2023,2027,,,reshaped from the earlier run,filename,IR NDP 2023 27 Farsi,125,83,v4
+jamaica_ndp_2024-2027,Jamaica,jamaica,Latin America and the Caribbean,ndp,MTF,Medium Term Socio-Economic Policy Framework 2024-2027,2024,2027,,,reshaped from the earlier run,document,ndp_2024 2027_mtf,118,75,v4
+kazakhstan_ndp_2024-2029,Kazakhstan,kazakhstan,Europe and Central Asia,ndp,NDP 2029,National Development Plan to 2029,2024,2029,,,reshaped from the earlier run,title; the document table says 2018-2023,KZ National Development Plan 2029 RU,152,103,v4
+kenya_ndp_2023-2027,Kenya,kenya,Africa,ndp,MTP IV,Fourth Medium Term Plan 2023-2027,2023,2027,,,reshaped from the earlier run,document,ndp_2023 2027_mtp4,343,234,v4
+kiribati_ndp_2012-2015,Kiribati,kiribati,Pacific,ndp,KDP 2012-15,Kiribati Development Plan 2012-2015,2012,2015,,,reshaped from the earlier run,document,KIR NDP 2012 2015,34,25,v4
+kiribati_ndp_2016-2019,Kiribati,kiribati,Pacific,ndp,KDP 2016-19,Kiribati Development Plan 2016-2019,2016,2019,,,reshaped from the earlier run,document,KIR NDP 2016 2019,52,39,v4
+kiribati_ndp_2020-2023,Kiribati,kiribati,Pacific,ndp,KDP 2020-23,Kiribati Development Plan 2020-2023,2020,2023,,,reshaped from the earlier run,document,Kiribati_Development_Plan_2020 2023,44,30,v4
+kiribati_ndp_2024-2027,Kiribati,kiribati,Pacific,ndp,KDP 2024-27,Kiribati Development Plan 2024-2027,2024,2027,,,reshaped from the earlier run,document,KIR NDP 2024 2027,47,35,v4
+kiribati_vision_2016-2036,Kiribati,kiribati,Pacific,vision,KV20,Kiribati 20-Year Vision 2016-2036,2016,2036,,,reshaped from the earlier run,document,KIRIBATI_20 YEAR_VISION_2016 2036_,29,19,v4
+malaysia_ndp_2011-2015,Malaysia,malaysia,South-East Asia,ndp,10th,Tenth Malaysia Plan,2011,2015,,,reshaped from the earlier run,document,Malaysia NDP 2011 15,227,172,v4
+malaysia_ndp_2016-2020,Malaysia,malaysia,South-East Asia,ndp,11th,Eleventh Malaysia Plan,2016,2020,,,reshaped from the earlier run,document,Malaysia NDP 2016 20,162,118,v4
+malaysia_ndp_2021-2025,Malaysia,malaysia,South-East Asia,ndp,12th,Twelfth Malaysia Plan,2021,2025,,,reshaped from the earlier run,document,Malaysia NDP 2021 25 | Malaysia NDP 2021 25 1,440,296,v4
+malaysia_ndp_2026-2030,Malaysia,malaysia,South-East Asia,ndp,13th,Thirteenth Malaysia Plan,2026,2030,,,reshaped from the earlier run,document,Malaysia NDP 2026 30,202,125,v4
+maldives_ndp_2019-2023,Maldives,maldives,South Asia,ndp,SAP,Strategic Action Plan 2019-2023,2019,2023,,,reshaped from the earlier run,document,Maldives SAP 2019 23,186,124,v4
+marshall_islands_ndp_2015-2017,Marshall Islands,marshall_islands,Pacific,ndp,NSP 2015-17,National Strategic Plan 2015-2017,2015,2017,,,reshaped from the earlier run,document,MARSH NSP 2015 17,57,32,v4
+marshall_islands_vision_2020-2030,Marshall Islands,marshall_islands,Pacific,vision,NSP 2020-30,National Strategic Plan 2020-2030,2020,2030,,,reshaped from the earlier run,document,MARSH NSP 2020 30,31,17,v4
+mongolia_ndp_2016-2020,Mongolia,mongolia,East Asia,ndp,GAP 2016-20,Government Action Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,MON Government Action Plan 2016 20 Mongolian,120,73,v4
+mongolia_ndp_2020-2024,Mongolia,mongolia,East Asia,ndp,GAP 2020-24,Government Action Plan 2020-2024,2020,2024,,,reshaped from the earlier run,document,MON Government Action Plan 2020 24 Mongolian,105,72,v4
+mongolia_ndp_2021-2025,Mongolia,mongolia,East Asia,ndp,Guidelines 2021-25,Five-Year Development Guidelines 2021-2025,2021,2025,,,reshaped from the earlier run,document,MON Development Guidelines 2021 25 Mongolian,84,58,v4
+mongolia_ndp_2024-2028,Mongolia,mongolia,East Asia,ndp,GAP 2024-28,Government Action Plan 2024-2028,2024,2028,,,reshaped from the earlier run,document,MON Government Action Plan 2024 28 Mongolian,138,100,v4
 mongolia_ndp_2026-2030,Mongolia,mongolia,East Asia,ndp,Guidelines 2026-30,Five-Year Development Guidelines 2026-2030,2026,2030,,,reshaped from the earlier run,document,MON Development Guidelines 2026 30 Mongolian,13,8,v4
 morocco_vision_2021-2035,Morocco,morocco,Arab States,vision,NMD,Nouveau Modele de Developpement,2021,2035,,,reshaped from the earlier run,config,MA Nouveau Modele de Developpement 2021,24,10,v4
-myanmar_vision_2018-2030,Myanmar,myanmar,South-East Asia,vision,MSDP,Myanmar Sustainable Development Plan 2018-2030,2018,2030,,,reshaped from the earlier run,document,Myanmar MSDP 2018 2030 1,46,28,v4
-nauru_vision_2005-2025,Nauru,nauru,Pacific,vision,NSDS 2005-25,National Sustainable Development Strategy 2005-2025,2005,2025,,,reshaped from the earlier run,document,Nauru NSDS 2005 25,44,27,v4
+myanmar_vision_2018-2030,Myanmar,myanmar,South-East Asia,vision,MSDP,Myanmar Sustainable Development Plan 2018-2030,2018,2030,,,reshaped from the earlier run,document,Myanmar MSDP 2018 2030 1,46,27,v4
+nauru_vision_2005-2025,Nauru,nauru,Pacific,vision,NSDS 2005-25,National Sustainable Development Strategy 2005-2025,2005,2025,,,reshaped from the earlier run,document,Nauru NSDS 2005 25,44,31,v4
 nauru_vision_2019-2030,Nauru,nauru,Pacific,vision,NSDS 2019-30,National Sustainable Development Strategy 2019-2030,2019,2030,,,reshaped from the earlier run,document,Nauru NSDS 2019 30,19,10,v4
-nepal_ndp_2016-2018,Nepal,nepal,South Asia,ndp,14th,Fourteenth Plan,2016,2018,,,reshaped from the earlier run,filename,Nepal NDP 2016 18 Nepali,174,84,v4
-nepal_ndp_2020-2024,Nepal,nepal,South Asia,ndp,15th,Fifteenth Plan,2020,2024,,,reshaped from the earlier run,document,nep220780,219,122,v4
-nepal_ndp_2025-2029,Nepal,nepal,South Asia,ndp,16th,Sixteenth Plan,2025,2029,,,reshaped from the earlier run,document,Nepal NDP 2024 28,157,87,v4
-nigeria_ndp_2021-2025,Nigeria,nigeria,Africa,ndp,NDP 2021-25,National Development Plan 2021-2025,2021,2025,,,reshaped from the earlier run,document,NG National Development Plan 2021 2025 Vol I,146,76,v4
-nigeria_vision_2009-2020,Nigeria,nigeria,Africa,vision,Vision 20:2020,Nigeria Vision 20:2020,2009,2020,,,reshaped from the earlier run,config,NG Vision 2020 abridged,32,18,v4
-pakistan_ndp_2024-2029,Pakistan,pakistan,South Asia,ndp,2024-29,National plan 2024-29,2024,2029,,,reshaped from the earlier run,document,PK NDP 2024 29,226,126,v4
-palau_ndp_2009-2014,Palau,palau,Pacific,ndp,2009-14,National development plan 2009-14,2009,2014,,,reshaped from the earlier run,document,Palau NDP 2009 14,108,63,v4
-palau_ndp_2023-2026,Palau,palau,Pacific,ndp,PDP 2023-26,Palau Development Plan 2023-2026,2023,2026,,,reshaped from the earlier run,document,Palau NDP 2023 26,115,71,v4
-papua_new_guinea_ndp_2011-2015,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP I,Medium Term Development Plan 2011-2015,2011,2015,,,reshaped from the earlier run,document,Medium_Term_Development_Plan_2011 2015,144,76,v4
-papua_new_guinea_ndp_2016-2017,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP II,Medium Term Development Plan 2 2016-2017,2016,2017,,,reshaped from the earlier run,title,PNG NDP 2016 17,46,27,v4
-papua_new_guinea_ndp_2018-2022,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP III,Medium Term Development Plan III 2018-2022,2018,2022,,,reshaped from the earlier run,document,PNG NDP 2018 22 Vol I | PNG NDP 2018 22 Vol II,96,57,v4
-papua_new_guinea_ndp_2023-2027,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP IV,Medium Term Development Plan IV 2023-2027,2023,2027,,,reshaped from the earlier run,document,png220420,127,74,v4
+nepal_ndp_2016-2018,Nepal,nepal,South Asia,ndp,14th,Fourteenth Plan,2016,2018,,,reshaped from the earlier run,filename,Nepal NDP 2016 18 Nepali,174,113,v4
+nepal_ndp_2020-2024,Nepal,nepal,South Asia,ndp,15th,Fifteenth Plan,2020,2024,,,reshaped from the earlier run,document,nep220780,219,141,v4
+nepal_ndp_2025-2029,Nepal,nepal,South Asia,ndp,16th,Sixteenth Plan,2025,2029,,,reshaped from the earlier run,document,Nepal NDP 2024 28,157,91,v4
+nigeria_ndp_2021-2025,Nigeria,nigeria,Africa,ndp,NDP 2021-25,National Development Plan 2021-2025,2021,2025,,,reshaped from the earlier run,document,NG National Development Plan 2021 2025 Vol I,146,84,v4
+nigeria_vision_2009-2020,Nigeria,nigeria,Africa,vision,Vision 20:2020,Nigeria Vision 20:2020,2009,2020,,,reshaped from the earlier run,config,NG Vision 2020 abridged,32,20,v4
+pakistan_ndp_2024-2029,Pakistan,pakistan,South Asia,ndp,2024-29,National plan 2024-29,2024,2029,,,reshaped from the earlier run,document,PK NDP 2024 29,226,148,v4
+palau_ndp_2009-2014,Palau,palau,Pacific,ndp,2009-14,National development plan 2009-14,2009,2014,,,reshaped from the earlier run,document,Palau NDP 2009 14,108,79,v4
+palau_ndp_2023-2026,Palau,palau,Pacific,ndp,PDP 2023-26,Palau Development Plan 2023-2026,2023,2026,,,reshaped from the earlier run,document,Palau NDP 2023 26,115,73,v4
+papua_new_guinea_ndp_2011-2015,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP I,Medium Term Development Plan 2011-2015,2011,2015,,,reshaped from the earlier run,document,Medium_Term_Development_Plan_2011 2015,144,90,v4
+papua_new_guinea_ndp_2016-2017,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP II,Medium Term Development Plan 2 2016-2017,2016,2017,,,reshaped from the earlier run,title,PNG NDP 2016 17,46,35,v4
+papua_new_guinea_ndp_2018-2022,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP III,Medium Term Development Plan III 2018-2022,2018,2022,,,reshaped from the earlier run,document,PNG NDP 2018 22 Vol I | PNG NDP 2018 22 Vol II,96,67,v4
+papua_new_guinea_ndp_2023-2027,Papua New Guinea,papua_new_guinea,Pacific,ndp,MTDP IV,Medium Term Development Plan IV 2023-2027,2023,2027,,,reshaped from the earlier run,document,png220420,127,83,v4
 peru_vision_2011-2021,Peru,peru,Latin America and the Caribbean,vision,Bicentenario,Plan Bicentenario: el Peru hacia el 2021,2011,2021,,,reshaped from the earlier run,config,PE Plan Bicentenario 2021,65,38,v4
-peru_vision_2022-2050,Peru,peru,Latin America and the Caribbean,vision,PEDN 2050,Plan Estrategico de Desarrollo Nacional al 2050,2022,2050,,,reshaped from the earlier run,config,PE PEDN al 2050,117,72,v4
-philippines_ndp_2011-2016,Philippines,philippines,South-East Asia,ndp,PDP 2011-16,Philippine Development Plan 2011-2016,2011,2016,,,reshaped from the earlier run,document,PDP 2011 2016,147,93,v4
-philippines_ndp_2017-2022,Philippines,philippines,South-East Asia,ndp,PDP 2017-22,Philippine Development Plan 2017-2022,2017,2022,,,reshaped from the earlier run,document,PDP 2017 2022,244,151,v4
-philippines_ndp_2023-2028,Philippines,philippines,South-East Asia,ndp,PDP 2023-28,Philippine Development Plan 2023-2028,2023,2028,,,reshaped from the earlier run,document,PDP 2023 2028,235,147,v4
-rwanda_ndp_2017-2024,Rwanda,rwanda,Africa,ndp,NST1,National Strategy for Transformation 1,2017,2024,,,reshaped from the earlier run,document,ndp_2017 2024_nst1,78,42,v4
-rwanda_ndp_2024-2029,Rwanda,rwanda,Africa,ndp,NST2,National Strategy for Transformation 2,2024,2029,,,reshaped from the earlier run,document,ndp_2024 2029_nst2,68,39,v4
-samoa_ndp_2021-2026,Samoa,samoa,Pacific,ndp,PDS 2021-26,Pathway for the Development of Samoa 2021-2026,2021,2026,,,reshaped from the earlier run,filename,Samoa PFD 2021 2026,29,16,v4
-samoa_ndp_2027-2031,Samoa,samoa,Pacific,ndp,PDS 2026-30,Pathway for the Development of Samoa (file says 2026-2030),2027,2031,,,reshaped from the earlier run,document,Samoa PDF 2026 2030,32,15,v4
-samoa_vision_2021-2040,Samoa,samoa,Pacific,vision,Samoa 2040,Samoa 2040,2021,2040,,,reshaped from the earlier run,inferred from the title; confirm,688ff795095ccc71f0261315_Samoa 2040,29,15,v4
-serbia_ndp_2021-2023,Serbia,serbia,Europe and Central Asia,ndp,ERP,Economic Reform Programme 2021-2023,2021,2023,,,reshaped from the earlier run,document,RS Economic Reform Programme 2021 2023,138,91,v4
-serbia_vision_2021-2030,Serbia,serbia,Europe and Central Asia,vision,Agenda 2030,Serbia and the 2030 Agenda report (2021),2021,2030,,,reshaped from the earlier run,title; the document table says 2000-2015,RS Agenda 2030 report 2021,99,62,v4
-solomon_islands_ndp_2016-2020,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2016-20,Medium Term Development Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,SB MTDP 2016 2020 | sol165887,74,37,v4
-solomon_islands_ndp_2026-2030,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2026-30,Medium Term Development Plan 2026-2030,2026,2030,,,reshaped from the earlier run,document,MTDP 2026 2030 FINAL | SB MTDP 2026 2030,95,55,v4
-solomon_islands_vision_2016-2035,Solomon Islands,solomon_islands,Pacific,vision,NDS,National Development Strategy 2016-2035,2016,2035,,,reshaped from the earlier run,document,National Development Strategy 2016,65,32,v4
-sri_lanka_ndp_2017-2020,Sri Lanka,sri_lanka,South Asia,ndp,2017-20,National plan 2017-2020,2017,2020,,,reshaped from the earlier run,document,LK 2017 2020,115,71,v4
-sri_lanka_ndp_2022-2025,Sri Lanka,sri_lanka,South Asia,ndp,2022-25,National plan 2022-2025,2022,2025,,,reshaped from the earlier run,document,LK 2022 2025,63,41,v4
-sri_lanka_ndp_2024-2026,Sri Lanka,sri_lanka,South Asia,ndp,2024-26,National plan 2024-2026,2024,2026,,,reshaped from the earlier run,document,LK 2024 2026,143,88,v4
-sri_lanka_ndp_2026-2030,Sri Lanka,sri_lanka,South Asia,ndp,2026-30,National plan 2026-2030,2026,2030,,,reshaped from the earlier run,document,LK 2026 2030,152,98,v4
-sri_lanka_vision_2019-2030,Sri Lanka,sri_lanka,South Asia,vision,Vision 2030,Sustainable Sri Lanka 2030 Vision and Strategic Path,2019,2030,,,reshaped from the earlier run,title,1940_Sri_Lanka_Sustainable_Sri_Lanka_2030_Vision_and_Strategic_Path_2019_PEC,167,112,v4
-thailand_ndp_2012-2016,Thailand,thailand,South-East Asia,ndp,11th,11th National Economic and Social Development Plan,2012,2016,,,reshaped from the earlier run,document,TH 11th Plan 2011 16 THAI,122,67,v4
-thailand_ndp_2017-2021,Thailand,thailand,South-East Asia,ndp,12th,12th National Economic and Social Development Plan,2017,2021,,,reshaped from the earlier run,document,TH 12th Plan 2017 21 THAI,144,81,v4
-thailand_ndp_2023-2027,Thailand,thailand,South-East Asia,ndp,13th,13th National Economic and Social Development Plan,2023,2027,,,reshaped from the earlier run,document,Thailand 13th Plan 2023 27 THAI,84,44,v4
-thailand_vision_2018-2037,Thailand,thailand,South-East Asia,vision,NS,National Strategy 2018-2037,2018,2037,,,reshaped from the earlier run,document,download 20201012111719,75,36,v4
-timor_leste_vision_2011-2030,Timor-Leste,timor_leste,South-East Asia,vision,SDP,Strategic Development Plan 2011-2030,2011,2030,,,reshaped from the earlier run,document,Strategic Development Plan_EN | TL Strategic Development Plan 2011 2030,124,71,v4
-tonga_ndp_2011-2014,Tonga,tonga,Pacific,ndp,TSDF I,Tonga Strategic Development Framework 2011-2014,2011,2014,,,reshaped from the earlier run,document,TO Strategic Development Framework 2011 14,36,22,v4
-tonga_vision_2015-2025,Tonga,tonga,Pacific,vision,TSDF II,Tonga Strategic Development Framework 2015-2025,2015,2025,,,reshaped from the earlier run,document,TO Strategic Development Framework 2015 2025,30,19,v4
+peru_vision_2022-2050,Peru,peru,Latin America and the Caribbean,vision,PEDN 2050,Plan Estrategico de Desarrollo Nacional al 2050,2022,2050,,,reshaped from the earlier run,config,PE PEDN al 2050,117,66,v4
+philippines_ndp_2011-2016,Philippines,philippines,South-East Asia,ndp,PDP 2011-16,Philippine Development Plan 2011-2016,2011,2016,,,reshaped from the earlier run,document,PDP 2011 2016,147,100,v4
+philippines_ndp_2017-2022,Philippines,philippines,South-East Asia,ndp,PDP 2017-22,Philippine Development Plan 2017-2022,2017,2022,,,reshaped from the earlier run,document,PDP 2017 2022,244,169,v4
+philippines_ndp_2023-2028,Philippines,philippines,South-East Asia,ndp,PDP 2023-28,Philippine Development Plan 2023-2028,2023,2028,,,reshaped from the earlier run,document,PDP 2023 2028,235,160,v4
+rwanda_ndp_2017-2024,Rwanda,rwanda,Africa,ndp,NST1,National Strategy for Transformation 1,2017,2024,,,reshaped from the earlier run,document,ndp_2017 2024_nst1,78,48,v4
+rwanda_ndp_2024-2029,Rwanda,rwanda,Africa,ndp,NST2,National Strategy for Transformation 2,2024,2029,,,reshaped from the earlier run,document,ndp_2024 2029_nst2,68,40,v4
+samoa_ndp_2021-2026,Samoa,samoa,Pacific,ndp,PDS 2021-26,Pathway for the Development of Samoa 2021-2026,2021,2026,,,reshaped from the earlier run,filename,Samoa PFD 2021 2026,29,18,v4
+samoa_ndp_2027-2031,Samoa,samoa,Pacific,ndp,PDS 2026-30,Pathway for the Development of Samoa (file says 2026-2030),2027,2031,,,reshaped from the earlier run,document,Samoa PDF 2026 2030,32,19,v4
+samoa_vision_2021-2040,Samoa,samoa,Pacific,vision,Samoa 2040,Samoa 2040,2021,2040,,,reshaped from the earlier run,inferred from the title; confirm,688ff795095ccc71f0261315_Samoa 2040,29,19,v4
+serbia_ndp_2021-2023,Serbia,serbia,Europe and Central Asia,ndp,ERP,Economic Reform Programme 2021-2023,2021,2023,,,reshaped from the earlier run,document,RS Economic Reform Programme 2021 2023,138,108,v4
+serbia_vision_2021-2030,Serbia,serbia,Europe and Central Asia,vision,Agenda 2030,Serbia and the 2030 Agenda report (2021),2021,2030,,,reshaped from the earlier run,title; the document table says 2000-2015,RS Agenda 2030 report 2021,99,60,v4
+solomon_islands_ndp_2016-2020,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2016-20,Medium Term Development Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,SB MTDP 2016 2020 | sol165887,74,39,v4
+solomon_islands_ndp_2026-2030,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2026-30,Medium Term Development Plan 2026-2030,2026,2030,,,reshaped from the earlier run,document,MTDP 2026 2030 FINAL | SB MTDP 2026 2030,95,50,v4
+solomon_islands_vision_2016-2035,Solomon Islands,solomon_islands,Pacific,vision,NDS,National Development Strategy 2016-2035,2016,2035,,,reshaped from the earlier run,document,National Development Strategy 2016,65,39,v4
+sri_lanka_ndp_2017-2020,Sri Lanka,sri_lanka,South Asia,ndp,2017-20,National plan 2017-2020,2017,2020,,,reshaped from the earlier run,document,LK 2017 2020,115,83,v4
+sri_lanka_ndp_2022-2025,Sri Lanka,sri_lanka,South Asia,ndp,2022-25,National plan 2022-2025,2022,2025,,,reshaped from the earlier run,document,LK 2022 2025,63,45,v4
+sri_lanka_ndp_2024-2026,Sri Lanka,sri_lanka,South Asia,ndp,2024-26,National plan 2024-2026,2024,2026,,,reshaped from the earlier run,document,LK 2024 2026,143,97,v4
+sri_lanka_ndp_2026-2030,Sri Lanka,sri_lanka,South Asia,ndp,2026-30,National plan 2026-2030,2026,2030,,,reshaped from the earlier run,document,LK 2026 2030,152,108,v4
+sri_lanka_vision_2019-2030,Sri Lanka,sri_lanka,South Asia,vision,Vision 2030,Sustainable Sri Lanka 2030 Vision and Strategic Path,2019,2030,,,reshaped from the earlier run,title,1940_Sri_Lanka_Sustainable_Sri_Lanka_2030_Vision_and_Strategic_Path_2019_PEC,167,125,v4
+thailand_ndp_2012-2016,Thailand,thailand,South-East Asia,ndp,11th,11th National Economic and Social Development Plan,2012,2016,,,reshaped from the earlier run,document,TH 11th Plan 2011 16 THAI,122,70,v4
+thailand_ndp_2017-2021,Thailand,thailand,South-East Asia,ndp,12th,12th National Economic and Social Development Plan,2017,2021,,,reshaped from the earlier run,document,TH 12th Plan 2017 21 THAI,144,87,v4
+thailand_ndp_2023-2027,Thailand,thailand,South-East Asia,ndp,13th,13th National Economic and Social Development Plan,2023,2027,,,reshaped from the earlier run,document,Thailand 13th Plan 2023 27 THAI,84,57,v4
+thailand_vision_2018-2037,Thailand,thailand,South-East Asia,vision,NS,National Strategy 2018-2037,2018,2037,,,reshaped from the earlier run,document,download 20201012111719,75,42,v4
+timor_leste_vision_2011-2030,Timor-Leste,timor_leste,South-East Asia,vision,SDP,Strategic Development Plan 2011-2030,2011,2030,,,reshaped from the earlier run,document,Strategic Development Plan_EN | TL Strategic Development Plan 2011 2030,124,78,v4
+tonga_ndp_2011-2014,Tonga,tonga,Pacific,ndp,TSDF I,Tonga Strategic Development Framework 2011-2014,2011,2014,,,reshaped from the earlier run,document,TO Strategic Development Framework 2011 14,36,17,v4
+tonga_vision_2015-2025,Tonga,tonga,Pacific,vision,TSDF II,Tonga Strategic Development Framework 2015-2025,2015,2025,,,reshaped from the earlier run,document,TO Strategic Development Framework 2015 2025,30,16,v4
 tuvalu_vision_2021-2030,Tuvalu,tuvalu,Pacific,vision,Te Kete,Te Kete: National Strategy for Sustainable Development 2021-2030,2021,2030,,,reshaped from the earlier run,document,TV National Strategy for Sustainable Development 2021 30 | Te Kete_TuvaluNationalStrategyForSustainableDevelopment_2021to2030,28,16,v4
-uzbekistan_ndp_2023-2030,Uzbekistan,uzbekistan,Europe and Central Asia,ndp,Strategy 2030,Uzbekistan 2030 Strategy,2023,2030,,,reshaped from the earlier run,config,UZ Strategy 2030,7,4,v4
-vanuatu_vision_2016-2030,Vanuatu,vanuatu,Pacific,vision,NSDP,National Sustainable Development Plan 2016-2030,2016,2030,,,reshaped from the earlier run,document,VU National Sustainable Development Plan 2016 30,32,15,v4
-vietnam_ndp_2006-2010,Viet Nam,vietnam,South-East Asia,ndp,SEDP 2006-10,Socio-Economic Development Plan 2006-2010,2006,2010,,,reshaped from the earlier run,document,VN NDP 2006 2010,182,92,v4
-vietnam_ndp_2016-2020,Viet Nam,vietnam,South-East Asia,ndp,SEDP 2016-20,Socio-Economic Development Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,VN NDP 2016 2020,104,54,v4
+uzbekistan_ndp_2023-2030,Uzbekistan,uzbekistan,Europe and Central Asia,ndp,Strategy 2030,Uzbekistan 2030 Strategy,2023,2030,,,reshaped from the earlier run,config,UZ Strategy 2030,7,5,v4
+vanuatu_vision_2016-2030,Vanuatu,vanuatu,Pacific,vision,NSDP,National Sustainable Development Plan 2016-2030,2016,2030,,,reshaped from the earlier run,document,VU National Sustainable Development Plan 2016 30,32,19,v4
+vietnam_ndp_2006-2010,Viet Nam,vietnam,South-East Asia,ndp,SEDP 2006-10,Socio-Economic Development Plan 2006-2010,2006,2010,,,reshaped from the earlier run,document,VN NDP 2006 2010,182,111,v4
+vietnam_ndp_2016-2020,Viet Nam,vietnam,South-East Asia,ndp,SEDP 2016-20,Socio-Economic Development Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,VN NDP 2016 2020,104,58,v4
