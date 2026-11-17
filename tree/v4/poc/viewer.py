@@ -90,7 +90,7 @@ class Dict:
 
 
 sectors, objs, targets, instruments, sids = Dict(), Dict(), Dict(), Dict(), Dict()
-chapters, agencies, leads, sdgs, urg, status, legal = Dict(), Dict(), Dict(), Dict(), Dict(), Dict(), Dict()
+chapters, agencies, leads, sdgs, urg, status, legal, notes = Dict(), Dict(), Dict(), Dict(), Dict(), Dict(), Dict(), Dict()
 RISK = {r: i for i, r in enumerate(tree["risks"])}
 CODE = {"L3": "LV", "L2": "L2", "L1": "GRP", "STD": "STD", "GOAL": "GOAL"}
 out = []
@@ -107,13 +107,14 @@ for r in rows:
                 sids(r["source_strategy_key"]),
                 # the rest of the row, shown when a strategy is opened in the details table:
                 # [number in its plan, quote, plan chapter, urgency, status, legal basis,
-                #  timeline + 2 * quantified target + 4 * monitoring, SDG targets, agencies, lead, plan editions it is in]
+                #  timeline + 2 * quantified target + 4 * monitoring, SDG targets, agencies, lead, plan editions it is in,
+                #  the mapping's reason and note]
                 [int(r["strategy_id"].split("#s")[1]), r["quote"], chapters(r["pillar"]), urg(r["stated_urgency"]),
                  status(r["implementation_status"]), legal(r["legal_or_plan_basis"]),
                  (r["has_timeline"] == "Y") + 2 * (r["has_quantified_target"] == "Y") + 4 * (r["has_monitoring"] == "Y"),
                  [sdgs(x) for x in json.loads(r["sdg_targets"] or "[]")],
                  [agencies(x) for x in json.loads(r["named_agencies"] or "[]")], leads(r["institutional_lead"]),
-                 int(r["n_editions"] or 1)]])
+                 int(r["n_editions"] or 1), notes(r["reason"] if "mapping" in r["depth_basis"] else "")]])
 data["set"] = {
     "regions": [x for x in REG_ORDER if any(c["region"] == x for c in countries)],
     "countries": countries,
@@ -122,7 +123,8 @@ data["set"] = {
                "src": p["period_source"]} for p in plans],
     "sectors": sectors.items, "objs": objs.items, "targets": targets.items, "instruments": instruments.items,
     "chapters": chapters.items, "agencies": agencies.items, "leads": leads.items, "sdgs": sdgs.items,
-    "urg": urg.items, "status": status.items, "legal": legal.items,
+    "urg": urg.items, "status": status.items, "legal": legal.items, "notes": notes.items,
+    "mapped": any("mapping" in r["depth_basis"] for r in rows),
     "rows": out, "n_source": len(sids.items) - 1,
 }
 
@@ -142,8 +144,10 @@ if os.path.exists(pp):
     by = {}
     for r in csv.DictReader(open(pp, encoding="utf-8")):
         d = by.setdefault(r["plan_id"], {"docs": Dict(), "s": {}})
-        d["s"].setdefault(r["strategy_id"].split("#s")[1], []).append(
-            [d["docs"](r["document"]), r["page"], r["paragraph"], r["intervention"], r["evidence"], r["agencies"]])
+        x = [d["docs"](r["document"]), r["page"], r["paragraph"], r["intervention"], r["evidence"], r["agencies"]]
+        lst = d["s"].setdefault(r["strategy_id"].split("#s")[1], [])
+        if x not in lst:   # a passage read twice the same way is shown once
+            lst.append(x)
     size = 0
     for pid, d in by.items():
         js = "PVD(%s,%s);" % (json.dumps(pid), json.dumps({"docs": d["docs"].items, "s": d["s"]}, ensure_ascii=False, separators=(",", ":")))

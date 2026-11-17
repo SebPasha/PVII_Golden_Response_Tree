@@ -296,10 +296,9 @@ for slug in sorted(by_slug):
     seq = collections.Counter()
     for u in by_slug[slug]:
         d = DEC.get(u["strategy_key"], {})
-        m = MAP.get(u["strategy_key"])
-        node = m["node_id"] if MAPPING else XW.get(d.get("objective_id", ""), "")
-        if MAPPING and m is None:
-            raise SystemExit("no mapping for %s: run map_run.py over this out folder first" % u["strategy_key"])
+        mp = MAP.get(u["strategy_key"])
+        # a strategy with no dated passage was not in map_run's input and yields no row here either
+        node = (mp or {}).get("node_id", "") if MAPPING else XW.get(d.get("objective_id", ""), "")
         tr = place(node)
         mine = comp.get(u["strategy"].strip().lower(), set())
         risks_u = jl(u["related_risks"])
@@ -370,12 +369,12 @@ for slug in sorted(by_slug):
                        reason="objective '%s' sits on %s" % (d.get("objective", ""), node),
                        source_strategy_key=u["strategy_key"], n_editions=len(eds), first_edition=first)
             row.update(tr)
-            if m:
-                row.update(relation=m["relation"], depth_basis="mapping prompt M_map_v4", confidence=m["confidence"],
-                           reason="; ".join(x for x in (m["reason"], m["map_note"], m["proposal"]) if x))
+            if mp:
+                row.update(relation=mp["relation"], depth_basis="mapping prompt M_map_v4", confidence=mp["confidence"],
+                           reason="; ".join(x for x in (mp["reason"], mp["map_note"], mp["proposal"]) if x))
                 for k in ("target", "instrument"):
-                    if m[k + "_id"]:
-                        row.update({k + "_id": m[k + "_id"], k + "_label": m[k + "_label"]})
+                    if mp[k + "_id"]:
+                        row.update({k + "_id": mp[k + "_id"], k + "_label": mp[k + "_label"]})
             made.append(row)
             pass_rows.extend(dict(x, strategy_id=row["strategy_id"], plan_id=pid, country=country) for x in ps)
             pl["n_strategies"] += 1

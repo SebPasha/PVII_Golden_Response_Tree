@@ -273,6 +273,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .dt-pager { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; font: 12px var(--mono); color: var(--muted) }
 .dt-pager button:disabled { opacity: .4; cursor: default; text-decoration: none }
 .dt-pager select { padding: 3px 6px; font-size: 12px }
+#m-un-n { font: 11px var(--mono); color: var(--muted); margin-left: 3px }
 #ct td[data-ck] { cursor: pointer }
 #ct td[data-ck]:hover { outline: 1px solid var(--gold); outline-offset: -1px }
 .todt { font: 500 12.5px var(--body); color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start }
@@ -293,6 +294,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div class="modes" role="tablist" aria-label="View">
       <button type="button" class="mode" id="m-world" role="tab" aria-selected="true">Mother tree</button>
       <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
+      <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n"></span></button>
     </div>
     <div class="tl" id="worldbar">
       <div class="chipsel" id="regions" aria-label="Region"></div>
@@ -328,7 +330,8 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
   <section class="outline" id="details">
     <h2 id="dt-h">Strategy details</h2>
-    <p>The strategies behind whatever is selected above: a region, year, country or plan, and a leaf, bud, storm, search or table cell. Select a column heading to sort; select a row to open the strategy's full record and the passages of the plan under it.</p>
+    <p id="dt-un" hidden></p>
+    <p id="dt-intro">The strategies behind whatever is selected above: a region, year, country or plan, and a leaf, bud, storm, search or table cell. Select a column heading to sort; select a row to open the strategy's full record and the passages of the plan under it.</p>
     <div class="chips" id="dt-chips"></div>
     <div class="dt-tools">
       <input id="dt-q" type="search" placeholder="Filter these strategies" aria-label="Filter these strategies">
@@ -832,12 +835,13 @@ function scope() {
       cols: plans.map(i => ({ key: i, label: planLabel(PLN[i]), sub: `${PLN[i].start}–${PLN[i].end}`, title: `${PLN[i].title}, ${PLN[i].start}–${PLN[i].end}`, on: sel.has(i) && sel.size < plans.length })) };
     return;
   }
-  const base = ROWS.filter(r => inRegion(r[15]) && (year === null || (PLN[r[0]].start <= year && year <= PLN[r[0]].end)));
+  const un = mode === "unmapped";
+  const base = ROWS.filter(r => inRegion(r[15]) && (year === null || (PLN[r[0]].start <= year && year <= PLN[r[0]].end)) && (!un || r[3] === "NEW"));
   if (region === null) {
-    C = { name: `All ${CTY.length} countries`, base, rows: base, unit: "region", colOf: r => CTY[r[15]].region,
+    C = { name: `${un ? "Unmapped, " : ""}all ${CTY.length} countries`, base, rows: base, unit: "region", colOf: r => CTY[r[15]].region,
       cols: REG.map(x => ({ key: x, label: x, sub: CTY.filter(c => c.region === x).length + " countries", title: x })) };
   } else {
-    C = { name: region, base, rows: base, unit: "country", colOf: r => r[15],
+    C = { name: (un ? "Unmapped, " : "") + region, base, rows: base, unit: "country", colOf: r => r[15],
       cols: CTY.map((c, i) => ({ key: i, label: c.name, sub: plansOf(i).length + " plans", title: c.name })).filter(c => CTY[c.key].region === region) };
   }
 }
@@ -1118,7 +1122,7 @@ function toggleFam(fid, on) {
 // flags, SDG targets, agencies, lead, plan editions it is in]
 const DT = { col: null, text: "", lvl: "", ori: "", urg: "", st: "", sort: "n", dir: -1, page: 0, size: 50, open: new Set() };
 const rUrg = r => X.urg[r[17][3]], rSt = r => X.status[r[17][4]];
-const famOf = r => r[4] ? F[r[4]].family : (HNAME[r[6]] || "");
+const famOf = r => r[4] ? F[r[4]].family : r[3] === "NEW" ? "Unmapped" : (HNAME[r[6]] || "");
 const pillarOf = r => r[4] ? famPillar(r[4]) : HPC[r[6]];
 const RANK = { high: 0, medium: 1, low: 2, aspiration: 0, planned: 1, operational: 2 };
 const DCOLS = [
@@ -1130,11 +1134,12 @@ const DCOLS = [
   { k: "tgt", h: "Target", v: r => r[11], cls: "w" },
   { k: "ins", h: "Instrument", v: r => r[12], cls: "w" },
   { k: "sector", h: "Sector", v: r => r[7] },
-  { k: "fam", h: "Family or branch", v: famOf, cls: "w", t: r => `<span class="sw" style="background:${PCOL[pillarOf(r)]}"></span>${esc(famOf(r))}` },
+  { k: "fam", h: "Family or branch", v: famOf, cls: "w", t: r => `<span class="sw" style="background:${PCOL[pillarOf(r)] || "var(--line)"}"></span>${esc(famOf(r))}` },
   { k: "lev", h: "Lever", v: r => r[5] ? V[r[5]].lever : "", cls: "w" },
   { k: "ori", h: "Orientation", v: r => r[8] },
   { k: "urg", h: "Urgency", v: r => RANK[rUrg(r)], t: r => esc(rUrg(r)) },
   { k: "st", h: "Status", v: r => RANK[rSt(r)], t: r => esc(rSt(r)) },
+  { k: "why", h: "Why unmapped · what the tree would need", v: r => X.notes[r[17][11]], cls: "w", hide: () => mode !== "unmapped" },
   { k: "n", h: "Passages", v: r => r[13], cls: "num", title: "Passages of the plan that state this strategy" },
 ];
 function nodeTest(o) {
@@ -1200,7 +1205,7 @@ function fillPsg() { document.querySelectorAll("#dt .psg").forEach(el => { el.in
 function dtDetail(r) {
   const p = PLN[r[0]], x = r[17], fl = x[6];
   const yn = b => b ? "yes" : "no";
-  const path = r[4] ? (() => { const f = F[r[4]], g = G[f.group_id], s = SP[f.subpillar_code];
+  const path = r[3] === "NEW" ? [] : r[4] ? (() => { const f = F[r[4]], g = G[f.group_id], s = SP[f.subpillar_code];
       return [[PL[s.pillar].name, { p: s.pillar }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: r[4] }]].concat(r[5] ? [[V[r[5]].lever, { v: r[5] }]] : []); })()
     : [[PL[HPC[r[6]]].name, { p: HPC[r[6]] }], [HNAME[r[6]], { h: r[6] }]];
   const row = (k, v) => blank(v) ? "" : `<dt>${k}</dt><dd>${v}</dd>`;
@@ -1211,7 +1216,7 @@ function dtDetail(r) {
     ${row("Objective", esc(r[2]))}
     ${row("Target", esc(r[11]))}
     ${row("Instrument", esc(r[12]))}
-    ${row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, through the objective label “${esc(r[10])}”</span>`)}
+    ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${X.mapped ? "by the mapping prompt" : `through the objective label “${esc(r[10])}”`}</span>`)}
     ${row("Storms", r[9].length ? `<span class="chips">${riskChips(r[9])}</span>` : "")}
     ${row("Sector", esc(r[7]))}
     ${row("Orientation", esc(r[8]))}
@@ -1221,6 +1226,7 @@ function dtDetail(r) {
     ${row("Agencies named", esc(x[8].map(i => X.agencies[i]).join("; ")))}
     ${row("SDG targets", x[7].length ? `<span class="chips">${sdgChips(x[7].map(i => X.sdgs[i]))}</span>` : "")}
     ${row("Across plans", x[10] > 1 ? `In ${x[10]} plan editions of ${esc(CTY[r[15]].name)}${r[16] >= 0 ? `, first in ${esc(planLabel(PLN[r[16]]))} (${PLN[r[16]].start}–${PLN[r[16]].end})` : ", this is the first"}` : "In this plan edition only")}
+    ${row(r[3] === "NEW" ? "Why unmapped" : "Mapping note", esc(X.notes[x[11]]))}
     ${row("Quote", x[1] ? `“${esc(x[1])}”` : "")}
   </dl>
   <div class="eyebrow" style="margin-top:10px">Underlying passages (${r[13]}) · where the plan states it</div>
@@ -1233,7 +1239,7 @@ function drawDetails() {
   DT.page = Math.min(DT.page, pages - 1);
   const cols = DCOLS.filter(c => !(c.hide && c.hide()));
   const view = rows.slice(DT.page * DT.size, (DT.page + 1) * DT.size);
-  $("#dt-h").textContent = `Strategy details: ${rows.length.toLocaleString()} strateg${rows.length === 1 ? "y" : "ies"}`;
+  $("#dt-h").textContent = `${mode === "unmapped" ? "Unmapped strategies" : "Strategy details"}: ${rows.length.toLocaleString()} strateg${rows.length === 1 ? "y" : "ies"}`;
   $("#dt-chips").innerHTML = chips.map(([l, k]) => `<span class="chip">${esc(short(l, 70))}${k ? ` <a class="x" data-x="${k}" role="button" tabindex="0" aria-label="Remove ${esc(l)}">×</a>` : ""}</span>`).join("") +
     (rows.length !== base.length ? `<span class="chip">table filters: ${rows.length.toLocaleString()} of ${base.length.toLocaleString()}</span>` : "");
   $("#dt").innerHTML = `<thead><tr>${cols.map(c => `<th${c.k === DT.sort ? ` aria-sort="${DT.dir > 0 ? "ascending" : "descending"}"` : ""}${c.cls === "num" ? ' class="num"' : ""}><button type="button" data-sort="${c.k}"${c.title ? ` title="${c.title}"` : ""}>${c.h}</button></th>`).join("")}</tr></thead><tbody>${
@@ -1249,7 +1255,7 @@ function drawDetails() {
 function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
 {
   const opt = (id, first, vals) => { $(id).innerHTML = `<option value="">${first}</option>` + vals.map(([v, l]) => `<option value="${v}">${l}</option>`).join(""); };
-  opt("#dt-lvl", "Any placement", [["LV", "On a lever"], ["L2", "On a family, no lever"], ["STD", "On a general branch"]]);
+  opt("#dt-lvl", "Any placement", [["LV", "On a lever"], ["L2", "On a family, no lever"], ["STD", "On a general branch"], ["NEW", "Unmapped"]]);
   opt("#dt-ori", "Any orientation", ["BAU", "proactive", "transformative"].map(v => [v, v]));
   opt("#dt-urg", "Any urgency", ["high", "medium", "low"].map(v => [v, v + " urgency"]));
   opt("#dt-st", "Any status", ["aspiration", "planned", "operational"].map(v => [v, v]));
@@ -1283,17 +1289,20 @@ function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(pre
 function refresh() {
   scope();
   if (DT.col !== null && !C.cols.some(c => String(c.key) === String(DT.col))) DT.col = null;
-  const w = mode !== "country";
-  $("#m-world").setAttribute("aria-selected", w); $("#m-ctry").setAttribute("aria-selected", !w);
+  const w = mode !== "country", un = mode === "unmapped";
+  $("#m-world").setAttribute("aria-selected", mode === "world"); $("#m-ctry").setAttribute("aria-selected", !w); $("#m-un").setAttribute("aria-selected", un);
+  [".main", "#storms", ".tools", "#ctable", "#outline"].forEach(q => { $(q).hidden = un; });
+  $("#dt-un").hidden = !un; $("#dt-intro").hidden = un;
+  if (un) { state.q = ""; $("#q").value = ""; state.risk = null; state.sel = state.lv = state.h = state.d = null; }
   $("#worldbar").hidden = !w; $("#ctrybar").hidden = w;
   if (w) { drawRegions(); drawYears(); } else { drawCountries(); drawTimeline(); }
   drawTable(); paintCountry();
   indexHits(state.q);
   show(state.q.length >= 2 ? { q: state.q } : state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : state.h ? { h: state.h } : state.d ? { d: state.d } : state.risk ? { r: state.risk } : {});
-  try { history.replaceState(null, "", "#" + (w ? (region ? "region-" + hslug(region) : "world") : hslug(CTY[ci].slug))); } catch (e) {}
+  try { history.replaceState(null, "", "#" + (un ? "unmapped" : w ? (region ? "region-" + hslug(region) : "world") : hslug(CTY[ci].slug))); } catch (e) {}
 }
 function openCountry(i) { mode = "country"; ci = i; sel.clear(); plansOf(i).forEach(p => sel.add(p)); refresh(); }
-function setRegion(r) { mode = "world"; region = r; refresh(); }
+function setRegion(r) { if (mode !== "unmapped") mode = "world"; region = r; refresh(); }
 function colClick(key) {
   if (mode === "country") { const i = Number(key); if (sel.size === 1 && sel.has(i)) allPlans(); else { sel.clear(); sel.add(i); refresh(); } }
   else if (region === null) setRegion(key);
@@ -1301,6 +1310,7 @@ function colClick(key) {
 }
 $("#m-world").addEventListener("click", () => { mode = "world"; refresh(); });
 $("#m-ctry").addEventListener("click", () => openCountry(ci));
+$("#m-un").addEventListener("click", () => { mode = "unmapped"; refresh(); });
 $("#regions").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (b) setRegion(b.dataset.r || null); });
 $("#countries").addEventListener("click", e => { const b = e.target.closest("[data-ci]"); if (b) openCountry(Number(b.dataset.ci)); });
 $("#yr-all").addEventListener("click", () => { year = null; refresh(); });
@@ -1322,12 +1332,15 @@ $("#ct").addEventListener("click", e => {
   const a = e.target.closest("[data-o]"); if (a) { show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); }
 });
 {
-  const nL = ROWS.filter(r => r[5]).length;
+  const nL = ROWS.filter(r => r[5]).length, nU = ROWS.filter(r => r[3] === "NEW").length;
+  $("#m-un-n").textContent = nU.toLocaleString();
+  $("#dt-un").innerHTML = `Strategies the mapping could not place on any live family or General branch, with the reason it gave and the node the tree would need. These are the candidates for the next release of the tree. Pick a region or a year above to narrow the list; sort and filter as in the details table, and open a row for the strategy's record and passages.`;
   $("#banner").hidden = false;
-  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever, ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.</span>`;
+  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
-  if (c >= 0) openCountry(c);
+  if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (c >= 0) openCountry(c);
   else { if (rg) region = rg; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
 }
 const cv = $(".canvas"); cv.scrollLeft = (cv.scrollWidth - cv.clientWidth) / 2;
