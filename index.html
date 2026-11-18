@@ -100,6 +100,17 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
 .sel text { fill: var(--gold); font-weight: 600 }
 .rain line { stroke: var(--storm); stroke-width: 1.3; stroke-linecap: round }
 .rain.cond line { stroke-dasharray: 2 3 }
+.storm { cursor: pointer }
+.storm:focus { outline: none }
+.storm ellipse { fill: var(--storm) }
+.storm.calm ellipse:not(.ring) { fill: none; stroke: var(--storm); stroke-opacity: .35; stroke-dasharray: 2 3 }
+.storm text { font: 500 10.5px var(--mono); letter-spacing: .06em; fill: var(--ink); paint-order: stroke; stroke: var(--surface); stroke-width: 3.5px; stroke-linejoin: round }
+.storm.calm text { fill: var(--muted) }
+.storm text.sn { font-size: 9.5px; fill: var(--storm) }
+.storm .ring { fill: none; stroke: var(--gold); stroke-width: 1.4; stroke-dasharray: 2 4 }
+.storm:hover ellipse:not(.ring), .storm:focus-visible ellipse:not(.ring) { stroke: var(--gold); stroke-width: 1.2 }
+.sky-rain line { stroke: var(--storm); stroke-width: 1.1; stroke-dasharray: 4 6; stroke-linecap: round; pointer-events: none }
+@media (prefers-reduced-motion: no-preference) { @keyframes fall { to { stroke-dashoffset: -20 } } .sky-rain line { animation: fall 1.4s linear infinite } }
 
 /* outline */
 .outline { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px }
@@ -285,7 +296,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div>
       <div class="eyebrow">PV II · Golden Strategy Tree · 45 countries</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
@@ -317,7 +328,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
   </div>
 
   <div class="main">
-    <div class="canvas"><svg id="tree" viewBox="0 0 1400 1030" role="img" aria-label="Mother tree v4 canopy"></svg></div>
+    <div class="canvas"><svg id="tree" viewBox="0 -200 1400 1230" role="img" aria-label="Mother tree v4 canopy"></svg></div>
     <aside class="panel" id="panel" aria-live="polite"></aside>
   </div>
 
@@ -430,6 +441,8 @@ function bez(P4, t) {
   const L = Math.hypot(tg[0], tg[1]) || 1;
   return { x: pt[0], y: pt[1], nx: -tg[1] / L, ny: tg[0] / L };
 }
+
+const gSky = el("g", { class: "sky" });
 
 // ground and trunk
 el("path", { d: `M${CX - 330},962 Q${CX},944 ${CX + 330},962`, fill: "none", stroke: "var(--line)", "stroke-width": 2 });
@@ -587,6 +600,7 @@ function setRisk(r) {
   state.risk = r;
   storms.querySelectorAll(".cloud").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === r ? "true" : "false"));
   paint();
+  if (typeof C !== "undefined" && C) drawSky();
   if (r) show({ r }); else if (!state.sel && !state.lv) show({});
 }
 const lvHay = v => [v.lever, v.lever_full].join(" ").toLowerCase();
@@ -873,6 +887,65 @@ function paintCountry() {
     const B = budEl[v.lever_id], x = lev[v.lever_id];
     if (!x) { sizeBud(B, 1.8, B.col, true); return; }
     sizeBud(B, 2.2 + 4.3 * Math.sqrt(x.n / vmax), "var(--gold)", false);
+  });
+  drawSky();
+}
+// ---------- the sky: one storm cloud per risk ----------
+// A cloud sits over the leaves whose strategies in view carry the risk (the strategy-weighted centre of the six leaves
+// carrying most of it) and its rain falls towards them. Its size, darkness and rain follow how many strategies in view
+// carry the risk, on one scale for the view. A risk no strategy in view carries is a faint outline over the families
+// the literature ties to it.
+function drawSky() {
+  gSky.innerHTML = "";
+  if (mode === "unmapped") return;
+  const RI = Object.fromEntries(D.risks.map((r, i) => [r, i])), per = D.risks.map(() => ({}));
+  C.rows.forEach(r => {
+    const k = r[4] && leafEl[r[4]] ? r[4] : r[3] === "STD" && genEl[r[6]] ? r[6] : null;
+    if (k) r[9].forEach(x => { if (x in RI) per[RI[x]][k] = (per[RI[x]][k] || 0) + 1; });
+  });
+  const at = k => leafEl[k] || genEl[k];
+  const clouds = D.risks.map((r, i) => {
+    const on = Object.entries(per[i]).sort((a, b) => b[1] - a[1]), n = on.reduce((a, [, v]) => a + v, 0);
+    let top = on.slice(0, 6);
+    if (!top.length) top = D.families.filter(f => nLv(f) && riskKind(f, r) === "direct").map(f => [f.family_id, 1]);
+    const tn = top.reduce((a, [, v]) => a + v, 0);
+    return { r, n, on: on.slice(0, 8), x: tn ? top.reduce((a, [k, v]) => a + at(k).x * v, 0) / tn : CX };
+  });
+  const big = Math.max(1, ...clouds.map(c => c.n));
+  clouds.forEach(c => {
+    c.t = Math.sqrt(c.n / big); c.rx = 40 + 50 * c.t; c.ry = 15 + 10 * c.t;
+    const w = c.r.toUpperCase().split(" "), cut = w.length > 2 ? Math.ceil(w.length / 2) : w.length;
+    c.lines = cut < w.length ? [w.slice(0, cut).join(" "), w.slice(cut).join(" ")] : [w.join(" ")];
+    c.half = Math.max(c.rx, Math.max(...c.lines.map(l => l.length)) * 3.4 + 8);
+  });
+  // spread across the sky in the order of where their rain falls, two staggered rows
+  const nC = clouds.length;
+  [...clouds].sort((a, b) => a.x - b.x).forEach((c, i) => { c.x = 95 + i * 1210 / Math.max(1, nC - 1); c.row = i % 2; });
+  let sd = 11; const rnd = () => ((sd = (sd * 16807) % 2147483647) - 1) / 2147483646;
+  clouds.forEach(c => {
+    const cy = -150 + c.row * 62, dim = state.risk && state.risk !== c.r, a = dim ? 0.22 : 1;
+    const g = el("g", { class: "storm" + (c.n ? "" : " calm"), tabindex: 0, role: "button", "aria-pressed": String(state.risk === c.r),
+      "aria-label": `${c.r}: ${c.n.toLocaleString()} strategies in view` }, gSky);
+    el("title", {}, g).textContent = c.n
+      ? `${c.r}: ${c.n.toLocaleString()} strategies in view carry this risk; rain falls on the ${c.on.length === 1 ? "leaf" : c.on.length + " leaves"} carrying most of them`
+      : `${c.r}: no strategy in view carries this risk`;
+    const rain = el("g", { class: "sky-rain", opacity: a }, g), vmax = Math.max(1, ...c.on.map(([, v]) => v));
+    c.on.forEach(([k, v]) => {
+      const L = at(k), m = Math.max(1, Math.round((1 + 2 * c.t) * v / vmax));
+      for (let j = 0; j < m; j++) {
+        const x0 = c.x + (rnd() - 0.5) * c.rx * 1.3, y0 = cy + c.ry * 0.7, tx = L.x + (rnd() - 0.5) * 10, ty = L.y;
+        const f = (0.22 + 0.3 * c.t) * (0.7 + 0.3 * rnd());
+        el("line", { x1: x0, y1: y0, x2: x0 + (tx - x0) * f, y2: y0 + (ty - y0) * f, "stroke-opacity": 0.2 + 0.45 * c.t }, rain);
+      }
+    });
+    [[-0.45, 0.2, 0.62], [0.4, 0.25, 0.58], [0, -0.05, 0.82]].forEach(([dx, dy, k]) =>
+      el("ellipse", { cx: c.x + dx * c.rx, cy: cy + dy * c.ry, rx: c.rx * k, ry: c.ry * (k + 0.25), "fill-opacity": c.n ? (0.18 + 0.5 * c.t) * a : 0 }, g));
+    const tx = el("text", { x: c.x, y: cy + (c.lines.length > 1 ? -2 : 4), "text-anchor": "middle", opacity: dim ? 0.4 : 1 }, g);
+    c.lines.forEach((l, i) => (el("tspan", { x: c.x, dy: i ? 12 : 0 }, tx).textContent = l));
+    if (c.n) el("text", { x: c.x, y: cy + c.ry + 4 + (c.lines.length > 1 ? 6 : 0), "text-anchor": "middle", class: "sn", opacity: dim ? 0.4 : 1 }, g).textContent = c.n.toLocaleString();
+    if (state.risk === c.r) el("ellipse", { cx: c.x, cy: cy + 2, rx: c.half + 6, ry: c.ry + 12, class: "ring" }, g);
+    g.addEventListener("click", () => setRisk(state.risk === c.r ? null : c.r));
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRisk(state.risk === c.r ? null : c.r); } });
   });
 }
 function selLabel() {
@@ -1215,7 +1288,7 @@ function dtDetail(r) {
     ${row("Plan chapter", esc(X.chapters[x[2]]))}
     ${row("Objective", esc(r[2]))}
     ${row("Target", esc(r[11]))}
-    ${row("Instrument", esc(r[12]))}
+    ${row("Instrument", r[12] ? esc(r[12]) : `<span class="muted">not named in the plan text or by the mapping</span>`)}
     ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${X.mapped ? "by the mapping prompt" : `through the objective label “${esc(r[10])}”`}</span>`)}
     ${row("Storms", r[9].length ? `<span class="chips">${riskChips(r[9])}</span>` : "")}
     ${row("Sector", esc(r[7]))}
