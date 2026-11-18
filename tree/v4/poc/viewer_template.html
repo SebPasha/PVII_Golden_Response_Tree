@@ -100,6 +100,13 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
 .sel text { fill: var(--gold); font-weight: 600 }
 .rain line { stroke: var(--storm); stroke-width: 1.3; stroke-linecap: round }
 .rain.cond line { stroke-dasharray: 2 3 }
+.glbl { font: 600 8.5px var(--mono); letter-spacing: .02em; fill: var(--ink); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; cursor: pointer; text-transform: uppercase }
+.glbl.dead { fill: var(--muted) }
+.glbl:hover { fill: var(--gold) }
+#ct tr.grow td { font-weight: 600; color: var(--ink); background: color-mix(in srgb, var(--line) 35%, transparent) }
+#ct tr.grow td:first-child { cursor: pointer; padding-left: 4px }
+#ct tr.grow td:first-child:hover { color: var(--gold) }
+#ct tr.frow td.fam { padding-left: 16px }
 .storm { cursor: pointer }
 .storm:focus { outline: none }
 .storm ellipse { fill: var(--storm) }
@@ -308,7 +315,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div>
       <div class="eyebrow">PV II · Golden Strategy Tree · 45 countries</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Leaves are the 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the 33 framework families of Jude's tree, each from a published framework, named at their fork; the leaves are our 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
@@ -347,7 +354,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
   </div>
 
   <div class="main">
-    <div class="canvas"><svg id="tree" viewBox="0 -200 1400 1230" role="img" aria-label="Mother tree v4 canopy"></svg></div>
+    <div class="canvas"><svg id="tree" viewBox="0 -210 1400 1260" role="img" aria-label="Mother tree v4 canopy"></svg></div>
     <aside class="panel" id="panel" aria-live="polite"></aside>
   </div>
 
@@ -377,7 +384,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
   <section class="outline" id="outline">
     <h2>The whole tree</h2>
-    <p>Every group, family and lever, in the order of the canopy. Open a group to see its families; select a family or lever to read it in the panel.</p>
+    <p>Every framework family, family and lever, in the order of the canopy. Open a framework family to see its families; select a family or lever to read it in the panel.</p>
   </section>
 
   <footer id="foot"></footer>
@@ -403,11 +410,11 @@ const nLv = f => f.lever_ids.length;
 const famCol = fid => PCOL[SP[F[fid].subpillar_code].pillar];
 
 document.getElementById("counts").innerHTML = [
-  [D.groups.length, "groups"], [D.families.length, "families"], [D.levers.length, "levers"], [D.dropped.length, "dropped"], [D.risks.length, "storms"]
+  [D.groups.length, "framework families"], [D.families.length, "families"], [D.levers.length, "levers"], [D.dropped.length, "dropped"], [D.risks.length, "storms"]
 ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
 
 // ---------- layout ----------
-const CX = 700, CY = 700, R_P = 120, R_S = 210, R_G = 290, R_L = 392;
+const CX = 700, CY = 720, R_P = 110, R_S = 185, R_G = 340, R_L = 440;
 const A0 = 197, A1 = -17;
 const slots = []; let u = 0;
 ORDER.forEach(([pc, sps], pi) => {
@@ -489,7 +496,14 @@ ORDER.forEach(([pc, sps]) => {
       });
       const [gx, gy] = pol(R_G, gAng[g.group_id]);
       const n = el("circle", { cx: gx, cy: gy, r: 4.5, fill: "var(--surface)", stroke: lvOfGroup(g) ? col : "var(--muted)", "stroke-width": 2, class: "node", tabindex: 0, "data-g": g.group_id }, gNodes);
-      el("title", {}, n).textContent = `${g.group}: ${g.family_ids.length} families, ${lvOfGroup(g)} levers`;
+      el("title", {}, n).textContent = `Framework family ${g.group}: ${g.family_ids.length} families, ${lvOfGroup(g)} levers. Basis: ${g.basis}`;
+      {
+        const a = gAng[g.group_id], flip = a > 90 || a < -90, [tx, ty] = pol(R_G - 9, a);
+        const t = el("text", { x: tx, y: ty, dy: "0.32em", "text-anchor": flip ? "start" : "end", class: "glbl" + (lvOfGroup(g) ? "" : " dead"),
+          transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})`, "data-g": g.group_id }, gNodes);
+        t.textContent = g.group.length > 26 ? g.group.slice(0, 25) + "…" : g.group;
+        t.addEventListener("click", () => show({ g: g.group_id }));
+      }
       n.addEventListener("click", () => show({ g: g.group_id }));
       n.addEventListener("keydown", e => { if (e.key === "Enter") show({ g: g.group_id }); });
     });
@@ -739,7 +753,7 @@ function show(o) {
   } else if (o.g) {
     const g = G[o.g], s = SP[g.subpillar_code];
     h = crumb([[PL[s.pillar].name, { p: s.pillar }], [s.name, { s: s.code }]]) +
-      `<div class="sect"><div class="eyebrow">Group ${g.group_id}</div><h2>${esc(g.group)}</h2></div>
+      `<div class="sect"><div class="eyebrow">Framework family ${g.group_id} · Jude's framework</div><h2>${esc(g.group)}</h2></div>
       <p class="def">${esc(g.definition)}</p>
       <div class="sect"><div class="eyebrow">Basis</div><p class="muted">${esc(g.basis)}</p></div>
       <div class="sect"><div class="eyebrow">Families · levers</div>${familyList(g.family_ids)}</div>
@@ -777,7 +791,7 @@ function show(o) {
       <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>`;
   } else {
     h = `<div class="sect"><div class="eyebrow">How to read it</div><h2>Ten branches, sixty leaves, ${D.levers.length} buds</h2></div>
-      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a group, and each leaf a family. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
+      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a framework family (the layer of Jude's tree, each from a published framework), and each leaf one of our families. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
       <div class="legend">
         <div><span class="sw" style="background:var(--economy)"></span>Smarter Growth: the economy</div>
         <div><span class="sw" style="background:var(--people)"></span>People-first Approach: people</div>
@@ -868,7 +882,7 @@ const CM = true;
 const NOW = new Date().getFullYear();
 let mode = "world", region = null, year = null, ci = 0, C = null;
 const sel = new Set();
-const OVL = { LV: "Placed on a lever", L2: "On a family, no lever", GRP: "On a group only", STD: "On a general branch", GOAL: "Goal outside the tree", NEW: "Not placed" };
+const OVL = { LV: "Placed on a lever", L2: "On a family, no lever", GRP: "On a framework family only", STD: "On a general branch", GOAL: "Goal outside the tree", NEW: "Not placed" };
 const short = (t, n) => t.length > n ? t.slice(0, n - 1) + "…" : t;
 const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
 const fmtPct = s => s >= 0.1 ? Math.round(100 * s) + "%" : s >= 0.001 ? (100 * s).toFixed(1) + "%" : "<0.1%";
@@ -1210,7 +1224,7 @@ function drawTable() {
     if (r[5]) { nL++; totL[i]++; lev[i][r[5]] = (lev[i][r[5]] || 0) + 1; al[r[5]] = (al[r[5]] || 0) + 1; }
   });
   const NC = cols.length + 3;
-  const head = `<thead><tr><th>Family / lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${cols.map(c => `<th class="colh${c.on ? " on" : ""}" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 20))}<br>${esc(c.sub)}</th>`).join("")}</tr></thead>`;
+  const head = `<thead><tr><th>Framework family › family › lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${cols.map(c => `<th class="colh${c.on ? " on" : ""}" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 20))}<br>${esc(c.sub)}</th>`).join("")}</tr></thead>`;
   let body = `<tr class="tot"><td>Strategies</td><td class="all">${n0.toLocaleString()}</td><td></td>${tot.map(n => `<td>${n.toLocaleString()}</td>`).join("")}</tr>
     <tr class="tot"><td>On a live family or one of its levers</td><td class="all">${pct(nF, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totF[i], n) + "%" : ""}</td>`).join("")}</tr>
     <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(nL, n0)}%</td><td></td>${tot.map((n, i) => `<td class="g">${n ? pct(totL[i], n) + "%" : ""}</td>`).join("")}</tr>
@@ -1222,7 +1236,11 @@ function drawTable() {
   ORDER.forEach(([pc0, sps]) => { sps.forEach(sc => {
     body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
     const col = PCOL[pc0];
-    D.families.filter(f => f.subpillar_code === sc).forEach(f => {
+    D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
+    const gn = cols.map((c, i) => g.family_ids.reduce((t, fid) => t + ((fam[i][fid] || {}).n || 0), 0));
+    const ga = g.family_ids.reduce((t, fid) => t + ((af[fid] || {}).n || 0), 0), gl = g.family_ids.reduce((t, fid) => t + ((af[fid] || {}).lv || 0), 0);
+    body += `<tr class="grow"><td ${O({ g: g.group_id })} title="${esc(g.basis)}">${esc(g.group)}</td><td class="all">${ga || ""}</td><td class="pws">${gl ? pct(gl, ga) + "%" : ""}</td>${gn.map((n, i) => cell(n, tot[i], col, `${esc(cols[i].label)}: ${n} strategies in ${esc(g.group)}`, i)).join("")}</tr>`;
+    g.family_ids.map(fid => F[fid]).forEach(f => {
       const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid), dead = !nLv(f);
       body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}${dead ? " · dropped" : ""}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
         const x = fam[i][fid] || { n: 0, lv: 0 };
@@ -1235,6 +1253,7 @@ function drawTable() {
         body += `<tr class="lvrow drop" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ d: d.lever_id })} title="Dropped as unbacked by the literature review: no strategies are placed on it">${esc(d.lever)} · dropped</td><td class="all"></td><td></td>${cols.map(() => "<td></td>").join("")}</tr>`;
       });
     });
+    });
   });
     const hid = HOLD[pc0];
     body += `<tr class="sp"><td colspan="${NC}">General branch · ${PROLE[pc0]}</td></tr>
@@ -1242,7 +1261,7 @@ function drawTable() {
   });
   $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
   $("#ct-h").textContent = mode === "country" ? `${C.name} over time: families and levers by plan` : region === null ? "Regions side by side: families and levers" : `${region}: countries side by side`;
-  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. A family row is the share of that ${C.unit}'s strategies placed on the family or one of its levers; open it to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
+  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. Shaded bold rows are the framework families of Jude's tree, the layer under each RHDR subpillar; the rows under them are our families. A row is the share of that ${C.unit}'s strategies placed on it or on one of its levers; open a family to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
 }
 function toggleFam(fid, on) {
   if (on) openFam.add(fid); else openFam.delete(fid);
@@ -1267,6 +1286,7 @@ const DCOLS = [
   { k: "tgt", h: "Target", v: r => r[11], cls: "w" },
   { k: "ins", h: "Instrument", v: r => r[12], cls: "w" },
   { k: "sector", h: "Sector", v: r => r[7] },
+  { k: "gfam", h: "Framework family", v: r => r[4] ? G[F[r[4]].group_id].group : "", cls: "w0" },
   { k: "fam", h: "Family or branch", v: famOf, cls: "w", t: r => `<span class="sw" style="background:${PCOL[pillarOf(r)] || "var(--line)"}"></span>${esc(famOf(r))}` },
   { k: "lev", h: "Lever", v: r => r[5] ? V[r[5]].lever : "", cls: "w" },
   { k: "ori", h: "Orientation", v: r => r[8] },
@@ -1280,7 +1300,7 @@ function nodeTest(o) {
   if (o.f) return [r => r[4] === o.f, "Family: " + F[o.f].family];
   if (o.h) return [r => r[3] === "STD" && r[6] === o.h, HNAME[o.h]];
   if (o.d) return [() => false, "Dropped lever: no strategies are placed on it"];
-  if (o.g) return [r => r[4] && F[r[4]].group_id === o.g, "Group: " + G[o.g].group];
+  if (o.g) return [r => r[4] && F[r[4]].group_id === o.g, "Framework family: " + G[o.g].group];
   if (o.s) return [r => r[4] && F[r[4]].subpillar_code === o.s, "Subpillar: " + SP[o.s].name];
   if (o.p) return [r => pillarOf(r) === o.p, "Pillar: " + PL[o.p].name];
   if (o.r) return [r => r[9].includes(o.r), "Storm: " + o.r];
