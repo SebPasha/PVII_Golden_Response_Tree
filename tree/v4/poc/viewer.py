@@ -9,7 +9,7 @@ Tab 1 is the mother tree for all countries or one region; tab 2 is one country, 
 table under the tree lists the strategies behind whatever is selected, sortable, each opening to its
 underlying data. The passage text under a strategy is too large for the page, so it goes in a folder
 detail/ beside the page (one file per plan edition, from passages.csv), which the page reads when a
-strategy is opened. Reads ../tree_v4.json and viewer_template.html here. No model calls.
+strategy is opened. Reads ../tree_v4.json, viewer_template.html and forest.js (the country forest) here. No model calls.
 """
 import csv
 import json
@@ -162,6 +162,7 @@ data["set"] = {
 template = open(os.path.join(HERE, "viewer_template.html"), encoding="utf-8").read()
 blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 html = template.replace("/*TREE_DATA*/null", blob)
+html = html.replace("/*FOREST*/", open(os.path.join(HERE, "forest.js"), encoding="utf-8").read())
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 print("wrote %s: %d countries, %d plans, %d rows, %d on a lever, %.0f KB" % (

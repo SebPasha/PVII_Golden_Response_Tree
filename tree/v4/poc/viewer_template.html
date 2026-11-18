@@ -290,6 +290,16 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 #ct td[data-ck] { cursor: pointer }
 #ct td[data-ck]:hover { outline: 1px solid var(--gold); outline-offset: -1px }
 .todt { font: 500 12.5px var(--body); color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start }
+/* country forest */
+.forest { margin: 14px 0 6px; background: #06110d; border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px 10px; color: #cfe3d6 }
+.forest .fl { font: italic 18px/1.35 var(--body); color: #f1d58a; margin: 0 0 8px }
+.forest .fl small { font: 12px var(--body); font-style: normal; color: #8db8a0; margin-left: 8px }
+.forest svg { width: 100%; height: auto; display: block }
+.forest .culm { cursor: pointer }
+.forest .culm:focus { outline: none }
+.forest .culm:focus-visible, .forest .culm:hover { filter: brightness(1.35) }
+.forest .fkey { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 4px 18px; font-size: 12px; color: #8db8a0; margin-top: 8px }
+.forest .fkey b { color: #f1d58a; font-weight: 500; letter-spacing: .08em; margin-right: 6px }
 </style>
 
 <div class="wrap">
@@ -322,6 +332,12 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
       <div class="tl-scroll"><svg id="tlsvg" role="img" aria-label="Plans on a timeline"></svg></div>
       <p class="muted" id="tl-note" style="margin:0;font-size:12.5px"></p>
     </div>
+  </section>
+
+  <section class="forest" id="forestbox" hidden>
+    <p class="fl" id="fline"></p>
+    <svg id="forest" role="img"></svg>
+    <div class="fkey" id="fkey"></div>
   </section>
 
   <div class="storms" id="storms" aria-label="Risks"><span class="eyebrow">Storms</span></div>
@@ -814,6 +830,8 @@ out.addEventListener("click", e => {
 });
 
 $("#foot").textContent = `Tree v4, built ${D.built}: groups and families with a lever under each family. ${(D.dropped || []).length} levers graded unbacked by the literature review are dropped (listed under the whole tree). Strategies come from the earlier multi-country run; a plan's period is read from its document, and where it had to be inferred the timeline says so. Category names follow the RHDR framework.`;
+
+/*FOREST*/
 
 // ---------- strategies on the tree ----------
 // row: [plan, name, objective, level, family, lever, group, sector, orientation, risks, objective label, target,
@@ -1413,6 +1431,12 @@ function refresh() {
   $("#worldbar").hidden = !w; $("#ctrybar").hidden = w;
   if (w) { drawRegions(); drawYears(); } else { drawCountries(); drawTimeline(); }
   drawTable(); paintCountry();
+  $("#forestbox").hidden = mode !== "country";
+  if (mode === "country") {
+    const k = Forest.draw($("#forest"), CTY[ci].slug, CTY[ci].name, C.rows, D, o => { show(o); $(".main").scrollIntoView({ block: "start" }); });
+    $("#fline").innerHTML = `${esc(k.line)}<small>${esc(CTY[ci].name)}, ${esc(selLabel())}${k.added ? " · plant and scene new for this country, to review" : ""}</small>`;
+    $("#fkey").innerHTML = k.key.map(([a, b]) => `<div><b>${a}</b>${esc(b)}</div>`).join("");
+  }
   indexHits(state.q);
   show(state.q.length >= 2 ? { q: state.q } : state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : state.h ? { h: state.h } : state.d ? { d: state.d } : state.risk ? { r: state.risk } : {});
   try { history.replaceState(null, "", "#" + (un ? "unmapped" : w ? (region ? "region-" + hslug(region) : "world") : hslug(CTY[ci].slug))); } catch (e) {}
