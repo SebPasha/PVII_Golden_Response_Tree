@@ -2,6 +2,8 @@
 gpt-5.4), one call per 25 strategies of one country, in place of the objective-label crosswalk.
 
     cd tree/v4/poc && python3 map_run.py <out folder of reshape.py> [--dry-run] [--max-cost 30] [--country thailand]
+    python3 map_run.py <out>/sector        # likewise the sector plans, UNGA statements or budget lines (sources.py)
+    python3 map_run.py <out>/budget --batch 50
 
 Each distinct strategy is mapped once (a strategy that runs through several plan editions has the
 same name, objective, target and instrument in each) and the answer applies to all its editions.
@@ -32,34 +34,59 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="price the run, spend nothing")
     ap.add_argument("--max-cost", type=float, default=30.0)
     ap.add_argument("--country", default="", help="one country slug only")
+    ap.add_argument("--batch", type=int, default=steps.MAP_BATCH, help="strategies per call")
+    ap.add_argument("--concurrency", type=int, default=0, help="calls at once (default: the workflow's)")
     a = ap.parse_args()
     csv.field_size_limit(10 ** 9)
 
     rows = list(csv.DictReader(open(os.path.join(a.out, "strategies.csv"), encoding="utf-8")))
     plans = collections.defaultdict(dict)
+    years = collections.defaultdict(set)
     uniq = {}
     for r in sorted(rows, key=lambda r: (r["slug"], int(r["period_start"]))):
         plans[r["slug"]][r["plan_id"]] = "%s, %s-%s" % (r["plan_title"], r["period_start"], r["period_end"])
+        typ = r.get("doc_type", "ndp")
+        if r.get("statement_type") == "overhead":   # placed by rule in sources.py
+            continue
+        years[r["slug"]].add(r["period_start"])
+        q = r["quote"] if r["quote"] != r["name"] else ""
+        if typ == "budget":
+            q = "budget heading: %s" % r["pillar"] if r["pillar"] else ""
         u = uniq.setdefault(r["source_strategy_key"], dict(
             source_strategy_key=r["source_strategy_key"], country=r["country"], slug=r["slug"], name=r["name"],
-            objective=r["objective"], target_group=r["target_group"], instrument=r["instrument"], quote="", quote_en=""))
-        if not u["quote"] and r["quote"]:
-            u["quote"] = r["quote"]
+            objective=r["objective"], target_group=r["target_group"], instrument=r["instrument"], quote="", quote_en="",
+            typ=typ, group=r["plan_id"] if typ == "sector" else r["slug"],
+            plan="%s, %s-%s" % (r["plan_title"], r["period_start"], r["period_end"])))
+        if not u["quote"] and q:
+            u["quote"] = q
     by = collections.defaultdict(list)
     for u in uniq.values():
         if not a.country or u["slug"] == a.country:
-            by[u["slug"]].append(u)
+            by[u["group"]].append(u)
 
     t = T.load()
     prompt, menu = config.load_prompt("M"), t.menu()
     ledger = llm.Ledger(a.max_cost, config.MAX_CALLS, dry_run=a.dry_run)
     client = llm.LLMClient(ledger, dry_run=a.dry_run)
     batches = []
-    for slug in sorted(by):
-        ss = sorted(by[slug], key=lambda u: u["name"].lower())
-        doc = ("Country: %s. The strategies below come from its national development plans and visions, "
-               "pooled across editions: %s." % (ss[0]["country"], "; ".join(plans[slug].values())))
-        batches += [(doc, ss[i:i + steps.MAP_BATCH]) for i in range(0, len(ss), steps.MAP_BATCH)]
+    for g in sorted(by):
+        ss = sorted(by[g], key=lambda u: u["name"].lower())
+        c, typ = ss[0]["country"], ss[0]["typ"]
+        if typ == "sector":
+            doc = ("Country: %s. The strategies below come from one of its sector plans or policies: %s."
+                   % (c, ss[0]["plan"]))
+        elif typ == "unga":
+            doc = ("Country: %s. Each line below is a passage of its statement to the UN General Assembly general "
+                   "debate in %s, in the speaker's words, with what the passage advances as its objective. Place the "
+                   "policy the passage commits to or calls for." % (c, ", ".join(sorted(years[ss[0]["slug"]]))))
+        elif typ == "budget":
+            doc = ("Country: %s. Each line below is a programme of its national budget for fiscal years %s: the programme's name, its "
+                   "description where the budget gives one, and the budget heading it sits under. Place the programme "
+                   "by what it funds." % (c, ", ".join(sorted(years[ss[0]["slug"]]))))
+        else:
+            doc = ("Country: %s. The strategies below come from its national development plans and visions, "
+                   "pooled across editions: %s." % (c, "; ".join(plans[ss[0]["slug"]].values())))
+        batches += [(doc, ss[i:i + a.batch]) for i in range(0, len(ss), a.batch)]
     print("%d strategies, %d countries, %d calls, tree %s (%d live families)" % (
         sum(len(b) for _, b in batches), len(by), len(batches), t.version, len(t.mid) - len(t.closed & set(t.mid))),
         flush=True)
@@ -74,7 +101,8 @@ def main():
 
     stopped = ""
     try:
-        results, errors = client.map("M", batches, build, label="batch", expect="array")
+        results, errors = client.map("M", batches, build, label="batch", expect="array",
+                                     concurrency=a.concurrency or None)
     except (llm.BudgetExceeded, llm.StageAborted) as e:
         stopped, results, errors = str(e), [None] * len(batches), []
     print(ledger.report(), flush=True)

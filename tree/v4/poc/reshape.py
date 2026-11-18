@@ -30,7 +30,9 @@ import os
 import re
 import sys
 
-import openpyxl
+import openpyxl  # noqa: F401
+
+from reshape_common import REGION, NAMES, COLS, LV, FAM, GRP, SUB, PIL, HOLD, tree, place, norm, jl, sheet_rows  # noqa: E402,F401
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ARGS = [x for x in sys.argv[1:] if not x.startswith("--mapping")]
@@ -38,21 +40,6 @@ MAPPING = next((x.split("=", 1)[1] for x in sys.argv[1:] if x.startswith("--mapp
 SRC = ARGS[0] if ARGS else os.environ.get("PVII_SOURCES_ROOT", "")
 OUT = ARGS[1] if len(ARGS) > 1 else os.path.join(HERE, "out")
 csv.field_size_limit(10 ** 9)
-
-REGIONS = {
-    "South-East Asia": "brunei cambodia indonesia laos malaysia myanmar philippines thailand timor_leste vietnam",
-    "South Asia": "afghanistan bangladesh bhutan india iran maldives nepal pakistan sri_lanka",
-    "East Asia": "china mongolia",
-    "Pacific": "fiji kiribati marshall_islands nauru palau papua_new_guinea samoa solomon_islands tonga tuvalu vanuatu",
-    "Europe and Central Asia": "kazakhstan serbia uzbekistan",
-    "Arab States": "egypt morocco",
-    "Africa": "ethiopia ghana kenya nigeria rwanda",
-    "Latin America and the Caribbean": "brazil colombia jamaica peru",
-}
-REGION = {s: r for r, ss in REGIONS.items() for s in ss.split()}
-NAMES = {"timor_leste": "Timor-Leste", "sri_lanka": "Sri Lanka", "papua_new_guinea": "Papua New Guinea",
-         "marshall_islands": "Marshall Islands", "solomon_islands": "Solomon Islands", "laos": "Lao PDR",
-         "vietnam": "Viet Nam", "brunei": "Brunei Darussalam"}
 
 # Periods the earlier run's document table lacks or has wrong: (slug, document name start) -> (start, end, note)
 PERIOD_FIX = {
@@ -184,35 +171,7 @@ TITLES = {
 }
 
 
-def norm(s):
-    return re.sub(r"[^a-z0-9]+", " ", re.sub(r"\.(pdf|docx?|txt)$", "", s.lower())).strip()
-
-
-def jl(s):
-    try:
-        v = json.loads(s) if isinstance(s, str) and s.strip() else (s or [])
-        return v if isinstance(v, list) else []
-    except ValueError:
-        return []
-
-
-def sheet_rows(path, all_sheets=False):
-    wb = openpyxl.load_workbook(path, read_only=True)
-    for ws in (wb.worksheets if all_sheets else wb.worksheets[:1]):
-        it = ws.iter_rows(values_only=True)
-        head = list(next(it))
-        for r in it:
-            yield ws.title, dict(zip(head, r))
-
-
 # ---------- inputs ----------
-tree = json.load(open(os.path.join(HERE, "..", "tree_v4.json"), encoding="utf-8"))
-LV = {x["lever_id"]: x for x in tree["levers"]}
-FAM = {x["family_id"]: x for x in tree["families"]}
-GRP = {x["group_id"]: x for x in tree["groups"]}
-SUB = {x["code"]: x for x in tree["subpillars"]}
-PIL = {x["code"]: x["name"] for x in tree["pillars"]}
-HOLD = {x["id"]: x["name"] for x in tree["holding"]}
 XW = {r["objective_id"]: r["node_id"] for r in csv.DictReader(open(os.path.join(HERE, "objective_crosswalk.csv")))}
 # strategies go only to a live family (one that still has a lever), one of its levers, or a general branch
 LIVE = {f["family_id"] for f in tree["families"] if f["lever_ids"]}
@@ -225,30 +184,6 @@ union = list(csv.DictReader(open(os.path.join(SRC, "union", "strategies.csv"), e
 docs = collections.defaultdict(dict)
 for d in csv.DictReader(open(os.path.join(SRC, "union", "documents.csv"), encoding="utf-8")):
     docs[d["slug"]][norm(d["file"])] = d
-
-
-def place(node):
-    """The tree columns for a node id."""
-    o = dict(node_id=node, level="", group_id="", group="", family_id="", family="", lever_id="", lever="",
-             subpillar="", pillar_rhdr="")
-    if node in LV:
-        o.update(level="L3", lever_id=node, lever=LV[node]["lever"], family_id=LV[node]["family_id"])
-    elif node in FAM:
-        o.update(level="L2", family_id=node)
-    elif node in GRP:
-        o.update(level="L1", group_id=node)
-    elif node == "H-GOAL":
-        o.update(level="GOAL")
-    elif node in HOLD:
-        o.update(level="STD")
-    if o["family_id"]:
-        f = FAM[o["family_id"]]
-        o.update(family=f["family"], group_id=f["group_id"])
-    if o["group_id"]:
-        g = GRP[o["group_id"]]
-        sp = SUB[g["subpillar_code"]]
-        o.update(group=g["group"], subpillar=sp["name"], pillar_rhdr=PIL[sp["pillar"]])
-    return o
 
 
 def edition_of(slug, doc):
@@ -264,15 +199,6 @@ def edition_of(slug, doc):
     typ = FORCE_TYPE.get((slug, a, b)) or ("vision" if b - a + 1 >= 10 else "ndp")
     return typ, a, b, src
 
-
-COLS = ["strategy_id", "plan_id", "country", "slug", "region", "doc_type", "edition", "plan_title", "period_start",
-        "period_end", "published", "name", "objective", "target_group", "instrument", "pillar", "statement_type",
-        "related_risks", "n_mentions", "members", "refs", "quote", "quote_check", "named_agencies", "stated_urgency",
-        "sdg_targets", "response_orientation", "sector", "institutional_lead", "implementation_status",
-        "has_timeline", "has_quantified_target", "has_monitoring", "legal_or_plan_basis", "tree_version", "relation",
-        "objective_id", "tree_objective", "node_id", "level", "depth_basis", "group_id", "group", "family_id", "family",
-        "lever_id", "lever", "subpillar", "pillar_rhdr", "target_id", "target_label", "instrument_id",
-        "instrument_label", "confidence", "reason", "source_strategy_key", "n_editions", "first_edition"]
 
 by_slug = collections.defaultdict(list)
 for u in union:
