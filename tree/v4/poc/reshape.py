@@ -3,6 +3,7 @@ strategy format and joined to mother tree v4. No model calls.
 
     cd tree/v4/poc && python3 reshape.py <earlier run's data folder> [out folder]
     python3 reshape.py <data folder> <out folder> --mapping=<out folder>/mapping.csv   # after map_run.py
+        [--instrument=<out folder>/instrument.csv]   # after inst_run.py: an instrument where the mapping names none
 
 Reads, from the earlier run's data folder (read only):
   union/strategies.csv                  the 9,918 strategies (45 countries)
@@ -35,8 +36,9 @@ import openpyxl  # noqa: F401
 from reshape_common import REGION, NAMES, COLS, LV, FAM, GRP, SUB, PIL, HOLD, tree, place, norm, jl, sheet_rows  # noqa: E402,F401
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ARGS = [x for x in sys.argv[1:] if not x.startswith("--mapping")]
+ARGS = [x for x in sys.argv[1:] if not x.startswith("--")]
 MAPPING = next((x.split("=", 1)[1] for x in sys.argv[1:] if x.startswith("--mapping=")), "")
+INSTRUMENT = next((x.split("=", 1)[1] for x in sys.argv[1:] if x.startswith("--instrument=")), "")
 SRC = ARGS[0] if ARGS else os.environ.get("PVII_SOURCES_ROOT", "")
 OUT = ARGS[1] if len(ARGS) > 1 else os.path.join(HERE, "out")
 csv.field_size_limit(10 ** 9)
@@ -179,6 +181,7 @@ for _o, _n in XW.items():
     assert _n in LV or _n in LIVE or _n in ("H-SEC", "H-SPE", "H-SGO"), "%s -> %s is not a live node" % (_o, _n)
 # the real mapping (map_run.py), where it has been run: node by strategy, in place of the crosswalk
 MAP = {r["source_strategy_key"]: r for r in csv.DictReader(open(MAPPING, encoding="utf-8"))} if MAPPING else {}
+INS = {r["source_strategy_key"]: r for r in csv.DictReader(open(INSTRUMENT, encoding="utf-8"))} if INSTRUMENT else {}
 DEC = {r["strategy_key"]: r for r in csv.DictReader(open(os.path.join(HERE, "..", "..", "inputs", "strategy_decomposition.csv"), encoding="utf-8"))}
 union = list(csv.DictReader(open(os.path.join(SRC, "union", "strategies.csv"), encoding="utf-8")))
 docs = collections.defaultdict(dict)
@@ -301,6 +304,9 @@ for slug in sorted(by_slug):
                 for k in ("target", "instrument"):
                     if mp[k + "_id"]:
                         row.update({k + "_id": mp[k + "_id"], k + "_label": mp[k + "_label"]})
+            ins = INS.get(u["strategy_key"])
+            if not row["instrument_label"] and ins and ins["instrument"]:
+                row.update(instrument_label=ins["instrument"] + (" (%s)" % ins["instrument_class"] if ins["instrument_class"] else ""))
             made.append(row)
             pass_rows.extend(dict(x, strategy_id=row["strategy_id"], plan_id=pid, country=country) for x in ps)
             pl["n_strategies"] += 1

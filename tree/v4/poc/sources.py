@@ -155,11 +155,13 @@ def sector():
                     first_edition=pid)
             apply(x, MAP.get(key), INS.get(key))
             rows.append(x)
-            for ref in refs or [doc]:
-                d, page, para = (str(ref).split(" · ") + ["", ""])[:3]
-                ps.append(dict(strategy_id=x["strategy_id"], country=x["country"], plan_id=pid, document=d,
-                               page=page.replace("p.", ""), paragraph=para.replace("§", ""), intervention=nm,
-                               evidence=x["quote"], agencies="", primary_risk=""))
+            # the earlier run kept one evidence quote and the list of places it read the intervention at
+            at = [(str(ref).split(" · ") + ["", ""])[:3] for ref in refs or [doc]]
+            more = "; ".join("p.%s §%s" % (p.replace("p.", ""), q.replace("§", "")) for _, p, q in at[1:])
+            ps.append(dict(strategy_id=x["strategy_id"], country=x["country"], plan_id=pid, document=at[0][0],
+                           page=at[0][1].replace("p.", ""), paragraph=at[0][2].replace("§", ""),
+                           intervention=nm + (" (also read at %s)" % more if more else ""),
+                           evidence=x["quote"], agencies="", primary_risk=""))
     write("sector", rows, plans, ps)
 
 

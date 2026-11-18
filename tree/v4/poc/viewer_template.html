@@ -285,6 +285,8 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .dt-pager button:disabled { opacity: .4; cursor: default; text-decoration: none }
 .dt-pager select { padding: 3px 6px; font-size: 12px }
 #m-un-n { font: 11px var(--mono); color: var(--muted); margin-left: 3px }
+#srcs { align-items: center; margin-top: 2px }
+#srcs .eyebrow { margin-right: 6px }
 #ct td[data-ck] { cursor: pointer }
 #ct td[data-ck]:hover { outline: 1px solid var(--gold); outline-offset: -1px }
 .todt { font: 500 12.5px var(--body); color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start }
@@ -307,6 +309,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
       <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
       <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n"></span></button>
     </div>
+    <div class="chipsel" id="srcs" aria-label="Sources"></div>
     <div class="tl" id="worldbar">
       <div class="chipsel" id="regions" aria-label="Region"></div>
       <div class="tl-head"><span class="eyebrow" id="yr-h"></span><span class="tl-btns"><button type="button" class="clear" id="yr-all" hidden>All years</button></span></div>
@@ -815,15 +818,34 @@ $("#foot").textContent = `Tree v4, built ${D.built}: groups and families with a 
 // ---------- strategies on the tree ----------
 // row: [plan, name, objective, level, family, lever, group, sector, orientation, risks, objective label, target,
 //       instrument, passages, source strategy, country, first plan if carried over (else -1)]
-const X = D.set, PLN = X.plans, CTY = X.countries, REG = X.regions, ROWS = X.rows;
-ROWS.forEach(r => {
-  r[7] = X.sectors[r[7]]; r[9] = r[9].map(i => D.risks[i]); r[10] = X.objs[r[10]];
-  r[11] = X.targets[r[11]]; r[12] = X.instruments[r[12]]; r[17] = r[15]; r[15] = PLN[r[0]].c;
-});
-ROWS.forEach((r, i) => { r[18] = i; });
+const X = D.set, PLN = X.plans, CTY = X.countries, REG = X.regions, ROWS = [];
+// Each source comes with its own string lists; a source read later has its lists joined onto the page's.
+const DICTS = ["sectors", "objs", "targets", "instruments", "sids", "chapters", "agencies", "leads", "sdgs", "urg", "status", "legal", "notes"];
 const firstOf = {};
-ROWS.forEach(r => { const f = firstOf[r[14]]; if (f === undefined || PLN[r[0]].start < PLN[f].start) firstOf[r[14]] = r[0]; });
-ROWS.forEach(r => { r[16] = PLN[firstOf[r[14]]].start < PLN[r[0]].start ? firstOf[r[14]] : -1; });
+function addRows(Y, own) {
+  const off = {};
+  DICTS.forEach(k => { off[k] = own ? 0 : X[k].length - 1; if (!own) for (let i = 1; i < Y[k].length; i++) X[k].push(Y[k][i]); });
+  const m = (k, i) => i ? off[k] + i : 0, start = ROWS.length;
+  Y.rows.forEach(r => {
+    const x = r[15];
+    if (!own) {
+      r[7] = m("sectors", r[7]); r[10] = m("objs", r[10]); r[11] = m("targets", r[11]); r[12] = m("instruments", r[12]); r[14] = m("sids", r[14]);
+      x[2] = m("chapters", x[2]); x[3] = m("urg", x[3]); x[4] = m("status", x[4]); x[5] = m("legal", x[5]);
+      x[7] = x[7].map(i => m("sdgs", i)); x[8] = x[8].map(i => m("agencies", i)); x[9] = m("leads", x[9]); x[11] = m("notes", x[11]);
+    }
+    r[7] = X.sectors[r[7]]; r[9] = r[9].map(i => D.risks[i]); r[10] = X.objs[r[10]];
+    r[11] = X.targets[r[11]]; r[12] = X.instruments[r[12]]; r[17] = x; r[15] = PLN[r[0]].c;
+    r[18] = ROWS.length; ROWS.push(r);
+  });
+  for (let i = start; i < ROWS.length; i++) { const r = ROWS[i], f = firstOf[r[14]]; if (f === undefined || PLN[r[0]].start < PLN[f].start) firstOf[r[14]] = r[0]; }
+  for (let i = start; i < ROWS.length; i++) { const r = ROWS[i]; r[16] = PLN[firstOf[r[14]]].start < PLN[r[0]].start ? firstOf[r[14]] : -1; }
+}
+addRows(X, true);
+// sources: national plans are in the page; sector plans, UNGA statements and budgets are read when switched on
+const SRCM = Object.fromEntries(X.sources.map(x => [x.k, x]));
+const srcOf = p => p.doc_type === "ndp" || p.doc_type === "vision" ? "plans" : p.doc_type;
+const active = new Set(["plans"]), loaded = { plans: true }, loading = {}, failed = {};
+const DOCT = { ndp: "medium-term", vision: "long-term", sector: "sector plan", unga: "UNGA statement", budget: "budget" };
 const CM = true;
 const NOW = new Date().getFullYear();
 let mode = "world", region = null, year = null, ci = 0, C = null;
@@ -838,19 +860,39 @@ function planLabel(p) {
   return /^\d+(st|nd|rd|th)$/.test(p.edition) ? p.edition + " Plan" : p.edition;
 }
 const hslug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-const plansOf = c => PLN.map((p, i) => i).filter(i => PLN[i].c === c);
+const plansOf = c => PLN.map((p, i) => i).filter(i => PLN[i].c === c && active.has(srcOf(PLN[i])));
+const onSrc = r => active.has(srcOf(PLN[r[0]]));
+function drawSources() {
+  $("#srcs").innerHTML = `<span class="eyebrow">Sources</span>` + X.sources.map(x => `<button type="button" class="rchip" aria-pressed="${active.has(x.k)}" data-src="${x.k}">${esc(x.label)} <span>${loading[x.k] ? "reading…" : failed[x.k] ? "could not be read" : x.n.toLocaleString()}</span></button>`).join("");
+}
+function afterSource() {
+  if (mode === "country") { sel.clear(); plansOf(ci).forEach(i => sel.add(i)); }
+  drawSources(); refresh();
+  $("#m-un-n").textContent = ROWS.filter(r => r[3] === "NEW" && onSrc(r)).length.toLocaleString();
+}
+function toggleSource(k) {
+  if (active.has(k)) { if (active.size === 1) return; active.delete(k); afterSource(); return; }
+  active.add(k);
+  if (loaded[k]) { afterSource(); return; }
+  loading[k] = true; failed[k] = false; drawSources();
+  const sc = document.createElement("script");
+  sc.src = `rows_${k}.js`;
+  sc.onerror = () => { loading[k] = false; failed[k] = true; active.delete(k); drawSources(); };
+  document.head.appendChild(sc);
+}
+window.PVR = (k, Y) => { if (loaded[k]) return; addRows(Y, false); loaded[k] = true; loading[k] = false; afterSource(); };
 const inRegion = c => region === null || CTY[c].region === region;
 
 // the rows and columns in view: a country's plans, or the regions (or one region's countries)
 function scope() {
   if (mode === "country") {
-    const plans = plansOf(ci), base = ROWS.filter(r => r[15] === ci);
+    const plans = plansOf(ci), base = ROWS.filter(r => r[15] === ci && onSrc(r));
     C = { name: CTY[ci].name, plans, base, rows: base.filter(r => sel.has(r[0])), unit: "plan", colOf: r => r[0],
       cols: plans.map(i => ({ key: i, label: planLabel(PLN[i]), sub: `${PLN[i].start}–${PLN[i].end}`, title: `${PLN[i].title}, ${PLN[i].start}–${PLN[i].end}`, on: sel.has(i) && sel.size < plans.length })) };
     return;
   }
   const un = mode === "unmapped";
-  const base = ROWS.filter(r => inRegion(r[15]) && (year === null || (PLN[r[0]].start <= year && year <= PLN[r[0]].end)) && (!un || r[3] === "NEW"));
+  const base = ROWS.filter(r => onSrc(r) && inRegion(r[15]) && (year === null || (PLN[r[0]].start <= year && year <= PLN[r[0]].end)) && (!un || r[3] === "NEW"));
   if (region === null) {
     C = { name: `${un ? "Unmapped, " : ""}all ${CTY.length} countries`, base, rows: base, unit: "region", colOf: r => CTY[r[15]].region,
       cols: REG.map(x => ({ key: x, label: x, sub: CTY.filter(c => c.region === x).length + " countries", title: x })) };
@@ -965,7 +1007,7 @@ function drawCountries() {
 }
 function drawYears() {
   const s = $("#yrsvg"); s.innerHTML = "";
-  const ps = PLN.filter(p => inRegion(p.c));
+  const ps = PLN.filter(p => inRegion(p.c) && active.has(srcOf(p)));
   const y0 = Math.min(...ps.map(p => p.start)), y1 = Math.min(2040, Math.max(...ps.map(p => p.end)));
   const W = 1000, H = 66, T = 12, B = 46, n = y1 - y0 + 1, bw = (W - 20) / n;
   s.setAttribute("viewBox", `0 0 ${W} ${H}`);
@@ -1009,7 +1051,7 @@ function drawTimeline() {
     const g = mk("g", { class: "tlbar" + (sel.has(i) ? " on" : ""), tabindex: 0, role: "button", "aria-pressed": sel.has(i) }, svg2);
     mk("rect", { x: 0, y, width: W, height: RH, fill: "transparent" }, g);
     mk("text", { x: 0, y: y + 12 }, g).textContent = short(planLabel(p), 26);
-    mk("text", { x: 0, y: y + 23, class: "n" }, g).textContent = p.doc_type === "vision" ? "long-term" : "medium-term";
+    mk("text", { x: 0, y: y + 23, class: "n" }, g).textContent = DOCT[p.doc_type] || p.doc_type;
     const bx = Xs(p.start), bw = Math.max(4, Xs(p.end + 1) - Xs(p.start));
     mk("rect", { class: "bar", x: bx, y: y + 3, width: bw, height: RH - 10, rx: 3 }, g);
     if (c) mk("rect", { class: "car", x: bx, y: y + 3, width: bw * c / n, height: RH - 10, rx: 3 }, g);
@@ -1285,16 +1327,17 @@ function dtDetail(r) {
   return `<dl class="dgrid">
     ${row("Strategy", `<b>${esc(r[1])}</b> <span class="muted">${esc(p.id)}#s${x[0]}</span>`)}
     ${row("Plan", `${esc(CTY[r[15]].name)} · ${esc(p.title)}, ${p.start}–${p.end}${p.src.includes("confirm") ? ` <span class="muted">(period to confirm)</span>` : ""}`)}
-    ${row("Plan chapter", esc(X.chapters[x[2]]))}
+    ${row({ budget: "Budget heading", unga: "Theme (RHDR)", sector: "Theme (RHDR)" }[p.doc_type] || "Plan chapter", esc(X.chapters[x[2]]))}
     ${row("Objective", esc(r[2]))}
     ${row("Target", esc(r[11]))}
     ${row("Instrument", r[12] ? esc(r[12]) : `<span class="muted">not named in the plan text or by the mapping</span>`)}
-    ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${X.mapped ? "by the mapping prompt" : `through the objective label “${esc(r[10])}”`}</span>`)}
+    ${row("Budget", esc(x[12] || ""))}
+    ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${/rule/.test(X.notes[x[11]] || "") || r[17][4] && X.status[r[17][4]] === "overhead" ? "by rule: an overhead line" : SRCM[srcOf(p)].mapped ? "by the mapping prompt" : srcOf(p) === "plans" ? `through the objective label “${esc(r[10])}”` : "not yet mapped"}</span>`)}
     ${row("Storms", r[9].length ? `<span class="chips">${riskChips(r[9])}</span>` : "")}
     ${row("Sector", esc(r[7]))}
     ${row("Orientation", esc(r[8]))}
     ${row("Urgency · status", `${esc(rUrg(r))} · ${esc(rSt(r))} · basis: ${esc(X.legal[x[5]])}`)}
-    ${row("Stated in the plan", `timeline ${yn(fl & 1)} · quantified target ${yn(fl & 2)} · monitoring ${yn(fl & 4)}`)}
+    ${srcOf(p) !== "plans" ? "" : row("Stated in the plan", `timeline ${yn(fl & 1)} · quantified target ${yn(fl & 2)} · monitoring ${yn(fl & 4)}`)}
     ${row("Lead", esc(X.leads[x[9]]))}
     ${row("Agencies named", esc(x[8].map(i => X.agencies[i]).join("; ")))}
     ${row("SDG targets", x[7].length ? `<span class="chips">${sdgChips(x[7].map(i => X.sdgs[i]))}</span>` : "")}
@@ -1384,6 +1427,8 @@ function colClick(key) {
 $("#m-world").addEventListener("click", () => { mode = "world"; refresh(); });
 $("#m-ctry").addEventListener("click", () => openCountry(ci));
 $("#m-un").addEventListener("click", () => { mode = "unmapped"; refresh(); });
+$("#srcs").addEventListener("click", e => { const b = e.target.closest("[data-src]"); if (b) toggleSource(b.dataset.src); });
+drawSources();
 $("#regions").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (b) setRegion(b.dataset.r || null); });
 $("#countries").addEventListener("click", e => { const b = e.target.closest("[data-ci]"); if (b) openCountry(Number(b.dataset.ci)); });
 $("#yr-all").addEventListener("click", () => { year = null; refresh(); });
@@ -1409,7 +1454,7 @@ $("#ct").addEventListener("click", e => {
   $("#m-un-n").textContent = nU.toLocaleString();
   $("#dt-un").innerHTML = `Strategies the mapping could not place on any live family or General branch, with the reason it gave and the node the tree would need. These are the candidates for the next release of the tree. Pick a region or a year above to narrow the list; sort and filter as in the details table, and open a row for the strategy's record and passages.`;
   $("#banner").hidden = false;
-  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.</span>`;
+  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
   if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
