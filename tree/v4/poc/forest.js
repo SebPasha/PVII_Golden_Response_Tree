@@ -55,6 +55,7 @@ const C = {
   serbia: { plant: "conifer", scene: "teak", line: "Spruce on the misted hills.", added: 1 },
   kazakhstan: { plant: "grass", scene: "steppe", line: "Feather grass on the Kazakh steppe.", added: 1 },
   uzbekistan: { plant: "conifer", var: "poplar", scene: "desert", line: "Poplars along an oasis canal.", added: 1 },
+  laos: { plant: "rice", scene: "karst", line: "Sticky rice in the paddies below the limestone hills.", added: 1 },
 };
 const FALLBACK = { plant: "emergent", scene: "rainforest", line: "" };
 const WORDS = {
@@ -303,10 +304,12 @@ function draw(svg, slug, name, rows, D, pick) {
     const sx0 = x;
     D.subpillars.filter(s => s.pillar === p && famBySub[s.code]).forEach((s, si) => {
       if (si) x += 26;
-      const fs = [...famBySub[s.code]].sort((a, b) => b.strats.length - a.strats.length), centred = [];
-      fs.forEach((f, i) => (i % 2 ? centred.push(f) : centred.unshift(f)));
-      const cx0 = x;
-      centred.forEach(f => { slots.push({ f, x: x + 12.5, p, s }); x += 25; });
+      // inside a clump the stems stand in their framework families (the groups of Jude's layer), a small gap between
+      const cx0 = x, mine = new Set(famBySub[s.code].map(f => f.id)), FB = Object.fromEntries(famBySub[s.code].map(f => [f.id, f]));
+      D.groups.filter(g => g.subpillar_code === s.code && g.family_ids.some(id => mine.has(id))).forEach((g, gi) => {
+        if (gi) x += 7;
+        g.family_ids.filter(id => mine.has(id)).forEach(id => { slots.push({ f: FB[id], x: x + 12.5, p, s, g }); x += 25; });
+      });
       clumpX[s.code] = [cx0, x];
     });
     standX[p] = [sx0, x];
@@ -343,7 +346,7 @@ function draw(svg, slug, name, rows, D, pick) {
   slots.forEach(o => {
     const f = o.f, n = f.strats.length;
     const g = el("g", { class: "culm", tabindex: 0, role: "button", "aria-label": `${f.name}: ${f.n} strategies, ${f.nl} on a lever` }, forest);
-    el("title", {}, g).textContent = `${f.name}\n${f.n.toLocaleString("en-GB")} strategies · ${f.nl.toLocaleString("en-GB")} on a lever · ${f.mechs.filter(m => m.n).length} of ${f.mechs.length} levers reached`;
+    el("title", {}, g).textContent = `${f.name} (${o.g.group})\n${f.n.toLocaleString("en-GB")} strategies · ${f.nl.toLocaleString("en-GB")} on a lever · ${f.mechs.filter(m => m.n).length} of ${f.mechs.length} levers reached`;
     g.addEventListener("click", e => { const m = e.target.closest(".mnode"); pick(m ? { v: m.dataset.m } : { f: f.id }); });
     g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick({ f: f.id }); } });
     if (!n) {
@@ -367,7 +370,7 @@ function draw(svg, slug, name, rows, D, pick) {
     line: cfg.line, added: !!cfg.added, per,
     key: [
       ["STANDS", "economy left, people centre, governance right"],
-      ["CLUMPS", "the ten named subpillars, joined underground"],
+      ["CLUMPS", "the ten named subpillars, joined underground; inside each, the stems stand in their framework families"],
       [stemW, `one per live family (${live.length}); ${isB ? "thickness" : "height"} grows with the strategies on it`],
       ["NODES", "one per lever of the family; gold where a strategy in view sits on it"],
       [leafW, per > 1 ? `one per ${per} strategies; gold where most of them are on a lever` : "one per strategy; gold on a lever, green on the family only"],
