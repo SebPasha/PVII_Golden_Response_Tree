@@ -2,7 +2,7 @@
 
 The reviewer's framework laid over tree v2's pathways. Three placement levels under the RHDR pillars and subpillars:
 
-- `groups_v3.csv`: 33 groups (L1), the reviewer's, each citing a published framework (Inclusion Matters, the HDI, inclusive wealth, the Growth Report, WDR 2009, WDR 2008, the Future-Ready Governance Index for the three PV3 subpillars, WDR 2017).
+- `groups_v3.csv`: 33 groups (L1), the reviewer's, each citing a published framework (Inclusion Matters, the RHDR, inclusive wealth, the Growth Report, WDR 2009, WDR 2008, the Future-Ready Governance Index for the three PV3 subpillars, WDR 2017).
 - `families_v3.csv`: 60 families (L2), the required mapping level. Each has the reviewer's definition and plan words rolled up from the v2 mechanisms whose pathways landed in it.
 - `pathways_v3.csv`: 264 pathways (L3): v2's 259 with their ids kept (3 still merged into a sibling: L3-031, L3-139, L3-187, each lending its cues to the sibling; L3-259, L3-047, L3-082 and L3-099 unmerged, the reason in `distinction`) plus 5 the reviewer added (L3-260 to L3-264: social insurance for informal workers, household digital access, just transition, data sharing across agencies, crisis communication). The new ones carry text cues and risk tags assigned at this build, marked not source-verified. The `revised` column says what the deep check of 30 October changed on a row: cues, evidence, moved, unmerged.
 

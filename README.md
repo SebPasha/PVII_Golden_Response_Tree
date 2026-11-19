@@ -39,13 +39,14 @@ To set it up, copy `workflow/.env.example` to `workflow/.env` and fill it in. Th
 
 ```
 tree/              the mother tree (read-only to the workflow)
-  v3/                the v3 release the workflow reads: tree_v3.json, crosswalks, the reviewer's framework
+  v4/                the v4 release the workflow reads: tree_v4.json (198 levers after the literature review), viewer, the 45-country proof of concept
+  v3/                the v3 release: tree_v3.json, crosswalks, the reviewer's framework
   v2/                the v2 release: tree_v2.json, crosswalks, the Thailand page
   v1/                the v1 release: tree_v1.json, the build scripts, the viewer, validation notes
   inputs/            the objective, target-group and instrument lists the tree is built from
 workflow/          the live pipeline
   pvii/              the Python package (entry point: python3 -m pvii.run)
-  prompts/           the prompts: C_context, C_context_reduce, E_extract, F_fold, M_map_v3 (M_map_v2, M_map for older trees)
+  prompts/           the prompts: C_context, C_context_reduce, E_extract, F_fold, M_map_v4 (M_map_v3, M_map_v2, M_map for older trees)
   configs/           one JSON per country: its documents, types, periods and languages
   vocab/             closed lists: sectors, SDG goals, SDG target dimensions
   tests/             6 smoke tests with a fake model
@@ -59,7 +60,7 @@ data/              created by runs; gitignored (sources, parse cache, outputs)
 | Folder | What it holds | Status |
 |---|---|---|
 | `workflow/` | The live pipeline: the `pvii` package, its prompts, one config per country, and the tests | **running** |
-| `tree/` | The mother tree: v3 (read by the workflow), v2 and v1, each with everything needed to rebuild it. See [tree/README.md](tree/README.md) | built, read-only to the workflow |
+| `tree/` | The mother tree: v4 (read by the workflow), v3, v2 and v1, each with everything needed to rebuild it. See [tree/README.md](tree/README.md) | built, read-only to the workflow |
 | `budget/` | Budget prompts 5, 5b, 5c, 6 and 6b and their code, lifted unchanged. See [budget/README.md](budget/README.md) | **not running**; will map onto tree nodes |
 | `unga/` | UNGA prompt 8 and its code, lifted unchanged. See [unga/README.md](unga/README.md) | **not running**; speeches will go through step E |
 
@@ -67,7 +68,7 @@ data/              created by runs; gitignored (sources, parse cache, outputs)
 
 - **One plan edition is the unit of work.** Each plan gets its own folder of tables, `data/plans/<plan_id>/`. A `plan_id` is `<country>_<doc_type>_<start>-<end>`, for example `thailand_ndp_2023-2027`. A sector plan adds a slug of its title. Countries are the plans stacked, and the global tables are the countries stacked.
 - **Nothing is merged across plans.** A strategy carried from one plan to the next is a finding about time. It is read later by comparing plans on the tree (`editions.csv`), never by merging rows.
-- **The mother tree** (v3, `tree/v3/`, the default; v2 and v1 kept): RHDR pillar → subpillar → group (L1) → family (L2, required) → pathway (L3), then objective (L4) and strategy (L5). v3 is the reviewer's framework of 27 October 2026 over v2's pathways. Set `PVII_TREE` to another release folder to map onto it. The 10 subpillars, plus 3 Standard holding branches, are the official **RHDR categories**. A strategy's category is the subpillar of the node it is placed on. Nothing guesses the category separately.
+- **The mother tree** (v4, `tree/v4/`, the default; v3, v2 and v1 kept): RHDR pillar → subpillar → group (L1) → family (L2) → lever (L3, where strategies sit), with the literature's pathways under each lever. The 31 levers the literature review of November 2026 grades unbacked are dropped, and the 5 families left without a lever are closed: no strategy is placed on them, nor on a group alone. A strategy no live family fits goes to its pillar's General branch (economy, people, governance); one nothing fits is left unmapped and proposed for the tree. Set `PVII_TREE` to another release folder to map onto it. The 10 subpillars, plus 3 Standard holding branches, are the official **RHDR categories**. A strategy's category is the subpillar of the node it is placed on. Nothing guesses the category separately.
 - **Quotes are checked.** Every risk, every related-risk link and every proactive or transformative score must carry a phrase that is found in the paragraph it came from. If none is found, the risk is dropped or the score falls back to BAU. Quotes stay in the plan's own language.
 - **The commitment test.** A strategy is kept only when the plan commits to it or continues it. Completed results and background statements go to `strategy_rows_dropped.csv` for review.
 - **Responses are cached by prompt.** A re-run after a failure only pays for the calls that didn't finish. Editing a prompt means paying again for that step.
@@ -81,7 +82,7 @@ data/              created by runs; gitignored (sources, parse cache, outputs)
 | C Context | `C_context.txt`, `C_context_reduce.txt` | Reads the whole plan once, in 90k-token parts, then merges them: publication date, period, the plan's own structure, headline targets, risk framing and vocabulary. **The file is never overwritten**, so edit it freely | `context.json`, `context.md` |
 | E Extract | `E_extract.txt` | Runs once per paragraph, with the context attached. Pulls out risks the plan frames as risks, and strategies as objective × target group × instrument, plus target year and place. Applies the commitment test. Also reads PV2 prompt 4's strategy fields: SDG targets, sector, response orientation, stated urgency, implementation status, timeline, quantified target, monitoring and legal basis. Every quote is checked against its own paragraph, and a risk or a proactive or transformative score whose quote is not found there is dropped | `risks.csv`, `strategy_rows.csv`, `strategy_rows_dropped.csv` |
 | F Fold | `F_fold.txt` | Merges repeat statements of one strategy **within this plan only**, and merges their fields the PV2 way (SDG targets unioned, highest urgency, strongest status and basis, most common sector) | (feeds M) |
-| M Map | `M_map_v3.txt` (`M_map_v2.txt`, `M_map.txt` for older releases) | Places each strategy on the mother tree (v3 by default: a family is required, a pathway when the wording names the channel, a group alone is counted; v1: same, differs or new against its objectives), under the tree's own depth rule. Normalises the target group and instrument to the tree's lists. The RHDR category and pillar are the tree's own (`subpillar`, `pillar_rhdr`): E does not guess them | `strategies.csv`, `proposals.csv` |
+| M Map | `M_map_v4.txt` (`M_map_v3.txt`, `M_map_v2.txt`, `M_map.txt` for older releases) | Places each strategy on the mother tree (v4 by default: the family by purpose, then the lever by its joins-when and not-when tests; only live families and levers; otherwise a General branch or unmapped), under the tree's own depth rule. Normalises the target group and instrument to the tree's lists. The RHDR category and pillar are the tree's own (`subpillar`, `pillar_rhdr`): E does not guess them | `strategies.csv`, `proposals.csv` |
 | Stack | none | Plans are stacked into the country, and countries into the global tables. `editions.csv` shows which tree nodes each plan carried, added or dropped from the previous edition | `data/country/<slug>/`, `data/global/` |
 
 Each plan also gets `run.json` (counts, quote checks, prompt hashes, tree version, cost) and `cost_report.md`.
