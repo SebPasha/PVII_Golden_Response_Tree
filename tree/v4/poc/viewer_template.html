@@ -1339,7 +1339,8 @@ function loadPsg(pid) {
   if (PSG[pid]) return;
   PSG[pid] = { wait: true };
   const s = document.createElement("script");
-  s.src = "detail/" + pid + ".js";
+  const p = PLN.find(q => q.id === pid);  // national plans have a file each; other sources one per country
+  s.src = "detail/" + (p && p.doc_type !== "ndp" && p.doc_type !== "vision" ? CTY[p.c].slug + "_" + p.doc_type : pid) + ".js";
   s.onload = () => { if (PSG[pid].wait) PSG[pid] = { err: true }; fillPsg(); };
   s.onerror = () => { PSG[pid] = { err: true }; fillPsg(); };
   document.head.appendChild(s);

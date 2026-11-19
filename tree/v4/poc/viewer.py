@@ -8,7 +8,7 @@ rows_<source>.js, read when a reader switches that source on, so the page itself
 Tab 1 is the mother tree for all countries or one region; tab 2 is one country, plan by plan. A details
 table under the tree lists the strategies behind whatever is selected, sortable, each opening to its
 underlying data. The passage text under a strategy is too large for the page, so it goes in a folder
-detail/ beside the page (one file per plan edition, from passages.csv), which the page reads when a
+detail/ beside the page (one file per national plan edition, and one per country for each other source, from passages.csv), which the page reads when a
 strategy is opened. Reads ../tree_v4.json, viewer_template.html and forest.js (the country forest) here. No model calls.
 """
 import csv
@@ -185,10 +185,17 @@ for _, folder, _ in SOURCES:
         lst = d["s"].setdefault(r["strategy_id"].split("#s")[1], [])
         if x not in lst:   # a passage read twice the same way is shown once
             lst.append(x)
-size = 0
+# a national plan has a file of its own; a country's sector plans, UNGA statements or budgets share one file per
+# source (detail/<country>_<source>.js), which keeps the folder to a few hundred files
+pinfo = {p["plan_id"]: p for p in plans}
+fileOf = lambda pid: pid if pinfo[pid]["doc_type"] in ("ndp", "vision") else "%s_%s" % (pinfo[pid]["slug"], pinfo[pid]["doc_type"])
+files = {}
 for pid, d in by.items():
-    js = "PVD(%s,%s);" % (json.dumps(pid), json.dumps({"docs": d["docs"].items, "s": d["s"]}, ensure_ascii=False, separators=(",", ":")))
+    files.setdefault(fileOf(pid), []).append("PVD(%s,%s);" % (json.dumps(pid), json.dumps({"docs": d["docs"].items, "s": d["s"]}, ensure_ascii=False, separators=(",", ":"))))
+size = 0
+for fn, parts in files.items():
+    js = "\n".join(parts)
     size += len(js)
-    with open(os.path.join(det, pid + ".js"), "w", encoding="utf-8") as f:
+    with open(os.path.join(det, fn + ".js"), "w", encoding="utf-8") as f:
         f.write(js)
-print("wrote detail/: %d files, %.1f MB" % (len(by), size / 1e6))
+print("wrote detail/: %d files for %d plan editions, %.1f MB" % (len(files), len(by), size / 1e6))
