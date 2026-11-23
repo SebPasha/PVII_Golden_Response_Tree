@@ -324,6 +324,22 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 #aud-list th { font: 500 11px var(--mono); color: var(--muted) }
 #aud-list td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap }
 #aud-list .warn { color: var(--economy) }
+.aud-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 6px 0 }
+.aud-bar .eyebrow { margin-right: 4px }
+.aud-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--muted); margin: 8px 0 }
+.aud-key i { display: inline-block; width: 18px; height: 9px; border-radius: 2px; vertical-align: -1px; margin-right: 5px }
+#aud-tl { min-width: 760px; display: block; width: 100% }
+#aud-tl text { font-family: var(--body); fill: var(--ink) }
+#aud-tl .yr { font: 10px var(--mono); fill: var(--muted) }
+#aud-tl .ln { font-size: 11px; fill: var(--muted) }
+#aud-tl .cnm { font-size: 12.5px; font-weight: 600; cursor: pointer }
+#aud-tl .rgn { font: 500 10.5px var(--mono); letter-spacing: .06em; fill: var(--muted) }
+#aud-tl .grid { stroke: var(--line); stroke-width: 1 }
+#aud-tl .now { stroke: var(--gold); stroke-width: 1.2; stroke-dasharray: 3 3 }
+#aud-tl .hit { cursor: pointer }
+#aud-tl .hit:hover, #aud-tl .hit.on { stroke: var(--ink); stroke-width: 1.5 }
+#aud-tl .bl { font-size: 10px; fill: #fff; pointer-events: none }
+#aud-tl .cnt { font: 9.5px var(--mono); fill: var(--ink); pointer-events: none }
 </style>
 
 <div class="wrap">
@@ -386,7 +402,12 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
   <section class="outline" id="audit" hidden>
     <h2>Audit: which documents were run</h2>
     <p id="aud-p"></p>
-    <div class="ct-scroll"><table id="aud"></table></div>
+    <div class="aud-bar" id="aud-src"></div>
+    <div class="aud-bar" id="aud-reg"></div>
+    <div class="aud-bar"><span class="eyebrow">View</span><button type="button" class="rchip" data-av="tl">Timeline</button><button type="button" class="rchip" data-av="tab">Counts table</button></div>
+    <div class="aud-key" id="aud-key"></div>
+    <div class="ct-scroll" id="aud-tlbox"><svg id="aud-tl" role="img" aria-label="Documents run, by country, source and year"></svg></div>
+    <div class="ct-scroll" id="aud-tabbox" hidden><table id="aud"></table></div>
     <div id="aud-list"></div>
   </section>
 
@@ -1849,8 +1870,84 @@ function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(pre
 
 // ---------- audit: which documents were run, by country and source ----------
 const AUDC = [["ndp", "Medium-term plans"], ["vision", "Long-term visions"], ["sector", "Sector plans"], ["unga", "UNGA statements"], ["budget", "Budgets"]];
-const AUD = { c: null, k: null };
+const AUD = { c: null, k: null, y: null, id: null, view: "tl", reg: null, on: new Set(AUDC.map(([k]) => k)) };
+const AUDCOL = { ndp: "var(--gold)", vision: "var(--bark)", sector: "var(--people)", unga: "var(--storm)", budget: "var(--gov)" };
+const audGuess = p => /infer|horizon|one year|undated|config|says/i.test(p.src);
+const audLow = l => l.startsWith("UNGA") ? l : l.toLowerCase();
+function drawAuditBars() {
+  const cnt = k => PLN.filter(p => p.doc_type === k).length;
+  $("#aud-src").innerHTML = `<span class="eyebrow">Sources</span>` + AUDC.map(([k, l]) => `<button type="button" class="rchip" aria-pressed="${AUD.on.has(k)}" data-as="${k}">${esc(l)} <span>${cnt(k)}</span></button>`).join("");
+  $("#aud-reg").innerHTML = `<span class="eyebrow">Region</span>` + [null, ...REG].map(r => `<button type="button" class="rchip" aria-pressed="${AUD.reg === r}" data-ar="${esc(r || "")}">${esc(r || "All regions")}</button>`).join("");
+  document.querySelectorAll("[data-av]").forEach(b => b.setAttribute("aria-pressed", b.dataset.av === AUD.view));
+  $("#aud-tlbox").hidden = AUD.view !== "tl"; $("#aud-tabbox").hidden = AUD.view !== "tab"; $("#aud-key").hidden = AUD.view !== "tl";
+  $("#aud-key").innerHTML = AUDC.filter(([k]) => AUD.on.has(k)).map(([k, l]) => `<span><i style="background:${AUDCOL[k]}"></i>${esc(l)}${k === "sector" ? ": shade and number give how many are in force that year" : k === "ndp" || k === "vision" ? ": one bar per plan, over its period" : ": one mark per year"}</span>`).join("") +
+    `<span><i style="border:1.5px dashed var(--ink)"></i>Period guessed: inferred, set by hand, only a horizon year given, or the document table disagrees</span><span><i style="border-left:1.5px dashed var(--gold);width:4px;border-radius:0"></i>${new Date().getFullYear()}</span>`;
+}
+function drawTimeline() {
+  const ks = AUDC.map(([k]) => k).filter(k => AUD.on.has(k));
+  const ps = PLN.filter(p => ks.includes(p.doc_type) && (AUD.reg === null || CTY[p.c].region === AUD.reg));
+  const svg = $("#aud-tl");
+  if (!ps.length) { svg.setAttribute("viewBox", "0 0 760 40"); svg.innerHTML = `<text x="0" y="24" class="ln">No documents for this choice.</text>`; return; }
+  const y0 = Math.max(1990, Math.min(...ps.map(p => p.start))), y1 = Math.min(2050, Math.max(...ps.map(p => p.end)));
+  const LW = 190, YW = Math.max(16, Math.min(34, Math.round(900 / (y1 - y0 + 1)))), W = LW + (y1 - y0 + 1) * YW + 8;
+  const X0 = y => LW + (Math.max(y0, Math.min(y1 + 1, y)) - y0) * YW, LH = 15, BH = 11;
+  let g = "", y = 26;
+  const nowY = new Date().getFullYear();
+  REG.forEach(r => {
+    if (AUD.reg !== null && r !== AUD.reg) return;
+    const cs = CTY.map((c, i) => i).filter(i => CTY[i].region === r && ps.some(p => p.c === i));
+    if (!cs.length) return;
+    y += 8; g += `<text x="0" y="${y + 10}" class="rgn">${esc(r.toUpperCase())}</text>`; y += 16;
+    cs.forEach(ci => {
+      g += `<text x="0" y="${y + 12}" class="cnm" data-oc="${ci}">${esc(CTY[ci].name)}</text>`;
+      y += 17;
+      ks.forEach(k => {
+        const q = ps.filter(p => p.c === ci && p.doc_type === k);
+        if (!q.length) return;
+        const lab = AUDC.find(a => a[0] === k)[1];
+        if (k === "ndp" || k === "vision") {
+          const lanes = [];
+          q.slice().sort((a, b) => a.start - b.start || a.end - b.end).forEach(p => {
+            let li = lanes.findIndex(e => e < p.start); if (li < 0) { li = lanes.length; lanes.push(0); } lanes[li] = p.end; p._ln = li;
+          });
+          g += `<text x="${LW - 8}" y="${y + 10}" class="ln" text-anchor="end">${esc(lab)}</text>`;
+          q.forEach(p => {
+            const x = X0(p.start), w = Math.max(4, X0(p.end + 1) - x - 2), by = y + p._ln * LH + 1, i = PLN.indexOf(p);
+            const t = p.edition || p.title, fits = t.length * 5.6 < w - 6;
+            g += `<rect class="hit${AUD.id === i ? " on" : ""}" data-ap="${i}" x="${x + 1}" y="${by}" width="${w}" height="${BH + 1}" rx="2" fill="${AUDCOL[k]}"${audGuess(p) ? ` stroke="var(--ink)" stroke-dasharray="3 2"` : ""}><title>${esc(p.title)}, ${p.start}–${p.end} (period: ${esc(p.src)}) · ${p.n.toLocaleString()} strategies, ${pct(p.lv, p.n)}% on a lever</title></rect>` +
+              (fits ? `<text class="bl" x="${x + 5}" y="${by + 9.5}">${esc(t)}</text>` : "");
+          });
+          y += lanes.length * LH;
+        } else {
+          g += `<text x="${LW - 8}" y="${y + 10}" class="ln" text-anchor="end">${esc(lab)}</text>`;
+          const per = {}; q.forEach(p => { for (let a = Math.max(p.start, y0); a <= Math.min(p.end, y1); a++) (per[a] = per[a] || []).push(p); });
+          const mx = Math.max(1, ...Object.values(per).map(v => v.length));
+          Object.entries(per).forEach(([a, v]) => {
+            a = +a; const x = X0(a), gs = v.some(audGuess);
+            const op = k === "sector" ? (0.25 + 0.75 * v.length / mx).toFixed(2) : 1;
+            g += `<rect class="hit${AUD.c === ci && AUD.k === k && AUD.y === a ? " on" : ""}" data-ay="${a}" data-ac="${ci}" data-ak="${k}" x="${x + 1}" y="${y + 1}" width="${YW - 2}" height="${BH + 1}" rx="2" fill="${AUDCOL[k]}" fill-opacity="${op}"${gs ? ` stroke="var(--ink)" stroke-dasharray="3 2"` : ""}><title>${esc(CTY[ci].name)}, ${a}: ${v.length} ${esc(audLow(lab))} in force\n${v.map(p => `${p.title} (${p.start === p.end ? p.start : p.start + "–" + p.end})`).map(esc).join("\n")}</title></rect>` +
+              (v.length > 1 ? `<text class="cnt" x="${x + YW / 2}" y="${y + 10}" text-anchor="middle">${v.length}</text>` : "");
+          });
+          y += LH;
+        }
+      });
+      y += 6;
+      g += `<line class="grid" x1="0" x2="${W}" y1="${y - 2}" y2="${y - 2}"/>`;
+    });
+  });
+  let ax = "";
+  for (let a = y0; a <= y1; a++) {
+    const x = X0(a);
+    if ((a % 5 === 0) || YW >= 28) ax += `<text class="yr" x="${x + YW / 2}" y="12" text-anchor="middle">${a}</text><line class="grid" x1="${x}" x2="${x}" y1="18" y2="${y}" opacity=".55"/>`;
+  }
+  if (nowY >= y0 && nowY <= y1) ax += `<line class="now" x1="${X0(nowY) + YW / 2}" x2="${X0(nowY) + YW / 2}" y1="16" y2="${y}"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${y + 4}`);
+  svg.style.minWidth = Math.max(760, W * 0.75) + "px";
+  svg.innerHTML = ax + g;
+}
 function drawAudit() {
+  drawAuditBars();
+  if (AUD.view === "tl") drawTimeline();
   const cell = (ps, c, k) => {
     if (!ps.length) return `<td class="none">–</td>`;
     const n = ps.reduce((a, p) => a + p.n, 0), lv = ps.reduce((a, p) => a + p.lv, 0);
@@ -1858,23 +1955,25 @@ function drawAudit() {
     const shade = `background: color-mix(in srgb, var(--gold-soft) ${Math.min(100, 20 + ps.length * 12)}%, transparent)`;
     return `<td class="ac${on ? " on" : ""}" data-ac="${c}" data-ak="${k}" style="${shade}" tabindex="0"><b>${ps.length}</b> doc${ps.length > 1 ? "s" : ""}<small>${n.toLocaleString()} strategies · ${pct(lv, n)}% lever</small></td>`;
   };
-  const by = (c, k) => PLN.filter(p => p.c === c && (k === null || p.doc_type === k));
-  let h = `<thead><tr><th>Country</th>${AUDC.map(([, l]) => `<th>${l}</th>`).join("")}<th>All</th></tr></thead><tbody>`;
+  const by = (c, k) => PLN.filter(p => p.c === c && (k === null ? AUD.on.has(p.doc_type) : p.doc_type === k));
+  const AC = AUDC.filter(([k]) => AUD.on.has(k));
+  let h = `<thead><tr><th>Country</th>${AC.map(([, l]) => `<th>${l}</th>`).join("")}<th>All</th></tr></thead><tbody>`;
   REG.forEach(r => {
-    h += `<tr class="rg"><td colspan="${AUDC.length + 2}">${esc(r)}</td></tr>`;
+    if (AUD.reg !== null && r !== AUD.reg) return;
+    h += `<tr class="rg"><td colspan="${AC.length + 2}">${esc(r)}</td></tr>`;
     CTY.forEach((c, i) => {
       if (c.region !== r) return;
-      h += `<tr><td><button type="button" class="cn" data-oc="${i}">${esc(c.name)}</button></td>${AUDC.map(([k]) => cell(by(i, k), i, k)).join("")}${cell(by(i, null), i, "all")}</tr>`;
+      h += `<tr><td><button type="button" class="cn" data-oc="${i}">${esc(c.name)}</button></td>${AC.map(([k]) => cell(by(i, k), i, k)).join("")}${cell(by(i, null), i, "all")}</tr>`;
     });
   });
-  const tot = k => PLN.filter(p => k === null || p.doc_type === k);
+  const tot = k => PLN.filter(p => (k === null ? AUD.on.has(p.doc_type) : p.doc_type === k) && (AUD.reg === null || CTY[p.c].region === AUD.reg));
   const tn = ps => `<td><b>${ps.length}</b><small style="display:block;color:var(--muted);font-weight:400">${ps.reduce((a, p) => a + p.n, 0).toLocaleString()} strategies</small></td>`;
-  h += `<tr class="tot"><td>All ${CTY.length} countries</td>${AUDC.map(([k]) => tn(tot(k))).join("")}${tn(tot(null))}</tr></tbody>`;
+  h += `<tr class="tot"><td>${AUD.reg === null ? `All ${CTY.length} countries` : esc(AUD.reg)}</td>${AC.map(([k]) => tn(tot(k))).join("")}${tn(tot(null))}</tr></tbody>`;
   $("#aud").innerHTML = h;
   const nC = k => new Set(PLN.filter(p => p.doc_type === k).map(p => p.c)).size;
   $("#aud-p").innerHTML = `Every document of the earlier run that reached the tree, as plan editions: ${PLN.length} in all, from ${CTY.length} countries. ` +
     AUDC.map(([k, l]) => `${l} ${PLN.filter(p => p.doc_type === k).length} (${nC(k)} countries)`).join(", ") +
-    `. A dash is a source with no document for that country. Select a cell for the documents behind it: their period, where the period was read from, the files they came from and how many of their strategies reach a lever.` +
+    `. The timeline gives each country a row per source, years across, so plans can be compared over time; switch sources and regions on and off above. Select a bar or a year for the documents behind it: their period, where the period was read from, the files they came from and how many of their strategies reach a lever. The counts table gives the same documents as totals.` +
     ((X.excluded || []).length ? ` ${X.excluded.length} document${X.excluded.length > 1 ? "s were" : " was"} taken off the page: listed at the foot of this tab.` : "");
   drawAuditList();
 }
@@ -1882,19 +1981,25 @@ function drawAuditList() {
   const ex = (X.excluded || []).map(e => `<li><b>${esc(e.country)}: ${esc(e.title)}</b>, ${esc(e.why)}</li>`).join("");
   const exH = ex ? `<h3 style="margin-top:16px">Taken off the page</h3><ul>${ex}</ul>` : "";
   if (AUD.c === null) { $("#aud-list").innerHTML = exH; return; }
-  const ps = PLN.map((p, i) => [p, i]).filter(([p]) => p.c === AUD.c && (AUD.k === "all" || p.doc_type === AUD.k));
-  const lab = AUD.k === "all" ? "all sources" : AUDC.find(([k]) => k === AUD.k)[1].toLowerCase();
+  const ps = PLN.map((p, i) => [p, i]).filter(([p, i]) => AUD.id !== null ? i === AUD.id : p.c === AUD.c && (AUD.k === "all" ? AUD.on.has(p.doc_type) : p.doc_type === AUD.k) && (AUD.y === null || (p.start <= AUD.y && AUD.y <= p.end)));
+  const lab = (AUD.k === "all" ? "all sources" : audLow(AUDC.find(([k]) => k === AUD.k)[1])) + (AUD.y !== null ? ` in force in ${AUD.y}` : "");
   $("#aud-list").innerHTML = `<h3 style="margin:14px 0 6px">${esc(CTY[AUD.c].name)}: ${lab} (${ps.length})</h3>
     <div class="ct-scroll"><table><thead><tr><th>Document</th><th>Source</th><th>Period</th><th>Period read from</th><th>Files</th><th class="n">Strategies</th><th class="n">On a lever</th></tr></thead><tbody>` +
     ps.map(([p]) => `<tr><td>${esc(p.title)}${p.who ? `<br><span class="muted">${esc(p.who)}</span>` : ""}</td><td>${esc(DOCT[p.doc_type])}</td><td>${p.start === p.end ? p.start : `${p.start}–${p.end}`}</td>` +
-      `<td${/infer|confirm/i.test(p.src) ? ` class="warn"` : ""}>${esc(p.src)}</td><td>${esc(p.docs)}</td><td class="n">${p.n.toLocaleString()}</td><td class="n">${pct(p.lv, p.n)}%</td></tr>`).join("") +
+      `<td${audGuess(p) ? ` class="warn"` : ""}>${esc(p.src)}</td><td>${esc(p.docs)}</td><td class="n">${p.n.toLocaleString()}</td><td class="n">${pct(p.lv, p.n)}%</td></tr>`).join("") +
     `</tbody></table></div><p><button type="button" class="todt" data-oc="${AUD.c}">Open ${esc(CTY[AUD.c].name)} in the country explorer</button></p>` + exH;
 }
 $("#audit").addEventListener("click", e => {
   const o = e.target.closest("[data-oc]"); if (o) { openCountry(Number(o.dataset.oc)); window.scrollTo({ top: 0 }); return; }
-  const td = e.target.closest("td[data-ac]"); if (!td) return;
-  const c = Number(td.dataset.ac), k = td.dataset.ak;
-  if (AUD.c === c && AUD.k === k) { AUD.c = AUD.k = null; } else { AUD.c = c; AUD.k = k; }
+  const sb = e.target.closest("[data-as]");
+  if (sb) { const k = sb.dataset.as; if (AUD.on.has(k)) { if (AUD.on.size > 1) AUD.on.delete(k); } else AUD.on.add(k); AUD.c = AUD.k = AUD.y = AUD.id = null; drawAudit(); return; }
+  const rb = e.target.closest("[data-ar]"); if (rb) { AUD.reg = rb.dataset.ar || null; drawAudit(); return; }
+  const vb = e.target.closest("[data-av]"); if (vb) { AUD.view = vb.dataset.av; AUD.c = AUD.k = AUD.y = AUD.id = null; drawAudit(); return; }
+  const bar = e.target.closest("[data-ap]");
+  if (bar) { const i = Number(bar.dataset.ap); if (AUD.id === i) AUD.c = AUD.k = AUD.id = null; else { AUD.id = i; AUD.c = PLN[i].c; AUD.k = PLN[i].doc_type; } AUD.y = null; drawAudit(); if (AUD.c !== null) $("#aud-list").scrollIntoView({ block: "nearest" }); return; }
+  const td = e.target.closest("[data-ac]"); if (!td) return;
+  const c = Number(td.dataset.ac), k = td.dataset.ak, yr = td.dataset.ay ? Number(td.dataset.ay) : null;
+  if (AUD.c === c && AUD.k === k && AUD.y === yr && AUD.id === null) { AUD.c = AUD.k = AUD.y = null; } else { AUD.c = c; AUD.k = k; AUD.y = yr; AUD.id = null; }
   drawAudit(); if (AUD.c !== null) $("#aud-list").scrollIntoView({ block: "nearest" });
 });
 $("#audit").addEventListener("keydown", e => { const td = e.target.closest("td[data-ac]"); if (td && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); td.click(); } });
