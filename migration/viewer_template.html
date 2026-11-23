@@ -346,9 +346,9 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
   <div class="banner" id="banner" hidden></div>
   <header>
     <div>
-      <div class="eyebrow">PV II · Golden Strategy Tree · 45 countries</div>
+      <div class="eyebrow">PV II · Golden Strategy Tree</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the 33 framework families of Jude's tree, each from a published framework, named at their fork; the leaves are our 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the framework families, each from a published framework, named at their fork; the leaves are our 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. The dashed branch beside each pillar holds the strategies that fit no family.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
@@ -357,7 +357,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div class="modes" role="tablist" aria-label="View">
       <button type="button" class="mode" id="m-world" role="tab" aria-selected="true">Mother tree</button>
       <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
-      <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n"></span></button>
+      <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n" hidden></span></button>
       <button type="button" class="mode" id="m-aud" role="tab" aria-selected="false">Audit</button>
     </div>
     <div class="chipsel" id="srcs" aria-label="Sources"></div>
@@ -456,7 +456,7 @@ const nLv = f => f.lever_ids.length;
 const famCol = fid => PCOL[SP[F[fid].subpillar_code].pillar];
 
 document.getElementById("counts").innerHTML = [
-  [D.groups.length, "framework families"], [D.families.length, "families"], [D.levers.length, "levers"], [D.dropped.length, "dropped"], [D.risks.length, "storms"]
+  [D.groups.length, "framework families"], [D.families.length, "families"], [D.levers.length, "levers"], [D.risks.length, "storms"]
 ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
 
 // ---------- layout ----------
@@ -774,13 +774,10 @@ function show(o) {
       ${v.lever_full && v.lever_full !== v.lever ? `<p class="def">${esc(v.lever_full)}</p>` : ""}
       <!--CTRY-->
       <div class="sect"><div class="eyebrow">Placement tests</div><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl></div>
-      ${v.check_verdict && v.check_verdict !== "keep" ? `<p class="muted">Literature check (4 Nov): <b>${esc(v.check_verdict)}</b>${v.lever_draft && v.lever_draft !== v.lever ? ` · was "${esc(v.lever_draft)}"` : ""} · ${esc(v.check_source || "")}<br>${esc(v.check_note || "")}</p>` : ""}
-      ${v.backing_grade ? `<p class="muted">Backing: ${esc(v.backing_grade)} (${esc(String(v.backing_score))}) · framework ${esc(v.framework_status || "")}, ${esc(String(v.theory_n || 0))} theory anchor${v.theory_n === 1 ? "" : "s"}</p>` : ""}
       ${v.intervention_evidence ? `<div class="sect"><div class="eyebrow">What the evidence says (${esc(v.evidence_strength || "")}${v.evidence_design ? ", " + esc(v.evidence_design) : ""}${v.evidence_fit ? ", fit " + esc(v.evidence_fit) : ""}${v.evidence_checked && v.evidence_checked !== "not reached" ? ", read: " + esc(v.evidence_checked) : v.evidence_verified === "yes" ? ", source verified" : ", source not verified"})</div><p class="def">${esc(v.evidence_finding || "")}</p>${v.evidence_basis ? `<p class="muted">Basis: ${esc(v.evidence_basis)}</p>` : ""}<p class="muted">${v.evidence_url ? `<a href="${esc(v.evidence_url)}" target="_blank" rel="noopener">${esc(v.intervention_evidence)}</a>` : esc(v.intervention_evidence)}</p></div>` : ""}
       ${v.framework_says ? `<div class="sect"><div class="eyebrow">In the framework${v.framework_source ? ": " + esc(v.framework_source) : ""}${v.framework_where ? " (" + esc(v.framework_where) + ")" : ""}</div><p class="def">${esc(v.framework_says)}</p>${(v.framework_refs || []).length ? `<p class="muted">Cites: ${v.framework_refs.map(esc).join("; ")}</p>` : ""}</div>` : ""}
       ${(v.thesis_refs || []).length ? `<div class="sect"><div class="eyebrow">In the thesis literature (${v.thesis_refs.length} paper${v.thesis_refs.length === 1 ? "" : "s"})</div>${v.thesis_refs.map(r => `<p class="def">${esc(r.citation || "")}${r.ident || r.setting ? ` <span class="muted">(${[r.ident, r.setting].filter(Boolean).map(esc).join(", ")}${r.fit ? "; fit " + esc(r.fit) : ""})</span>` : ""}${r.finding ? `<br><span class="muted">${esc(r.finding)}</span>` : ""}</p>`).join("")}</div>` : ""}
       ${(v.risks || []).length ? `<div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(v.risks)}</div></div>` : ""}
-      ${(v.entry_points || []).length ? `<div class="sect"><div class="eyebrow">Thai entry points</div><div class="chips">${v.entry_points.map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>` : ""}
       <div class="sect"><div class="eyebrow">Sibling levers in ${esc(f.family_id)}</div>${leverList(f.lever_ids.filter(x => x !== v.lever_id))}</div>`;
   } else if (o.f) {
     const f = F[o.f], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar;
@@ -792,7 +789,7 @@ function show(o) {
       <div class="sect"${nLv(f) ? "" : " hidden"}><div class="eyebrow">Levers (${nLv(f)})${lc ? " · strategies in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
       ${(D.dropped || []).some(d => d.family_id === f.family_id) ? `<div class="sect"><div class="eyebrow">Dropped as unbacked by the literature review · grey on the tree, no strategies placed</div>${D.dropped.filter(d => d.family_id === f.family_id).map(d => `<p class="muted"><a class="jl" ${O({ d: d.lever_id })}>${esc(d.lever_id)}</a> ${esc(d.lever)}</p>`).join("")}</div>` : ""}
       ${f.examples ? `<div class="sect"><div class="eyebrow">How plans say it</div><p class="muted">${esc(f.examples)}</p></div>` : ""}
-      ${(f.theory_anchors || []).length ? `<div class="sect"><div class="eyebrow">Theory anchors (independent review)</div>${f.theory_anchors.map(a => `<p class="def">${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.citation)}, ${esc(a.title)}</a>` : `${esc(a.citation)}, ${esc(a.title)}`} <span class="muted">(${esc(a.role)}; via ${esc(a.via)})</span></p>`).join("")}</div>` : ""}
+      ${(f.theory_anchors || []).length ? `<div class="sect"><div class="eyebrow">Theory anchors</div>${f.theory_anchors.map(a => `<p class="def">${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.citation)}, ${esc(a.title)}</a>` : `${esc(a.citation)}, ${esc(a.title)}`} <span class="muted">(${esc(a.role)}; via ${esc(a.via)})</span></p>`).join("")}</div>` : ""}
       <div class="sect"><div class="eyebrow">Storms it shelters from</div><div class="chips">${riskChips(f.risks) || '<span class="muted">none tagged</span>'}${riskChips(f.conditional_risks, true)}</div></div>
       <div class="sect"><div class="eyebrow">SDG targets</div><div class="chips">${sdgChips(f.sdg_targets)}</div></div>
       ${(f.assets || []).length ? `<div class="sect"><div class="eyebrow">Assets</div><div class="chips">${f.assets.map(a => `<span class="chip">${esc(D.assets[a] || a)}</span>`).join("")}</div></div>` : ""}`;
@@ -837,7 +834,7 @@ function show(o) {
       <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>`;
   } else {
     h = `<div class="sect"><div class="eyebrow">How to read it</div><h2>Ten branches, sixty leaves, ${D.levers.length} buds</h2></div>
-      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a framework family (the layer of Jude's tree, each from a published framework), and each leaf one of our families. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
+      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a framework family (each from a published framework), and each leaf one of our families. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
       <div class="legend">
         <div><span class="sw" style="background:var(--economy)"></span>Smarter Growth: the economy</div>
         <div><span class="sw" style="background:var(--people)"></span>People-first Approach: people</div>
@@ -889,7 +886,7 @@ out.addEventListener("click", e => {
   $(".main").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 });
 
-$("#foot").textContent = `Tree v4, built ${D.built}: groups and families with a lever under each family. ${(D.dropped || []).length} levers graded unbacked by the literature review are dropped (listed under the whole tree). Strategies come from the earlier multi-country run; a plan's period is read from its document, and where it had to be inferred the timeline says so. Category names follow the RHDR framework.`;
+$("#foot").textContent = `Tree v4, built ${D.built}: framework families, families and the levers under each family. A plan's period is read from its document; the Audit tab marks the periods that had to be inferred. Category names follow the RHDR framework.`;
 
 /*FOREST*/
 
@@ -1198,7 +1195,7 @@ function countryOverview() {
     <div class="sect"><div class="eyebrow">${mode === "country" ? "Plan by plan" : region === null ? "Region by region · select one to open it" : "Country by country · select one to open it"} · <span style="color:var(--gold)">on a lever</span></div>${sizeBars()}</div>
     <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
     <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
-    <p class="muted">Leaf size is the number of strategies on each family. Gold buds are levers with strategies, sized by count; dashed buds get none. Grey buds are the ${D.dropped.length} dropped levers and grey leaves the ${D.families.filter(f => !nLv(f)).length} families left without a lever: nothing is placed on them. Strategies that fit no live family sit on the general economy, people or governance branch. ${used} of ${D.levers.length} levers are used.</p>`;
+    <p class="muted">Leaf size is the number of strategies on each family. Gold buds are levers with strategies, sized by count; dashed buds get none. Strategies that fit no family sit on the general economy, people or governance branch. ${used} of ${D.levers.length} levers are used.</p>`;
 }
 const oti = r => [r[2] && `<b>Objective</b> ${esc(r[2])}`, r[11] && `<b>Target</b> ${esc(r[11])}`, r[12] && `<b>Instrument</b> ${esc(r[12])}`].filter(Boolean).join(" · ");
 function stratMeta(r, showLever) {
@@ -1307,7 +1304,7 @@ function drawTable() {
   });
   $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
   $("#ct-h").textContent = mode === "country" ? `${C.name} over time: families and levers by plan` : region === null ? "Regions side by side: families and levers" : `${region}: countries side by side`;
-  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. Shaded bold rows are the framework families of Jude's tree, the layer under each RHDR subpillar; the rows under them are our families. A row is the share of that ${C.unit}'s strategies placed on it or on one of its levers; open a family to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
+  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. Shaded bold rows are the framework families, the layer under each RHDR subpillar; the rows under them are our families. A row is the share of that ${C.unit}'s strategies placed on it or on one of its levers; open a family to see its levers. Each pillar ends with its general branch, for strategies that fit no family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
 }
 function toggleFam(fid, on) {
   if (on) openFam.add(fid); else openFam.delete(fid);
@@ -1411,13 +1408,13 @@ function dtDetail(r) {
   const row = (k, v) => blank(v) ? "" : `<dt>${k}</dt><dd>${v}</dd>`;
   return `<dl class="dgrid">
     ${row("Strategy", `<b>${esc(r[1])}</b> <span class="muted">${esc(p.id)}#s${x[0]}</span>`)}
-    ${row("Plan", `${esc(CTY[r[15]].name)} · ${esc(p.title)}, ${p.start}–${p.end}${p.src.includes("confirm") ? ` <span class="muted">(period to confirm)</span>` : ""}`)}
+    ${row("Plan", `${esc(CTY[r[15]].name)} · ${esc(p.title)}, ${p.start}–${p.end}`)}
     ${row({ budget: "Budget heading", unga: "Theme (RHDR)", sector: "Theme (RHDR)" }[p.doc_type] || "Plan chapter", esc(X.chapters[x[2]]))}
     ${row("Objective", esc(r[2]))}
     ${row("Target", esc(r[11]))}
     ${row("Instrument", r[12] ? esc(r[12]) : `<span class="muted">not named in the plan text or by the mapping</span>`)}
     ${row("Budget", esc(x[12] || ""))}
-    ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${/rule/.test(X.notes[x[11]] || "") || r[17][4] && X.status[r[17][4]] === "overhead" ? "by rule: an overhead line" : SRCM[srcOf(p)].mapped ? "by the mapping prompt" : srcOf(p) === "plans" ? `through the objective label “${esc(r[10])}”` : "not yet mapped"}</span>`)}
+    ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${/rule/.test(X.notes[x[11]] || "") || r[17][4] && X.status[r[17][4]] === "overhead" ? "by rule: an overhead line" : "placed by its objective, target and instrument"}</span>`)}
     ${row("Storms", r[9].length ? `<span class="chips">${riskChips(r[9])}</span>` : "")}
     ${row("Sector", esc(r[7]))}
     ${row("Orientation", esc(r[8]))}
@@ -1501,7 +1498,7 @@ function drawAuditBars() {
   $("#aud-key").innerHTML = AUDC.filter(([k]) => AUD.on.has(k)).map(([k, l]) => `<span><i style="background:${AUDCOL[k]}"></i>${esc(l)}${k === "sector" ? ": shade and number give how many are in force that year" : k === "ndp" || k === "vision" ? ": one bar per plan, over its period" : ": one mark per year"}</span>`).join("") +
     `<span><i style="border:1.5px dashed var(--ink)"></i>Period guessed: inferred, set by hand, only a horizon year given, or the document table disagrees</span><span><i style="border-left:1.5px dashed var(--gold);width:4px;border-radius:0"></i>${new Date().getFullYear()}</span>`;
 }
-function drawTimeline() {
+function drawAuditTimeline() {
   const ks = AUDC.map(([k]) => k).filter(k => AUD.on.has(k));
   const ps = PLN.filter(p => ks.includes(p.doc_type) && (AUD.reg === null || CTY[p.c].region === AUD.reg));
   const svg = $("#aud-tl");
@@ -1565,7 +1562,7 @@ function drawTimeline() {
 }
 function drawAudit() {
   drawAuditBars();
-  if (AUD.view === "tl") drawTimeline();
+  if (AUD.view === "tl") drawAuditTimeline();
   const cell = (ps, c, k) => {
     if (!ps.length) return `<td class="none">–</td>`;
     const n = ps.reduce((a, p) => a + p.n, 0), lv = ps.reduce((a, p) => a + p.lv, 0);
@@ -1589,15 +1586,14 @@ function drawAudit() {
   h += `<tr class="tot"><td>${AUD.reg === null ? `All ${CTY.length} countries` : esc(AUD.reg)}</td>${AC.map(([k]) => tn(tot(k))).join("")}${tn(tot(null))}</tr></tbody>`;
   $("#aud").innerHTML = h;
   const nC = k => new Set(PLN.filter(p => p.doc_type === k).map(p => p.c)).size;
-  $("#aud-p").innerHTML = `Every document of the earlier run that reached the tree, as plan editions: ${PLN.length} in all, from ${CTY.length} countries. ` +
+  $("#aud-p").innerHTML = `Every document on the tree, as plan editions: ${PLN.length} in all, from ${CTY.length} countries. ` +
     AUDC.map(([k, l]) => `${l} ${PLN.filter(p => p.doc_type === k).length} (${nC(k)} countries)`).join(", ") +
     `. The timeline gives each country a row per source, years across, so plans can be compared over time; switch sources and regions on and off above. Select a bar or a year for the documents behind it: their period, where the period was read from, the files they came from and how many of their strategies reach a lever. The counts table gives the same documents as totals.` +
-    ((X.excluded || []).length ? ` ${X.excluded.length} document${X.excluded.length > 1 ? "s were" : " was"} taken off the page: listed at the foot of this tab.` : "");
+    "";
   drawAuditList();
 }
 function drawAuditList() {
-  const ex = (X.excluded || []).map(e => `<li><b>${esc(e.country)}: ${esc(e.title)}</b>, ${esc(e.why)}</li>`).join("");
-  const exH = ex ? `<h3 style="margin-top:16px">Taken off the page</h3><ul>${ex}</ul>` : "";
+  const exH = "";
   if (AUD.c === null) { $("#aud-list").innerHTML = exH; return; }
   const ps = PLN.map((p, i) => [p, i]).filter(([p, i]) => AUD.id !== null ? i === AUD.id : p.c === AUD.c && (AUD.k === "all" ? AUD.on.has(p.doc_type) : p.doc_type === AUD.k) && (AUD.y === null || (p.start <= AUD.y && AUD.y <= p.end)));
   const lab = (AUD.k === "all" ? "all sources" : audLow(AUDC.find(([k]) => k === AUD.k)[1])) + (AUD.y !== null ? ` in force in ${AUD.y}` : "");
@@ -1692,7 +1688,6 @@ $("#ct").addEventListener("click", e => {
   const nL = ROWS.filter(r => r[5]).length, nU = ROWS.filter(r => r[3] === "NEW").length;
   $("#m-un-n").textContent = nU.toLocaleString();
   $("#dt-un").innerHTML = `Strategies the mapping could not place on any live family or General branch, with the reason it gave and the node the tree would need. These are the candidates for the next release of the tree. Pick a region or a year above to narrow the list; sort and filter as in the details table, and open a row for the strategy's record and passages.`;
-  $("#banner").hidden = false;
   $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);

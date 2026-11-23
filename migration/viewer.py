@@ -25,7 +25,7 @@ csv.field_size_limit(10 ** 9)
 tree = json.load(open(os.path.join(HERE, "..", "tree", "v4", "tree_v4.json"), encoding="utf-8"))
 MERGED = tree["meta"].get("merged_pathways", {})
 DROPPED = {d["lever_id"]: d for d in tree["meta"].get("dropped_levers", [])}
-PW_LEVER = {p["pathway_id"]: p["lever_id"] or ("%s (dropped)" % p["dropped_lever"] if p.get("dropped_lever") else p["pathway_id"])
+PW_LEVER = {p["pathway_id"]: p["lever_id"] or p["pathway_id"]
             for p in tree["pathways"]}
 
 
@@ -63,8 +63,15 @@ data = {
         "conditional_risks": [{k: c[k] for k in c if k != "pathway_id"} if isinstance(c, dict) else c
                               for c in f.get("conditional_risks") or []]} for f in tree["families"]],
     "levers": [lever_row(lv) for lv in tree["levers"]],
-    "dropped": [{k: d.get(k) for k in ("lever_id", "lever", "family_id")} for d in DROPPED.values()],
+    "dropped": [],
 }
+# the page shows the live tree only: levers dropped by the literature review, families left without a lever and
+# framework families left without a family are not drawn (no strategy is placed on them)
+data["families"] = [f for f in data["families"] if f["lever_ids"]]
+LIVE_F = {f["family_id"] for f in data["families"]}
+for g in data["groups"]:
+    g["family_ids"] = [x for x in g["family_ids"] if x in LIVE_F]
+data["groups"] = [g for g in data["groups"] if g["family_ids"]]
 
 SOURCES = [("plans", SRC, "National plans")] + [(k, os.path.join(SRC, k), lab) for k, lab in (
     ("sector", "Sector plans"), ("unga", "UNGA statements"), ("budget", "Budgets"))
