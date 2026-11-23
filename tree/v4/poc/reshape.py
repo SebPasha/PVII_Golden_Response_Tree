@@ -189,6 +189,12 @@ for d in csv.DictReader(open(os.path.join(SRC, "union", "documents.csv"), encodi
     docs[d["slug"]][norm(d["file"])] = d
 
 
+# Source files taken out of the plan edition they were merged into, by decision: (slug, file) -> why.
+# Their passages are skipped; a strategy found only in them yields no row. The Audit tab lists them.
+XDOCS = {(d["slug"], d["file"]): d["why"] for d in json.load(open(os.path.join(HERE, "excluded_documents.json"), encoding="utf-8"))} \
+    if os.path.exists(os.path.join(HERE, "excluded_documents.json")) else {}
+
+
 def edition_of(slug, doc):
     """(doc_type, start, end, period_source) of the plan edition a document belongs to."""
     fix = next((v for (s, d), v in PERIOD_FIX.items() if s == slug and doc.startswith(d)), None)
@@ -234,6 +240,8 @@ for slug in sorted(by_slug):
         per, src_of = collections.defaultdict(list), {}  # edition -> passage ids
         for k in jl(u["source_chunks"]):
             if k not in ref:
+                continue
+            if (slug, ref[k].split(" · ")[0]) in XDOCS:
                 continue
             ed = edition_of(slug, ref[k].split(" · ")[0])
             if ed is None:

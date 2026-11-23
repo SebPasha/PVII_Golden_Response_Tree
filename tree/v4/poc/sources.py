@@ -47,9 +47,21 @@ def load(name):
     return {r["source_strategy_key"]: r for r in csv.DictReader(open(p, encoding="utf-8"))} if RUN and os.path.exists(p) else {}
 
 
+# Sector periods the rules below get wrong, checked by hand (23 Nov 2026): (slug, document) -> (start, end, source)
+PERIOD_FIX = {
+    ("china", "CN Made in China 2025"): (2015, 2025, "known plan period (issued 2015, horizon 2025)"),
+    ("vanuatu", "VU National Employment Policy 2025 to 2030"): (2025, 2030, "title"),
+    ("nepal", "NEP LTS for Net Zero Emissions 2021"): (2021, 2050, "title year and the strategy's 2050 net-zero horizon"),
+    ("thailand", "20 Year Thailand Digital Economy and Society Development Plan 2016"): (2016, 2035, "title: 20 years from 2016"),
+    ("brunei", "Digital Economy Masterplan 2025"): (2020, 2025, "known plan period (launched 2020, horizon 2025)"),
+}
+
+
 def period(slug, doc):
-    """(start, end, source) of a sector document: a year range in its title, else the document table,
-    else the one year in its title."""
+    """(start, end, source) of a sector document: a hand fix, else a year range in its title, else the
+    document table, else the one year in its title."""
+    if (slug, doc) in PERIOD_FIX:
+        return PERIOD_FIX[(slug, doc)]
     m = docs[slug].get(norm(doc))
     ys = re.findall(r"(?<!\d)((?:19|20)\d\d)(?:\s+(\d{2,4}))?(?!\d)", doc)
     for a, b in ys:

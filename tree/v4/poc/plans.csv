@@ -30,7 +30,7 @@ colombia_ndp_2022-2026,Colombia,colombia,Latin America and the Caribbean,ndp,PND
 egypt_vision_2016-2030,Egypt,egypt,Arab States,vision,Vision 2030,Egypt Vision 2030,2016,2030,,,reshaped from the earlier run,config,EG Vision 2030,97,57,v4
 ethiopia_vision_2021-2030,Ethiopia,ethiopia,Africa,vision,TYDP,Ten Year Development Plan 2021-2030,2021,2030,,,reshaped from the earlier run,document,ET Ten Year Development Plan 2021 2030,30,17,v4
 fiji_ndp_2017-2021,Fiji,fiji,Pacific,ndp,NDP 2017-21,National Development Plan 2017-2021,2017,2021,,,reshaped from the earlier run,document,FIJI NDP 2017 21,149,96,v4
-fiji_ndp_2025-2029,Fiji,fiji,Pacific,ndp,NDP 2025-29,National Development Plan 2025-2029,2025,2029,,,reshaped from the earlier run,document,FIJI NDP 2025 29 | fij232617,296,173,v4
+fiji_ndp_2025-2029,Fiji,fiji,Pacific,ndp,NDP 2025-29,National Development Plan 2025-2029,2025,2029,,,reshaped from the earlier run,document,FIJI NDP 2025 29,194,111,v4
 ghana_ndp_2022-2025,Ghana,ghana,Africa,ndp,Agenda for Jobs II,"Agenda for Jobs II, Medium-Term National Development Policy Framework 2022-2025",2022,2025,,,reshaped from the earlier run,document,ndp_2022 2025_agenda_for_jobs_ii,267,186,v4
 india_ndp_2012-2017,India,india,South Asia,ndp,12th,Twelfth Five Year Plan,2012,2017,,,reshaped from the earlier run,document,IND NDP 2012 17,151,107,v4
 india_ndp_2018-2022,India,india,South Asia,ndp,New India,Strategy for New India @ 75,2018,2022,,,reshaped from the earlier run,filename,IND Strategy for New India 2018 22,162,128,v4
@@ -89,7 +89,7 @@ samoa_ndp_2027-2031,Samoa,samoa,Pacific,ndp,PDS 2026-30,Pathway for the Developm
 samoa_vision_2021-2040,Samoa,samoa,Pacific,vision,Samoa 2040,Samoa 2040,2021,2040,,,reshaped from the earlier run,inferred from the title; confirm,688ff795095ccc71f0261315_Samoa 2040,29,19,v4
 serbia_ndp_2021-2023,Serbia,serbia,Europe and Central Asia,ndp,ERP,Economic Reform Programme 2021-2023,2021,2023,,,reshaped from the earlier run,document,RS Economic Reform Programme 2021 2023,138,108,v4
 serbia_vision_2021-2030,Serbia,serbia,Europe and Central Asia,vision,Agenda 2030,Serbia and the 2030 Agenda report (2021),2021,2030,,,reshaped from the earlier run,title; the document table says 2000-2015,RS Agenda 2030 report 2021,99,60,v4
-solomon_islands_ndp_2016-2020,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2016-20,Medium Term Development Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,SB MTDP 2016 2020 | sol165887,74,39,v4
+solomon_islands_ndp_2016-2020,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2016-20,Medium Term Development Plan 2016-2020,2016,2020,,,reshaped from the earlier run,document,SB MTDP 2016 2020,64,35,v4
 solomon_islands_ndp_2026-2030,Solomon Islands,solomon_islands,Pacific,ndp,MTDP 2026-30,Medium Term Development Plan 2026-2030,2026,2030,,,reshaped from the earlier run,document,MTDP 2026 2030 FINAL | SB MTDP 2026 2030,95,50,v4
 solomon_islands_vision_2016-2035,Solomon Islands,solomon_islands,Pacific,vision,NDS,National Development Strategy 2016-2035,2016,2035,,,reshaped from the earlier run,document,National Development Strategy 2016,65,39,v4
 sri_lanka_ndp_2017-2020,Sri Lanka,sri_lanka,South Asia,ndp,2017-20,National plan 2017-2020,2017,2020,,,reshaped from the earlier run,document,LK 2017 2020,115,83,v4

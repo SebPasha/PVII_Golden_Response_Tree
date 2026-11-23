@@ -75,6 +75,11 @@ EXCL = json.load(open(XPATH, encoding="utf-8")) if os.path.exists(XPATH) else {}
 plans = [p for _, d, _ in SOURCES for p in csv.DictReader(open(os.path.join(d, "plans.csv"), encoding="utf-8"))]
 excluded = [{"country": p["country"], "title": p["plan_title"], "why": EXCL[p["plan_id"]]} for p in plans if p["plan_id"] in EXCL]
 plans = [p for p in plans if p["plan_id"] not in EXCL]
+# source files taken out of the edition they were merged into (reshape.py skips them): listed on the Audit tab too
+XD = os.path.join(HERE, "excluded_documents.json")
+NM = {p["slug"]: p["country"] for p in plans}
+excluded += [{"country": NM.get(d["slug"], d["slug"]), "title": "file %s, merged into %s" % (d["file"], d["edition"]), "why": d["why"]}
+             for d in (json.load(open(XD, encoding="utf-8")) if os.path.exists(XD) else [])]
 REG_ORDER = ["South-East Asia", "South Asia", "East Asia", "Pacific", "Europe and Central Asia", "Arab States",
              "Africa", "Latin America and the Caribbean"]
 countries, cidx = [], {}
