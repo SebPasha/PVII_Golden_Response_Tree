@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 # Rebuild the migration of the earlier PV2 run onto mother tree v4, and its page.
 #
-#   ./run_migration.sh <PV2 data folder> <out folder>            # no model calls: uses the answers saved in run/
-#   ./run_migration.sh <PV2 data folder> <out folder> --paid     # also re-runs the mapping and the instrument pass
+#   ./run_migration.sh                                           # no model calls: uses the answers saved in run/
+#   ./run_migration.sh pv2_data ../data/migration_out --paid     # also re-runs the mapping and the instrument pass
 #                                                                 # (gpt-5.4, keys in workflow/.env; about $95, see README)
 #
+# Defaults: data from pv2_data/ here, outputs to ../data/migration_out/.
 # The page is written to <out folder>/page/index.html, with rows_*.js and detail/ beside it.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-DATA=${1:?give the PV2 data folder (the one holding union/ and llm/)}
-OUT=${2:?give an out folder}
+DATA=${1:-pv2_data}                 # the earlier run's data (union/ and llm/); a copy is in this folder
+OUT=${2:-../data/migration_out}     # data/ is gitignored
 PAID=${3:-}
 
 if [ "$PAID" = "--paid" ]; then
