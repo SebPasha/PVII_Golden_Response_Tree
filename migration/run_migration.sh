@@ -37,6 +37,10 @@ echo "== 5. national plans, placed by the mapping"
 python3 reshape.py "$DATA" "$OUT" --mapping=run/mapping.csv --instrument=run/instrument.csv
 echo "== 6. the other sources, placed by the mapping"
 python3 sources.py "$DATA" "$OUT" --mapping=run
+if compgen -G "added/*/" > /dev/null; then
+  echo "== 6b. countries run through the current workflow (added/)"
+  python3 add_country.py "$OUT" added/*/
+fi
 echo "== 7. the page"
 python3 viewer.py "$OUT" "$OUT/page/index.html"
 echo "done: open $OUT/page/index.html (keep rows_*.js and detail/ beside it when you publish it)"

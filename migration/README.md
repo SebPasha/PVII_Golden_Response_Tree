@@ -41,6 +41,31 @@ budgets $17.06, instrument pass $9.51.
 
 `reshape_common.py` holds what steps 1 and 2 share (regions, country names, the tree, the columns).
 
+## Add a country run through the current workflow
+
+The live workflow (`../workflow/`, steps C, E, F and M on tree v4) runs one plan edition at a time.
+To put a country it has run on this page:
+
+1. Set the country up as in [workflow/RUNBOOK.md](../workflow/RUNBOOK.md): a config in
+   `workflow/configs/<country>.json` listing its documents, the PDFs under `data/sources/<country>/`, and
+   the Azure keys in `workflow/.env` (shared privately, never committed).
+2. Run each plan, dry run first:
+
+       cd workflow
+       python3 -m pvii.run --list <country>
+       python3 -m pvii.run --plan <plan_id> --dry-run
+       python3 -m pvii.run --plan <plan_id>
+
+3. Copy each plan's `strategies.csv` and `strategy_rows.csv` from `data/plans/<plan_id>/` to
+   `migration/added/<country>/<plan_id>/`. For a country not among the 45, add
+   `migration/added/<country>/region.txt` with one of the page's regions (for example `Pacific`).
+4. `cd migration && ./run_migration.sh`. The page now shows the country. A plan with the same plan_id as
+   one from the earlier run replaces it; the earlier run's other editions stay (run
+   `python3 add_country.py <out> added/<country> --replace` by hand to show only the new run). Sector
+   plans go in with the sector plans. A strategy on a lever the tree has since dropped goes to its family,
+   and the reason column says so.
+5. Commit `migration/added/<country>/` on a branch and open a pull request, then publish the page (below).
+
 ## Corrections
 
 - `excluded_plans.json`: plan editions taken off the page (plan id → why), for example China 2030 (a
@@ -63,6 +88,7 @@ https://sebpasha.github.io/PVII_Golden_Response_Tree/ (note: anyone with the lin
 ## What is in the folder
 
 - `pv2_data/`: the earlier run's data the scripts read (see above).
+- `added/`: countries run through the current workflow, one folder of plan outputs each (step above).
 - `run/`: the mapping and instrument answers of the paid runs (`mapping*.csv`, `instrument*.csv`,
   run reports `mapping_run*.json`).
 - `plans.csv`, `placement_summary.csv`: the national-plan outputs of the last build, for reference.
