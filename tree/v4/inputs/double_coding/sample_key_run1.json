@@ -1,0 +1,1192 @@
+[
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s338",
+  "level": "L3",
+  "family_id": "F-09",
+  "family": "Living environment and basic services",
+  "lever_id": "LV-041",
+  "lever": "Housing upgrades, slum improvement, building standards for dwellings",
+  "reason": "fund for structural and environmental improvements ... design and restoration of buildings and the environment for housing and disease prevention",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s414",
+  "level": "STD",
+  "family_id": "",
+  "family": "",
+  "lever_id": "",
+  "lever": "",
+  "reason": "general security preparedness for military and security agencies",
+  "depth_basis": "holding"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s253",
+  "level": "L3",
+  "family_id": "F-23",
+  "family": "Innovation system and appropriability",
+  "lever_id": "LV-117",
+  "lever": "University-industry collaboration, commercialisation, spin-offs",
+  "reason": "mandates technology transfers through public procurement",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s329",
+  "level": "L3",
+  "family_id": "F-47",
+  "family": "Participatory decision-making",
+  "lever_id": "LV-189",
+  "lever": "Participatory planning and budgeting",
+  "reason": "formulating development strategies with participation of all local partners",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s224",
+  "level": "L3",
+  "family_id": "F-44",
+  "family": "Monitoring and corrective feedback",
+  "lever_id": "LV-182",
+  "lever": "Monitoring and evaluation systems and their use",
+  "reason": "creates a public digital dashboard to track digital transactions of government services",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s504",
+  "level": "L3",
+  "family_id": "F-43",
+  "family": "Statistics and data sharing",
+  "lever_id": "LV-181",
+  "lever": "Build, digitise and maintain the registries",
+  "reason": "collecting and digitizing government resource and HR information within government systems",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s191",
+  "level": "L3",
+  "family_id": "F-23",
+  "family": "Innovation system and appropriability",
+  "lever_id": "LV-117",
+  "lever": "University-industry collaboration, commercialisation, spin-offs",
+  "reason": "establishes international collaboration networks for research and development",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s477",
+  "level": "L3",
+  "family_id": "F-45",
+  "family": "Policy experimentation",
+  "lever_id": "LV-184",
+  "lever": "Pilots, sandboxes and scaling of what works",
+  "reason": "piloting education programs in essential fields",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s495",
+  "level": "L2",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "",
+  "lever": "",
+  "reason": "combines capacity building, e-government skills and rule revision across several levers",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s27",
+  "level": "L2",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "",
+  "lever": "",
+  "reason": "restructures the public administrative system; family lacks a lever for whole-of-administration restructuring beyond HR, autonomy, decentralisation, regulation or process reform",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s16",
+  "level": "L3",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "LV-196",
+  "lever": "Simplify procedures, cut steps and time",
+  "reason": "removes legal barriers to e-government and oversight by revising obstructive laws",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s7",
+  "level": "L3",
+  "family_id": "F-52",
+  "family": "Revenue and spending systems",
+  "lever_id": "LV-205",
+  "lever": "Budget preparation, execution and results-based budgeting",
+  "reason": "reach targets by administering and managing limited resources with greatest efficiency",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s339",
+  "level": "STD",
+  "family_id": "",
+  "family": "",
+  "lever_id": "",
+  "lever": "",
+  "reason": "cultural preservation of historical towns and historic building clusters",
+  "depth_basis": "holding"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s503",
+  "level": "L2",
+  "family_id": "F-56",
+  "family": "Information and transparency",
+  "lever_id": "",
+  "lever": "",
+  "reason": "summary purpose on transparency and good governance; no single lever covers combined disclosure, engagement and performance monitoring",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s189",
+  "level": "L3",
+  "family_id": "F-23",
+  "family": "Innovation system and appropriability",
+  "lever_id": "LV-114",
+  "lever": "R&D funding, public and private",
+  "reason": "develops research personnel and incubates medical innovators for science and technology research",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s496",
+  "level": "L2",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "",
+  "lever": "",
+  "reason": "broad public sector reform goal spanning service delivery and organisational resizing with no single main lever",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s451",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-053",
+  "lever": "Curriculum, pedagogy, assessment and learning standards",
+  "reason": "improves learning evaluation system for personalized education",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s2",
+  "level": "GOAL",
+  "family_id": "",
+  "family": "",
+  "lever_id": "",
+  "lever": "",
+  "reason": "summary goal on quality of life for all groups with no specific action",
+  "depth_basis": "holding"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s455",
+  "level": "L2",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "",
+  "lever": "",
+  "reason": "special support for gifted learners through identification, scholarships and internships; family lacks a lever for gifted education support",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s443",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-055",
+  "lever": "Early childhood development centres, pre-school, parenting support",
+  "reason": "builds parent preparedness and quality services for children from conception to age six",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s472",
+  "level": "L2",
+  "family_id": "F-19",
+  "family": "Human and demographic capital",
+  "lever_id": "",
+  "lever": "",
+  "reason": "supportive environment and innovations for older persons' lifestyles; family lacks a lever for age-friendly environments outside work, income or care systems",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s366",
+  "level": "L3",
+  "family_id": "F-17",
+  "family": "Environmental quality",
+  "lever_id": "LV-087",
+  "lever": "Cleaner production, resource efficiency and green industry programmes",
+  "reason": "develops tools, mechanisms, research and knowledge to increase efficiency in circular material use",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s430",
+  "level": "L3",
+  "family_id": "F-54",
+  "family": "Crisis and risk communication",
+  "lever_id": "LV-209",
+  "lever": "Public risk communication, warning dissemination and community",
+  "reason": "builds community and local capacity and networks for preparedness and response",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s111",
+  "level": "L2",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "",
+  "lever": "",
+  "reason": "summary line on developing a comprehensive EV system with no specific action named",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s48",
+  "level": "L3",
+  "family_id": "F-16",
+  "family": "Water resources",
+  "lever_id": "LV-083",
+  "lever": "Reservoirs, irrigation storage, small water sources and distribution",
+  "reason": "manages sediment to increase reservoir water retention capability",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s440",
+  "level": "L3",
+  "family_id": "F-16",
+  "family": "Water resources",
+  "lever_id": "LV-084",
+  "lever": "River basin institutions and cross-border water cooperation",
+  "reason": "develops international mechanisms for Mekong water management and transboundary environmental issues",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s376",
+  "level": "L3",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "LV-107",
+  "lever": "Destination development, secondary destinations",
+  "reason": "builds local capacity for ecotourism destinations and local spillovers",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s375",
+  "level": "L3",
+  "family_id": "F-59",
+  "family": "Client power and community voice",
+  "lever_id": "LV-222",
+  "lever": "Community-driven development and community enterprise funds",
+  "reason": "promotes community income generation based on biological and cultural diversity",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s293",
+  "level": "L3",
+  "family_id": "F-29",
+  "family": "Lagging regions and place-based development",
+  "lever_id": "LV-139",
+  "lever": "Place-based support for lagging regions",
+  "reason": "regional and economic corridor development plans to make regions key economic bases",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s50",
+  "level": "L3",
+  "family_id": "F-33",
+  "family": "Market participation of small producers",
+  "lever_id": "LV-154",
+  "lever": "Collection points, rural market infrastructure and transport to market",
+  "reason": "encourages private investment in central, regional and community markets",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s185",
+  "level": "L3",
+  "family_id": "F-52",
+  "family": "Revenue and spending systems",
+  "lever_id": "LV-203",
+  "lever": "Procurement reform and transparency",
+  "reason": "includes Thai medical equipment in public procurement system and revises procurement codes",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s238",
+  "level": "L3",
+  "family_id": "F-30",
+  "family": "Small-firm capability and business formalisation",
+  "lever_id": "LV-143",
+  "lever": "Start-up funding, incubation and venture support",
+  "reason": "provides incentives for starting new businesses manufacturing smart electronic products",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s79",
+  "level": "L3",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "LV-065",
+  "lever": "Clean technology support and deployment",
+  "reason": "promotes use of electric vehicles in tourism to reduce GHG emissions",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s95",
+  "level": "L2",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "",
+  "lever": "",
+  "reason": "builds ecotourism knowledge; family lacks a lever for tourism knowledge development",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s222",
+  "level": "L3",
+  "family_id": "F-53",
+  "family": "Digital delivery and DPI",
+  "lever_id": "LV-208",
+  "lever": "Digital identity, digital payments and online service delivery",
+  "reason": "develops a national trade platform and digital financial services for trade and investment transactions",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s76",
+  "level": "L3",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "LV-107",
+  "lever": "Destination development, secondary destinations",
+  "reason": "promotes soft power and creative economy to develop tourism offerings and raise value added",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s129",
+  "level": "L3",
+  "family_id": "F-22",
+  "family": "Self-discovery and export upgrading",
+  "lever_id": "LV-112",
+  "lever": "Time-bound protection or support for a new industry",
+  "reason": "financial and tax measures to boost investment in the EV industry",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s179",
+  "level": "L3",
+  "family_id": "F-19",
+  "family": "Human and demographic capital",
+  "lever_id": "LV-100",
+  "lever": "Long-term care systems, financing and family caregiver support",
+  "reason": "establishes residential and activity facilities for older persons",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s140",
+  "level": "L3",
+  "family_id": "F-26",
+  "family": "Infrastructure services",
+  "lever_id": "LV-129",
+  "lever": "Reliable electricity, gas and network supply for production",
+  "reason": "supports investment and development of EV charging stations and chargers",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s143",
+  "level": "L3",
+  "family_id": "F-26",
+  "family": "Infrastructure services",
+  "lever_id": "LV-131",
+  "lever": "Regulation, unbundling and competition in network industries",
+  "reason": "drafting and amending laws and regulations on charging, communications and safety",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s113",
+  "level": "L3",
+  "family_id": "F-22",
+  "family": "Self-discovery and export upgrading",
+  "lever_id": "LV-112",
+  "lever": "Time-bound protection or support for a new industry",
+  "reason": "supports EV industry transition by shifting production base and parts manufacturing into EVs",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s166",
+  "level": "L3",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "LV-196",
+  "lever": "Simplify procedures, cut steps and time",
+  "reason": "reviews and revises laws and regulations to facilitate the hub initiative",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s96",
+  "level": "L3",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "LV-108",
+  "lever": "Carrying-capacity rules, sustainable tourism management and site",
+  "reason": "develops environmental management systems at tourist destinations",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s114",
+  "level": "L3",
+  "family_id": "F-22",
+  "family": "Self-discovery and export upgrading",
+  "lever_id": "LV-112",
+  "lever": "Time-bound protection or support for a new industry",
+  "reason": "creates domestic consumption and export demand for various types of EVs",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s160",
+  "level": "L3",
+  "family_id": "F-27",
+  "family": "Production linkages and clusters",
+  "lever_id": "LV-133",
+  "lever": "Supply-chain linkages, local processing and local content",
+  "reason": "builds associated industries linked to medical industry and services",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s90",
+  "level": "L3",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "LV-107",
+  "lever": "Destination development, secondary destinations",
+  "reason": "encourages creative economy concepts and innovation to add value to tourism",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s162",
+  "level": "L3",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "LV-107",
+  "lever": "Destination development, secondary destinations",
+  "reason": "links the medical industry with medical tourism",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s46",
+  "level": "L3",
+  "family_id": "F-15",
+  "family": "Living natural capital",
+  "lever_id": "LV-079",
+  "lever": "Reforestation, land and watershed restoration",
+  "reason": "expands watershed and economic forests in areas inappropriate for farming",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s94",
+  "level": "L3",
+  "family_id": "F-15",
+  "family": "Living natural capital",
+  "lever_id": "LV-077",
+  "lever": "Payments for ecosystem services, conservation-linked livelihoods",
+  "reason": "generates income from natural and cultural conservation",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s147",
+  "level": "L3",
+  "family_id": "F-12",
+  "family": "Skills for work",
+  "lever_id": "LV-059",
+  "lever": "Vocational and technical training institutions and programmes",
+  "reason": "developing human resources to support the EV industry and promoting lifelong learning",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s193",
+  "level": "L3",
+  "family_id": "F-10",
+  "family": "Health security",
+  "lever_id": "LV-044",
+  "lever": "Train, recruit, deploy and retain health workers",
+  "reason": "produces, upskills and trains specialised medical personnel",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s81",
+  "level": "L3",
+  "family_id": "F-52",
+  "family": "Revenue and spending systems",
+  "lever_id": "LV-203",
+  "lever": "Procurement reform and transparency",
+  "reason": "reviews procurement and budget rules to enable private sector engagement and local purchasing",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s169",
+  "level": "L3",
+  "family_id": "F-21",
+  "family": "Tourism export destinations",
+  "lever_id": "LV-107",
+  "lever": "Destination development, secondary destinations",
+  "reason": "develops a comprehensive wellness city and local wellness brands as a destination offer",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s123",
+  "level": "L3",
+  "family_id": "F-24",
+  "family": "Foreign capital, knowledge and networks",
+  "lever_id": "LV-122",
+  "lever": "Global and regional value chain participation and upgrading",
+  "reason": "fosters supply chain connections with countries holding key raw materials for ZEV production",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s237",
+  "level": "L3",
+  "family_id": "F-23",
+  "family": "Innovation system and appropriability",
+  "lever_id": "LV-114",
+  "lever": "R&D funding, public and private",
+  "reason": "promotes investment in research and development of advanced technologies",
+  "depth_basis": "strategy wording; pathway named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s150",
+  "level": "L3",
+  "family_id": "F-20",
+  "family": "Cost of reaching foreign markets",
+  "lever_id": "LV-101",
+  "lever": "Export promotion, standards certification and market information",
+  "reason": "develops EV standards and testing in line with export market requirements",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s134",
+  "level": "L3",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "LV-068",
+  "lever": "Transition support for workers, firms and places hit by decarbonisation",
+  "reason": "supports enterprises in internal combustion systems to transition to other industries",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s378",
+  "level": "L3",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "LV-064",
+  "lever": "Carbon pricing, emissions trading, carbon credits and offsets",
+  "reason": "develops carbon market systems and certification for carbon trade",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s485",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-055",
+  "lever": "Early childhood development centres, pre-school, parenting support",
+  "reason": "develops learning cities, facilities and creative spaces for learning",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s379",
+  "level": "L3",
+  "family_id": "F-17",
+  "family": "Environmental quality",
+  "lever_id": "LV-088",
+  "lever": "Waste collection, recycling, treatment, disposal and circular economy",
+  "reason": "systematic garbage management throughout the chain at community level",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s410",
+  "level": "L3",
+  "family_id": "F-17",
+  "family": "Environmental quality",
+  "lever_id": "LV-088",
+  "lever": "Waste collection, recycling, treatment, disposal and circular economy",
+  "reason": "promotes and regulates sharing platforms and secondhand markets as circular material-use channels",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s174",
+  "level": "L3",
+  "family_id": "F-27",
+  "family": "Production linkages and clusters",
+  "lever_id": "LV-134",
+  "lever": "Cluster development and shared facilities for a sector",
+  "reason": "enhances service standards to compete on the international market",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s316",
+  "level": "L3",
+  "family_id": "F-25",
+  "family": "Internal connectivity",
+  "lever_id": "LV-124",
+  "lever": "National road, rail and inland transport networks",
+  "reason": "develops transport and logistics infrastructure for movement of people, goods and raw materials",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s206",
+  "level": "L3",
+  "family_id": "F-51",
+  "family": "Surge, continuity and relief",
+  "lever_id": "LV-197",
+  "lever": "Emergency operations centres, surge staff, beds and stockpiles",
+  "reason": "establishes emergency preparedness with plans for essential drugs, supplies, vaccines and equipment",
+  "depth_basis": "lever by meaning; pathway named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s488",
+  "level": "L3",
+  "family_id": "F-12",
+  "family": "Skills for work",
+  "lever_id": "LV-061",
+  "lever": "Qualification frameworks, skills certification, occupational standards",
+  "reason": "develops learning credit banks connecting formal and informal learning",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s400",
+  "level": "L3",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "LV-065",
+  "lever": "Clean technology support and deployment",
+  "reason": "advances technology and innovation for mono-material packaging, second use and upcycling",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s341",
+  "level": "L3",
+  "family_id": "F-01",
+  "family": "Exclusion from markets: labour, informality and workers' rights",
+  "lever_id": "LV-005",
+  "lever": "Collective bargaining rights, labour standards and their enforcement",
+  "reason": "workers in all forms of employment are protected by labor laws",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s244",
+  "level": "L3",
+  "family_id": "F-45",
+  "family": "Policy experimentation",
+  "lever_id": "LV-184",
+  "lever": "Pilots, sandboxes and scaling of what works",
+  "reason": "develops local digital solutions by piloting in selected sectors",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s349",
+  "level": "L3",
+  "family_id": "F-06",
+  "family": "Economic security",
+  "lever_id": "LV-027",
+  "lever": "Cash transfers conditioned on school attendance or health visits",
+  "reason": "conditional disbursement processes and revising eligibility criteria and benefits in Child Support Grant",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s383",
+  "level": "L3",
+  "family_id": "F-59",
+  "family": "Client power and community voice",
+  "lever_id": "LV-222",
+  "lever": "Community-driven development and community enterprise funds",
+  "reason": "sets up model learning communities and transfers lessons to other communities",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s276",
+  "level": "L3",
+  "family_id": "F-30",
+  "family": "Small-firm capability and business formalisation",
+  "lever_id": "LV-142",
+  "lever": "Loans, guarantees and credit lines for small firms",
+  "reason": "special loan schemes and guarantees for SME segments",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s433",
+  "level": "L3",
+  "family_id": "F-40",
+  "family": "Contingency buffers and pre-arranged finance",
+  "lever_id": "LV-176",
+  "lever": "Disaster insurance, contingent credit and emergency financing frameworks",
+  "reason": "establishes insurance systems and funds for disaster and climate impacts",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s300",
+  "level": "L2",
+  "family_id": "F-06",
+  "family": "Economic security",
+  "lever_id": "",
+  "lever": "",
+  "reason": "inclusive welfare for all inhabitants is a purpose line with no specific transfer, insurance or eligibility action",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s356",
+  "level": "L2",
+  "family_id": "F-06",
+  "family": "Economic security",
+  "lever_id": "",
+  "lever": "",
+  "reason": "helps participants plan retirement savings, but family lacks a lever for retirement planning guidance",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s133",
+  "level": "L3",
+  "family_id": "F-24",
+  "family": "Foreign capital, knowledge and networks",
+  "lever_id": "LV-121",
+  "lever": "Supplier linkages, joint ventures and technology transfer",
+  "reason": "joint ventures and partnerships to promote technology and resource transfer",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s423",
+  "level": "L3",
+  "family_id": "F-48",
+  "family": "Coordination across agencies and levels",
+  "lever_id": "LV-190",
+  "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+  "reason": "forges collaboration among communities and relevant agencies for disaster preparedness",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s391",
+  "level": "L3",
+  "family_id": "F-14",
+  "family": "Climate risk to assets and people",
+  "lever_id": "LV-069",
+  "lever": "Hazard mapping, land-use zoning and relocation out of exposed areas",
+  "reason": "manages activities within natural resource capacity in the area through spatial limits",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s416",
+  "level": "GOAL",
+  "family_id": "",
+  "family": "",
+  "lever_id": "",
+  "lever": "",
+  "reason": "states an end result of climate-friendly growth and low-carbon society with no specific action",
+  "depth_basis": "holding"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s233",
+  "level": "L3",
+  "family_id": "F-56",
+  "family": "Information and transparency",
+  "lever_id": "LV-213",
+  "lever": "Countering disinformation and media literacy",
+  "reason": "builds immunity to fake news and social media threats",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s420",
+  "level": "L3",
+  "family_id": "F-14",
+  "family": "Climate risk to assets and people",
+  "lever_id": "LV-069",
+  "lever": "Hazard mapping, land-use zoning and relocation out of exposed areas",
+  "reason": "uses urban planning, land-use allocation and safety zones to keep people and assets out of hazard areas",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s436",
+  "level": "L3",
+  "family_id": "F-43",
+  "family": "Statistics and data sharing",
+  "lever_id": "LV-181",
+  "lever": "Build, digitise and maintain the registries",
+  "reason": "setting up data systems to develop catastrophe models for risk and impact assessments",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s198",
+  "level": "L3",
+  "family_id": "F-06",
+  "family": "Economic security",
+  "lever_id": "LV-023",
+  "lever": "Health insurance, fee exemptions and benefit packages",
+  "reason": "reforms health security payment system and regulates fees to keep care costs appropriate",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s343",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-055",
+  "lever": "Early childhood development centres, pre-school, parenting support",
+  "reason": "expand and improve early childhood development centers nationwide",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s445",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-055",
+  "lever": "Early childhood development centres, pre-school, parenting support",
+  "reason": "raises standards of early childhood development facilities and resources at local level",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s86",
+  "level": "L3",
+  "family_id": "F-59",
+  "family": "Client power and community voice",
+  "lever_id": "LV-222",
+  "lever": "Community-driven development and community enterprise funds",
+  "reason": "provides network and funding to incubate communities into social enterprises and startups",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s369",
+  "level": "L3",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "LV-065",
+  "lever": "Clean technology support and deployment",
+  "reason": "stimulates the use of green energy",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s384",
+  "level": "L3",
+  "family_id": "F-15",
+  "family": "Living natural capital",
+  "lever_id": "LV-079",
+  "lever": "Reforestation, land and watershed restoration",
+  "reason": "encourages planting new forests in degraded or abandoned areas",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s354",
+  "level": "L3",
+  "family_id": "F-06",
+  "family": "Economic security",
+  "lever_id": "LV-022",
+  "lever": "Pensions and old-age allowances",
+  "reason": "revises retirement saving conditions and benefits for participants",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s11",
+  "level": "L3",
+  "family_id": "F-13",
+  "family": "Climate stabilisation and just transition",
+  "lever_id": "LV-067",
+  "lever": "Planning and investment rules that avoid new high-carbon infrastructure",
+  "reason": "prepare infrastructure to accommodate transition to renewable energy and electric vehicles",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s367",
+  "level": "L3",
+  "family_id": "F-17",
+  "family": "Environmental quality",
+  "lever_id": "LV-088",
+  "lever": "Waste collection, recycling, treatment, disposal and circular economy",
+  "reason": "implements an extended producer responsibility policy framework for waste and material flows",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s53",
+  "level": "L3",
+  "family_id": "F-20",
+  "family": "Cost of reaching foreign markets",
+  "lever_id": "LV-101",
+  "lever": "Export promotion, standards certification and market information",
+  "reason": "reduces transaction fees for standard accreditation so farmers can access higher standards",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s223",
+  "level": "L3",
+  "family_id": "F-12",
+  "family": "Skills for work",
+  "lever_id": "LV-062",
+  "lever": "Digital skills training for workers, students and firms",
+  "reason": "raises labor skills through revised curricula and digitalized pedagogy to support trade and investment",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s142",
+  "level": "L3",
+  "family_id": "F-26",
+  "family": "Infrastructure services",
+  "lever_id": "LV-132",
+  "lever": "Grid interconnection, pooling and regional energy links",
+  "reason": "smart grid technology and integrated platform for EV charging and grid management",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s393",
+  "level": "L3",
+  "family_id": "F-08",
+  "family": "Personal security",
+  "lever_id": "LV-035",
+  "lever": "Legal aid, alternative dispute resolution, access to justice",
+  "reason": "resolves conflicts related to natural resources and the environment through dispute resolution",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s490",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-055",
+  "lever": "Early childhood development centres, pre-school, parenting support",
+  "reason": "supports free access to educational innovation products for learners",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s467",
+  "level": "L3",
+  "family_id": "F-12",
+  "family": "Skills for work",
+  "lever_id": "LV-059",
+  "lever": "Vocational and technical training institutions and programmes",
+  "reason": "reskilling and upskilling workers through short courses and training collaborations",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s154",
+  "level": "L3",
+  "family_id": "F-22",
+  "family": "Self-discovery and export upgrading",
+  "lever_id": "LV-112",
+  "lever": "Time-bound protection or support for a new industry",
+  "reason": "develops installation and battery standards for converted vehicles in the EV industry",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s360",
+  "level": "L3",
+  "family_id": "F-52",
+  "family": "Revenue and spending systems",
+  "lever_id": "LV-205",
+  "lever": "Budget preparation, execution and results-based budgeting",
+  "reason": "evaluates projects, cuts low-impact budgets and adjusts co-payments for fiscal sustainability",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s288",
+  "level": "L3",
+  "family_id": "F-30",
+  "family": "Small-firm capability and business formalisation",
+  "lever_id": "LV-143",
+  "lever": "Start-up funding, incubation and venture support",
+  "reason": "international incubation programs supporting startups",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s259",
+  "level": "L3",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "LV-196",
+  "lever": "Simplify procedures, cut steps and time",
+  "reason": "improve efficiency and relevance of the SME promotion and development system",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s268",
+  "level": "L3",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "LV-196",
+  "lever": "Simplify procedures, cut steps and time",
+  "reason": "raising efficiency of Business Support Centers and disseminating business operation manuals",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s230",
+  "level": "L3",
+  "family_id": "F-25",
+  "family": "Internal connectivity",
+  "lever_id": "LV-128",
+  "lever": "E-commerce platforms, digital trade skills and delivery",
+  "reason": "boosts service transactions on Thai digital platforms across sectors",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s309",
+  "level": "L3",
+  "family_id": "F-47",
+  "family": "Participatory decision-making",
+  "lever_id": "LV-189",
+  "lever": "Participatory planning and budgeting",
+  "reason": "designs townhall mechanisms for collective planning with local private sector, inhabitants and civil society",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s271",
+  "level": "L3",
+  "family_id": "F-53",
+  "family": "Digital delivery and DPI",
+  "lever_id": "LV-208",
+  "lever": "Digital identity, digital payments and online service delivery",
+  "reason": "establishing one ID system for SMEs and digital transactions",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s302",
+  "level": "L3",
+  "family_id": "F-48",
+  "family": "Coordination across agencies and levels",
+  "lever_id": "LV-190",
+  "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+  "reason": "creates cross-sectoral mechanisms and charters for continuity in urban development",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s219",
+  "level": "L3",
+  "family_id": "F-52",
+  "family": "Revenue and spending systems",
+  "lever_id": "LV-206",
+  "lever": "Public-private partnerships and private infrastructure investment",
+  "reason": "encourages more private sector investment in infrastructure and service provision",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s307",
+  "level": "L3",
+  "family_id": "F-50",
+  "family": "Administrative, local and regulatory capacity",
+  "lever_id": "LV-196",
+  "lever": "Simplify procedures, cut steps and time",
+  "reason": "revises regulations to better allow collaboration with development partners",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s258",
+  "level": "L3",
+  "family_id": "F-48",
+  "family": "Coordination across agencies and levels",
+  "lever_id": "LV-190",
+  "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+  "reason": "integrated budgeting for SME promotion across relevant agencies",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s297",
+  "level": "L3",
+  "family_id": "F-25",
+  "family": "Internal connectivity",
+  "lever_id": "LV-128",
+  "lever": "E-commerce platforms, digital trade skills and delivery",
+  "reason": "adoption of digital technology in circulating products and services",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s236",
+  "level": "L3",
+  "family_id": "F-22",
+  "family": "Self-discovery and export upgrading",
+  "lever_id": "LV-111",
+  "lever": "Diversification into higher-value products and sectors",
+  "reason": "develops own brands and boosts exports of smart appliances and gadgets",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s345",
+  "level": "L2",
+  "family_id": "F-06",
+  "family": "Economic security",
+  "lever_id": "",
+  "lever": "",
+  "reason": "targeted solutions to eradicate intergenerational poor households; family lacks a lever for broad anti-poverty support stated without a specific transfer or asset instrument",
+  "depth_basis": "family"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s64",
+  "level": "L3",
+  "family_id": "F-40",
+  "family": "Contingency buffers and pre-arranged finance",
+  "lever_id": "LV-175",
+  "lever": "Strategic capacity and stocks of critical goods",
+  "reason": "food security reserves for communities: builds reserves of food and explicitly names reserves",
+  "depth_basis": "lever by meaning; pathway named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s314",
+  "level": "L3",
+  "family_id": "F-28",
+  "family": "Urban systems",
+  "lever_id": "LV-138",
+  "lever": "Urban planning and serviced expansion",
+  "reason": "supports land and structural use planning for transit-oriented development and expands green and public areas",
+  "depth_basis": "lever by meaning; pathway named"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s348",
+  "level": "L3",
+  "family_id": "F-48",
+  "family": "Coordination across agencies and levels",
+  "lever_id": "LV-190",
+  "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+  "reason": "integrating cross-sectoral collaboration and increasing the role of regional and local agencies",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s350",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-056",
+  "lever": "Scholarships, fee abolition, stipends and student loans",
+  "reason": "subsidizing and providing necessary resources to ease the burden of educational expenses",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s275",
+  "level": "L3",
+  "family_id": "F-30",
+  "family": "Small-firm capability and business formalisation",
+  "lever_id": "LV-142",
+  "lever": "Loans, guarantees and credit lines for small firms",
+  "reason": "digital trade data used to verify business status and act as collateral for SME finance",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s459",
+  "level": "L3",
+  "family_id": "F-11",
+  "family": "Knowledge: schooling and higher education",
+  "lever_id": "LV-058",
+  "lever": "Universities, tertiary quality, research skills and institutional",
+  "reason": "reforms higher education programming, standards and quality assurance",
+  "depth_basis": "strategy wording"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s471",
+  "level": "L3",
+  "family_id": "F-19",
+  "family": "Human and demographic capital",
+  "lever_id": "LV-099",
+  "lever": "Retirement age, incentives and support for older workers",
+  "reason": "allows older persons to work according to their capacities and offers learning materials",
+  "depth_basis": "lever by meaning"
+ },
+ {
+  "strategy_id": "thailand_ndp_2023-2027#s505",
+  "level": "L3",
+  "family_id": "F-53",
+  "family": "Digital delivery and DPI",
+  "lever_id": "LV-208",
+  "lever": "Digital identity, digital payments and online service delivery",
+  "reason": "adopting digital technology throughout public work processes for public and business services",
+  "depth_basis": "strategy wording"
+ }
+]

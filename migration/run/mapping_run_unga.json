@@ -1,0 +1,38 @@
+{
+ "strategies": 1395,
+ "calls": 69,
+ "errors": [],
+ "relation": {
+  "placed": 1376,
+  "new": 19
+ },
+ "level": {
+  "STD": 751,
+  "L2": 344,
+  "L3": 281,
+  "": 19
+ },
+ "ledger": {
+  "stages": {
+   "M": {
+    "calls": 69,
+    "cache_hits": 0,
+    "in": 1363954,
+    "out": 92103,
+    "cost": 2.625972499999999,
+    "errors": 0,
+    "est_in": 0,
+    "est_out": 0,
+    "est_cost": 0.0,
+    "seconds": 309.4,
+    "p95_seconds": 36.7
+   }
+  },
+  "calls": 69,
+  "cost": 2.625972,
+  "cache_hits": 0,
+  "dry_run": false
+ },
+ "tree_version": "v4",
+ "prompt_sha": "967de102272b96d1"
+}

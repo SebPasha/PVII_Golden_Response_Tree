@@ -5,3 +5,4 @@ pypdf>=4.0                           # page counts, splitting long PDFs for the 
 pymupdf>=1.24                        # the PDF text layer, used by --dry-run
 tiktoken>=0.7                        # token counts for chunking and estimates (optional)
 pytest>=8                            # the test suite
+openpyxl>=3.1                        # reads the earlier run's xlsx files (migration/)

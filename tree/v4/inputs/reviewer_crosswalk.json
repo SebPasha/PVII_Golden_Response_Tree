@@ -1,0 +1,1759 @@
+{
+ "source": "Independent review, 4 November 2026: National_Development_Strategy_Tree_Review.docx and Strategy_Tree_Full_Theoretical_Justification.xlsx (3 families, 18 levers, 27 references, 72 links). The review was written against an older 18-lever table, not tree v4; this file maps its levers and references onto v4.",
+ "references": [
+  {
+   "ref_id": "UNDP1990",
+   "author": "UNDP",
+   "year": 1990,
+   "title": "Human Development Report 1990: Concept and Measurement of Human Development",
+   "venue": "United Nations Development Programme",
+   "strand": "Capabilities / human development",
+   "contribution": "Development as expanding human choices, rather than income alone.",
+   "url": "https://hdr.undp.org/content/human-development-report-1990",
+   "kind": "framework document",
+   "in_framework_pass": "HDR 1990 read in full for CAP"
+  },
+  {
+   "ref_id": "UNDP1994",
+   "author": "UNDP",
+   "year": 1994,
+   "title": "Human Development Report 1994: New Dimensions of Human Security",
+   "venue": "United Nations Development Programme",
+   "strand": "Human security",
+   "contribution": "Defines people-centred human security beyond territorial defence.",
+   "url": "https://hdr.undp.org/content/human-development-report-1994",
+   "kind": "framework document",
+   "in_framework_pass": "HDR 1994 read in full for CAP"
+  },
+  {
+   "ref_id": "WDR2006",
+   "author": "World Bank",
+   "year": 2006,
+   "title": "World Development Report 2006: Equity and Development",
+   "venue": "World Bank",
+   "strand": "Distribution / inequality",
+   "contribution": "Unequal opportunity and wasted potential undermine development.",
+   "url": "https://www.worldbank.org/en/publication/wdr/wdr-archive",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "ILO2024",
+   "author": "International Labour Organization",
+   "year": 2024,
+   "title": "World Social Protection Report 2024–26: Universal Social Protection for Climate Action and a Just Transition",
+   "venue": "ILO",
+   "strand": "Human security / social protection",
+   "contribution": "Social protection buffers shocks and supports a just transition.",
+   "url": "https://www.ilo.org/publications/flagship-reports/world-social-protection-report-2024-26-universal-social-protection-climate",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "UNICEF2017",
+   "author": "UNICEF",
+   "year": 2017,
+   "title": "Early Moments Matter for Every Child",
+   "venue": "UNICEF",
+   "strand": "Early childhood / intergenerational",
+   "contribution": "Early childhood interventions and life-course capability formation.",
+   "url": "https://www.unicef.org/reports/early-moments-matter-every-child",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "WCED1987",
+   "author": "World Commission on Environment and Development",
+   "year": 1987,
+   "title": "Our Common Future",
+   "venue": "United Nations / WCED",
+   "strand": "Sustainable development",
+   "contribution": "Development must account for needs of present and future generations.",
+   "url": "https://sdgs.un.org/sites/default/files/documents/5987our-common-future.pdf",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "RODRIK2010",
+   "author": "Rodrik, D.",
+   "year": 2010,
+   "title": "Diagnostics before Prescription",
+   "venue": "Journal of Economic Perspectives 24(3), 33–44",
+   "strand": "Growth diagnostics / strategy",
+   "contribution": "Identify context-specific binding constraints before prescribing policy.",
+   "url": "https://doi.org/10.1257/jep.24.3.33",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "RODRIK2004",
+   "author": "Rodrik, D.",
+   "year": 2004,
+   "title": "Industrial Policy for the Twenty-First Century",
+   "venue": "Harvard Kennedy School working paper",
+   "strand": "Industrial policy / coordination",
+   "contribution": "Strategic public-private information discovery for industrial upgrading.",
+   "url": "https://www.hks.harvard.edu/publications/industrial-policy-twenty-first-century",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "WDR2024",
+   "author": "World Bank",
+   "year": 2024,
+   "title": "World Development Report 2024: The Middle-Income Trap",
+   "venue": "World Bank",
+   "strand": "Structural change / technology",
+   "contribution": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "url": "https://www.worldbank.org/en/publication/wdr2024",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "WDR2020",
+   "author": "World Bank",
+   "year": 2020,
+   "title": "World Development Report 2020: Trading for Development in the Age of Global Value Chains",
+   "venue": "World Bank",
+   "strand": "Trade / value chains",
+   "contribution": "GVCs connect trade, productivity, jobs and cross-border cooperation.",
+   "url": "https://www.worldbank.org/en/publication/wdr2020",
+   "kind": "framework document",
+   "in_framework_pass": "read in full for EXP"
+  },
+  {
+   "ref_id": "WDR2009",
+   "author": "World Bank",
+   "year": 2009,
+   "title": "World Development Report 2009: Reshaping Economic Geography",
+   "venue": "World Bank",
+   "strand": "Economic geography",
+   "contribution": "Density, distance and division frame spatial economic integration.",
+   "url": "https://www.worldbank.org/en/publication/wdr/wdr-archive",
+   "kind": "framework document",
+   "in_framework_pass": "read in full for DOM"
+  },
+  {
+   "ref_id": "UNCTAD2026",
+   "author": "UNCTAD",
+   "year": 2026,
+   "title": "Productive Capacities Index, 3rd Generation",
+   "venue": "UN Trade and Development",
+   "strand": "Productive capacities",
+   "contribution": "Measures eight linked dimensions of productive capacity, including institutions and structural change.",
+   "url": "https://unctad.org/publication/productive-capacities-index-3rd-generation",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "OSLO2018",
+   "author": "OECD / Eurostat",
+   "year": 2018,
+   "title": "Oslo Manual 2018: Guidelines for Collecting, Reporting and Using Data on Innovation",
+   "venue": "OECD Publishing",
+   "strand": "Innovation measurement",
+   "contribution": "Operational definitions and measurement guidance for innovation.",
+   "url": "https://doi.org/10.1787/9789264304604-en",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "FLANAGAN2011",
+   "author": "Flanagan, K.; Uyarra, E.; Laranja, M.",
+   "year": 2011,
+   "title": "Reconceptualising the Policy Mix for Innovation",
+   "venue": "Research Policy 40(5), 702–713",
+   "strand": "Policy mixes / interactions",
+   "contribution": "Multi-actor, multi-level and interacting-policy view of policy mixes.",
+   "url": "https://doi.org/10.1016/j.respol.2011.02.005",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "ROGGE2016",
+   "author": "Rogge, K. S.; Reichardt, K.",
+   "year": 2016,
+   "title": "Policy Mixes for Sustainability Transitions: An Extended Concept and Framework for Analysis",
+   "venue": "Research Policy 45(8), 1620–1635",
+   "strand": "Policy mixes / process",
+   "contribution": "Distinguishes policy strategy, interacting instruments, processes and policy-mix characteristics.",
+   "url": "https://doi.org/10.1016/j.respol.2016.04.004",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "LASCOUMES2007",
+   "author": "Lascoumes, P.; Le Galès, P.",
+   "year": 2007,
+   "title": "Understanding Public Policy through Its Instruments",
+   "venue": "Governance 20(1), 1–21",
+   "strand": "Policy instruments / politics",
+   "contribution": "Policy instruments are not neutral; they shape governing relationships.",
+   "url": "https://doi.org/10.1111/j.1468-0491.2007.00342.x",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "HOOD1983",
+   "author": "Hood, C. C.",
+   "year": 1983,
+   "title": "The Tools of Government",
+   "venue": "Macmillan / Springer",
+   "strand": "Instrument taxonomy",
+   "contribution": "Information, authority, finance and organisation resources of government.",
+   "url": "https://link.springer.com/book/10.1007/978-1-349-17169-9",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "WDR2017",
+   "author": "World Bank",
+   "year": 2017,
+   "title": "World Development Report 2017: Governance and the Law",
+   "venue": "World Bank",
+   "strand": "Governance / political economy",
+   "contribution": "Credible commitment, coordination, cooperation, power and incentives.",
+   "url": "https://www.worldbank.org/en/publication/wdr2017",
+   "kind": "framework document",
+   "in_framework_pass": "read in full for REF"
+  },
+  {
+   "ref_id": "NORTH1990",
+   "author": "North, D. C.",
+   "year": 1990,
+   "title": "Institutions, Institutional Change and Economic Performance",
+   "venue": "Cambridge University Press",
+   "strand": "Institutions / incentives",
+   "contribution": "Institutions structure incentives and transaction costs.",
+   "url": "https://doi.org/10.1017/CBO9780511808678.003",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "ANDREWS2017",
+   "author": "Andrews, M.; Pritchett, L.; Woolcock, M.",
+   "year": 2017,
+   "title": "Building State Capability: Evidence, Analysis, Action",
+   "venue": "Oxford University Press",
+   "strand": "State capability / adaptation",
+   "contribution": "Distinguishes formal reform from functioning implementation; PDIA learning.",
+   "url": "https://www.hks.harvard.edu/building-state-capability-evidence-analysis-action-0",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "ANSELL2008",
+   "author": "Ansell, C.; Gash, A.",
+   "year": 2008,
+   "title": "Collaborative Governance in Theory and Practice",
+   "venue": "Journal of Public Administration Research and Theory 18(4), 543–571",
+   "strand": "Collaborative governance",
+   "contribution": "Conditions under which multi-stakeholder collaboration works.",
+   "url": "https://doi.org/10.1093/jopart/mum032",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "LEBLANC2015",
+   "author": "Le Blanc, D.",
+   "year": 2015,
+   "title": "Towards Integration at Last? The Sustainable Development Goals as a Network of Targets",
+   "venue": "Sustainable Development 23(3), 176–187",
+   "strand": "Policy coherence / linkages",
+   "contribution": "SDG targets form a network; linked objectives require integrated assessment.",
+   "url": "https://doi.org/10.1002/sd.1582",
+   "kind": "theory",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "OECD2024",
+   "author": "OECD",
+   "year": 2024,
+   "title": "Unleashing Policy Coherence to Achieve the SDGs: An Assessment of Governance Mechanisms",
+   "venue": "OECD Publishing",
+   "strand": "Policy coherence / implementation",
+   "contribution": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "url": "https://doi.org/10.1787/a1c8dbf8-en",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "OECD2019",
+   "author": "OECD",
+   "year": 2019,
+   "title": "Better Criteria for Better Evaluation: Revised Evaluation Criteria Definitions and Principles for Use",
+   "venue": "OECD Publishing",
+   "strand": "Evaluation / coherence",
+   "contribution": "Evaluation criteria include relevance, coherence, effectiveness, efficiency, impact and sustainability.",
+   "url": "https://doi.org/10.1787/15a9c26b-en",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "IMF2018",
+   "author": "IMF Fiscal Affairs Department",
+   "year": 2018,
+   "title": "Public Investment Management Assessment: Review and Update",
+   "venue": "IMF Policy Paper",
+   "strand": "Public finance / implementation",
+   "contribution": "Distinguishes investment planning, allocation and implementation; de jure vs de facto quality.",
+   "url": "https://www.imf.org/en/publications/policy-papers/issues/2018/05/10/pp042518public-investment-management-assessment-review-and-update",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "UNEP2024",
+   "author": "UNEP International Resource Panel",
+   "year": 2024,
+   "title": "Global Resources Outlook 2024",
+   "venue": "United Nations Environment Programme",
+   "strand": "Resources / sustainability",
+   "contribution": "Resource pressure, planetary impacts, distribution and transition.",
+   "url": "https://www.unep.org/en/publications/report/global-resources-outlook-2024",
+   "kind": "framework document",
+   "in_framework_pass": ""
+  },
+  {
+   "ref_id": "HALL2001",
+   "author": "Hall, P. A.; Soskice, D. (eds.)",
+   "year": 2001,
+   "title": "Varieties of Capitalism: The Institutional Foundations of Comparative Advantage",
+   "venue": "Oxford University Press",
+   "strand": "Institutional complementarities",
+   "contribution": "Institutions interact across skills, finance, work and innovation systems.",
+   "url": "https://doi.org/10.1093/0199247757.001.0001",
+   "kind": "theory",
+   "in_framework_pass": ""
+  }
+ ],
+ "reviewer_levers": [
+  {
+   "code": "P1",
+   "name": "Structural inequality and exclusion",
+   "pillar": "PFA",
+   "our_subpillar": "TSE",
+   "groups": [
+    "G-01",
+    "G-02",
+    "G-03"
+   ],
+   "families": [
+    "F-01",
+    "F-02",
+    "F-03",
+    "F-04",
+    "F-05"
+   ],
+   "secondary_families": [
+    "F-38",
+    "F-06",
+    "F-52"
+   ],
+   "note": "Same cut as our Tackling Structural Exclusion. The reviewer folds redistribution (tax, land reform) into P1; we hold tax under F-52 Revenue and spending systems, land redistribution under F-38 and transfers under F-06, with TSE as the lens for who is reached."
+  },
+  {
+   "code": "P2",
+   "name": "Education, skills, digital and health capabilities",
+   "pillar": "PFA",
+   "our_subpillar": "CAP",
+   "groups": [
+    "G-05",
+    "G-06"
+   ],
+   "families": [
+    "F-10",
+    "F-11",
+    "F-12"
+   ],
+   "secondary_families": [],
+   "note": "Our Knowledge and Long and healthy life groups. Household digital access sits in F-12 Skills for work; government digital delivery is F-53 and is not a capability of people."
+  },
+  {
+   "code": "P3",
+   "name": "Human security, social protection and resilience",
+   "pillar": "PFA",
+   "our_subpillar": "CAP",
+   "groups": [
+    "G-04"
+   ],
+   "families": [
+    "F-06",
+    "F-07",
+    "F-08",
+    "F-09"
+   ],
+   "secondary_families": [
+    "F-14",
+    "F-05",
+    "F-40",
+    "F-51"
+   ],
+   "note": "Our Decent standard of living group carries HDR 1994's economic, food and personal security. Shock-responsive protection is split in our tree between the protection itself (F-06), the pre-arranged finance (F-40) and the relief operation (F-51)."
+  },
+  {
+   "code": "P4",
+   "name": "Future generations, children and youth investment",
+   "pillar": "PFA",
+   "our_subpillar": "FUT",
+   "groups": [
+    "G-09"
+   ],
+   "families": [
+    "F-18",
+    "F-19"
+   ],
+   "secondary_families": [
+    "F-11",
+    "F-13",
+    "F-15"
+   ],
+   "note": "The reviewer's P4 mixes early childhood (our F-11, a Knowledge family) with intergenerational stewardship (our whole Future Generations subpillar, measured as inclusive wealth). We keep them apart: early childhood is a capability lever; the FUT subpillar is about not shifting costs to the future."
+  },
+  {
+   "code": "G1",
+   "name": "Export-led growth, trade and global value chains",
+   "pillar": "SMG",
+   "our_subpillar": "EXP",
+   "groups": [
+    "G-10",
+    "G-12"
+   ],
+   "families": [
+    "F-20",
+    "F-21",
+    "F-24"
+   ],
+   "secondary_families": [
+    "F-22"
+   ],
+   "note": "Our Reaching foreign markets and Foreign capital and networks groups; export upgrading itself is F-22 under Upgrading and innovation."
+  },
+  {
+   "code": "G2",
+   "name": "Domestic integration, connectivity and spatial development",
+   "pillar": "SMG",
+   "our_subpillar": "DOM",
+   "groups": [
+    "G-13",
+    "G-14"
+   ],
+   "families": [
+    "F-25",
+    "F-26",
+    "F-27",
+    "F-28",
+    "F-29"
+   ],
+   "secondary_families": [],
+   "note": "Same cut as our Domestic Integration subpillar (WDR 2009). We agree with the reviewer's boundary: interagency coordination is F-48 under governance, never domestic integration."
+  },
+  {
+   "code": "G3",
+   "name": "Inclusive growth, SMEs and community enterprise",
+   "pillar": "SMG",
+   "our_subpillar": "GTI",
+   "groups": [
+    "G-15",
+    "G-16",
+    "G-17"
+   ],
+   "families": [
+    "F-30",
+    "F-31",
+    "F-32",
+    "F-33",
+    "F-34",
+    "F-35",
+    "F-36"
+   ],
+   "secondary_families": [],
+   "note": "Our Growth That Includes subpillar, cut by the constraint (firm capability, finance, farm productivity, market access, jobs, mobility) rather than by firm size, which answers the reviewer's own warning that size is not productivity."
+  },
+  {
+   "code": "G4",
+   "name": "Innovation, technology, R&D and digital transformation",
+   "pillar": "SMG",
+   "our_subpillar": "EXP",
+   "groups": [
+    "G-11"
+   ],
+   "families": [
+    "F-22",
+    "F-23"
+   ],
+   "secondary_families": [
+    "F-46",
+    "F-53"
+   ],
+   "note": "Our Upgrading and innovation group (Growth Report: importing ideas). Rules for data, cyber and AI are F-46 under adaptive governance; government digital delivery is F-53."
+  },
+  {
+   "code": "G5",
+   "name": "Environmental sustainability, conservation and circular economy",
+   "pillar": "PFA",
+   "our_subpillar": "FUT",
+   "groups": [
+    "G-07",
+    "G-08"
+   ],
+   "families": [
+    "F-13",
+    "F-15",
+    "F-17"
+   ],
+   "secondary_families": [
+    "F-14"
+   ],
+   "note": "The reviewer keeps environment under Smarter Growth 'for operational convenience'. We place it under People-first as Future Generations, measured as natural capital, because the reviewer's own argument (ecological outcomes are independent ends) points there."
+  },
+  {
+   "code": "G6",
+   "name": "Resource, energy, food and water security",
+   "pillar": "SMG",
+   "our_subpillar": "FUT",
+   "groups": [
+    "G-08"
+   ],
+   "families": [
+    "F-16",
+    "F-07",
+    "F-26",
+    "F-18"
+   ],
+   "secondary_families": [
+    "F-40",
+    "F-14"
+   ],
+   "note": "Not one group in our tree. Water allocation is F-16 (natural capital), food security F-07 (a household capability), energy supply F-26 (an infrastructure service), resource rents F-18 (public wealth). The reviewer's G6 bundles four different protected units; the reviewer's own boundary rule (code by protected unit) argues for our split."
+  },
+  {
+   "code": "G7",
+   "name": "International and regional cooperation",
+   "pillar": "SMG",
+   "our_subpillar": "",
+   "groups": [],
+   "families": [],
+   "secondary_families": [
+    "F-20",
+    "F-24",
+    "F-16",
+    "F-26",
+    "F-39"
+   ],
+   "note": "No family in our tree. Cooperation appears as levers inside the family whose outcome it serves (LV-105 trade agreements, LV-103 transit agreements, LV-084 cross-border water, LV-132 regional energy links) and otherwise as an instrument tag. We keep it that way: a cooperation agreement has no outcome of its own, which is the reviewer's own rule that instruments are not families."
+  },
+  {
+   "code": "M1",
+   "name": "Public sector reform, governance and anti-corruption",
+   "pillar": "MCH",
+   "our_subpillar": "AGI",
+   "groups": [
+    "G-27",
+    "G-31",
+    "G-18"
+   ],
+   "families": [
+    "F-49",
+    "F-50",
+    "F-56",
+    "F-57",
+    "F-37"
+   ],
+   "secondary_families": [
+    "F-52"
+   ],
+   "note": "Spread across our Authorised flexibility (capacity), Accountability (transparency, horizontal checks) and Market rules groups. The reviewer's M1 is a residual bin; our split follows the Future-Ready Governance dimensions and WDR 2017."
+  },
+  {
+   "code": "M2",
+   "name": "Participation, collaboration and civic engagement",
+   "pillar": "MCH",
+   "our_subpillar": "ADA",
+   "groups": [
+    "G-25",
+    "G-33",
+    "G-32"
+   ],
+   "families": [
+    "F-47",
+    "F-59",
+    "F-58"
+   ],
+   "secondary_families": [],
+   "note": "Participatory decision-making (F-47), client power and community voice (F-59) and reform coalitions (F-58). Cross-government coordination (F-48) is the reviewer's cross-cutting coherence lens, not M2."
+  },
+  {
+   "code": "M3",
+   "name": "Democratic reform, rights, cohesion and conflict reduction",
+   "pillar": "MCH",
+   "our_subpillar": "REF",
+   "groups": [
+    "G-31",
+    "G-33"
+   ],
+   "families": [
+    "F-55",
+    "F-60",
+    "F-57"
+   ],
+   "secondary_families": [
+    "F-03",
+    "F-04"
+   ],
+   "note": "Electoral accountability, social cohesion and trust, horizontal accountability; rights of excluded groups sit in TSE (F-03, F-04)."
+  },
+  {
+   "code": "M4",
+   "name": "Strategic anticipation, adaptability and risk management",
+   "pillar": "MCH",
+   "our_subpillar": "ANT",
+   "groups": [
+    "G-19",
+    "G-20",
+    "G-21",
+    "G-23",
+    "G-24"
+   ],
+   "families": [
+    "F-39",
+    "F-40",
+    "F-41",
+    "F-42",
+    "F-44",
+    "F-45"
+   ],
+   "secondary_families": [],
+   "note": "Our Anticipation and Adaptation subpillars, cut into sensing, buffers, foresight, planning, feedback and experimentation. The reviewer's M4 asks for 'a capability to revise', which is our F-44 and F-45 exactly."
+  },
+  {
+   "code": "M5",
+   "name": "Monitoring, evaluation, targets and performance management",
+   "pillar": "MCH",
+   "our_subpillar": "ADA",
+   "groups": [
+    "G-23",
+    "G-22"
+   ],
+   "families": [
+    "F-44",
+    "F-43"
+   ],
+   "secondary_families": [],
+   "note": "Monitoring and corrective feedback (F-44) and statistics and data sharing (F-43). We agree with the reviewer's rule: data collection is not policy adjustment, hence F-43 and F-44 are separate."
+  },
+  {
+   "code": "M6",
+   "name": "Fiscal, budgetary and financial-sector reform",
+   "pillar": "MCH",
+   "our_subpillar": "AGI",
+   "groups": [
+    "G-28",
+    "G-09",
+    "G-15"
+   ],
+   "families": [
+    "F-52",
+    "F-18",
+    "F-31"
+   ],
+   "secondary_families": [
+    "F-40",
+    "F-37"
+   ],
+   "note": "Revenue and spending systems (F-52), the public balance sheet (F-18) and finance for small borrowers (F-31). The reviewer's M6 mixes the state's fiscal capacity with financial-sector development; we keep financial-sector development under growth."
+  },
+  {
+   "code": "M7",
+   "name": "Local empowerment and area-based development",
+   "pillar": "MCH",
+   "our_subpillar": "AGI",
+   "groups": [
+    "G-27",
+    "G-14",
+    "G-25"
+   ],
+   "families": [
+    "F-50",
+    "F-29",
+    "F-47"
+   ],
+   "secondary_families": [],
+   "note": "Local tiers and capacity (F-50), lagging regions and place-based development (F-29), participatory budgeting (F-47). We agree with the reviewer: location is not decentralised power, so F-29 (where) and F-50 (who decides) stay apart."
+  }
+ ],
+ "links": [
+  {
+   "reviewer_lever": "P1",
+   "ref_id": "WDR2006",
+   "role": "core",
+   "supports": "Unequal opportunity and wasted potential undermine development.",
+   "our_families": [
+    "F-01",
+    "F-02",
+    "F-03",
+    "F-04",
+    "F-05"
+   ],
+   "our_secondary_families": [
+    "F-38",
+    "F-06",
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "P1",
+   "ref_id": "UNDP1990",
+   "role": "core",
+   "supports": "Development as expanding human choices, rather than income alone.",
+   "our_families": [
+    "F-01",
+    "F-02",
+    "F-03",
+    "F-04",
+    "F-05"
+   ],
+   "our_secondary_families": [
+    "F-38",
+    "F-06",
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "P1",
+   "ref_id": "WDR2017",
+   "role": "complementary",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [
+    "F-01",
+    "F-02",
+    "F-03",
+    "F-04",
+    "F-05"
+   ],
+   "our_secondary_families": [
+    "F-38",
+    "F-06",
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "P1",
+   "ref_id": "ILO2024",
+   "role": "complementary",
+   "supports": "Social protection buffers shocks and supports a just transition.",
+   "our_families": [
+    "F-01",
+    "F-02",
+    "F-03",
+    "F-04",
+    "F-05"
+   ],
+   "our_secondary_families": [
+    "F-38",
+    "F-06",
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "P2",
+   "ref_id": "UNDP1990",
+   "role": "core",
+   "supports": "Development as expanding human choices, rather than income alone.",
+   "our_families": [
+    "F-10",
+    "F-11",
+    "F-12"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "P2",
+   "ref_id": "WDR2024",
+   "role": "core",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-10",
+    "F-11",
+    "F-12"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "P2",
+   "ref_id": "UNCTAD2026",
+   "role": "complementary",
+   "supports": "Measures eight linked dimensions of productive capacity, including institutions and structural change.",
+   "our_families": [
+    "F-10",
+    "F-11",
+    "F-12"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "P2",
+   "ref_id": "UNICEF2017",
+   "role": "complementary",
+   "supports": "Early childhood interventions and life-course capability formation.",
+   "our_families": [
+    "F-10",
+    "F-11",
+    "F-12"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "P3",
+   "ref_id": "UNDP1994",
+   "role": "core",
+   "supports": "Defines people-centred human security beyond territorial defence.",
+   "our_families": [
+    "F-06",
+    "F-07",
+    "F-08",
+    "F-09"
+   ],
+   "our_secondary_families": [
+    "F-14",
+    "F-05",
+    "F-40",
+    "F-51"
+   ]
+  },
+  {
+   "reviewer_lever": "P3",
+   "ref_id": "ILO2024",
+   "role": "core",
+   "supports": "Social protection buffers shocks and supports a just transition.",
+   "our_families": [
+    "F-06",
+    "F-07",
+    "F-08",
+    "F-09"
+   ],
+   "our_secondary_families": [
+    "F-14",
+    "F-05",
+    "F-40",
+    "F-51"
+   ]
+  },
+  {
+   "reviewer_lever": "P3",
+   "ref_id": "UNDP1990",
+   "role": "complementary",
+   "supports": "Development as expanding human choices, rather than income alone.",
+   "our_families": [
+    "F-06",
+    "F-07",
+    "F-08",
+    "F-09"
+   ],
+   "our_secondary_families": [
+    "F-14",
+    "F-05",
+    "F-40",
+    "F-51"
+   ]
+  },
+  {
+   "reviewer_lever": "P3",
+   "ref_id": "ANDREWS2017",
+   "role": "complementary",
+   "supports": "Distinguishes formal reform from functioning implementation; PDIA learning.",
+   "our_families": [
+    "F-06",
+    "F-07",
+    "F-08",
+    "F-09"
+   ],
+   "our_secondary_families": [
+    "F-14",
+    "F-05",
+    "F-40",
+    "F-51"
+   ]
+  },
+  {
+   "reviewer_lever": "P4",
+   "ref_id": "UNICEF2017",
+   "role": "core",
+   "supports": "Early childhood interventions and life-course capability formation.",
+   "our_families": [
+    "F-18",
+    "F-19"
+   ],
+   "our_secondary_families": [
+    "F-11",
+    "F-13",
+    "F-15"
+   ]
+  },
+  {
+   "reviewer_lever": "P4",
+   "ref_id": "WCED1987",
+   "role": "core",
+   "supports": "Development must account for needs of present and future generations.",
+   "our_families": [
+    "F-18",
+    "F-19"
+   ],
+   "our_secondary_families": [
+    "F-11",
+    "F-13",
+    "F-15"
+   ]
+  },
+  {
+   "reviewer_lever": "P4",
+   "ref_id": "UNDP1990",
+   "role": "complementary",
+   "supports": "Development as expanding human choices, rather than income alone.",
+   "our_families": [
+    "F-18",
+    "F-19"
+   ],
+   "our_secondary_families": [
+    "F-11",
+    "F-13",
+    "F-15"
+   ]
+  },
+  {
+   "reviewer_lever": "P4",
+   "ref_id": "WDR2006",
+   "role": "complementary",
+   "supports": "Unequal opportunity and wasted potential undermine development.",
+   "our_families": [
+    "F-18",
+    "F-19"
+   ],
+   "our_secondary_families": [
+    "F-11",
+    "F-13",
+    "F-15"
+   ]
+  },
+  {
+   "reviewer_lever": "G1",
+   "ref_id": "WDR2020",
+   "role": "core",
+   "supports": "GVCs connect trade, productivity, jobs and cross-border cooperation.",
+   "our_families": [
+    "F-20",
+    "F-21",
+    "F-24"
+   ],
+   "our_secondary_families": [
+    "F-22"
+   ]
+  },
+  {
+   "reviewer_lever": "G1",
+   "ref_id": "WDR2024",
+   "role": "core",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-20",
+    "F-21",
+    "F-24"
+   ],
+   "our_secondary_families": [
+    "F-22"
+   ]
+  },
+  {
+   "reviewer_lever": "G1",
+   "ref_id": "RODRIK2004",
+   "role": "complementary",
+   "supports": "Strategic public-private information discovery for industrial upgrading.",
+   "our_families": [
+    "F-20",
+    "F-21",
+    "F-24"
+   ],
+   "our_secondary_families": [
+    "F-22"
+   ]
+  },
+  {
+   "reviewer_lever": "G1",
+   "ref_id": "RODRIK2010",
+   "role": "complementary",
+   "supports": "Identify context-specific binding constraints before prescribing policy.",
+   "our_families": [
+    "F-20",
+    "F-21",
+    "F-24"
+   ],
+   "our_secondary_families": [
+    "F-22"
+   ]
+  },
+  {
+   "reviewer_lever": "G2",
+   "ref_id": "WDR2009",
+   "role": "core",
+   "supports": "Density, distance and division frame spatial economic integration.",
+   "our_families": [
+    "F-25",
+    "F-26",
+    "F-27",
+    "F-28",
+    "F-29"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G2",
+   "ref_id": "UNCTAD2026",
+   "role": "core",
+   "supports": "Measures eight linked dimensions of productive capacity, including institutions and structural change.",
+   "our_families": [
+    "F-25",
+    "F-26",
+    "F-27",
+    "F-28",
+    "F-29"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G2",
+   "ref_id": "WDR2024",
+   "role": "complementary",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-25",
+    "F-26",
+    "F-27",
+    "F-28",
+    "F-29"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G2",
+   "ref_id": "HALL2001",
+   "role": "complementary",
+   "supports": "Institutions interact across skills, finance, work and innovation systems.",
+   "our_families": [
+    "F-25",
+    "F-26",
+    "F-27",
+    "F-28",
+    "F-29"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G3",
+   "ref_id": "WDR2024",
+   "role": "core",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-30",
+    "F-31",
+    "F-32",
+    "F-33",
+    "F-34",
+    "F-35",
+    "F-36"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G3",
+   "ref_id": "WDR2006",
+   "role": "core",
+   "supports": "Unequal opportunity and wasted potential undermine development.",
+   "our_families": [
+    "F-30",
+    "F-31",
+    "F-32",
+    "F-33",
+    "F-34",
+    "F-35",
+    "F-36"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G3",
+   "ref_id": "RODRIK2004",
+   "role": "complementary",
+   "supports": "Strategic public-private information discovery for industrial upgrading.",
+   "our_families": [
+    "F-30",
+    "F-31",
+    "F-32",
+    "F-33",
+    "F-34",
+    "F-35",
+    "F-36"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G3",
+   "ref_id": "UNCTAD2026",
+   "role": "complementary",
+   "supports": "Measures eight linked dimensions of productive capacity, including institutions and structural change.",
+   "our_families": [
+    "F-30",
+    "F-31",
+    "F-32",
+    "F-33",
+    "F-34",
+    "F-35",
+    "F-36"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "G4",
+   "ref_id": "WDR2024",
+   "role": "core",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-22",
+    "F-23"
+   ],
+   "our_secondary_families": [
+    "F-46",
+    "F-53"
+   ]
+  },
+  {
+   "reviewer_lever": "G4",
+   "ref_id": "OSLO2018",
+   "role": "core",
+   "supports": "Operational definitions and measurement guidance for innovation.",
+   "our_families": [
+    "F-22",
+    "F-23"
+   ],
+   "our_secondary_families": [
+    "F-46",
+    "F-53"
+   ]
+  },
+  {
+   "reviewer_lever": "G4",
+   "ref_id": "FLANAGAN2011",
+   "role": "complementary",
+   "supports": "Multi-actor, multi-level and interacting-policy view of policy mixes.",
+   "our_families": [
+    "F-22",
+    "F-23"
+   ],
+   "our_secondary_families": [
+    "F-46",
+    "F-53"
+   ]
+  },
+  {
+   "reviewer_lever": "G4",
+   "ref_id": "UNCTAD2026",
+   "role": "complementary",
+   "supports": "Measures eight linked dimensions of productive capacity, including institutions and structural change.",
+   "our_families": [
+    "F-22",
+    "F-23"
+   ],
+   "our_secondary_families": [
+    "F-46",
+    "F-53"
+   ]
+  },
+  {
+   "reviewer_lever": "G5",
+   "ref_id": "WCED1987",
+   "role": "core",
+   "supports": "Development must account for needs of present and future generations.",
+   "our_families": [
+    "F-13",
+    "F-15",
+    "F-17"
+   ],
+   "our_secondary_families": [
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G5",
+   "ref_id": "UNEP2024",
+   "role": "core",
+   "supports": "Resource pressure, planetary impacts, distribution and transition.",
+   "our_families": [
+    "F-13",
+    "F-15",
+    "F-17"
+   ],
+   "our_secondary_families": [
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G5",
+   "ref_id": "ROGGE2016",
+   "role": "complementary",
+   "supports": "Distinguishes policy strategy, interacting instruments, processes and policy-mix characteristics.",
+   "our_families": [
+    "F-13",
+    "F-15",
+    "F-17"
+   ],
+   "our_secondary_families": [
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G5",
+   "ref_id": "OECD2024",
+   "role": "complementary",
+   "supports": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "our_families": [
+    "F-13",
+    "F-15",
+    "F-17"
+   ],
+   "our_secondary_families": [
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G6",
+   "ref_id": "UNEP2024",
+   "role": "core",
+   "supports": "Resource pressure, planetary impacts, distribution and transition.",
+   "our_families": [
+    "F-16",
+    "F-07",
+    "F-26",
+    "F-18"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G6",
+   "ref_id": "WCED1987",
+   "role": "core",
+   "supports": "Development must account for needs of present and future generations.",
+   "our_families": [
+    "F-16",
+    "F-07",
+    "F-26",
+    "F-18"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G6",
+   "ref_id": "WDR2024",
+   "role": "complementary",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-16",
+    "F-07",
+    "F-26",
+    "F-18"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G6",
+   "ref_id": "UNCTAD2026",
+   "role": "complementary",
+   "supports": "Measures eight linked dimensions of productive capacity, including institutions and structural change.",
+   "our_families": [
+    "F-16",
+    "F-07",
+    "F-26",
+    "F-18"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-14"
+   ]
+  },
+  {
+   "reviewer_lever": "G7",
+   "ref_id": "WDR2020",
+   "role": "core",
+   "supports": "GVCs connect trade, productivity, jobs and cross-border cooperation.",
+   "our_families": [],
+   "our_secondary_families": [
+    "F-20",
+    "F-24",
+    "F-16",
+    "F-26",
+    "F-39"
+   ]
+  },
+  {
+   "reviewer_lever": "G7",
+   "ref_id": "WDR2017",
+   "role": "core",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [],
+   "our_secondary_families": [
+    "F-20",
+    "F-24",
+    "F-16",
+    "F-26",
+    "F-39"
+   ]
+  },
+  {
+   "reviewer_lever": "G7",
+   "ref_id": "OECD2024",
+   "role": "complementary",
+   "supports": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "our_families": [],
+   "our_secondary_families": [
+    "F-20",
+    "F-24",
+    "F-16",
+    "F-26",
+    "F-39"
+   ]
+  },
+  {
+   "reviewer_lever": "G7",
+   "ref_id": "WDR2009",
+   "role": "complementary",
+   "supports": "Density, distance and division frame spatial economic integration.",
+   "our_families": [],
+   "our_secondary_families": [
+    "F-20",
+    "F-24",
+    "F-16",
+    "F-26",
+    "F-39"
+   ]
+  },
+  {
+   "reviewer_lever": "M1",
+   "ref_id": "WDR2017",
+   "role": "core",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [
+    "F-49",
+    "F-50",
+    "F-56",
+    "F-57",
+    "F-37"
+   ],
+   "our_secondary_families": [
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "M1",
+   "ref_id": "NORTH1990",
+   "role": "core",
+   "supports": "Institutions structure incentives and transaction costs.",
+   "our_families": [
+    "F-49",
+    "F-50",
+    "F-56",
+    "F-57",
+    "F-37"
+   ],
+   "our_secondary_families": [
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "M1",
+   "ref_id": "ANDREWS2017",
+   "role": "complementary",
+   "supports": "Distinguishes formal reform from functioning implementation; PDIA learning.",
+   "our_families": [
+    "F-49",
+    "F-50",
+    "F-56",
+    "F-57",
+    "F-37"
+   ],
+   "our_secondary_families": [
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "M1",
+   "ref_id": "LASCOUMES2007",
+   "role": "complementary",
+   "supports": "Policy instruments are not neutral; they shape governing relationships.",
+   "our_families": [
+    "F-49",
+    "F-50",
+    "F-56",
+    "F-57",
+    "F-37"
+   ],
+   "our_secondary_families": [
+    "F-52"
+   ]
+  },
+  {
+   "reviewer_lever": "M2",
+   "ref_id": "ANSELL2008",
+   "role": "core",
+   "supports": "Conditions under which multi-stakeholder collaboration works.",
+   "our_families": [
+    "F-47",
+    "F-59",
+    "F-58"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M2",
+   "ref_id": "WDR2017",
+   "role": "core",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [
+    "F-47",
+    "F-59",
+    "F-58"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M2",
+   "ref_id": "OECD2024",
+   "role": "complementary",
+   "supports": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "our_families": [
+    "F-47",
+    "F-59",
+    "F-58"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M2",
+   "ref_id": "RODRIK2004",
+   "role": "complementary",
+   "supports": "Strategic public-private information discovery for industrial upgrading.",
+   "our_families": [
+    "F-47",
+    "F-59",
+    "F-58"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M3",
+   "ref_id": "WDR2017",
+   "role": "core",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [
+    "F-55",
+    "F-60",
+    "F-57"
+   ],
+   "our_secondary_families": [
+    "F-03",
+    "F-04"
+   ]
+  },
+  {
+   "reviewer_lever": "M3",
+   "ref_id": "UNDP1990",
+   "role": "core",
+   "supports": "Development as expanding human choices, rather than income alone.",
+   "our_families": [
+    "F-55",
+    "F-60",
+    "F-57"
+   ],
+   "our_secondary_families": [
+    "F-03",
+    "F-04"
+   ]
+  },
+  {
+   "reviewer_lever": "M3",
+   "ref_id": "NORTH1990",
+   "role": "complementary",
+   "supports": "Institutions structure incentives and transaction costs.",
+   "our_families": [
+    "F-55",
+    "F-60",
+    "F-57"
+   ],
+   "our_secondary_families": [
+    "F-03",
+    "F-04"
+   ]
+  },
+  {
+   "reviewer_lever": "M3",
+   "ref_id": "WDR2006",
+   "role": "complementary",
+   "supports": "Unequal opportunity and wasted potential undermine development.",
+   "our_families": [
+    "F-55",
+    "F-60",
+    "F-57"
+   ],
+   "our_secondary_families": [
+    "F-03",
+    "F-04"
+   ]
+  },
+  {
+   "reviewer_lever": "M4",
+   "ref_id": "ANDREWS2017",
+   "role": "core",
+   "supports": "Distinguishes formal reform from functioning implementation; PDIA learning.",
+   "our_families": [
+    "F-39",
+    "F-40",
+    "F-41",
+    "F-42",
+    "F-44",
+    "F-45"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M4",
+   "ref_id": "ROGGE2016",
+   "role": "core",
+   "supports": "Distinguishes policy strategy, interacting instruments, processes and policy-mix characteristics.",
+   "our_families": [
+    "F-39",
+    "F-40",
+    "F-41",
+    "F-42",
+    "F-44",
+    "F-45"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M4",
+   "ref_id": "RODRIK2010",
+   "role": "complementary",
+   "supports": "Identify context-specific binding constraints before prescribing policy.",
+   "our_families": [
+    "F-39",
+    "F-40",
+    "F-41",
+    "F-42",
+    "F-44",
+    "F-45"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M4",
+   "ref_id": "OECD2024",
+   "role": "complementary",
+   "supports": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "our_families": [
+    "F-39",
+    "F-40",
+    "F-41",
+    "F-42",
+    "F-44",
+    "F-45"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M5",
+   "ref_id": "OECD2019",
+   "role": "core",
+   "supports": "Evaluation criteria include relevance, coherence, effectiveness, efficiency, impact and sustainability.",
+   "our_families": [
+    "F-44",
+    "F-43"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M5",
+   "ref_id": "OECD2024",
+   "role": "core",
+   "supports": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "our_families": [
+    "F-44",
+    "F-43"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M5",
+   "ref_id": "IMF2018",
+   "role": "complementary",
+   "supports": "Distinguishes investment planning, allocation and implementation; de jure vs de facto quality.",
+   "our_families": [
+    "F-44",
+    "F-43"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M5",
+   "ref_id": "ANDREWS2017",
+   "role": "complementary",
+   "supports": "Distinguishes formal reform from functioning implementation; PDIA learning.",
+   "our_families": [
+    "F-44",
+    "F-43"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M6",
+   "ref_id": "IMF2018",
+   "role": "core",
+   "supports": "Distinguishes investment planning, allocation and implementation; de jure vs de facto quality.",
+   "our_families": [
+    "F-52",
+    "F-18",
+    "F-31"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-37"
+   ]
+  },
+  {
+   "reviewer_lever": "M6",
+   "ref_id": "WDR2017",
+   "role": "core",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [
+    "F-52",
+    "F-18",
+    "F-31"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-37"
+   ]
+  },
+  {
+   "reviewer_lever": "M6",
+   "ref_id": "HOOD1983",
+   "role": "complementary",
+   "supports": "Information, authority, finance and organisation resources of government.",
+   "our_families": [
+    "F-52",
+    "F-18",
+    "F-31"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-37"
+   ]
+  },
+  {
+   "reviewer_lever": "M6",
+   "ref_id": "WDR2024",
+   "role": "complementary",
+   "supports": "Investment, infusion and innovation sequencing; contestability and productive transformation.",
+   "our_families": [
+    "F-52",
+    "F-18",
+    "F-31"
+   ],
+   "our_secondary_families": [
+    "F-40",
+    "F-37"
+   ]
+  },
+  {
+   "reviewer_lever": "M7",
+   "ref_id": "WDR2009",
+   "role": "core",
+   "supports": "Density, distance and division frame spatial economic integration.",
+   "our_families": [
+    "F-50",
+    "F-29",
+    "F-47"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M7",
+   "ref_id": "WDR2017",
+   "role": "core",
+   "supports": "Credible commitment, coordination, cooperation, power and incentives.",
+   "our_families": [
+    "F-50",
+    "F-29",
+    "F-47"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M7",
+   "ref_id": "ANSELL2008",
+   "role": "complementary",
+   "supports": "Conditions under which multi-stakeholder collaboration works.",
+   "our_families": [
+    "F-50",
+    "F-29",
+    "F-47"
+   ],
+   "our_secondary_families": []
+  },
+  {
+   "reviewer_lever": "M7",
+   "ref_id": "OECD2024",
+   "role": "complementary",
+   "supports": "Institutional mechanisms for policy coherence across sectors and tiers.",
+   "our_families": [
+    "F-50",
+    "F-29",
+    "F-47"
+   ],
+   "our_secondary_families": []
+  }
+ ],
+ "cross_cutting_lenses": {
+  "policy coherence": [
+   "F-48"
+  ],
+  "distribution and gender": [
+   "F-01",
+   "F-02",
+   "F-03",
+   "F-04",
+   "F-05"
+  ],
+  "intergenerational equity": [
+   "F-13",
+   "F-14",
+   "F-15",
+   "F-16",
+   "F-17",
+   "F-18",
+   "F-19"
+  ],
+  "environmental impact": [
+   "F-15",
+   "F-16",
+   "F-17"
+  ],
+  "spatial incidence": [
+   "F-29"
+  ]
+ }
+}

@@ -1,0 +1,432 @@
+country,doc_type,from_plan,to_plan,from_period,to_period,node_id,level,family,mechanism,status,n_from,n_to
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-01,L2,"Exclusion from markets: labour, informality and workers' rights",,carried,2,5
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-02,L2,Exclusion from services and entitlements,,carried,5,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-03,L2,Exclusion from social and political spaces,,carried,6,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-05,L2,Displaced and uprooted populations,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-06,L2,Economic security,,carried,18,10
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-07,L2,Food security,,carried,9,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-08,L2,Personal security,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-09,L2,Living environment and basic services,,carried,5,14
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-10,L2,Health security,,carried,10,9
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-11,L2,Knowledge: schooling and higher education,,carried,29,26
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-12,L2,Skills for work,,carried,24,34
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-13,L2,Climate stabilisation and just transition,,carried,25,13
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-14,L2,Climate risk to assets and people,,carried,19,20
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-15,L2,Living natural capital,,carried,24,19
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-16,L2,Water resources,,carried,10,15
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-17,L2,Environmental quality,,carried,26,28
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-18,L2,Public wealth: resource rents and the balance sheet,,carried,4,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-19,L2,Human and demographic capital,,carried,2,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-20,L2,Cost of reaching foreign markets,,carried,23,55
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-21,L2,Tourism export destinations,,carried,4,34
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-22,L2,Self-discovery and export upgrading,,carried,17,22
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-23,L2,Innovation system and appropriability,,carried,32,61
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-24,L2,"Foreign capital, knowledge and networks",,carried,18,26
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-25,L2,Internal connectivity,,carried,9,42
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-26,L2,Infrastructure services,,carried,5,32
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-27,L2,Production linkages and clusters,,carried,12,25
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-28,L2,Urban systems,,carried,13,21
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-29,L2,Lagging regions and place-based development,,carried,11,19
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-30,L2,Small-firm capability and business formalisation,,carried,4,13
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-31,L2,Finance for small borrowers and savers,,carried,13,14
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-32,L2,Smallholder productivity,,carried,26,25
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-33,L2,Market participation of small producers,,carried,5,17
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-34,L2,Jobs and job matching,,dropped,4,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-35,L2,Displaced workers and local adjustment,,dropped,3,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-36,L2,Labour mobility and remittances,,carried,4,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-37,L2,"Competition, contracts and state ownership",,carried,4,10
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-38,L2,Land rights and land markets,,carried,8,11
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-39,L2,Hazard and exposure sensing,,carried,10,6
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-40,L2,Contingency buffers and pre-arranged finance,,carried,5,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-41,L2,Scenario and futures work,,carried,5,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-42,L2,Development planning,,carried,14,25
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-43,L2,Statistics and data sharing,,carried,22,24
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-44,L2,Monitoring and corrective feedback,,carried,3,21
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-45,L2,Policy experimentation,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-46,L2,Regulatory adaptation to technology,,carried,1,5
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-47,L2,Participatory decision-making,,carried,18,19
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-48,L2,Coordination across agencies and levels,,carried,36,51
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-49,L2,Delegated management autonomy,,new,0,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-50,L2,"Administrative, local and regulatory capacity",,carried,31,49
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-51,L2,"Surge, continuity and relief",,carried,6,9
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-52,L2,Revenue and spending systems,,carried,12,15
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-53,L2,Digital delivery and DPI,,carried,1,7
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-54,L2,Crisis and risk communication,,carried,3,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-55,L2,Electoral accountability,,carried,2,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-56,L2,Information and transparency,,carried,9,12
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-57,L2,Horizontal accountability,,carried,6,21
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-58,L2,Reform commitment and coalitions,,carried,8,10
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-59,L2,Client power and community voice,,carried,13,13
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,F-60,L2,Social cohesion and trust,,carried,13,6
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-01,L1,,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-02,L1,,,carried,1,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-03,L1,,,new,0,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-04,L1,,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-05,L1,,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-06,L1,,,carried,2,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-07,L1,,,carried,4,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-08,L1,,,carried,6,5
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-10,L1,,,carried,6,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-11,L1,,,carried,13,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-13,L1,,,carried,9,8
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-14,L1,,,carried,1,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-15,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-16,L1,,,carried,5,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-17,L1,,,dropped,2,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-18,L1,,,dropped,2,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-19,L1,,,carried,2,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-21,L1,,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-27,L1,,,new,0,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-28,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,G-31,L1,,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,H-GOAL,GOAL,,,carried,25,10
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,H-SEC,STD,,,carried,23,10
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,H-SGO,STD,,,carried,11,16
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,H-SPE,STD,,,carried,17,27
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-003,L3,Exclusion from social and political spaces,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-004,L3,Exclusion from services and entitlements,,new,0,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-025,L3,Economic security,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-026,L3,Economic security,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-034,L3,Skills for work,,carried,4,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-038,L3,Knowledge: schooling and higher education,,carried,2,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-039,L3,Knowledge: schooling and higher education,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-045,L3,Health security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-048,L3,Health security,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-051,L3,Health security,,new,0,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-052,L3,Health security,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-054,L3,Food security,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-056,L3,Food security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-065,L3,Personal security,,carried,1,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-068,L3,Climate stabilisation and just transition,,carried,2,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-069,L3,Climate stabilisation and just transition,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-071,L3,Climate stabilisation and just transition,,carried,3,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-075,L3,Living natural capital,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-076,L3,Living natural capital,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-077,L3,Living natural capital,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-080,L3,Environmental quality,,carried,4,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-083,L3,Environmental quality,,carried,2,7
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-085,L3,Environmental quality,,carried,5,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-088,L3,Climate risk to assets and people,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-098,L3,Public wealth: resource rents and the balance sheet,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-100,L3,Human and demographic capital,,dropped,3,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-103,L3,Human and demographic capital,,new,0,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-104,L3,Human and demographic capital,,new,0,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-105,L3,Water resources,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-107,L3,Water resources,,carried,1,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-115,L3,Cost of reaching foreign markets,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-116,L3,Cost of reaching foreign markets,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-118,L3,Cost of reaching foreign markets,,carried,3,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-123,L3,"Foreign capital, knowledge and networks",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-124,L3,"Foreign capital, knowledge and networks",,new,0,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-125,L3,Tourism export destinations,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-126,L3,Tourism export destinations,,new,0,6
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-129,L3,Innovation system and appropriability,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-131,L3,Innovation system and appropriability,,carried,5,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-132,L3,Innovation system and appropriability,,carried,2,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-141,L3,Internal connectivity,,new,0,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-143,L3,Urban systems,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-148,L3,Infrastructure services,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-149,L3,Infrastructure services,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-151,L3,Production linkages and clusters,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-152,L3,Production linkages and clusters,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-153,L3,Production linkages and clusters,,carried,2,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-156,L3,Market participation of small producers,,carried,1,3
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-157,L3,Market participation of small producers,,dropped,2,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-161,L3,Innovation system and appropriability,,dropped,4,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-163,L3,Smallholder productivity,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-165,L3,Small-firm capability and business formalisation,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-168,L3,Small-firm capability and business formalisation,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-169,L3,"Competition, contracts and state ownership",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-170,L3,"Competition, contracts and state ownership",,new,0,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-171,L3,"Competition, contracts and state ownership",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-174,L3,Finance for small borrowers and savers,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-194,L3,Land rights and land markets,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-195,L3,Land rights and land markets,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-197,L3,Land rights and land markets,,dropped,2,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-206,L3,Hazard and exposure sensing,,new,0,2
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-207,L3,Hazard and exposure sensing,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-210,L3,Statistics and data sharing,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-217,L3,Monitoring and corrective feedback,,carried,9,8
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-219,L3,Policy experimentation,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-220,L3,Coordination across agencies and levels,,carried,13,4
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-221,L3,Regulatory adaptation to technology,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-222,L3,Regulatory adaptation to technology,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-225,L3,"Administrative, local and regulatory capacity",,carried,1,5
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-227,L3,Digital delivery and DPI,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-229,L3,"Administrative, local and regulatory capacity",,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-231,L3,"Administrative, local and regulatory capacity",,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-233,L3,Revenue and spending systems,,dropped,2,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-235,L3,Revenue and spending systems,,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-237,L3,Revenue and spending systems,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-238,L3,Revenue and spending systems,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-240,L3,"Administrative, local and regulatory capacity",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-241,L3,"Administrative, local and regulatory capacity",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-243,L3,"Surge, continuity and relief",,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-244,L3,"Surge, continuity and relief",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-245,L3,"Surge, continuity and relief",,new,0,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-247,L3,Participatory decision-making,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-248,L3,Client power and community voice,,dropped,1,0
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-249,L3,Client power and community voice,,carried,1,1
+Thailand,ndp,thailand_ndp_2012-2016,thailand_ndp_2017-2021,2012-2016,2017-2021,L3-252,L3,Information and transparency,,carried,2,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-01,L2,"Exclusion from markets: labour, informality and workers' rights",,dropped,5,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-02,L2,Exclusion from services and entitlements,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-03,L2,Exclusion from social and political spaces,,carried,2,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-05,L2,Displaced and uprooted populations,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-06,L2,Economic security,,carried,10,8
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-07,L2,Food security,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-08,L2,Personal security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-09,L2,Living environment and basic services,,dropped,14,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-10,L2,Health security,,dropped,9,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-11,L2,Knowledge: schooling and higher education,,carried,26,9
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-12,L2,Skills for work,,carried,34,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-13,L2,Climate stabilisation and just transition,,carried,13,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-14,L2,Climate risk to assets and people,,carried,20,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-15,L2,Living natural capital,,carried,19,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-16,L2,Water resources,,carried,15,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-17,L2,Environmental quality,,carried,28,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-18,L2,Public wealth: resource rents and the balance sheet,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-19,L2,Human and demographic capital,,carried,1,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-20,L2,Cost of reaching foreign markets,,dropped,55,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-21,L2,Tourism export destinations,,carried,34,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-22,L2,Self-discovery and export upgrading,,carried,22,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-23,L2,Innovation system and appropriability,,carried,61,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-24,L2,"Foreign capital, knowledge and networks",,dropped,26,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-25,L2,Internal connectivity,,carried,42,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-26,L2,Infrastructure services,,dropped,32,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-27,L2,Production linkages and clusters,,dropped,25,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-28,L2,Urban systems,,carried,21,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-29,L2,Lagging regions and place-based development,,dropped,19,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-30,L2,Small-firm capability and business formalisation,,carried,13,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-31,L2,Finance for small borrowers and savers,,dropped,14,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-32,L2,Smallholder productivity,,carried,25,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-33,L2,Market participation of small producers,,carried,17,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-36,L2,Labour mobility and remittances,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-37,L2,"Competition, contracts and state ownership",,dropped,10,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-38,L2,Land rights and land markets,,dropped,11,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-39,L2,Hazard and exposure sensing,,dropped,6,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-40,L2,Contingency buffers and pre-arranged finance,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-41,L2,Scenario and futures work,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-42,L2,Development planning,,dropped,25,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-43,L2,Statistics and data sharing,,dropped,24,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-44,L2,Monitoring and corrective feedback,,dropped,21,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-45,L2,Policy experimentation,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-46,L2,Regulatory adaptation to technology,,carried,5,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-47,L2,Participatory decision-making,,dropped,19,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-48,L2,Coordination across agencies and levels,,dropped,51,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-49,L2,Delegated management autonomy,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-50,L2,"Administrative, local and regulatory capacity",,carried,49,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-51,L2,"Surge, continuity and relief",,carried,9,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-52,L2,Revenue and spending systems,,dropped,15,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-53,L2,Digital delivery and DPI,,carried,7,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-54,L2,Crisis and risk communication,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-55,L2,Electoral accountability,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-56,L2,Information and transparency,,carried,12,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-57,L2,Horizontal accountability,,dropped,21,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-58,L2,Reform commitment and coalitions,,dropped,10,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-59,L2,Client power and community voice,,dropped,13,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,F-60,L2,Social cohesion and trust,,dropped,6,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-01,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-02,L1,,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-03,L1,,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-04,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-05,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-06,L1,,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-07,L1,,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-08,L1,,,dropped,5,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-10,L1,,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-11,L1,,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-13,L1,,,dropped,8,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-14,L1,,,carried,3,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-16,L1,,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-19,L1,,,carried,1,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-21,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-24,L1,,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-27,L1,,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,G-31,L1,,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,H-GOAL,GOAL,,,carried,10,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,H-SEC,STD,,,carried,10,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,H-SGO,STD,,,dropped,16,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,H-SPE,STD,,,carried,27,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-004,L3,Exclusion from services and entitlements,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-025,L3,Economic security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-026,L3,Economic security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-034,L3,Skills for work,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-038,L3,Knowledge: schooling and higher education,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-039,L3,Knowledge: schooling and higher education,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-048,L3,Health security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-051,L3,Health security,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-052,L3,Health security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-054,L3,Food security,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-065,L3,Personal security,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-068,L3,Climate stabilisation and just transition,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-071,L3,Climate stabilisation and just transition,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-077,L3,Living natural capital,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-080,L3,Environmental quality,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-083,L3,Environmental quality,,dropped,7,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-085,L3,Environmental quality,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-103,L3,Human and demographic capital,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-104,L3,Human and demographic capital,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-107,L3,Water resources,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-115,L3,Cost of reaching foreign markets,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-118,L3,Cost of reaching foreign markets,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-123,L3,"Foreign capital, knowledge and networks",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-124,L3,"Foreign capital, knowledge and networks",,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-125,L3,Tourism export destinations,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-126,L3,Tourism export destinations,,dropped,6,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-131,L3,Innovation system and appropriability,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-132,L3,Innovation system and appropriability,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-141,L3,Internal connectivity,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-143,L3,Urban systems,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-148,L3,Infrastructure services,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-149,L3,Infrastructure services,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-151,L3,Production linkages and clusters,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-152,L3,Production linkages and clusters,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-153,L3,Production linkages and clusters,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-156,L3,Market participation of small producers,,dropped,3,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-168,L3,Small-firm capability and business formalisation,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-169,L3,"Competition, contracts and state ownership",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-170,L3,"Competition, contracts and state ownership",,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-171,L3,"Competition, contracts and state ownership",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-194,L3,Land rights and land markets,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-206,L3,Hazard and exposure sensing,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-207,L3,Hazard and exposure sensing,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-210,L3,Statistics and data sharing,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-217,L3,Monitoring and corrective feedback,,dropped,8,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-219,L3,Policy experimentation,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-220,L3,Coordination across agencies and levels,,dropped,4,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-221,L3,Regulatory adaptation to technology,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-222,L3,Regulatory adaptation to technology,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-225,L3,"Administrative, local and regulatory capacity",,dropped,5,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-227,L3,Digital delivery and DPI,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-231,L3,"Administrative, local and regulatory capacity",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-235,L3,Revenue and spending systems,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-237,L3,Revenue and spending systems,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-238,L3,Revenue and spending systems,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-240,L3,"Administrative, local and regulatory capacity",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-241,L3,"Administrative, local and regulatory capacity",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-244,L3,"Surge, continuity and relief",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-245,L3,"Surge, continuity and relief",,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-247,L3,Participatory decision-making,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-249,L3,Client power and community voice,,dropped,1,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,L3-252,L3,Information and transparency,,dropped,2,0
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-002,L3,"Exclusion from markets: labour, informality and workers' rights",,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-005,L3,"Exclusion from markets: labour, informality and workers' rights",,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-007,L3,"Exclusion from markets: labour, informality and workers' rights",,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-008,L3,Exclusion from services and entitlements,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-016,L3,"Violence, coercion and denial of dignity",,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-022,L3,Economic security,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-023,L3,Economic security,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-027,L3,Economic security,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-035,L3,Personal security,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-041,L3,Living environment and basic services,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-042,L3,Health security,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-043,L3,Health security,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-044,L3,Health security,,new,0,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-045,L3,Health security,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-053,L3,Knowledge: schooling and higher education,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-054,L3,Knowledge: schooling and higher education,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-055,L3,Knowledge: schooling and higher education,,new,0,8
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-056,L3,Knowledge: schooling and higher education,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-058,L3,Knowledge: schooling and higher education,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-059,L3,Skills for work,,new,0,11
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-061,L3,Skills for work,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-062,L3,Skills for work,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-063,L3,Skills for work,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-064,L3,Climate stabilisation and just transition,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-065,L3,Climate stabilisation and just transition,,new,0,8
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-066,L3,Climate stabilisation and just transition,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-067,L3,Climate stabilisation and just transition,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-068,L3,Climate stabilisation and just transition,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-069,L3,Climate risk to assets and people,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-071,L3,Climate risk to assets and people,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-072,L3,Climate risk to assets and people,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-077,L3,Living natural capital,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-079,L3,Living natural capital,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-081,L3,Water resources,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-083,L3,Water resources,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-084,L3,Water resources,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-087,L3,Environmental quality,,new,0,9
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-088,L3,Environmental quality,,new,0,8
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-089,L3,Environmental quality,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-099,L3,Human and demographic capital,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-100,L3,Human and demographic capital,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-101,L3,Cost of reaching foreign markets,,new,0,11
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-102,L3,Cost of reaching foreign markets,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-105,L3,Cost of reaching foreign markets,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-107,L3,Tourism export destinations,,new,0,12
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-108,L3,Tourism export destinations,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-111,L3,Self-discovery and export upgrading,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-112,L3,Self-discovery and export upgrading,,new,0,13
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-114,L3,Innovation system and appropriability,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-115,L3,Innovation system and appropriability,,new,0,9
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-117,L3,Innovation system and appropriability,,new,0,12
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-118,L3,Innovation system and appropriability,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-119,L3,Innovation system and appropriability,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-120,L3,"Foreign capital, knowledge and networks",,new,0,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-121,L3,"Foreign capital, knowledge and networks",,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-122,L3,"Foreign capital, knowledge and networks",,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-124,L3,Internal connectivity,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-126,L3,Internal connectivity,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-127,L3,Internal connectivity,,new,0,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-128,L3,Internal connectivity,,new,0,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-129,L3,Infrastructure services,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-130,L3,Infrastructure services,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-131,L3,Infrastructure services,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-132,L3,Infrastructure services,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-133,L3,Production linkages and clusters,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-134,L3,Production linkages and clusters,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-135,L3,Production linkages and clusters,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-136,L3,Urban systems,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-137,L3,Urban systems,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-138,L3,Urban systems,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-139,L3,Lagging regions and place-based development,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-140,L3,Lagging regions and place-based development,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-141,L3,Small-firm capability and business formalisation,,new,0,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-142,L3,Small-firm capability and business formalisation,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-143,L3,Small-firm capability and business formalisation,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-144,L3,Small-firm capability and business formalisation,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-149,L3,Smallholder productivity,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-150,L3,Smallholder productivity,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-154,L3,Market participation of small producers,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-155,L3,Market participation of small producers,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-156,L3,Market participation of small producers,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-157,L3,Jobs and job matching,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-163,L3,Labour mobility and remittances,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-164,L3,"Competition, contracts and state ownership",,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-169,L3,Land rights and land markets,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-170,L3,Hazard and exposure sensing,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-171,L3,Hazard and exposure sensing,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-172,L3,Hazard and exposure sensing,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-175,L3,Contingency buffers and pre-arranged finance,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-176,L3,Contingency buffers and pre-arranged finance,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-177,L3,Scenario and futures work,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-178,L3,Development planning,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-179,L3,Statistics and data sharing,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-180,L3,Statistics and data sharing,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-181,L3,Statistics and data sharing,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-182,L3,Monitoring and corrective feedback,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-183,L3,Monitoring and corrective feedback,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-184,L3,Policy experimentation,,new,0,6
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-186,L3,Regulatory adaptation to technology,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-188,L3,Regulatory adaptation to technology,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-189,L3,Participatory decision-making,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-190,L3,Coordination across agencies and levels,,new,0,15
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-192,L3,"Administrative, local and regulatory capacity",,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-193,L3,"Administrative, local and regulatory capacity",,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-194,L3,"Administrative, local and regulatory capacity",,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-195,L3,"Administrative, local and regulatory capacity",,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-196,L3,"Administrative, local and regulatory capacity",,new,0,10
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-197,L3,"Surge, continuity and relief",,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-199,L3,"Surge, continuity and relief",,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-201,L3,Revenue and spending systems,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-202,L3,Revenue and spending systems,,new,0,2
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-203,L3,Revenue and spending systems,,new,0,5
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-205,L3,Revenue and spending systems,,new,0,4
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-206,L3,Revenue and spending systems,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-208,L3,Digital delivery and DPI,,new,0,9
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-209,L3,Crisis and risk communication,,new,0,3
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-213,L3,Information and transparency,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-214,L3,Information and transparency,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-222,L3,Client power and community voice,,new,0,7
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-223,L3,Client power and community voice,,new,0,1
+Thailand,ndp,thailand_ndp_2017-2021,thailand_ndp_2023-2027,2017-2021,2023-2027,LV-225,L3,Social cohesion and trust,,new,0,2

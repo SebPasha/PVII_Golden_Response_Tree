@@ -1,0 +1,99 @@
+{
+ "plan_id": "thailand_ndp_2023-2027",
+ "started": "2026-11-03T11:11:28",
+ "file": "data/sources/thailand/ndp/Thailand 13th Plan 2023-27 THAI.pdf",
+ "pages": null,
+ "paragraphs": null,
+ "prompts": {
+  "C": "472ffed9545506c3",
+  "C_reduce": "474836ee6328a250",
+  "E": "0e7890401c6a900d",
+  "F": "31d5065f3b590ccf",
+  "M": "1ea1b1b25b613c47"
+ },
+ "models": {
+  "C": "gpt-5.4",
+  "C_reduce": "gpt-5.4",
+  "E": "gpt-5.4-mini",
+  "F": "gpt-5.4",
+  "M": "gpt-5.4"
+ },
+ "dry_run": false,
+ "fold": {
+  "rows": 562,
+  "strategies": 519,
+  "errors": []
+ },
+ "map": {
+  "tree_version": "v4",
+  "strategies": 519,
+  "proposals": 0,
+  "errors": [],
+  "relations": {
+   "placed": 519
+  },
+  "levels": {
+   "L3": 439,
+   "GOAL": 5,
+   "L2": 67,
+   "L1": 3,
+   "STD": 5
+  },
+  "response_orientation": {
+   "BAU": 265,
+   "transformative": 206,
+   "proactive": 48
+  },
+  "subpillar": {
+   "Anticipation and Strategic Foresight": 32,
+   "": 5,
+   "Export-led": 110,
+   "Adaptability and Course Correction": 41,
+   "Agility and Delivery Capability": 61,
+   "Future Generations": 74,
+   "Enhancing Capabilities": 78,
+   "Tackling Structural Exclusion": 11,
+   "Domestic Integration": 40,
+   "Growth through Inclusion": 49,
+   "Reform Leadership, Coalitions and Civic Engagement": 13,
+   "General Economy": 2,
+   "General People": 3
+  },
+  "group_only": 3
+ },
+ "ledger": {
+  "stages": {
+   "F": {
+    "calls": 0,
+    "cache_hits": 17,
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "errors": 0,
+    "est_in": 0,
+    "est_out": 0,
+    "est_cost": 0.0,
+    "seconds": 0.0,
+    "p95_seconds": 0.0
+   },
+   "M": {
+    "calls": 21,
+    "cache_hits": 0,
+    "in": 494674,
+    "out": 34652,
+    "cost": 0.9648625000000001,
+    "errors": 0,
+    "est_in": 0,
+    "est_out": 0,
+    "est_cost": 0.0,
+    "seconds": 88.1,
+    "p95_seconds": 21.0
+   }
+  },
+  "calls": 21,
+  "cost": 0.964863,
+  "cache_hits": 17,
+  "dry_run": false
+ },
+ "finished": "2026-11-03T11:12:57"
+}

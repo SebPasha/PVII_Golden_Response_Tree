@@ -1,0 +1,317 @@
+[
+ {
+  "lever_id": "LV-011",
+  "thesis_refs": [
+   {
+    "cite": "Beaman et al. 2012, Female Leadership Raises Aspirations and Educational Attainment for Girls: A Policy Experiment in India",
+    "design": "quasi-experimental",
+    "finding": "Randomly assigned reservation of village council leadership for women in West Bengal closed part of the gender gap in aspirations and erased the gender gap in adolescent educational attainment."
+   },
+   {
+    "cite": "Macchiavello et al. 2020, Challenges of Change: An Experiment Promoting Women to Managerial Roles in the Bangladeshi Garment Sector",
+    "design": "RCT",
+    "finding": "Trained marginal female supervisor candidates, randomly assigned to lines, were initially less productive than male candidates, but the gaps disappeared after four to six months."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-018",
+  "thesis_refs": [
+   {
+    "cite": "Bryan, Chowdhury & Mobarak 2014, Underinvestment in a Profitable Technology: The Case of Seasonal Migration in Bangladesh",
+    "design": "RCT",
+    "finding": "An $8.50 incentive induced 22 percent of rural Bangladeshi households to send a lean-season migrant, raised origin consumption and raised re-migration one and three years later."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-024",
+  "thesis_refs": [
+   {
+    "cite": "Hussam, Rigol & Roth 2022, Targeting High Ability Entrepreneurs Using Community Information",
+    "design": "RCT",
+    "finding": "In a cash grant experiment in India, community rankings identified microentrepreneurs with higher returns to capital, but peers distorted rankings when they influenced allocation; simple incentive mechanisms realigned them."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-025",
+  "thesis_refs": [
+   {
+    "cite": "Egger et al. 2022, General Equilibrium Effects of Cash Transfers: Experimental Evidence from Kenya",
+    "design": "RCT",
+    "finding": "One-time unconditional cash transfers of about USD 1,000 to poor rural Kenyan households raised recipients' consumption and assets, with large spillovers to non-recipients and firms and minimal price inflation."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-026",
+  "thesis_refs": [
+   {
+    "cite": "Bandiera et al. 2017, Labor Markets and Poverty in Village Economies",
+    "design": "RCT",
+    "finding": "A nationwide Bangladeshi programme transferring livestock and skills to the poorest women moved them into livestock rearing and raised their earnings, assets and consumption for at least four years."
+   },
+   {
+    "cite": "Balboni et al. 2022, Why Do People Stay Poor?",
+    "design": "RCT",
+    "finding": "Around a randomised livestock transfer to ultra-poor Bangladeshi households, those pushed above an asset threshold accumulated assets and moved into better occupations, while those below slid back."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-041",
+  "thesis_refs": [
+   {
+    "cite": "Chetty, Hendren & Katz 2016, The Effects of Exposure to Better Neighborhoods on Children: New Evidence from the Moving to Opportunity Experiment",
+    "design": "RCT",
+    "finding": "Housing vouchers to move to lower-poverty neighbourhoods raised college attendance and earnings for children who moved before age 13, with slightly negative effects for adolescents."
+   },
+   {
+    "cite": "Kling, Liebman & Katz 2007, Experimental Analysis of Neighborhood Effects",
+    "design": "RCT",
+    "finding": "Moving to Opportunity housing vouchers moved families to safer, lower-poverty neighbourhoods but had no significant overall effect on adult economic self-sufficiency or physical health."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-052",
+  "thesis_refs": [
+   {
+    "cite": "Duflo 2001, Schooling and Labor Market Consequences of School Construction in Indonesia",
+    "design": "quasi-experimental",
+    "finding": "Each INPRES primary school built per 1,000 children raised education by 0.12 to 0.19 years and wages by 1.5 to 2.7 percent for exposed cohorts."
+   },
+   {
+    "cite": "Duflo 2004, The Medium Run Effects of Educational Expansion: Evidence from a Large School Construction Program in Indonesia",
+    "design": "quasi-experimental",
+    "finding": "The INPRES school construction programme raised education for young cohorts, and the resulting rise in primary graduates lowered older cohorts' wages and raised their formal participation."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-054",
+  "thesis_refs": [
+   {
+    "cite": "Card, Domnisoru & Taylor 2022, The Intergenerational Transmission of Human Capital: Evidence from the Golden Age of Upward Mobility",
+    "design": "quasi-experimental",
+    "finding": "Upward educational mobility in 1940 was strongly tied to teacher wages, including across Southern state borders where minimum teacher salary laws created sharp wage differences."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-060",
+  "thesis_refs": [
+   {
+    "cite": "Hardy & McCasland 2023, Are Small Firms Labor Constrained? Experimental Evidence from Ghana",
+    "design": "RCT",
+    "finding": "Randomly placing unemployed young people as apprentices with small Ghanaian firms raised firm size by about half a worker and profits by about 10 percent per placement offered."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-061",
+  "thesis_refs": [
+   {
+    "cite": "Carranza et al. 2022, Job Search and Hiring with Limited Information about Workseekers' Skills",
+    "design": "RCT",
+    "finding": "Giving South African workseekers skill assessment results they can credibly share with firms raised their employment and earnings and better aligned their beliefs and search."
+   },
+   {
+    "cite": "Bassi & Nansamba 2022, Screening and Signalling Non-Cognitive Skills: Experimental Evidence from Uganda",
+    "design": "RCT",
+    "finding": "Disclosing certificates on young Ugandan workers' non-cognitive skills during job interviews raised expectations and managers' assessments, increased assortative matching and raised earnings conditional on employment."
+   },
+   {
+    "cite": "Abebe et al. 2021, Anonymity or Distance? Job Search and Labour Market Exclusion in a Growing African City",
+    "design": "RCT",
+    "finding": "A job application workshop helping young jobseekers signal skills raised formal and stable employment and, four years later, earnings, while transport subsidy effects dissipated."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-105",
+  "thesis_refs": [
+   {
+    "cite": "McCaig 2011, Exporting Out of Poverty: Provincial Poverty in Vietnam and U.S. Market Access",
+    "design": "quasi-experimental",
+    "finding": "Vietnamese provinces more exposed to US tariff cuts under the 2001 Bilateral Trade Agreement saw faster poverty reduction and faster wage growth for the least educated."
+   },
+   {
+    "cite": "McCaig & Pavcnik 2018, Export Markets and Labor Allocation in a Low-Income Country",
+    "design": "quasi-experimental",
+    "finding": "US tariff cuts under the US-Vietnam Bilateral Trade Agreement raised the formal-sector share of Vietnamese manufacturing workers by 5 percentage points."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-106",
+  "thesis_refs": [
+   {
+    "cite": "Topalova 2010, Factor Immobility and Regional Impacts of Trade Liberalization: Evidence on Poverty from India",
+    "design": "quasi-experimental",
+    "finding": "Rural Indian districts more exposed to the 1991 tariff cuts saw slower poverty decline and consumption growth, most among the least mobile poor and in states with inflexible labour laws."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-110",
+  "thesis_refs": [
+   {
+    "cite": "Atkin, Khandelwal & Osman 2017, Exporting and Firm Performance: Evidence from a Randomized Experiment",
+    "design": "RCT",
+    "finding": "Randomly assigned export orders raised Egyptian rug producers' profits by 16 to 26 percent and improved quality and technical efficiency, evidence of learning-by-exporting."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-120",
+  "thesis_refs": [
+   {
+    "cite": "Bau & Matray 2023, Misallocation and Capital Market Integration: Evidence from India",
+    "design": "quasi-experimental",
+    "finding": "Staggered liberalisation of foreign capital access across Indian industries reduced capital misallocation and raised aggregate productivity, with the largest gains at initially high-MRPK firms."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-137",
+  "thesis_refs": [
+   {
+    "cite": "Hsieh & Moretti 2019, Housing Constraints and Spatial Misallocation",
+    "design": "structural",
+    "finding": "Stringent housing supply restrictions in high-productivity US cities limited workers' access to them and lowered aggregate US growth by 36 percent from 1964 to 2009."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-141",
+  "thesis_refs": [
+   {
+    "cite": "Bloom et al. 2013, Does Management Matter? Evidence from India",
+    "design": "RCT",
+    "finding": "Free management consulting randomly given to Indian textile plants raised productivity by 17 percent in the first year and led to more plants within three years."
+   },
+   {
+    "cite": "Bruhn, Karlan & Schoar 2018, The Impact of Consulting Services on Small and Medium Enterprises: Evidence from a Randomized Trial in Mexico",
+    "design": "RCT",
+    "finding": "A year of subsidised management consulting for Mexican SMEs raised TFP and return on assets and increased employment and wage bill by about 50 percent five years later."
+   },
+   {
+    "cite": "de Mel, McKenzie & Woodruff 2014, Business Training and Female Enterprise Start-up, Growth, and Dynamics: Experimental Evidence from Sri Lanka",
+    "design": "RCT",
+    "finding": "The ILO SIYB business training changed business practices of Sri Lankan women in business but had no impact on profits, sales or capital stock."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-142",
+  "thesis_refs": [
+   {
+    "cite": "Banerjee & Duflo 2014, Do Firms Want to Borrow More? Testing Credit Constraints Using a Directed Lending Program",
+    "design": "quasi-experimental",
+    "finding": "Indian firms gaining and then losing priority-sector directed credit eligibility expanded and then contracted borrowing, sales and profits, showing severe credit constraints."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-143",
+  "thesis_refs": [
+   {
+    "cite": "McKenzie 2017, Identifying and Spurring High-Growth Entrepreneurship: Experimental Evidence from a Business Plan Competition",
+    "design": "RCT",
+    "finding": "Randomly awarded grants of about US$50,000 in Nigeria's YouWiN! competition raised firm entry, survival, profits, sales and employment over five years."
+   },
+   {
+    "cite": "Blattman & Dercon 2018, The Impacts of Industrial and Entrepreneurial Work on Income and Health",
+    "design": "RCT",
+    "finding": "In Ethiopia an entrepreneurship programme of $300 plus business training raised earnings 33 percent, while industrial job offers had no income effect and raised health problems."
+   },
+   {
+    "cite": "Blattman, Fiala & Martinez 2014, Generating Skilled Self-Employment in Developing Countries: Experimental Evidence from Uganda",
+    "design": "RCT",
+    "finding": "Unsupervised group grants of $382 per member to young adults in conflict-affected northern Uganda raised business assets 57 percent, hours 17 percent and earnings 38 percent after four years."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-144",
+  "thesis_refs": [
+   {
+    "cite": "de Mel, McKenzie & Woodruff 2013, The Demand for, and Consequences of, Formalization among Informal Firms in Sri Lanka",
+    "design": "RCT",
+    "finding": "Information and reimbursement of registration costs did not induce Sri Lankan informal firms to register, while payments of one-half to two months' profits induced one-fifth to one-half."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-146",
+  "thesis_refs": [
+   {
+    "cite": "Banerjee et al. 2015, The Miracle of Microfinance? Evidence from a Randomized Evaluation",
+    "design": "RCT",
+    "finding": "Randomly opening microcredit branches in Hyderabad slums raised borrowing and business investment but left average consumption and business profits unchanged."
+   },
+   {
+    "cite": "Meager 2019, Understanding the Average Impact of Microcredit Expansions: A Bayesian Hierarchical Analysis of Seven Randomized Experiments",
+    "design": "RCT",
+    "finding": "Pooling seven randomised microcredit evaluations, the impact on household business and consumption is unlikely to be transformative and may be negligible, with moderate cross-site heterogeneity."
+   },
+   {
+    "cite": "Bari et al. 2024, Asset-Based Microfinance for Microenterprises: Evidence from Pakistan",
+    "design": "RCT",
+    "finding": "Offering microcredit clients hire-purchase finance for an asset worth four times their usual limit produced large, persistent gains in business size, profits and household consumption."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-157",
+  "thesis_refs": [
+   {
+    "cite": "Abebe et al. 2021, Anonymity or Distance? Job Search and Labour Market Exclusion in a Growing African City",
+    "design": "RCT",
+    "finding": "A job application workshop helping young jobseekers signal skills raised formal and stable employment and, four years later, earnings, while transport subsidy effects dissipated."
+   },
+   {
+    "cite": "Franklin 2018, Location, Search Costs and Youth Unemployment: Experimental Evidence from Transport Subsidies",
+    "design": "RCT",
+    "finding": "Randomly assigned transport subsidies raised job search intensity and the likelihood that unemployed youth in urban Ethiopia found good, permanent jobs."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-164",
+  "thesis_refs": [
+   {
+    "cite": "Guner, Ventura & Xu 2008, Macroeconomic Implications of Size-Dependent Policies",
+    "design": "structural",
+    "finding": "In a calibrated growth model, policies restricting large establishments or subsidising small ones enough to cut average size by 20 percent substantially reduce output."
+   },
+   {
+    "cite": "Restuccia & Rogerson 2008, Policy Distortions and Aggregate Productivity with Heterogeneous Establishments",
+    "design": "structural",
+    "finding": "Policies that make individual producers face different prices reallocate resources to less productive establishments and can cut output and measured TFP by 30 to 50 percent."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-167",
+  "thesis_refs": [
+   {
+    "cite": "Do & Iyer 2008, Land Titling and Rural Transition in Vietnam",
+    "design": "quasi-experimental",
+    "finding": "Vietnam's 1993 Land Law raised the share of area under long-term crops and labour devoted to nonfarm work, driven mainly by greater tenure security rather than credit."
+   }
+  ]
+ },
+ {
+  "lever_id": "LV-227",
+  "thesis_refs": [
+   {
+    "cite": "Blattman, Fiala & Martinez 2014, Generating Skilled Self-Employment in Developing Countries: Experimental Evidence from Uganda",
+    "design": "RCT",
+    "finding": "Unsupervised group grants of $382 per member to young adults in conflict-affected northern Uganda raised business assets 57 percent, hours 17 percent and earnings 38 percent after four years."
+   }
+  ]
+ }
+]

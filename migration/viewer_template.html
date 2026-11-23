@@ -1,0 +1,1705 @@
+<meta charset="utf-8">
+<title>Mother Tree World</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a radial canopy (economy left, people middle, governance right) with storm clouds above and a reading panel beside; full outline below. */
+:root {
+  --bg: #edf1eb; --surface: #f8faf6; --ink: #1c2a21; --muted: #5a685f; --line: #cdd6cb;
+  --people: #3d7a4c; --economy: #9b5a2c; --gov: #366b7a;
+  --gold: #b88a12; --gold-soft: #f3e6bf; --storm: #4b5079; --storm-soft: #dfe1ee; --bark: #6a5140;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111914; --surface: #18221c; --ink: #e2e9de; --muted: #98a69c; --line: #2c3a31;
+  --people: #72b884; --economy: #d38c56; --gov: #6eaabb;
+  --gold: #e2b84a; --gold-soft: #3a3016; --storm: #a7acdc; --storm-soft: #262a40; --bark: #8b705c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #111914; --surface: #18221c; --ink: #e2e9de; --muted: #98a69c; --line: #2c3a31;
+  --people: #72b884; --economy: #d38c56; --gov: #6eaabb;
+  --gold: #e2b84a; --gold-soft: #3a3016; --storm: #a7acdc; --storm-soft: #262a40; --bark: #8b705c; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 14px/1.5 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px }
+.wrap { max-width: 1440px; margin: 0 auto; display: grid; gap: 18px }
+h1, h2, h3 { font-family: var(--display); font-weight: 650; text-wrap: balance; margin: 0 }
+h1 { font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.01em }
+h2 { font-size: 21px }
+h3 { font-size: 17px; font-weight: 500 }
+.eyebrow { font: 500 11px/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted) }
+header { display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: end; justify-content: space-between }
+header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
+.counts { display: flex; gap: 22px; font-variant-numeric: tabular-nums }
+.counts div { display: grid }
+.counts b { font: 650 24px/1 var(--display) }
+.counts span { font-size: 12px; color: var(--muted) }
+
+/* storms */
+.storms { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.storms .eyebrow { margin-right: 4px }
+.cloud { font: 500 12.5px var(--body); color: var(--storm); background: var(--storm-soft); border: 1px solid transparent;
+  border-radius: 999px; padding: 5px 12px 5px 10px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center }
+.cloud svg { width: 16px; height: 12px; fill: currentColor }
+.cloud[aria-pressed="true"] { background: var(--storm); color: var(--surface) }
+.cloud:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px }
+.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+#q { font: 14px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; width: min(320px, 100%) }
+.clear { font: 500 12px var(--body); background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer }
+
+/* main */
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; align-items: start }
+@media (max-width: 980px) { .main { grid-template-columns: minmax(0, 1fr) } }
+.canvas { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
+.canvas svg { display: block; width: 100%; min-width: 820px; height: auto }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 14px; min-width: 0;
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto }
+@media (max-width: 980px) { .panel { position: static; max-height: none } }
+.panel p { margin: 0 }
+.crumb { font: 12px var(--mono); color: var(--muted) }
+.crumb a { color: inherit; cursor: pointer; text-decoration: underline dotted }
+.def { color: var(--ink) }
+.muted { color: var(--muted) }
+.chips { display: flex; flex-wrap: wrap; gap: 5px }
+.chip { font: 12px var(--body); border-radius: 4px; padding: 1px 7px; background: var(--bg); border: 1px solid var(--line); color: var(--muted) }
+.chip.risk { background: var(--storm-soft); color: var(--storm); border-color: transparent }
+.chip.risk.cond { background: transparent; border: 1px dashed var(--storm) }
+.chip.sdg { font-family: var(--mono); font-size: 11px }
+.sect { display: grid; gap: 6px }
+.list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none }
+.list a { cursor: pointer; color: var(--ink); text-decoration: none; display: flex; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--line) }
+.list a:hover { color: var(--gold) }
+.list .n { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px }
+.fruit { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); flex: none; margin-top: 6px }
+.chain { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px }
+.chain dt { font: 11px var(--mono); color: var(--muted); padding-top: 2px }
+.chain dd { margin: 0 }
+.tag { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px; padding: 0 4px; margin-left: 4px }
+.legend { display: grid; gap: 6px; font-size: 13px }
+.legend div { display: flex; gap: 8px; align-items: center }
+.sw { width: 14px; height: 9px; border-radius: 50%; flex: none }
+
+/* svg */
+.br { fill: none; stroke-linecap: round }
+.leaf { cursor: pointer; transition: opacity .2s }
+.leaf ellipse { stroke-width: 1.2 }
+.leaf text, .lbl { font: 11.5px var(--body); fill: var(--ink) }
+.leaf:hover text { fill: var(--gold) }
+.node { cursor: pointer }
+.splbl { font: 600 11px var(--mono); letter-spacing: 0.06em; fill: var(--muted); paint-order: stroke; stroke: var(--surface); stroke-width: 4px }
+.leaf:focus, .node:focus { outline: none }
+.leaf:focus-visible ellipse, .node:focus-visible circle { stroke: var(--gold); stroke-width: 3 }
+.plbl, .plsub { paint-order: stroke; stroke: var(--surface); stroke-width: 6px; stroke-linejoin: round }
+.plbl { font: 650 20px var(--display) }
+.plsub { font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; fill: var(--muted) }
+.dim { opacity: 0.16 }
+.sel ellipse { stroke: var(--gold) !important; stroke-width: 3 }
+.sel text { fill: var(--gold); font-weight: 600 }
+.rain line { stroke: var(--storm); stroke-width: 1.3; stroke-linecap: round }
+.rain.cond line { stroke-dasharray: 2 3 }
+.glbl { font: 600 8.5px var(--mono); letter-spacing: .02em; fill: var(--ink); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; cursor: pointer; text-transform: uppercase }
+.glbl.dead { fill: var(--muted) }
+.glbl:hover { fill: var(--gold) }
+#ct tr.grow td { font-weight: 600; color: var(--ink); background: color-mix(in srgb, var(--line) 35%, transparent) }
+#ct tr.grow td:first-child { cursor: pointer; padding-left: 4px }
+#ct tr.grow td:first-child:hover { color: var(--gold) }
+#ct tr.frow td.fam { padding-left: 16px }
+.storm { cursor: pointer }
+.storm:focus { outline: none }
+.storm ellipse { fill: var(--storm) }
+.storm.calm ellipse:not(.ring) { fill: none; stroke: var(--storm); stroke-opacity: .35; stroke-dasharray: 2 3 }
+.storm text { font: 500 10.5px var(--mono); letter-spacing: .06em; fill: var(--ink); paint-order: stroke; stroke: var(--surface); stroke-width: 3.5px; stroke-linejoin: round }
+.storm.calm text { fill: var(--muted) }
+.storm text.sn { font-size: 9.5px; fill: var(--storm) }
+.storm .ring { fill: none; stroke: var(--gold); stroke-width: 1.4; stroke-dasharray: 2 4 }
+.storm:hover ellipse:not(.ring), .storm:focus-visible ellipse:not(.ring) { stroke: var(--gold); stroke-width: 1.2 }
+.sky-rain line { stroke: var(--storm); stroke-width: 1.1; stroke-dasharray: 4 6; stroke-linecap: round; pointer-events: none }
+@media (prefers-reduced-motion: no-preference) { @keyframes fall { to { stroke-dashoffset: -20 } } .sky-rain line { animation: fall 1.4s linear infinite } }
+
+/* outline */
+.outline { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px }
+.outline > p { margin: 0; color: var(--muted); max-width: 70ch }
+.ol-pillar { display: grid; gap: 4px }
+.ol-pillar > h3 { padding-top: 10px }
+.outline details { margin-left: 14px }
+.outline details > summary { cursor: pointer; padding: 3px 0 }
+.outline .famrow { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
+footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
+
+/* country */
+.ctry { display: grid; gap: 12px }
+.modes { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; padding: 3px; background: var(--surface); width: max-content; max-width: 100% }
+.mode { font: 500 13.5px var(--body); color: var(--muted); background: none; border: 0; border-radius: 6px; padding: 6px 14px; cursor: pointer }
+.mode[aria-selected="true"] { background: var(--ink); color: var(--surface) }
+.tl { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; gap: 8px }
+.tl-head { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center }
+.tl-btns { display: flex; gap: 12px }
+.tl-scroll { overflow-x: auto }
+#tlsvg { display: block; width: 100%; min-width: 640px; height: auto }
+.tlbar { cursor: pointer }
+.tlbar rect.bar { fill: var(--line) }
+.tlbar.on rect.bar { fill: var(--gold) }
+.tlbar text { font: 12px var(--body); fill: var(--ink) }
+.tlbar .n { font: 11px var(--mono); fill: var(--muted) }
+.tlbar:hover rect.bar { fill: var(--gold-soft) }
+.tlbar.on:hover rect.bar { fill: var(--gold) }
+.tlbar:focus { outline: none }
+.tlbar:focus-visible rect.bar { stroke: var(--gold); stroke-width: 2 }
+.tlax { font: 11px var(--mono); fill: var(--muted) }
+.tlgrid { stroke: var(--line); stroke-width: 1 }
+.fr { fill: var(--gold); stroke: var(--surface); stroke-width: 1.2 }
+.pbars { display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) 2.5rem; gap: 3px 8px; align-items: center; font-size: 12.5px }
+.pbars .lab { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--muted) }
+.pbars .trk { height: 9px; background: var(--bg); border-radius: 2px; overflow: hidden; display: flex }
+.pbars .trk i { display: block; height: 100% }
+.pbars .num { text-align: right; font: 11.5px var(--mono); font-variant-numeric: tabular-nums }
+.strat { display: grid; gap: 1px; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13px }
+.strat .meta { font: 11px var(--mono); color: var(--muted) }
+.strat .meta b { color: var(--gold); font-weight: 500 }
+.lvls { display: grid; gap: 4px }
+.lvls div { display: flex; gap: 8px; align-items: center; font-size: 13px }
+.lvls .num { margin-left: auto; font: 12px var(--mono); font-variant-numeric: tabular-nums }
+.ct-scroll { overflow-x: auto }
+#ct { border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums }
+#ct th, #ct td { padding: 3px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
+#ct th:first-child, #ct td:first-child { text-align: left; white-space: normal; min-width: 15rem; max-width: 22rem; position: sticky; left: 0; background: var(--surface) }
+#ct thead th { font: 500 11px var(--mono); color: var(--muted); vertical-align: bottom }
+#ct thead th.on { color: var(--gold) }
+#ct tr.sp td { font: 600 11px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); padding-top: 12px }
+#ct td.fam { cursor: pointer }
+#ct td.fam:hover { color: var(--gold) }
+#ct tr.tot td { font: 12px var(--mono) }
+#ct tr.tot td.g { color: var(--gold) }
+@media (prefers-reduced-motion: reduce) { .leaf { transition: none } }
+
+/* v4: levers */
+.banner { background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 10px; padding: 10px 16px; font-size: 13.5px; display: grid; gap: 2px }
+.banner b { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink) }
+.bud { cursor: pointer }
+.bud circle { stroke-width: 1 }
+.bud:hover circle { stroke: var(--gold); stroke-width: 2 }
+.bud:focus { outline: none }
+.bud:focus-visible circle { stroke: var(--gold); stroke-width: 2.5 }
+.bud.on circle { stroke: var(--gold); stroke-width: 2.5 }
+.lv { border-bottom: 1px solid var(--line) }
+.lv > summary { cursor: pointer; display: flex; gap: 8px; padding: 6px 0; list-style: none; align-items: baseline }
+.lv > summary::-webkit-details-marker { display: none }
+.lv > summary::before { content: "▸"; color: var(--muted); font-size: 11px; width: 9px; flex: none }
+.lv[open] > summary::before { content: "▾" }
+.lv .id { font: 11px var(--mono); color: var(--muted); margin-left: auto; white-space: nowrap }
+.lv .cnt { font: 11.5px var(--mono); color: var(--gold); white-space: nowrap }
+.lv .body { padding: 0 0 10px 17px; display: grid; gap: 6px; font-size: 13px }
+.lv .open { font: 500 12px var(--body); color: var(--muted); text-decoration: underline; cursor: pointer; justify-self: start }
+.jl { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 2px }
+.ol-lvs { margin: 2px 0 8px 30px; padding: 0; list-style: none; font-size: 13px; display: grid; gap: 4px }
+.ol-lvs li { display: grid; grid-template-columns: 9px minmax(0, 1fr); gap: 0 8px }
+.ol-lvs .dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; border: 1.5px solid currentColor }
+.ol-lvs .lvname { cursor: pointer }
+.ol-lvs .lvname:hover { color: var(--gold) }
+#ct tr.frow td { font-weight: 600 }
+#ct tr.frow td:first-child::before { content: "▸ "; color: var(--muted); font-weight: 400 }
+#ct tr.frow.open td:first-child::before { content: "▾ " }
+#ct tr.lvrow td:first-child { padding-left: 26px; color: var(--ink) }
+#ct tr.lvrow td { font-size: 12px }
+#ct tr.lvrow td.lvc { cursor: pointer }
+#ct tr.lvrow td.lvc:hover { color: var(--gold) }
+#ct td.all { font: 12px var(--mono) }
+#ct td.pws { font: 12px var(--mono); color: var(--gold) }
+.ct-tools { display: flex; gap: 14px; flex-wrap: wrap }
+
+[hidden] { display: none !important }
+/* world and country pickers */
+.chipsel, .cg { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.cgrid { display: grid; gap: 6px }
+.cg .eyebrow { min-width: 11.5rem }
+@media (max-width: 700px) { .cg .eyebrow { min-width: 100% } }
+.rchip { font: 500 12.5px var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer }
+.rchip span { color: var(--muted); font: 11px var(--mono); margin-left: 3px }
+.rchip:hover { border-color: var(--gold) }
+.rchip[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink) }
+.rchip[aria-pressed="true"] span { color: var(--surface) }
+#yrsvg { display: block; width: 100%; min-width: 640px; height: auto }
+.yr { cursor: pointer }
+.yr .bar { fill: var(--line) }
+.yr:hover .bar { fill: var(--gold-soft) }
+.yr.now .bar { fill: var(--muted) }
+.yr.on .bar { fill: var(--gold) }
+.yr.on text { fill: var(--gold); font-weight: 600 }
+.yr:focus { outline: none }
+.yr:focus-visible .bar { stroke: var(--gold); stroke-width: 2 }
+.tlbar rect.car { fill: var(--ink); opacity: .28; pointer-events: none }
+.tlnow { stroke: var(--storm); stroke-width: 1.2; stroke-dasharray: 3 3 }
+.pbars { grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) 5.4rem }
+.pbars a.lab { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
+.pbars a.lab:hover { color: var(--gold) }
+.strat .oti { font-size: 12px; color: var(--muted) }
+.strat .oti b { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em }
+#ct th.colh { cursor: pointer }
+#ct th.colh:hover { color: var(--gold) }
+/* dropped parts and general branches */
+.leaf.dead ellipse { fill: var(--muted); stroke: var(--muted); fill-opacity: .35 }
+.leaf.dead text { fill: var(--muted); font-style: italic }
+.leaf.gen ellipse { stroke-width: 2 }
+.leaf.gen text { font-weight: 600 }
+.bud.drop circle { fill: var(--muted); stroke: var(--surface); fill-opacity: .85 }
+.bud.drop:hover circle, .bud.drop.on circle { stroke: var(--gold) }
+#ct tr.dead td, #ct tr.lvrow.drop td:first-child { color: var(--muted); font-style: italic; font-weight: 400 }
+#ct tr.hrow td { font-weight: 600 }
+#ct tr.hrow td:first-child { cursor: pointer }
+#ct tr.hrow td:first-child:hover { color: var(--gold) }
+.lvls a { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
+.lvls a:hover { color: var(--gold) }
+/* details table */
+.dt-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.dt-tools select, #dt-q, .dt-pager select { font: 13px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px }
+#dt-q { width: min(280px, 100%) }
+#dt-chips .chip { color: var(--ink) }
+#dt-chips .x { cursor: pointer; color: var(--muted); padding: 0 2px; font-weight: 600 }
+#dt-chips .x:hover { color: var(--gold) }
+#dt { border-collapse: collapse; font-size: 12.5px; width: 100% }
+#dt th, #dt td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top }
+#dt thead th { white-space: nowrap; vertical-align: bottom }
+#dt thead button { font: 500 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: none; border: 0; padding: 2px 0; cursor: pointer }
+#dt thead button:hover { color: var(--gold) }
+#dt thead th[aria-sort] button { color: var(--gold) }
+#dt thead th[aria-sort="ascending"] button::after { content: " ▲" }
+#dt thead th[aria-sort="descending"] button::after { content: " ▼" }
+#dt td.num, #dt th.num, .psgt td.num { text-align: right; font-variant-numeric: tabular-nums }
+#dt td.nw { white-space: nowrap; font-variant-numeric: tabular-nums }
+#dt td.nm { min-width: 15rem; max-width: 24rem; font-weight: 500 }
+#dt td.w { min-width: 9rem; max-width: 15rem }
+#dt td.w0 { min-width: 7rem; max-width: 12rem }
+#dt td .sw { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px }
+#dt tr.dr { cursor: pointer }
+#dt tr.dr:hover td, #dt tr.dr.open td { background: color-mix(in srgb, var(--gold-soft) 55%, transparent) }
+#dt tr.dr:focus { outline: none }
+#dt tr.dr:focus-visible td { box-shadow: inset 0 2px var(--gold), inset 0 -2px var(--gold) }
+#dt tr.dr td.nm::before { content: "▸ "; color: var(--muted); font-weight: 400 }
+#dt tr.dr.open td.nm::before { content: "▾ " }
+#dt tr.dx > td { background: var(--bg); padding: 14px 18px 16px }
+.dgrid { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 5px 14px; margin: 0; max-width: 72rem; font-size: 13px }
+.dgrid dt { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: 3px }
+.dgrid dd { margin: 0 }
+@media (max-width: 700px) { .dgrid { grid-template-columns: minmax(0, 1fr) } }
+.psgt { border-collapse: collapse; font-size: 12.5px; margin-top: 6px; width: 100% }
+.psgt th { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line) }
+.psgt td { padding: 4px 8px; border-bottom: 1px solid var(--line); vertical-align: top; background: none }
+.psgt td.ev { min-width: 22rem }
+.dt-pager { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; font: 12px var(--mono); color: var(--muted) }
+.dt-pager button:disabled { opacity: .4; cursor: default; text-decoration: none }
+.dt-pager select { padding: 3px 6px; font-size: 12px }
+#m-un-n { font: 11px var(--mono); color: var(--muted); margin-left: 3px }
+#srcs { align-items: center; margin-top: 2px }
+#srcs .eyebrow { margin-right: 6px }
+#ct td[data-ck] { cursor: pointer }
+#ct td[data-ck]:hover { outline: 1px solid var(--gold); outline-offset: -1px }
+.todt { font: 500 12.5px var(--body); color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start }
+/* country forest */
+.forest { margin: 14px 0 6px; background: #06110d; border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px 10px; color: #cfe3d6 }
+.forest .fl { font: italic 18px/1.35 var(--body); color: #f1d58a; margin: 0 0 8px }
+.forest .fl small { font: 12px var(--body); font-style: normal; color: #8db8a0; margin-left: 8px }
+.forest svg { width: 100%; height: auto; display: block }
+.forest .culm { cursor: pointer }
+.forest .culm:focus { outline: none }
+.forest .culm:focus-visible, .forest .culm:hover { filter: brightness(1.35) }
+.forest .fkey { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 4px 18px; font-size: 12px; color: #8db8a0; margin-top: 8px }
+.forest .fkey b { color: #f1d58a; font-weight: 500; letter-spacing: .08em; margin-right: 6px }
+#aud { border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums }
+#aud th, #aud td { padding: 4px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
+#aud th:first-child, #aud td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface) }
+#aud thead th { font: 500 11px var(--mono); color: var(--muted); vertical-align: bottom }
+#aud tr.rg td { font: 500 11px var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; padding-top: 12px }
+#aud td.ac { cursor: pointer; min-width: 6.5rem }
+#aud td.ac b { font-weight: 600 }
+#aud td.ac small { display: block; color: var(--muted); font-size: 11px }
+#aud td.ac:hover, #aud td.ac.on { outline: 1px solid var(--gold); outline-offset: -1px }
+#aud td.none { color: var(--muted) }
+#aud tr.tot td { font-weight: 600; border-top: 2px solid var(--line) }
+#aud .cn { all: unset; cursor: pointer; text-decoration: underline; text-underline-offset: 3px }
+#aud-list table { border-collapse: collapse; font-size: 12.5px; width: 100% }
+#aud-list th, #aud-list td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top }
+#aud-list th { font: 500 11px var(--mono); color: var(--muted) }
+#aud-list td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap }
+#aud-list .warn { color: var(--economy) }
+.aud-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 6px 0 }
+.aud-bar .eyebrow { margin-right: 4px }
+.aud-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--muted); margin: 8px 0 }
+.aud-key i { display: inline-block; width: 18px; height: 9px; border-radius: 2px; vertical-align: -1px; margin-right: 5px }
+#aud-tl { min-width: 760px; display: block; width: 100% }
+#aud-tl text { font-family: var(--body); fill: var(--ink) }
+#aud-tl .yr { font: 10px var(--mono); fill: var(--muted) }
+#aud-tl .ln { font-size: 11px; fill: var(--muted) }
+#aud-tl .cnm { font-size: 12.5px; font-weight: 600; cursor: pointer }
+#aud-tl .rgn { font: 500 10.5px var(--mono); letter-spacing: .06em; fill: var(--muted) }
+#aud-tl .grid { stroke: var(--line); stroke-width: 1 }
+#aud-tl .now { stroke: var(--gold); stroke-width: 1.2; stroke-dasharray: 3 3 }
+#aud-tl .hit { cursor: pointer }
+#aud-tl .hit:hover, #aud-tl .hit.on { stroke: var(--ink); stroke-width: 1.5 }
+#aud-tl .bl { font-size: 10px; fill: #fff; pointer-events: none }
+#aud-tl .cnt { font: 9.5px var(--mono); fill: var(--ink); pointer-events: none }
+</style>
+
+<div class="wrap">
+  <div class="banner" id="banner" hidden></div>
+  <header>
+    <div>
+      <div class="eyebrow">PV II · Golden Strategy Tree · 45 countries</div>
+      <h1>The Mother Tree, version 4</h1>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the 33 framework families of Jude's tree, each from a published framework, named at their fork; the leaves are our 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. Grey leaves and buds were dropped by the literature review and take no strategies; the dashed branch beside each pillar holds the strategies that fit no family.</p>
+    </div>
+    <div class="counts" id="counts"></div>
+  </header>
+
+  <section class="ctry" id="ctry">
+    <div class="modes" role="tablist" aria-label="View">
+      <button type="button" class="mode" id="m-world" role="tab" aria-selected="true">Mother tree</button>
+      <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
+      <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n"></span></button>
+      <button type="button" class="mode" id="m-aud" role="tab" aria-selected="false">Audit</button>
+    </div>
+    <div class="chipsel" id="srcs" aria-label="Sources"></div>
+    <div class="tl" id="worldbar">
+      <div class="chipsel" id="regions" aria-label="Region"></div>
+      <div class="tl-head"><span class="eyebrow" id="yr-h"></span><span class="tl-btns"><button type="button" class="clear" id="yr-all" hidden>All years</button></span></div>
+      <div class="tl-scroll"><svg id="yrsvg" role="img" aria-label="Plans in force by year"></svg></div>
+    </div>
+    <div class="tl" id="ctrybar" hidden>
+      <div class="cgrid" id="countries" aria-label="Country"></div>
+      <div class="tl-head"><span class="eyebrow">Plans by period: pick one to see its tree</span>
+        <span class="tl-btns"><button type="button" class="clear" id="tl-all">All plans</button><button type="button" class="clear" id="tl-nat">Medium-term plans only</button></span></div>
+      <div class="tl-scroll"><svg id="tlsvg" role="img" aria-label="Plans on a timeline"></svg></div>
+      <p class="muted" id="tl-note" style="margin:0;font-size:12.5px"></p>
+    </div>
+  </section>
+
+  <section class="forest" id="forestbox" hidden>
+    <p class="fl" id="fline"></p>
+    <svg id="forest" role="img"></svg>
+    <div class="fkey" id="fkey"></div>
+  </section>
+
+  <div class="storms" id="storms" aria-label="Risks"><span class="eyebrow">Storms</span></div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search strategies, levers and families in view" aria-label="Search strategies, levers and families in view">
+    <button class="clear" id="clear" type="button">Clear selection</button>
+  </div>
+
+  <div class="main">
+    <div class="canvas"><svg id="tree" viewBox="0 -210 1400 1260" role="img" aria-label="Mother tree v4 canopy"></svg></div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <section class="outline" id="ctable">
+    <h2 id="ct-h"></h2>
+    <p id="ct-p"></p>
+    <div class="ct-tools"><button type="button" class="clear" id="ct-open">Show every lever</button><button type="button" class="clear" id="ct-close">Families only</button></div>
+    <div class="ct-scroll"><table id="ct"></table></div>
+  </section>
+
+  <section class="outline" id="audit" hidden>
+    <h2>Audit: which documents were run</h2>
+    <p id="aud-p"></p>
+    <div class="aud-bar" id="aud-src"></div>
+    <div class="aud-bar" id="aud-reg"></div>
+    <div class="aud-bar"><span class="eyebrow">View</span><button type="button" class="rchip" data-av="tl">Timeline</button><button type="button" class="rchip" data-av="tab">Counts table</button></div>
+    <div class="aud-key" id="aud-key"></div>
+    <div class="ct-scroll" id="aud-tlbox"><svg id="aud-tl" role="img" aria-label="Documents run, by country, source and year"></svg></div>
+    <div class="ct-scroll" id="aud-tabbox" hidden><table id="aud"></table></div>
+    <div id="aud-list"></div>
+  </section>
+
+  <section class="outline" id="details">
+    <h2 id="dt-h">Strategy details</h2>
+    <p id="dt-un" hidden></p>
+    <p id="dt-intro">The strategies behind whatever is selected above: a region, year, country or plan, and a leaf, bud, storm, search or table cell. Select a column heading to sort; select a row to open the strategy's full record and the passages of the plan under it.</p>
+    <div class="chips" id="dt-chips"></div>
+    <div class="dt-tools">
+      <input id="dt-q" type="search" placeholder="Filter these strategies" aria-label="Filter these strategies">
+      <select id="dt-lvl" aria-label="Placement"></select>
+      <select id="dt-ori" aria-label="Orientation"></select>
+      <select id="dt-urg" aria-label="Urgency"></select>
+      <select id="dt-st" aria-label="Status"></select>
+      <button type="button" class="clear" id="dt-reset">Clear table filters</button>
+    </div>
+    <div class="ct-scroll"><table id="dt"></table></div>
+    <div class="dt-pager" id="dt-pager"></div>
+  </section>
+
+  <section class="outline" id="outline">
+    <h2>The whole tree</h2>
+    <p>Every framework family, family and lever, in the order of the canopy. Open a framework family to see its families; select a family or lever to read it in the panel.</p>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const D = /*TREE_DATA*/null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NS = "http://www.w3.org/2000/svg";
+
+// index
+const G = Object.fromEntries(D.groups.map(g => [g.group_id, g]));
+const F = Object.fromEntries(D.families.map(f => [f.family_id, f]));
+const V = Object.fromEntries(D.levers.map(v => [v.lever_id, v]));
+const SP = Object.fromEntries(D.subpillars.map(s => [s.code, s]));
+const PL = Object.fromEntries(D.pillars.map(p => [p.code, p]));
+const ORDER = [["SMG", ["EXP", "DOM", "GTI"]], ["PFA", ["TSE", "CAP", "FUT"]], ["MCH", ["ANT", "ADA", "AGI", "REF"]]];
+const PCOL = { SMG: "var(--economy)", PFA: "var(--people)", MCH: "var(--gov)" };
+const PROLE = { SMG: "economy", PFA: "people", MCH: "governance" };
+const HOLD = { SMG: "H-SEC", PFA: "H-SPE", MCH: "H-SGO" };
+const nLv = f => f.lever_ids.length;
+const famCol = fid => PCOL[SP[F[fid].subpillar_code].pillar];
+
+document.getElementById("counts").innerHTML = [
+  [D.groups.length, "framework families"], [D.families.length, "families"], [D.levers.length, "levers"], [D.dropped.length, "dropped"], [D.risks.length, "storms"]
+].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
+
+// ---------- layout ----------
+const CX = 700, CY = 720, R_P = 110, R_S = 185, R_G = 340, R_L = 440;
+const A0 = 197, A1 = -17;
+const slots = []; let u = 0;
+ORDER.forEach(([pc, sps], pi) => {
+  if (pi) u += 2.6;
+  sps.forEach((sc, si) => {
+    if (si) u += 1.3;
+    D.groups.filter(g => g.subpillar_code === sc).forEach((g, gi) => {
+      if (gi) u += 0.45;
+      g.family_ids.forEach(fid => { slots.push({ fid, u }); u += 1; });
+    });
+  });
+  u += 0.9; slots.push({ fid: HOLD[pc], u }); u += 1;
+});
+const span = u - 1;
+const ang = {};
+slots.forEach(s => ang[s.fid] = A0 + (A1 - A0) * s.u / span);
+const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+const gAng = {}, sAng = {}, pAng = {};
+D.groups.forEach(g => gAng[g.group_id] = mean(g.family_ids.map(f => ang[f])));
+D.subpillars.forEach(s => sAng[s.code] = mean(D.groups.filter(g => g.subpillar_code === s.code).map(g => gAng[g.group_id])));
+ORDER.forEach(([pc, sps]) => pAng[pc] = mean(sps.map(s => sAng[s])));
+const rad = d => d * Math.PI / 180;
+const pol = (r, a) => [CX + r * Math.cos(rad(a)), CY - r * Math.sin(rad(a))];
+const lvOfSub = sc => D.families.filter(f => f.subpillar_code === sc).reduce((n, f) => n + nLv(f), 0);
+const lvOfGroup = g => g.family_ids.reduce((n, f) => n + nLv(F[f]), 0);
+
+const svg = $("#tree");
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  (parent || svg).appendChild(e); return e;
+}
+function geom(r0, a0, r1, a1) {
+  const p0 = r0 === 0 ? [CX, CY] : pol(r0, a0);
+  const p3 = pol(r1, a1);
+  const m = r0 + (r1 - r0) * 0.55;
+  const p1 = r0 === 0 ? [CX, CY - 70] : pol(m, a0);
+  const p2 = pol(m, a1);
+  return [p0, p1, p2, p3];
+}
+function branch(r0, a0, r1, a1, w, col, parent) {
+  const [p0, p1, p2, p3] = geom(r0, a0, r1, a1);
+  return el("path", { d: `M${p0} C${p1} ${p2} ${p3}`, class: "br", stroke: col, "stroke-width": w }, parent);
+}
+function bez(P4, t) {
+  const s = 1 - t, k = [s * s * s, 3 * s * s * t, 3 * s * t * t, t * t * t];
+  const d = [-3 * s * s, 3 * s * s - 6 * s * t, 6 * s * t - 3 * t * t, 3 * t * t];
+  const pt = [0, 1].map(j => P4.reduce((a, p, i) => a + k[i] * p[j], 0));
+  const tg = [0, 1].map(j => P4.reduce((a, p, i) => a + d[i] * p[j], 0));
+  const L = Math.hypot(tg[0], tg[1]) || 1;
+  return { x: pt[0], y: pt[1], nx: -tg[1] / L, ny: tg[0] / L };
+}
+
+const gSky = el("g", { class: "sky" });
+
+// ground and trunk
+el("path", { d: `M${CX - 330},962 Q${CX},944 ${CX + 330},962`, fill: "none", stroke: "var(--line)", "stroke-width": 2 });
+el("path", { d: `M${CX - 34},962 C${CX - 18},880 ${CX - 14},780 ${CX - 8},${CY} L${CX + 8},${CY} C${CX + 14},780 ${CX + 18},880 ${CX + 34},962 Z`, fill: "var(--bark)" });
+[[-1, 70], [1, 70], [-1, 120], [1, 120]].forEach(([s, d]) => el("path", { d: `M${CX + s * 20},955 Q${CX + s * d * 0.6},968 ${CX + s * d},975`, fill: "none", stroke: "var(--bark)", "stroke-width": 3, "stroke-linecap": "round" }));
+
+const gBranches = el("g", {});
+const gNodes = el("g", {});
+const gLeaves = el("g", {});
+const gBuds = el("g", {});
+const gRain = el("g", {});
+const twig = {};
+
+ORDER.forEach(([pc, sps]) => {
+  const col = PCOL[pc];
+  const nl = sps.reduce((n, s) => n + lvOfSub(s), 0);
+  branch(0, 90, R_P, pAng[pc], 2 + Math.sqrt(nl) * 1.1, col, gBranches).setAttribute("stroke", "var(--bark)");
+  sps.forEach(sc => {
+    branch(R_P, pAng[pc], R_S, sAng[sc], 1.5 + Math.sqrt(lvOfSub(sc)) * 0.95, col, gBranches);
+    D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
+      branch(R_S, sAng[sc], R_G, gAng[g.group_id], 1 + Math.sqrt(lvOfGroup(g)) * 0.65, lvOfGroup(g) ? col : "var(--muted)", gBranches);
+      g.family_ids.forEach(fid => {
+        branch(R_G, gAng[g.group_id], R_L, ang[fid], 0.8 + Math.sqrt(nLv(F[fid])) * 0.42, nLv(F[fid]) ? col : "var(--muted)", gBranches);
+        twig[fid] = geom(R_G, gAng[g.group_id], R_L, ang[fid]);
+      });
+      const [gx, gy] = pol(R_G, gAng[g.group_id]);
+      const n = el("circle", { cx: gx, cy: gy, r: 4.5, fill: "var(--surface)", stroke: lvOfGroup(g) ? col : "var(--muted)", "stroke-width": 2, class: "node", tabindex: 0, "data-g": g.group_id }, gNodes);
+      el("title", {}, n).textContent = `Framework family ${g.group}: ${g.family_ids.length} families, ${lvOfGroup(g)} levers. Basis: ${g.basis}`;
+      {
+        const a = gAng[g.group_id], flip = a > 90 || a < -90, [tx, ty] = pol(R_G - 9, a);
+        const t = el("text", { x: tx, y: ty, dy: "0.32em", "text-anchor": flip ? "start" : "end", class: "glbl" + (lvOfGroup(g) ? "" : " dead"),
+          transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})`, "data-g": g.group_id }, gNodes);
+        t.textContent = g.group.length > 26 ? g.group.slice(0, 25) + "…" : g.group;
+        t.addEventListener("click", () => show({ g: g.group_id }));
+      }
+      n.addEventListener("click", () => show({ g: g.group_id }));
+      n.addEventListener("keydown", e => { if (e.key === "Enter") show({ g: g.group_id }); });
+    });
+    const [sx, sy] = pol(R_S, sAng[sc]);
+    const sn = el("g", { class: "node", tabindex: 0 }, gNodes);
+    el("circle", { cx: sx, cy: sy, r: 7, fill: col }, sn);
+    const [lx, ly] = pol(R_S - 26, sAng[sc]);
+    const t = el("text", { x: lx, y: ly + 4, "text-anchor": "middle", class: "splbl" }, sn); t.textContent = sc;
+    el("title", {}, sn).textContent = SP[sc].name;
+    sn.addEventListener("click", () => show({ s: sc }));
+    sn.addEventListener("keydown", e => { if (e.key === "Enter") show({ s: sc }); });
+  });
+  branch(R_P, pAng[pc], R_L, ang[HOLD[pc]], 1.6, col, gBranches).setAttribute("stroke-dasharray", "5 4");
+  const lxp = pc === "PFA" ? CX : pc === "SMG" ? CX - 310 : CX + 310;
+  const lyp = 1000;
+  const pg = el("g", { class: "node", tabindex: 0 }, gNodes);
+  const t1 = el("text", { x: lxp, y: lyp, "text-anchor": "middle", class: "plbl", fill: col }, pg); t1.textContent = PL[pc].name;
+  const t2 = el("text", { x: lxp, y: lyp + 18, "text-anchor": "middle", class: "plsub" }, pg); t2.textContent = PROLE[pc] + " · " + nl + " levers";
+  pg.addEventListener("click", () => show({ p: pc }));
+  pg.addEventListener("keydown", e => { if (e.key === "Enter") show({ p: pc }); });
+});
+
+// leaves (families)
+const leafEl = {};
+D.families.forEach(f => {
+  const a = ang[f.family_id], n = nLv(f);
+  const col = famCol(f.family_id);
+  const rx = 6 + Math.sqrt(n) * 3.1, ry = rx * 0.5;
+  const [x, y] = pol(R_L + rx, a);
+  const g = el("g", { class: "leaf" + (n ? "" : " dead"), tabindex: 0, "data-f": f.family_id }, gLeaves);
+  const e = el("ellipse", { cx: x, cy: y, rx, ry, transform: `rotate(${-a} ${x} ${y})`, fill: col, "fill-opacity": 0.82, stroke: col }, g);
+  const flip = a > 90 || a < -90;
+  const [tx, ty] = pol(R_L + 2 * rx + 7, a);
+  const name = f.family.length > 44 ? f.family.slice(0, 42) + "…" : f.family;
+  const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
+  t.textContent = name;
+  el("title", {}, g).textContent = n ? `${f.family} · ${n} levers` : `${f.family} · dropped: no lever left after the literature review, takes no strategies`;
+  g.addEventListener("click", () => show({ f: f.family_id }));
+  g.addEventListener("keydown", e => { if (e.key === "Enter") show({ f: f.family_id }); });
+  leafEl[f.family_id] = { g, x, y, a, rx, rx0: rx, e, t, name, flip, n };
+});
+
+// buds (levers) along each family twig
+const budEl = {}, dropEl = {};
+D.families.forEach(f => {
+  const col = famCol(f.family_id), ids = f.lever_ids, dr = D.dropped.filter(d => d.family_id === f.family_id), n = ids.length + dr.length;
+  dr.forEach((d, j) => {
+    const k = ids.length + j, b = bez(twig[f.family_id], 0.5 + 0.42 * (k + 0.5) / n), off = n === 1 ? 0 : (k % 2 ? 3.4 : -3.4);
+    const g = el("g", { class: "bud drop", tabindex: 0, "data-d": d.lever_id }, gBuds);
+    el("circle", { cx: b.x + b.nx * off, cy: b.y + b.ny * off, r: 2.3 }, g);
+    el("title", {}, g).textContent = `${d.lever} (${d.lever_id})\nDropped: graded unbacked by the literature review. No strategies are placed on it.`;
+    g.addEventListener("click", ev => { ev.stopPropagation(); show({ d: d.lever_id }); });
+    g.addEventListener("keydown", e => { if (e.key === "Enter") show({ d: d.lever_id }); });
+    dropEl[d.lever_id] = g;
+  });
+  ids.forEach((lid, k) => {
+    const v = V[lid];
+    const b = bez(twig[f.family_id], 0.5 + 0.42 * (k + 0.5) / n);
+    const off = n === 1 ? 0 : (k % 2 ? 3.4 : -3.4);
+    const g = el("g", { class: "bud", tabindex: 0, "data-v": lid }, gBuds);
+    const c = el("circle", { cx: b.x + b.nx * off, cy: b.y + b.ny * off, r: 2.4, fill: col, stroke: "var(--surface)" }, g);
+    el("title", {}, g).textContent = `${v.lever} (${lid})\nJoins when: ${v.joins_when}\nJoins not: ${v.joins_not}`;
+    g.addEventListener("click", ev => { ev.stopPropagation(); show({ v: lid }); });
+    g.addEventListener("keydown", e => { if (e.key === "Enter") show({ v: lid }); });
+    budEl[lid] = { g, c, col, x: b.x + b.nx * off, y: b.y + b.ny * off };
+  });
+});
+// general branches: one leaf per pillar for the strategies that fit no live family
+const HNAME = Object.fromEntries(D.holding.map(x => [x.id, x.name]));
+const HPC = Object.fromEntries(Object.entries(HOLD).map(([p, h]) => [h, p]));
+const genEl = {};
+ORDER.forEach(([pc]) => {
+  const id = HOLD[pc], a = ang[id], col = PCOL[pc], rx = 8;
+  const [x, y] = pol(R_L + rx, a);
+  const g = el("g", { class: "leaf gen", tabindex: 0, "data-h": id }, gLeaves);
+  const e = el("ellipse", { cx: x, cy: y, rx, ry: rx * 0.5, transform: `rotate(${-a} ${x} ${y})`, fill: col, "fill-opacity": 0.82, stroke: col }, g);
+  const flip = a > 90 || a < -90;
+  const [tx, ty] = pol(R_L + 2 * rx + 7, a);
+  const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
+  t.textContent = HNAME[id];
+  el("title", {}, g).textContent = `${HNAME[id]}: strategies of this pillar that fit no live family`;
+  g.addEventListener("click", () => show({ h: id }));
+  g.addEventListener("keydown", e => { if (e.key === "Enter") show({ h: id }); });
+  genEl[id] = { g, x, y, a, rx, rx0: rx, e, t, name: HNAME[id], flip, n: 0 };
+});
+const gFruit = el("g", { "pointer-events": "none" });
+function sizeLeaf(L, rx, label, hollow) {
+  const [x, y] = pol(R_L + rx, L.a);
+  L.e.setAttribute("cx", x); L.e.setAttribute("cy", y); L.e.setAttribute("rx", rx); L.e.setAttribute("ry", rx * 0.5);
+  L.e.setAttribute("transform", `rotate(${-L.a} ${x} ${y})`);
+  L.e.setAttribute("fill-opacity", hollow ? 0 : 0.82);
+  L.e.setAttribute("stroke-dasharray", hollow ? "2 2" : "");
+  const [tx, ty] = pol(R_L + 2 * rx + 7, L.a);
+  L.t.setAttribute("x", tx); L.t.setAttribute("y", ty);
+  L.t.setAttribute("transform", `rotate(${L.flip ? 180 - L.a : -L.a} ${tx} ${ty})`);
+  L.t.textContent = label;
+  L.t.style.opacity = hollow ? 0.45 : 1;
+  L.rx = rx; L.x = x; L.y = y;
+}
+function sizeBud(B, r, fill, hollow) {
+  B.c.setAttribute("r", r);
+  B.c.setAttribute("fill", fill);
+  B.c.setAttribute("fill-opacity", hollow ? 0 : 0.9);
+  B.c.setAttribute("stroke", hollow ? B.col : "var(--surface)");
+  B.c.setAttribute("stroke-dasharray", hollow ? "1.5 1.5" : "");
+}
+
+// ---------- storms ----------
+const cloudSvg = '<svg viewBox="0 0 24 16" aria-hidden="true"><path d="M6 15a5 5 0 0 1-.6-10A6.5 6.5 0 0 1 18 5.5 4.8 4.8 0 0 1 18.5 15z"/></svg>';
+const storms = $("#storms");
+D.risks.forEach(r => {
+  const b = document.createElement("button");
+  b.className = "cloud"; b.type = "button"; b.setAttribute("aria-pressed", "false"); b.dataset.r = r;
+  b.innerHTML = cloudSvg + esc(r);
+  b.addEventListener("click", () => setRisk(state.risk === r ? null : r));
+  storms.appendChild(b);
+});
+
+const state = { risk: null, q: "", sel: null, lv: null, h: null, d: null };
+const rName = r => typeof r === "string" ? r : r.risk;
+function riskKind(f, r) {
+  if ((f.risks || []).includes(r)) return "direct";
+  if ((f.conditional_risks || []).some(c => rName(c) === r)) return "cond";
+  return null;
+}
+function setRisk(r) {
+  state.risk = r;
+  storms.querySelectorAll(".cloud").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === r ? "true" : "false"));
+  paint();
+  if (typeof C !== "undefined" && C) drawSky();
+  if (r) show({ r }); else if (!state.sel && !state.lv) show({});
+}
+const lvHay = v => [v.lever, v.lever_full].join(" ").toLowerCase();
+// strategies whose name, objective or reason holds the query; the levers and families they sit on
+function stratHits(q) { return (typeof C !== "undefined" && C) ? C.rows.filter(r => (r[1] + " " + r[2] + " " + r[10] + " " + r[11] + " " + r[12]).toLowerCase().includes(q)) : []; }
+let qLev = new Set(), qFam = new Set();
+function indexHits(q) {
+  qLev = new Set(); qFam = new Set();
+  if (!q) return;
+  stratHits(q).forEach(r => { if (r[5]) qLev.add(r[5]); if (r[4]) qFam.add(r[4]); if (r[3] === "STD") qFam.add(r[6]); });
+}
+function matches(f, q) {
+  if (!q) return true;
+  if (qFam.has(f.family_id)) return true;
+  const hay = [f.family, f.definition, f.examples, G[f.group_id].group, ...f.lever_ids.map(id => lvHay(V[id]))].join(" ").toLowerCase();
+  return hay.includes(q);
+}
+function paint() {
+  gRain.innerHTML = "";
+  D.families.forEach(f => {
+    const L = leafEl[f.family_id];
+    let on = matches(f, state.q);
+    let kind = null;
+    if (state.risk) { kind = riskKind(f, state.risk); on = on && !!kind; }
+    const selF = state.sel === f.family_id || (state.lv && V[state.lv].family_id === f.family_id);
+    L.g.classList.toggle("dim", !on && !selF);
+    L.g.classList.toggle("sel", state.sel === f.family_id);
+    f.lever_ids.forEach(lid => {
+      const B = budEl[lid];
+      const lon = on && (!state.q || qLev.has(lid) || lvHay(V[lid]).includes(state.q) || f.family.toLowerCase().includes(state.q));
+      B.g.classList.toggle("dim", !lon && !selF);
+      B.g.classList.toggle("on", state.lv === lid);
+    });
+    if (kind) {
+      const rg = el("g", { class: "rain" + (kind === "cond" ? " cond" : "") }, gRain);
+      for (let i = -1; i <= 1; i++) {
+        const [x0, y0] = pol(R_L + L.rx + i * 6, L.a + i * 0.6);
+        el("line", { x1: x0 - 3, y1: y0 - 26, x2: x0 + 1, y2: y0 - 12 }, rg);
+      }
+    }
+  });
+  Object.keys(genEl).forEach(id => {
+    const L = genEl[id];
+    L.g.classList.toggle("dim", state.h !== id && (!!state.risk || (!!state.q && !qFam.has(id))));
+    L.g.classList.toggle("sel", state.h === id);
+  });
+  D.dropped.forEach(d => {
+    const g = dropEl[d.lever_id];
+    g.classList.toggle("on", state.d === d.lever_id);
+    g.classList.toggle("dim", state.d !== d.lever_id && state.sel !== d.family_id && !!(state.risk || state.q));
+  });
+  gBranches.style.opacity = (state.risk || state.q) ? 0.45 : 1;
+}
+
+// ---------- panel ----------
+const panel = $("#panel");
+const riskChips = (rs, cond) => (rs || []).map(r => `<span class="chip risk${cond ? " cond" : ""}"${typeof r === "object" ? ` title="${esc(r.applies_when)}"` : ""}>${esc(rName(r))}${cond ? " · if" : ""}</span>`).join("");
+const sdgChips = ts => (ts || []).map(t => `<span class="chip sdg">${esc(t)}</span>`).join("");
+const O = o => `data-o='${esc(JSON.stringify(o))}'`;
+function crumb(parts) { return `<div class="crumb">${parts.map(([l, o]) => o ? `<a ${O(o)}>${esc(l)}</a>` : esc(l)).join(" › ")}</div>`; }
+// joins tests name levers (LV-xxx) and families (F-xx): link them
+function linkIds(s) {
+  return esc(s).replace(/\b(LV-\d{3})\b/g, (m, id) => V[id] ? `<a class="jl" ${O({ v: id })} title="${esc(V[id].lever)}">${m}</a>` : m)
+    .replace(/\b(F-\d{2})\b/g, (m, id) => F[id] ? `<a class="jl" ${O({ f: id })} title="${esc(F[id].family)}">${m}</a>` : m);
+}
+function leverRow(lid, cnt) {
+  const v = V[lid];
+  return `<details class="lv"><summary><span>${esc(v.lever)}</span>${cnt ? `<span class="cnt">${cnt}</span>` : ""}<span class="id">${lid}</span></summary>
+    <div class="body"><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl>
+    <a class="open" ${O({ v: lid })}>Open lever</a></div></details>`;
+}
+function familyList(fids) {
+  return `<ul class="list">${fids.map(id => `<li><a ${O({ f: id })}><span>${esc(F[id].family)}</span><span class="n">${nLv(F[id])}</span></a></li>`).join("")}</ul>`;
+}
+function leverList(lids, num) {
+  return `<ul class="list">${lids.map(id => `<li><a ${O({ v: id })}><span>${esc(V[id].lever)}</span>${num ? `<span class="n">${num(id)}</span>` : ""}</a></li>`).join("")}</ul>`;
+}
+function show(o) {
+  state.sel = o.f || null;
+  state.lv = o.v || null;
+  state.h = o.h || null; state.d = o.d || null;
+  state.o = o; DT.page = 0; DT.open.clear();
+  if (!DT.keepCol) DT.col = null;
+  DT.keepCol = false;
+  let h = "";
+  if (o.h || o.d) {
+    h = extraPanel(o);
+  } else if (o.v) {
+    const v = V[o.v], f = F[v.family_id], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar;
+    h = crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: f.family_id }]]) +
+      `<div class="sect"><div class="eyebrow">Lever ${v.lever_id}</div><h2>${esc(v.lever)}</h2></div>
+      ${v.lever_full && v.lever_full !== v.lever ? `<p class="def">${esc(v.lever_full)}</p>` : ""}
+      <!--CTRY-->
+      <div class="sect"><div class="eyebrow">Placement tests</div><dl class="chain"><dt>joins when</dt><dd>${linkIds(v.joins_when)}</dd><dt>joins not</dt><dd>${linkIds(v.joins_not)}</dd></dl></div>
+      ${v.check_verdict && v.check_verdict !== "keep" ? `<p class="muted">Literature check (4 Nov): <b>${esc(v.check_verdict)}</b>${v.lever_draft && v.lever_draft !== v.lever ? ` · was "${esc(v.lever_draft)}"` : ""} · ${esc(v.check_source || "")}<br>${esc(v.check_note || "")}</p>` : ""}
+      ${v.backing_grade ? `<p class="muted">Backing: ${esc(v.backing_grade)} (${esc(String(v.backing_score))}) · framework ${esc(v.framework_status || "")}, ${esc(String(v.theory_n || 0))} theory anchor${v.theory_n === 1 ? "" : "s"}</p>` : ""}
+      ${v.intervention_evidence ? `<div class="sect"><div class="eyebrow">What the evidence says (${esc(v.evidence_strength || "")}${v.evidence_design ? ", " + esc(v.evidence_design) : ""}${v.evidence_fit ? ", fit " + esc(v.evidence_fit) : ""}${v.evidence_checked && v.evidence_checked !== "not reached" ? ", read: " + esc(v.evidence_checked) : v.evidence_verified === "yes" ? ", source verified" : ", source not verified"})</div><p class="def">${esc(v.evidence_finding || "")}</p>${v.evidence_basis ? `<p class="muted">Basis: ${esc(v.evidence_basis)}</p>` : ""}<p class="muted">${v.evidence_url ? `<a href="${esc(v.evidence_url)}" target="_blank" rel="noopener">${esc(v.intervention_evidence)}</a>` : esc(v.intervention_evidence)}</p></div>` : ""}
+      ${v.framework_says ? `<div class="sect"><div class="eyebrow">In the framework${v.framework_source ? ": " + esc(v.framework_source) : ""}${v.framework_where ? " (" + esc(v.framework_where) + ")" : ""}</div><p class="def">${esc(v.framework_says)}</p>${(v.framework_refs || []).length ? `<p class="muted">Cites: ${v.framework_refs.map(esc).join("; ")}</p>` : ""}</div>` : ""}
+      ${(v.thesis_refs || []).length ? `<div class="sect"><div class="eyebrow">In the thesis literature (${v.thesis_refs.length} paper${v.thesis_refs.length === 1 ? "" : "s"})</div>${v.thesis_refs.map(r => `<p class="def">${esc(r.citation || "")}${r.ident || r.setting ? ` <span class="muted">(${[r.ident, r.setting].filter(Boolean).map(esc).join(", ")}${r.fit ? "; fit " + esc(r.fit) : ""})</span>` : ""}${r.finding ? `<br><span class="muted">${esc(r.finding)}</span>` : ""}</p>`).join("")}</div>` : ""}
+      ${(v.risks || []).length ? `<div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(v.risks)}</div></div>` : ""}
+      ${(v.entry_points || []).length ? `<div class="sect"><div class="eyebrow">Thai entry points</div><div class="chips">${v.entry_points.map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>` : ""}
+      <div class="sect"><div class="eyebrow">Sibling levers in ${esc(f.family_id)}</div>${leverList(f.lever_ids.filter(x => x !== v.lever_id))}</div>`;
+  } else if (o.f) {
+    const f = F[o.f], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar;
+    const lc = CM ? cCount(rowsOn()).lev : null;
+    h = crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }]]) +
+      `<div class="sect"><div class="eyebrow">Family ${f.family_id}</div><h2>${esc(f.family)}</h2></div>
+      <!--CTRY-->
+      <p class="def">${esc(f.definition)}</p>
+      <div class="sect"${nLv(f) ? "" : " hidden"}><div class="eyebrow">Levers (${nLv(f)})${lc ? " · strategies in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
+      ${(D.dropped || []).some(d => d.family_id === f.family_id) ? `<div class="sect"><div class="eyebrow">Dropped as unbacked by the literature review · grey on the tree, no strategies placed</div>${D.dropped.filter(d => d.family_id === f.family_id).map(d => `<p class="muted"><a class="jl" ${O({ d: d.lever_id })}>${esc(d.lever_id)}</a> ${esc(d.lever)}</p>`).join("")}</div>` : ""}
+      ${f.examples ? `<div class="sect"><div class="eyebrow">How plans say it</div><p class="muted">${esc(f.examples)}</p></div>` : ""}
+      ${(f.theory_anchors || []).length ? `<div class="sect"><div class="eyebrow">Theory anchors (independent review)</div>${f.theory_anchors.map(a => `<p class="def">${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.citation)}, ${esc(a.title)}</a>` : `${esc(a.citation)}, ${esc(a.title)}`} <span class="muted">(${esc(a.role)}; via ${esc(a.via)})</span></p>`).join("")}</div>` : ""}
+      <div class="sect"><div class="eyebrow">Storms it shelters from</div><div class="chips">${riskChips(f.risks) || '<span class="muted">none tagged</span>'}${riskChips(f.conditional_risks, true)}</div></div>
+      <div class="sect"><div class="eyebrow">SDG targets</div><div class="chips">${sdgChips(f.sdg_targets)}</div></div>
+      ${(f.assets || []).length ? `<div class="sect"><div class="eyebrow">Assets</div><div class="chips">${f.assets.map(a => `<span class="chip">${esc(D.assets[a] || a)}</span>`).join("")}</div></div>` : ""}`;
+  } else if (o.g) {
+    const g = G[o.g], s = SP[g.subpillar_code];
+    h = crumb([[PL[s.pillar].name, { p: s.pillar }], [s.name, { s: s.code }]]) +
+      `<div class="sect"><div class="eyebrow">Framework family ${g.group_id} · Jude's framework</div><h2>${esc(g.group)}</h2></div>
+      <p class="def">${esc(g.definition)}</p>
+      <div class="sect"><div class="eyebrow">Basis</div><p class="muted">${esc(g.basis)}</p></div>
+      <div class="sect"><div class="eyebrow">Families · levers</div>${familyList(g.family_ids)}</div>
+      <div class="sect"><div class="eyebrow">Storms</div><div class="chips">${riskChips(g.risks)}</div></div>`;
+  } else if (o.s) {
+    const s = SP[o.s];
+    const gs = D.groups.filter(g => g.subpillar_code === s.code);
+    h = crumb([[PL[s.pillar].name, { p: s.pillar }]]) +
+      `<div class="sect"><div class="eyebrow">Subpillar ${s.code}</div><h2>${esc(s.name)}</h2></div>
+      <p class="def">${esc(s.definition)}</p>
+      ${gs.map(g => `<div class="sect"><div class="eyebrow"><a class="crumb" style="cursor:pointer" ${O({ g: g.group_id })}>${esc(g.group)}</a> · ${esc(g.basis)}</div>${familyList(g.family_ids)}</div>`).join("")}`;
+  } else if (o.p) {
+    const sps = ORDER.find(x => x[0] === o.p)[1];
+    const hold = D.holding.find(x => x.id === HOLD[o.p]);
+    h = `<div class="sect"><div class="eyebrow">Pillar · ${PROLE[o.p]}</div><h2>${esc(PL[o.p].name)}</h2></div>
+      <ul class="list">${sps.map(sc => `<li><a ${O({ s: sc })}><span>${esc(SP[sc].name)}</span><span class="n">${lvOfSub(sc)}</span></a></li>`).join("")}</ul>
+      <p class="muted">Numbers are levers. Standing functions of the state with no family go to the ${esc(hold.name)} branch (${hold.id}).</p>`;
+  } else if (o.r) {
+    const r = o.r;
+    const direct = D.families.filter(f => riskKind(f, r) === "direct"), cond = D.families.filter(f => riskKind(f, r) === "cond");
+    const lvs = D.levers.filter(v => (v.risks || []).includes(r)).map(v => v.lever_id);
+    h = `<div class="sect"><div class="eyebrow">Storm</div><h2>${esc(r)}</h2></div>
+      <p class="muted">Leaves with rain are the families the literature links to this risk. Dashed rain: the link holds only under conditions.</p>
+      <div class="sect"><div class="eyebrow">Families tagged (${direct.length})</div>${familyList(direct.map(f => f.family_id))}</div>
+      ${cond.length ? `<div class="sect"><div class="eyebrow">Conditional (${cond.length})</div>${familyList(cond.map(f => f.family_id))}</div>` : ""}
+      <div class="sect"><div class="eyebrow">Levers it is tagged on (${lvs.length})</div>${leverList(lvs)}</div>`;
+  } else if (o.q) {
+    indexHits(o.q);
+    const shits = stratHits(o.q);
+    const hits = D.families.filter(f => matches(f, o.q));
+    const vhits = D.levers.filter(v => lvHay(v).includes(o.q) || [v.joins_when].join(" ").toLowerCase().includes(o.q));
+    h = `<div class="sect"><div class="eyebrow">Search</div><h2>“${esc(o.q)}”</h2></div>
+      ${(typeof C !== "undefined" && C) ? `<div class="sect"><div class="eyebrow">Strategies in ${esc(selLabel())} (${shits.length}${shits.length > 120 ? ", first 120 shown" : ""}) · select one to open its lever or family</div>${stratSearchList(shits)}</div>` : ""}
+      <div class="sect"><div class="eyebrow">Levers (${vhits.length})</div>${leverList(vhits.slice(0, 60).map(v => v.lever_id))}</div>
+      <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>`;
+  } else {
+    h = `<div class="sect"><div class="eyebrow">How to read it</div><h2>Ten branches, sixty leaves, ${D.levers.length} buds</h2></div>
+      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a framework family (the layer of Jude's tree, each from a published framework), and each leaf one of our families. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
+      <div class="legend">
+        <div><span class="sw" style="background:var(--economy)"></span>Smarter Growth: the economy</div>
+        <div><span class="sw" style="background:var(--people)"></span>People-first Approach: people</div>
+        <div><span class="sw" style="background:var(--gov)"></span>Making Change Happen: governance, the 12 Future-Ready Governance dimensions grouped in four subpillars</div>
+        <div><span class="sw" style="background:var(--muted);width:7px;height:7px"></span>A lever: hover a bud for its joins-when and joins-not tests</div>
+      </div>
+      <p class="muted">Select a storm to see where its rain falls. Select a leaf to read the family and its levers; select a bud to read the lever, its tests and its evidence.</p>
+      <div class="sect"><div class="eyebrow">General branches</div><p class="muted">${D.holding.map(x => esc(x.name)).join(" · ")}</p></div>`;
+  }
+  if (CM && o.v) h = h.replace("<!--CTRY-->", countryLever(o.v));
+  else if (CM && o.f) h = h.replace("<!--CTRY-->", countryFamily(o.f));
+  else if (CM && !Object.keys(o).length) h = countryOverview();
+  panel.innerHTML = h;
+  panel.scrollTop = 0;
+  paint();
+  drawDetails();
+}
+panel.addEventListener("click", e => { const a = e.target.closest("[data-o]"); if (a) { e.preventDefault(); show(JSON.parse(a.dataset.o)); } });
+
+$("#q").addEventListener("input", e => {
+  state.q = e.target.value.trim().toLowerCase();
+  indexHits(state.q);
+  if (state.q.length >= 2) show({ q: state.q }); else { paint(); if (!state.q) show(state.risk ? { r: state.risk } : {}); }
+});
+$("#clear").addEventListener("click", () => { $("#q").value = ""; state.q = ""; indexHits(""); state.risk = null; setRisk(null); show({}); });
+
+// ---------- outline ----------
+const out = $("#outline");
+ORDER.forEach(([pc, sps]) => {
+  const d = document.createElement("div"); d.className = "ol-pillar";
+  d.innerHTML = `<h3 style="color:${PCOL[pc]}">${esc(PL[pc].name)} <span class="eyebrow">${PROLE[pc]}</span></h3>` +
+    sps.map(sc => `<details><summary><b>${esc(SP[sc].name)}</b> <span class="muted">${sc} · ${lvOfSub(sc)} levers</span></summary>` +
+      D.groups.filter(g => g.subpillar_code === sc).map(g => `<details><summary>${esc(g.group)} <span class="muted">· ${esc(g.basis)}</span></summary>` +
+        g.family_ids.map(fid => { const f = F[fid]; return `<details><summary><span class="famrow" ${O({ f: fid })}>${esc(f.family)}</span> <span class="muted">${fid} · ${nLv(f) ? nLv(f) + " levers" : "dropped, no lever left"}</span></summary>
+          <ul class="ol-lvs" style="color:${PCOL[pc]}">${f.lever_ids.map(id => `<li><span class="dot"></span><span class="lvname" style="color:var(--ink)" ${O({ v: id })}>${esc(V[id].lever)} <span class="muted">${id}</span></span></li>`).join("")}</ul></details>`; }).join("") +
+        `</details>`).join("") + `</details>`).join("");
+  out.appendChild(d);
+});
+if ((D.dropped || []).length) {
+  const d = document.createElement("div"); d.className = "ol-pillar";
+  d.innerHTML = `<details><summary><b>Dropped levers</b> <span class="muted">${D.dropped.length} levers the literature review of November 2026 grades unbacked</span></summary>
+    <ul class="ol-lvs">${D.dropped.map(x => `<li><span class="dot"></span><span class="lvname famrow" style="color:var(--ink)" ${O({ d: x.lever_id })}>${esc(x.lever_id)} ${esc(x.lever)} <span class="muted">· ${esc(x.family_id)} ${esc(F[x.family_id].family)}</span></span></li>`).join("")}</ul></details>`;
+  out.appendChild(d);
+}
+out.addEventListener("click", e => {
+  const a = e.target.closest("[data-o]"); if (!a) return;
+  e.preventDefault();
+  show(JSON.parse(a.dataset.o));
+  $(".main").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+});
+
+$("#foot").textContent = `Tree v4, built ${D.built}: groups and families with a lever under each family. ${(D.dropped || []).length} levers graded unbacked by the literature review are dropped (listed under the whole tree). Strategies come from the earlier multi-country run; a plan's period is read from its document, and where it had to be inferred the timeline says so. Category names follow the RHDR framework.`;
+
+/*FOREST*/
+
+// ---------- strategies on the tree ----------
+// row: [plan, name, objective, level, family, lever, group, sector, orientation, risks, objective label, target,
+//       instrument, passages, source strategy, country, first plan if carried over (else -1)]
+const X = D.set, PLN = X.plans, CTY = X.countries, REG = X.regions, ROWS = [];
+// Each source comes with its own string lists; a source read later has its lists joined onto the page's.
+const DICTS = ["sectors", "objs", "targets", "instruments", "sids", "chapters", "agencies", "leads", "sdgs", "urg", "status", "legal", "notes"];
+const firstOf = {};
+function addRows(Y, own) {
+  const off = {};
+  DICTS.forEach(k => { off[k] = own ? 0 : X[k].length - 1; if (!own) for (let i = 1; i < Y[k].length; i++) X[k].push(Y[k][i]); });
+  const m = (k, i) => i ? off[k] + i : 0, start = ROWS.length;
+  Y.rows.forEach(r => {
+    const x = r[15];
+    if (!own) {
+      r[7] = m("sectors", r[7]); r[10] = m("objs", r[10]); r[11] = m("targets", r[11]); r[12] = m("instruments", r[12]); r[14] = m("sids", r[14]);
+      x[2] = m("chapters", x[2]); x[3] = m("urg", x[3]); x[4] = m("status", x[4]); x[5] = m("legal", x[5]);
+      x[7] = x[7].map(i => m("sdgs", i)); x[8] = x[8].map(i => m("agencies", i)); x[9] = m("leads", x[9]); x[11] = m("notes", x[11]);
+    }
+    r[7] = X.sectors[r[7]]; r[9] = r[9].map(i => D.risks[i]); r[10] = X.objs[r[10]];
+    r[11] = X.targets[r[11]]; r[12] = X.instruments[r[12]]; r[17] = x; r[15] = PLN[r[0]].c;
+    r[18] = ROWS.length; ROWS.push(r);
+  });
+  for (let i = start; i < ROWS.length; i++) { const r = ROWS[i], f = firstOf[r[14]]; if (f === undefined || PLN[r[0]].start < PLN[f].start) firstOf[r[14]] = r[0]; }
+  for (let i = start; i < ROWS.length; i++) { const r = ROWS[i]; r[16] = PLN[firstOf[r[14]]].start < PLN[r[0]].start ? firstOf[r[14]] : -1; }
+}
+addRows(X, true);
+// sources: national plans are in the page; sector plans, UNGA statements and budgets are read when switched on
+const SRCM = Object.fromEntries(X.sources.map(x => [x.k, x]));
+const srcOf = p => p.doc_type === "ndp" || p.doc_type === "vision" ? "plans" : p.doc_type;
+const active = new Set(["plans"]), loaded = { plans: true }, loading = {}, failed = {};
+const DOCT = { ndp: "medium-term", vision: "long-term", sector: "sector plan", unga: "UNGA statement", budget: "budget" };
+const CM = true;
+const NOW = new Date().getFullYear();
+let mode = "world", region = null, year = null, ci = 0, C = null;
+const sel = new Set();
+const OVL = { LV: "Placed on a lever", L2: "On a family, no lever", GRP: "On a framework family only", STD: "On a general branch", GOAL: "Goal outside the tree", NEW: "Not placed" };
+const short = (t, n) => t.length > n ? t.slice(0, n - 1) + "…" : t;
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+const fmtPct = s => s >= 0.1 ? Math.round(100 * s) + "%" : s >= 0.001 ? (100 * s).toFixed(1) + "%" : "<0.1%";
+const mk = (tag, a, par) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); par.appendChild(e); return e; };
+function planLabel(p) {
+  if (p.edition === "NS") return "National Strategy";
+  return /^\d+(st|nd|rd|th)$/.test(p.edition) ? p.edition + " Plan" : p.edition;
+}
+const hslug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+const plansOf = c => PLN.map((p, i) => i).filter(i => PLN[i].c === c && active.has(srcOf(PLN[i])));
+const onSrc = r => active.has(srcOf(PLN[r[0]]));
+function drawSources() {
+  $("#srcs").innerHTML = `<span class="eyebrow">Sources</span>` + X.sources.map(x => `<button type="button" class="rchip" aria-pressed="${active.has(x.k)}" data-src="${x.k}">${esc(x.label)} <span>${loading[x.k] ? "reading…" : failed[x.k] ? "could not be read" : x.n.toLocaleString()}</span></button>`).join("");
+}
+function afterSource() {
+  if (mode === "country") { sel.clear(); plansOf(ci).forEach(i => sel.add(i)); }
+  drawSources(); refresh();
+  $("#m-un-n").textContent = ROWS.filter(r => r[3] === "NEW" && onSrc(r)).length.toLocaleString();
+}
+function toggleSource(k) {
+  if (active.has(k)) { if (active.size === 1) return; active.delete(k); afterSource(); return; }
+  active.add(k);
+  if (loaded[k]) { afterSource(); return; }
+  loading[k] = true; failed[k] = false; drawSources();
+  const sc = document.createElement("script");
+  sc.src = `rows_${k}.js`;
+  sc.onerror = () => { loading[k] = false; failed[k] = true; active.delete(k); drawSources(); };
+  document.head.appendChild(sc);
+}
+window.PVR = (k, Y) => { if (loaded[k]) return; addRows(Y, false); loaded[k] = true; loading[k] = false; afterSource(); };
+const inRegion = c => region === null || CTY[c].region === region;
+
+// the rows and columns in view: a country's plans, or the regions (or one region's countries)
+function scope() {
+  if (mode === "country") {
+    const plans = plansOf(ci), base = ROWS.filter(r => r[15] === ci && onSrc(r));
+    C = { name: CTY[ci].name, plans, base, rows: base.filter(r => sel.has(r[0])), unit: "plan", colOf: r => r[0],
+      cols: plans.map(i => ({ key: i, label: planLabel(PLN[i]), sub: `${PLN[i].start}–${PLN[i].end}`, title: `${PLN[i].title}, ${PLN[i].start}–${PLN[i].end}`, on: sel.has(i) && sel.size < plans.length })) };
+    return;
+  }
+  const un = mode === "unmapped";
+  const base = ROWS.filter(r => onSrc(r) && inRegion(r[15]) && (year === null || (PLN[r[0]].start <= year && year <= PLN[r[0]].end)) && (!un || r[3] === "NEW"));
+  if (region === null) {
+    C = { name: `${un ? "Unmapped, " : ""}all ${CTY.length} countries`, base, rows: base, unit: "region", colOf: r => CTY[r[15]].region,
+      cols: REG.map(x => ({ key: x, label: x, sub: CTY.filter(c => c.region === x).length + " countries", title: x })) };
+  } else {
+    C = { name: (un ? "Unmapped, " : "") + region, base, rows: base, unit: "country", colOf: r => r[15],
+      cols: CTY.map((c, i) => ({ key: i, label: c.name, sub: plansOf(i).length + " plans", title: c.name })).filter(c => CTY[c.key].region === region) };
+  }
+}
+function rowsOn() { return C.rows; }
+function cCount(rows) {
+  const fam = {}, lev = {}, gen = {};
+  rows.forEach(r => {
+    if (r[3] === "STD") gen[r[6]] = (gen[r[6]] || 0) + 1;
+    if (r[4]) { const x = fam[r[4]] || (fam[r[4]] = { n: 0, lv: 0 }); x.n++; if (r[5]) x.lv++; }
+    if (r[5]) { const y = lev[r[5]] || (lev[r[5]] = { n: 0 }); y.n++; }
+  });
+  return { fam, lev, gen };
+}
+const cntLabel = x => x && x.n ? `${x.n}` : "";
+function paintCountry() {
+  const { fam, lev, gen } = cCount(C.rows);
+  const max = Math.max(1, ...Object.values(fam).map(x => x.n), ...Object.values(gen));
+  const vmax = Math.max(1, ...Object.values(lev).map(x => x.n));
+  D.families.forEach(f => {
+    const L = leafEl[f.family_id], x = fam[f.family_id], n = x ? x.n : 0;
+    if (!nLv(f)) { sizeLeaf(L, 5, short(L.name, 34) + " · dropped", false); return; }
+    sizeLeaf(L, n ? 5 + 17 * Math.sqrt(n / max) : 4, short(L.name, n ? 38 : 44) + (n ? `  ${n.toLocaleString()}` : ""), !n);
+  });
+  Object.keys(genEl).forEach(id => {
+    const L = genEl[id], n = gen[id] || 0;
+    sizeLeaf(L, n ? 5 + 17 * Math.sqrt(n / max) : 4, L.name + (n ? `  ${n.toLocaleString()}` : ""), !n);
+  });
+  D.levers.forEach(v => {
+    const B = budEl[v.lever_id], x = lev[v.lever_id];
+    if (!x) { sizeBud(B, 1.8, B.col, true); return; }
+    sizeBud(B, 2.2 + 4.3 * Math.sqrt(x.n / vmax), "var(--gold)", false);
+  });
+  drawSky();
+}
+// ---------- the sky: one storm cloud per risk ----------
+// A cloud sits over the leaves whose strategies in view carry the risk (the strategy-weighted centre of the six leaves
+// carrying most of it) and its rain falls towards them. Its size, darkness and rain follow how many strategies in view
+// carry the risk, on one scale for the view. A risk no strategy in view carries is a faint outline over the families
+// the literature ties to it.
+function drawSky() {
+  gSky.innerHTML = "";
+  if (mode === "unmapped") return;
+  const RI = Object.fromEntries(D.risks.map((r, i) => [r, i])), per = D.risks.map(() => ({}));
+  C.rows.forEach(r => {
+    const k = r[4] && leafEl[r[4]] ? r[4] : r[3] === "STD" && genEl[r[6]] ? r[6] : null;
+    if (k) r[9].forEach(x => { if (x in RI) per[RI[x]][k] = (per[RI[x]][k] || 0) + 1; });
+  });
+  const at = k => leafEl[k] || genEl[k];
+  const clouds = D.risks.map((r, i) => {
+    const on = Object.entries(per[i]).sort((a, b) => b[1] - a[1]), n = on.reduce((a, [, v]) => a + v, 0);
+    let top = on.slice(0, 6);
+    if (!top.length) top = D.families.filter(f => nLv(f) && riskKind(f, r) === "direct").map(f => [f.family_id, 1]);
+    const tn = top.reduce((a, [, v]) => a + v, 0);
+    return { r, n, on: on.slice(0, 8), x: tn ? top.reduce((a, [k, v]) => a + at(k).x * v, 0) / tn : CX };
+  });
+  const big = Math.max(1, ...clouds.map(c => c.n));
+  clouds.forEach(c => {
+    c.t = Math.sqrt(c.n / big); c.rx = 40 + 50 * c.t; c.ry = 15 + 10 * c.t;
+    const w = c.r.toUpperCase().split(" "), cut = w.length > 2 ? Math.ceil(w.length / 2) : w.length;
+    c.lines = cut < w.length ? [w.slice(0, cut).join(" "), w.slice(cut).join(" ")] : [w.join(" ")];
+    c.half = Math.max(c.rx, Math.max(...c.lines.map(l => l.length)) * 3.4 + 8);
+  });
+  // spread across the sky in the order of where their rain falls, two staggered rows
+  const nC = clouds.length;
+  [...clouds].sort((a, b) => a.x - b.x).forEach((c, i) => { c.x = 95 + i * 1210 / Math.max(1, nC - 1); c.row = i % 2; });
+  let sd = 11; const rnd = () => ((sd = (sd * 16807) % 2147483647) - 1) / 2147483646;
+  clouds.forEach(c => {
+    const cy = -150 + c.row * 62, dim = state.risk && state.risk !== c.r, a = dim ? 0.22 : 1;
+    const g = el("g", { class: "storm" + (c.n ? "" : " calm"), tabindex: 0, role: "button", "aria-pressed": String(state.risk === c.r),
+      "aria-label": `${c.r}: ${c.n.toLocaleString()} strategies in view` }, gSky);
+    el("title", {}, g).textContent = c.n
+      ? `${c.r}: ${c.n.toLocaleString()} strategies in view carry this risk; rain falls on the ${c.on.length === 1 ? "leaf" : c.on.length + " leaves"} carrying most of them`
+      : `${c.r}: no strategy in view carries this risk`;
+    const rain = el("g", { class: "sky-rain", opacity: a }, g), vmax = Math.max(1, ...c.on.map(([, v]) => v));
+    c.on.forEach(([k, v]) => {
+      const L = at(k), m = Math.max(1, Math.round((1 + 2 * c.t) * v / vmax));
+      for (let j = 0; j < m; j++) {
+        const x0 = c.x + (rnd() - 0.5) * c.rx * 1.3, y0 = cy + c.ry * 0.7, tx = L.x + (rnd() - 0.5) * 10, ty = L.y;
+        const f = (0.22 + 0.3 * c.t) * (0.7 + 0.3 * rnd());
+        el("line", { x1: x0, y1: y0, x2: x0 + (tx - x0) * f, y2: y0 + (ty - y0) * f, "stroke-opacity": 0.2 + 0.45 * c.t }, rain);
+      }
+    });
+    [[-0.45, 0.2, 0.62], [0.4, 0.25, 0.58], [0, -0.05, 0.82]].forEach(([dx, dy, k]) =>
+      el("ellipse", { cx: c.x + dx * c.rx, cy: cy + dy * c.ry, rx: c.rx * k, ry: c.ry * (k + 0.25), "fill-opacity": c.n ? (0.18 + 0.5 * c.t) * a : 0 }, g));
+    const tx = el("text", { x: c.x, y: cy + (c.lines.length > 1 ? -2 : 4), "text-anchor": "middle", opacity: dim ? 0.4 : 1 }, g);
+    c.lines.forEach((l, i) => (el("tspan", { x: c.x, dy: i ? 12 : 0 }, tx).textContent = l));
+    if (c.n) el("text", { x: c.x, y: cy + c.ry + 4 + (c.lines.length > 1 ? 6 : 0), "text-anchor": "middle", class: "sn", opacity: dim ? 0.4 : 1 }, g).textContent = c.n.toLocaleString();
+    if (state.risk === c.r) el("ellipse", { cx: c.x, cy: cy + 2, rx: c.half + 6, ry: c.ry + 12, class: "ring" }, g);
+    g.addEventListener("click", () => setRisk(state.risk === c.r ? null : c.r));
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRisk(state.risk === c.r ? null : c.r); } });
+  });
+}
+function selLabel() {
+  if (mode !== "country") return C.name + (year ? `, plans in force in ${year}` : "");
+  if (sel.size === C.plans.length) return "all plans";
+  if (sel.size === 1) { const p = PLN[[...sel][0]]; return `${planLabel(p)}, ${p.start}–${p.end}`; }
+  return `${sel.size} plans`;
+}
+
+// ---------- pickers ----------
+function drawRegions() {
+  const n = r => CTY.filter(c => r === null || c.region === r).length;
+  $("#regions").innerHTML = [null, ...REG].map(r => `<button type="button" class="rchip" aria-pressed="${region === r}" data-r="${esc(r || "")}">${esc(r || "All regions")} <span>${n(r)}</span></button>`).join("");
+}
+function drawCountries() {
+  $("#countries").innerHTML = REG.map(r => `<div class="cg"><span class="eyebrow">${esc(r)}</span>${CTY.map((c, i) => c.region === r ? `<button type="button" class="rchip" aria-pressed="${i === ci}" data-ci="${i}">${esc(c.name)}</button>` : "").join("")}</div>`).join("");
+}
+function drawYears() {
+  const s = $("#yrsvg"); s.innerHTML = "";
+  const ps = PLN.filter(p => inRegion(p.c) && active.has(srcOf(p)));
+  const y0 = Math.min(...ps.map(p => p.start)), y1 = Math.min(2040, Math.max(...ps.map(p => p.end)));
+  const W = 1000, H = 66, T = 12, B = 46, n = y1 - y0 + 1, bw = (W - 20) / n;
+  s.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const cnt = [];
+  for (let y = y0; y <= y1; y++) { const f = ps.filter(p => p.start <= y && y <= p.end); cnt.push({ y, n: f.length, c: new Set(f.map(p => p.c)).size }); }
+  const max = Math.max(1, ...cnt.map(x => x.n));
+  cnt.forEach((x, i) => {
+    const on = year === x.y, x0 = 10 + i * bw, h = (B - T) * x.n / max;
+    const g = mk("g", { class: "yr" + (on ? " on" : "") + (x.y === NOW ? " now" : ""), tabindex: 0, role: "button", "aria-pressed": on, "aria-label": `${x.y}: ${x.n} plans in force` }, s);
+    mk("rect", { x: x0, y: 0, width: bw, height: H, fill: "transparent" }, g);
+    mk("rect", { class: "bar", x: x0 + 1.5, y: B - Math.max(h, 1), width: Math.max(1, bw - 3), height: Math.max(h, 1), rx: 2 }, g);
+    if (x.y % 5 === 0 || on) mk("text", { x: x0 + bw / 2, y: H - 6, "text-anchor": "middle", class: "tlax" }, g).textContent = x.y;
+    if (on) mk("text", { x: x0 + bw / 2, y: B - h - 4 < 10 ? 10 : B - h - 4, "text-anchor": "middle", class: "tlax" }, g).textContent = x.n;
+    mk("title", {}, g).textContent = `${x.y}: ${x.n} plans in force in ${x.c} countries`;
+    const pick = () => { year = on ? null : x.y; refresh(); };
+    g.addEventListener("click", pick);
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
+  });
+  $("#yr-h").textContent = year ? `Plans in force in ${year}: the tree shows these plans only` : "Plans in force by year: pick a year to see the tree for the plans in force then";
+  $("#yr-all").hidden = !year;
+}
+function drawTimeline() {
+  const svg2 = $("#tlsvg"); svg2.innerHTML = "";
+  const P = C.plans.map(i => PLN[i]);
+  const y0 = Math.min(...P.map(p => p.start), NOW - 1), y1 = Math.max(...P.map(p => p.end), NOW) + 1;
+  const W = 1000, LW = 210, RH = 28, H = 30 + P.length * RH;
+  svg2.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const Xs = y => LW + (W - LW - 150) * (y - y0) / (y1 - y0);
+  const step = y1 - y0 > 30 ? 5 : y1 - y0 > 14 ? 2 : 1;
+  for (let y = y0; y <= y1; y++) {
+    if (y % step) continue;
+    mk("line", { x1: Xs(y), x2: Xs(y), y1: 16, y2: H, class: "tlgrid" }, svg2);
+    mk("text", { x: Xs(y), y: 11, "text-anchor": "middle", class: "tlax" }, svg2).textContent = y;
+  }
+  mk("line", { x1: Xs(NOW + 0.5), x2: Xs(NOW + 0.5), y1: 16, y2: H, class: "tlnow" }, svg2);
+  mk("text", { x: Xs(NOW + 0.5) + 4, y: H - 3, class: "tlax" }, svg2).textContent = "today";
+  const counts = {}, car = {};
+  C.base.forEach(r => { counts[r[0]] = (counts[r[0]] || 0) + 1; if (r[16] >= 0) car[r[0]] = (car[r[0]] || 0) + 1; });
+  C.plans.forEach((i, k) => {
+    const p = PLN[i], y = 22 + k * RH, n = counts[i] || 0, c = car[i] || 0;
+    const g = mk("g", { class: "tlbar" + (sel.has(i) ? " on" : ""), tabindex: 0, role: "button", "aria-pressed": sel.has(i) }, svg2);
+    mk("rect", { x: 0, y, width: W, height: RH, fill: "transparent" }, g);
+    mk("text", { x: 0, y: y + 12 }, g).textContent = short(planLabel(p), 26);
+    mk("text", { x: 0, y: y + 23, class: "n" }, g).textContent = DOCT[p.doc_type] || p.doc_type;
+    const bx = Xs(p.start), bw = Math.max(4, Xs(p.end + 1) - Xs(p.start));
+    mk("rect", { class: "bar", x: bx, y: y + 3, width: bw, height: RH - 10, rx: 3 }, g);
+    if (c) mk("rect", { class: "car", x: bx, y: y + 3, width: bw * c / n, height: RH - 10, rx: 3 }, g);
+    mk("text", { x: bx + bw + 6, y: y + 15, class: "n" }, g).textContent = `${n}${c ? ` · ${pct(c, n)}% carried` : ""}`;
+    mk("title", {}, g).textContent = `${p.title}, ${p.start}–${p.end}: ${n} strategies, ${c} already in an earlier plan, ${n - c} first seen here. Period: ${p.src}.`;
+    const pick = e => {
+      if (e && (e.shiftKey || e.metaKey || e.ctrlKey)) { if (sel.has(i) && sel.size > 1) sel.delete(i); else sel.add(i); }
+      else if (sel.size === 1 && sel.has(i)) { allPlans(); return; }
+      else { sel.clear(); sel.add(i); }
+      refresh();
+    };
+    g.addEventListener("click", pick);
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(e); } });
+  });
+  const inf = C.plans.filter(i => PLN[i].src.includes("confirm"));
+  $("#tl-note").textContent = "The darker part of a bar is the share of its strategies that were already in an earlier plan. Select a plan to see its tree; select it again for all plans; shift-select to compare several." +
+    (inf.length ? " Period to confirm: " + inf.map(i => PLN[i].title).join("; ") + "." : "");
+}
+function allPlans() { sel.clear(); C.plans.forEach(i => sel.add(i)); refresh(); }
+
+// ---------- panel pieces ----------
+const colAttr = c => `data-col="${esc(String(c.key))}"`;
+// one bar per column: the share of that column's strategies that pass the test
+function colBars(test, color) {
+  const tot = {}, hit = {};
+  C.base.forEach(r => { const k = C.colOf(r); tot[k] = (tot[k] || 0) + 1; if (test(r)) hit[k] = (hit[k] || 0) + 1; });
+  const sh = C.cols.map(c => ({ c, n: hit[c.key] || 0, t: tot[c.key] || 0 }));
+  const max = Math.max(1e-9, ...sh.map(x => x.t ? x.n / x.t : 0));
+  return `<div class="pbars">${sh.map(x => { const s = x.t ? x.n / x.t : 0; return `<a class="lab" ${colAttr(x.c)} title="${esc(x.c.title)}">${esc(short(x.c.label, 24))}</a>
+    <span class="trk" title="${x.n} of ${x.t} strategies"><i style="width:${100 * s / max}%;background:${color}"></i></span>
+    <span class="num">${x.n ? `${x.n} · ${fmtPct(s)}` : x.t ? "0" : "–"}</span>`; }).join("")}</div>`;
+}
+const BINS = [[0, 2009, "before 2010"], [2010, 2014, "2010–14"], [2015, 2019, "2015–19"], [2020, 2024, "2020–24"], [2025, 9999, "2025 on"]];
+function binBars(test, color) {
+  const sh = BINS.map(([a, b, label]) => { const rs = ROWS.filter(r => inRegion(r[15]) && PLN[r[0]].start >= a && PLN[r[0]].start <= b); return { label, t: rs.length, n: rs.filter(test).length }; });
+  const max = Math.max(1e-9, ...sh.map(x => x.t ? x.n / x.t : 0));
+  return `<div class="pbars">${sh.map(x => { const s = x.t ? x.n / x.t : 0; return `<span class="lab">${x.label}</span>
+    <span class="trk" title="${x.n} of ${x.t} strategies in plans starting ${x.label}"><i style="width:${100 * s / max}%;background:${color}"></i></span>
+    <span class="num">${x.n ? `${x.n} · ${fmtPct(s)}` : x.t ? "0" : "–"}</span>`; }).join("")}</div>`;
+}
+function sizeBars() {
+  const tot = {}; C.base.forEach(r => { const k = C.colOf(r); tot[k] = tot[k] || { n: 0, lv: 0 }; tot[k].n++; if (r[5]) tot[k].lv++; });
+  const max = Math.max(1, ...Object.values(tot).map(x => x.n));
+  return `<div class="pbars">${C.cols.map(c => { const x = tot[c.key] || { n: 0, lv: 0 }; return `<a class="lab" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 24))}</a>
+    <span class="trk" title="${x.n} strategies, ${x.lv} on a lever"><i style="width:${100 * x.lv / max}%;background:var(--gold)"></i><i style="width:${100 * (x.n - x.lv) / max}%;background:var(--muted);opacity:.45"></i></span>
+    <span class="num">${x.n.toLocaleString()}</span>`; }).join("")}</div>`;
+}
+function countryOverview() {
+  const rows = C.rows, n = rows.length || 1;
+  const lv = {}; rows.forEach(r => lv[r[3]] = (lv[r[3]] || 0) + 1);
+  const { fam, lev, gen } = cCount(rows);
+  const topF = Object.entries(fam).sort((a, b) => b[1].n - a[1].n).slice(0, 8).map(([k]) => k);
+  const topV = Object.entries(lev).sort((a, b) => b[1].n - a[1].n).slice(0, 10).map(([k]) => k);
+  const used = Object.keys(lev).length;
+  const nPl = new Set(rows.map(r => r[0])).size, nCt = new Set(rows.map(r => r[15])).size, nSrc = new Set(rows.map(r => r[14])).size;
+  const one = mode === "country" && sel.size === 1;
+  const car = rows.filter(r => r[16] >= 0).length;
+  const sub = mode === "country"
+    ? (one ? `${car} (${pct(car, n)}%) were already in an earlier plan; ${rows.length - car} are first seen in this plan.` : `${nSrc.toLocaleString()} distinct strategies across ${nPl} plans: one that runs through several plans is counted once in each.`)
+    : `${nPl} plan editions in ${nCt} countries; ${nSrc.toLocaleString()} distinct strategies, each counted once in every plan edition it appears in.`;
+  return `<div class="sect"><div class="eyebrow">${mode === "country" ? esc(C.name) + " · " : ""}${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} strategies</h2></div>
+    <p class="muted">${sub}</p>
+    <a class="todt" data-dt>See them in the details table ↓</a>
+    <div class="lvls">${["LV", "L2", "GRP", "GOAL", "NEW"].filter(k => lv[k] || k === "LV" || k === "L2").map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${pct(lv[k] || 0, n)}%</span></div>`).join("")}
+      ${ORDER.map(([pc]) => { const id = HOLD[pc], k = gen[id] || 0; return `<div><span class="sw" style="margin:0;background:${PCOL[pc]}"></span><a ${O({ h: id })}>${esc(HNAME[id])}</a><span class="num">${k.toLocaleString()} · ${pct(k, n)}%</span></div>`; }).join("")}</div>
+    <div class="sect"><div class="eyebrow">${mode === "country" ? "Plan by plan" : region === null ? "Region by region · select one to open it" : "Country by country · select one to open it"} · <span style="color:var(--gold)">on a lever</span></div>${sizeBars()}</div>
+    <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
+    <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
+    <p class="muted">Leaf size is the number of strategies on each family. Gold buds are levers with strategies, sized by count; dashed buds get none. Grey buds are the ${D.dropped.length} dropped levers and grey leaves the ${D.families.filter(f => !nLv(f)).length} families left without a lever: nothing is placed on them. Strategies that fit no live family sit on the general economy, people or governance branch. ${used} of ${D.levers.length} levers are used.</p>`;
+}
+const oti = r => [r[2] && `<b>Objective</b> ${esc(r[2])}`, r[11] && `<b>Target</b> ${esc(r[11])}`, r[12] && `<b>Instrument</b> ${esc(r[12])}`].filter(Boolean).join(" · ");
+function stratMeta(r, showLever) {
+  const p = PLN[r[0]], bits = [];
+  if (mode !== "country") bits.push(esc(CTY[r[15]].name));
+  bits.push(esc(short(planLabel(p), 26)) + ` ${p.start}–${String(p.end).slice(2)}`);
+  if (showLever) bits.push(r[5] ? `<b>${esc(short(V[r[5]].lever, 48))}</b>` : r[4] && F[r[4]] ? "family only" : r[3] === "STD" ? esc(HNAME[r[6]] || OVL.STD) : esc(OVL[r[3]] || ""));
+  if (mode === "country" && r[16] >= 0) bits.push(`since ${esc(planLabel(PLN[r[16]]))}`);
+  if (r[7]) bits.push(esc(r[7]));
+  return bits.join(" · ");
+}
+const order = (a, b) => (a[5] ? 0 : 1) - (b[5] ? 0 : 1) || a[15] - b[15] || a[0] - b[0];
+function stratSearchList(rows) {
+  if (!rows.length) return `<p class="muted">No strategy matches.</p>`;
+  return rows.slice().sort(order).slice(0, 120).map(r => {
+    const o = r[5] ? { v: r[5] } : r[4] ? { f: r[4] } : r[3] === "STD" ? { h: r[6] } : null;
+    return `<div class="strat"${o ? ` ${O(o)} style="cursor:pointer"` : ""}><span>${esc(r[1])}</span><span class="meta">${stratMeta(r, true)}</span><span class="oti">${oti(r)}</span></div>`;
+  }).join("");
+}
+function stratList(rows, showLever) {
+  return rows.slice().sort(order).slice(0, 150).map(r => `<div class="strat"><span>${esc(r[1])}</span><span class="meta">${stratMeta(r, showLever)}</span><span class="oti">${oti(r)}</span></div>`).join("") +
+    (rows.length > 150 ? `<p class="muted">and ${(rows.length - 150).toLocaleString()} more</p>` : "");
+}
+function nodeBlock(test, col, what) {
+  const rows = C.rows.filter(test);
+  const by = mode === "country" ? "plan by plan" : region === null ? "region by region" : "country by country";
+  return `<div class="sect"><div class="eyebrow">${esc(selLabel())}: ${rows.length.toLocaleString()} strategies on this ${what}</div></div>
+    <div class="sect"><div class="eyebrow">${by} · count and share of each ${C.unit}'s strategies</div>${colBars(test, col)}</div>
+    ${mode === "country" ? "" : `<div class="sect"><div class="eyebrow">Over time · plans by the year they start${region ? ", " + esc(region) : ""}</div>${binBars(test, col)}</div>`}
+    ${rows.length ? `<a class="todt" data-dt>See ${rows.length === 1 ? "this strategy" : "these " + rows.length.toLocaleString() + " strategies"} in the details table ↓</a>
+    <details class="lv"><summary><span>The strategies${rows.length > 150 ? ", first 150" : ""}</span></summary><div>${stratList(rows, what === "family")}</div></details>` : ""}`;
+}
+const HWHAT = { SMG: "the economy", PFA: "people", MCH: "governance" };
+const famPillar = fid => SP[F[fid].subpillar_code].pillar;
+const countryFamily = fid => nLv(F[fid]) ? nodeBlock(r => r[4] === fid, famCol(fid), "family")
+  : `<p class="def" style="color:var(--muted)">Every lever of this family was dropped as unbacked by the literature review, so the family is drawn in grey and takes no strategies. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[famPillar(fid)]])}.</p>`;
+function extraPanel(o) {
+  if (o.h) {
+    const pc = HPC[o.h], test = r => r[3] === "STD" && r[6] === o.h;
+    const lab = {}; C.rows.filter(test).forEach(r => lab[r[10]] = (lab[r[10]] || 0) + 1);
+    const top = Object.entries(lab).sort((a, b) => b[1] - a[1]).slice(0, 14);
+    return crumb([[PL[pc].name, { p: pc }]]) +
+      `<div class="sect"><div class="eyebrow">General branch · ${PROLE[pc]}</div><h2>${esc(HNAME[o.h])}</h2></div>
+      <p class="def">Strategies about ${HWHAT[pc]} that fit no live family on the tree are held here, rather than forced onto a family or placed on a part of the tree that was dropped.</p>
+      ${nodeBlock(test, PCOL[pc], "general branch")}
+      ${top.length ? `<div class="sect"><div class="eyebrow">What is held here · objective label and strategies</div><div class="lvls">${top.map(([k, n]) => `<div>${esc(k || "No objective label")}<span class="num">${n}</span></div>`).join("")}</div></div>` : ""}`;
+  }
+  const d = D.dropped.find(x => x.lever_id === o.d), f = F[d.family_id], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar, dead = !nLv(f);
+  return crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: f.family_id }]]) +
+    `<div class="sect"><div class="eyebrow">Dropped lever ${d.lever_id}</div><h2 style="color:var(--muted)">${esc(d.lever)}</h2></div>
+    <p class="def">The literature review of November 2026 grades this lever unbacked: no framework support and at most thin evidence on the action itself. It is out of the tree, drawn in grey, and no strategy is placed on it.</p>
+    <p class="muted">${dead ? `It was the last lever of ${esc(f.family)}, so that family is grey too. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[pl]])}.` : `Strategies on this theme sit on ${esc(f.family)} or on one of its remaining levers.`}</p>
+    ${dead ? "" : `<div class="sect"><div class="eyebrow">Live levers in ${f.family_id}</div>${leverList(f.lever_ids)}</div>`}`;
+}
+const countryLever = lid => nodeBlock(r => r[5] === lid, famCol(V[lid].family_id), "lever");
+
+// ---------- table: families and levers by column ----------
+const openFam = new Set();
+function drawTable() {
+  const cols = C.cols, idx = {}; cols.forEach((c, i) => idx[String(c.key)] = i);
+  const z = () => cols.map(() => 0), tot = z(), totF = z(), totL = z();
+  const fam = cols.map(() => ({})), lev = cols.map(() => ({})), gen = cols.map(() => ({})), af = {}, al = {}, ag = {}, totG = z();
+  let n0 = 0, nF = 0, nL = 0, nG = 0;
+  C.base.forEach(r => {
+    const i = idx[String(C.colOf(r))]; if (i === undefined) return;
+    n0++; tot[i]++;
+    if (r[3] === "STD") { nG++; totG[i]++; gen[i][r[6]] = (gen[i][r[6]] || 0) + 1; ag[r[6]] = (ag[r[6]] || 0) + 1; }
+    if (r[4]) { nF++; totF[i]++; const x = fam[i][r[4]] || (fam[i][r[4]] = { n: 0, lv: 0 }), a = af[r[4]] || (af[r[4]] = { n: 0, lv: 0 }); x.n++; a.n++; if (r[5]) { x.lv++; a.lv++; } }
+    if (r[5]) { nL++; totL[i]++; lev[i][r[5]] = (lev[i][r[5]] || 0) + 1; al[r[5]] = (al[r[5]] || 0) + 1; }
+  });
+  const NC = cols.length + 3;
+  const head = `<thead><tr><th>Framework family › family › lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${cols.map(c => `<th class="colh${c.on ? " on" : ""}" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 20))}<br>${esc(c.sub)}</th>`).join("")}</tr></thead>`;
+  let body = `<tr class="tot"><td>Strategies</td><td class="all">${n0.toLocaleString()}</td><td></td>${tot.map(n => `<td>${n.toLocaleString()}</td>`).join("")}</tr>
+    <tr class="tot"><td>On a live family or one of its levers</td><td class="all">${pct(nF, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totF[i], n) + "%" : ""}</td>`).join("")}</tr>
+    <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(nL, n0)}%</td><td></td>${tot.map((n, i) => `<td class="g">${n ? pct(totL[i], n) + "%" : ""}</td>`).join("")}</tr>
+    <tr class="tot"><td>On a general branch</td><td class="all">${pct(nG, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totG[i], n) + "%" : ""}</td>`).join("")}</tr>`;
+  const cell = (n, of, col, tip, i) => {
+    const sh = of ? n / of : 0;
+    return `<td title="${tip}"${n ? ` data-ck="${i}"` : ""} style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
+  };
+  ORDER.forEach(([pc0, sps]) => { sps.forEach(sc => {
+    body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
+    const col = PCOL[pc0];
+    D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
+    const gn = cols.map((c, i) => g.family_ids.reduce((t, fid) => t + ((fam[i][fid] || {}).n || 0), 0));
+    const ga = g.family_ids.reduce((t, fid) => t + ((af[fid] || {}).n || 0), 0), gl = g.family_ids.reduce((t, fid) => t + ((af[fid] || {}).lv || 0), 0);
+    body += `<tr class="grow"><td ${O({ g: g.group_id })} title="${esc(g.basis)}">${esc(g.group)}</td><td class="all">${ga || ""}</td><td class="pws">${gl ? pct(gl, ga) + "%" : ""}</td>${gn.map((n, i) => cell(n, tot[i], col, `${esc(cols[i].label)}: ${n} strategies in ${esc(g.group)}`, i)).join("")}</tr>`;
+    g.family_ids.map(fid => F[fid]).forEach(f => {
+      const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid), dead = !nLv(f);
+      body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}${dead ? " · dropped" : ""}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
+        const x = fam[i][fid] || { n: 0, lv: 0 };
+        return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} strategies, ${x.lv} on a lever`, i);
+      }).join("")}</tr>`;
+      f.lever_ids.forEach(lid => {
+        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${al[lid] || ""}</td><td></td>${cols.map((c, i) => cell(lev[i][lid] || 0, tot[i], col, `${esc(c.label)}: ${lev[i][lid] || 0} strategies`, i)).join("")}</tr>`;
+      });
+      D.dropped.filter(d => d.family_id === fid).forEach(d => {
+        body += `<tr class="lvrow drop" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ d: d.lever_id })} title="Dropped as unbacked by the literature review: no strategies are placed on it">${esc(d.lever)} · dropped</td><td class="all"></td><td></td>${cols.map(() => "<td></td>").join("")}</tr>`;
+      });
+    });
+    });
+  });
+    const hid = HOLD[pc0];
+    body += `<tr class="sp"><td colspan="${NC}">General branch · ${PROLE[pc0]}</td></tr>
+      <tr class="hrow"><td ${O({ h: hid })} title="Strategies that fit no live family">${esc(HNAME[hid])}</td><td class="all">${ag[hid] || ""}</td><td></td>${cols.map((c, i) => cell(gen[i][hid] || 0, tot[i], PCOL[pc0], `${esc(c.label)}: ${gen[i][hid] || 0} strategies`, i)).join("")}</tr>`;
+  });
+  $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
+  $("#ct-h").textContent = mode === "country" ? `${C.name} over time: families and levers by plan` : region === null ? "Regions side by side: families and levers" : `${region}: countries side by side`;
+  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. Shaded bold rows are the framework families of Jude's tree, the layer under each RHDR subpillar; the rows under them are our families. A row is the share of that ${C.unit}'s strategies placed on it or on one of its levers; open a family to see its levers. Grey rows are dropped families and levers, which take no strategies; each pillar ends with its general branch, for strategies that fit no live family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
+}
+function toggleFam(fid, on) {
+  if (on) openFam.add(fid); else openFam.delete(fid);
+  const tr = $(`#ct tr.frow[data-fam="${fid}"]`); if (tr) tr.classList.toggle("open", on);
+  document.querySelectorAll(`#ct tr.lvrow[data-of="${fid}"]`).forEach(r => r.hidden = !on);
+}
+
+// ---------- details table: the strategies behind whatever is selected ----------
+// r[17] holds the rest of a strategy's row: [number in its plan, quote, plan chapter, urgency, status, legal basis,
+// flags, SDG targets, agencies, lead, plan editions it is in]
+const DT = { col: null, text: "", lvl: "", ori: "", urg: "", st: "", sort: "n", dir: -1, page: 0, size: 50, open: new Set() };
+const rUrg = r => X.urg[r[17][3]], rSt = r => X.status[r[17][4]];
+const famOf = r => r[4] ? F[r[4]].family : r[3] === "NEW" ? "Unmapped" : (HNAME[r[6]] || "");
+const pillarOf = r => r[4] ? famPillar(r[4]) : HPC[r[6]];
+const RANK = { high: 0, medium: 1, low: 2, aspiration: 0, planned: 1, operational: 2 };
+const DCOLS = [
+  { k: "country", h: "Country", v: r => CTY[r[15]].name, hide: () => mode === "country" },
+  { k: "plan", h: "Plan", v: r => planLabel(PLN[r[0]]), cls: "w0" },
+  { k: "years", h: "Years", v: r => PLN[r[0]].start * 10000 + PLN[r[0]].end, t: r => `${PLN[r[0]].start}–${PLN[r[0]].end}`, cls: "nw" },
+  { k: "name", h: "Strategy", v: r => r[1], cls: "nm" },
+  { k: "obj", h: "Objective", v: r => r[2], cls: "w" },
+  { k: "tgt", h: "Target", v: r => r[11], cls: "w" },
+  { k: "ins", h: "Instrument", v: r => r[12], cls: "w" },
+  { k: "sector", h: "Sector", v: r => r[7] },
+  { k: "gfam", h: "Framework family", v: r => r[4] ? G[F[r[4]].group_id].group : "", cls: "w0" },
+  { k: "fam", h: "Family or branch", v: famOf, cls: "w", t: r => `<span class="sw" style="background:${PCOL[pillarOf(r)] || "var(--line)"}"></span>${esc(famOf(r))}` },
+  { k: "lev", h: "Lever", v: r => r[5] ? V[r[5]].lever : "", cls: "w" },
+  { k: "ori", h: "Orientation", v: r => r[8] },
+  { k: "urg", h: "Urgency", v: r => RANK[rUrg(r)], t: r => esc(rUrg(r)) },
+  { k: "st", h: "Status", v: r => RANK[rSt(r)], t: r => esc(rSt(r)) },
+  { k: "why", h: "Why unmapped · what the tree would need", v: r => X.notes[r[17][11]], cls: "w", hide: () => mode !== "unmapped" },
+  { k: "n", h: "Passages", v: r => r[13], cls: "num", title: "Passages of the plan that state this strategy" },
+];
+function nodeTest(o) {
+  if (o.v) return [r => r[5] === o.v, "Lever: " + V[o.v].lever];
+  if (o.f) return [r => r[4] === o.f, "Family: " + F[o.f].family];
+  if (o.h) return [r => r[3] === "STD" && r[6] === o.h, HNAME[o.h]];
+  if (o.d) return [() => false, "Dropped lever: no strategies are placed on it"];
+  if (o.g) return [r => r[4] && F[r[4]].group_id === o.g, "Framework family: " + G[o.g].group];
+  if (o.s) return [r => r[4] && F[r[4]].subpillar_code === o.s, "Subpillar: " + SP[o.s].name];
+  if (o.p) return [r => pillarOf(r) === o.p, "Pillar: " + PL[o.p].name];
+  if (o.r) return [r => r[9].includes(o.r), "Storm: " + o.r];
+  return null;
+}
+function dtBase() {
+  const o = state.o || {};
+  let rows = o.q ? stratHits(o.q) : C.rows, chips = [[selLabel() === "all plans" ? C.name + ", all plans" : (mode === "country" ? C.name + ", " : "") + selLabel(), null]];
+  if (o.q) chips.push([`Search: “${o.q}”`, "q"]);
+  const nt = nodeTest(o);
+  if (nt) { rows = rows.filter(nt[0]); chips.push([nt[1], "o"]); }
+  if (DT.col !== null) {
+    const c = C.cols.find(c => String(c.key) === String(DT.col));
+    if (c) { rows = rows.filter(r => String(C.colOf(r)) === String(DT.col)); chips.push([c.title || c.label, "col"]); } else DT.col = null;
+  }
+  return { rows, chips };
+}
+function dtOwn(rows) {
+  const q = DT.text;
+  return rows.filter(r => (!DT.lvl || r[3] === DT.lvl) && (!DT.ori || r[8] === DT.ori) && (!DT.urg || rUrg(r) === DT.urg) && (!DT.st || rSt(r) === DT.st) &&
+    (!q || [r[1], r[2], r[10], r[11], r[12], r[7], r[17][1], CTY[r[15]].name, famOf(r), r[5] ? V[r[5]].lever : "", X.chapters[r[17][2]]].join(" ").toLowerCase().includes(q)));
+}
+const blank = v => v === "" || v === undefined || v === null;
+function dtSort(rows) {
+  const c = DCOLS.find(c => c.k === DT.sort) || DCOLS[0], d = DT.dir;
+  return rows.map(r => [c.v(r), r]).sort((a, b) => {
+    const x = a[0], y = b[0];
+    if (blank(x) || blank(y)) return blank(x) - blank(y) || a[1][18] - b[1][18];
+    return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * d || a[1][18] - b[1][18];
+  }).map(x => x[1]);
+}
+// the passage text sits in a file per plan edition beside the page, read when a strategy is opened
+const PSG = {};
+window.PVD = (id, d) => { PSG[id] = d; };
+function loadPsg(pid) {
+  if (PSG[pid]) return;
+  PSG[pid] = { wait: true };
+  const s = document.createElement("script");
+  const p = PLN.find(q => q.id === pid);  // national plans have a file each; other sources one per country
+  s.src = "detail/" + (p && p.doc_type !== "ndp" && p.doc_type !== "vision" ? CTY[p.c].slug + "_" + p.doc_type : pid) + ".js";
+  s.onload = () => { if (PSG[pid].wait) PSG[pid] = { err: true }; fillPsg(); };
+  s.onerror = () => { PSG[pid] = { err: true }; fillPsg(); };
+  document.head.appendChild(s);
+}
+function psgHtml(r) {
+  const pid = PLN[r[0]].id, d = PSG[pid];
+  if (!d) { loadPsg(pid); return `<p class="muted">Loading the passages…</p>`; }
+  if (d.wait) return `<p class="muted">Loading the passages…</p>`;
+  if (d.err) return `<p class="muted">The text of the ${r[13]} passage${r[13] === 1 ? "" : "s"} is kept in the folder “detail” beside this page and could not be read here. The quote above is the first of them; every passage is also in the passages CSV.</p>`;
+  const ps = d.s[r[17][0]] || [];
+  if (!ps.length) return `<p class="muted">No passage rows are held for this strategy.</p>`;
+  return `<div class="ct-scroll"><table class="psgt"><thead><tr><th>Document</th><th>Page</th><th>§</th><th>Read there as</th><th>Evidence in the plan</th><th>Agencies</th></tr></thead><tbody>${ps.map(p =>
+    `<tr><td>${esc(d.docs[p[0]])}</td><td class="num">${esc(p[1])}</td><td class="num">${esc(p[2])}</td><td>${esc(p[3])}</td><td class="ev">${esc(p[4])}</td><td>${esc(p[5].replace(/ \| /g, "; "))}</td></tr>`).join("")}</tbody></table></div>`;
+}
+function fillPsg() { document.querySelectorAll("#dt .psg").forEach(el => { el.innerHTML = psgHtml(ROWS[+el.dataset.i]); }); }
+function dtDetail(r) {
+  const p = PLN[r[0]], x = r[17], fl = x[6];
+  const yn = b => b ? "yes" : "no";
+  const path = r[3] === "NEW" ? [] : r[4] ? (() => { const f = F[r[4]], g = G[f.group_id], s = SP[f.subpillar_code];
+      return [[PL[s.pillar].name, { p: s.pillar }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: r[4] }]].concat(r[5] ? [[V[r[5]].lever, { v: r[5] }]] : []); })()
+    : [[PL[HPC[r[6]]].name, { p: HPC[r[6]] }], [HNAME[r[6]], { h: r[6] }]];
+  const row = (k, v) => blank(v) ? "" : `<dt>${k}</dt><dd>${v}</dd>`;
+  return `<dl class="dgrid">
+    ${row("Strategy", `<b>${esc(r[1])}</b> <span class="muted">${esc(p.id)}#s${x[0]}</span>`)}
+    ${row("Plan", `${esc(CTY[r[15]].name)} · ${esc(p.title)}, ${p.start}–${p.end}${p.src.includes("confirm") ? ` <span class="muted">(period to confirm)</span>` : ""}`)}
+    ${row({ budget: "Budget heading", unga: "Theme (RHDR)", sector: "Theme (RHDR)" }[p.doc_type] || "Plan chapter", esc(X.chapters[x[2]]))}
+    ${row("Objective", esc(r[2]))}
+    ${row("Target", esc(r[11]))}
+    ${row("Instrument", r[12] ? esc(r[12]) : `<span class="muted">not named in the plan text or by the mapping</span>`)}
+    ${row("Budget", esc(x[12] || ""))}
+    ${r[3] === "NEW" ? row("On the tree", "Not placed: nothing in the tree fits") : row("On the tree", path.map(([l, o]) => `<a class="jl" ${O(o)}>${esc(l)}</a>`).join(" › ") + ` <span class="muted">· ${esc(OVL[r[3]])}, ${/rule/.test(X.notes[x[11]] || "") || r[17][4] && X.status[r[17][4]] === "overhead" ? "by rule: an overhead line" : SRCM[srcOf(p)].mapped ? "by the mapping prompt" : srcOf(p) === "plans" ? `through the objective label “${esc(r[10])}”` : "not yet mapped"}</span>`)}
+    ${row("Storms", r[9].length ? `<span class="chips">${riskChips(r[9])}</span>` : "")}
+    ${row("Sector", esc(r[7]))}
+    ${row("Orientation", esc(r[8]))}
+    ${row("Urgency · status", `${esc(rUrg(r))} · ${esc(rSt(r))} · basis: ${esc(X.legal[x[5]])}`)}
+    ${srcOf(p) !== "plans" ? "" : row("Stated in the plan", `timeline ${yn(fl & 1)} · quantified target ${yn(fl & 2)} · monitoring ${yn(fl & 4)}`)}
+    ${row("Lead", esc(X.leads[x[9]]))}
+    ${row("Agencies named", esc(x[8].map(i => X.agencies[i]).join("; ")))}
+    ${row("SDG targets", x[7].length ? `<span class="chips">${sdgChips(x[7].map(i => X.sdgs[i]))}</span>` : "")}
+    ${row("Across plans", x[10] > 1 ? `In ${x[10]} plan editions of ${esc(CTY[r[15]].name)}${r[16] >= 0 ? `, first in ${esc(planLabel(PLN[r[16]]))} (${PLN[r[16]].start}–${PLN[r[16]].end})` : ", this is the first"}` : "In this plan edition only")}
+    ${row(r[3] === "NEW" ? "Why unmapped" : "Mapping note", esc(X.notes[x[11]]))}
+    ${row("Quote", x[1] ? `“${esc(x[1])}”` : "")}
+  </dl>
+  <div class="eyebrow" style="margin-top:10px">Underlying passages (${r[13]}) · where the plan states it</div>
+  <div class="psg" data-i="${r[18]}">${psgHtml(r)}</div>`;
+}
+function drawDetails() {
+  const { rows: base, chips } = dtBase();
+  const rows = dtSort(dtOwn(base));
+  const pages = Math.max(1, Math.ceil(rows.length / DT.size));
+  DT.page = Math.min(DT.page, pages - 1);
+  const cols = DCOLS.filter(c => !(c.hide && c.hide()));
+  const view = rows.slice(DT.page * DT.size, (DT.page + 1) * DT.size);
+  $("#dt-h").textContent = `${mode === "unmapped" ? "Unmapped strategies" : "Strategy details"}: ${rows.length.toLocaleString()} strateg${rows.length === 1 ? "y" : "ies"}`;
+  $("#dt-chips").innerHTML = chips.map(([l, k]) => `<span class="chip">${esc(short(l, 70))}${k ? ` <a class="x" data-x="${k}" role="button" tabindex="0" aria-label="Remove ${esc(l)}">×</a>` : ""}</span>`).join("") +
+    (rows.length !== base.length ? `<span class="chip">table filters: ${rows.length.toLocaleString()} of ${base.length.toLocaleString()}</span>` : "");
+  $("#dt").innerHTML = `<thead><tr>${cols.map(c => `<th${c.k === DT.sort ? ` aria-sort="${DT.dir > 0 ? "ascending" : "descending"}"` : ""}${c.cls === "num" ? ' class="num"' : ""}><button type="button" data-sort="${c.k}"${c.title ? ` title="${c.title}"` : ""}>${c.h}</button></th>`).join("")}</tr></thead><tbody>${
+    view.length ? view.map(r => {
+      const op = DT.open.has(r[18]);
+      return `<tr class="dr${op ? " open" : ""}" data-i="${r[18]}" tabindex="0" aria-expanded="${op}">${cols.map(c => `<td${c.cls ? ` class="${c.cls}"` : ""}>${c.t ? c.t(r) : esc(c.v(r))}</td>`).join("")}</tr>` +
+        (op ? `<tr class="dx"><td colspan="${cols.length}">${dtDetail(r)}</td></tr>` : "");
+    }).join("") : `<tr><td colspan="${cols.length}" class="muted">${(state.o || {}).d ? "Nothing is placed on a dropped lever." : "No strategy matches."}</td></tr>`}</tbody>`;
+  $("#dt-pager").innerHTML = `<span>${rows.length ? (DT.page * DT.size + 1).toLocaleString() : 0}–${Math.min(rows.length, (DT.page + 1) * DT.size).toLocaleString()} of ${rows.length.toLocaleString()}</span>
+    <button type="button" class="clear" data-pg="-1"${DT.page ? "" : " disabled"}>Previous</button><button type="button" class="clear" data-pg="1"${DT.page < pages - 1 ? "" : " disabled"}>Next</button>
+    <label>Rows <select id="dt-size">${[50, 100, 250].map(n => `<option${n === DT.size ? " selected" : ""}>${n}</option>`).join("")}</select></label>`;
+}
+function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
+{
+  const opt = (id, first, vals) => { $(id).innerHTML = `<option value="">${first}</option>` + vals.map(([v, l]) => `<option value="${v}">${l}</option>`).join(""); };
+  opt("#dt-lvl", "Any placement", [["LV", "On a lever"], ["L2", "On a family, no lever"], ["STD", "On a general branch"], ["NEW", "Unmapped"]]);
+  opt("#dt-ori", "Any orientation", ["BAU", "proactive", "transformative"].map(v => [v, v]));
+  opt("#dt-urg", "Any urgency", ["high", "medium", "low"].map(v => [v, v + " urgency"]));
+  opt("#dt-st", "Any status", ["aspiration", "planned", "operational"].map(v => [v, v]));
+  const reset = () => { DT.page = 0; DT.open.clear(); drawDetails(); };
+  $("#dt-q").addEventListener("input", e => { DT.text = e.target.value.trim().toLowerCase(); reset(); });
+  [["#dt-lvl", "lvl"], ["#dt-ori", "ori"], ["#dt-urg", "urg"], ["#dt-st", "st"]].forEach(([id, k]) => $(id).addEventListener("change", e => { DT[k] = e.target.value; reset(); }));
+  $("#dt-reset").addEventListener("click", () => { DT.text = DT.lvl = DT.ori = DT.urg = DT.st = ""; ["#dt-q", "#dt-lvl", "#dt-ori", "#dt-urg", "#dt-st"].forEach(id => $(id).value = ""); reset(); });
+  const unchip = k => {
+    if (k === "col") { DT.col = null; reset(); }
+    else if (k === "q") { $("#q").value = ""; state.q = ""; indexHits(""); show({}); }
+    else show({});
+  };
+  $("#dt-chips").addEventListener("click", e => { const a = e.target.closest("[data-x]"); if (a) unchip(a.dataset.x); });
+  $("#dt-chips").addEventListener("keydown", e => { const a = e.target.closest("[data-x]"); if (a && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); unchip(a.dataset.x); } });
+  const toggle = tr => { const i = +tr.dataset.i; if (DT.open.has(i)) DT.open.delete(i); else DT.open.add(i); drawDetails(); };
+  $("#dt").addEventListener("click", e => {
+    const s = e.target.closest("[data-sort]");
+    if (s) { const k = s.dataset.sort; if (DT.sort === k) DT.dir = -DT.dir; else { DT.sort = k; DT.dir = k === "n" ? -1 : 1; } DT.page = 0; drawDetails(); return; }
+    const a = e.target.closest("[data-o]");
+    if (a) { e.preventDefault(); show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); return; }
+    if (e.target.closest("tr.dx")) return;
+    const tr = e.target.closest("tr.dr"); if (tr) toggle(tr);
+  });
+  $("#dt").addEventListener("keydown", e => { const tr = e.target.closest("tr.dr"); if (tr && e.target === tr && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(tr); } });
+  $("#dt-pager").addEventListener("click", e => { const b = e.target.closest("[data-pg]"); if (b) { DT.page += +b.dataset.pg; drawDetails(); $("#details").scrollIntoView({ block: "start" }); } });
+  $("#dt-pager").addEventListener("change", e => { if (e.target.id === "dt-size") { DT.size = +e.target.value; DT.page = 0; drawDetails(); } });
+  panel.addEventListener("click", e => { if (e.target.closest("[data-dt]")) { e.preventDefault(); toDetails(); } });
+}
+
+// ---------- audit: which documents were run, by country and source ----------
+const AUDC = [["ndp", "Medium-term plans"], ["vision", "Long-term visions"], ["sector", "Sector plans"], ["unga", "UNGA statements"], ["budget", "Budgets"]];
+const AUD = { c: null, k: null, y: null, id: null, view: "tl", reg: null, on: new Set(AUDC.map(([k]) => k)) };
+const AUDCOL = { ndp: "var(--gold)", vision: "var(--bark)", sector: "var(--people)", unga: "var(--storm)", budget: "var(--gov)" };
+const audGuess = p => /infer|horizon|one year|undated|config|says/i.test(p.src);
+const audLow = l => l.startsWith("UNGA") ? l : l.toLowerCase();
+function drawAuditBars() {
+  const cnt = k => PLN.filter(p => p.doc_type === k).length;
+  $("#aud-src").innerHTML = `<span class="eyebrow">Sources</span>` + AUDC.map(([k, l]) => `<button type="button" class="rchip" aria-pressed="${AUD.on.has(k)}" data-as="${k}">${esc(l)} <span>${cnt(k)}</span></button>`).join("");
+  $("#aud-reg").innerHTML = `<span class="eyebrow">Region</span>` + [null, ...REG].map(r => `<button type="button" class="rchip" aria-pressed="${AUD.reg === r}" data-ar="${esc(r || "")}">${esc(r || "All regions")}</button>`).join("");
+  document.querySelectorAll("[data-av]").forEach(b => b.setAttribute("aria-pressed", b.dataset.av === AUD.view));
+  $("#aud-tlbox").hidden = AUD.view !== "tl"; $("#aud-tabbox").hidden = AUD.view !== "tab"; $("#aud-key").hidden = AUD.view !== "tl";
+  $("#aud-key").innerHTML = AUDC.filter(([k]) => AUD.on.has(k)).map(([k, l]) => `<span><i style="background:${AUDCOL[k]}"></i>${esc(l)}${k === "sector" ? ": shade and number give how many are in force that year" : k === "ndp" || k === "vision" ? ": one bar per plan, over its period" : ": one mark per year"}</span>`).join("") +
+    `<span><i style="border:1.5px dashed var(--ink)"></i>Period guessed: inferred, set by hand, only a horizon year given, or the document table disagrees</span><span><i style="border-left:1.5px dashed var(--gold);width:4px;border-radius:0"></i>${new Date().getFullYear()}</span>`;
+}
+function drawTimeline() {
+  const ks = AUDC.map(([k]) => k).filter(k => AUD.on.has(k));
+  const ps = PLN.filter(p => ks.includes(p.doc_type) && (AUD.reg === null || CTY[p.c].region === AUD.reg));
+  const svg = $("#aud-tl");
+  if (!ps.length) { svg.setAttribute("viewBox", "0 0 760 40"); svg.innerHTML = `<text x="0" y="24" class="ln">No documents for this choice.</text>`; return; }
+  const y0 = Math.max(1990, Math.min(...ps.map(p => p.start))), y1 = Math.min(2050, Math.max(...ps.map(p => p.end)));
+  const LW = 190, YW = Math.max(16, Math.min(34, Math.round(900 / (y1 - y0 + 1)))), W = LW + (y1 - y0 + 1) * YW + 8;
+  const X0 = y => LW + (Math.max(y0, Math.min(y1 + 1, y)) - y0) * YW, LH = 15, BH = 11;
+  let g = "", y = 26;
+  const nowY = new Date().getFullYear();
+  REG.forEach(r => {
+    if (AUD.reg !== null && r !== AUD.reg) return;
+    const cs = CTY.map((c, i) => i).filter(i => CTY[i].region === r && ps.some(p => p.c === i));
+    if (!cs.length) return;
+    y += 8; g += `<text x="0" y="${y + 10}" class="rgn">${esc(r.toUpperCase())}</text>`; y += 16;
+    cs.forEach(ci => {
+      g += `<text x="0" y="${y + 12}" class="cnm" data-oc="${ci}">${esc(CTY[ci].name)}</text>`;
+      y += 17;
+      ks.forEach(k => {
+        const q = ps.filter(p => p.c === ci && p.doc_type === k);
+        if (!q.length) return;
+        const lab = AUDC.find(a => a[0] === k)[1];
+        if (k === "ndp" || k === "vision") {
+          const lanes = [];
+          q.slice().sort((a, b) => a.start - b.start || a.end - b.end).forEach(p => {
+            let li = lanes.findIndex(e => e < p.start); if (li < 0) { li = lanes.length; lanes.push(0); } lanes[li] = p.end; p._ln = li;
+          });
+          g += `<text x="${LW - 8}" y="${y + 10}" class="ln" text-anchor="end">${esc(lab)}</text>`;
+          q.forEach(p => {
+            const x = X0(p.start), w = Math.max(4, X0(p.end + 1) - x - 2), by = y + p._ln * LH + 1, i = PLN.indexOf(p);
+            const t = p.edition || p.title, fits = t.length * 5.6 < w - 6;
+            g += `<rect class="hit${AUD.id === i ? " on" : ""}" data-ap="${i}" x="${x + 1}" y="${by}" width="${w}" height="${BH + 1}" rx="2" fill="${AUDCOL[k]}"${audGuess(p) ? ` stroke="var(--ink)" stroke-dasharray="3 2"` : ""}><title>${esc(p.title)}, ${p.start}–${p.end} (period: ${esc(p.src)}) · ${p.n.toLocaleString()} strategies, ${pct(p.lv, p.n)}% on a lever</title></rect>` +
+              (fits ? `<text class="bl" x="${x + 5}" y="${by + 9.5}">${esc(t)}</text>` : "");
+          });
+          y += lanes.length * LH;
+        } else {
+          g += `<text x="${LW - 8}" y="${y + 10}" class="ln" text-anchor="end">${esc(lab)}</text>`;
+          const per = {}; q.forEach(p => { for (let a = Math.max(p.start, y0); a <= Math.min(p.end, y1); a++) (per[a] = per[a] || []).push(p); });
+          const mx = Math.max(1, ...Object.values(per).map(v => v.length));
+          Object.entries(per).forEach(([a, v]) => {
+            a = +a; const x = X0(a), gs = v.some(audGuess);
+            const op = k === "sector" ? (0.25 + 0.75 * v.length / mx).toFixed(2) : 1;
+            g += `<rect class="hit${AUD.c === ci && AUD.k === k && AUD.y === a ? " on" : ""}" data-ay="${a}" data-ac="${ci}" data-ak="${k}" x="${x + 1}" y="${y + 1}" width="${YW - 2}" height="${BH + 1}" rx="2" fill="${AUDCOL[k]}" fill-opacity="${op}"${gs ? ` stroke="var(--ink)" stroke-dasharray="3 2"` : ""}><title>${esc(CTY[ci].name)}, ${a}: ${v.length} ${esc(audLow(lab))} in force\n${v.map(p => `${p.title} (${p.start === p.end ? p.start : p.start + "–" + p.end})`).map(esc).join("\n")}</title></rect>` +
+              (v.length > 1 ? `<text class="cnt" x="${x + YW / 2}" y="${y + 10}" text-anchor="middle">${v.length}</text>` : "");
+          });
+          y += LH;
+        }
+      });
+      y += 6;
+      g += `<line class="grid" x1="0" x2="${W}" y1="${y - 2}" y2="${y - 2}"/>`;
+    });
+  });
+  let ax = "";
+  for (let a = y0; a <= y1; a++) {
+    const x = X0(a);
+    if ((a % 5 === 0) || YW >= 28) ax += `<text class="yr" x="${x + YW / 2}" y="12" text-anchor="middle">${a}</text><line class="grid" x1="${x}" x2="${x}" y1="18" y2="${y}" opacity=".55"/>`;
+  }
+  if (nowY >= y0 && nowY <= y1) ax += `<line class="now" x1="${X0(nowY) + YW / 2}" x2="${X0(nowY) + YW / 2}" y1="16" y2="${y}"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${y + 4}`);
+  svg.style.minWidth = Math.max(760, W * 0.75) + "px";
+  svg.innerHTML = ax + g;
+}
+function drawAudit() {
+  drawAuditBars();
+  if (AUD.view === "tl") drawTimeline();
+  const cell = (ps, c, k) => {
+    if (!ps.length) return `<td class="none">–</td>`;
+    const n = ps.reduce((a, p) => a + p.n, 0), lv = ps.reduce((a, p) => a + p.lv, 0);
+    const on = AUD.c === c && AUD.k === k;
+    const shade = `background: color-mix(in srgb, var(--gold-soft) ${Math.min(100, 20 + ps.length * 12)}%, transparent)`;
+    return `<td class="ac${on ? " on" : ""}" data-ac="${c}" data-ak="${k}" style="${shade}" tabindex="0"><b>${ps.length}</b> doc${ps.length > 1 ? "s" : ""}<small>${n.toLocaleString()} strategies · ${pct(lv, n)}% lever</small></td>`;
+  };
+  const by = (c, k) => PLN.filter(p => p.c === c && (k === null ? AUD.on.has(p.doc_type) : p.doc_type === k));
+  const AC = AUDC.filter(([k]) => AUD.on.has(k));
+  let h = `<thead><tr><th>Country</th>${AC.map(([, l]) => `<th>${l}</th>`).join("")}<th>All</th></tr></thead><tbody>`;
+  REG.forEach(r => {
+    if (AUD.reg !== null && r !== AUD.reg) return;
+    h += `<tr class="rg"><td colspan="${AC.length + 2}">${esc(r)}</td></tr>`;
+    CTY.forEach((c, i) => {
+      if (c.region !== r) return;
+      h += `<tr><td><button type="button" class="cn" data-oc="${i}">${esc(c.name)}</button></td>${AC.map(([k]) => cell(by(i, k), i, k)).join("")}${cell(by(i, null), i, "all")}</tr>`;
+    });
+  });
+  const tot = k => PLN.filter(p => (k === null ? AUD.on.has(p.doc_type) : p.doc_type === k) && (AUD.reg === null || CTY[p.c].region === AUD.reg));
+  const tn = ps => `<td><b>${ps.length}</b><small style="display:block;color:var(--muted);font-weight:400">${ps.reduce((a, p) => a + p.n, 0).toLocaleString()} strategies</small></td>`;
+  h += `<tr class="tot"><td>${AUD.reg === null ? `All ${CTY.length} countries` : esc(AUD.reg)}</td>${AC.map(([k]) => tn(tot(k))).join("")}${tn(tot(null))}</tr></tbody>`;
+  $("#aud").innerHTML = h;
+  const nC = k => new Set(PLN.filter(p => p.doc_type === k).map(p => p.c)).size;
+  $("#aud-p").innerHTML = `Every document of the earlier run that reached the tree, as plan editions: ${PLN.length} in all, from ${CTY.length} countries. ` +
+    AUDC.map(([k, l]) => `${l} ${PLN.filter(p => p.doc_type === k).length} (${nC(k)} countries)`).join(", ") +
+    `. The timeline gives each country a row per source, years across, so plans can be compared over time; switch sources and regions on and off above. Select a bar or a year for the documents behind it: their period, where the period was read from, the files they came from and how many of their strategies reach a lever. The counts table gives the same documents as totals.` +
+    ((X.excluded || []).length ? ` ${X.excluded.length} document${X.excluded.length > 1 ? "s were" : " was"} taken off the page: listed at the foot of this tab.` : "");
+  drawAuditList();
+}
+function drawAuditList() {
+  const ex = (X.excluded || []).map(e => `<li><b>${esc(e.country)}: ${esc(e.title)}</b>, ${esc(e.why)}</li>`).join("");
+  const exH = ex ? `<h3 style="margin-top:16px">Taken off the page</h3><ul>${ex}</ul>` : "";
+  if (AUD.c === null) { $("#aud-list").innerHTML = exH; return; }
+  const ps = PLN.map((p, i) => [p, i]).filter(([p, i]) => AUD.id !== null ? i === AUD.id : p.c === AUD.c && (AUD.k === "all" ? AUD.on.has(p.doc_type) : p.doc_type === AUD.k) && (AUD.y === null || (p.start <= AUD.y && AUD.y <= p.end)));
+  const lab = (AUD.k === "all" ? "all sources" : audLow(AUDC.find(([k]) => k === AUD.k)[1])) + (AUD.y !== null ? ` in force in ${AUD.y}` : "");
+  $("#aud-list").innerHTML = `<h3 style="margin:14px 0 6px">${esc(CTY[AUD.c].name)}: ${lab} (${ps.length})</h3>
+    <div class="ct-scroll"><table><thead><tr><th>Document</th><th>Source</th><th>Period</th><th>Period read from</th><th>Files</th><th class="n">Strategies</th><th class="n">On a lever</th></tr></thead><tbody>` +
+    ps.map(([p]) => `<tr><td>${esc(p.title)}${p.who ? `<br><span class="muted">${esc(p.who)}</span>` : ""}</td><td>${esc(DOCT[p.doc_type])}</td><td>${p.start === p.end ? p.start : `${p.start}–${p.end}`}</td>` +
+      `<td${audGuess(p) ? ` class="warn"` : ""}>${esc(p.src)}</td><td>${esc(p.docs)}</td><td class="n">${p.n.toLocaleString()}</td><td class="n">${pct(p.lv, p.n)}%</td></tr>`).join("") +
+    `</tbody></table></div><p><button type="button" class="todt" data-oc="${AUD.c}">Open ${esc(CTY[AUD.c].name)} in the country explorer</button></p>` + exH;
+}
+$("#audit").addEventListener("click", e => {
+  const o = e.target.closest("[data-oc]"); if (o) { openCountry(Number(o.dataset.oc)); window.scrollTo({ top: 0 }); return; }
+  const sb = e.target.closest("[data-as]");
+  if (sb) { const k = sb.dataset.as; if (AUD.on.has(k)) { if (AUD.on.size > 1) AUD.on.delete(k); } else AUD.on.add(k); AUD.c = AUD.k = AUD.y = AUD.id = null; drawAudit(); return; }
+  const rb = e.target.closest("[data-ar]"); if (rb) { AUD.reg = rb.dataset.ar || null; drawAudit(); return; }
+  const vb = e.target.closest("[data-av]"); if (vb) { AUD.view = vb.dataset.av; AUD.c = AUD.k = AUD.y = AUD.id = null; drawAudit(); return; }
+  const bar = e.target.closest("[data-ap]");
+  if (bar) { const i = Number(bar.dataset.ap); if (AUD.id === i) AUD.c = AUD.k = AUD.id = null; else { AUD.id = i; AUD.c = PLN[i].c; AUD.k = PLN[i].doc_type; } AUD.y = null; drawAudit(); if (AUD.c !== null) $("#aud-list").scrollIntoView({ block: "nearest" }); return; }
+  const td = e.target.closest("[data-ac]"); if (!td) return;
+  const c = Number(td.dataset.ac), k = td.dataset.ak, yr = td.dataset.ay ? Number(td.dataset.ay) : null;
+  if (AUD.c === c && AUD.k === k && AUD.y === yr && AUD.id === null) { AUD.c = AUD.k = AUD.y = null; } else { AUD.c = c; AUD.k = k; AUD.y = yr; AUD.id = null; }
+  drawAudit(); if (AUD.c !== null) $("#aud-list").scrollIntoView({ block: "nearest" });
+});
+$("#audit").addEventListener("keydown", e => { const td = e.target.closest("td[data-ac]"); if (td && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); td.click(); } });
+
+// ---------- state ----------
+function refresh() {
+  const au = mode === "audit";
+  $("#m-aud").setAttribute("aria-selected", au);
+  $("#audit").hidden = !au;
+  ["#details", "#srcs"].forEach(q => { $(q).hidden = au; });
+  if (au) {
+    ["#m-world", "#m-ctry", "#m-un"].forEach(q => $(q).setAttribute("aria-selected", "false"));
+    [".main", "#storms", ".tools", "#ctable", "#outline", "#worldbar", "#ctrybar", "#forestbox"].forEach(q => { $(q).hidden = true; });
+    drawAudit();
+    try { history.replaceState(null, "", "#audit"); } catch (e) {}
+    return;
+  }
+  scope();
+  if (DT.col !== null && !C.cols.some(c => String(c.key) === String(DT.col))) DT.col = null;
+  const w = mode !== "country", un = mode === "unmapped";
+  $("#m-world").setAttribute("aria-selected", mode === "world"); $("#m-ctry").setAttribute("aria-selected", !w); $("#m-un").setAttribute("aria-selected", un);
+  [".main", "#storms", ".tools", "#ctable", "#outline"].forEach(q => { $(q).hidden = un; });
+  $("#dt-un").hidden = !un; $("#dt-intro").hidden = un;
+  if (un) { state.q = ""; $("#q").value = ""; state.risk = null; state.sel = state.lv = state.h = state.d = null; }
+  $("#worldbar").hidden = !w; $("#ctrybar").hidden = w;
+  if (w) { drawRegions(); drawYears(); } else { drawCountries(); drawTimeline(); }
+  drawTable(); paintCountry();
+  $("#forestbox").hidden = mode !== "country";
+  if (mode === "country") {
+    const k = Forest.draw($("#forest"), CTY[ci].slug, CTY[ci].name, C.rows, D, o => { show(o); $(".main").scrollIntoView({ block: "start" }); });
+    $("#fline").innerHTML = `${esc(k.line)}<small>${esc(CTY[ci].name)}, ${esc(selLabel())}${k.added ? " · plant and scene new for this country, to review" : ""}</small>`;
+    $("#fkey").innerHTML = k.key.map(([a, b]) => `<div><b>${a}</b>${esc(b)}</div>`).join("");
+  }
+  indexHits(state.q);
+  show(state.q.length >= 2 ? { q: state.q } : state.lv ? { v: state.lv } : state.sel ? { f: state.sel } : state.h ? { h: state.h } : state.d ? { d: state.d } : state.risk ? { r: state.risk } : {});
+  try { history.replaceState(null, "", "#" + (un ? "unmapped" : w ? (region ? "region-" + hslug(region) : "world") : hslug(CTY[ci].slug))); } catch (e) {}
+}
+function openCountry(i) { mode = "country"; ci = i; sel.clear(); plansOf(i).forEach(p => sel.add(p)); refresh(); }
+function setRegion(r) { if (mode !== "unmapped") mode = "world"; region = r; refresh(); }
+function colClick(key) {
+  if (mode === "country") { const i = Number(key); if (sel.size === 1 && sel.has(i)) allPlans(); else { sel.clear(); sel.add(i); refresh(); } }
+  else if (region === null) setRegion(key);
+  else openCountry(Number(key));
+}
+$("#m-world").addEventListener("click", () => { mode = "world"; refresh(); });
+$("#m-ctry").addEventListener("click", () => openCountry(ci));
+$("#m-un").addEventListener("click", () => { mode = "unmapped"; refresh(); });
+$("#m-aud").addEventListener("click", () => { mode = "audit"; refresh(); });
+$("#srcs").addEventListener("click", e => { const b = e.target.closest("[data-src]"); if (b) toggleSource(b.dataset.src); });
+drawSources();
+$("#regions").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (b) setRegion(b.dataset.r || null); });
+$("#countries").addEventListener("click", e => { const b = e.target.closest("[data-ci]"); if (b) openCountry(Number(b.dataset.ci)); });
+$("#yr-all").addEventListener("click", () => { year = null; refresh(); });
+$("#tl-all").addEventListener("click", allPlans);
+$("#tl-nat").addEventListener("click", () => { const m = C.plans.filter(i => PLN[i].doc_type === "ndp"); if (m.length) { sel.clear(); m.forEach(i => sel.add(i)); refresh(); } });
+$("#ct-open").addEventListener("click", () => D.families.forEach(f => toggleFam(f.family_id, true)));
+$("#ct-close").addEventListener("click", () => D.families.forEach(f => toggleFam(f.family_id, false)));
+panel.addEventListener("click", e => { const a = e.target.closest("[data-col]"); if (a) { e.preventDefault(); colClick(a.dataset.col); } });
+$("#ct").addEventListener("click", e => {
+  const h = e.target.closest("th[data-col]"); if (h) { colClick(h.dataset.col); return; }
+  const ck = e.target.closest("td[data-ck]");
+  if (ck) {
+    const tr = ck.parentElement, a = tr.querySelector("[data-o]");
+    const o = tr.dataset.fam ? { f: tr.dataset.fam } : a ? JSON.parse(a.dataset.o) : null;
+    if (o) { DT.col = C.cols[+ck.dataset.ck].key; DT.keepCol = true; show(o); toDetails(); return; }
+  }
+  const fr = e.target.closest("tr.frow");
+  if (fr) { const fid = fr.dataset.fam; toggleFam(fid, !openFam.has(fid)); show({ f: fid }); return; }
+  const a = e.target.closest("[data-o]"); if (a) { show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); }
+});
+{
+  const nL = ROWS.filter(r => r[5]).length, nU = ROWS.filter(r => r[3] === "NEW").length;
+  $("#m-un-n").textContent = nU.toLocaleString();
+  $("#dt-un").innerHTML = `Strategies the mapping could not place on any live family or General branch, with the reason it gave and the node the tree would need. These are the candidates for the next release of the tree. Pick a region or a year above to narrow the list; sort and filter as in the details table, and open a row for the strategy's record and passages.`;
+  $("#banner").hidden = false;
+  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
+  const h = location.hash.slice(1);
+  const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
+  if (h === "audit") { mode = "audit"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (c >= 0) openCountry(c);
+  else { if (rg) region = rg; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+}
+const cv = $(".canvas"); cv.scrollLeft = (cv.scrollWidth - cv.clientWidth) / 2;
+</script>
