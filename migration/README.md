@@ -8,19 +8,20 @@ explorer, Audit tab).
 
 ## Run it
 
-You need the earlier run's data folder (`PV2/data`, the folder holding `union/` and `llm/`; ask
-Sebastian for a copy) and Python 3.9+ with `openpyxl` (`pip install -r ../requirements.txt`).
+The earlier run's data is in `pv2_data/` (59 MB: `union/` strategies, documents and budget rows, and
+the per-country `llm/` workbooks the scripts read; a copy of the matching parts of `PV2/data`). You need
+Python 3.9+ and `pip install -r ../requirements.txt`.
 
     cd migration
-    ./run_migration.sh <PV2 data folder> <out folder>
+    ./run_migration.sh
 
 This takes about two minutes and makes no model calls. It uses the mapping and instrument answers from the paid runs, which are saved in
-`run/`. The page lands in `<out folder>/page/index.html`, with `rows_*.js` and `detail/` beside it;
+`run/`. The page lands in `../data/migration_out/page/index.html`, with `rows_*.js` and `detail/` beside it;
 keep those together when you publish it.
 
 To redo the paid steps as well (gpt-5.4 through Azure, keys in `workflow/.env` as in the main README):
 
-    ./run_migration.sh <PV2 data folder> <out folder> --paid
+    ./run_migration.sh pv2_data ../data/migration_out --paid
 
 Each mapping run prices itself with a dry run first and stops at its `--max-cost`. Answers are
 cached, so a run that stops can be started again and pays only for what is missing. The paid runs of
@@ -40,6 +41,31 @@ budgets $17.06, instrument pass $9.51.
 
 `reshape_common.py` holds what steps 1 and 2 share (regions, country names, the tree, the columns).
 
+## Add a country run through the current workflow
+
+The live workflow (`../workflow/`, steps C, E, F and M on tree v4) runs one plan edition at a time.
+To put a country it has run on this page:
+
+1. Set the country up as in [workflow/RUNBOOK.md](../workflow/RUNBOOK.md): a config in
+   `workflow/configs/<country>.json` listing its documents, the PDFs under `data/sources/<country>/`, and
+   the Azure keys in `workflow/.env` (shared privately, never committed).
+2. Run each plan, dry run first:
+
+       cd workflow
+       python3 -m pvii.run --list <country>
+       python3 -m pvii.run --plan <plan_id> --dry-run
+       python3 -m pvii.run --plan <plan_id>
+
+3. Copy each plan's `strategies.csv` and `strategy_rows.csv` from `data/plans/<plan_id>/` to
+   `migration/added/<country>/<plan_id>/`. For a country not among the 45, add
+   `migration/added/<country>/region.txt` with one of the page's regions (for example `Pacific`).
+4. `cd migration && ./run_migration.sh`. The page now shows the country. A plan with the same plan_id as
+   one from the earlier run replaces it; the earlier run's other editions stay (run
+   `python3 add_country.py <out> added/<country> --replace` by hand to show only the new run). Sector
+   plans go in with the sector plans. A strategy on a lever the tree has since dropped goes to its family,
+   and the reason column says so.
+5. Commit `migration/added/<country>/` on a branch and open a pull request, then publish the page (below).
+
 ## Corrections
 
 - `excluded_plans.json`: plan editions taken off the page (plan id → why), for example China 2030 (a
@@ -52,8 +78,17 @@ budgets $17.06, instrument pass $9.51.
 The document check of 23 November 2026 found these; the Audit tab shows every document by country,
 source and year, and marks the periods that are guessed.
 
+## Publishing the page
+
+The shared copy is GitHub Pages: the `gh-pages` branch of this repo serves
+https://sebpasha.github.io/PVII_Golden_Response_Tree/ (note: anyone with the link can open it). To update it, copy
+`index.html`, `rows_*.js` and `detail/` from `../data/migration_out/page/` onto that branch, remove any
+`detail/*.js` the new build no longer writes, and push.
+
 ## What is in the folder
 
+- `pv2_data/`: the earlier run's data the scripts read (see above).
+- `added/`: countries run through the current workflow, one folder of plan outputs each (step above).
 - `run/`: the mapping and instrument answers of the paid runs (`mapping*.csv`, `instrument*.csv`,
   run reports `mapping_run*.json`).
 - `plans.csv`, `placement_summary.csv`: the national-plan outputs of the last build, for reference.
