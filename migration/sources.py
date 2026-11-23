@@ -1,7 +1,7 @@
 """The earlier run's other sources, reshaped into the current strategy format like the national plans
 (reshape.py): sector plans, UNGA general-debate statements and budget programme lines. No model calls.
 
-    cd tree/v4/poc && python3 sources.py <earlier run's data folder> <reshape.py's out folder> [--mapping=<run folder>]
+    cd migration && python3 sources.py <earlier run's data folder> <reshape.py's out folder> [--mapping=<run folder>]
 
 Writes, for each source, <out>/<source>/strategies.csv, plans.csv and passages.csv in the columns
 reshape.py writes, so map_run.py and viewer.py take them as they take the national plans:

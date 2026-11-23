@@ -39,7 +39,7 @@ To set it up, copy `workflow/.env.example` to `workflow/.env` and fill it in. Th
 
 ```
 tree/              the mother tree (read-only to the workflow)
-  v4/                the v4 release the workflow reads: tree_v4.json (198 levers after the literature review), viewer, the 45-country proof of concept
+  v4/                the v4 release the workflow reads: tree_v4.json (198 levers after the literature review), viewer
   v3/                the v3 release: tree_v3.json, crosswalks, the reviewer's framework
   v2/                the v2 release: tree_v2.json, crosswalks, the Thailand page
   v1/                the v1 release: tree_v1.json, the build scripts, the viewer, validation notes
@@ -52,6 +52,7 @@ workflow/          the live pipeline
   tests/             6 smoke tests with a fake model
   RUNBOOK.md         how to run a country
   run_thailand.sh    runs every Thai plan, one at a time
+migration/         the earlier 45-country PV2 run moved onto tree v4 (national, sector, UNGA, budget), and its page: see migration/README.md
 budget/            budget lane (prompts and code lifted from PV2, not running yet)
 unga/              UNGA speeches lane (prompts and code lifted from PV2, not running yet)
 data/              created by runs; gitignored (sources, parse cache, outputs)
@@ -61,6 +62,7 @@ data/              created by runs; gitignored (sources, parse cache, outputs)
 |---|---|---|
 | `workflow/` | The live pipeline: the `pvii` package, its prompts, one config per country, and the tests | **running** |
 | `tree/` | The mother tree: v4 (read by the workflow), v3, v2 and v1, each with everything needed to rebuild it. See [tree/README.md](tree/README.md) | built, read-only to the workflow |
+| `migration/` | The earlier 45-country PV2 run moved onto tree v4: national plans, sector plans, UNGA statements and budgets, and the page that shows them. `./run_migration.sh` rebuilds it with no model calls. See [migration/README.md](migration/README.md) | done; paid mapping saved in `migration/run/` |
 | `budget/` | Budget prompts 5, 5b, 5c, 6 and 6b and their code, lifted unchanged. See [budget/README.md](budget/README.md) | **not running**; will map onto tree nodes |
 | `unga/` | UNGA prompt 8 and its code, lifted unchanged. See [unga/README.md](unga/README.md) | **not running**; speeches will go through step E |
 

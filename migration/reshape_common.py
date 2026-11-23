@@ -45,7 +45,7 @@ def sheet_rows(path, all_sheets=False):
 
 
 
-tree = json.load(open(os.path.join(HERE, "..", "tree_v4.json"), encoding="utf-8"))
+tree = json.load(open(os.path.join(HERE, "..", "tree", "v4", "tree_v4.json"), encoding="utf-8"))
 LV = {x["lever_id"]: x for x in tree["levers"]}
 FAM = {x["family_id"]: x for x in tree["families"]}
 GRP = {x["group_id"]: x for x in tree["groups"]}

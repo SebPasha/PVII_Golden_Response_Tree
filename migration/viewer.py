@@ -1,6 +1,6 @@
 """Write tree_v4_world_viewer.html: mother tree v4 with every country of the earlier run on it.
 
-    cd tree/v4/poc && python3 viewer.py <folder with strategies.csv and plans.csv from reshape.py> [out.html]
+    cd migration && python3 viewer.py <folder with strategies.csv and plans.csv from reshape.py> [out.html]
 
 The other sources (sources.py writes them to <folder>/sector, unga and budget) go beside the page as
 rows_<source>.js, read when a reader switches that source on, so the page itself stays small.
@@ -9,7 +9,7 @@ Tab 1 is the mother tree for all countries or one region; tab 2 is one country, 
 table under the tree lists the strategies behind whatever is selected, sortable, each opening to its
 underlying data. The passage text under a strategy is too large for the page, so it goes in a folder
 detail/ beside the page (one file per national plan edition, and one per country for each other source, from passages.csv), which the page reads when a
-strategy is opened. Reads ../tree_v4.json, viewer_template.html and forest.js (the country forest) here. No model calls.
+strategy is opened. Reads ../tree/v4/tree_v4.json, viewer_template.html and forest.js (the country forest) here. No model calls.
 """
 import csv
 import json
@@ -22,7 +22,7 @@ SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "out")
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "tree_v4_world_viewer.html")
 csv.field_size_limit(10 ** 9)
 
-tree = json.load(open(os.path.join(HERE, "..", "tree_v4.json"), encoding="utf-8"))
+tree = json.load(open(os.path.join(HERE, "..", "tree", "v4", "tree_v4.json"), encoding="utf-8"))
 MERGED = tree["meta"].get("merged_pathways", {})
 DROPPED = {d["lever_id"]: d for d in tree["meta"].get("dropped_levers", [])}
 PW_LEVER = {p["pathway_id"]: p["lever_id"] or ("%s (dropped)" % p["dropped_lever"] if p.get("dropped_lever") else p["pathway_id"])
@@ -175,6 +175,7 @@ template = open(os.path.join(HERE, "viewer_template.html"), encoding="utf-8").re
 blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 html = template.replace("/*TREE_DATA*/null", blob)
 html = html.replace("/*FOREST*/", open(os.path.join(HERE, "forest.js"), encoding="utf-8").read())
+os.makedirs(os.path.dirname(os.path.abspath(OUT)), exist_ok=True)
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 print("wrote %s: %d countries, %d plans, %d rows, %d on a lever, %.0f KB" % (

@@ -1,7 +1,7 @@
 """Proof of concept: the strategies of the earlier multi-country run, reshaped into the current
 strategy format and joined to mother tree v4. No model calls.
 
-    cd tree/v4/poc && python3 reshape.py <earlier run's data folder> [out folder]
+    cd migration && python3 reshape.py <earlier run's data folder> [out folder]
     python3 reshape.py <data folder> <out folder> --mapping=<out folder>/mapping.csv   # after map_run.py
         [--instrument=<out folder>/instrument.csv]   # after inst_run.py: an instrument where the mapping names none
 
@@ -182,7 +182,7 @@ for _o, _n in XW.items():
 # the real mapping (map_run.py), where it has been run: node by strategy, in place of the crosswalk
 MAP = {r["source_strategy_key"]: r for r in csv.DictReader(open(MAPPING, encoding="utf-8"))} if MAPPING else {}
 INS = {r["source_strategy_key"]: r for r in csv.DictReader(open(INSTRUMENT, encoding="utf-8"))} if INSTRUMENT else {}
-DEC = {r["strategy_key"]: r for r in csv.DictReader(open(os.path.join(HERE, "..", "..", "inputs", "strategy_decomposition.csv"), encoding="utf-8"))}
+DEC = {r["strategy_key"]: r for r in csv.DictReader(open(os.path.join(HERE, "..", "tree", "inputs", "strategy_decomposition.csv"), encoding="utf-8"))}
 union = list(csv.DictReader(open(os.path.join(SRC, "union", "strategies.csv"), encoding="utf-8")))
 docs = collections.defaultdict(dict)
 for d in csv.DictReader(open(os.path.join(SRC, "union", "documents.csv"), encoding="utf-8")):

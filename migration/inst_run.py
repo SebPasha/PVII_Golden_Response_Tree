@@ -1,6 +1,6 @@
 """Name the policy instrument of every strategy the mapping left without one (gpt-5.4, 50 strategies a call).
 
-    cd tree/v4/poc && python3 inst_run.py <folder with strategies.csv> [--mapping <mapping.csv>] [--dry-run] [--max-cost 30]
+    cd migration && python3 inst_run.py <folder with strategies.csv> [--mapping <mapping.csv>] [--dry-run] [--max-cost 30]
 
 The mapping (map_run.py) takes an instrument only from the tree's short instrument list, so most
 strategies come back without one. This pass names each one's instrument in plain words, its class
@@ -15,7 +15,7 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "..", "..", "workflow"))
+sys.path.insert(0, os.path.join(HERE, "..", "workflow"))
 from pvii import config, llm, steps  # noqa: E402
 
 BATCH = 50
@@ -63,7 +63,7 @@ def main():
     ap.add_argument("--concurrency", type=int, default=6)
     a = ap.parse_args()
     csv.field_size_limit(10 ** 9)
-    tree = json.load(open(os.path.join(HERE, "..", "tree_v4.json"), encoding="utf-8"))
+    tree = json.load(open(os.path.join(HERE, "..", "tree", "v4", "tree_v4.json"), encoding="utf-8"))
     lst = "\n".join("%s | %s | %s" % (i["instrument_id"], i["instrument_label"], i["instrument_class"])
                     for i in tree["instrument_classes"])
     prompt = PROMPT % lst

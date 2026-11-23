@@ -1,7 +1,7 @@
 """The real mapping of the earlier run's strategies onto tree v4: the workflow's step M (M_map_v4,
 gpt-5.4), one call per 25 strategies of one country, in place of the objective-label crosswalk.
 
-    cd tree/v4/poc && python3 map_run.py <out folder of reshape.py> [--dry-run] [--max-cost 30] [--country thailand]
+    cd migration && python3 map_run.py <out folder of reshape.py> [--dry-run] [--max-cost 30] [--country thailand]
     python3 map_run.py <out>/sector        # likewise the sector plans, UNGA statements or budget lines (sources.py)
     python3 map_run.py <out>/budget --batch 50
 
@@ -20,7 +20,7 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "..", "..", "workflow"))
+sys.path.insert(0, os.path.join(HERE, "..", "workflow"))
 from pvii import config, llm, steps, tree as T  # noqa: E402
 
 COLS = ["source_strategy_key", "country", "slug", "name", "relation", "node_id", "level", "group_id", "family_id",
