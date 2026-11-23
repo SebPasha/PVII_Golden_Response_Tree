@@ -69,7 +69,12 @@ data = {
 SOURCES = [("plans", SRC, "National plans")] + [(k, os.path.join(SRC, k), lab) for k, lab in (
     ("sector", "Sector plans"), ("unga", "UNGA statements"), ("budget", "Budgets"))
     if os.path.exists(os.path.join(SRC, k, "strategies.csv"))]
+# documents taken off the page by decision (excluded_plans.json here: plan_id -> why); the Audit tab lists them
+XPATH = os.path.join(HERE, "excluded_plans.json")
+EXCL = json.load(open(XPATH, encoding="utf-8")) if os.path.exists(XPATH) else {}
 plans = [p for _, d, _ in SOURCES for p in csv.DictReader(open(os.path.join(d, "plans.csv"), encoding="utf-8"))]
+excluded = [{"country": p["country"], "title": p["plan_title"], "why": EXCL[p["plan_id"]]} for p in plans if p["plan_id"] in EXCL]
+plans = [p for p in plans if p["plan_id"] not in EXCL]
 REG_ORDER = ["South-East Asia", "South Asia", "East Asia", "Pacific", "Europe and Central Asia", "Arab States",
              "Africa", "Latin America and the Caribbean"]
 countries, cidx = [], {}
@@ -141,7 +146,7 @@ def encode(rows):
 
 blobs, src_meta = {}, []
 for k, d, lab in SOURCES:
-    rs = list(csv.DictReader(open(os.path.join(d, "strategies.csv"), encoding="utf-8")))
+    rs = [r for r in csv.DictReader(open(os.path.join(d, "strategies.csv"), encoding="utf-8")) if r["plan_id"] not in EXCL]
     blobs[k] = encode(rs)
     src_meta.append({"k": k, "label": lab, "n": len(rs), "lv": sum(1 for r in rs if r["lever_id"]),
                      "un": sum(1 for r in rs if not r["node_id"]), "distinct": len(blobs[k]["sids"]) - 1,
@@ -152,9 +157,11 @@ data["set"] = {
     "countries": countries,
     "plans": [{"id": p["plan_id"], "c": cidx[p["slug"]], "doc_type": p["doc_type"], "edition": p["edition"],
                "title": p["plan_title"], "start": int(p["period_start"]), "end": int(p["period_end"]),
-               "src": p["period_source"]} for p in plans],
+               "src": p["period_source"], "docs": p["source_documents"], "n": int(p["n_strategies"] or 0),
+               "lv": int(p["n_on_lever"] or 0), "who": p["status"] if p["doc_type"] == "unga" else ""} for p in plans],
     **{k: v for k, v in blobs["plans"].items() if k != "rows"},
     "sources": src_meta,
+    "excluded": excluded,
     "mapped": src_meta[0]["mapped"],
     "rows": out, "n_source": src_meta[0]["distinct"],
 }
@@ -180,6 +187,8 @@ by = {}
 for _, folder, _ in SOURCES:
     pp = os.path.join(folder, "passages.csv")
     for r in csv.DictReader(open(pp, encoding="utf-8")) if os.path.exists(pp) else []:
+        if r["plan_id"] in EXCL:
+            continue
         d = by.setdefault(r["plan_id"], {"docs": Dict(), "s": {}})
         x = [d["docs"](r["document"]), r["page"], r["paragraph"], r["intervention"], r["evidence"], r["agencies"]]
         lst = d["s"].setdefault(r["strategy_id"].split("#s")[1], [])

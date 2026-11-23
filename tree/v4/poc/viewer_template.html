@@ -307,6 +307,23 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .forest .culm:focus-visible, .forest .culm:hover { filter: brightness(1.35) }
 .forest .fkey { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 4px 18px; font-size: 12px; color: #8db8a0; margin-top: 8px }
 .forest .fkey b { color: #f1d58a; font-weight: 500; letter-spacing: .08em; margin-right: 6px }
+#aud { border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums }
+#aud th, #aud td { padding: 4px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
+#aud th:first-child, #aud td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface) }
+#aud thead th { font: 500 11px var(--mono); color: var(--muted); vertical-align: bottom }
+#aud tr.rg td { font: 500 11px var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; padding-top: 12px }
+#aud td.ac { cursor: pointer; min-width: 6.5rem }
+#aud td.ac b { font-weight: 600 }
+#aud td.ac small { display: block; color: var(--muted); font-size: 11px }
+#aud td.ac:hover, #aud td.ac.on { outline: 1px solid var(--gold); outline-offset: -1px }
+#aud td.none { color: var(--muted) }
+#aud tr.tot td { font-weight: 600; border-top: 2px solid var(--line) }
+#aud .cn { all: unset; cursor: pointer; text-decoration: underline; text-underline-offset: 3px }
+#aud-list table { border-collapse: collapse; font-size: 12.5px; width: 100% }
+#aud-list th, #aud-list td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top }
+#aud-list th { font: 500 11px var(--mono); color: var(--muted) }
+#aud-list td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap }
+#aud-list .warn { color: var(--economy) }
 </style>
 
 <div class="wrap">
@@ -325,6 +342,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
       <button type="button" class="mode" id="m-world" role="tab" aria-selected="true">Mother tree</button>
       <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
       <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n"></span></button>
+      <button type="button" class="mode" id="m-aud" role="tab" aria-selected="false">Audit</button>
     </div>
     <div class="chipsel" id="srcs" aria-label="Sources"></div>
     <div class="tl" id="worldbar">
@@ -363,6 +381,13 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <p id="ct-p"></p>
     <div class="ct-tools"><button type="button" class="clear" id="ct-open">Show every lever</button><button type="button" class="clear" id="ct-close">Families only</button></div>
     <div class="ct-scroll"><table id="ct"></table></div>
+  </section>
+
+  <section class="outline" id="audit" hidden>
+    <h2>Audit: which documents were run</h2>
+    <p id="aud-p"></p>
+    <div class="ct-scroll"><table id="aud"></table></div>
+    <div id="aud-list"></div>
   </section>
 
   <section class="outline" id="details">
@@ -1440,8 +1465,71 @@ function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(pre
   panel.addEventListener("click", e => { if (e.target.closest("[data-dt]")) { e.preventDefault(); toDetails(); } });
 }
 
+// ---------- audit: which documents were run, by country and source ----------
+const AUDC = [["ndp", "Medium-term plans"], ["vision", "Long-term visions"], ["sector", "Sector plans"], ["unga", "UNGA statements"], ["budget", "Budgets"]];
+const AUD = { c: null, k: null };
+function drawAudit() {
+  const cell = (ps, c, k) => {
+    if (!ps.length) return `<td class="none">–</td>`;
+    const n = ps.reduce((a, p) => a + p.n, 0), lv = ps.reduce((a, p) => a + p.lv, 0);
+    const on = AUD.c === c && AUD.k === k;
+    const shade = `background: color-mix(in srgb, var(--gold-soft) ${Math.min(100, 20 + ps.length * 12)}%, transparent)`;
+    return `<td class="ac${on ? " on" : ""}" data-ac="${c}" data-ak="${k}" style="${shade}" tabindex="0"><b>${ps.length}</b> doc${ps.length > 1 ? "s" : ""}<small>${n.toLocaleString()} strategies · ${pct(lv, n)}% lever</small></td>`;
+  };
+  const by = (c, k) => PLN.filter(p => p.c === c && (k === null || p.doc_type === k));
+  let h = `<thead><tr><th>Country</th>${AUDC.map(([, l]) => `<th>${l}</th>`).join("")}<th>All</th></tr></thead><tbody>`;
+  REG.forEach(r => {
+    h += `<tr class="rg"><td colspan="${AUDC.length + 2}">${esc(r)}</td></tr>`;
+    CTY.forEach((c, i) => {
+      if (c.region !== r) return;
+      h += `<tr><td><button type="button" class="cn" data-oc="${i}">${esc(c.name)}</button></td>${AUDC.map(([k]) => cell(by(i, k), i, k)).join("")}${cell(by(i, null), i, "all")}</tr>`;
+    });
+  });
+  const tot = k => PLN.filter(p => k === null || p.doc_type === k);
+  const tn = ps => `<td><b>${ps.length}</b><small style="display:block;color:var(--muted);font-weight:400">${ps.reduce((a, p) => a + p.n, 0).toLocaleString()} strategies</small></td>`;
+  h += `<tr class="tot"><td>All ${CTY.length} countries</td>${AUDC.map(([k]) => tn(tot(k))).join("")}${tn(tot(null))}</tr></tbody>`;
+  $("#aud").innerHTML = h;
+  const nC = k => new Set(PLN.filter(p => p.doc_type === k).map(p => p.c)).size;
+  $("#aud-p").innerHTML = `Every document of the earlier run that reached the tree, as plan editions: ${PLN.length} in all, from ${CTY.length} countries. ` +
+    AUDC.map(([k, l]) => `${l} ${PLN.filter(p => p.doc_type === k).length} (${nC(k)} countries)`).join(", ") +
+    `. A dash is a source with no document for that country. Select a cell for the documents behind it: their period, where the period was read from, the files they came from and how many of their strategies reach a lever.` +
+    ((X.excluded || []).length ? ` ${X.excluded.length} document${X.excluded.length > 1 ? "s were" : " was"} taken off the page: listed at the foot of this tab.` : "");
+  drawAuditList();
+}
+function drawAuditList() {
+  const ex = (X.excluded || []).map(e => `<li><b>${esc(e.country)}: ${esc(e.title)}</b>, ${esc(e.why)}</li>`).join("");
+  const exH = ex ? `<h3 style="margin-top:16px">Taken off the page</h3><ul>${ex}</ul>` : "";
+  if (AUD.c === null) { $("#aud-list").innerHTML = exH; return; }
+  const ps = PLN.map((p, i) => [p, i]).filter(([p]) => p.c === AUD.c && (AUD.k === "all" || p.doc_type === AUD.k));
+  const lab = AUD.k === "all" ? "all sources" : AUDC.find(([k]) => k === AUD.k)[1].toLowerCase();
+  $("#aud-list").innerHTML = `<h3 style="margin:14px 0 6px">${esc(CTY[AUD.c].name)}: ${lab} (${ps.length})</h3>
+    <div class="ct-scroll"><table><thead><tr><th>Document</th><th>Source</th><th>Period</th><th>Period read from</th><th>Files</th><th class="n">Strategies</th><th class="n">On a lever</th></tr></thead><tbody>` +
+    ps.map(([p]) => `<tr><td>${esc(p.title)}${p.who ? `<br><span class="muted">${esc(p.who)}</span>` : ""}</td><td>${esc(DOCT[p.doc_type])}</td><td>${p.start === p.end ? p.start : `${p.start}–${p.end}`}</td>` +
+      `<td${/infer|confirm/i.test(p.src) ? ` class="warn"` : ""}>${esc(p.src)}</td><td>${esc(p.docs)}</td><td class="n">${p.n.toLocaleString()}</td><td class="n">${pct(p.lv, p.n)}%</td></tr>`).join("") +
+    `</tbody></table></div><p><button type="button" class="todt" data-oc="${AUD.c}">Open ${esc(CTY[AUD.c].name)} in the country explorer</button></p>` + exH;
+}
+$("#audit").addEventListener("click", e => {
+  const o = e.target.closest("[data-oc]"); if (o) { openCountry(Number(o.dataset.oc)); window.scrollTo({ top: 0 }); return; }
+  const td = e.target.closest("td[data-ac]"); if (!td) return;
+  const c = Number(td.dataset.ac), k = td.dataset.ak;
+  if (AUD.c === c && AUD.k === k) { AUD.c = AUD.k = null; } else { AUD.c = c; AUD.k = k; }
+  drawAudit(); if (AUD.c !== null) $("#aud-list").scrollIntoView({ block: "nearest" });
+});
+$("#audit").addEventListener("keydown", e => { const td = e.target.closest("td[data-ac]"); if (td && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); td.click(); } });
+
 // ---------- state ----------
 function refresh() {
+  const au = mode === "audit";
+  $("#m-aud").setAttribute("aria-selected", au);
+  $("#audit").hidden = !au;
+  ["#details", "#srcs"].forEach(q => { $(q).hidden = au; });
+  if (au) {
+    ["#m-world", "#m-ctry", "#m-un"].forEach(q => $(q).setAttribute("aria-selected", "false"));
+    [".main", "#storms", ".tools", "#ctable", "#outline", "#worldbar", "#ctrybar", "#forestbox"].forEach(q => { $(q).hidden = true; });
+    drawAudit();
+    try { history.replaceState(null, "", "#audit"); } catch (e) {}
+    return;
+  }
   scope();
   if (DT.col !== null && !C.cols.some(c => String(c.key) === String(DT.col))) DT.col = null;
   const w = mode !== "country", un = mode === "unmapped";
@@ -1472,6 +1560,7 @@ function colClick(key) {
 $("#m-world").addEventListener("click", () => { mode = "world"; refresh(); });
 $("#m-ctry").addEventListener("click", () => openCountry(ci));
 $("#m-un").addEventListener("click", () => { mode = "unmapped"; refresh(); });
+$("#m-aud").addEventListener("click", () => { mode = "audit"; refresh(); });
 $("#srcs").addEventListener("click", e => { const b = e.target.closest("[data-src]"); if (b) toggleSource(b.dataset.src); });
 drawSources();
 $("#regions").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (b) setRegion(b.dataset.r || null); });
@@ -1502,7 +1591,8 @@ $("#ct").addEventListener("click", e => {
   $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
-  if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  if (h === "audit") { mode = "audit"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
   else if (c >= 0) openCountry(c);
   else { if (rg) region = rg; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
 }
