@@ -1,0 +1,17 @@
+{
+ "slug": "uruguay",
+ "country": "Uruguay",
+ "fiscal_year_convention": "start",
+ "documents": [
+  {
+   "file": "data/sources/uruguay/ndp/Uruguay National Development Plan till 2050.pdf",
+   "doc_type": "vision",
+   "start": 2019,
+   "end": 2050,
+   "language": "es",
+   "title": "Aportes para una Estrategia de Desarrollo 2050 (OPP)",
+   "edition": "",
+   "period_source": "stated: OPP, Montevideo, August 2019; horizon 2050; contributions toward a strategy, not an adopted plan"
+  }
+ ]
+}
