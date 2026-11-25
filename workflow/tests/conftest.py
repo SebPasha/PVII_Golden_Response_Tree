@@ -63,6 +63,10 @@ def configs(tmp_path, monkeypatch):
     d = tmp_path / "configs"
     d.mkdir()
     cfg = {"slug": "testland", "country": "Testland", "documents": [
+        # A skipped copy of the Second Plan (as China's originals, Nauru's second file): it
+        # shares that edition's plan_id and is listed first, so stacking must not read it twice.
+        {"file": "data/sources/testland/plan_a_copy.pdf", "doc_type": "ndp", "start": 2017,
+         "end": 2021, "language": "en", "title": "Second Plan (copy)", "skip": "duplicate"},
         {"file": "data/sources/testland/plan_a.pdf", "doc_type": "ndp", "start": 2017,
          "end": 2021, "language": "en", "title": "Second Plan", "edition": "2nd"},
         {"file": "data/sources/testland/plan_b.pdf", "doc_type": "ndp", "start": 2022,

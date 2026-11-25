@@ -34,7 +34,15 @@ def global_dir():
 def stack_country(slug, configs_dir=None):
     """Every plan of this country that has outputs, stacked, plus the edition comparison."""
     risks, strategies, plan_rows = [], [], []
-    for p in P.load_country(slug, configs_dir):
+    seen = set()
+    # Two entries can share a plan_id (a skipped duplicate file, China's originals); the plan is
+    # stacked once, from the runnable entry, as plans.find chooses it. Read twice, its rows
+    # doubled and editions.csv compared the plan with itself.
+    for p in sorted(P.load_country(slug, configs_dir), key=lambda p: bool(p.why_not_runnable())):
+        if p.plan_id:
+            if p.plan_id in seen:
+                continue
+            seen.add(p.plan_id)
         row = dict(p.row(), status=p.why_not_runnable() or "not run")
         d = P.plan_dir(p.plan_id) if p.plan_id else ""
         if d and os.path.exists(os.path.join(d, "context.json")):
