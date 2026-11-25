@@ -348,7 +348,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div>
       <div class="eyebrow">PV II · Golden Strategy Tree</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the framework families, each from a published framework, named at their fork; the leaves are our 60 families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. The dashed branch beside each pillar holds the strategies that fit no family.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the framework families, each from a published framework, named at their fork; the leaves are our families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. The dashed branch beside each pillar holds the strategies that fit no family.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
@@ -586,7 +586,7 @@ D.families.forEach(f => {
   const name = f.family.length > 44 ? f.family.slice(0, 42) + "…" : f.family;
   const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
   t.textContent = name;
-  el("title", {}, g).textContent = n ? `${f.family} · ${n} levers` : `${f.family} · dropped: no lever left after the literature review, takes no strategies`;
+  el("title", {}, g).textContent = n ? `${f.family} · ${n} levers` : `${f.family} · no lever yet, no strategies placed`;
   g.addEventListener("click", () => show({ f: f.family_id }));
   g.addEventListener("keydown", e => { if (e.key === "Enter") show({ f: f.family_id }); });
   leafEl[f.family_id] = { g, x, y, a, rx, rx0: rx, e, t, name, flip, n };
@@ -993,7 +993,7 @@ function paintCountry() {
   const vmax = Math.max(1, ...Object.values(lev).map(x => x.n));
   D.families.forEach(f => {
     const L = leafEl[f.family_id], x = fam[f.family_id], n = x ? x.n : 0;
-    if (!nLv(f)) { sizeLeaf(L, 5, short(L.name, 34) + " · dropped", false); return; }
+    if (!nLv(f)) { sizeLeaf(L, 5, short(L.name, 44), false); return; }
     sizeLeaf(L, n ? 5 + 17 * Math.sqrt(n / max) : 4, short(L.name, n ? 38 : 44) + (n ? `  ${n.toLocaleString()}` : ""), !n);
   });
   Object.keys(genEl).forEach(id => {
@@ -1231,7 +1231,7 @@ function nodeBlock(test, col, what) {
 const HWHAT = { SMG: "the economy", PFA: "people", MCH: "governance" };
 const famPillar = fid => SP[F[fid].subpillar_code].pillar;
 const countryFamily = fid => nLv(F[fid]) ? nodeBlock(r => r[4] === fid, famCol(fid), "family")
-  : `<p class="def" style="color:var(--muted)">Every lever of this family was dropped as unbacked by the literature review, so the family is drawn in grey and takes no strategies. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[famPillar(fid)]])}.</p>`;
+  : `<p class="def" style="color:var(--muted)">This family has no lever yet, so no strategies are placed on it. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[famPillar(fid)]])}.</p>`;
 function extraPanel(o) {
   if (o.h) {
     const pc = HPC[o.h], test = r => r[3] === "STD" && r[6] === o.h;
@@ -1285,7 +1285,7 @@ function drawTable() {
     body += `<tr class="grow"><td ${O({ g: g.group_id })} title="${esc(g.basis)}">${esc(g.group)}</td><td class="all">${ga || ""}</td><td class="pws">${gl ? pct(gl, ga) + "%" : ""}</td>${gn.map((n, i) => cell(n, tot[i], col, `${esc(cols[i].label)}: ${n} strategies in ${esc(g.group)}`, i)).join("")}</tr>`;
     g.family_ids.map(fid => F[fid]).forEach(f => {
       const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid), dead = !nLv(f);
-      body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}${dead ? " · dropped" : ""}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
+      body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
         const x = fam[i][fid] || { n: 0, lv: 0 };
         return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} strategies, ${x.lv} on a lever`, i);
       }).join("")}</tr>`;

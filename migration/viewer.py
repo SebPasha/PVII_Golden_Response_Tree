@@ -65,13 +65,15 @@ data = {
     "levers": [lever_row(lv) for lv in tree["levers"]],
     "dropped": [],
 }
-# the page shows the live tree only: levers dropped by the literature review, families left without a lever and
-# framework families left without a family are not drawn (no strategy is placed on them)
-data["families"] = [f for f in data["families"] if f["lever_ids"]]
-LIVE_F = {f["family_id"] for f in data["families"]}
+FAMS = {f["family_id"]: f for f in data["families"]}
+# the page draws all 33 framework families (the governance ones follow the Future-Ready Governance Index, as in the
+# framework). Below them it shows the live tree: levers dropped by the literature review are not drawn, and a family
+# left without a lever is drawn only where its framework family has no other family (no strategy is placed on it)
 for g in data["groups"]:
-    g["family_ids"] = [x for x in g["family_ids"] if x in LIVE_F]
-data["groups"] = [g for g in data["groups"] if g["family_ids"]]
+    live = [x for x in g["family_ids"] if FAMS[x]["lever_ids"]]
+    g["family_ids"] = live or g["family_ids"]
+KEEP_F = {x for g in data["groups"] for x in g["family_ids"]}
+data["families"] = [f for f in data["families"] if f["family_id"] in KEEP_F]
 
 SOURCES = [("plans", SRC, "National plans")] + [(k, os.path.join(SRC, k), lab) for k, lab in (
     ("sector", "Sector plans"), ("unga", "UNGA statements"), ("budget", "Budgets"))
