@@ -1,0 +1,27 @@
+{
+ "slug": "estonia",
+ "country": "Estonia",
+ "fiscal_year_convention": "start",
+ "documents": [
+  {
+   "file": "data/sources/estonia/ndp/EST Estonia 2035 Development Strategy.pdf",
+   "doc_type": "vision",
+   "start": 2021,
+   "end": 2035,
+   "language": "en",
+   "title": "Estonia 2035 Development Strategy",
+   "edition": "",
+   "period_source": "stated: adopted by the Riigikogu on 12 May 2021; horizon 2035"
+  },
+  {
+   "file": "data/sources/estonia/ndp/EST Estonia 2035 Action Plan (2023).pdf",
+   "doc_type": "ndp",
+   "start": 2023,
+   "end": 2035,
+   "language": "en",
+   "title": "Estonia 2035 Action Plan of the Government (11 May 2023)",
+   "edition": "",
+   "period_source": "stated: government action plan of 11 May 2023 for the Estonia 2035 strategy"
+  }
+ ]
+}

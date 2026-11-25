@@ -1,0 +1,27 @@
+{
+ "slug": "palau",
+ "country": "Palau",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/palau/ndp/Palau NDP 2009-14.pdf",
+   "doc_type": "ndp",
+   "start": 2009,
+   "end": 2014,
+   "language": "en",
+   "title": "Palau National Development Plan 2009-2014",
+   "edition": "",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/palau/ndp/Palau NDP 2023-26.pdf",
+   "doc_type": "ndp",
+   "start": 2023,
+   "end": 2026,
+   "language": "en",
+   "title": "Palau National Development Plan 2023-2026",
+   "edition": "",
+   "period_source": "filename"
+  }
+ ]
+}

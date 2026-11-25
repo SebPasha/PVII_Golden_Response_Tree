@@ -1,0 +1,27 @@
+{
+ "slug": "poland",
+ "country": "Poland",
+ "fiscal_year_convention": "start",
+ "documents": [
+  {
+   "file": "data/sources/poland/ndp/Poland - National Development Concept 2050.pdf",
+   "doc_type": "vision",
+   "start": 2025,
+   "end": 2050,
+   "language": "en",
+   "title": "National Development Concept 2050",
+   "edition": "",
+   "period_source": "stated: adopted by the Council of Ministers on 25 July 2025; horizon 2050"
+  },
+  {
+   "file": "data/sources/poland/ndp/Poland - National Development Strategy 2035 (Polish).pdf",
+   "doc_type": "ndp",
+   "start": 2026,
+   "end": 2035,
+   "language": "pl",
+   "title": "Strategia Rozwoju Polski do 2035 r. (draft)",
+   "edition": "",
+   "period_source": "stated: version submitted to the Council of Ministers on 10 April 2026 (draft, not yet adopted); horizon 2035"
+  }
+ ]
+}

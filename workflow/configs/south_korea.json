@@ -1,0 +1,37 @@
+{
+ "slug": "south_korea",
+ "country": "South Korea",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/south_korea/ndp/KOR State Administration Plan 2017-2022 (Korean).pdf",
+   "doc_type": "ndp",
+   "start": 2017,
+   "end": 2022,
+   "language": "ko",
+   "title": "State Administration Plan 2017-2022",
+   "edition": "",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/south_korea/ndp/KOR State Administration Plan 2022-2027 (Korean).pdf",
+   "doc_type": "ndp",
+   "start": 2022,
+   "end": 2027,
+   "language": "ko",
+   "title": "State Administration Plan 2022-2027",
+   "edition": "",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/south_korea/ndp/KOR State Administration Plan 2025-2030 (Korean).pdf",
+   "doc_type": "ndp",
+   "start": 2025,
+   "end": 2030,
+   "language": "ko",
+   "title": "State Administration Plan 2025-2030",
+   "edition": "",
+   "period_source": "filename"
+  }
+ ]
+}

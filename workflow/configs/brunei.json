@@ -1,0 +1,37 @@
+{
+ "slug": "brunei",
+ "country": "Brunei",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/brunei/BRU NDP 2012-2017.pdf",
+   "doc_type": "ndp",
+   "start": 2012,
+   "end": 2017,
+   "language": "en",
+   "title": "Tenth National Development Plan 2012-2017",
+   "edition": "RKN10",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/brunei/BRU NDP 2018-2023.pdf",
+   "doc_type": "ndp",
+   "start": 2018,
+   "end": 2023,
+   "language": "en",
+   "title": "Eleventh National Development Plan 2018-2023",
+   "edition": "RKN11",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/brunei/BRU NDP 2024-2029.pdf",
+   "doc_type": "ndp",
+   "start": 2024,
+   "end": 2029,
+   "language": "en",
+   "title": "Twelfth National Development Plan 2024-2029",
+   "edition": "RKN12",
+   "period_source": "filename"
+  }
+ ]
+}

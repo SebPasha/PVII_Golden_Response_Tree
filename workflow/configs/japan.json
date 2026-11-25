@@ -1,0 +1,59 @@
+{
+ "slug": "japan",
+ "country": "Japan",
+ "fiscal_year_convention": "start",
+ "documents": [
+  {
+   "file": "data/sources/japan/ndp/JPN Honebuto 2024 (English).pdf",
+   "doc_type": "ndp",
+   "start": 2024,
+   "end": 2024,
+   "language": "en",
+   "title": "Basic Policy on Economic and Fiscal Management and Reform 2024 (Honebuto 2024)",
+   "edition": "",
+   "period_source": "title year: an annual Cabinet policy, decided each June"
+  },
+  {
+   "file": "data/sources/japan/ndp/JPN Honebuto 2024 (Japanese).pdf",
+   "doc_type": "ndp",
+   "start": 2024,
+   "end": 2024,
+   "language": "ja",
+   "title": "Basic Policy on Economic and Fiscal Management and Reform 2024 (Honebuto 2024) (Japanese original)",
+   "edition": "",
+   "period_source": "title year: an annual Cabinet policy, decided each June",
+   "skip": "Japanese original of the English edition; PV2 read only the English"
+  },
+  {
+   "file": "data/sources/japan/ndp/JPN Honebuto 2025 (English).pdf",
+   "doc_type": "ndp",
+   "start": 2025,
+   "end": 2025,
+   "language": "en",
+   "title": "Basic Policy on Economic and Fiscal Management and Reform 2025 (Honebuto 2025)",
+   "edition": "",
+   "period_source": "title year: an annual Cabinet policy, decided each June"
+  },
+  {
+   "file": "data/sources/japan/ndp/JPN Honebuto 2025 (Japanese).pdf",
+   "doc_type": "ndp",
+   "start": 2025,
+   "end": 2025,
+   "language": "ja",
+   "title": "Basic Policy on Economic and Fiscal Management and Reform 2025 (Honebuto 2025) (Japanese original)",
+   "edition": "",
+   "period_source": "title year: an annual Cabinet policy, decided each June",
+   "skip": "Japanese original of the English edition; PV2 read only the English"
+  },
+  {
+   "file": "data/sources/japan/ndp/JPN Honebuto 2026 (Japanese).pdf",
+   "doc_type": "ndp",
+   "start": 2026,
+   "end": 2026,
+   "language": "ja",
+   "title": "Basic Policy on Economic and Fiscal Management and Reform 2026 (Honebuto 2026)",
+   "edition": "",
+   "period_source": "title year: an annual Cabinet policy, decided each June"
+  }
+ ]
+}

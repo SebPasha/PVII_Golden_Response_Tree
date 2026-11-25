@@ -1,0 +1,17 @@
+{
+ "slug": "saudi_arabia",
+ "country": "Saudi Arabia",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/saudi_arabia/ndp/KSA Vision 2030.pdf",
+   "doc_type": "vision",
+   "start": 2016,
+   "end": 2030,
+   "language": "en",
+   "title": "Saudi Vision 2030",
+   "edition": "",
+   "period_source": "public record: launched April 2016; the document states only 2030"
+  }
+ ]
+}
