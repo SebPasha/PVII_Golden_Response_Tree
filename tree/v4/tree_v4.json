@@ -272,32 +272,6 @@
     "backing_grade_review": "unbacked"
    },
    {
-    "lever_id": "LV-177",
-    "lever": "Foresight, scenarios and long-term strategy units",
-    "family_id": "F-41",
-    "family": "Scenario and futures work",
-    "subpillar": "Anticipation and Strategic Foresight",
-    "pathway_ids": [
-     "L3-211"
-    ],
-    "backing_grade": "unbacked",
-    "thai_strategies": 1,
-    "backing_grade_review": "unbacked"
-   },
-   {
-    "lever_id": "LV-178",
-    "lever": "National, sector and investment plans that coordinate investment",
-    "family_id": "F-42",
-    "family": "Development planning",
-    "subpillar": "Anticipation and Strategic Foresight",
-    "pathway_ids": [
-     "L3-212"
-    ],
-    "backing_grade": "unbacked",
-    "thai_strategies": 4,
-    "backing_grade_review": "unbacked"
-   },
-   {
     "lever_id": "LV-179",
     "lever": "Statistical systems, surveys, censuses and analysis for decisions",
     "family_id": "F-43",
@@ -374,19 +348,6 @@
     ],
     "backing_grade": "unbacked",
     "thai_strategies": 1,
-    "backing_grade_review": "unbacked"
-   },
-   {
-    "lever_id": "LV-190",
-    "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
-    "family_id": "F-48",
-    "family": "Coordination across agencies and levels",
-    "subpillar": "Adaptability and Course Correction",
-    "pathway_ids": [
-     "L3-220"
-    ],
-    "backing_grade": "unbacked",
-    "thai_strategies": 17,
     "backing_grade_review": "unbacked"
    },
    {
@@ -1354,7 +1315,7 @@
    "assets": [],
    "n_families": 1,
    "n_pathways": 1,
-   "n_levers": 0
+   "n_levers": 1
   },
   {
    "group_id": "G-21",
@@ -1377,7 +1338,7 @@
    "assets": [],
    "n_families": 1,
    "n_pathways": 1,
-   "n_levers": 0
+   "n_levers": 1
   },
   {
    "group_id": "G-22",
@@ -1515,7 +1476,7 @@
    ],
    "n_families": 1,
    "n_pathways": 1,
-   "n_levers": 0
+   "n_levers": 1
   },
   {
    "group_id": "G-27",
@@ -6358,7 +6319,9 @@
      "L3-211"
     ]
    },
-   "lever_ids": [],
+   "lever_ids": [
+    "LV-177"
+   ],
    "theory_anchors": [
     {
      "ref_id": "ANDREWS2017",
@@ -6395,7 +6358,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
    "theory_n": 4,
-   "n_levers": 0
+   "n_levers": 1
   },
   {
    "family_id": "F-42",
@@ -6429,7 +6392,9 @@
    ],
    "n_pathways": 1,
    "risk_sources": {},
-   "lever_ids": [],
+   "lever_ids": [
+    "LV-178"
+   ],
    "theory_anchors": [
     {
      "ref_id": "ANDREWS2017",
@@ -6466,7 +6431,7 @@
    ],
    "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
    "theory_n": 4,
-   "n_levers": 0
+   "n_levers": 1
   },
   {
    "family_id": "F-43",
@@ -6931,11 +6896,13 @@
    ],
    "n_pathways": 1,
    "risk_sources": {},
-   "lever_ids": [],
+   "lever_ids": [
+    "LV-190"
+   ],
    "theory_anchors": [],
    "theory_anchor_ids": "",
    "theory_n": 0,
-   "n_levers": 0
+   "n_levers": 1
   },
   {
    "family_id": "F-49",
@@ -18272,6 +18239,123 @@
    "check_note": "The attached evidence evaluates index insurance sold to smallholder farmers, which is household insurance that this lever's joins_not sends to L3-021. It does not evaluate pre-arranged sovereign or agency disaster finance (pathway L3-209, Clarke and Dercon 2016), so the lever has no evidence on its own action."
   },
   {
+   "lever_id": "LV-177",
+   "level": "L3",
+   "lever": "Foresight, scenarios and long-term strategy units",
+   "lever_full": "Foresight, scenarios and long-term strategy units",
+   "family_id": "F-41",
+   "family": "Scenario and futures work",
+   "group_id": "G-20",
+   "group": "Foresight and futures",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "subpillar_code": "ANT",
+   "pillar": "Making Change Happen",
+   "joins_when": "it builds or uses foresight, scenarios or futures analysis",
+   "joins_not": "it is statistics on the present (L3-210) or a development plan (L3-212)",
+   "pathway_ids": [
+    "L3-211"
+   ],
+   "n_pathways": 1,
+   "pathways": "L3-211 Scenario planning and strategic option value",
+   "text_cues": "foresight|scenario|horizon scan|future(s)? (stud|think)|long-term vision|vision 20",
+   "risks": [
+    "Climate Change",
+    "Technological Change"
+   ],
+   "entry_points": [],
+   "evidence": "Scenario planning and strategic option value: Wack 1985; Schwartz 1991",
+   "intervention_evidence": "School of International Futures 2021, Features of Effective Systemic Foresight in Governments around the World, UK Government Office for Science | Phadnis, Caplice, Sheffi and Singh 2015, Effect of Scenario Planning on Field Experts' Judgment of Long-Range Investment Decisions, Strategic Management Journal",
+   "evidence_finding": "Case studies of eight governments find a limited evidence base on foresight's impact, with influence depending on culture, structures, people and processes together; in field experiments, scenario planning moved experts toward more flexible long-range investment options.",
+   "evidence_strength": "thin",
+   "evidence_design": "mixed",
+   "evidence_fit": "partial",
+   "evidence_basis": "SOIF summary: eight country cases, limited evidence on impact, no single unit sufficient; Phadnis abstract: three field experiments, judgments shift, flexible options preferred.",
+   "evidence_checked": "abstract",
+   "evidence_verified": "yes",
+   "evidence_url": "https://assets.publishing.service.gov.uk/media/609a55638fa8f56a402b7ba1/effective-systemic-foresight-governments-executive-summary.pdf | https://dspace.mit.edu/handle/1721.1/96020",
+   "framework_source": "",
+   "framework_where": "",
+   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+   "framework_refs": [],
+   "thesis_refs": [],
+   "thesis_n": 0,
+   "thesis_citations": "",
+   "framework_status": "none",
+   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
+   "theory_n": 4,
+   "thai_strategies": 1,
+   "backing_score": 0.5,
+   "backing_grade": "unbacked",
+   "lever_draft": "Foresight, scenarios and long-term strategy units",
+   "joins_when_draft": "it builds or uses foresight, scenarios or futures analysis",
+   "joins_not_draft": "it is statistics on the present (L3-210) or a development plan (L3-212)",
+   "check_verdict": "keep",
+   "check_name_ok": true,
+   "check_tests_ok": true,
+   "check_literature_ok": true,
+   "check_source": "intervention_evidence finding (SOIF 2021; Phadnis et al. 2015) and pathway L3-211 condition",
+   "check_note": "The evidence evaluates government foresight and scenario planning; its finding that impact depends on integration into decisions matches the 'use in decisions' condition."
+  },
+  {
+   "lever_id": "LV-178",
+   "level": "L3",
+   "lever": "National, sector and investment plans that coordinate investment",
+   "lever_full": "National, sector and investment plans that coordinate investment",
+   "family_id": "F-42",
+   "family": "Development planning",
+   "group_id": "G-21",
+   "group": "Long-term planning",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "subpillar_code": "ANT",
+   "pillar": "Making Change Happen",
+   "joins_when": "it formulates or implements a plan that coordinates complementary investments across sectors or firms",
+   "joins_not": "it monitors the plan (L3-217), coordinates agencies day to day (L3-220) or plans emergency preparedness (L3-242)",
+   "pathway_ids": [
+    "L3-212"
+   ],
+   "n_pathways": 1,
+   "pathways": "L3-212 Coordination of complementary investments",
+   "text_cues": "big push|coordinat\\w* (of )?investment|complementar|development plan|national plan|planning (system|process|framework|commission|agency)|five[- ]year plan",
+   "risks": [],
+   "entry_points": [
+    "Formulate investment plans for growth",
+    "All-Hazards Emergency Health Crisis Management Planning and Preparedness",
+    "Integrated Renewable Energy and Energy Efficiency Research Planning"
+   ],
+   "evidence": "Coordination of complementary investments: Rosenstein-Rodan 1943; Murphy, Shleifer and Vishny 1989",
+   "intervention_evidence": "Lane 2025, Manufacturing Revolutions: Industrial Policy and Industrialization in South Korea, Quarterly Journal of Economics",
+   "evidence_finding": "South Korea's 1973-79 heavy and chemical industry drive expanded targeted industries and their comparative advantage, with gains spreading to downstream industries through input-output links and persisting after the policy ended.",
+   "evidence_strength": "thin",
+   "evidence_design": "quasi-experimental",
+   "evidence_fit": "partial",
+   "evidence_basis": "abstract: policy timing used for identification; targeted industries expanded, gained dynamic comparative advantage; downstream gains via linkages; persisted after policy ended.",
+   "evidence_checked": "abstract",
+   "evidence_verified": "yes",
+   "evidence_url": "https://ora.ox.ac.uk/objects/uuid:f046f14b-5647-4e3e-8251-c1ed7c015f67",
+   "framework_source": "",
+   "framework_where": "",
+   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+   "framework_refs": [],
+   "thesis_refs": [],
+   "thesis_n": 0,
+   "thesis_citations": "",
+   "framework_status": "none",
+   "theory_anchor_ids": "ANDREWS2017 (core); ROGGE2016 (core); OECD2024 (complementary); RODRIK2010 (complementary)",
+   "theory_n": 4,
+   "thai_strategies": 4,
+   "backing_score": 0.5,
+   "backing_grade": "unbacked",
+   "lever_draft": "National, sector and investment plans that coordinate investment",
+   "joins_when_draft": "it formulates or implements a plan that coordinates investments or sectors",
+   "joins_not_draft": "it monitors the plan (L3-217) or coordinates agencies day to day (L3-220)",
+   "check_verdict": "fix",
+   "check_name_ok": true,
+   "check_tests_ok": false,
+   "check_literature_ok": true,
+   "check_source": "pathway L3-212 causal_input and transmission (complementary investments made profitable together)",
+   "check_note": "The mechanism is coordination of complementary investments (big push), and Lane 2025 evaluates exactly such a sectoral drive. The current 'coordinates investments or sectors' lets any sector plan in; an all-hazards health crisis plan is among the entry points."
+  },
+  {
    "lever_id": "LV-181",
    "level": "L3",
    "lever": "Build, digitise and maintain the registries",
@@ -18578,6 +18662,67 @@
    "check_literature_ok": true,
    "check_source": "intervention_evidence finding (Goncalves 2014) and pathway L3-247",
    "check_note": "Participatory budgeting shifting allocations is the lever's action and mechanism."
+  },
+  {
+   "lever_id": "LV-190",
+   "level": "L3",
+   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+   "lever_full": "Coordinating bodies, integrated mechanisms and whole-of-government arrangements",
+   "family_id": "F-48",
+   "family": "Coordination across agencies and levels",
+   "group_id": "G-26",
+   "group": "Cross-government coordination",
+   "subpillar": "Adaptability and Course Correction",
+   "subpillar_code": "ADA",
+   "pillar": "Making Change Happen",
+   "joins_when": "it sets up or strengthens coordination among agencies, sectors or levels of government",
+   "joins_not": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
+   "pathway_ids": [
+    "L3-220"
+   ],
+   "n_pathways": 1,
+   "pathways": "L3-220 Coordination across agencies and levels",
+   "text_cues": "coordinat|whole-of-government|inter-?ministerial|inter-?agency|alignment|coheren",
+   "risks": [],
+   "entry_points": [
+    "Integrated central-local governance system",
+    "Provincial Agricultural Collaboration Mechanisms",
+    "Develop monitoring systems for community development programmes",
+    "Cross-organizational Public Administration Integration",
+    "Outcome-Based Integration Mechanism"
+   ],
+   "evidence": "Coordination across agencies and levels: Hooghe and Marks 2003",
+   "intervention_evidence": "Alessandro, Lafuente and Santiso 2014, Governing to Deliver: Reinventing the Center of Government in Latin America and the Caribbean, Inter-American Development Bank",
+   "evidence_finding": "An IDB study of centre-of-government units in Latin America and the Caribbean, with cases from Chile and Pernambuco in Brazil, argues they give direction and coherence and help priorities reach citizens; it offers a diagnostic matrix, not impact estimates.",
+   "evidence_strength": "thin",
+   "evidence_design": "case studies or descriptive",
+   "evidence_fit": "partial",
+   "evidence_basis": "publisher summary: conceptual framework, regional trends, Chile and Pernambuco cases, Institutional Development Matrix; argues centre of government provides direction and coherence; no measured effects.",
+   "evidence_checked": "abstract",
+   "evidence_verified": "yes",
+   "evidence_url": "https://publications.iadb.org/en/governing-deliver-reinventing-center-government-latin-america-and-caribbean",
+   "framework_source": "",
+   "framework_where": "",
+   "framework_says": "No framework document published yet (Future-Ready Governance Index in development)",
+   "framework_refs": [],
+   "thesis_refs": [],
+   "thesis_n": 0,
+   "thesis_citations": "",
+   "framework_status": "none",
+   "theory_anchor_ids": "",
+   "theory_n": 0,
+   "thai_strategies": 17,
+   "backing_score": 0.5,
+   "backing_grade": "unbacked",
+   "lever_draft": "Coordinating bodies, integrated mechanisms and whole-of-government",
+   "joins_when_draft": "it sets up or strengthens coordination among agencies, sectors or levels of government",
+   "joins_not_draft": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
+   "check_verdict": "keep",
+   "check_name_ok": true,
+   "check_tests_ok": true,
+   "check_literature_ok": true,
+   "check_source": "pathway L3-220 and intervention_evidence finding (Alessandro et al. 2014)",
+   "check_note": "Centre-of-government coordination units are the lever's action; the evidence is diagnostic, not impact estimates."
   },
   {
    "lever_id": "LV-191",
@@ -29798,12 +29943,11 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "",
-   "lever": "",
+   "lever": "Foresight, scenarios and long-term strategy units",
    "joins_when": "it builds or uses foresight, scenarios or futures analysis",
    "joins_not": "it is statistics on the present (L3-210) or a development plan (L3-212)",
    "entry_points": [],
-   "lever_id": "",
-   "dropped_lever": "LV-177"
+   "lever_id": "LV-177"
   },
   {
    "pathway_id": "L3-212",
@@ -29844,7 +29988,7 @@
    "v2_family_id": "FAM-21",
    "v2_family": "Foresight, data and early warning",
    "revised": "cues",
-   "lever": "",
+   "lever": "National, sector and investment plans that coordinate investment",
    "joins_when": "it formulates or implements a plan that coordinates investments or sectors",
    "joins_not": "it monitors the plan (L3-217) or coordinates agencies day to day (L3-220)",
    "entry_points": [
@@ -29852,8 +29996,7 @@
     "All-Hazards Emergency Health Crisis Management Planning and Preparedness",
     "Integrated Renewable Energy and Energy Efficiency Research Planning"
    ],
-   "lever_id": "",
-   "dropped_lever": "LV-178"
+   "lever_id": "LV-178"
   },
   {
    "pathway_id": "L3-210",
@@ -30449,7 +30592,7 @@
    "v2_family_id": "FAM-24",
    "v2_family": "Adaptive and learning government",
    "revised": "",
-   "lever": "",
+   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
    "joins_when": "it sets up or strengthens coordination among agencies, sectors or levels of government",
    "joins_not": "it is a plan (L3-212), a data link (L3-263) or decentralisation (L3-229)",
    "entry_points": [
@@ -30459,8 +30602,7 @@
     "Cross-organizational Public Administration Integration",
     "Outcome-Based Integration Mechanism"
    ],
-   "lever_id": "",
-   "dropped_lever": "LV-190"
+   "lever_id": "LV-190"
   },
   {
    "pathway_id": "L3-226",

@@ -1,54 +1,56 @@
 {
  "cross": [
   {"h": "Plans look more alike than different",
-   "t": "In every region, people-first strategies are 30 to 45% of the latest national plan and growth strategies 30 to 48%. Apart from natural capital in Egypt's plan, no framework family sits more than about 4 points above or below the all-country average. Regions differ in what they lean toward, not in the shape of the tree."},
+   "t": "In every region, people-first strategies make up 34 to 49% of the latest national plan, and growth strategies 30 to 43%. Only one framework family sits more than about 4 points above or below the all-country average: natural capital in Egypt's plan. Regions differ in what they lean toward, not in the shape of the tree."},
   {"h": "Climate is the storm almost every region names",
-   "t": "Climate change is the risk tied to the most strategies in six of the eight regions, ahead of every other risk in the Pacific (17% of strategies) and South Asia (16%). Europe and Central Asia is the exception: pandemics lead there (14%). In the Arab States, environmental degradation and resource pressures tie with climate. Yet the climate framework family itself is only about 5% of strategies on average, so the risk is named more often than it is answered."},
+   "t": "Climate change is the risk tied to the most strategies in seven of the eight regions, for example 17% of strategies in South-East Asia and 16% in South Asia and the Pacific. In the Arab States, environmental degradation edges it out. Yet the climate framework family itself holds only about 5% of strategies, so the risk is named more often than it is answered."},
+  {"h": "Governments plan and coordinate, but rarely look ahead",
+   "t": "Strategies on development planning and on coordination across government appear in many plans. Strategic foresight and scenario work appear in only a handful, and the Anticipation and Strategic Foresight subpillar holds about 3% of strategies. These three levers were restored on 25 November, and strategies were placed on them by their wording rather than by a fresh mapping run."},
   {"h": "Plans act through organisations, rarely through money",
-   "t": "Almost half of all strategies (47%) work through organisations: programmes, agencies and capacity. Another 28% work through information and 18% through rules. Only 8% use money, such as grants, subsidies or tax measures, and in the Pacific just 4%. Spending choices show up in budgets, not in the plans."},
+   "t": "Almost half of all strategies (46%) work through organisations: programmes, agencies and capacity. Another 28% work through information and 18% through rules. Only 8% use money, such as grants, subsidies or tax measures, and only 4% do in the Pacific. Spending choices show up in budgets, not in the plans."},
   {"h": "Few strategies can be tracked",
-   "t": "Only about a quarter of strategies (24%) carry a quantified target, and fewer than one in five (18%) name how they will be monitored. South Asia comes highest on targets (34%), while Latin America and the Caribbean (13%) and the Arab States (14%) come lowest. This holds back the RHDR Making Change Happen pillar across the board."}
+   "t": "Only a quarter of strategies (25%) carry a quantified target, and fewer than one in five (19%) say how they will be monitored. South Asia (34%) and East Asia (32%) come highest on targets, and Latin America and the Caribbean and the Arab States come lowest (14% each). This holds back the RHDR Making Change Happen pillar everywhere."}
  ],
  "regions": {
   "South-East Asia": {
-   "h": "Growth through knowledge, clusters and upgrading",
-   "b": ["Knowledge (7.7% against 6.6%), linkages, clusters and cities (6.3% against 5.2%) and upgrading and innovation (5.7% against 4.8%) sit above the average. The region builds its growth on skills and industrial depth.",
-         "Climate change is the risk named most (16% of strategies), but the climate family is below average (3.7% against 4.7%), and so is health (4.0% against 4.9%).",
-         "Across seven countries' plan series, later plans put less on domestic integration (down 2 points) and future generations (down 2 points), and more on broad governance and people goals."]},
+   "h": "Growth through clusters, skills and jobs, lighter on health",
+   "b": ["The region's plans favour linkages, clusters and cities (6.2% against 5.1%), knowledge (7.2% against 6.6%) and rapid resource mobilisation (3.9% against 3.1%). Jobs, places and mobility is above the average in 7 of 9 countries.",
+         "Health is light: long and healthy life is 4.2% against 5.1%, and only one country is above the average. Climate change is the risk named most, tied to 17% of strategies.",
+         "Across seven countries' plan series, later plans put more on delivery capability (up about 1 point) and less on capabilities and domestic integration."]},
   "South Asia": {
    "h": "The most specific plans, leaning to skills, trade and accountable government",
-   "b": ["South Asian plans are the easiest to place: 67% of strategies reach a lever (62% on average), and 34% carry a quantified target (24% on average).",
-         "They lean to knowledge, reaching foreign markets, accountability and authorised flexibility (7 of 9 countries above the average). They put less on enterprise finance and market rules.",
+   "b": ["South Asian plans are the easiest to place: 67% of strategies reach a lever (63% on average), and 34% carry a quantified target (25% on average).",
+         "They lean to authorised flexibility (above the average in 7 of 9 countries), knowledge, reaching foreign markets and accountability. They put less on enterprise finance and on upgrading.",
          "Across seven plan series, delivery capability is rising (up about 2 points) and domestic integration is falling (down about 3 points)."]},
   "East Asia": {
-   "h": "Growth-first plans: upgrading, cities and infrastructure",
-   "b": ["Growth strategies make up 43% of the latest plans (35% on average). Upgrading and innovation (9.0% against 4.8%), linkages, clusters and cities (8.9% against 5.2%) and infrastructure (5.9% against 4.3%) stand out.",
-         "Technological change is a leading risk alongside climate (11% of strategies). Authorised flexibility and rapid resource mobilisation are light, in both countries.",
-         "There are two countries here. China and Mongolia each count for half."]},
+   "h": "Upgrading for export, under ageing and technology pressure",
+   "b": ["Export-led strategies make up 13% of the latest plans (8% on average). Upgrading and innovation (9.3% against 5.1%) and linkages, clusters and cities are above the average in 4 of 5 countries. In plan series, export-led growth is rising (up about 5 points).",
+         "This is the only region where demographic shifts are among the top risks (12% of strategies), alongside technological change (13%) and climate (14%). It also has the most strategies marked high urgency (35% against 19%).",
+         "Enterprise finance is below the average in every country, and authorised flexibility is light. The five countries are China, Japan, Mongolia, South Korea and Taiwan."]},
   "Pacific": {
    "h": "Plans for protection and stewardship, less for export growth",
-   "b": ["Future generations, the subpillar holding climate, natural capital and resilience, is larger than in any region except the Arab States (16% of strategies against 12%). Climate is above the average in 7 of 10 countries.",
-         "Market rules and property rights (above average in 9 of 10 countries) and economic and human wealth (8 of 10) also stand out, because land and resource tenure runs through Pacific plans.",
-         "Export-led growth is half the average (4% against 8%), upgrading and innovation is light (2.7% against 4.8%), and only 4% of strategies use money as the instrument."]},
+   "b": ["Future generations, the subpillar holding climate, natural capital and resilience, is 15% of strategies against 13%. Climate is above the average in 7 of 10 countries.",
+         "Market rules and property rights stand out in all 10 countries, and economic and human wealth in 7. Land and resource tenure runs through Pacific plans.",
+         "Export-led growth is half the average (4% against 8%), upgrading and innovation is light (2.6% against 5.1%), and only 4% of strategies use money as the instrument."]},
   "Europe and Central Asia": {
-   "h": "Competitiveness and market access, with pandemics as the storm",
-   "b": ["Growth strategies make up 48% of the latest plans, the highest of any region. Infrastructure and connectivity (7.7% against 4.3%), enterprise and finance (6.3% against 3.7%) and reaching foreign markets (4.9% against 2.4%) lead.",
-         "Pandemics are the most-named risk (14% of strategies). This reflects Serbia's plan for 2021 to 2023.",
-         "Only two countries are read here, Kazakhstan and Serbia. Uzbekistan's plan yields too few strategies to count."]},
+   "h": "Competitiveness, connectivity and money on the table",
+   "b": ["Growth strategies make up 43% of the latest plans, the highest of any region. Infrastructure and connectivity (7.6% against 4.4%, all three countries above the average), rural producers, reaching foreign markets and enterprise finance lead.",
+         "These plans use money more than any other region (19% of strategies against 8%), and 70% of their strategies reach a lever.",
+         "Three countries are read here: Kazakhstan, Poland and Serbia. Estonia's and Uzbekistan's documents yield too few strategies to count."]},
   "Arab States": {
    "h": "Resource stewardship and broad economic goals",
-   "b": ["Natural capital is twice the average (12.4% against 6.2%), and environmental degradation, resource pressures and climate are the leading risks (14 to 15% each).",
-         "Broad economic goals that fit no family are large (12.4%), and governance is light (5.2% against 10%).",
-         "This reads as Egypt's Vision 2030 alone. Morocco's document yields too few strategies to count, so treat this as a country note, not a regional message."]},
+   "b": ["Natural capital is twice the average (12.4% against 6.0%). Environmental degradation, resource pressures and climate are the leading risks (14 to 15% of strategies each).",
+         "Enterprise finance (6.2% against 3.5%) and broad economic goals that fit no family (12%) are large, while governance is light.",
+         "This reads as Egypt's Vision 2030 alone. The documents for Morocco, Saudi Arabia and the United Arab Emirates yield too few strategies to count, so treat this as a country note, not a regional message."]},
   "Africa": {
    "h": "Living standards, trade and data, with fewer transformative strategies",
-   "b": ["Decent standard of living (8.3% against 6.7%), reaching foreign markets (3.5% against 2.4%) and data sharing (2.3% against 1.1%) lean above the average, the last two in 4 of 5 countries.",
-         "Natural capital (4.5% against 6.2%) and authorised flexibility are light. Fewer strategies are framed as transformative than anywhere except the Arab States (17% against 22%).",
-         "Five countries are read here: Ethiopia, Ghana, Kenya, Nigeria and Rwanda. Only national plans and some budgets are in, with no sector plans or UNGA statements."]},
+   "b": ["Decent standard of living (8.3% against 6.9%) and rural producers lean above the average. Reaching foreign markets (3.5% against 2.4%) and data sharing (2.3% against 1.1%) are above the average in 4 of 5 countries.",
+         "Natural capital (4.5% against 6.0%), climate and infrastructure are light. Fewer strategies are framed as transformative than anywhere except the Arab States (17% against 22%).",
+         "Five countries are read here: Ethiopia, Ghana, Kenya, Nigeria and Rwanda. Their national plans and some budgets are in, but no sector plans or UNGA statements."]},
   "Latin America and the Caribbean": {
    "h": "The most people-first plans, aimed at exclusion and places",
-   "b": ["People-first strategies make up 45% of the latest plans, the highest of any region. Tackling structural exclusion is more than double the average (9% against 4%), and spaces and decent standard of living are above the average in all four countries.",
-         "Knowledge is the lightest of any region (4.2% against 6.6%, no country above the average).",
-         "The fewest strategies are tied to a risk (27% against 36%), and the fewest carry a quantified target (13%). Brazil's plan is the hardest to place: 39% of its strategies reach a lever."]}
+   "b": ["People-first strategies make up 49% of the latest plans, the highest of any region. Tackling structural exclusion is more than double the average (10% against 4%). Spaces, decent standard of living and markets are above the average in all five countries.",
+         "Infrastructure, authorised flexibility and enterprise finance are light.",
+         "The fewest strategies are tied to a risk (28% against 37%), and the fewest carry a quantified target (14%). The five countries are Brazil, Colombia, Jamaica, Peru and Uruguay."]}
  }
 }

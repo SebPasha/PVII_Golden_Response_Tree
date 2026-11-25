@@ -19,6 +19,7 @@ EXCL = set(json.load(open(os.path.join(HERE, "excluded_plans.json"), encoding="u
 GEN = {"H-SEC": ("Smarter Growth", "General economy"), "H-SPE": ("People-first Approach", "General people"),
        "H-SGO": ("Making Change Happen", "General governance")}
 MIN_N = 30  # a plan edition needs this many strategies to stand for its country
+AP = {"South-East Asia", "South Asia", "East Asia", "Pacific"}
 PILLARS = ["Smarter Growth", "People-first Approach", "Making Change Happen"]
 
 
@@ -108,8 +109,10 @@ allc = sorted(c for c in cty if c not in thin)
 
 
 def agg(field, keys):
-    world = mean_of([prof[c][field] for c in allc], keys)
-    reg = {r: mean_of([prof[c][field] for c in members[r]], keys) for r in regions}
+    # a country with no answer for this field at all (for example no instruments recorded) is left out of its mean
+    has = lambda cs: [prof[c][field] for c in cs if prof[c][field] or field == "risk"]
+    world = mean_of(has(allc), keys)
+    reg = {r: mean_of(has(members[r]), keys) for r in regions}
     return world, reg
 
 
@@ -175,8 +178,11 @@ out["checks"] = {
     "min_n": min(nat_all), "max_n": max(nat_all), "rho_pages": round(spearman(pg_all), 2),
     "vision_lever": statistics.mean(x["lever"] for x in cov if x["doc_type"] == "vision"),
     "ndp_lever": statistics.mean(x["lever"] for x in cov if x["doc_type"] == "ndp"),
-    "lever_min": min(x["lever"] for x in cov), "lever_max": max(x["lever"] for x in cov),
-    "lever_min_c": min(cov, key=lambda x: x["lever"])["c"], "lever_max_c": max(cov, key=lambda x: x["lever"])["c"],
+    "lever_min": min(x["lever"] for x in cov if not x["thin"]), "lever_max": max(x["lever"] for x in cov if not x["thin"]),
+    "lever_min_c": min((x for x in cov if not x["thin"]), key=lambda x: x["lever"])["c"],
+    "lever_max_c": max((x for x in cov if not x["thin"]), key=lambda x: x["lever"])["c"],
+    "outside_ap": sum(1 for x in cov if x["region"] not in AP),
+    "outside_ap_no_sector_unga": sum(1 for x in cov if x["region"] not in AP and not x["sector"] and not x["unga"]),
     "repeat_rows": sum(1 for r in nat if int(r["n_editions"] or 1) > 1) / len(nat),
 }
 # which pillar and subpillar each framework family and subpillar sits under, for colours and row order on the page
