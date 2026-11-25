@@ -180,6 +180,10 @@ data["set"] = {
     "rows": out, "n_source": src_meta[0]["distinct"],
 }
 
+# the Regional messages tab (regional.py writes it; the tab says so when it is missing)
+_rg = os.path.join(SRC, "regional.json")
+data["regional"] = json.load(open(_rg, encoding="utf-8")) if os.path.exists(_rg) else None
+
 template = open(os.path.join(HERE, "viewer_template.html"), encoding="utf-8").read()
 blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 html = template.replace("/*TREE_DATA*/null", blob)

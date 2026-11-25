@@ -130,8 +130,9 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
 footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
 /* country */
-.ctry { display: grid; gap: 12px }
-.modes { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; padding: 3px; background: var(--surface); width: max-content; max-width: 100% }
+.ctry { display: grid; gap: 12px; min-width: 0 }
+.ctry > * { min-width: 0 }
+.modes { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 8px; padding: 3px; background: var(--surface); justify-self: start; max-width: 100% }
 .mode { font: 500 13.5px var(--body); color: var(--muted); background: none; border: 0; border-radius: 6px; padding: 6px 14px; cursor: pointer }
 .mode[aria-selected="true"] { background: var(--ink); color: var(--surface) }
 .tl { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; gap: 8px }
@@ -324,6 +325,43 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 #aud-list th { font: 500 11px var(--mono); color: var(--muted) }
 #aud-list td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap }
 #aud-list .warn { color: var(--economy) }
+/* Regional messages tab */
+.rg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px }
+.rg-card { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px }
+.rg-card h3 { font-size: 16px; margin-bottom: 4px }
+.rg-card p { margin: 0; color: var(--muted); font-size: 13px }
+.rg-one { border-top: 1px solid var(--line); padding-top: 12px; display: grid; gap: 12px }
+.rg-head { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: end }
+.rg-head h3 { font-size: 20px; font-weight: 650 }
+.rg-conf { font: 500 11.5px var(--mono); padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted) }
+.rg-conf.ok { border-color: var(--people); color: var(--people) }
+.rg-msg { margin: 0; padding-left: 18px; display: grid; gap: 6px; max-width: 90ch }
+.rg-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px }
+.rg-facts > div { background: var(--bg); border-radius: 8px; padding: 8px 10px; display: grid }
+.rg-facts b { font: 600 20px var(--body); font-variant-numeric: tabular-nums }
+.rg-facts small { color: var(--muted); font-size: 11.5px }
+.rg-cols { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px }
+@media (max-width: 820px) { .rg-cols { grid-template-columns: 1fr } }
+.rg-cols h4 { margin: 8px 0 4px; font: 600 13px var(--body) }
+.rg-note { margin: 0 0 6px; font-size: 12px }
+.rg-bar { display: grid; grid-template-columns: minmax(120px, 15em) 1fr 3.2em 2.6em; gap: 8px; align-items: center; font-size: 12.5px; padding: 2px 0 }
+.rg-bar .lab { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.rg-bar .trk { position: relative; height: 10px; background: var(--bg); border-radius: 3px }
+.rg-bar .trk i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px }
+.rg-bar .trk b { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); margin-left: -1px }
+.rg-bar .num, .rg-lean .num { text-align: right; font: 12px var(--mono); font-variant-numeric: tabular-nums }
+.rg-bar .ab, .rg-lean .ab { color: var(--muted); font: 11px var(--mono) }
+.rg-lean { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 12.5px }
+.rg-lean li { display: grid; grid-template-columns: 1fr auto 9.5em; gap: 8px; align-items: baseline }
+.rg-lean .up { color: var(--gold) } .rg-lean .dn { color: var(--storm) }
+#rg-heat, #rg-cov { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums }
+#rg-heat th, #rg-heat td, #rg-cov th, #rg-cov td { padding: 3px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
+#rg-heat th:first-child, #rg-heat td:first-child, #rg-cov th:first-child, #rg-cov td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface) }
+#rg-heat thead th, #rg-cov thead th { font: 500 11px var(--mono); color: var(--muted); vertical-align: bottom; white-space: normal; max-width: 8em }
+#rg-heat thead th[data-rg] { cursor: pointer } #rg-heat thead th.on { color: var(--ink); text-decoration: underline }
+#rg-heat td i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px }
+#rg-cov td:nth-child(2), #rg-cov td:nth-child(3) { text-align: left } #rg-cov tr.thin td { color: var(--muted) }
+.rg-comp { margin: 0; padding-left: 18px; display: grid; gap: 6px; max-width: 95ch; color: var(--ink) }
 .aud-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 6px 0 }
 .aud-bar .eyebrow { margin-right: 4px }
 .aud-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--muted); margin: 8px 0 }
@@ -359,6 +397,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
       <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
       <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n" hidden></span></button>
       <button type="button" class="mode" id="m-aud" role="tab" aria-selected="false">Audit</button>
+      <button type="button" class="mode" id="m-reg" role="tab" aria-selected="false">Regional messages</button>
     </div>
     <div class="chipsel" id="srcs" aria-label="Sources"></div>
     <div class="tl" id="worldbar">
@@ -409,6 +448,20 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div class="ct-scroll" id="aud-tlbox"><svg id="aud-tl" role="img" aria-label="Documents run, by country, source and year"></svg></div>
     <div class="ct-scroll" id="aud-tabbox" hidden><table id="aud"></table></div>
     <div id="aud-list"></div>
+  </section>
+
+  <section class="outline" id="regional" hidden>
+    <h2>Regional messages</h2>
+    <p id="rg-p"></p>
+    <div class="rg-grid" id="rg-cross"></div>
+    <div class="aud-bar" id="rg-reg"></div>
+    <div class="rg-one" id="rg-one"></div>
+    <h3>Every framework family, by region</h3>
+    <p class="muted rg-note">Share of each region's latest-plan strategies, in %. Gold: above the average; blue: below; the stronger the colour, the larger the gap (full at 4 points). Select a region heading to read it above.</p>
+    <div class="ct-scroll"><table id="rg-heat"></table></div>
+    <h3>How comparable is this?</h3>
+    <ul class="rg-comp" id="rg-comp"></ul>
+    <details><summary>Coverage by country</summary><div class="ct-scroll"><table id="rg-cov"></table></div></details>
   </section>
 
   <section class="outline" id="details">
@@ -1618,17 +1671,77 @@ $("#audit").addEventListener("click", e => {
 });
 $("#audit").addEventListener("keydown", e => { const td = e.target.closest("td[data-ac]"); if (td && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); td.click(); } });
 
+// ---------- regional messages: what each region's latest plans lean toward, on a comparable basis ----------
+const RGN = D.regional || null;
+const RGS = { r: null };
+const rgPct = (v, d = 0) => (v * 100).toFixed(d);
+const RG_PCOL = { "Smarter Growth": "var(--economy)", "People-first Approach": "var(--people)", "Making Change Happen": "var(--gov)" };
+function rgCountries(r) { return RGN.coverage.filter(x => x.region === r); }
+function rgConf(r) {
+  const n = rgCountries(r).filter(x => !x.thin).length;
+  return n >= 5 ? ["Solid", `${n} countries`] : n >= 2 ? ["Indicative", `${n} countries; each weighs a lot`] : ["Country note", "one country"];
+}
+function drawRegional() {
+  if (!RGN) { $("#rg-p").textContent = "Regional messages are not built for this page."; return; }
+  const M = RGN.messages || {}, C = RGN.checks;
+  $("#rg-p").textContent = `Each country is read through its latest national plan (the one that starts last, with at least ${C.min_n_rule} strategies), as shares of that plan's strategies, and every country counts the same inside its region. So a long plan does not outweigh a short one, and a country with five editions counts once. "Average" is the mean over all ${C.countries - C.thin.length} countries read.`;
+  $("#rg-cross").innerHTML = (M.cross || []).map(m => `<div class="rg-card"><h3>${esc(m.h)}</h3><p>${esc(m.t)}</p></div>`).join("");
+  if (RGS.r === null || !RGN.regions.includes(RGS.r)) RGS.r = RGN.regions[0];
+  $("#rg-reg").innerHTML = `<span class="eyebrow">Region</span>` + RGN.regions.map(r => `<button type="button" class="rchip" aria-pressed="${RGS.r === r}" data-rg="${esc(r)}">${esc(r)} <span>${rgCountries(r).filter(x => !x.thin).length}</span></button>`).join("");
+  const r = RGS.r, m = (M.regions || {})[r] || {}, [cf, cn] = rgConf(r), cs = rgCountries(r);
+  const sub = RGN.sub, grp = RGN.grp, n = cs.filter(x => !x.thin).length;
+  const subs = RGN.pillars.flatMap(p => sub.keys.filter(k => RGN.sub_pillar[k] === p));
+  const bars = subs.map(k => {
+    const v = sub.reg[r][k] || 0, w = sub.world[k] || 0, mx = 0.3;
+    return `<div class="rg-bar"><span class="lab">${esc(k)}</span><span class="trk"><i style="width:${Math.min(100, v / mx * 100)}%;background:${RG_PCOL[RGN.sub_pillar[k]]}"></i><b style="left:${Math.min(100, w / mx * 100)}%" title="Average ${rgPct(w)}%"></b></span><span class="num">${rgPct(v)}%</span><span class="ab">${sub.above[r][k]}/${n}</span></div>`;
+  }).join("");
+  const diffs = grp.keys.filter(k => !k.startsWith("General")).map(k => [k, (grp.reg[r][k] || 0) - grp.world[k]]).sort((a, b) => b[1] - a[1]);
+  const lean = (xs, up) => xs.map(([k, d]) => `<li><span>${esc(k)}</span><span class="num ${up ? "up" : "dn"}">${up ? "+" : "−"}${Math.abs(d * 100).toFixed(1)} pts</span><span class="ab">${rgPct(grp.reg[r][k] || 0, 1)}% · ${grp.above[r][k]}/${n} above</span></li>`).join("");
+  const risks = Object.entries(RGN.risk.reg[r]).sort((a, b) => b[1] - a[1]).slice(0, 3);
+  const sc = RGN.scal, o = RGN.ori, ins = RGN.ins;
+  const facts = [["Strategies tied to a risk", sc.risk_any], ["Framed as transformative", null, o.reg[r].transformative || 0, o.world.transformative || 0],
+    ["With a quantified target", sc.qt], ["With monitoring named", sc.mon], ["Placed on a lever", sc.lever], ["Using money as the instrument", null, ins.reg[r].Money || 0, ins.world.Money || 0]]
+    .map(([l, s, v, w]) => { v = s ? s[r] : v; w = s ? s.world : w; return `<div><span class="eyebrow">${esc(l)}</span><b>${rgPct(v)}%</b><small>average ${rgPct(w)}%</small></div>`; }).join("");
+  $("#rg-one").innerHTML = `<div class="rg-head"><div><span class="eyebrow">${esc(r)}</span><h3>${esc(m.h || r)}</h3></div><span class="rg-conf ${cf === "Solid" ? "ok" : ""}" title="${esc(cn)}">${esc(cf)} · ${esc(cn)}</span></div>
+    <ul class="rg-msg">${(m.b || []).map(b => `<li>${esc(b)}</li>`).join("")}</ul>
+    <div class="rg-facts">${facts}</div>
+    <div class="rg-cols"><div><h4>RHDR subpillars: share of strategies</h4><p class="muted rg-note">Bar: this region. Tick: average. Right: countries above the average.</p>${bars}</div>
+      <div><h4>Framework families it leans toward</h4><ul class="rg-lean">${lean(diffs.slice(0, 5), true)}</ul><h4>…and away from</h4><ul class="rg-lean">${lean(diffs.slice(-3).reverse(), false)}</ul>
+      <h4>Storms named most</h4><ul class="rg-lean">${risks.map(([k, v]) => `<li><span>${esc(k)}</span><span class="num">${rgPct(v)}%</span><span class="ab">average ${rgPct(RGN.risk.world[k] || 0)}%</span></li>`).join("")}</ul></div></div>
+    <p class="muted rg-note">Plans read: ${cs.map(x => `${esc(x.c)} (${esc(x.latest)}, ${x.start}–${x.end}, ${x.n} strategies${x.thin ? ", too few to count" : ""})`).join("; ")}.</p>`;
+  // heat map: framework families x regions, coloured by the distance from the average
+  const ord = RGN.pillars.flatMap(p => subs.filter(s => RGN.sub_pillar[s] === p).flatMap(s => grp.keys.filter(k => RGN.grp_sub[k] === s)));
+  $("#rg-heat").innerHTML = `<thead><tr><th>Framework family</th><th>Average</th>${RGN.regions.map(x => `<th data-rg="${esc(x)}" class="${x === r ? "on" : ""}">${esc(x)}</th>`).join("")}</tr></thead><tbody>` +
+    ord.map(k => `<tr><td><i style="background:${RG_PCOL[RGN.sub_pillar[RGN.grp_sub[k]]]}"></i>${esc(k)}</td><td>${rgPct(grp.world[k], 1)}</td>${RGN.regions.map(x => {
+      const v = grp.reg[x][k] || 0, d = v - grp.world[k], a = Math.min(1, Math.abs(d) / 0.04);
+      return `<td style="background:color-mix(in srgb, ${d > 0 ? "var(--gold)" : "var(--storm)"} ${Math.round(a * 55)}%, transparent)" title="${esc(x)}: ${rgPct(v, 1)}% (average ${rgPct(grp.world[k], 1)}%)">${rgPct(v, 1)}</td>`;
+    }).join("")}</tr>`).join("") + `</tbody>`;
+  // comparability: what still differs between countries, and the coverage table
+  const thinTxt = C.thin.join(", ");
+  $("#rg-comp").innerHTML = [
+    `<b>Uneven sources.</b> ${C.all_four} of ${C.countries} countries have all four sources (national plans, sector plans, UNGA statements, budgets). The 14 countries outside Asia-Pacific have no sector plans or UNGA statements, and ${C.national_only} have national plans only. So only national plans compare across all regions, and this tab uses them alone.`,
+    `<b>Counts follow document length.</b> An edition yields from ${C.min_n} to ${C.max_n} strategies, and the count rises with the pages read (rank correlation ${C.rho_pages}). Raw counts mostly measure how long a plan is, so this tab compares shares.`,
+    `<b>Different kinds of plan.</b> ${C.one_edition} countries have one edition only, and for ${C.vision_latest} the latest is a long-term vision rather than a medium-term plan. Visions place less often on a lever (${rgPct(C.vision_lever)}% against ${rgPct(C.ndp_lever)}%). The latest plan read starts as early as ${RGN.coverage.reduce((a, x) => Math.min(a, x.start), 9999)} for some countries and as late as ${RGN.coverage.reduce((a, x) => Math.max(a, x.start), 0)} for others, and ${C.stale.join(", ")}'s latest plan ended in 2020.`,
+    `<b>Repeated strategies.</b> ${rgPct(C.repeat_rows)}% of national rows are a strategy that the earlier run found in more than one edition and that is counted in each. Change between editions is therefore understated.`,
+    `<b>Placement differs by country.</b> The share of a country's strategies that reaches a lever runs from ${rgPct(C.lever_min)}% (${esc(C.lever_min_c)}) to ${rgPct(C.lever_max)}% (${esc(C.lever_max_c)}). Where it is low, more sits on a family or on a general branch, which flattens that country's profile.`,
+    `<b>Thin or odd documents.</b> ${esc(thinTxt)} yield fewer than ${C.min_n_rule} strategies and are left out of the averages. Kazakhstan's file has no page count, and Mongolia's 2024–2028 action plan gives 138 strategies from 32 pages. Both are worth a look.`
+  ].map(t => `<li>${t}</li>`).join("");
+  $("#rg-cov").innerHTML = `<thead><tr><th>Country</th><th>Region</th><th>Latest plan read</th><th>Period</th><th>Editions</th><th>Strategies</th><th>Per 100 pages</th><th>On a lever</th><th>Sector</th><th>UNGA</th><th>Budget</th></tr></thead><tbody>` +
+    RGN.regions.flatMap(x => rgCountries(x)).map(x => `<tr class="${x.thin ? "thin" : ""}"><td>${esc(x.c)}</td><td>${esc(x.region)}</td><td>${esc(x.latest)}${x.doc_type === "vision" ? " <small>(vision)</small>" : ""}</td><td>${x.start}–${x.end}</td><td>${x.editions}</td><td>${x.n}</td><td>${x.per100 ?? "–"}</td><td>${rgPct(x.lever)}%</td><td>${x.sector || "–"}</td><td>${x.unga || "–"}</td><td>${x.budget || "–"}</td></tr>`).join("") + `</tbody>`;
+}
+$("#regional").addEventListener("click", e => { const b = e.target.closest("[data-rg]"); if (b) { RGS.r = b.dataset.rg; drawRegional(); } });
+
 // ---------- state ----------
 function refresh() {
-  const au = mode === "audit";
-  $("#m-aud").setAttribute("aria-selected", au);
-  $("#audit").hidden = !au;
-  ["#details", "#srcs"].forEach(q => { $(q).hidden = au; });
-  if (au) {
+  const au = mode === "audit", rgm = mode === "regional", side = au || rgm;
+  $("#m-aud").setAttribute("aria-selected", au); $("#m-reg").setAttribute("aria-selected", rgm);
+  $("#audit").hidden = !au; $("#regional").hidden = !rgm;
+  ["#details", "#srcs"].forEach(q => { $(q).hidden = side; });
+  if (side) {
     ["#m-world", "#m-ctry", "#m-un"].forEach(q => $(q).setAttribute("aria-selected", "false"));
     [".main", "#storms", ".tools", "#ctable", "#outline", "#worldbar", "#ctrybar", "#forestbox"].forEach(q => { $(q).hidden = true; });
-    drawAudit();
-    try { history.replaceState(null, "", "#audit"); } catch (e) {}
+    if (au) drawAudit(); else drawRegional();
+    try { history.replaceState(null, "", au ? "#audit" : "#regional"); } catch (e) {}
     return;
   }
   scope();
@@ -1662,6 +1775,7 @@ $("#m-world").addEventListener("click", () => { mode = "world"; refresh(); });
 $("#m-ctry").addEventListener("click", () => openCountry(ci));
 $("#m-un").addEventListener("click", () => { mode = "unmapped"; refresh(); });
 $("#m-aud").addEventListener("click", () => { mode = "audit"; refresh(); });
+$("#m-reg").addEventListener("click", () => { mode = "regional"; refresh(); });
 $("#srcs").addEventListener("click", e => { const b = e.target.closest("[data-src]"); if (b) toggleSource(b.dataset.src); });
 drawSources();
 $("#regions").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (b) setRegion(b.dataset.r || null); });
@@ -1691,7 +1805,8 @@ $("#ct").addEventListener("click", e => {
   $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
-  if (h === "audit") { mode = "audit"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  if (h === "regional") { mode = "regional"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (h === "audit") { mode = "audit"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
   else if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
   else if (c >= 0) openCountry(c);
   else { if (rg) region = rg; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }

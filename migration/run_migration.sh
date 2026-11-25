@@ -41,6 +41,8 @@ if compgen -G "added/*/" > /dev/null; then
   echo "== 6b. countries run through the current workflow (added/)"
   python3 add_country.py "$OUT" added/*/
 fi
+echo "== 6c. regional messages and comparability checks"
+python3 regional.py "$OUT"
 echo "== 7. the page"
 python3 viewer.py "$OUT" "$OUT/page/index.html"
 echo "done: open $OUT/page/index.html (keep rows_*.js and detail/ beside it when you publish it)"
