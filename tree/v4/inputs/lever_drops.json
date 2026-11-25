@@ -288,36 +288,6 @@
    "review_comment": "Split into two. One lever for supplier diversification and chokepoint security, one for export and commodity diversification. Remove the self-referencing joins-not. The attached export-promotion papers do not test lower dependence; replace with exposure evidence and state that no intervention evidence exists."
   },
   {
-   "lever_id": "LV-177",
-   "lever": "Foresight, scenarios and long-term strategy units",
-   "family_id": "F-41",
-   "family": "Scenario and futures work",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "backing_grade_before": "unbacked",
-   "backing_grade_review": "unbacked",
-   "evidence_strength": "thin",
-   "evidence_fit": "partial",
-   "new_sources_proposed": 2,
-   "review_verdict": "reword",
-   "review_justified_by": "School of International Futures 2021 (#456), Schwartz 1991 (#901), Wack 1985 (#925, fix citation); Habegger 2010 proposed",
-   "review_comment": "Keep, using lever ids. Be plain that the evidence is practitioner and case-based; no foresight evaluation from Asia or middle-income governments was found. Firm studies (Rohrbeck and Kum) are only an analogy."
-  },
-  {
-   "lever_id": "LV-178",
-   "lever": "National, sector and investment plans that coordinate investment",
-   "family_id": "F-42",
-   "family": "Development planning",
-   "subpillar": "Anticipation and Strategic Foresight",
-   "backing_grade_before": "unbacked",
-   "backing_grade_review": "unbacked",
-   "evidence_strength": "thin",
-   "evidence_fit": "partial",
-   "new_sources_proposed": 1,
-   "review_verdict": "reword",
-   "review_justified_by": "Lane 2025 (#400), Murphy et al. 1989 (#852), Rosenstein-Rodan 1943 (#895)",
-   "review_comment": "Agree with the fix, and say the evidence covers only coordinated sector drives. Of the six Thai strategies, the health crisis plan belongs in LV-197 and the energy R&D planning item in an R&D lever. No causal evidence that national plans as such raise outcomes, which should be stated."
-  },
-  {
    "lever_id": "LV-179",
    "lever": "Statistical systems, surveys, censuses and analysis for decisions",
    "family_id": "F-43",
@@ -408,21 +378,6 @@
    "review_comment": "Keep the lever but reword so it covers rules, standards and tax or subsidy incentives for AI and automation, and make clear that a sandbox for AI belongs in LV-184. Evidence is thin and Thai strategies are only two, with no plan-language examples shown."
   },
   {
-   "lever_id": "LV-190",
-   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
-   "family_id": "F-48",
-   "family": "Coordination across agencies and levels",
-   "subpillar": "Adaptability and Course Correction",
-   "backing_grade_before": "unbacked",
-   "backing_grade_review": "unbacked",
-   "evidence_strength": "thin",
-   "evidence_fit": "partial",
-   "new_sources_proposed": 2,
-   "review_verdict": "split",
-   "review_justified_by": "Part A keeps #258 and #773 at partial fit. Add Cejudo and Michel 2017 (10.1007/s11077-017-9281-5) for the concept.",
-   "review_comment": "The lever is a catch-all (15 Thai strategies) and the double coding shows disagreement on all five cases, so the tests do not sort. I would split it into (a) standing coordinating bodies and whole-of-government centres and (b) local or sector collaboration mechanisms, and add an explicit rule that 'monitoring systems for programmes' goes to LV-182."
-  },
-  {
    "lever_id": "LV-197",
    "lever": "Emergency operations centres, surge staff, beds and stockpiles",
    "family_id": "F-51",
@@ -466,6 +421,56 @@
    "review_verdict": "reword",
    "review_justified_by": "Vlaicu et al. 2014 (#468), Alesina and Perotti 1996 (#534, fix citation), von Hagen 1992 (#924, fix citation)",
    "review_comment": "Three of three double-coded strategies split across levers. 'Link the plan to the annual budget' sits between this and LV-178. Add a rule: aligning a plan's priorities to the budget goes here; the plan itself goes to LV-178. Pointer L3-097 should be LV-094."
+  }
+ ],
+ "restored": [
+  {
+   "lever_id": "LV-177",
+   "lever": "Foresight, scenarios and long-term strategy units",
+   "family_id": "F-41",
+   "family": "Scenario and futures work",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "backing_grade_before": "unbacked",
+   "backing_grade_review": "unbacked",
+   "evidence_strength": "thin",
+   "evidence_fit": "partial",
+   "new_sources_proposed": 2,
+   "review_verdict": "reword",
+   "review_justified_by": "School of International Futures 2021 (#456), Schwartz 1991 (#901), Wack 1985 (#925, fix citation); Habegger 2010 proposed",
+   "review_comment": "Keep, using lever ids. Be plain that the evidence is practitioner and case-based; no foresight evaluation from Asia or middle-income governments was found. Firm studies (Rohrbeck and Kum) are only an analogy.",
+   "restored": "25 Nov 2026, Sebastian: foresight, long-term planning and cross-government coordination and their levers stay in the governance tree (Future-Ready Governance Index families)"
+  },
+  {
+   "lever_id": "LV-178",
+   "lever": "National, sector and investment plans that coordinate investment",
+   "family_id": "F-42",
+   "family": "Development planning",
+   "subpillar": "Anticipation and Strategic Foresight",
+   "backing_grade_before": "unbacked",
+   "backing_grade_review": "unbacked",
+   "evidence_strength": "thin",
+   "evidence_fit": "partial",
+   "new_sources_proposed": 1,
+   "review_verdict": "reword",
+   "review_justified_by": "Lane 2025 (#400), Murphy et al. 1989 (#852), Rosenstein-Rodan 1943 (#895)",
+   "review_comment": "Agree with the fix, and say the evidence covers only coordinated sector drives. Of the six Thai strategies, the health crisis plan belongs in LV-197 and the energy R&D planning item in an R&D lever. No causal evidence that national plans as such raise outcomes, which should be stated.",
+   "restored": "25 Nov 2026, Sebastian: foresight, long-term planning and cross-government coordination and their levers stay in the governance tree (Future-Ready Governance Index families)"
+  },
+  {
+   "lever_id": "LV-190",
+   "lever": "Coordinating bodies, integrated mechanisms and whole-of-government",
+   "family_id": "F-48",
+   "family": "Coordination across agencies and levels",
+   "subpillar": "Adaptability and Course Correction",
+   "backing_grade_before": "unbacked",
+   "backing_grade_review": "unbacked",
+   "evidence_strength": "thin",
+   "evidence_fit": "partial",
+   "new_sources_proposed": 2,
+   "review_verdict": "split",
+   "review_justified_by": "Part A keeps #258 and #773 at partial fit. Add Cejudo and Michel 2017 (10.1007/s11077-017-9281-5) for the concept.",
+   "review_comment": "The lever is a catch-all (15 Thai strategies) and the double coding shows disagreement on all five cases, so the tests do not sort. I would split it into (a) standing coordinating bodies and whole-of-government centres and (b) local or sector collaboration mechanisms, and add an explicit rule that 'monitoring systems for programmes' goes to LV-182.",
+   "restored": "25 Nov 2026, Sebastian: foresight, long-term planning and cross-government coordination and their levers stay in the governance tree (Future-Ready Governance Index families)"
   }
  ]
 }

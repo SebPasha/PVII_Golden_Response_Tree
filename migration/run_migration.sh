@@ -41,7 +41,9 @@ if compgen -G "added/*/" > /dev/null; then
   echo "== 6b. countries run through the current workflow (added/)"
   python3 add_country.py "$OUT" added/*/
 fi
-echo "== 6c. regional messages and comparability checks"
+echo "== 6c. the three governance levers restored on 25 Nov 2026 (foresight, development planning, coordination)"
+python3 restore_levers.py "$OUT"
+echo "== 6d. regional messages and comparability checks"
 python3 regional.py "$OUT"
 echo "== 7. the page"
 python3 viewer.py "$OUT" "$OUT/page/index.html"
