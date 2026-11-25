@@ -1,0 +1,17 @@
+{
+ "slug": "uae",
+ "country": "United Arab Emirates",
+ "fiscal_year_convention": "start",
+ "documents": [
+  {
+   "file": "data/sources/uae/ndp/UAE Vision 2031.pdf",
+   "doc_type": "vision",
+   "start": 2023,
+   "end": 2031,
+   "language": "en",
+   "title": "We the UAE 2031",
+   "edition": "",
+   "period_source": "stated: Version 1, January 2023; 'our government vision for the next decade' to 2031"
+  }
+ ]
+}

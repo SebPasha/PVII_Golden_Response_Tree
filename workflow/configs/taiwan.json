@@ -1,0 +1,37 @@
+{
+ "slug": "taiwan",
+ "country": "Taiwan",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/taiwan/ndp/TWN NDP 2017-2020 (Chinese).pdf",
+   "doc_type": "ndp",
+   "start": 2017,
+   "end": 2020,
+   "language": "zh",
+   "title": "National Development Plan 2017-2020",
+   "edition": "",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/taiwan/ndp/TWN NDP 2021-2024 (Chinese).pdf",
+   "doc_type": "ndp",
+   "start": 2021,
+   "end": 2024,
+   "language": "zh",
+   "title": "National Development Plan 2021-2024",
+   "edition": "",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/taiwan/ndp/TWN NDP 2025-2028 (Chinese).pdf",
+   "doc_type": "ndp",
+   "start": 2025,
+   "end": 2028,
+   "language": "zh",
+   "title": "National Development Plan 2025-2028",
+   "edition": "",
+   "period_source": "filename"
+  }
+ ]
+}

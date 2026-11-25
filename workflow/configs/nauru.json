@@ -1,0 +1,39 @@
+{
+ "slug": "nauru",
+ "country": "Nauru",
+ "fiscal_year_convention": "end",
+ "documents": [
+  {
+   "file": "data/sources/nauru/Final-NSDS-2019-2030.pdf",
+   "doc_type": "vision",
+   "start": 2019,
+   "end": 2030,
+   "language": "en",
+   "title": "National Sustainable Development Strategy 2019-2030",
+   "edition": "",
+   "period_source": "filename"
+  },
+  {
+   "file": "data/sources/nauru/Nauru NSDS 2019-30.pdf",
+   "doc_type": "vision",
+   "start": 2019,
+   "end": 2030,
+   "language": "en",
+   "title": "National Sustainable Development Strategy 2019-2030 (duplicate file)",
+   "edition": "",
+   "period_source": "filename",
+   "skip": "byte-identical to Final-NSDS-2019-2030.pdf; PV2 read only that copy"
+  },
+  {
+   "file": "data/sources/nauru/Nauru NSDS 2005-25.pdf",
+   "doc_type": "vision",
+   "start": 2005,
+   "end": 2025,
+   "language": "en",
+   "title": "National Sustainable Development Strategy 2005-2025",
+   "edition": "",
+   "period_source": "filename",
+   "skip": "never read by PV2, so there are no strategies to import; run it through step E when wanted"
+  }
+ ]
+}
