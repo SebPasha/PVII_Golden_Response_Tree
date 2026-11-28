@@ -112,7 +112,7 @@ def build(out_dir, plan):
     slug = rows[0]["slug"]
     budget = load(os.path.join(out_dir, "budget", "strategies.csv"), lambda r: r["slug"] == slug)
     r0 = rows[0]
-    return {"plan": r0["plan_id"], "country": r0["country"], "slug": slug, "title": r0.get("plan_title", ""),
+    return {"plan": r0["plan_id"], "country": r0["country"], "slug": slug, "title": r0.get("plan_title", ""), "region": r0.get("region", ""),
             "period": f'{r0.get("period_start", "")}-{r0.get("period_end", "")}', "doc_type": r0.get("doc_type", ""),
             "strategies": len(rows), "mentions": sum(int(r["n_mentions"] or 1) for r in rows),
             "on_a_lever": sum(1 for r in rows if r["lever_id"]),
