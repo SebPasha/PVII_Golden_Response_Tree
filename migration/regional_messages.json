@@ -1,56 +1,90 @@
 {
  "cross": [
-  {"h": "Plans look more alike than different",
-   "t": "In every region, people-first strategies make up 34 to 49% of the latest national plan, and growth strategies 30 to 43%. Only one framework family sits more than about 4 points above or below the all-country average: natural capital in Egypt's plan. Regions differ in what they lean toward, not in the shape of the tree."},
-  {"h": "Climate is the storm almost every region names",
-   "t": "Climate change is the risk tied to the most strategies in seven of the eight regions, for example 17% of strategies in South-East Asia and 16% in South Asia and the Pacific. In the Arab States, environmental degradation edges it out. Yet the climate framework family itself holds only about 5% of strategies, so the risk is named more often than it is answered."},
-  {"h": "Governments plan and coordinate, but rarely look ahead",
-   "t": "Strategies on development planning and on coordination across government appear in many plans. Strategic foresight and scenario work appear in only a handful, and the Anticipation and Strategic Foresight subpillar holds about 3% of strategies. These three levers were restored on 25 November, and strategies were placed on them by their wording rather than by a fresh mapping run."},
-  {"h": "Plans act through organisations, rarely through money",
-   "t": "Almost half of all strategies (46%) work through organisations: programmes, agencies and capacity. Another 28% work through information and 18% through rules. Only 8% use money, such as grants, subsidies or tax measures, and only 4% do in the Pacific. Spending choices show up in budgets, not in the plans."},
-  {"h": "Few strategies can be tracked",
-   "t": "Only a quarter of strategies (25%) carry a quantified target, and fewer than one in five (19%) say how they will be monitored. South Asia (34%) and East Asia (32%) come highest on targets, and Latin America and the Caribbean and the Arab States come lowest (14% each). This holds back the RHDR Making Change Happen pillar everywhere."}
+  {
+   "h": "Asia-Pacific plans lean toward governing and delivery",
+   "t": "In the 33 Asia-Pacific countries, Making Change Happen holds 26% of the latest national plan's responses, against 22% in the 14 comparator countries. The gap comes from delivery: agility and delivery capability is 8.8% against 6.9%, and authorised flexibility is 4.4% against 2.6%. Tackling structural exclusion goes the other way, at 3.0% against 5.9%, about half the comparator share."
+  },
+  {
+   "h": "Climate is the region's storm, and ageing is rising up the list",
+   "t": "Climate change is tied to 16% of Asia-Pacific responses, against 11% in the comparators, and it leads in all four Asia-Pacific regions. The climate framework family holds only 5% of responses, so the risk is named more often than it is answered. Demographic shifts are tied to 4.9% of Asia-Pacific responses, against 2.8% in the comparators, and 11.6% in East Asia, the highest of any region."
+  },
+  {
+   "h": "More urgent and a little more transformative than the comparators",
+   "t": "Asia-Pacific plans mark 23% of their responses as high urgency, about twice the comparators' 12%, with East Asia highest at 35%. Of the responses, 23% are transformative and 65% are business as usual, against 20% and 70% in the comparators. Those labels come from the national plans only. Sector plans, UNGA statements and budgets carry neither label."
+  },
+  {
+   "h": "Asia-Pacific acts through organisations, rarely through money",
+   "t": "Nearly half of Asia-Pacific responses (47%) work through organisations: programmes, agencies and capacity. Only 6.8% use money such as grants, subsidies or tax measures, against 10.5% in the comparators. In the Pacific the figure is 3.9%, the lowest of any region, while Europe and Central Asia reaches 19%. Spending choices show up in budgets rather than in the plans, and the lever panel now ties the two where the match is clear."
+  },
+  {
+   "h": "Asia leads on targets, but most responses still can't be tracked",
+   "t": "About a quarter of Asia-Pacific responses (26%) carry a quantified target, and 20% say how they will be monitored, against 23% and 16% in the comparators. South Asia (34%) and East Asia (32%) lead on targets. South-East Asia (19%) and the Pacific (21%) trail and sit closer to the Arab States and Latin America and the Caribbean (14% each). This holds back the RHDR Making Change Happen pillar across the region."
+  }
  ],
  "regions": {
   "South-East Asia": {
    "h": "Growth through clusters, skills and jobs, lighter on health",
-   "b": ["The region's plans favour linkages, clusters and cities (6.2% against 5.1%), knowledge (7.2% against 6.6%) and rapid resource mobilisation (3.9% against 3.1%). Jobs, places and mobility is above the average in 7 of 9 countries.",
-         "Health is light: long and healthy life is 4.2% against 5.1%, and only one country is above the average. Climate change is the risk named most, tied to 17% of strategies.",
-         "Across seven countries' plan series, later plans put more on delivery capability (up about 1 point) and less on capabilities and domestic integration."]},
+   "b": [
+    "The region's plans favour linkages, clusters and cities (6.2% against 5.1%), knowledge (7.2% against 6.6%) and rapid resource mobilisation (3.9% against 3.1%). Jobs, places and mobility is above the average in 7 of 9 countries.",
+    "Health is light: long and healthy life is 4.2% against 5.1%, and only one country is above the average. Climate change is the risk named most, tied to 17% of responses.",
+    "Across seven countries' plan series, later plans put more on delivery capability (up about 1 point) and less on capabilities and domestic integration."
+   ]
+  },
   "South Asia": {
    "h": "The most specific plans, leaning to skills, trade and accountable government",
-   "b": ["South Asian plans are the easiest to place: 67% of strategies reach a lever (63% on average), and 34% carry a quantified target (25% on average).",
-         "They lean to authorised flexibility (above the average in 7 of 9 countries), knowledge, reaching foreign markets and accountability. They put less on enterprise finance and on upgrading.",
-         "Across seven plan series, delivery capability is rising (up about 2 points) and domestic integration is falling (down about 3 points)."]},
+   "b": [
+    "South Asian plans are the easiest to place: 67% of responses reach a lever (63% on average), and 34% carry a quantified target (25% on average).",
+    "They lean to authorised flexibility (above the average in 7 of 9 countries), knowledge, reaching foreign markets and accountability. They put less on enterprise finance and on upgrading.",
+    "Across seven plan series, delivery capability is rising (up about 2 points) and domestic integration is falling (down about 3 points)."
+   ]
+  },
   "East Asia": {
    "h": "Upgrading for export, under ageing and technology pressure",
-   "b": ["Export-led strategies make up 13% of the latest plans (8% on average). Upgrading and innovation (9.3% against 5.1%) and linkages, clusters and cities are above the average in 4 of 5 countries. In plan series, export-led growth is rising (up about 5 points).",
-         "This is the only region where demographic shifts are among the top risks (12% of strategies), alongside technological change (13%) and climate (14%). It also has the most strategies marked high urgency (35% against 19%).",
-         "Enterprise finance is below the average in every country, and authorised flexibility is light. The five countries are China, Japan, Mongolia, South Korea and Taiwan."]},
+   "b": [
+    "Export-led responses make up 13% of the latest plans (8% on average). Upgrading and innovation (9.3% against 5.1%) and linkages, clusters and cities are above the average in 4 of 5 countries. In plan series, export-led growth is rising (up about 5 points).",
+    "This is the only region where demographic shifts are among the top risks (12% of responses), alongside technological change (13%) and climate (14%). It also has the most responses marked high urgency (35% against 19%).",
+    "Enterprise finance is below the average in every country, and authorised flexibility is light. The five countries are China, Japan, Mongolia, South Korea and Taiwan."
+   ]
+  },
   "Pacific": {
    "h": "Plans for protection and stewardship, less for export growth",
-   "b": ["Future generations, the subpillar holding climate, natural capital and resilience, is 15% of strategies against 13%. Climate is above the average in 7 of 10 countries.",
-         "Market rules and property rights stand out in all 10 countries, and economic and human wealth in 7. Land and resource tenure runs through Pacific plans.",
-         "Export-led growth is half the average (4% against 8%), upgrading and innovation is light (2.6% against 5.1%), and only 4% of strategies use money as the instrument."]},
+   "b": [
+    "Future generations, the subpillar holding climate, natural capital and resilience, is 15% of responses against 13%. Climate is above the average in 7 of 10 countries.",
+    "Market rules and property rights stand out in all 10 countries, and economic and human wealth in 7. Land and resource tenure runs through Pacific plans.",
+    "Export-led growth is half the average (4% against 8%), upgrading and innovation is light (2.6% against 5.1%), and only 4% of responses use money as the instrument."
+   ]
+  },
   "Europe and Central Asia": {
    "h": "Competitiveness, connectivity and money on the table",
-   "b": ["Growth strategies make up 43% of the latest plans, the highest of any region. Infrastructure and connectivity (7.6% against 4.4%, all three countries above the average), rural producers, reaching foreign markets and enterprise finance lead.",
-         "These plans use money more than any other region (19% of strategies against 8%), and 70% of their strategies reach a lever.",
-         "Three countries are read here: Kazakhstan, Poland and Serbia. Estonia's and Uzbekistan's documents yield too few strategies to count."]},
+   "b": [
+    "Growth responses make up 43% of the latest plans, the highest of any region. Infrastructure and connectivity (7.6% against 4.4%, all three countries above the average), rural producers, reaching foreign markets and enterprise finance lead.",
+    "These plans use money more than any other region (19% of responses against 8%), and 70% of their responses reach a lever.",
+    "Three countries are read here: Kazakhstan, Poland and Serbia. Estonia's and Uzbekistan's documents yield too few responses to count."
+   ]
+  },
   "Arab States": {
    "h": "Resource stewardship and broad economic goals",
-   "b": ["Natural capital is twice the average (12.4% against 6.0%). Environmental degradation, resource pressures and climate are the leading risks (14 to 15% of strategies each).",
-         "Enterprise finance (6.2% against 3.5%) and broad economic goals that fit no family (12%) are large, while governance is light.",
-         "This reads as Egypt's Vision 2030 alone. The documents for Morocco, Saudi Arabia and the United Arab Emirates yield too few strategies to count, so treat this as a country note, not a regional message."]},
+   "b": [
+    "Natural capital is twice the average (12.4% against 6.0%). Environmental degradation, resource pressures and climate are the leading risks (14 to 15% of responses each).",
+    "Enterprise finance (6.2% against 3.5%) and broad economic goals that fit no family (12%) are large, while governance is light.",
+    "This reads as Egypt's Vision 2030 alone. The documents for Morocco, Saudi Arabia and the United Arab Emirates yield too few responses to count, so treat this as a country note, not a regional message."
+   ]
+  },
   "Africa": {
-   "h": "Living standards, trade and data, with fewer transformative strategies",
-   "b": ["Decent standard of living (8.3% against 6.9%) and rural producers lean above the average. Reaching foreign markets (3.5% against 2.4%) and data sharing (2.3% against 1.1%) are above the average in 4 of 5 countries.",
-         "Natural capital (4.5% against 6.0%), climate and infrastructure are light. Fewer strategies are framed as transformative than anywhere except the Arab States (17% against 22%).",
-         "Five countries are read here: Ethiopia, Ghana, Kenya, Nigeria and Rwanda. Their national plans and some budgets are in, but no sector plans or UNGA statements."]},
+   "h": "Living standards, trade and data, with fewer transformative responses",
+   "b": [
+    "Decent standard of living (8.3% against 6.9%) and rural producers lean above the average. Reaching foreign markets (3.5% against 2.4%) and data sharing (2.3% against 1.1%) are above the average in 4 of 5 countries.",
+    "Natural capital (4.5% against 6.0%), climate and infrastructure are light. Fewer responses are framed as transformative than anywhere except the Arab States (17% against 22%).",
+    "Five countries are read here: Ethiopia, Ghana, Kenya, Nigeria and Rwanda. Their national plans and some budgets are in, but no sector plans or UNGA statements."
+   ]
+  },
   "Latin America and the Caribbean": {
    "h": "The most people-first plans, aimed at exclusion and places",
-   "b": ["People-first strategies make up 49% of the latest plans, the highest of any region. Tackling structural exclusion is more than double the average (10% against 4%). Spaces, decent standard of living and markets are above the average in all five countries.",
-         "Infrastructure, authorised flexibility and enterprise finance are light.",
-         "The fewest strategies are tied to a risk (28% against 37%), and the fewest carry a quantified target (14%). The five countries are Brazil, Colombia, Jamaica, Peru and Uruguay."]}
+   "b": [
+    "People-first responses make up 49% of the latest plans, the highest of any region. Tackling structural exclusion is more than double the average (10% against 4%). Spaces, decent standard of living and markets are above the average in all five countries.",
+    "Infrastructure, authorised flexibility and enterprise finance are light.",
+    "The fewest responses are tied to a risk (28% against 37%), and the fewest carry a quantified target (14%). The five countries are Brazil, Colombia, Jamaica, Peru and Uruguay."
+   ]
+  }
  }
 }

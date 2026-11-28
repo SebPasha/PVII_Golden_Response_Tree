@@ -1,0 +1,23 @@
+{
+ "_source": {
+  "income": "World Bank country income classification, fiscal year 2027 (July 2026 list). Ethiopia has no group in that list.",
+  "rhdr": "UNDP Human Development Report 2025 (values for 2023) and its four groups. Taiwan is not in the UNDP table."
+ },
+ "brunei": ["HIC", 0.837], "cambodia": ["LMIC", 0.606], "indonesia": ["UMIC", 0.728], "laos": ["LMIC", 0.617],
+ "malaysia": ["UMIC", 0.819], "myanmar": ["LMIC", 0.609], "philippines": ["LMIC", 0.720], "thailand": ["UMIC", 0.798],
+ "timor_leste": ["LMIC", 0.634], "vietnam": ["LMIC", 0.766],
+ "afghanistan": ["LIC", 0.496], "bangladesh": ["LMIC", 0.685], "bhutan": ["LMIC", 0.698], "india": ["LMIC", 0.685],
+ "iran": ["UMIC", 0.799], "maldives": ["UMIC", 0.766], "nepal": ["LMIC", 0.622], "pakistan": ["LMIC", 0.544],
+ "sri_lanka": ["LMIC", 0.776],
+ "china": ["UMIC", 0.797], "japan": ["HIC", 0.925], "mongolia": ["UMIC", 0.747], "south_korea": ["HIC", 0.937],
+ "taiwan": ["HIC", null],
+ "fiji": ["UMIC", 0.731], "kiribati": ["LMIC", 0.644], "marshall_islands": ["UMIC", 0.733], "nauru": ["HIC", 0.703],
+ "palau": ["HIC", 0.786], "papua_new_guinea": ["LMIC", 0.576], "samoa": ["UMIC", 0.708], "solomon_islands": ["LMIC", 0.584],
+ "tonga": ["UMIC", 0.769], "tuvalu": ["UMIC", 0.689], "vanuatu": ["LMIC", 0.621],
+ "estonia": ["HIC", 0.905], "kazakhstan": ["UMIC", 0.837], "poland": ["HIC", 0.906], "serbia": ["UMIC", 0.833],
+ "uzbekistan": ["LMIC", 0.740],
+ "egypt": ["LMIC", 0.754], "morocco": ["LMIC", 0.710], "saudi_arabia": ["HIC", 0.900], "uae": ["HIC", 0.940],
+ "ethiopia": ["", 0.497], "ghana": ["LMIC", 0.628], "kenya": ["LMIC", 0.628], "nigeria": ["LMIC", 0.560], "rwanda": ["LIC", 0.578],
+ "brazil": ["UMIC", 0.786], "colombia": ["UMIC", 0.788], "jamaica": ["UMIC", 0.720], "peru": ["UMIC", 0.794],
+ "uruguay": ["HIC", 0.862]
+}

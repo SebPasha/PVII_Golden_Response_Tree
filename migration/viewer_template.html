@@ -106,7 +106,6 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 64ch }
 #ct tr.grow td { font-weight: 600; color: var(--ink); background: color-mix(in srgb, var(--line) 35%, transparent) }
 #ct tr.grow td:first-child { cursor: pointer; padding-left: 4px }
 #ct tr.grow td:first-child:hover { color: var(--gold) }
-#ct tr.frow td.fam { padding-left: 16px }
 .storm { cursor: pointer }
 .storm:focus { outline: none }
 .storm ellipse { fill: var(--storm) }
@@ -201,9 +200,17 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .ol-lvs .lvname { cursor: pointer }
 .ol-lvs .lvname:hover { color: var(--gold) }
 #ct tr.frow td { font-weight: 600 }
-#ct tr.frow td:first-child::before { content: "▸ "; color: var(--muted); font-weight: 400 }
-#ct tr.frow.open td:first-child::before { content: "▾ " }
-#ct tr.lvrow td:first-child { padding-left: 26px; color: var(--ink) }
+#ct tr[data-n] td:first-child::before { content: "▸ "; color: var(--muted); font-weight: 400 }
+#ct tr[data-n][data-open] td:first-child::before { content: "▾ " }
+#ct tr.prow td { font-weight: 700; color: var(--ink); font-size: 13px; border-top: 2px solid var(--line) }
+#ct tr.sprow td { font-weight: 600 }
+#ct tr.sprow td:first-child { padding-left: 14px; font: 600 11.5px var(--mono); letter-spacing: .03em; text-transform: uppercase; color: var(--muted) }
+#ct tr.grow td:first-child { padding-left: 26px }
+#ct tr.frow td.fam { padding-left: 38px }
+#ct tr.hrow td:first-child { padding-left: 14px }
+#ct td.nd { cursor: pointer }
+#ct td.nd:hover { color: var(--gold) }
+#ct tr.lvrow td:first-child { padding-left: 52px; color: var(--ink) }
 #ct tr.lvrow td { font-size: 12px }
 #ct tr.lvrow td.lvc { cursor: pointer }
 #ct tr.lvrow td.lvc:hover { color: var(--gold) }
@@ -240,7 +247,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .strat .oti b { font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em }
 #ct th.colh { cursor: pointer }
 #ct th.colh:hover { color: var(--gold) }
-/* dropped parts and general branches */
+/* dropped parts and standard branches */
 .leaf.dead ellipse { fill: var(--muted); stroke: var(--muted); fill-opacity: .35 }
 .leaf.dead text { fill: var(--muted); font-style: italic }
 .leaf.gen ellipse { stroke-width: 2 }
@@ -378,15 +385,50 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 #aud-tl .hit:hover, #aud-tl .hit.on { stroke: var(--ink); stroke-width: 1.5 }
 #aud-tl .bl { font-size: 10px; fill: #fff; pointer-events: none }
 #aud-tl .cnt { font: 9.5px var(--mono); fill: var(--ink); pointer-events: none }
+/* across document types (lever panel) */
+.xdoc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 4px }
+.xdoc th, .xdoc td { padding: 3px 6px; border-bottom: 1px solid var(--line); text-align: right; font-variant-numeric: tabular-nums }
+.xdoc th { font: 10.5px var(--mono); color: var(--muted); font-weight: 400 }
+.xdoc th:first-child, .xdoc td:first-child { text-align: left }
+.xdoc td.none { color: var(--muted) }
+.blk { padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13px }
+.blk .meta { font: 11px var(--mono); color: var(--muted) }
+.blk .bl { display: grid; grid-template-columns: auto 1fr; gap: 0 6px; margin-top: 3px; font-size: 12.5px }
+.blk .bl i { font-style: normal; color: var(--gov) }
+.blk .bl .amt { font: 11px var(--mono); color: var(--ink) }
+.blk .bl .why { font: 11px var(--mono); color: var(--muted) }
+/* comparator */
+.cp-more summary { cursor: pointer; font: 12px var(--mono); color: var(--muted); margin: 4px 0 8px }
+.cp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 }
+.cp-card { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; font-size: 13px }
+.cp-card h3 { font-size: 17px; margin: 0 0 2px }
+.cp-card .tag { font: 11px var(--mono); color: var(--muted); margin-bottom: 8px }
+.cp-card dl { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; margin: 6px 0 0 }
+.cp-card dd { margin: 0; text-align: right; font: 12px var(--mono) }
+.cp-ori { display: flex; height: 10px; border-radius: 3px; overflow: hidden; margin: 6px 0 2px; background: var(--line) }
+.cp-ori i { display: block }
+#cp-fam tr.g td:first-child { cursor: pointer; font-weight: 600 }
+#cp-fam tr.g td:first-child::before { content: "▸ "; color: var(--muted); font-weight: 400 }
+#cp-fam tr.g.open td:first-child::before { content: "▾ " }
+#cp-fam tr.l td:first-child { padding-left: 22px }
+#cp-fam td b { color: var(--gold) }
+.cp-item { border-bottom: 1px solid var(--line); padding: 8px 0 }
+.cp-item h4 { margin: 0 0 2px; font-size: 14px }
+.cp-item .meta { font: 11px var(--mono); color: var(--muted) }
+.cp-item ul { margin: 4px 0 0 18px; padding: 0; font-size: 13px }
+.cp-item li { margin: 2px 0 }
+.cp-item li small { font: 11px var(--mono); color: var(--muted) }
+.cp-item details { font-size: 12.5px; color: var(--muted) }
+.cp-gap { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--gold) }
 </style>
 
 <div class="wrap">
   <div class="banner" id="banner" hidden></div>
   <header>
     <div>
-      <div class="eyebrow">PV II · Golden Strategy Tree</div>
+      <div class="eyebrow">PV II · Golden Response Tree</div>
       <h1>The Mother Tree, version 4</h1>
-      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose strategies carry that risk, sized by how many strategies in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the framework families, each from a published framework, named at their fork; the leaves are our families, sized by the strategies on them; the buds along each twig are the levers, what a government does, gold where strategies sit. The dashed branch beside each pillar holds the strategies that fit no family.</p>
+      <p>Storms are the risks that bring the rain; the tree is the response that gives shelter and fruit. Each storm cloud above the tree sits over the leaves whose responses carry that risk, sized by how many responses in view do, and rains on them; select a cloud to see the families the literature ties to it. Economy grows on the left, people in the middle, governance on the right. Under each RHDR subpillar (its code at the fork) the twigs are the framework families, each from a published framework, named at their fork; the leaves are our families, sized by the responses on them; the buds along each twig are the levers, what a government does, gold where responses sit. The dashed branch beside each pillar holds the responses that fit no family.</p>
     </div>
     <div class="counts" id="counts"></div>
   </header>
@@ -395,13 +437,15 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div class="modes" role="tablist" aria-label="View">
       <button type="button" class="mode" id="m-world" role="tab" aria-selected="true">Mother tree</button>
       <button type="button" class="mode" id="m-ctry" role="tab" aria-selected="false">Country explorer</button>
-      <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped strategies <span id="m-un-n" hidden></span></button>
-      <button type="button" class="mode" id="m-aud" role="tab" aria-selected="false">Audit</button>
+      <button type="button" class="mode" id="m-un" role="tab" aria-selected="false">Unmapped responses <span id="m-un-n" hidden></span></button>
+      <button type="button" class="mode" id="m-aud" role="tab" aria-selected="false">Timeline</button>
       <button type="button" class="mode" id="m-reg" role="tab" aria-selected="false">Regional messages</button>
+      <button type="button" class="mode" id="m-cmp" role="tab" aria-selected="false">Comparator</button>
     </div>
     <div class="chipsel" id="srcs" aria-label="Sources"></div>
     <div class="tl" id="worldbar">
       <div class="chipsel" id="regions" aria-label="Region"></div>
+      <div class="chipsel" id="grpf" aria-label="Income and RHDR group"></div>
       <div class="tl-head"><span class="eyebrow" id="yr-h"></span><span class="tl-btns"><button type="button" class="clear" id="yr-all" hidden>All years</button></span></div>
       <div class="tl-scroll"><svg id="yrsvg" role="img" aria-label="Plans in force by year"></svg></div>
     </div>
@@ -422,7 +466,7 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 
   <div class="storms" id="storms" aria-label="Risks"><span class="eyebrow">Storms</span></div>
   <div class="tools">
-    <input id="q" type="search" placeholder="Search strategies, levers and families in view" aria-label="Search strategies, levers and families in view">
+    <input id="q" type="search" placeholder="Search responses, levers and families in view" aria-label="Search responses, levers and families in view">
     <button class="clear" id="clear" type="button">Clear selection</button>
   </div>
 
@@ -434,16 +478,16 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
   <section class="outline" id="ctable">
     <h2 id="ct-h"></h2>
     <p id="ct-p"></p>
-    <div class="ct-tools"><button type="button" class="clear" id="ct-open">Show every lever</button><button type="button" class="clear" id="ct-close">Families only</button></div>
+    <div class="ct-tools"><span class="eyebrow">Open down to</span><button type="button" class="clear" data-lvl="">Pillars</button><button type="button" class="clear" data-lvl="p">Subpillars</button><button type="button" class="clear" data-lvl="s">Framework families</button><button type="button" class="clear" data-lvl="g">Families</button><button type="button" class="clear" data-lvl="f">Levers</button></div>
     <div class="ct-scroll"><table id="ct"></table></div>
   </section>
 
   <section class="outline" id="audit" hidden>
-    <h2>Audit: which documents were run</h2>
+    <h2>Timeline: which documents were run, by country and year</h2>
     <p id="aud-p"></p>
     <div class="aud-bar" id="aud-src"></div>
     <div class="aud-bar" id="aud-reg"></div>
-    <div class="aud-bar"><span class="eyebrow">View</span><button type="button" class="rchip" data-av="tl">Timeline</button><button type="button" class="rchip" data-av="tab">Counts table</button></div>
+    <div class="aud-bar"><span class="eyebrow">View</span><button type="button" class="rchip" data-av="tl">By year</button><button type="button" class="rchip" data-av="tab">Counts table</button></div>
     <div class="aud-key" id="aud-key"></div>
     <div class="ct-scroll" id="aud-tlbox"><svg id="aud-tl" role="img" aria-label="Documents run, by country, source and year"></svg></div>
     <div class="ct-scroll" id="aud-tabbox" hidden><table id="aud"></table></div>
@@ -457,20 +501,36 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div class="aud-bar" id="rg-reg"></div>
     <div class="rg-one" id="rg-one"></div>
     <h3>Every framework family, by region</h3>
-    <p class="muted rg-note">Share of each region's latest-plan strategies, in %. Gold: above the average; blue: below; the stronger the colour, the larger the gap (full at 4 points). Select a region heading to read it above.</p>
+    <p class="muted rg-note">Share of each region's latest-plan responses, in %. Gold: above the average; blue: below; the stronger the colour, the larger the gap (full at 4 points). Select a region heading to read it above.</p>
     <div class="ct-scroll"><table id="rg-heat"></table></div>
     <h3>How comparable is this?</h3>
     <ul class="rg-comp" id="rg-comp"></ul>
     <details><summary>Coverage by country</summary><div class="ct-scroll"><table id="rg-cov"></table></div></details>
   </section>
 
+  <section class="outline" id="compare" hidden>
+    <h2>Comparator: country case studies</h2>
+    <p id="cp-p"></p>
+    <div class="aud-bar" id="cp-pick"></div>
+    <details class="cp-more"><summary>Choose countries (up to four)</summary><div id="cp-ctry"></div></details>
+    <div class="aud-bar"><span class="eyebrow">Theme</span><select id="cp-th" aria-label="Theme"></select></div>
+    <div class="cp-cards" id="cp-cards"></div>
+    <h3>Where the plans put their weight</h3>
+    <p class="muted rg-note">Share of each country's responses on the theme that sit in each framework family. Open a framework family for its levers. Bold marks the country that leans most toward that framework family.</p>
+    <div class="ct-scroll"><table class="xdoc" id="cp-fam"></table></div>
+    <h3>What one country could learn from another</h3>
+    <div class="aud-bar" id="cp-pair"></div>
+    <p class="muted rg-note" id="cp-lp"></p>
+    <div id="cp-learn"></div>
+  </section>
+
   <section class="outline" id="details">
-    <h2 id="dt-h">Strategy details</h2>
+    <h2 id="dt-h">Response details</h2>
     <p id="dt-un" hidden></p>
-    <p id="dt-intro">The strategies behind whatever is selected above: a region, year, country or plan, and a leaf, bud, storm, search or table cell. Select a column heading to sort; select a row to open the strategy's full record and the passages of the plan under it.</p>
+    <p id="dt-intro">The responses behind whatever is selected above: a region, year, country or plan, and a leaf, bud, storm, search or table cell. Select a column heading to sort; select a row to open the response's full record and the passages of the plan under it.</p>
     <div class="chips" id="dt-chips"></div>
     <div class="dt-tools">
-      <input id="dt-q" type="search" placeholder="Filter these strategies" aria-label="Filter these strategies">
+      <input id="dt-q" type="search" placeholder="Filter these responses" aria-label="Filter these responses">
       <select id="dt-lvl" aria-label="Placement"></select>
       <select id="dt-ori" aria-label="Orientation"></select>
       <select id="dt-urg" aria-label="Urgency"></select>
@@ -639,7 +699,7 @@ D.families.forEach(f => {
   const name = f.family.length > 44 ? f.family.slice(0, 42) + "…" : f.family;
   const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
   t.textContent = name;
-  el("title", {}, g).textContent = n ? `${f.family} · ${n} levers` : `${f.family} · no lever yet, no strategies placed`;
+  el("title", {}, g).textContent = n ? `${f.family} · ${n} levers` : `${f.family} · no lever yet, no responses placed`;
   g.addEventListener("click", () => show({ f: f.family_id }));
   g.addEventListener("keydown", e => { if (e.key === "Enter") show({ f: f.family_id }); });
   leafEl[f.family_id] = { g, x, y, a, rx, rx0: rx, e, t, name, flip, n };
@@ -653,7 +713,7 @@ D.families.forEach(f => {
     const k = ids.length + j, b = bez(twig[f.family_id], 0.5 + 0.42 * (k + 0.5) / n), off = n === 1 ? 0 : (k % 2 ? 3.4 : -3.4);
     const g = el("g", { class: "bud drop", tabindex: 0, "data-d": d.lever_id }, gBuds);
     el("circle", { cx: b.x + b.nx * off, cy: b.y + b.ny * off, r: 2.3 }, g);
-    el("title", {}, g).textContent = `${d.lever} (${d.lever_id})\nDropped: graded unbacked by the literature review. No strategies are placed on it.`;
+    el("title", {}, g).textContent = `${d.lever} (${d.lever_id})\nDropped: graded unbacked by the literature review. No responses are placed on it.`;
     g.addEventListener("click", ev => { ev.stopPropagation(); show({ d: d.lever_id }); });
     g.addEventListener("keydown", e => { if (e.key === "Enter") show({ d: d.lever_id }); });
     dropEl[d.lever_id] = g;
@@ -670,7 +730,7 @@ D.families.forEach(f => {
     budEl[lid] = { g, c, col, x: b.x + b.nx * off, y: b.y + b.ny * off };
   });
 });
-// general branches: one leaf per pillar for the strategies that fit no live family
+// standard branches: one leaf per pillar for the responses that fit no live family
 const HNAME = Object.fromEntries(D.holding.map(x => [x.id, x.name]));
 const HPC = Object.fromEntries(Object.entries(HOLD).map(([p, h]) => [h, p]));
 const genEl = {};
@@ -683,7 +743,7 @@ ORDER.forEach(([pc]) => {
   const [tx, ty] = pol(R_L + 2 * rx + 7, a);
   const t = el("text", { x: tx, y: ty, dy: "0.35em", "text-anchor": flip ? "end" : "start", transform: `rotate(${flip ? 180 - a : -a} ${tx} ${ty})` }, g);
   t.textContent = HNAME[id];
-  el("title", {}, g).textContent = `${HNAME[id]}: strategies of this pillar that fit no live family`;
+  el("title", {}, g).textContent = `${HNAME[id]}: responses of this pillar that fit no live family`;
   g.addEventListener("click", () => show({ h: id }));
   g.addEventListener("keydown", e => { if (e.key === "Enter") show({ h: id }); });
   genEl[id] = { g, x, y, a, rx, rx0: rx, e, t, name: HNAME[id], flip, n: 0 };
@@ -736,7 +796,7 @@ function setRisk(r) {
   if (r) show({ r }); else if (!state.sel && !state.lv) show({});
 }
 const lvHay = v => [v.lever, v.lever_full].join(" ").toLowerCase();
-// strategies whose name, objective or reason holds the query; the levers and families they sit on
+// responses whose name, objective or reason holds the query; the levers and families they sit on
 function stratHits(q) { return (typeof C !== "undefined" && C) ? C.rows.filter(r => (r[1] + " " + r[2] + " " + r[10] + " " + r[11] + " " + r[12]).toLowerCase().includes(q)) : []; }
 let qLev = new Set(), qFam = new Set();
 function indexHits(q) {
@@ -839,8 +899,8 @@ function show(o) {
       `<div class="sect"><div class="eyebrow">Family ${f.family_id}</div><h2>${esc(f.family)}</h2></div>
       <!--CTRY-->
       <p class="def">${esc(f.definition)}</p>
-      <div class="sect"${nLv(f) ? "" : " hidden"}><div class="eyebrow">Levers (${nLv(f)})${lc ? " · strategies in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
-      ${(D.dropped || []).some(d => d.family_id === f.family_id) ? `<div class="sect"><div class="eyebrow">Dropped as unbacked by the literature review · grey on the tree, no strategies placed</div>${D.dropped.filter(d => d.family_id === f.family_id).map(d => `<p class="muted"><a class="jl" ${O({ d: d.lever_id })}>${esc(d.lever_id)}</a> ${esc(d.lever)}</p>`).join("")}</div>` : ""}
+      <div class="sect"${nLv(f) ? "" : " hidden"}><div class="eyebrow">Levers (${nLv(f)})${lc ? " · responses in the plans picked" : ""}</div>${f.lever_ids.map(id => leverRow(id, lc ? cntLabel(lc[id]) : "")).join("")}</div>
+      ${(D.dropped || []).some(d => d.family_id === f.family_id) ? `<div class="sect"><div class="eyebrow">Dropped as unbacked by the literature review · grey on the tree, no responses placed</div>${D.dropped.filter(d => d.family_id === f.family_id).map(d => `<p class="muted"><a class="jl" ${O({ d: d.lever_id })}>${esc(d.lever_id)}</a> ${esc(d.lever)}</p>`).join("")}</div>` : ""}
       ${f.examples ? `<div class="sect"><div class="eyebrow">How plans say it</div><p class="muted">${esc(f.examples)}</p></div>` : ""}
       ${(f.theory_anchors || []).length ? `<div class="sect"><div class="eyebrow">Theory anchors</div>${f.theory_anchors.map(a => `<p class="def">${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.citation)}, ${esc(a.title)}</a>` : `${esc(a.citation)}, ${esc(a.title)}`} <span class="muted">(${esc(a.role)}; via ${esc(a.via)})</span></p>`).join("")}</div>` : ""}
       <div class="sect"><div class="eyebrow">Storms it shelters from</div><div class="chips">${riskChips(f.risks) || '<span class="muted">none tagged</span>'}${riskChips(f.conditional_risks, true)}</div></div>
@@ -882,12 +942,12 @@ function show(o) {
     const hits = D.families.filter(f => matches(f, o.q));
     const vhits = D.levers.filter(v => lvHay(v).includes(o.q) || [v.joins_when].join(" ").toLowerCase().includes(o.q));
     h = `<div class="sect"><div class="eyebrow">Search</div><h2>“${esc(o.q)}”</h2></div>
-      ${(typeof C !== "undefined" && C) ? `<div class="sect"><div class="eyebrow">Strategies in ${esc(selLabel())} (${shits.length}${shits.length > 120 ? ", first 120 shown" : ""}) · select one to open its lever or family</div>${stratSearchList(shits)}</div>` : ""}
+      ${(typeof C !== "undefined" && C) ? `<div class="sect"><div class="eyebrow">Responses in ${esc(selLabel())} (${shits.length}${shits.length > 120 ? ", first 120 shown" : ""}) · select one to open its lever or family</div>${stratSearchList(shits)}</div>` : ""}
       <div class="sect"><div class="eyebrow">Levers (${vhits.length})</div>${leverList(vhits.slice(0, 60).map(v => v.lever_id))}</div>
       <div class="sect"><div class="eyebrow">Families (${hits.length})</div>${familyList(hits.map(f => f.family_id))}</div>`;
   } else {
     h = `<div class="sect"><div class="eyebrow">How to read it</div><h2>Ten branches, sixty leaves, ${D.levers.length} buds</h2></div>
-      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a framework family (each from a published framework), and each leaf one of our families. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every strategy that names an action is placed on.</p>
+      <p>Each limb is a pillar, each bough a subpillar (its code sits on the fork), each twig a framework family (each from a published framework), and each leaf one of our families. The buds along a family's twig are its levers: what a government does that moves the family's purpose, the level every response that names an action is placed on.</p>
       <div class="legend">
         <div><span class="sw" style="background:var(--economy)"></span>Smarter Growth: the economy</div>
         <div><span class="sw" style="background:var(--people)"></span>People-first Approach: people</div>
@@ -895,7 +955,7 @@ function show(o) {
         <div><span class="sw" style="background:var(--muted);width:7px;height:7px"></span>A lever: hover a bud for its joins-when and joins-not tests</div>
       </div>
       <p class="muted">Select a storm to see where its rain falls. Select a leaf to read the family and its levers; select a bud to read the lever, its tests and its evidence.</p>
-      <div class="sect"><div class="eyebrow">General branches</div><p class="muted">${D.holding.map(x => esc(x.name)).join(" · ")}</p></div>`;
+      <div class="sect"><div class="eyebrow">Standard branches</div><p class="muted">${D.holding.map(x => esc(x.name)).join(" · ")}</p></div>`;
   }
   if (CM && o.v) h = h.replace("<!--CTRY-->", countryLever(o.v));
   else if (CM && o.f) h = h.replace("<!--CTRY-->", countryFamily(o.f));
@@ -939,13 +999,13 @@ out.addEventListener("click", e => {
   $(".main").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 });
 
-$("#foot").textContent = `Tree v4, built ${D.built}: framework families, families and the levers under each family. A plan's period is read from its document; the Audit tab marks the periods that had to be inferred. Category names follow the RHDR framework.`;
+$("#foot").textContent = `Tree v4, built ${D.built}: framework families, families and the levers under each family. A plan's period is read from its document; the Timeline tab marks the periods that had to be inferred. Category names follow the RHDR framework.`;
 
 /*FOREST*/
 
-// ---------- strategies on the tree ----------
+// ---------- responses on the tree ----------
 // row: [plan, name, objective, level, family, lever, group, sector, orientation, risks, objective label, target,
-//       instrument, passages, source strategy, country, first plan if carried over (else -1)]
+//       instrument, passages, source response, country, first plan if carried over (else -1)]
 const X = D.set, PLN = X.plans, CTY = X.countries, REG = X.regions, ROWS = [];
 // Each source comes with its own string lists; a source read later has its lists joined onto the page's.
 const DICTS = ["sectors", "objs", "targets", "instruments", "sids", "chapters", "agencies", "leads", "sdgs", "urg", "status", "legal", "notes"];
@@ -978,7 +1038,7 @@ const CM = true;
 const NOW = new Date().getFullYear();
 let mode = "world", region = null, year = null, ci = 0, C = null;
 const sel = new Set();
-const OVL = { LV: "Placed on a lever", L2: "On a family, no lever", GRP: "On a framework family only", STD: "On a general branch", GOAL: "Goal outside the tree", NEW: "Not placed" };
+const OVL = { LV: "Placed on a lever", L2: "On a family, no lever", GRP: "On a framework family only", STD: "On a standard branch", GOAL: "Goal outside the tree", NEW: "Not placed" };
 const short = (t, n) => t.length > n ? t.slice(0, n - 1) + "…" : t;
 const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
 const fmtPct = s => s >= 0.1 ? Math.round(100 * s) + "%" : s >= 0.001 ? (100 * s).toFixed(1) + "%" : "<0.1%";
@@ -1009,7 +1069,22 @@ function toggleSource(k) {
   document.head.appendChild(sc);
 }
 window.PVR = (k, Y) => { if (loaded[k]) return; addRows(Y, false); loaded[k] = true; loading[k] = false; afterSource(); };
-const inRegion = c => region === null || CTY[c].region === region;
+// income group and RHDR group filters (country_groups.json): they narrow every view that shows several countries
+const INC = [["LIC", "Low income"], ["LMIC", "Lower-middle income"], ["UMIC", "Upper-middle income"], ["HIC", "High income"]];
+const HDG = [["vh", "Very high"], ["h", "High"], ["m", "Medium"], ["l", "Low"]];
+const hdg = v => v === null || v === undefined ? "" : v >= 0.8 ? "vh" : v >= 0.7 ? "h" : v >= 0.55 ? "m" : "l";
+CTY.forEach(c => { c.hg = hdg(c.hd); });
+const GF = { inc: null, hd: null };
+const inGroup = c => (GF.inc === null || CTY[c].inc === GF.inc) && (GF.hd === null || CTY[c].hg === GF.hd);
+const inRegion = c => (region === null || CTY[c].region === region) && inGroup(c);
+const grpTag = c => [CTY[c].inc || "income group not given", CTY[c].hd ? `RHDR ${HDG.find(x => x[0] === CTY[c].hg)[1].toLowerCase()} (${CTY[c].hd.toFixed(3)})` : "not in the RHDR table"].join(" · ");
+const grpName = () => [GF.inc && INC.find(x => x[0] === GF.inc)[1].toLowerCase(), GF.hd && "RHDR " + HDG.find(x => x[0] === GF.hd)[1].toLowerCase()].filter(Boolean).join(", ");
+function drawGroups() {
+  const n = (k, v) => CTY.filter((c, i) => (region === null || c.region === region) && (k === "inc" ? (v === null || c.inc === v) && (GF.hd === null || c.hg === GF.hd) : (v === null || c.hg === v) && (GF.inc === null || c.inc === GF.inc))).length;
+  $("#grpf").innerHTML = `<span class="eyebrow">Income</span>` + [[null, "All"], ...INC].map(([k, l]) => `<button type="button" class="rchip" aria-pressed="${GF.inc === k}" data-gi="${k || ""}" title="${esc(l)}">${k || l} <span>${n("inc", k)}</span></button>`).join("") +
+    `<span class="eyebrow" style="margin-left:10px">RHDR group</span>` + [[null, "All"], ...HDG].map(([k, l]) => `<button type="button" class="rchip" aria-pressed="${GF.hd === k}" data-gh="${k || ""}">${l} <span>${n("hd", k)}</span></button>`).join("") +
+    `<span class="muted" style="font-size:11.5px;flex-basis:100%">${esc(X.groups_src.income)} RHDR groups: ${esc(X.groups_src.rhdr)}</span>`;
+}
 
 // the rows and columns in view: a country's plans, or the regions (or one region's countries)
 function scope() {
@@ -1022,11 +1097,12 @@ function scope() {
   const un = mode === "unmapped";
   const base = ROWS.filter(r => onSrc(r) && inRegion(r[15]) && (year === null || (PLN[r[0]].start <= year && year <= PLN[r[0]].end)) && (!un || r[3] === "NEW"));
   if (region === null) {
-    C = { name: `${un ? "Unmapped, " : ""}all ${CTY.length} countries`, base, rows: base, unit: "region", colOf: r => CTY[r[15]].region,
-      cols: REG.map(x => ({ key: x, label: x, sub: CTY.filter(c => c.region === x).length + " countries", title: x })) };
+    const gn = grpName(), nc = CTY.filter((c, i) => inGroup(i)).length;
+    C = { name: `${un ? "Unmapped, " : ""}${gn ? `${nc} countries, ${gn}` : `all ${CTY.length} countries`}`, base, rows: base, unit: "region", colOf: r => CTY[r[15]].region,
+      cols: REG.map(x => ({ key: x, label: x, sub: CTY.filter((c, i) => c.region === x && inGroup(i)).length + " countries", title: x })).filter(c => !grpName() || CTY.some((x, i) => x.region === c.key && inGroup(i))) };
   } else {
-    C = { name: (un ? "Unmapped, " : "") + region, base, rows: base, unit: "country", colOf: r => r[15],
-      cols: CTY.map((c, i) => ({ key: i, label: c.name, sub: plansOf(i).length + " plans", title: c.name })).filter(c => CTY[c.key].region === region) };
+    C = { name: (un ? "Unmapped, " : "") + region + (grpName() ? ", " + grpName() : ""), base, rows: base, unit: "country", colOf: r => r[15],
+      cols: CTY.map((c, i) => ({ key: i, label: c.name, sub: plansOf(i).length + " plans", title: `${c.name}: ${grpTag(i)}` })).filter(c => CTY[c.key].region === region && inGroup(c.key)) };
   }
 }
 function rowsOn() { return C.rows; }
@@ -1061,9 +1137,9 @@ function paintCountry() {
   drawSky();
 }
 // ---------- the sky: one storm cloud per risk ----------
-// A cloud sits over the leaves whose strategies in view carry the risk (the strategy-weighted centre of the six leaves
-// carrying most of it) and its rain falls towards them. Its size, darkness and rain follow how many strategies in view
-// carry the risk, on one scale for the view. A risk no strategy in view carries is a faint outline over the families
+// A cloud sits over the leaves whose responses in view carry the risk (the response-weighted centre of the six leaves
+// carrying most of it) and its rain falls towards them. Its size, darkness and rain follow how many responses in view
+// carry the risk, on one scale for the view. A risk no response in view carries is a faint outline over the families
 // the literature ties to it.
 function drawSky() {
   gSky.innerHTML = "";
@@ -1095,10 +1171,10 @@ function drawSky() {
   clouds.forEach(c => {
     const cy = -150 + c.row * 62, dim = state.risk && state.risk !== c.r, a = dim ? 0.22 : 1;
     const g = el("g", { class: "storm" + (c.n ? "" : " calm"), tabindex: 0, role: "button", "aria-pressed": String(state.risk === c.r),
-      "aria-label": `${c.r}: ${c.n.toLocaleString()} strategies in view` }, gSky);
+      "aria-label": `${c.r}: ${c.n.toLocaleString()} responses in view` }, gSky);
     el("title", {}, g).textContent = c.n
-      ? `${c.r}: ${c.n.toLocaleString()} strategies in view carry this risk; rain falls on the ${c.on.length === 1 ? "leaf" : c.on.length + " leaves"} carrying most of them`
-      : `${c.r}: no strategy in view carries this risk`;
+      ? `${c.r}: ${c.n.toLocaleString()} responses in view carry this risk; rain falls on the ${c.on.length === 1 ? "leaf" : c.on.length + " leaves"} carrying most of them`
+      : `${c.r}: no response in view carries this risk`;
     const rain = el("g", { class: "sky-rain", opacity: a }, g), vmax = Math.max(1, ...c.on.map(([, v]) => v));
     c.on.forEach(([k, v]) => {
       const L = at(k), m = Math.max(1, Math.round((1 + 2 * c.t) * v / vmax));
@@ -1131,7 +1207,7 @@ function drawRegions() {
   $("#regions").innerHTML = [null, ...REG].map(r => `<button type="button" class="rchip" aria-pressed="${region === r}" data-r="${esc(r || "")}">${esc(r || "All regions")} <span>${n(r)}</span></button>`).join("");
 }
 function drawCountries() {
-  $("#countries").innerHTML = REG.map(r => `<div class="cg"><span class="eyebrow">${esc(r)}</span>${CTY.map((c, i) => c.region === r ? `<button type="button" class="rchip" aria-pressed="${i === ci}" data-ci="${i}">${esc(c.name)}</button>` : "").join("")}</div>`).join("");
+  $("#countries").innerHTML = REG.map(r => `<div class="cg"><span class="eyebrow">${esc(r)}</span>${CTY.map((c, i) => c.region === r ? `<button type="button" class="rchip" aria-pressed="${i === ci}" data-ci="${i}" title="${esc(grpTag(i))}">${esc(c.name)}</button>` : "").join("")}</div>`).join("");
 }
 function drawYears() {
   const s = $("#yrsvg"); s.innerHTML = "";
@@ -1184,7 +1260,7 @@ function drawTimeline() {
     mk("rect", { class: "bar", x: bx, y: y + 3, width: bw, height: RH - 10, rx: 3 }, g);
     if (c) mk("rect", { class: "car", x: bx, y: y + 3, width: bw * c / n, height: RH - 10, rx: 3 }, g);
     mk("text", { x: bx + bw + 6, y: y + 15, class: "n" }, g).textContent = `${n}${c ? ` · ${pct(c, n)}% carried` : ""}`;
-    mk("title", {}, g).textContent = `${p.title}, ${p.start}–${p.end}: ${n} strategies, ${c} already in an earlier plan, ${n - c} first seen here. Period: ${p.src}.`;
+    mk("title", {}, g).textContent = `${p.title}, ${p.start}–${p.end}: ${n} responses, ${c} already in an earlier plan, ${n - c} first seen here. Period: ${p.src}.`;
     const pick = e => {
       if (e && (e.shiftKey || e.metaKey || e.ctrlKey)) { if (sel.has(i) && sel.size > 1) sel.delete(i); else sel.add(i); }
       else if (sel.size === 1 && sel.has(i)) { allPlans(); return; }
@@ -1195,21 +1271,21 @@ function drawTimeline() {
     g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(e); } });
   });
   const inf = C.plans.filter(i => PLN[i].src.includes("confirm"));
-  $("#tl-note").textContent = "The darker part of a bar is the share of its strategies that were already in an earlier plan. Select a plan to see its tree; select it again for all plans; shift-select to compare several." +
+  $("#tl-note").textContent = "The darker part of a bar is the share of its responses that were already in an earlier plan. Select a plan to see its tree; select it again for all plans; shift-select to compare several." +
     (inf.length ? " Period to confirm: " + inf.map(i => PLN[i].title).join("; ") + "." : "");
 }
 function allPlans() { sel.clear(); C.plans.forEach(i => sel.add(i)); refresh(); }
 
 // ---------- panel pieces ----------
 const colAttr = c => `data-col="${esc(String(c.key))}"`;
-// one bar per column: the share of that column's strategies that pass the test
+// one bar per column: the share of that column's responses that pass the test
 function colBars(test, color) {
   const tot = {}, hit = {};
   C.base.forEach(r => { const k = C.colOf(r); tot[k] = (tot[k] || 0) + 1; if (test(r)) hit[k] = (hit[k] || 0) + 1; });
   const sh = C.cols.map(c => ({ c, n: hit[c.key] || 0, t: tot[c.key] || 0 }));
   const max = Math.max(1e-9, ...sh.map(x => x.t ? x.n / x.t : 0));
   return `<div class="pbars">${sh.map(x => { const s = x.t ? x.n / x.t : 0; return `<a class="lab" ${colAttr(x.c)} title="${esc(x.c.title)}">${esc(short(x.c.label, 24))}</a>
-    <span class="trk" title="${x.n} of ${x.t} strategies"><i style="width:${100 * s / max}%;background:${color}"></i></span>
+    <span class="trk" title="${x.n} of ${x.t} responses"><i style="width:${100 * s / max}%;background:${color}"></i></span>
     <span class="num">${x.n ? `${x.n} · ${fmtPct(s)}` : x.t ? "0" : "–"}</span>`; }).join("")}</div>`;
 }
 const BINS = [[0, 2009, "before 2010"], [2010, 2014, "2010–14"], [2015, 2019, "2015–19"], [2020, 2024, "2020–24"], [2025, 9999, "2025 on"]];
@@ -1217,14 +1293,14 @@ function binBars(test, color) {
   const sh = BINS.map(([a, b, label]) => { const rs = ROWS.filter(r => inRegion(r[15]) && PLN[r[0]].start >= a && PLN[r[0]].start <= b); return { label, t: rs.length, n: rs.filter(test).length }; });
   const max = Math.max(1e-9, ...sh.map(x => x.t ? x.n / x.t : 0));
   return `<div class="pbars">${sh.map(x => { const s = x.t ? x.n / x.t : 0; return `<span class="lab">${x.label}</span>
-    <span class="trk" title="${x.n} of ${x.t} strategies in plans starting ${x.label}"><i style="width:${100 * s / max}%;background:${color}"></i></span>
+    <span class="trk" title="${x.n} of ${x.t} responses in plans starting ${x.label}"><i style="width:${100 * s / max}%;background:${color}"></i></span>
     <span class="num">${x.n ? `${x.n} · ${fmtPct(s)}` : x.t ? "0" : "–"}</span>`; }).join("")}</div>`;
 }
 function sizeBars() {
   const tot = {}; C.base.forEach(r => { const k = C.colOf(r); tot[k] = tot[k] || { n: 0, lv: 0 }; tot[k].n++; if (r[5]) tot[k].lv++; });
   const max = Math.max(1, ...Object.values(tot).map(x => x.n));
   return `<div class="pbars">${C.cols.map(c => { const x = tot[c.key] || { n: 0, lv: 0 }; return `<a class="lab" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 24))}</a>
-    <span class="trk" title="${x.n} strategies, ${x.lv} on a lever"><i style="width:${100 * x.lv / max}%;background:var(--gold)"></i><i style="width:${100 * (x.n - x.lv) / max}%;background:var(--muted);opacity:.45"></i></span>
+    <span class="trk" title="${x.n} responses, ${x.lv} on a lever"><i style="width:${100 * x.lv / max}%;background:var(--gold)"></i><i style="width:${100 * (x.n - x.lv) / max}%;background:var(--muted);opacity:.45"></i></span>
     <span class="num">${x.n.toLocaleString()}</span>`; }).join("")}</div>`;
 }
 function countryOverview() {
@@ -1238,17 +1314,17 @@ function countryOverview() {
   const one = mode === "country" && sel.size === 1;
   const car = rows.filter(r => r[16] >= 0).length;
   const sub = mode === "country"
-    ? (one ? `${car} (${pct(car, n)}%) were already in an earlier plan; ${rows.length - car} are first seen in this plan.` : `${nSrc.toLocaleString()} distinct strategies across ${nPl} plans: one that runs through several plans is counted once in each.`)
-    : `${nPl} plan editions in ${nCt} countries; ${nSrc.toLocaleString()} distinct strategies, each counted once in every plan edition it appears in.`;
-  return `<div class="sect"><div class="eyebrow">${mode === "country" ? esc(C.name) + " · " : ""}${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} strategies</h2></div>
+    ? (one ? `${car} (${pct(car, n)}%) were already in an earlier plan; ${rows.length - car} are first seen in this plan.` : `${nSrc.toLocaleString()} distinct responses across ${nPl} plans: one that runs through several plans is counted once in each.`)
+    : `${nPl} plan editions in ${nCt} countries; ${nSrc.toLocaleString()} distinct responses, each counted once in every plan edition it appears in.`;
+  return `<div class="sect"><div class="eyebrow">${mode === "country" ? esc(C.name) + " · " : ""}${esc(selLabel())}</div><h2>${rows.length.toLocaleString()} responses</h2></div>
     <p class="muted">${sub}</p>
     <a class="todt" data-dt>See them in the details table ↓</a>
     <div class="lvls">${["LV", "L2", "GRP", "GOAL", "NEW"].filter(k => lv[k] || k === "LV" || k === "L2").map(k => `<div><span class="${k === "LV" ? "fruit" : "sw"}" style="margin:0;${k === "LV" ? "" : "background:var(--line)"}"></span>${OVL[k]}<span class="num">${(lv[k] || 0).toLocaleString()} · ${pct(lv[k] || 0, n)}%</span></div>`).join("")}
       ${ORDER.map(([pc]) => { const id = HOLD[pc], k = gen[id] || 0; return `<div><span class="sw" style="margin:0;background:${PCOL[pc]}"></span><a ${O({ h: id })}>${esc(HNAME[id])}</a><span class="num">${k.toLocaleString()} · ${pct(k, n)}%</span></div>`; }).join("")}</div>
     <div class="sect"><div class="eyebrow">${mode === "country" ? "Plan by plan" : region === null ? "Region by region · select one to open it" : "Country by country · select one to open it"} · <span style="color:var(--gold)">on a lever</span></div>${sizeBars()}</div>
-    <div class="sect"><div class="eyebrow">Largest levers · strategies</div>${leverList(topV, id => lev[id].n)}</div>
+    <div class="sect"><div class="eyebrow">Largest levers · responses</div>${leverList(topV, id => lev[id].n)}</div>
     <div class="sect"><div class="eyebrow">Largest families</div>${familyList(topF).replace(/<span class="n">\d+<\/span>/g, "")}</div>
-    <p class="muted">Leaf size is the number of strategies on each family. Gold buds are levers with strategies, sized by count; dashed buds get none. Strategies that fit no family sit on the general economy, people or governance branch. ${used} of ${D.levers.length} levers are used.</p>`;
+    <p class="muted">Leaf size is the number of responses on each family. Gold buds are levers with responses, sized by count; dashed buds get none. Responses that fit no family sit on the standard economy, people or governance branch. ${used} of ${D.levers.length} levers are used.</p>`;
 }
 const oti = r => [r[2] && `<b>Objective</b> ${esc(r[2])}`, r[11] && `<b>Target</b> ${esc(r[11])}`, r[12] && `<b>Instrument</b> ${esc(r[12])}`].filter(Boolean).join(" · ");
 function stratMeta(r, showLever) {
@@ -1262,7 +1338,7 @@ function stratMeta(r, showLever) {
 }
 const order = (a, b) => (a[5] ? 0 : 1) - (b[5] ? 0 : 1) || a[15] - b[15] || a[0] - b[0];
 function stratSearchList(rows) {
-  if (!rows.length) return `<p class="muted">No strategy matches.</p>`;
+  if (!rows.length) return `<p class="muted">No response matches.</p>`;
   return rows.slice().sort(order).slice(0, 120).map(r => {
     const o = r[5] ? { v: r[5] } : r[4] ? { f: r[4] } : r[3] === "STD" ? { h: r[6] } : null;
     return `<div class="strat"${o ? ` ${O(o)} style="cursor:pointer"` : ""}><span>${esc(r[1])}</span><span class="meta">${stratMeta(r, true)}</span><span class="oti">${oti(r)}</span></div>`;
@@ -1275,38 +1351,68 @@ function stratList(rows, showLever) {
 function nodeBlock(test, col, what) {
   const rows = C.rows.filter(test);
   const by = mode === "country" ? "plan by plan" : region === null ? "region by region" : "country by country";
-  return `<div class="sect"><div class="eyebrow">${esc(selLabel())}: ${rows.length.toLocaleString()} strategies on this ${what}</div></div>
-    <div class="sect"><div class="eyebrow">${by} · count and share of each ${C.unit}'s strategies</div>${colBars(test, col)}</div>
+  return `<div class="sect"><div class="eyebrow">${esc(selLabel())}: ${rows.length.toLocaleString()} responses on this ${what}</div></div>
+    <div class="sect"><div class="eyebrow">${by} · count and share of each ${C.unit}'s responses</div>${colBars(test, col)}</div>
     ${mode === "country" ? "" : `<div class="sect"><div class="eyebrow">Over time · plans by the year they start${region ? ", " + esc(region) : ""}</div>${binBars(test, col)}</div>`}
-    ${rows.length ? `<a class="todt" data-dt>See ${rows.length === 1 ? "this strategy" : "these " + rows.length.toLocaleString() + " strategies"} in the details table ↓</a>
-    <details class="lv"><summary><span>The strategies${rows.length > 150 ? ", first 150" : ""}</span></summary><div>${stratList(rows, what === "family")}</div></details>` : ""}`;
+    ${rows.length ? `<a class="todt" data-dt>See ${rows.length === 1 ? "this response" : "these " + rows.length.toLocaleString() + " responses"} in the details table ↓</a>
+    <details class="lv"><summary><span>The responses${rows.length > 150 ? ", first 150" : ""}</span></summary><div>${stratList(rows, what === "family")}</div></details>` : ""}`;
 }
 const HWHAT = { SMG: "the economy", PFA: "people", MCH: "governance" };
 const famPillar = fid => SP[F[fid].subpillar_code].pillar;
 const countryFamily = fid => nLv(F[fid]) ? nodeBlock(r => r[4] === fid, famCol(fid), "family")
-  : `<p class="def" style="color:var(--muted)">This family has no lever yet, so no strategies are placed on it. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[famPillar(fid)]])}.</p>`;
+  : `<p class="def" style="color:var(--muted)">This family has no lever yet, so no responses are placed on it. Responses on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[famPillar(fid)]])}.</p>`;
 function extraPanel(o) {
   if (o.h) {
     const pc = HPC[o.h], test = r => r[3] === "STD" && r[6] === o.h;
     const lab = {}; C.rows.filter(test).forEach(r => lab[r[10]] = (lab[r[10]] || 0) + 1);
     const top = Object.entries(lab).sort((a, b) => b[1] - a[1]).slice(0, 14);
     return crumb([[PL[pc].name, { p: pc }]]) +
-      `<div class="sect"><div class="eyebrow">General branch · ${PROLE[pc]}</div><h2>${esc(HNAME[o.h])}</h2></div>
-      <p class="def">Strategies about ${HWHAT[pc]} that fit no live family on the tree are held here, rather than forced onto a family or placed on a part of the tree that was dropped.</p>
-      ${nodeBlock(test, PCOL[pc], "general branch")}
-      ${top.length ? `<div class="sect"><div class="eyebrow">What is held here · objective label and strategies</div><div class="lvls">${top.map(([k, n]) => `<div>${esc(k || "No objective label")}<span class="num">${n}</span></div>`).join("")}</div></div>` : ""}`;
+      `<div class="sect"><div class="eyebrow">Standard branch · ${PROLE[pc]}</div><h2>${esc(HNAME[o.h])}</h2></div>
+      <p class="def">Responses about ${HWHAT[pc]} that fit no live family on the tree are held here, rather than forced onto a family or placed on a part of the tree that was dropped.</p>
+      ${nodeBlock(test, PCOL[pc], "standard branch")}
+      ${top.length ? `<div class="sect"><div class="eyebrow">What is held here · objective label and responses</div><div class="lvls">${top.map(([k, n]) => `<div>${esc(k || "No objective label")}<span class="num">${n}</span></div>`).join("")}</div></div>` : ""}`;
   }
   const d = D.dropped.find(x => x.lever_id === o.d), f = F[d.family_id], g = G[f.group_id], s = SP[f.subpillar_code], pl = s.pillar, dead = !nLv(f);
   return crumb([[PL[pl].name, { p: pl }], [s.name, { s: s.code }], [g.group, { g: g.group_id }], [f.family, { f: f.family_id }]]) +
     `<div class="sect"><div class="eyebrow">Dropped lever ${d.lever_id}</div><h2 style="color:var(--muted)">${esc(d.lever)}</h2></div>
-    <p class="def">The literature review of November 2026 grades this lever unbacked: no framework support and at most thin evidence on the action itself. It is out of the tree, drawn in grey, and no strategy is placed on it.</p>
-    <p class="muted">${dead ? `It was the last lever of ${esc(f.family)}, so that family is grey too. Strategies on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[pl]])}.` : `Strategies on this theme sit on ${esc(f.family)} or on one of its remaining levers.`}</p>
+    <p class="def">The literature review of November 2026 grades this lever unbacked: no framework support and at most thin evidence on the action itself. It is out of the tree, drawn in grey, and no response is placed on it.</p>
+    <p class="muted">${dead ? `It was the last lever of ${esc(f.family)}, so that family is grey too. Responses on this theme are matched to another live family where one fits, and otherwise to ${esc(HNAME[HOLD[pl]])}.` : `Responses on this theme sit on ${esc(f.family)} or on one of its remaining levers.`}</p>
     ${dead ? "" : `<div class="sect"><div class="eyebrow">Live levers in ${f.family_id}</div>${leverList(f.lever_ids)}</div>`}`;
 }
-const countryLever = lid => nodeBlock(r => r[5] === lid, famCol(V[lid].family_id), "lever");
+const countryLever = lid => nodeBlock(r => r[5] === lid, famCol(V[lid].family_id), "lever") + crossBlock(lid);
+
+// ---------- across document types: a lever's responses by source, and the budget lines clearly tied to them ----------
+const SRCL = { plans: "National", sector: "Sector", unga: "UNGA", budget: "Budget" };
+const BLK = {};
+(X.blinks || []).forEach(l => { const k = l[0] + "#" + l[1]; (BLK[k] = BLK[k] || []).push(l); });
+function crossBlock(lid) {
+  if (active.size < 2) return `<div class="sect"><div class="eyebrow">Across document types</div><p class="muted">Switch on more sources above, for example national plans, sector plans and budgets, to compare this lever across document types and see the budget lines tied to its responses.</p></div>`;
+  const rows = C.rows.filter(r => r[5] === lid), srcs = X.sources.map(x => x.k).filter(k => active.has(k));
+  const by = {};
+  rows.forEach(r => { const c = r[15], s = srcOf(PLN[r[0]]); by[c] = by[c] || {}; by[c][s] = (by[c][s] || 0) + 1; });
+  const showB = active.has("budget") && (active.has("plans") || active.has("sector"));
+  const seen = new Set(), linked = [];
+  if (showB) rows.forEach(r => { const ls = BLK[r[0] + "#" + r[17][0]]; if (!ls) return; const k = r[14] + "|" + ls.map(l => l[2] + "#" + l[3]).join(); if (seen.has(k)) return; seen.add(k); linked.push([r, ls]); });
+  const nb = {}; linked.forEach(([r]) => nb[r[15]] = (nb[r[15]] || 0) + 1);
+  const nS = c => srcs.filter(s => by[c][s]).length;
+  const cs = Object.keys(by).map(Number).sort((a, b) => nS(b) - nS(a) || (nb[b] || 0) - (nb[a] || 0) || a - b);
+  const all = cs.filter(c => nS(c) === srcs.length).length;
+  let h = `<div class="sect"><div class="eyebrow">Across document types · ${esc(selLabel())}</div>
+    <p class="muted">Responses on this lever in each source switched on.${cs.length > 1 ? ` ${all} of ${cs.length} countries have this lever in all ${srcs.length}.` : ""}${showB ? " The last column counts responses with a budget line clearly tied to them (below)." : ""}</p>
+    <table class="xdoc"><thead><tr><th>${mode === "country" ? "Country" : "Country"}</th>${srcs.map(s => `<th>${SRCL[s]}</th>`).join("")}${showB ? "<th>Tied to budget</th>" : ""}</tr></thead><tbody>
+    ${cs.slice(0, 40).map(c => `<tr><td>${esc(CTY[c].name)}</td>${srcs.map(s => by[c][s] ? `<td>${by[c][s]}</td>` : `<td class="none">–</td>`).join("")}${showB ? (nb[c] ? `<td>${nb[c]}</td>` : `<td class="none">–</td>`) : ""}</tr>`).join("")}
+    </tbody></table>${cs.length > 40 ? `<p class="muted">and ${cs.length - 40} more countries</p>` : ""}${cs.length ? "" : `<p class="muted">No response in view is on this lever.</p>`}</div>`;
+  if (showB) h += `<div class="sect"><div class="eyebrow">Responses with a budget line · ${linked.length}</div>
+    <p class="muted">A budget line is tied to a response only when the match is clear: same country, same lever, a fiscal year inside the plan's period, and a shared phrase such as “green building” or “water supply”. Other budget lines on this lever stay in the budget counts above without a tie. Amounts are as the budget states them, in its own currency and units.</p>
+    ${linked.length ? `<details class="lv"${linked.length <= 12 ? " open" : ""}><summary><span>The responses and their budget lines${linked.length > 80 ? ", first 80" : ""}</span></summary><div>${linked.slice().sort((a, b) => a[0][15] - b[0][15] || a[0][0] - b[0][0]).slice(0, 80).map(([r, ls]) => `<div class="blk"><span>${esc(r[1])}</span><br><span class="meta">${stratMeta(r, false)}</span>
+      ${ls.map(l => `<div class="bl"><i>budget</i><span>${esc(l[4])} <span class="amt">FY ${l[5]}${l[6] ? " · " + esc(l[6]) : ""}</span><br><span class="why">shared: ${esc(l[7])}</span></span></div>`).join("")}</div>`).join("")}</div></details>` : `<p class="muted">No response in view on this lever has a budget line clearly tied to it.</p>`}</div>`;
+  return h;
+}
 
 // ---------- table: families and levers by column ----------
-const openFam = new Set();
+// rows nest pillar › subpillar › framework family › family › lever; each opens one level down
+const OPEN = new Set(), UP = {};
+const famPil = fid => SP[F[fid].subpillar_code].pillar;
 function drawTable() {
   const cols = C.cols, idx = {}; cols.forEach((c, i) => idx[String(c.key)] = i);
   const z = () => cols.map(() => 0), tot = z(), totF = z(), totL = z();
@@ -1316,57 +1422,70 @@ function drawTable() {
     const i = idx[String(C.colOf(r))]; if (i === undefined) return;
     n0++; tot[i]++;
     if (r[3] === "STD") { nG++; totG[i]++; gen[i][r[6]] = (gen[i][r[6]] || 0) + 1; ag[r[6]] = (ag[r[6]] || 0) + 1; }
-    if (r[4]) { nF++; totF[i]++; const x = fam[i][r[4]] || (fam[i][r[4]] = { n: 0, lv: 0 }), a = af[r[4]] || (af[r[4]] = { n: 0, lv: 0 }); x.n++; a.n++; if (r[5]) { x.lv++; a.lv++; } }
+    if (r[4] && F[r[4]]) { nF++; totF[i]++; const x = fam[i][r[4]] || (fam[i][r[4]] = { n: 0, lv: 0 }), a = af[r[4]] || (af[r[4]] = { n: 0, lv: 0 }); x.n++; a.n++; if (r[5]) { x.lv++; a.lv++; } }
     if (r[5]) { nL++; totL[i]++; lev[i][r[5]] = (lev[i][r[5]] || 0) + 1; al[r[5]] = (al[r[5]] || 0) + 1; }
   });
   const NC = cols.length + 3;
-  const head = `<thead><tr><th>Framework family › family › lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${cols.map(c => `<th class="colh${c.on ? " on" : ""}" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 20))}<br>${esc(c.sub)}</th>`).join("")}</tr></thead>`;
-  let body = `<tr class="tot"><td>Strategies</td><td class="all">${n0.toLocaleString()}</td><td></td>${tot.map(n => `<td>${n.toLocaleString()}</td>`).join("")}</tr>
+  const head = `<thead><tr><th>Pillar › subpillar › framework family › family › lever</th><th>All</th><th style="color:var(--gold)">on a lever</th>${cols.map(c => `<th class="colh${c.on ? " on" : ""}" ${colAttr(c)} title="${esc(c.title)}">${esc(short(c.label, 20))}<br>${esc(c.sub)}</th>`).join("")}</tr></thead>`;
+  let body = `<tr class="tot"><td>Responses</td><td class="all">${n0.toLocaleString()}</td><td></td>${tot.map(n => `<td>${n.toLocaleString()}</td>`).join("")}</tr>
     <tr class="tot"><td>On a live family or one of its levers</td><td class="all">${pct(nF, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totF[i], n) + "%" : ""}</td>`).join("")}</tr>
     <tr class="tot"><td>Placed on a lever</td><td class="all g">${pct(nL, n0)}%</td><td></td>${tot.map((n, i) => `<td class="g">${n ? pct(totL[i], n) + "%" : ""}</td>`).join("")}</tr>
-    <tr class="tot"><td>On a general branch</td><td class="all">${pct(nG, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totG[i], n) + "%" : ""}</td>`).join("")}</tr>`;
+    <tr class="tot"><td>On a standard branch</td><td class="all">${pct(nG, n0)}%</td><td></td>${tot.map((n, i) => `<td>${n ? pct(totG[i], n) + "%" : ""}</td>`).join("")}</tr>`;
   const cell = (n, of, col, tip, i) => {
     const sh = of ? n / of : 0;
     return `<td title="${tip}"${n ? ` data-ck="${i}"` : ""} style="background:color-mix(in srgb, ${col} ${Math.min(70, Math.round(sh * 700))}%, transparent)">${n ? (sh >= 0.005 ? (100 * sh).toFixed(sh < 0.1 ? 1 : 0) + "%" : "<1%") : ""}</td>`;
   };
-  ORDER.forEach(([pc0, sps]) => { sps.forEach(sc => {
-    body += `<tr class="sp"><td colspan="${NC}">${esc(SP[sc].name)}</td></tr>`;
-    const col = PCOL[pc0];
-    D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
-    const gn = cols.map((c, i) => g.family_ids.reduce((t, fid) => t + ((fam[i][fid] || {}).n || 0), 0));
-    const ga = g.family_ids.reduce((t, fid) => t + ((af[fid] || {}).n || 0), 0), gl = g.family_ids.reduce((t, fid) => t + ((af[fid] || {}).lv || 0), 0);
-    body += `<tr class="grow"><td ${O({ g: g.group_id })} title="${esc(g.basis)}">${esc(g.group)}</td><td class="all">${ga || ""}</td><td class="pws">${gl ? pct(gl, ga) + "%" : ""}</td>${gn.map((n, i) => cell(n, tot[i], col, `${esc(cols[i].label)}: ${n} strategies in ${esc(g.group)}`, i)).join("")}</tr>`;
-    g.family_ids.map(fid => F[fid]).forEach(f => {
-      const fid = f.family_id, a = af[fid] || { n: 0, lv: 0 }, op = openFam.has(fid), dead = !nLv(f);
-      body += `<tr class="frow${op ? " open" : ""}${dead ? " dead" : ""}" data-fam="${fid}"><td class="fam">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
-        const x = fam[i][fid] || { n: 0, lv: 0 };
-        return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} strategies, ${x.lv} on a lever`, i);
-      }).join("")}</tr>`;
-      f.lever_ids.forEach(lid => {
-        body += `<tr class="lvrow" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${al[lid] || ""}</td><td></td>${cols.map((c, i) => cell(lev[i][lid] || 0, tot[i], col, `${esc(c.label)}: ${lev[i][lid] || 0} strategies`, i)).join("")}</tr>`;
-      });
-      D.dropped.filter(d => d.family_id === fid).forEach(d => {
-        body += `<tr class="lvrow drop" data-of="${fid}"${op ? "" : " hidden"}><td class="lvc" ${O({ d: d.lever_id })} title="Dropped as unbacked by the literature review: no strategies are placed on it">${esc(d.lever)} · dropped</td><td class="all"></td><td></td>${cols.map(() => "<td></td>").join("")}</tr>`;
+  // a row is shown when every level above it is open
+  const vis = up => !up || (OPEN.has(up) && vis(UP[up]));
+  const attrs = (key, up) => { if (key) UP[key] = up; return `${key ? ` data-n="${key}"${OPEN.has(key) ? ' data-open=""' : ""}` : ""}${up ? ` data-up="${up}"` : ""}${vis(up) ? "" : " hidden"}`; };
+  const sumF = (fids, i) => fids.reduce((t, fid) => t + ((((i === null ? af[fid] : fam[i][fid]) || {}).n) || 0), 0);
+  const sumL = fids => fids.reduce((t, fid) => t + ((af[fid] || {}).lv || 0), 0);
+  ORDER.forEach(([pc0, sps]) => {
+    const col = PCOL[pc0], hid = HOLD[pc0], pk = "P:" + pc0;
+    const pf = D.families.filter(f => famPil(f.family_id) === pc0).map(f => f.family_id);
+    const pa = sumF(pf, null) + (ag[hid] || 0), pl = sumL(pf);
+    body += `<tr class="prow"${attrs(pk, null)}><td class="nd" ${O({ p: pc0 })}>${esc(PL[pc0].name)}</td><td class="all">${pa || ""}</td><td class="pws">${pl ? pct(pl, pa) + "%" : ""}</td>${cols.map((c, i) => { const n = sumF(pf, i) + (gen[i][hid] || 0); return cell(n, tot[i], col, `${esc(c.label)}: ${n} responses in ${esc(PL[pc0].name)}, standard branch included`, i); }).join("")}</tr>`;
+    sps.forEach(sc => {
+      const sk = "S:" + sc, sf = D.families.filter(f => f.subpillar_code === sc).map(f => f.family_id);
+      const sa = sumF(sf, null), sl = sumL(sf);
+      body += `<tr class="sprow"${attrs(sk, pk)}><td class="nd" ${O({ s: sc })}>${esc(SP[sc].name)}</td><td class="all">${sa || ""}</td><td class="pws">${sl ? pct(sl, sa) + "%" : ""}</td>${cols.map((c, i) => { const n = sumF(sf, i); return cell(n, tot[i], col, `${esc(c.label)}: ${n} responses in ${esc(SP[sc].name)}`, i); }).join("")}</tr>`;
+      D.groups.filter(g => g.subpillar_code === sc).forEach(g => {
+        const gk = "G:" + g.group_id, ga = sumF(g.family_ids, null), gl = sumL(g.family_ids);
+        body += `<tr class="grow"${attrs(gk, sk)}><td class="nd" ${O({ g: g.group_id })} title="${esc(g.basis)}">${esc(g.group)}</td><td class="all">${ga || ""}</td><td class="pws">${gl ? pct(gl, ga) + "%" : ""}</td>${cols.map((c, i) => { const n = sumF(g.family_ids, i); return cell(n, tot[i], col, `${esc(c.label)}: ${n} responses in ${esc(g.group)}`, i); }).join("")}</tr>`;
+        g.family_ids.map(fid => F[fid]).forEach(f => {
+          const fid = f.family_id, fk = "F:" + fid, a = af[fid] || { n: 0, lv: 0 }, dead = !nLv(f);
+          body += `<tr class="frow${dead ? " dead" : ""}" data-fam="${fid}"${attrs(dead ? null : fk, gk)}><td class="fam${dead ? "" : " nd"}">${esc(f.family)}</td><td class="all">${a.n || ""}</td><td class="pws" title="${a.lv} on a lever">${a.lv ? pct(a.lv, a.n) + "%" : ""}</td>${cols.map((c, i) => {
+            const x = fam[i][fid] || { n: 0, lv: 0 };
+            return cell(x.n, tot[i], col, `${esc(c.label)}: ${x.n} responses, ${x.lv} on a lever`, i);
+          }).join("")}</tr>`;
+          f.lever_ids.forEach(lid => {
+            body += `<tr class="lvrow"${attrs(null, fk)}><td class="lvc" ${O({ v: lid })} title="${esc(V[lid].joins_when)}">${esc(V[lid].lever)}</td><td class="all">${al[lid] || ""}</td><td></td>${cols.map((c, i) => cell(lev[i][lid] || 0, tot[i], col, `${esc(c.label)}: ${lev[i][lid] || 0} responses`, i)).join("")}</tr>`;
+          });
+        });
       });
     });
-    });
-  });
-    const hid = HOLD[pc0];
-    body += `<tr class="sp"><td colspan="${NC}">General branch · ${PROLE[pc0]}</td></tr>
-      <tr class="hrow"><td ${O({ h: hid })} title="Strategies that fit no live family">${esc(HNAME[hid])}</td><td class="all">${ag[hid] || ""}</td><td></td>${cols.map((c, i) => cell(gen[i][hid] || 0, tot[i], PCOL[pc0], `${esc(c.label)}: ${gen[i][hid] || 0} strategies`, i)).join("")}</tr>`;
+    body += `<tr class="hrow"${attrs(null, pk)}><td ${O({ h: hid })} title="Responses that fit no live family">${esc(HNAME[hid])}</td><td class="all">${ag[hid] || ""}</td><td></td>${cols.map((c, i) => cell(gen[i][hid] || 0, tot[i], col, `${esc(c.label)}: ${gen[i][hid] || 0} responses`, i)).join("")}</tr>`;
   });
   $("#ct").innerHTML = head + `<tbody>${body}</tbody>`;
   $("#ct-h").textContent = mode === "country" ? `${C.name} over time: families and levers by plan` : region === null ? "Regions side by side: families and levers" : `${region}: countries side by side`;
-  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. Shaded bold rows are the framework families, the layer under each RHDR subpillar; the rows under them are our families. A row is the share of that ${C.unit}'s strategies placed on it or on one of its levers; open a family to see its levers. Each pillar ends with its general branch, for strategies that fit no family. <b>All</b> counts strategies across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a family's strategies placed on one of its levers. Hover a cell for counts; select a cell to list its strategies in the details table below; select a column heading to open that ${C.unit}.`;
+  $("#ct-p").innerHTML = `Each column is one ${C.unit}${mode === "country" ? ", medium-term plans oldest first, then long-term plans" : year ? `, for plans in force in ${year}` : ""}. A cell is the share of that ${C.unit}'s responses placed on the row or anywhere under it, so the three pillars add up to all responses. Open a pillar (▸) for its RHDR subpillars, a subpillar for its framework families, a framework family for our families and a family for its levers; the buttons above open or close a whole level. Each pillar ends with its standard branch, for responses that fit no family. <b>All</b> counts responses across the columns and <span style="color:var(--gold)">on a lever</span> is the share of a row's responses placed on one of its levers. Hover a cell for counts; select a cell to list its responses in the details table below; select a column heading to open that ${C.unit}.`;
 }
-function toggleFam(fid, on) {
-  if (on) openFam.add(fid); else openFam.delete(fid);
-  const tr = $(`#ct tr.frow[data-fam="${fid}"]`); if (tr) tr.classList.toggle("open", on);
-  document.querySelectorAll(`#ct tr.lvrow[data-of="${fid}"]`).forEach(r => r.hidden = !on);
+function setOpen(key, on) {
+  if (on) { OPEN.add(key); for (let u = UP[key]; u; u = UP[u]) OPEN.add(u); } else OPEN.delete(key);
+  document.querySelectorAll("#ct tr[data-n]").forEach(tr => { if (OPEN.has(tr.dataset.n)) tr.dataset.open = ""; else delete tr.dataset.open; });
+  const vis = up => !up || (OPEN.has(up) && vis(UP[up]));
+  document.querySelectorAll("#ct tr[data-up]").forEach(tr => { tr.hidden = !vis(tr.dataset.up); });
 }
+function openLevel(k) {
+  OPEN.clear();
+  const lv = { p: ["P:"], s: ["P:", "S:"], g: ["P:", "S:", "G:"], f: ["P:", "S:", "G:", "F:"] }[k] || [];
+  Object.keys(UP).forEach(n => { if (lv.some(x => n.startsWith(x))) OPEN.add(n); });
+  setOpen("", false);
+}
+const toggleFam = (fid, on) => setOpen("F:" + fid, on);
 
-// ---------- details table: the strategies behind whatever is selected ----------
-// r[17] holds the rest of a strategy's row: [number in its plan, quote, plan chapter, urgency, status, legal basis,
+// ---------- details table: the responses behind whatever is selected ----------
+// r[17] holds the rest of a response's row: [number in its plan, quote, plan chapter, urgency, status, legal basis,
 // flags, SDG targets, agencies, lead, plan editions it is in]
 const DT = { col: null, text: "", lvl: "", ori: "", urg: "", st: "", sort: "n", dir: -1, page: 0, size: 50, open: new Set() };
 const rUrg = r => X.urg[r[17][3]], rSt = r => X.status[r[17][4]];
@@ -1377,7 +1496,7 @@ const DCOLS = [
   { k: "country", h: "Country", v: r => CTY[r[15]].name, hide: () => mode === "country" },
   { k: "plan", h: "Plan", v: r => planLabel(PLN[r[0]]), cls: "w0" },
   { k: "years", h: "Years", v: r => PLN[r[0]].start * 10000 + PLN[r[0]].end, t: r => `${PLN[r[0]].start}–${PLN[r[0]].end}`, cls: "nw" },
-  { k: "name", h: "Strategy", v: r => r[1], cls: "nm" },
+  { k: "name", h: "Response", v: r => r[1], cls: "nm" },
   { k: "obj", h: "Objective", v: r => r[2], cls: "w" },
   { k: "tgt", h: "Target", v: r => r[11], cls: "w" },
   { k: "ins", h: "Instrument", v: r => r[12], cls: "w" },
@@ -1389,13 +1508,13 @@ const DCOLS = [
   { k: "urg", h: "Urgency", v: r => RANK[rUrg(r)], t: r => esc(rUrg(r)) },
   { k: "st", h: "Status", v: r => RANK[rSt(r)], t: r => esc(rSt(r)) },
   { k: "why", h: "Why unmapped · what the tree would need", v: r => X.notes[r[17][11]], cls: "w", hide: () => mode !== "unmapped" },
-  { k: "n", h: "Passages", v: r => r[13], cls: "num", title: "Passages of the plan that state this strategy" },
+  { k: "n", h: "Passages", v: r => r[13], cls: "num", title: "Passages of the plan that state this response" },
 ];
 function nodeTest(o) {
   if (o.v) return [r => r[5] === o.v, "Lever: " + V[o.v].lever];
   if (o.f) return [r => r[4] === o.f, "Family: " + F[o.f].family];
   if (o.h) return [r => r[3] === "STD" && r[6] === o.h, HNAME[o.h]];
-  if (o.d) return [() => false, "Dropped lever: no strategies are placed on it"];
+  if (o.d) return [() => false, "Dropped lever: no responses are placed on it"];
   if (o.g) return [r => r[4] && F[r[4]].group_id === o.g, "Framework family: " + G[o.g].group];
   if (o.s) return [r => r[4] && F[r[4]].subpillar_code === o.s, "Subpillar: " + SP[o.s].name];
   if (o.p) return [r => pillarOf(r) === o.p, "Pillar: " + PL[o.p].name];
@@ -1428,7 +1547,7 @@ function dtSort(rows) {
     return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * d || a[1][18] - b[1][18];
   }).map(x => x[1]);
 }
-// the passage text sits in a file per plan edition beside the page, read when a strategy is opened
+// the passage text sits in a file per plan edition beside the page, read when a response is opened
 const PSG = {};
 window.PVD = (id, d) => { PSG[id] = d; };
 function loadPsg(pid) {
@@ -1447,7 +1566,7 @@ function psgHtml(r) {
   if (d.wait) return `<p class="muted">Loading the passages…</p>`;
   if (d.err) return `<p class="muted">The text of the ${r[13]} passage${r[13] === 1 ? "" : "s"} is kept in the folder “detail” beside this page and could not be read here. The quote above is the first of them; every passage is also in the passages CSV.</p>`;
   const ps = d.s[r[17][0]] || [];
-  if (!ps.length) return `<p class="muted">No passage rows are held for this strategy.</p>`;
+  if (!ps.length) return `<p class="muted">No passage rows are held for this response.</p>`;
   return `<div class="ct-scroll"><table class="psgt"><thead><tr><th>Document</th><th>Page</th><th>§</th><th>Read there as</th><th>Evidence in the plan</th><th>Agencies</th></tr></thead><tbody>${ps.map(p =>
     `<tr><td>${esc(d.docs[p[0]])}</td><td class="num">${esc(p[1])}</td><td class="num">${esc(p[2])}</td><td>${esc(p[3])}</td><td class="ev">${esc(p[4])}</td><td>${esc(p[5].replace(/ \| /g, "; "))}</td></tr>`).join("")}</tbody></table></div>`;
 }
@@ -1460,7 +1579,7 @@ function dtDetail(r) {
     : [[PL[HPC[r[6]]].name, { p: HPC[r[6]] }], [HNAME[r[6]], { h: r[6] }]];
   const row = (k, v) => blank(v) ? "" : `<dt>${k}</dt><dd>${v}</dd>`;
   return `<dl class="dgrid">
-    ${row("Strategy", `<b>${esc(r[1])}</b> <span class="muted">${esc(p.id)}#s${x[0]}</span>`)}
+    ${row("Response", `<b>${esc(r[1])}</b> <span class="muted">${esc(p.id)}#s${x[0]}</span>`)}
     ${row("Plan", `${esc(CTY[r[15]].name)} · ${esc(p.title)}, ${p.start}–${p.end}`)}
     ${row({ budget: "Budget heading", unga: "Theme (RHDR)", sector: "Theme (RHDR)" }[p.doc_type] || "Plan chapter", esc(X.chapters[x[2]]))}
     ${row("Objective", esc(r[2]))}
@@ -1490,7 +1609,7 @@ function drawDetails() {
   DT.page = Math.min(DT.page, pages - 1);
   const cols = DCOLS.filter(c => !(c.hide && c.hide()));
   const view = rows.slice(DT.page * DT.size, (DT.page + 1) * DT.size);
-  $("#dt-h").textContent = `${mode === "unmapped" ? "Unmapped strategies" : "Strategy details"}: ${rows.length.toLocaleString()} strateg${rows.length === 1 ? "y" : "ies"}`;
+  $("#dt-h").textContent = `${mode === "unmapped" ? "Unmapped responses" : "Response details"}: ${rows.length.toLocaleString()} respons${rows.length === 1 ? "e" : "es"}`;
   $("#dt-chips").innerHTML = chips.map(([l, k]) => `<span class="chip">${esc(short(l, 70))}${k ? ` <a class="x" data-x="${k}" role="button" tabindex="0" aria-label="Remove ${esc(l)}">×</a>` : ""}</span>`).join("") +
     (rows.length !== base.length ? `<span class="chip">table filters: ${rows.length.toLocaleString()} of ${base.length.toLocaleString()}</span>` : "");
   $("#dt").innerHTML = `<thead><tr>${cols.map(c => `<th${c.k === DT.sort ? ` aria-sort="${DT.dir > 0 ? "ascending" : "descending"}"` : ""}${c.cls === "num" ? ' class="num"' : ""}><button type="button" data-sort="${c.k}"${c.title ? ` title="${c.title}"` : ""}>${c.h}</button></th>`).join("")}</tr></thead><tbody>${
@@ -1498,7 +1617,7 @@ function drawDetails() {
       const op = DT.open.has(r[18]);
       return `<tr class="dr${op ? " open" : ""}" data-i="${r[18]}" tabindex="0" aria-expanded="${op}">${cols.map(c => `<td${c.cls ? ` class="${c.cls}"` : ""}>${c.t ? c.t(r) : esc(c.v(r))}</td>`).join("")}</tr>` +
         (op ? `<tr class="dx"><td colspan="${cols.length}">${dtDetail(r)}</td></tr>` : "");
-    }).join("") : `<tr><td colspan="${cols.length}" class="muted">${(state.o || {}).d ? "Nothing is placed on a dropped lever." : "No strategy matches."}</td></tr>`}</tbody>`;
+    }).join("") : `<tr><td colspan="${cols.length}" class="muted">${(state.o || {}).d ? "Nothing is placed on a dropped lever." : "No response matches."}</td></tr>`}</tbody>`;
   $("#dt-pager").innerHTML = `<span>${rows.length ? (DT.page * DT.size + 1).toLocaleString() : 0}–${Math.min(rows.length, (DT.page + 1) * DT.size).toLocaleString()} of ${rows.length.toLocaleString()}</span>
     <button type="button" class="clear" data-pg="-1"${DT.page ? "" : " disabled"}>Previous</button><button type="button" class="clear" data-pg="1"${DT.page < pages - 1 ? "" : " disabled"}>Next</button>
     <label>Rows <select id="dt-size">${[50, 100, 250].map(n => `<option${n === DT.size ? " selected" : ""}>${n}</option>`).join("")}</select></label>`;
@@ -1506,7 +1625,7 @@ function drawDetails() {
 function toDetails() { $("#details").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
 {
   const opt = (id, first, vals) => { $(id).innerHTML = `<option value="">${first}</option>` + vals.map(([v, l]) => `<option value="${v}">${l}</option>`).join(""); };
-  opt("#dt-lvl", "Any placement", [["LV", "On a lever"], ["L2", "On a family, no lever"], ["STD", "On a general branch"], ["NEW", "Unmapped"]]);
+  opt("#dt-lvl", "Any placement", [["LV", "On a lever"], ["L2", "On a family, no lever"], ["STD", "On a standard branch"], ["NEW", "Unmapped"]]);
   opt("#dt-ori", "Any orientation", ["BAU", "proactive", "transformative"].map(v => [v, v]));
   opt("#dt-urg", "Any urgency", ["high", "medium", "low"].map(v => [v, v + " urgency"]));
   opt("#dt-st", "Any status", ["aspiration", "planned", "operational"].map(v => [v, v]));
@@ -1582,7 +1701,7 @@ function drawAuditTimeline() {
           q.forEach(p => {
             const x = X0(p.start), w = Math.max(4, X0(p.end + 1) - x - 2), by = y + p._ln * LH + 1, i = PLN.indexOf(p);
             const t = p.edition || p.title, fits = t.length * 5.6 < w - 6;
-            g += `<rect class="hit${AUD.id === i ? " on" : ""}" data-ap="${i}" x="${x + 1}" y="${by}" width="${w}" height="${BH + 1}" rx="2" fill="${AUDCOL[k]}"${audGuess(p) ? ` stroke="var(--ink)" stroke-dasharray="3 2"` : ""}><title>${esc(p.title)}, ${p.start}–${p.end} (period: ${esc(p.src)}) · ${p.n.toLocaleString()} strategies, ${pct(p.lv, p.n)}% on a lever</title></rect>` +
+            g += `<rect class="hit${AUD.id === i ? " on" : ""}" data-ap="${i}" x="${x + 1}" y="${by}" width="${w}" height="${BH + 1}" rx="2" fill="${AUDCOL[k]}"${audGuess(p) ? ` stroke="var(--ink)" stroke-dasharray="3 2"` : ""}><title>${esc(p.title)}, ${p.start}–${p.end} (period: ${esc(p.src)}) · ${p.n.toLocaleString()} responses, ${pct(p.lv, p.n)}% on a lever</title></rect>` +
               (fits ? `<text class="bl" x="${x + 5}" y="${by + 9.5}">${esc(t)}</text>` : "");
           });
           y += lanes.length * LH;
@@ -1621,7 +1740,7 @@ function drawAudit() {
     const n = ps.reduce((a, p) => a + p.n, 0), lv = ps.reduce((a, p) => a + p.lv, 0);
     const on = AUD.c === c && AUD.k === k;
     const shade = `background: color-mix(in srgb, var(--gold-soft) ${Math.min(100, 20 + ps.length * 12)}%, transparent)`;
-    return `<td class="ac${on ? " on" : ""}" data-ac="${c}" data-ak="${k}" style="${shade}" tabindex="0"><b>${ps.length}</b> doc${ps.length > 1 ? "s" : ""}<small>${n.toLocaleString()} strategies · ${pct(lv, n)}% lever</small></td>`;
+    return `<td class="ac${on ? " on" : ""}" data-ac="${c}" data-ak="${k}" style="${shade}" tabindex="0"><b>${ps.length}</b> doc${ps.length > 1 ? "s" : ""}<small>${n.toLocaleString()} responses · ${pct(lv, n)}% lever</small></td>`;
   };
   const by = (c, k) => PLN.filter(p => p.c === c && (k === null ? AUD.on.has(p.doc_type) : p.doc_type === k));
   const AC = AUDC.filter(([k]) => AUD.on.has(k));
@@ -1635,13 +1754,13 @@ function drawAudit() {
     });
   });
   const tot = k => PLN.filter(p => (k === null ? AUD.on.has(p.doc_type) : p.doc_type === k) && (AUD.reg === null || CTY[p.c].region === AUD.reg));
-  const tn = ps => `<td><b>${ps.length}</b><small style="display:block;color:var(--muted);font-weight:400">${ps.reduce((a, p) => a + p.n, 0).toLocaleString()} strategies</small></td>`;
+  const tn = ps => `<td><b>${ps.length}</b><small style="display:block;color:var(--muted);font-weight:400">${ps.reduce((a, p) => a + p.n, 0).toLocaleString()} responses</small></td>`;
   h += `<tr class="tot"><td>${AUD.reg === null ? `All ${CTY.length} countries` : esc(AUD.reg)}</td>${AC.map(([k]) => tn(tot(k))).join("")}${tn(tot(null))}</tr></tbody>`;
   $("#aud").innerHTML = h;
   const nC = k => new Set(PLN.filter(p => p.doc_type === k).map(p => p.c)).size;
   $("#aud-p").innerHTML = `Every document on the tree, as plan editions: ${PLN.length} in all, from ${CTY.length} countries. ` +
     AUDC.map(([k, l]) => `${l} ${PLN.filter(p => p.doc_type === k).length} (${nC(k)} countries)`).join(", ") +
-    `. The timeline gives each country a row per source, years across, so plans can be compared over time; switch sources and regions on and off above. Select a bar or a year for the documents behind it: their period, where the period was read from, the files they came from and how many of their strategies reach a lever. The counts table gives the same documents as totals.` +
+    `. The timeline gives each country a row per source, years across, so plans can be compared over time; switch sources and regions on and off above. Select a bar or a year for the documents behind it: their period, where the period was read from, the files they came from and how many of their responses reach a lever. The counts table gives the same documents as totals.` +
     "";
   drawAuditList();
 }
@@ -1651,7 +1770,7 @@ function drawAuditList() {
   const ps = PLN.map((p, i) => [p, i]).filter(([p, i]) => AUD.id !== null ? i === AUD.id : p.c === AUD.c && (AUD.k === "all" ? AUD.on.has(p.doc_type) : p.doc_type === AUD.k) && (AUD.y === null || (p.start <= AUD.y && AUD.y <= p.end)));
   const lab = (AUD.k === "all" ? "all sources" : audLow(AUDC.find(([k]) => k === AUD.k)[1])) + (AUD.y !== null ? ` in force in ${AUD.y}` : "");
   $("#aud-list").innerHTML = `<h3 style="margin:14px 0 6px">${esc(CTY[AUD.c].name)}: ${lab} (${ps.length})</h3>
-    <div class="ct-scroll"><table><thead><tr><th>Document</th><th>Source</th><th>Period</th><th>Period read from</th><th>Files</th><th class="n">Strategies</th><th class="n">On a lever</th></tr></thead><tbody>` +
+    <div class="ct-scroll"><table><thead><tr><th>Document</th><th>Source</th><th>Period</th><th>Period read from</th><th>Files</th><th class="n">Responses</th><th class="n">On a lever</th></tr></thead><tbody>` +
     ps.map(([p]) => `<tr><td>${esc(p.title)}${p.who ? `<br><span class="muted">${esc(p.who)}</span>` : ""}</td><td>${esc(DOCT[p.doc_type])}</td><td>${p.start === p.end ? p.start : `${p.start}–${p.end}`}</td>` +
       `<td${audGuess(p) ? ` class="warn"` : ""}>${esc(p.src)}</td><td>${esc(p.docs)}</td><td class="n">${p.n.toLocaleString()}</td><td class="n">${pct(p.lv, p.n)}%</td></tr>`).join("") +
     `</tbody></table></div><p><button type="button" class="todt" data-oc="${AUD.c}">Open ${esc(CTY[AUD.c].name)} in the country explorer</button></p>` + exH;
@@ -1684,10 +1803,10 @@ function rgConf(r) {
 function drawRegional() {
   if (!RGN) { $("#rg-p").textContent = "Regional messages are not built for this page."; return; }
   const M = RGN.messages || {}, C = RGN.checks;
-  $("#rg-p").textContent = `Each country is read through its latest national plan (the one that starts last, with at least ${C.min_n_rule} strategies), as shares of that plan's strategies, and every country counts the same inside its region. So a long plan does not outweigh a short one, and a country with five editions counts once. "Average" is the mean over all ${C.countries - C.thin.length} countries read.`;
+  $("#rg-p").textContent = `The key messages are about Asia-Pacific (South-East Asia, South Asia, East Asia and the Pacific, ${RGN.blocs ? RGN.blocs.n["Asia-Pacific"] : ""} countries); the other four regions (${RGN.blocs ? RGN.blocs.n.Comparators : ""} countries) are there as comparators for context. Each country is read through its latest national plan (the one that starts last, with at least ${C.min_n_rule} responses), as shares of that plan's responses, and every country counts the same inside its region. So a long plan does not outweigh a short one, and a country with five editions counts once. "Average" is the mean over all ${C.countries - C.thin.length} countries read.`;
   $("#rg-cross").innerHTML = (M.cross || []).map(m => `<div class="rg-card"><h3>${esc(m.h)}</h3><p>${esc(m.t)}</p></div>`).join("");
   if (RGS.r === null || !RGN.regions.includes(RGS.r)) RGS.r = RGN.regions[0];
-  $("#rg-reg").innerHTML = `<span class="eyebrow">Region</span>` + RGN.regions.map(r => `<button type="button" class="rchip" aria-pressed="${RGS.r === r}" data-rg="${esc(r)}">${esc(r)} <span>${rgCountries(r).filter(x => !x.thin).length}</span></button>`).join("");
+  $("#rg-reg").innerHTML = `<span class="eyebrow">Region</span>` + RGN.regions.map(r => `<button type="button" class="rchip" aria-pressed="${RGS.r === r}" data-rg="${esc(r)}">${esc(r)}${RGN.blocs && !RGN.blocs.apac_regions.includes(r) ? " · comparator" : ""} <span>${rgCountries(r).filter(x => !x.thin).length}</span></button>`).join("");
   const r = RGS.r, m = (M.regions || {})[r] || {}, [cf, cn] = rgConf(r), cs = rgCountries(r);
   const sub = RGN.sub, grp = RGN.grp, n = cs.filter(x => !x.thin).length;
   const subs = RGN.pillars.flatMap(p => sub.keys.filter(k => RGN.sub_pillar[k] === p));
@@ -1695,20 +1814,20 @@ function drawRegional() {
     const v = sub.reg[r][k] || 0, w = sub.world[k] || 0, mx = 0.3;
     return `<div class="rg-bar"><span class="lab">${esc(k)}</span><span class="trk"><i style="width:${Math.min(100, v / mx * 100)}%;background:${RG_PCOL[RGN.sub_pillar[k]]}"></i><b style="left:${Math.min(100, w / mx * 100)}%" title="Average ${rgPct(w)}%"></b></span><span class="num">${rgPct(v)}%</span><span class="ab">${sub.above[r][k]}/${n}</span></div>`;
   }).join("");
-  const diffs = grp.keys.filter(k => !k.startsWith("General")).map(k => [k, (grp.reg[r][k] || 0) - grp.world[k]]).sort((a, b) => b[1] - a[1]);
+  const diffs = grp.keys.filter(k => !k.startsWith("Standard")).map(k => [k, (grp.reg[r][k] || 0) - grp.world[k]]).sort((a, b) => b[1] - a[1]);
   const lean = (xs, up) => xs.map(([k, d]) => `<li><span>${esc(k)}</span><span class="num ${up ? "up" : "dn"}">${up ? "+" : "−"}${Math.abs(d * 100).toFixed(1)} pts</span><span class="ab">${rgPct(grp.reg[r][k] || 0, 1)}% · ${grp.above[r][k]}/${n} above</span></li>`).join("");
   const risks = Object.entries(RGN.risk.reg[r]).sort((a, b) => b[1] - a[1]).slice(0, 3);
   const sc = RGN.scal, o = RGN.ori, ins = RGN.ins;
-  const facts = [["Strategies tied to a risk", sc.risk_any], ["Framed as transformative", null, o.reg[r].transformative || 0, o.world.transformative || 0],
+  const facts = [["Responses tied to a risk", sc.risk_any], ["Framed as transformative", null, o.reg[r].transformative || 0, o.world.transformative || 0],
     ["With a quantified target", sc.qt], ["With monitoring named", sc.mon], ["Placed on a lever", sc.lever], ["Using money as the instrument", null, ins.reg[r].Money || 0, ins.world.Money || 0]]
     .map(([l, s, v, w]) => { v = s ? s[r] : v; w = s ? s.world : w; return `<div><span class="eyebrow">${esc(l)}</span><b>${rgPct(v)}%</b><small>average ${rgPct(w)}%</small></div>`; }).join("");
   $("#rg-one").innerHTML = `<div class="rg-head"><div><span class="eyebrow">${esc(r)}</span><h3>${esc(m.h || r)}</h3></div><span class="rg-conf ${cf === "Solid" ? "ok" : ""}" title="${esc(cn)}">${esc(cf)} · ${esc(cn)}</span></div>
     <ul class="rg-msg">${(m.b || []).map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     <div class="rg-facts">${facts}</div>
-    <div class="rg-cols"><div><h4>RHDR subpillars: share of strategies</h4><p class="muted rg-note">Bar: this region. Tick: average. Right: countries above the average.</p>${bars}</div>
+    <div class="rg-cols"><div><h4>RHDR subpillars: share of responses</h4><p class="muted rg-note">Bar: this region. Tick: average. Right: countries above the average.</p>${bars}</div>
       <div><h4>Framework families it leans toward</h4><ul class="rg-lean">${lean(diffs.slice(0, 5), true)}</ul><h4>…and away from</h4><ul class="rg-lean">${lean(diffs.slice(-3).reverse(), false)}</ul>
       <h4>Storms named most</h4><ul class="rg-lean">${risks.map(([k, v]) => `<li><span>${esc(k)}</span><span class="num">${rgPct(v)}%</span><span class="ab">average ${rgPct(RGN.risk.world[k] || 0)}%</span></li>`).join("")}</ul></div></div>
-    <p class="muted rg-note">Plans read: ${cs.map(x => `${esc(x.c)} (${esc(x.latest)}, ${x.start}–${x.end}, ${x.n} strategies${x.thin ? ", too few to count" : ""})`).join("; ")}.</p>`;
+    <p class="muted rg-note">Plans read: ${cs.map(x => `${esc(x.c)} (${esc(x.latest)}, ${x.start}–${x.end}, ${x.n} responses${x.thin ? ", too few to count" : ""})`).join("; ")}.</p>`;
   // heat map: framework families x regions, coloured by the distance from the average
   const ord = RGN.pillars.flatMap(p => subs.filter(s => RGN.sub_pillar[s] === p).flatMap(s => grp.keys.filter(k => RGN.grp_sub[k] === s)));
   $("#rg-heat").innerHTML = `<thead><tr><th>Framework family</th><th>Average</th>${RGN.regions.map(x => `<th data-rg="${esc(x)}" class="${x === r ? "on" : ""}">${esc(x)}</th>`).join("")}</tr></thead><tbody>` +
@@ -1720,28 +1839,113 @@ function drawRegional() {
   const thinTxt = C.thin.join(", ");
   $("#rg-comp").innerHTML = [
     `<b>Uneven sources.</b> ${C.all_four} of ${C.countries} countries have all four sources (national plans, sector plans, UNGA statements, budgets). ${C.outside_ap_no_sector_unga} of the ${C.outside_ap} countries outside Asia-Pacific have no sector plans or UNGA statements, and ${C.national_only} have national plans only. So only national plans compare across all regions, and this tab uses them alone.`,
-    `<b>Counts follow document length.</b> An edition yields from ${C.min_n} to ${C.max_n} strategies, and the count rises with the pages read (rank correlation ${C.rho_pages}). Raw counts mostly measure how long a plan is, so this tab compares shares.`,
+    `<b>Counts follow document length.</b> An edition yields from ${C.min_n} to ${C.max_n} responses, and the count rises with the pages read (rank correlation ${C.rho_pages}). Raw counts mostly measure how long a plan is, so this tab compares shares.`,
     `<b>Different kinds of plan.</b> ${C.one_edition} countries have one edition only, and for ${C.vision_latest} the latest is a long-term vision rather than a medium-term plan. Visions place less often on a lever (${rgPct(C.vision_lever)}% against ${rgPct(C.ndp_lever)}%). The latest plan read starts as early as ${RGN.coverage.reduce((a, x) => Math.min(a, x.start), 9999)} for some countries and as late as ${RGN.coverage.reduce((a, x) => Math.max(a, x.start), 0)} for others, and ${C.stale.join(", ")}'s latest plan ended in 2020.`,
-    `<b>Repeated strategies.</b> ${rgPct(C.repeat_rows)}% of national rows are a strategy that the earlier run found in more than one edition and that is counted in each. Change between editions is therefore understated.`,
-    `<b>Placement differs by country.</b> The share of a country's strategies that reaches a lever runs from ${rgPct(C.lever_min)}% (${esc(C.lever_min_c)}) to ${rgPct(C.lever_max)}% (${esc(C.lever_max_c)}). Where it is low, more sits on a family or on a general branch, which flattens that country's profile.`,
-    `<b>Thin or odd documents.</b> ${esc(thinTxt)} yield fewer than ${C.min_n_rule} strategies and are left out of the averages. Kazakhstan's file has no page count, and Mongolia's 2024–2028 action plan gives 138 strategies from 32 pages. Both are worth a look.`
+    `<b>Repeated responses.</b> ${rgPct(C.repeat_rows)}% of national rows are a response that the earlier run found in more than one edition and that is counted in each. Change between editions is therefore understated.`,
+    `<b>Placement differs by country.</b> The share of a country's responses that reaches a lever runs from ${rgPct(C.lever_min)}% (${esc(C.lever_min_c)}) to ${rgPct(C.lever_max)}% (${esc(C.lever_max_c)}). Where it is low, more sits on a family or on a standard branch, which flattens that country's profile.`,
+    `<b>Thin or odd documents.</b> ${esc(thinTxt)} yield fewer than ${C.min_n_rule} responses and are left out of the averages. Kazakhstan's file has no page count, and Mongolia's 2024–2028 action plan gives 138 responses from 32 pages. Both are worth a look.`
   ].map(t => `<li>${t}</li>`).join("");
-  $("#rg-cov").innerHTML = `<thead><tr><th>Country</th><th>Region</th><th>Latest plan read</th><th>Period</th><th>Editions</th><th>Strategies</th><th>Per 100 pages</th><th>On a lever</th><th>Sector</th><th>UNGA</th><th>Budget</th></tr></thead><tbody>` +
+  $("#rg-cov").innerHTML = `<thead><tr><th>Country</th><th>Region</th><th>Latest plan read</th><th>Period</th><th>Editions</th><th>Responses</th><th>Per 100 pages</th><th>On a lever</th><th>Sector</th><th>UNGA</th><th>Budget</th></tr></thead><tbody>` +
     RGN.regions.flatMap(x => rgCountries(x)).map(x => `<tr class="${x.thin ? "thin" : ""}"><td>${esc(x.c)}</td><td>${esc(x.region)}</td><td>${esc(x.latest)}${x.doc_type === "vision" ? " <small>(vision)</small>" : ""}</td><td>${x.start}–${x.end}</td><td>${x.editions}</td><td>${x.n}</td><td>${x.per100 ?? "–"}</td><td>${rgPct(x.lever)}%</td><td>${x.sector || "–"}</td><td>${x.unga || "–"}</td><td>${x.budget || "–"}</td></tr>`).join("") + `</tbody>`;
 }
 $("#regional").addEventListener("click", e => { const b = e.target.closest("[data-rg]"); if (b) { RGS.r = b.dataset.rg; drawRegional(); } });
 
+// ---------- comparator: a few countries side by side on one theme, and what one could learn from another ----------
+const CMP = { c: [], th: "risk:Demographic Shifts", from: null, to: null, open: new Set() };
+{ const j = CTY.findIndex(c => c.slug === "japan"), t = CTY.findIndex(c => c.slug === "thailand"); CMP.c = [j, t].filter(i => i >= 0); CMP.from = CMP.c[0]; CMP.to = CMP.c[1]; }
+const ORIC = { transformative: "var(--gold)", proactive: "var(--people)", BAU: "var(--line)" };
+function cmpThemes() {
+  return [["all", "All responses"], ...D.risks.map(r => ["risk:" + r, "Storm: " + r]),
+    ...ORDER.flatMap(([pc, sps]) => sps.map(sc => ["sp:" + sc, "RHDR subpillar: " + SP[sc].name]))];
+}
+function cmpTest() {
+  const t = CMP.th;
+  if (t.startsWith("risk:")) { const k = t.slice(5); return r => r[9].includes(k); }
+  if (t.startsWith("sp:")) { const k = t.slice(3); return r => r[4] && F[r[4]] && F[r[4]].subpillar_code === k; }
+  return () => true;
+}
+// a response found in several editions of a plan counts once, in its latest edition
+function dedupe(rows) {
+  const m = new Map();
+  rows.forEach(r => { const k = r[15] + "|" + r[14]; const o = m.get(k); if (!o || PLN[r[0]].start > PLN[o[0]].start) m.set(k, r); });
+  return [...m.values()];
+}
+function drawCompare() {
+  const test = cmpTest(), cs = CMP.c;
+  const all = {}, th = {};
+  cs.forEach(c => { all[c] = dedupe(ROWS.filter(r => r[15] === c && onSrc(r))); th[c] = all[c].filter(test); });
+  const thName = (cmpThemes().find(x => x[0] === CMP.th) || ["", ""])[1];
+  $("#cp-p").innerHTML = `Pick up to four countries and a theme. Each country is read through every plan in the sources switched on above, and a response found in several editions counts once. Orientation, urgency and targets come from the national plans only. The last part lists, lever by lever, what the first country does on the theme and what the second does on the same lever, so gaps stand out.`;
+  $("#cp-pick").innerHTML = `<span class="eyebrow">Countries</span>` + (cs.length ? cs.map(c => `<button type="button" class="rchip" aria-pressed="true" data-cx="${c}" title="Remove">${esc(CTY[c].name)} ×</button>`).join("") : `<span class="muted">none yet</span>`);
+  $("#cp-ctry").innerHTML = REG.map(r => `<div class="cg"><span class="eyebrow">${esc(r)}</span>${CTY.map((c, i) => c.region === r ? `<button type="button" class="rchip" aria-pressed="${cs.includes(i)}" data-cc="${i}" title="${esc(grpTag(i))}">${esc(c.name)}</button>` : "").join("")}</div>`).join("");
+  $("#cp-th").innerHTML = cmpThemes().map(([k, l]) => `<option value="${esc(k)}"${k === CMP.th ? " selected" : ""}>${esc(l)}</option>`).join("");
+  // cards
+  $("#cp-cards").innerHTML = cs.map(c => {
+    const a = all[c], t = th[c], nat = t.filter(r => srcOf(PLN[r[0]]) === "plans"), nn = nat.length || 1;
+    const ori = ["transformative", "proactive", "BAU"].map(k => [k, nat.filter(r => r[8] === k).length]);
+    const hi = nat.filter(r => rUrg(r) === "high").length, qt = nat.filter(r => r[17][6] & 2).length;
+    const srcN = X.sources.filter(x => active.has(x.k)).map(x => `${SRCL[x.k] || x.label} ${t.filter(r => srcOf(PLN[r[0]]) === x.k).length}`).join(" · ");
+    return `<div class="cp-card"><h3>${esc(CTY[c].name)}</h3><div class="tag">${esc(CTY[c].region)} · ${esc(grpTag(c))}</div>
+      <dl><dt>Responses on the theme</dt><dd>${t.length.toLocaleString()} · ${fmtPct(t.length / (a.length || 1))}</dd><dt class="muted">by source</dt><dd class="muted">${srcN}</dd>
+      <dt>High urgency</dt><dd>${nat.length ? fmtPct(hi / nn) : "–"}</dd><dt>Quantified target</dt><dd>${nat.length ? fmtPct(qt / nn) : "–"}</dd></dl>
+      ${nat.length ? `<div class="cp-ori">${ori.map(([k, n]) => `<i style="width:${100 * n / nn}%;background:${ORIC[k]}" title="${k}: ${n}"></i>`).join("")}</div>
+      <div class="tag">${ori.map(([k, n]) => `${k} ${fmtPct(n / nn)}`).join(" · ")}</div>` : `<div class="tag">no national-plan response on this theme</div>`}</div>`;
+  }).join("");
+  // framework families by country
+  const sh = (c, f) => th[c].length ? th[c].filter(f).length / th[c].length : 0;
+  const gs = D.groups.filter(g => cs.some(c => th[c].some(r => r[4] && F[r[4]] && F[r[4]].group_id === g.group_id)));
+  const gRow = g => cs.map(c => sh(c, r => r[4] && F[r[4]] && F[r[4]].group_id === g.group_id));
+  const spread = v => Math.max(...v) - Math.min(...v);
+  const rowsHtml = gs.map(g => [g, gRow(g)]).sort((a, b) => spread(b[1]) - spread(a[1])).map(([g, v]) => {
+    const mx = Math.max(...v), op = CMP.open.has(g.group_id);
+    const lv = op ? g.family_ids.flatMap(fid => F[fid].lever_ids).filter(lid => cs.some(c => th[c].some(r => r[5] === lid))) : [];
+    return `<tr class="g${op ? " open" : ""}" data-cg="${g.group_id}"><td>${esc(g.group)} <span class="muted" style="font-weight:400">· ${esc(SP[g.subpillar_code].name)}</span></td>${v.map(x => `<td>${x ? (x === mx && cs.length > 1 ? `<b>${fmtPct(x)}</b>` : fmtPct(x)) : "–"}</td>`).join("")}</tr>` +
+      lv.map(lid => `<tr class="l"><td>${esc(V[lid].lever)}</td>${cs.map(c => { const n = th[c].filter(r => r[5] === lid).length; return `<td>${n || "–"}</td>`; }).join("")}</tr>`).join("");
+  }).join("");
+  $("#cp-fam").innerHTML = cs.length ? `<thead><tr><th>${esc(thName)} · framework family</th>${cs.map(c => `<th>${esc(CTY[c].name)}<br>${th[c].length} responses</th>`).join("")}</tr></thead><tbody>${rowsHtml || `<tr><td colspan="${cs.length + 1}" class="muted">No response on this theme.</td></tr>`}</tbody>` : "";
+  // learn from
+  if (!cs.includes(CMP.from)) CMP.from = cs[0]; if (!cs.includes(CMP.to) || CMP.to === CMP.from) CMP.to = cs.find(c => c !== CMP.from);
+  const opt = (k, v) => cs.map(c => `<option value="${c}"${c === v ? " selected" : ""}>${esc(CTY[c].name)}</option>`).join("");
+  $("#cp-pair").innerHTML = cs.length > 1 ? `<span class="eyebrow">What</span><select id="cp-from">${opt("from", CMP.from)}</select><span class="eyebrow">does that</span><select id="cp-to">${opt("to", CMP.to)}</select><span class="eyebrow">could learn from</span>` : `<span class="muted">Pick two or more countries.</span>`;
+  if (cs.length < 2) { $("#cp-learn").innerHTML = ""; $("#cp-lp").textContent = ""; return; }
+  const A = CMP.from, B = CMP.to, key = r => r[5] ? "v:" + r[5] : r[4] && F[r[4]] ? "f:" + r[4] : null;
+  const items = {};
+  th[A].forEach(r => { const k = key(r); if (!k) return; (items[k] = items[k] || { k, a: [], b: [], bt: 0 }).a.push(r); });
+  Object.values(items).forEach(it => { it.b = all[B].filter(r => key(r) === it.k); it.bt = it.b.filter(test).length; });
+  const list = Object.values(items).sort((x, y) => (x.b.length ? 1 : 0) - (y.b.length ? 1 : 0) || y.a.length - x.a.length);
+  const gaps = list.filter(x => !x.b.length).length;
+  $("#cp-lp").textContent = `${CTY[A].name} has ${th[A].length} responses on ${thName.replace(/^[^:]+: /, "").toLowerCase()}, on ${list.length} levers or families. ${CTY[B].name} has nothing on ${gaps} of them in any of its plans in view: those come first. Under each, ${CTY[B].name}'s own responses on the same lever show what it already does. A response without a lever is grouped by its family.`;
+  const nm = it => it.k.startsWith("v:") ? V[it.k.slice(2)].lever : F[it.k.slice(2)].family + " (family, no lever)";
+  const li = r => `<li>${esc(r[1])} <small>${esc(planLabel(PLN[r[0]]))} ${PLN[r[0]].start}–${String(PLN[r[0]].end).slice(2)}${r[8] ? " · " + esc(r[8]) : ""}${srcOf(PLN[r[0]]) !== "plans" ? " · " + esc(DOCT[PLN[r[0]].doc_type] || "") : ""}</small>${r[17][1] ? `<details><summary>quote</summary>${esc(r[17][1])}</details>` : ""}</li>`;
+  $("#cp-learn").innerHTML = list.slice(0, 60).map(it => `<div class="cp-item"><h4>${esc(nm(it))}</h4>
+    <div class="meta">${!it.b.length ? `<span class="cp-gap">${esc(CTY[B].name)} has none</span> · ` : `${esc(CTY[B].name)}: ${it.b.length} on this ${it.k.startsWith("v:") ? "lever" : "family"}${it.bt ? `, ${it.bt} on the theme` : ""} · `}${esc(CTY[A].name)}: ${it.a.length}</div>
+    <ul>${it.a.slice(0, 8).map(li).join("")}</ul>${it.a.length > 8 ? `<p class="muted">and ${it.a.length - 8} more</p>` : ""}
+    ${it.b.length ? `<details><summary>${esc(CTY[B].name)} on the same ${it.k.startsWith("v:") ? "lever" : "family"}</summary><ul>${it.b.slice(0, 8).map(li).join("")}</ul></details>` : ""}</div>`).join("") +
+    (list.length > 60 ? `<p class="muted">and ${list.length - 60} more levers or families</p>` : "");
+}
+$("#compare").addEventListener("click", e => {
+  const x = e.target.closest("[data-cx]"); if (x) { CMP.c = CMP.c.filter(c => c !== +x.dataset.cx); drawCompare(); return; }
+  const a = e.target.closest("[data-cc]"); if (a) { const i = +a.dataset.cc; if (CMP.c.includes(i)) CMP.c = CMP.c.filter(c => c !== i); else if (CMP.c.length < 4) CMP.c.push(i); drawCompare(); return; }
+  const g = e.target.closest("tr[data-cg]"); if (g) { const k = g.dataset.cg; if (CMP.open.has(k)) CMP.open.delete(k); else CMP.open.add(k); drawCompare(); }
+});
+$("#compare").addEventListener("change", e => {
+  if (e.target.id === "cp-th") CMP.th = e.target.value;
+  if (e.target.id === "cp-from") { CMP.from = +e.target.value; if (CMP.to === CMP.from) CMP.to = CMP.c.find(c => c !== CMP.from); }
+  if (e.target.id === "cp-to") { CMP.to = +e.target.value; if (CMP.to === CMP.from) CMP.from = CMP.c.find(c => c !== CMP.to); }
+  drawCompare();
+});
+
 // ---------- state ----------
 function refresh() {
-  const au = mode === "audit", rgm = mode === "regional", side = au || rgm;
-  $("#m-aud").setAttribute("aria-selected", au); $("#m-reg").setAttribute("aria-selected", rgm);
-  $("#audit").hidden = !au; $("#regional").hidden = !rgm;
-  ["#details", "#srcs"].forEach(q => { $(q).hidden = side; });
+  const au = mode === "audit", rgm = mode === "regional", cmp = mode === "compare", side = au || rgm || cmp;
+  $("#m-aud").setAttribute("aria-selected", au); $("#m-reg").setAttribute("aria-selected", rgm); $("#m-cmp").setAttribute("aria-selected", cmp);
+  $("#audit").hidden = !au; $("#regional").hidden = !rgm; $("#compare").hidden = !cmp;
+  $("#details").hidden = side; $("#srcs").hidden = side && !cmp;
   if (side) {
     ["#m-world", "#m-ctry", "#m-un"].forEach(q => $(q).setAttribute("aria-selected", "false"));
     [".main", "#storms", ".tools", "#ctable", "#outline", "#worldbar", "#ctrybar", "#forestbox"].forEach(q => { $(q).hidden = true; });
-    if (au) drawAudit(); else drawRegional();
-    try { history.replaceState(null, "", au ? "#audit" : "#regional"); } catch (e) {}
+    if (au) drawAudit(); else if (cmp) drawCompare(); else drawRegional();
+    try { history.replaceState(null, "", au ? "#timeline" : cmp ? "#comparator" : "#regional"); } catch (e) {}
     return;
   }
   scope();
@@ -1752,7 +1956,7 @@ function refresh() {
   $("#dt-un").hidden = !un; $("#dt-intro").hidden = un;
   if (un) { state.q = ""; $("#q").value = ""; state.risk = null; state.sel = state.lv = state.h = state.d = null; }
   $("#worldbar").hidden = !w; $("#ctrybar").hidden = w;
-  if (w) { drawRegions(); drawYears(); } else { drawCountries(); drawTimeline(); }
+  if (w) { drawRegions(); drawGroups(); drawYears(); } else { drawCountries(); drawTimeline(); }
   drawTable(); paintCountry();
   $("#forestbox").hidden = mode !== "country";
   if (mode === "country") {
@@ -1776,15 +1980,16 @@ $("#m-ctry").addEventListener("click", () => openCountry(ci));
 $("#m-un").addEventListener("click", () => { mode = "unmapped"; refresh(); });
 $("#m-aud").addEventListener("click", () => { mode = "audit"; refresh(); });
 $("#m-reg").addEventListener("click", () => { mode = "regional"; refresh(); });
+$("#m-cmp").addEventListener("click", () => { mode = "compare"; refresh(); });
 $("#srcs").addEventListener("click", e => { const b = e.target.closest("[data-src]"); if (b) toggleSource(b.dataset.src); });
 drawSources();
 $("#regions").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (b) setRegion(b.dataset.r || null); });
+$("#grpf").addEventListener("click", e => { const b = e.target.closest("[data-gi],[data-gh]"); if (!b) return; if (b.dataset.gi !== undefined) GF.inc = b.dataset.gi || null; else GF.hd = b.dataset.gh || null; refresh(); });
 $("#countries").addEventListener("click", e => { const b = e.target.closest("[data-ci]"); if (b) openCountry(Number(b.dataset.ci)); });
 $("#yr-all").addEventListener("click", () => { year = null; refresh(); });
 $("#tl-all").addEventListener("click", allPlans);
 $("#tl-nat").addEventListener("click", () => { const m = C.plans.filter(i => PLN[i].doc_type === "ndp"); if (m.length) { sel.clear(); m.forEach(i => sel.add(i)); refresh(); } });
-$("#ct-open").addEventListener("click", () => D.families.forEach(f => toggleFam(f.family_id, true)));
-$("#ct-close").addEventListener("click", () => D.families.forEach(f => toggleFam(f.family_id, false)));
+document.querySelectorAll("#ctable [data-lvl]").forEach(b => b.addEventListener("click", () => openLevel(b.dataset.lvl)));
 panel.addEventListener("click", e => { const a = e.target.closest("[data-col]"); if (a) { e.preventDefault(); colClick(a.dataset.col); } });
 $("#ct").addEventListener("click", e => {
   const h = e.target.closest("th[data-col]"); if (h) { colClick(h.dataset.col); return; }
@@ -1794,19 +1999,20 @@ $("#ct").addEventListener("click", e => {
     const o = tr.dataset.fam ? { f: tr.dataset.fam } : a ? JSON.parse(a.dataset.o) : null;
     if (o) { DT.col = C.cols[+ck.dataset.ck].key; DT.keepCol = true; show(o); toDetails(); return; }
   }
-  const fr = e.target.closest("tr.frow");
-  if (fr) { const fid = fr.dataset.fam; toggleFam(fid, !openFam.has(fid)); show({ f: fid }); return; }
+  const nd = e.target.closest("td.nd");
+  if (nd) { const tr = nd.parentElement, k = tr.dataset.n; if (k) setOpen(k, !OPEN.has(k)); const o = tr.dataset.fam ? { f: tr.dataset.fam } : nd.dataset.o ? JSON.parse(nd.dataset.o) : null; if (o) show(o); return; }
   const a = e.target.closest("[data-o]"); if (a) { show(JSON.parse(a.dataset.o)); $(".main").scrollIntoView({ block: "start" }); }
 });
 {
   const nL = ROWS.filter(r => r[5]).length, nU = ROWS.filter(r => r[3] === "NEW").length;
   $("#m-un-n").textContent = nU.toLocaleString();
-  $("#dt-un").innerHTML = `Strategies the mapping could not place on any live family or General branch, with the reason it gave and the node the tree would need. These are the candidates for the next release of the tree. Pick a region or a year above to narrow the list; sort and filter as in the details table, and open a row for the strategy's record and passages.`;
-  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} strategies from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} strategy-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a general economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no strategies.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
+  $("#dt-un").innerHTML = `Responses the mapping could not place on any live family or Standard branch, with the reason it gave and the node the tree would need. These are the candidates for the next release of the tree. Pick a region or a year above to narrow the list; sort and filter as in the details table, and open a row for the response's record and passages.`;
+  $("#banner").innerHTML = `<b>Proof of concept on the earlier run</b><span>${X.n_source.toLocaleString()} responses from the earlier ${CTY.length}-country run, split back into the ${PLN.filter(p => srcOf(p) === "plans").length} plan editions their passages come from (${ROWS.length.toLocaleString()} response-by-plan rows) and given an objective, target and instrument. ${X.mapped ? `They are placed by the workflow's mapping prompt (step M, gpt-5.4) on the live tree only: ${pct(nL, ROWS.length)}% reach a lever,` : `They are placed on the tree by their objective label, through a fixed crosswalk, not by the mapping prompt: ${pct(nL, ROWS.length)}% reach a lever,`} ${pct(ROWS.filter(r => r[3] === "L2").length, ROWS.length)}% sit on a live family and ${pct(ROWS.filter(r => r[3] === "STD").length, ROWS.length)}% on a standard economy, people or governance branch${nU ? ` and ${pct(nU, ROWS.length)}% are unmapped (third tab)` : ""}. The ${D.dropped.length} levers the literature review grades unbacked, and the ${D.families.filter(f => !nLv(f)).length} families left without a lever, are drawn in grey and take no responses.${X.sources.length > 1 ? ` The same run's ${X.sources.slice(1).map(x => `${x.label.toLowerCase()} (${x.n.toLocaleString()} rows${x.mapped ? `, ${pct(x.lv, x.n)}% on a lever` : ", not yet mapped"})`).join(", ")} are under Sources above.` : ""}</span>`;
   const h = location.hash.slice(1);
   const c = CTY.findIndex(x => hslug(x.slug) === h), rg = REG.find(x => "region-" + hslug(x) === h);
-  if (h === "regional") { mode = "regional"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
-  else if (h === "audit") { mode = "audit"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  if (h === "comparator") { mode = "compare"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (h === "regional") { mode = "regional"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
+  else if (h === "audit" || h === "timeline") { mode = "audit"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
   else if (h === "unmapped") { mode = "unmapped"; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
   else if (c >= 0) openCountry(c);
   else { if (rg) region = rg; ci = Math.max(0, CTY.findIndex(x => x.slug === "thailand")); refresh(); }
