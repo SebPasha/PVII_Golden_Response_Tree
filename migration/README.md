@@ -37,9 +37,10 @@ budgets $17.06, instrument pass $9.51.
 | 3 | `map_run.py` | gpt-5.4 | The workflow's step M (`workflow/prompts/M_map_v4.txt`) on every distinct strategy, 25 a call (budget 50): a lever, a family, a general branch, or unmapped with a reason. Writes `mapping.csv`. |
 | 4 | `inst_run.py` | gpt-5.4 | Names the policy instrument (plain words, class Money/Authority/Information/Organisation, list entry where one fits) for strategies the mapping left without one. Writes `instrument.csv`. |
 | 5 | `reshape.py --mapping= --instrument=`, `sources.py --mapping=run` | none | Steps 1 and 2 again, placed by the mapping instead of the crosswalk. |
+| 5b | `budget_links.py` | none | Ties a national or sector plan response to a budget line only on a clear match: same country and lever, fiscal year inside the plan period, and a shared two-word phrase ("green building", "water supply"). Writes `budget_links.csv`; the lever panel shows the ties when budgets and plans are switched on. |
 | 6 | `viewer.py` | none | The page: `viewer_template.html` and `forest.js` (country plants) with the data. |
 
-`reshape_common.py` holds what steps 1 and 2 share (regions, country names, the tree, the columns).
+`reshape_common.py` holds what steps 1 and 2 share (regions, country names, the tree, the columns). `country_groups.json` holds each country's World Bank income group (FY27) and UNDP human development value (2025 report) for the page's filters; add a line there for a new country.
 
 ## Add a country run through the current workflow
 
