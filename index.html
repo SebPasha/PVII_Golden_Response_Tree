@@ -420,6 +420,13 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
 .cp-item li small { font: 11px var(--mono); color: var(--muted) }
 .cp-item details { font-size: 12.5px; color: var(--muted) }
 .cp-gap { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--gold) }
+.cp-docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin-bottom: 8px }
+.cp-docs .col h4 { margin: 0 0 4px; font-size: 13px }
+.cp-docs label { display: grid; grid-template-columns: auto 1fr auto; gap: 6px; align-items: baseline; font-size: 12.5px; padding: 2px 0; cursor: pointer }
+.cp-docs label small { font: 11px var(--mono); color: var(--muted) }
+.cp-docs label.out { color: var(--muted) }
+.cp-docs .muted { font-size: 11.5px }
+#cp-time select { font: inherit }
 </style>
 
 <div class="wrap">
@@ -514,6 +521,8 @@ footer { color: var(--muted); font-size: 12.5px; max-width: 80ch }
     <div class="aud-bar" id="cp-pick"></div>
     <details class="cp-more"><summary>Choose countries (up to four)</summary><div id="cp-ctry"></div></details>
     <div class="aud-bar"><span class="eyebrow">Theme</span><select id="cp-th" aria-label="Theme"></select></div>
+    <div class="aud-bar" id="cp-time"></div>
+    <details class="cp-more" id="cp-docbox" open><summary id="cp-docsum">Documents in view</summary><div class="cp-docs" id="cp-docs"></div></details>
     <div class="cp-cards" id="cp-cards"></div>
     <h3>Where the plans put their weight</h3>
     <p class="muted rg-note">Share of each country's responses on the theme that sit in each framework family. Open a framework family for its levers. Bold marks the country that leans most toward that framework family.</p>
@@ -2233,7 +2242,20 @@ function drawRegional() {
 $("#regional").addEventListener("click", e => { const b = e.target.closest("[data-rg]"); if (b) { RGS.r = b.dataset.rg; drawRegional(); } });
 
 // ---------- comparator: a few countries side by side on one theme, and what one could learn from another ----------
-const CMP = { c: [], th: "risk:Demographic Shifts", from: null, to: null, open: new Set() };
+const CMP = { c: [], th: "risk:Demographic Shifts", from: null, to: null, open: new Set(), y0: NOW - 5, y1: NOW, latest: true, off: new Set() };
+// the documents a country brings to the comparison: in force at some point in the window, and (by default) only the
+// latest medium-term plan, vision, UNGA statement and budget in it; sector plans cover different sectors, so all in the window count
+function cmpPlans(c) {
+  const inWin = PLN.map((p, i) => i).filter(i => PLN[i].c === c && active.has(srcOf(PLN[i])) && PLN[i].start <= CMP.y1 && PLN[i].end >= CMP.y0);
+  let keep = inWin;
+  if (CMP.latest) {
+    const last = {};
+    inWin.forEach(i => { const t = PLN[i].doc_type; if (t === "sector") return; if (last[t] === undefined || PLN[i].start > PLN[last[t]].start || (PLN[i].start === PLN[last[t]].start && PLN[i].end > PLN[last[t]].end)) last[t] = i; });
+    keep = inWin.filter(i => PLN[i].doc_type === "sector" || last[PLN[i].doc_type] === i);
+  }
+  const outN = PLN.filter(p => p.c === c && active.has(srcOf(p))).length - keep.length;
+  return { keep, on: keep.filter(i => !CMP.off.has(i)), outN };
+}
 { const j = CTY.findIndex(c => c.slug === "japan"), t = CTY.findIndex(c => c.slug === "thailand"); CMP.c = [j, t].filter(i => i >= 0); CMP.from = CMP.c[0]; CMP.to = CMP.c[1]; }
 const ORIC = { transformative: "var(--gold)", proactive: "var(--people)", BAU: "var(--line)" };
 function cmpThemes() {
@@ -2255,9 +2277,20 @@ function dedupe(rows) {
 function drawCompare() {
   const test = cmpTest(), cs = CMP.c;
   const all = {}, th = {};
-  cs.forEach(c => { all[c] = dedupe(ROWS.filter(r => r[15] === c && onSrc(r))); th[c] = all[c].filter(test); });
+  const docs = {};
+  cs.forEach(c => { docs[c] = cmpPlans(c); const on = new Set(docs[c].on); all[c] = dedupe(ROWS.filter(r => r[15] === c && on.has(r[0]))); th[c] = all[c].filter(test); });
+  const yrs = []; for (let y = 2000; y <= 2050; y++) yrs.push(y);
+  const yo = v => yrs.map(y => `<option${y === v ? " selected" : ""}>${y}</option>`).join("");
+  $("#cp-time").innerHTML = `<span class="eyebrow">Time</span>documents in force between <select id="cp-y0" aria-label="From">${yo(CMP.y0)}</select> and <select id="cp-y1" aria-label="To">${yo(CMP.y1)}</select>
+    <label style="margin-left:10px"><input type="checkbox" id="cp-latest"${CMP.latest ? " checked" : ""}> latest medium-term plan, vision, UNGA statement and budget only</label>`;
+  const nOn = cs.reduce((t, c) => t + docs[c].on.length, 0);
+  $("#cp-docsum").textContent = `Documents in view: ${nOn} across ${cs.length} ${cs.length === 1 ? "country" : "countries"}, in force between ${CMP.y0} and ${CMP.y1}. Untick one to leave it out.`;
+  const nResp = i => ROWS.filter(r => r[0] === i).length;
+  $("#cp-docs").innerHTML = cs.map(c => `<div class="col"><h4>${esc(CTY[c].name)}</h4>${docs[c].keep.length ? docs[c].keep.slice().sort((a, b) => ["ndp", "vision", "sector", "unga", "budget"].indexOf(PLN[a].doc_type) - ["ndp", "vision", "sector", "unga", "budget"].indexOf(PLN[b].doc_type) || PLN[b].start - PLN[a].start).map(i => { const p = PLN[i], on = !CMP.off.has(i);
+      return `<label class="${on ? "" : "out"}"><input type="checkbox" data-cpd="${i}"${on ? " checked" : ""}><span>${esc(short(p.title || planLabel(p), 60))}</span><small>${esc(DOCT[p.doc_type] || p.doc_type)} · ${p.start}${p.end !== p.start ? "–" + p.end : ""} · ${nResp(i)}</small></label>`; }).join("") : `<p class="muted">No document in force in this window.</p>`}
+      ${docs[c].outN ? `<p class="muted">${docs[c].outN} other ${docs[c].outN === 1 ? "document is" : "documents are"} outside the window${CMP.latest ? " or an older edition" : ""}, or in a source switched off.</p>` : ""}</div>`).join("");
   const thName = (cmpThemes().find(x => x[0] === CMP.th) || ["", ""])[1];
-  $("#cp-p").innerHTML = `Pick up to four countries and a theme. Each country is read through every plan in the sources switched on above, and a response found in several editions counts once. Orientation, urgency and targets come from the national plans only. The last part lists, lever by lever, what the first country does on the theme and what the second does on the same lever, so gaps stand out.`;
+  $("#cp-p").innerHTML = `Pick up to four countries, a theme and a time window. Each country is read through the documents listed under "Documents in view": those in force in the window, from the sources switched on above, by default only the latest edition of each kind, so an old sector plan is not set against a new national plan. A response found in several editions counts once. Orientation, urgency and targets come from the national plans only. The last part lists, lever by lever, what the first country does on the theme and what the second does on the same lever, so gaps stand out.`;
   $("#cp-pick").innerHTML = `<span class="eyebrow">Countries</span>` + (cs.length ? cs.map(c => `<button type="button" class="rchip" aria-pressed="true" data-cx="${c}" title="Remove">${esc(CTY[c].name)} ×</button>`).join("") : `<span class="muted">none yet</span>`);
   $("#cp-ctry").innerHTML = REG.map(r => `<div class="cg"><span class="eyebrow">${esc(r)}</span>${CTY.map((c, i) => c.region === r ? `<button type="button" class="rchip" aria-pressed="${cs.includes(i)}" data-cc="${i}" title="${esc(grpTag(i))}">${esc(c.name)}</button>` : "").join("")}</div>`).join("");
   $("#cp-th").innerHTML = cmpThemes().map(([k, l]) => `<option value="${esc(k)}"${k === CMP.th ? " selected" : ""}>${esc(l)}</option>`).join("");
@@ -2268,6 +2301,7 @@ function drawCompare() {
     const hi = nat.filter(r => rUrg(r) === "high").length, qt = nat.filter(r => r[17][6] & 2).length;
     const srcN = X.sources.filter(x => active.has(x.k)).map(x => `${SRCL[x.k] || x.label} ${t.filter(r => srcOf(PLN[r[0]]) === x.k).length}`).join(" · ");
     return `<div class="cp-card"><h3>${esc(CTY[c].name)}</h3><div class="tag">${esc(CTY[c].region)} · ${esc(grpTag(c))}</div>
+      <div class="tag">${docs[c].on.length} documents, ${docs[c].on.length ? Math.min(...docs[c].on.map(i => PLN[i].start)) + "–" + Math.max(...docs[c].on.map(i => PLN[i].end)) : "none"}</div>
       <dl><dt>Responses on the theme</dt><dd>${t.length.toLocaleString()} · ${fmtPct(t.length / (a.length || 1))}</dd><dt class="muted">by source</dt><dd class="muted">${srcN}</dd>
       <dt>High urgency</dt><dd>${nat.length ? fmtPct(hi / nn) : "–"}</dd><dt>Quantified target</dt><dd>${nat.length ? fmtPct(qt / nn) : "–"}</dd></dl>
       ${nat.length ? `<div class="cp-ori">${ori.map(([k, n]) => `<i style="width:${100 * n / nn}%;background:${ORIC[k]}" title="${k}: ${n}"></i>`).join("")}</div>
@@ -2312,6 +2346,10 @@ $("#compare").addEventListener("click", e => {
 });
 $("#compare").addEventListener("change", e => {
   if (e.target.id === "cp-th") CMP.th = e.target.value;
+  if (e.target.id === "cp-y0") { CMP.y0 = +e.target.value; if (CMP.y1 < CMP.y0) CMP.y1 = CMP.y0; }
+  if (e.target.id === "cp-y1") { CMP.y1 = +e.target.value; if (CMP.y0 > CMP.y1) CMP.y0 = CMP.y1; }
+  if (e.target.id === "cp-latest") CMP.latest = e.target.checked;
+  if (e.target.dataset && e.target.dataset.cpd !== undefined) { const i = +e.target.dataset.cpd; if (e.target.checked) CMP.off.delete(i); else CMP.off.add(i); }
   if (e.target.id === "cp-from") { CMP.from = +e.target.value; if (CMP.to === CMP.from) CMP.to = CMP.c.find(c => c !== CMP.from); }
   if (e.target.id === "cp-to") { CMP.to = +e.target.value; if (CMP.to === CMP.from) CMP.from = CMP.c.find(c => c !== CMP.to); }
   drawCompare();
