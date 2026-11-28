@@ -41,6 +41,15 @@ Return what this part of the document says about:
    would misread (for example "BCG model", "Thailand 4.0", "common prosperity"), each with a
    one-line gloss.
 
+6. comparative_advantages - what the document says the country is good at or endowed with and
+   means to build on: natural resources, location, energy, industries, institutions, people,
+   platforms. Only what the document states as a strength, asset or advantage, each with a short
+   quote. At most eight, the most central first.
+
+7. opportunities - for each of the eleven risks above that the document treats as a chance as
+   well as a threat (for example the energy transition as a market for its minerals, or ageing as
+   a care economy), one line on the opportunity and a short quote. Only where the document says so.
+
 Quotes are copied word for word from the document, in the document's language. Everything else
 is in ENGLISH.
 
@@ -55,6 +64,8 @@ A valid JSON object only, no markdown and no commentary:
                 "parent": "number of the level above it, or empty", "parent_quote": "the sentence that states the link, or empty"}],
  "headline_targets": [{"target": "", "year": 2027, "quote": ""}],
  "risk_framing": {"summary": "", "risks_named": [], "quotes": []},
- "vocabulary": [{"term": "", "gloss": ""}]}
+ "vocabulary": [{"term": "", "gloss": ""}],
+ "comparative_advantages": [{"advantage": "", "quote": ""}],
+ "opportunities": [{"risk": "one of the eleven", "opportunity": "", "quote": ""}]}
 
 Every list may be empty. Empty is the right answer where this part says nothing.

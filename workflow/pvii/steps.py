@@ -146,7 +146,9 @@ def _clean_context(ctx, plan, document_text):
            "structure": [s for s in ctx.get("structure") or [] if isinstance(s, dict)],
            "headline_targets": [t for t in ctx.get("headline_targets") or [] if isinstance(t, dict)],
            "risk_framing": ctx.get("risk_framing") or {},
-           "vocabulary": [v for v in ctx.get("vocabulary") or [] if isinstance(v, dict)]}
+           "vocabulary": [v for v in ctx.get("vocabulary") or [] if isinstance(v, dict)],
+           "comparative_advantages": [a for a in ctx.get("comparative_advantages") or [] if isinstance(a, dict)],
+           "opportunities": [o for o in ctx.get("opportunities") or [] if isinstance(o, dict)]}
     st, en = _year((out["period"] or {}).get("start")), _year((out["period"] or {}).get("end"))
     if (st, en) != (plan.start, plan.end) and (st or en):
         out["period_note"] = (out["period_note"] + " " if out["period_note"] else "") + (
@@ -155,7 +157,9 @@ def _clean_context(ctx, plan, document_text):
     for q in ([out["publication"]["quote"], (out["period"] or {}).get("quote")]
               + [s.get("parent_quote") for s in out["structure"]]
               + [t.get("quote") for t in out["headline_targets"]]
-              + list((out["risk_framing"] or {}).get("quotes") or [])):
+              + list((out["risk_framing"] or {}).get("quotes") or [])
+              + [a.get("quote") for a in out["comparative_advantages"]]
+              + [o.get("quote") for o in out["opportunities"]]):
         if _str(q):
             v = quotes.check(q, document_text)
             checks[v] = checks.get(v, 0) + 1
@@ -206,6 +210,12 @@ def context_markdown(ctx, plan):
     lines += ["## Vocabulary", ""]
     for v in ctx.get("vocabulary") or []:
         lines.append("- **%s**: %s" % (v.get("term", ""), v.get("gloss", "")))
+    lines += ["", "## Comparative advantages", ""]
+    for a in ctx.get("comparative_advantages") or []:
+        lines.append("- %s" % a.get("advantage", ""))
+    lines += ["", "## Opportunities", ""]
+    for o in ctx.get("opportunities") or []:
+        lines.append("- **%s**: %s" % (o.get("risk", ""), o.get("opportunity", "")))
     lines += ["", "Quote checks against the document: %s" % json.dumps(ctx.get("quote_checks") or {})]
     return "\n".join(lines) + "\n"
 

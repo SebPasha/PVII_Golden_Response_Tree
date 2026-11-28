@@ -22,6 +22,8 @@ Merge the parts into one context for the whole document:
 - risk_framing: one summary of four to six sentences, the risks named anywhere, and up to eight
   quotes taken from the parts.
 - vocabulary: one list, duplicates removed.
+- comparative_advantages: one list, duplicates merged, at most ten, most central first, with quotes.
+- opportunities: one list, at most one entry per risk, with quotes.
 
 Do not add anything the parts did not report. Quotes are copied from the parts unchanged.
 
@@ -32,4 +34,4 @@ A valid JSON object only, with the same keys as the parts plus "period_note":
 {"publication": {"date": "", "event": "", "quote": ""},
  "period": {"start": 0, "end": 0, "quote": ""}, "period_note": "",
  "structure": [], "headline_targets": [], "risk_framing": {"summary": "", "risks_named": [], "quotes": []},
- "vocabulary": []}
+ "vocabulary": [], "comparative_advantages": [], "opportunities": []}

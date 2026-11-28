@@ -55,16 +55,17 @@ def chains(rows, budget):
         n = int(r["n_mentions"] or 1)
         c["mentions"] += n
         c["strategies"].append({"name": r["name"], "mentions": n, "lever": r["lever"],
-                                "instrument": r["instrument_label"], "target": r["target_label"] or r["target_group"],
+                                "instrument": r.get("instrument_label") or r.get("instrument", ""), "target": r["target_label"] or r["target_group"],
                                 "risks": json.loads(r["related_risks"] or "[]"),
                                 "orientation": r["response_orientation"]})
         if r["lever_id"]:
             c["levers"][f'{r["lever_id"]} {r["lever"]}'] += n
         for x in json.loads(r["related_risks"] or "[]"):
             c["risks"][x] += n
-        if r["instrument_label"]:
-            c["instruments"][r["instrument_label"]] += n
-            c["instrument_classes"][instrument_class(r["instrument_label"]) or "unclassed"] += n
+        ins = r.get("instrument_label") or r.get("instrument") or ""
+        if ins:
+            c["instruments"][ins] += n
+            c["instrument_classes"][instrument_class(ins) or "unclassed"] += n
         t = r["target_label"] or r["target_group"]
         if t:
             c["targets"][t] += n
@@ -96,23 +97,38 @@ def risk_coverage(rows):
     return {m: {**v, "families": v["families"].most_common(4)} for m, v in cov.items()}
 
 
+def plan_rows(out_dir, plan):
+    """A plan's strategies: from a workflow plan folder (holding strategies.csv), or by plan_id or country
+    slug from the page build's outputs."""
+    if os.path.isdir(plan) and os.path.exists(os.path.join(plan, "strategies.csv")):
+        return load(os.path.join(plan, "strategies.csv"), lambda r: True)
+    return load(os.path.join(out_dir, "strategies.csv"), lambda r: plan in (r["plan_id"], r["slug"]))
+
+
+def build(out_dir, plan):
+    rows = plan_rows(out_dir, plan)
+    if not rows:
+        raise SystemExit(f"no strategies for {plan}")
+    slug = rows[0]["slug"]
+    budget = load(os.path.join(out_dir, "budget", "strategies.csv"), lambda r: r["slug"] == slug)
+    r0 = rows[0]
+    return {"plan": r0["plan_id"], "country": r0["country"], "slug": slug, "title": r0.get("plan_title", ""),
+            "period": f'{r0.get("period_start", "")}-{r0.get("period_end", "")}', "doc_type": r0.get("doc_type", ""),
+            "strategies": len(rows), "mentions": sum(int(r["n_mentions"] or 1) for r in rows),
+            "on_a_lever": sum(1 for r in rows if r["lever_id"]),
+            "objectives": dict(collections.Counter(OBJECTIVE.get(r["pillar_rhdr"], "Not placed") for r in rows)),
+            "budget_years": sorted({b["period_start"] for b in budget}),
+            "chains": chains(rows, budget), "risk_coverage": risk_coverage(rows)}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("out_dir", help="the page build's output folder, e.g. ../data/migration_out")
-    ap.add_argument("plan", help="a plan_id, or a country slug for all its national plan editions")
+    ap.add_argument("plan", help="a plan_id, a country slug (all its national plan editions), or a workflow plan folder")
     ap.add_argument("--out", default="")
     a = ap.parse_args()
-    rows = load(os.path.join(a.out_dir, "strategies.csv"), lambda r: a.plan in (r["plan_id"], r["slug"]))
-    if not rows:
-        raise SystemExit(f"no strategies for {a.plan}")
-    slug = rows[0]["slug"]
-    budget = load(os.path.join(a.out_dir, "budget", "strategies.csv"), lambda r: r["slug"] == slug)
-    res = {"plan": a.plan, "country": rows[0]["country"], "strategies": len(rows),
-           "on_a_lever": sum(1 for r in rows if r["lever_id"]),
-           "objectives": collections.Counter(OBJECTIVE.get(r["pillar_rhdr"], "Not placed") for r in rows),
-           "budget_years": sorted({b["period_start"] for b in budget}),
-           "chains": chains(rows, budget), "risk_coverage": risk_coverage(rows)}
-    out = a.out or f"key_messages_{a.plan}.json"
+    res = build(a.out_dir, a.plan)
+    out = a.out or f"key_messages_{res['plan']}.json"
     with open(out, "w", encoding="utf-8") as f:
         json.dump(res, f, ensure_ascii=False, indent=1)
     print(f"{res['country']}: {res['strategies']} strategies, {len(res['chains'])} mechanism families -> {out}")
