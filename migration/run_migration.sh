@@ -43,7 +43,9 @@ if compgen -G "added/*/" > /dev/null; then
 fi
 echo "== 6c. the three governance levers restored on 25 Nov 2026 (foresight, development planning, coordination)"
 python3 restore_levers.py "$OUT"
-echo "== 6d. regional messages and comparability checks"
+echo "== 6d. plan and sector responses tied to the budget lines that fund them (clear matches only)"
+python3 budget_links.py "$OUT"
+echo "== 6e. regional messages and comparability checks"
 python3 regional.py "$OUT"
 echo "== 7. the page"
 python3 viewer.py "$OUT" "$OUT/page/index.html"

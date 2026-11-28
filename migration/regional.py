@@ -16,8 +16,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1]
 DEST = sys.argv[2] if len(sys.argv) > 2 else os.path.join(OUT, "regional.json")
 EXCL = set(json.load(open(os.path.join(HERE, "excluded_plans.json"), encoding="utf-8")))
-GEN = {"H-SEC": ("Smarter Growth", "General economy"), "H-SPE": ("People-first Approach", "General people"),
-       "H-SGO": ("Making Change Happen", "General governance")}
+GEN = {"H-SEC": ("Smarter Growth", "Standard economy"), "H-SPE": ("People-first Approach", "Standard people"),
+       "H-SGO": ("Making Change Happen", "Standard governance")}
 MIN_N = 30  # a plan edition needs this many strategies to stand for its country
 AP = {"South-East Asia", "South Asia", "East Asia", "Pacific"}
 PILLARS = ["Smarter Growth", "People-first Approach", "Making Change Happen"]
@@ -120,7 +120,7 @@ def keys(field):
     return sorted({k for c in allc for k in prof[c][field]})
 
 
-out = {"basis": "Each country's latest national plan edition; shares of its strategies; countries weighted equally in a region.",
+out = {"basis": "Each country's latest national plan edition; shares of its responses; countries weighted equally in a region.",
        "regions": regions, "pillars": PILLARS}
 for field in ("sub", "pil", "grp", "ori", "ins", "risk"):
     w, rg = agg(field, keys(field))
@@ -130,6 +130,17 @@ for field in ("sub", "pil", "grp", "ori", "ins", "risk"):
 for f in ("risk_any", "qt", "mon", "high", "lever", "general"):
     out.setdefault("scal", {})[f] = {"world": statistics.mean(prof[c][f] for c in allc),
                                      **{r: statistics.mean(prof[c][f] for c in members[r]) for r in regions}}
+
+# Asia-Pacific (the four Asia-Pacific regions) against the comparator regions, countries weighted equally
+APAC = ["South-East Asia", "South Asia", "East Asia", "Pacific"]
+blocs = {"Asia-Pacific": [c for r in regions if r in APAC for c in members[r]],
+         "Comparators": [c for r in regions if r not in APAC for c in members[r]]}
+out["blocs"] = {"apac_regions": APAC, "n": {b: len(cs) for b, cs in blocs.items()}}
+for field in ("sub", "pil", "grp", "ori", "ins", "risk"):
+    ks = out[field]["keys"]
+    out["blocs"][field] = {b: mean_of([prof[c][field] for c in cs if prof[c][field] or field == "risk"], ks) for b, cs in blocs.items()}
+out["blocs"]["scal"] = {b: {f: statistics.mean(prof[c][f] for c in cs) for f in ("risk_any", "qt", "mon", "high", "lever", "general")}
+                        for b, cs in blocs.items()}
 
 # trend: first vs latest national edition, for countries with two or more
 trend = {}

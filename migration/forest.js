@@ -1,7 +1,7 @@
 // The country forest: each country drawn as its own plant in its own landscape, on the one structure of tree v4.
 // Ported from the mirror-forests page of 22 October 2026 (PV2/support/golden_tree/art/v2/china_bamboo), which drew
 // tree v1; the scenes and plants are that page's, unchanged. Here a stem is a live family, the nodes along it are its
-// levers (gold where a strategy in view sits on one), and each leaf is one strategy in view (gold on a lever, green
+// levers (gold where a response in view sits on one), and each leaf is one response in view (gold on a lever, green
 // on the family only). Stems stand in three stands (economy, people, governance) and ten clumps (the subpillars).
 // Inlined by viewer.py at /*FOREST*/; draws into the <svg id="forest"> of the country explorer.
 const Forest = (() => {
@@ -251,7 +251,7 @@ const PLANT = {
     stemShape(g, pt, w * 1.1, .35, col); nodes(g, f, pt, w * 1.1, .35, 0, .9);
     const [tx, ty] = pt(1), R = (v === "teak" ? 22 : 18) + Math.sqrt(n) * (v === "eucalypt" ? 6 : 8);
     for (let k = 0; k < 3; k++) { const side = k - 1; el("line", { x1: tx, y1: ty + 6, x2: tx + side * R * .7, y2: ty - R * .35, stroke: col, "stroke-width": 1.3 }, g); }
-    f.strats.forEach(s => {  // a cauliflower crown: each leaf one strategy
+    f.strats.forEach(s => {  // a cauliflower crown: each leaf one response
       const a = Math.PI + rnd() * Math.PI, r = Math.sqrt(rnd()) * R, x = tx + Math.cos(a) * r * 1.35, y = ty - R * .2 + Math.sin(a) * r * .75;
       if (v === "teak") el("ellipse", { cx: x, cy: y, rx: 8, ry: 6, fill: lc(s), opacity: la(s) }, g);
       else el("path", { d: leafPath(x, y, v === "eucalypt" ? Math.PI / 2 + (rnd() - .5) * .6 : rnd() * 6.3, v === "eucalypt" ? 18 : 15, v === "eucalypt" ? .14 : .34), fill: lc(s), opacity: la(s) }, g);
@@ -262,7 +262,7 @@ const PLANT = {
 // ---------------------------------------------------------------- one tab
 
 // ---------------------------------------------------------------- one country
-// rows: the strategies in view, as the page holds them (r[4] family, r[5] lever). D: the tree data. pick(o): what a
+// rows: the responses in view, as the page holds them (r[4] family, r[5] lever). D: the tree data. pick(o): what a
 // click on a stem or a gold node opens in the page's panel ({ f } or { v }).
 function draw(svg, slug, name, rows, D, pick) {
   const cfg = C[slug] || FALLBACK, isB = cfg.plant === "banyan";
@@ -272,7 +272,7 @@ function draw(svg, slug, name, rows, D, pick) {
   const live = D.families.filter(f => f.lever_ids.length);
   const byF = {};
   rows.forEach(r => { if (r[4]) (byF[r[4]] ||= []).push(r); });
-  // one leaf per strategy, or per k strategies when the plans in view hold more than the canvas can carry
+  // one leaf per response, or per k responses when the plans in view hold more than the canvas can carry
   const tot = live.reduce((a, f) => a + (byF[f.family_id] || []).length, 0), per = Math.max(1, Math.ceil(tot / 2400));
   const fams = live.map(f => {
     const rs = byF[f.family_id] || [], used = {};
@@ -285,7 +285,7 @@ function draw(svg, slug, name, rows, D, pick) {
   const famBySub = {};
   fams.forEach(f => (famBySub[f.sub] ||= []).push(f));
   const scale = Math.max(1, ...fams.map(f => f.strats.length));
-  svg.setAttribute("aria-label", `${name}: ${cfg.line} One stem per family, ${tot.toLocaleString("en-GB")} strategies in view.`);
+  svg.setAttribute("aria-label", `${name}: ${cfg.line} One stem per family, ${tot.toLocaleString("en-GB")} responses in view.`);
 
   const defs = el("defs", {}, svg);
   grad(defs, "f-sky", [[0, "#06110d"], [1, "#0c2219"]]);
@@ -345,8 +345,8 @@ function draw(svg, slug, name, rows, D, pick) {
   const forest = el("g", {}, svg);
   slots.forEach(o => {
     const f = o.f, n = f.strats.length;
-    const g = el("g", { class: "culm", tabindex: 0, role: "button", "aria-label": `${f.name}: ${f.n} strategies, ${f.nl} on a lever` }, forest);
-    el("title", {}, g).textContent = `${f.name} (${o.g.group})\n${f.n.toLocaleString("en-GB")} strategies · ${f.nl.toLocaleString("en-GB")} on a lever · ${f.mechs.filter(m => m.n).length} of ${f.mechs.length} levers reached`;
+    const g = el("g", { class: "culm", tabindex: 0, role: "button", "aria-label": `${f.name}: ${f.n} responses, ${f.nl} on a lever` }, forest);
+    el("title", {}, g).textContent = `${f.name} (${o.g.group})\n${f.n.toLocaleString("en-GB")} responses · ${f.nl.toLocaleString("en-GB")} on a lever · ${f.mechs.filter(m => m.n).length} of ${f.mechs.length} levers reached`;
     g.addEventListener("click", e => { const m = e.target.closest(".mnode"); pick(m ? { v: m.dataset.m } : { f: f.id }); });
     g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick({ f: f.id }); } });
     if (!n) {
@@ -371,10 +371,10 @@ function draw(svg, slug, name, rows, D, pick) {
     key: [
       ["STANDS", "economy left, people centre, governance right"],
       ["CLUMPS", "the ten named subpillars, joined underground; inside each, the stems stand in their framework families"],
-      [stemW, `one per live family (${live.length}); ${isB ? "thickness" : "height"} grows with the strategies on it`],
-      ["NODES", "one per lever of the family; gold where a strategy in view sits on it"],
-      [leafW, per > 1 ? `one per ${per} strategies; gold where most of them are on a lever` : "one per strategy; gold on a lever, green on the family only"],
-      ["EMPTY", `${emptyW}: a family no strategy in view reaches`],
+      [stemW, `one per live family (${live.length}); ${isB ? "thickness" : "height"} grows with the responses on it`],
+      ["NODES", "one per lever of the family; gold where a response in view sits on it"],
+      [leafW, per > 1 ? `one per ${per} responses; gold where most of them are on a lever` : "one per response; gold on a lever, green on the family only"],
+      ["EMPTY", `${emptyW}: a family no response in view reaches`],
     ],
   };
 }

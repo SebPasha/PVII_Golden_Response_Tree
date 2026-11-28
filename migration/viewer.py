@@ -54,7 +54,8 @@ def lever_row(lv):
 
 data = {
     "built": tree["meta"].get("built", ""),
-    "pillars": tree["pillars"], "subpillars": tree["subpillars"], "holding": tree["holding"], "risks": tree["risks"],
+    "pillars": tree["pillars"], "subpillars": tree["subpillars"],
+    "holding": [dict(h, name=re.sub(r"^General\b", "Standard", h["name"])) for h in tree["holding"]], "risks": tree["risks"],
     "assets": {},
     "groups": [{k: g[k] for k in ("group_id", "group", "subpillar_code", "basis", "definition", "family_ids",
                                    "sdg_targets", "risks")} for g in tree["groups"]],
@@ -91,11 +92,14 @@ excluded += [{"country": NM.get(d["slug"], d["slug"]), "title": "file %s, merged
              for d in (json.load(open(XD, encoding="utf-8")) if os.path.exists(XD) else [])]
 REG_ORDER = ["South-East Asia", "South Asia", "East Asia", "Pacific", "Europe and Central Asia", "Arab States",
              "Africa", "Latin America and the Caribbean"]
+# income group (World Bank) and human development value (UNDP) of each country, for the page's filters
+CGRP = json.load(open(os.path.join(HERE, "country_groups.json"), encoding="utf-8"))
 countries, cidx = [], {}
 for p in sorted(plans, key=lambda p: (REG_ORDER.index(p["region"]), p["country"])):
     if p["slug"] not in cidx:
         cidx[p["slug"]] = len(countries)
-        countries.append({"name": p["country"], "slug": p["slug"], "region": p["region"]})
+        cg = CGRP.get(p["slug"], ["", None])
+        countries.append({"name": p["country"], "slug": p["slug"], "region": p["region"], "inc": cg[0], "hd": cg[1]})
 DT_ORDER = ["ndp", "vision", "sector", "unga", "budget"]
 plans.sort(key=lambda p: (cidx[p["slug"]], DT_ORDER.index(p["doc_type"]), int(p["period_start"]), int(p["period_end"]), p["plan_title"]))
 pidx = {p["plan_id"]: i for i, p in enumerate(plans)}
@@ -175,10 +179,19 @@ data["set"] = {
                "lv": int(p["n_on_lever"] or 0), "who": p["status"] if p["doc_type"] == "unga" else ""} for p in plans],
     **{k: v for k, v in blobs["plans"].items() if k != "rows"},
     "sources": src_meta,
-    "excluded": excluded,
+    "excluded": excluded, "groups_src": CGRP["_source"],
     "mapped": src_meta[0]["mapped"],
     "rows": out, "n_source": src_meta[0]["distinct"],
 }
+
+# responses linked to the budget lines that fund them (budget_links.py; only clear matches):
+# [response plan, number in its plan, budget plan, budget number, budget line, fiscal year, amount, shared phrases]
+_bl = os.path.join(SRC, "budget_links.csv")
+data["set"]["blinks"] = [[pidx[x["plan_id"]], int(x["response_id"].split("#s")[1]), pidx[x["budget_plan_id"]],
+                          int(x["budget_id"].split("#s")[1]), x["budget_line"], int(x["fiscal_year"]),
+                          money(x) if x["amount"] else "", x["shared"]]
+                         for x in (csv.DictReader(open(_bl, encoding="utf-8")) if os.path.exists(_bl) else [])
+                         if x["plan_id"] in pidx and x["budget_plan_id"] in pidx]
 
 # the Regional messages tab (regional.py writes it; the tab says so when it is missing)
 _rg = os.path.join(SRC, "regional.json")
